@@ -1,101 +1,146 @@
-// Lug'at (UZ, UZ-CYR, RU)
-const dictionary = {
+// Dictionary for 3 Languages
+const translations = {
     uz: {
-        badge: "Tabiiy Majmua",
-        hero_title: "Teri pigmentatsiyasini ichki tomondan qo'llab-quvvatlash uchun",
-        hero_desc: "Mikroelementlar, minerallar va o'simlik ekstraktlariga boy biologik faol majmua.",
-        cta_btn: "Bepul konsultatsiya olish",
-        features_title: "Tarkibiy ustunliklar",
-        feat_1: "Hujayralarni erkin radikallardan va ultrabinafsha nurlanishning salbiy ta'siridan himoya qiladi.",
-        feat_2: "Teri rang pigmentlari ishlab chiqarish jarayonlarini oziqlantiradi hamda immun tizimini balanslaydi.",
-        feat_3: "Xalqaro standartlarga mos va xavfsiz laboratoriya tekshiruvlaridan o'tgan mahsulot.",
-        usage_title: "Qabul qilish tartibi",
-        usage_desc: "Kattalar uchun: Kuniga 1-2 mahaldan, ovqat paytida suv bilan qabul qilinadi.",
-        cta_banner_title: "Mutaxassisdan batafsil ma'lumot oling",
-        cta_banner_desc: "So'rov qoldiring, operatorlarimiz siz bilan bog'lanishadi.",
-        disclaimer_title: "DIQQAT:",
-        disclaimer_text: "Ushbu mahsulot Biologik Faol Qo'shimcha (BAD) hisoblanadi va dori vositasi emas. Kasalliklarni davolash uchun mo'ljallanmagan. Qo'llashdan oldin shifokor bilan maslahatlashish tavsiya etiladi.",
-        form_title: "Konsultatsiya olish",
-        form_desc: "Ma'lumotlaringizni qoldiring, tez orada aloqaga chiqamiz.",
-        label_name: "Ismingiz",
-        label_phone: "Telefon raqamingiz",
-        label_question: "Qancha vaqtdan beri kuzatilmoqda?",
-        btn_submit: "Yuborish"
+        topBar: "🚚 O'zbekiston bo'ylab tekin yetkazib berish | 🔐 100% Maxfiylik",
+        navBtn: "Konsultatsiya",
+        heroBadge: "⭐ 4.9/5 (1,200+ mamnun mijozlar)",
+        heroTitle: "Teri pigmentatsiyasini ichki tomondan va hujayra darajasida qo'llab-quvvatlang",
+        heroDesc: "Qomus — o'simlik ekstraktlari va hayotiy muhim minerallar birlashmasi. Teringizning naturally va bir tekis ko'rinishini qaytarish uchun maxsus ishlab chiqilgan majmua.",
+        feat1: "100% Tabiiy tarkib",
+        feat2: "Sertifikatlangan GMP",
+        feat3: "Xavfsiz va samarali",
+        heroBtn: "Bepul Konsultatsiya Olish",
+        subCta: "🔒 Ma'lumotlaringiz sir tutilishi kafolatlanadi",
+        baTitle: "Natijalar: Avval va Keyin",
+        baSubtitle: "Qomus majmuasini muntazam qabul qilish natijasida teri pigmentatsiyasida kuzatilgan o'zgarishlar",
+        baCard1Title: "3 oylik qabul natijasi",
+        baCard1Desc: "Qo'l sohasidagi teri pigmentining bosqichma-bosqich tiklanishi va bir tekis tusga kirishi.",
+        baCard2Title: "2 oylik qabul natijasi",
+        baCard2Desc: "Yuz va bo'yin sohasidagi melanotsitlar faollashuvi natijasida rang balansining yaxshilanishi.",
+        ingTitle: "Qomus Tarkibidagi Tabiiy Kuch",
+        ing1Title: "Ammi Majus (Kashkarbegi)",
+        ing1Desc: "Melanotsitlarni (rang beruvchi hujayralarni) rag'batlantiradi va terining nurlarga sezgirligini me'yorlashtiradi.",
+        ing2Title: "Mis va Rux Minerallari",
+        ing2Desc: "Melanin sintezida qatnashuvchi fermentlar faoliyatini ichki tomondan qo'llab-quvvatlaydi.",
+        ing3Title: "Antioksidant Kompleks",
+        ing3Desc: "Hujayralarni erkin radikallar va stress ta'sirida emirilishidan samarali himoya qiladi.",
+        formTitle: "Bepul Mutaxassis Konsultatsiyasini Oling",
+        formSubtitle: "Formani to'ldiring, mutaxassisimiz tez orada siz bilan bog'lanib, barcha savollaringizga javob beradi.",
+        lblName: "Ismingiz:",
+        lblPhone: "Telefon raqamingiz:",
+        lblQ: "Bu holat qancha vaqtdan beri kuzatilmoqda?",
+        opt1: "6 oygacha",
+        opt2: "1 yildan 3 yilgacha",
+        opt3: "3 yildan ortiq",
+        formBtn: "Buyurtma va Konsultatsiya Olish"
     },
-    "uz-cyr": {
-        badge: "Табиий Мажмуа",
-        hero_title: "Тери пигментациясини ички томондан қўллаб-қувватлаш учун",
-        hero_desc: "Микроэлементлар, минераллар ва ўсимлик экстрактларига бой биологик фаол мажмуа.",
-        cta_btn: "Бепул консультация олиш",
-        features_title: "Таркибий устунликлар",
-        feat_1: "Ҳужайраларни эркин радикаллардан ва ультрабинафша нурланишнинг салбий таъсиридан ҳимоя қилади.",
-        feat_2: "Тери ранг пигментлари ишлаб чиқариш жараёнларини озиқлантиради ҳамда иммун тизимини баланслайди.",
-        feat_3: "Халқаро стандартларга мос ва хавфсиз лаборатория текширувларидан ўтган маҳсулот.",
-        usage_title: "Қабул қилиш тартиби",
-        usage_desc: "Катталар учун: Кунига 1-2 маҳалдан, овқат пайтида сув билан қабул қилинади.",
-        cta_banner_title: "Мутахассисдан батафсил маълумот олинг",
-        cta_banner_desc: "Сўров қолдиринг, операторларимиз сиз билан боғланишади.",
-        disclaimer_title: "ДИҚҚАТ:",
-        disclaimer_text: "Ушбу маҳсулот Биологик Фаол Қўшимча (БАД) ҳисобланади ва дори воситаси эмас. Касалликларни даволаш учун мўлжалланмаган. Қўллашдан олдин шифокор билан маслаҳатлашиш тавсия этилади.",
-        form_title: "Консультация олиш",
-        form_desc: "Маълумотларингизни қолдиринг, тез орада алоқага чиқамиз.",
-        label_name: "Исмингиз",
-        label_phone: "Телефон рақамингиз",
-        label_question: "Қанча вақтдан бери кузатилмоқда?",
-        btn_submit: "Юбориш"
+    uz_cyr: {
+        topBar: "🚚 Ўзбекистон бўйлаб текин етказиб бериш | 🔐 100% Махфийлик",
+        navBtn: "Консультация",
+        heroBadge: "⭐ 4.9/5 (1,200+ мамнун мижозлар)",
+        heroTitle: "Тери пигментациясини ички томондан ва ҳужайра даражасида қўллаб-қувватланг",
+        heroDesc: "Қомус — ўсимлик экстрактлари ва ҳаётий муҳим минераллар бирлашмаси. Терингизнинг табиий ва бир текис кўринишини қайтариш учун махсус ишлаб чиқилган мажмуа.",
+        feat1: "100% Табиий таркиб",
+        feat2: "Сертификатланган GMP",
+        feat3: "Хавфсиз ва самарали",
+        heroBtn: "Бепул Консультация Олиш",
+        subCta: "🔒 Маълумотларингиз сир тутилиши кафолатланади",
+        baTitle: "Натижалар: Аввал ва Кейин",
+        baSubtitle: "Қомус мажмуасини мунтазам қабул қилиш натижасида тери пигментациясида кузатилган ўзгаришлар",
+        baCard1Title: "3 ойлик қабул натижаси",
+        baCard1Desc: "Қўл соҳасидаги тери пигментининг босқичма-босқич тикланиши ва бир текис тусга кириши.",
+        baCard2Title: "2 ойлик қабул натижаси",
+        baCard2Desc: "Юз ва бўйин соҳасидаги меланоцитлар фаоллашуви натижасида ранг балансининг яхшиланиши.",
+        ingTitle: "Қомус Таркибидаги Табиий Куч",
+        ing1Title: "Ammi Majus (Кашкарбеги)",
+        ing1Desc: "Меланоцитларни (ранг берувчи ҳужайраларни) рағбатлантиради ва терининг нурларга сезувчанлигини меъёрлаштиради.",
+        ing2Title: "Мис ва Рух Минераллари",
+        ing2Desc: "Меланин синтезида қатнашувчи ферментлар фаолиятини ички томондан қўллаб-қувватлайди.",
+        ing3Title: "Антиоксидант Комплекс",
+        ing3Desc: "Ҳужайраларни эркин радикаллар ва стресс таъсирида емирилишидан самарали ҳимоя қилади.",
+        formTitle: "Бепул Мутахассис Консультациясини Олинг",
+        formSubtitle: "Формани тўлдиринг, мутахассисимиз тез орада сиз билан боғланиб, барча саволларингизга жавоб беради.",
+        lblName: "Исмингиз:",
+        lblPhone: "Телефон рақамингиз:",
+        lblQ: "Бу ҳолат қанча вақтдан бери кузатилмоқда?",
+        opt1: "6 ойгача",
+        opt2: "1 йилдан 3 йилгача",
+        opt3: "3 йилдан ортиқ",
+        formBtn: "Буюртма ва Консультация Олиш"
     },
     ru: {
-        badge: "Натуральный Комплекс",
-        hero_title: "Для поддержки пигментации кожи изнутри",
-        hero_desc: "Биологически активный комплекс, богатый микроэлементами, минералами и растительными экстрактами.",
-        cta_btn: "Получить бесплатную консультацию",
-        features_title: "Преимущества состава",
-        feat_1: "Защищает клетки от свободных радикалов и негативного воздействия ультрафиолета.",
-        feat_2: "Питает процессы выработки пигмента кожи и балансирует иммунную систему.",
-        feat_3: "Сертифицированный продукт, прошедший лабораторные проверки качества.",
-        usage_title: "Способ применения",
-        usage_desc: "Для взрослых: по 1-2 капсулы в день во время еды, запивая водой.",
-        cta_banner_title: "Получите подробную информацию",
-        cta_banner_desc: "Оставьте заявку, и наши специалисты свяжутся с вами.",
-        disclaimer_title: "ВНИМАНИЕ:",
-        disclaimer_text: "Данный продукт является БАД и не является лекарственным средством. Не предназначен для лечения заболеваний. Перед применением рекомендуется проконсультироваться с врачом.",
-        form_title: "Получить консультацию",
-        form_desc: "Оставьте свои данные, мы свяжемся с вами в ближайшее время.",
-        label_name: "Ваше имя",
-        label_phone: "Ваш номер телефона",
-        label_question: "Как долго это наблюдается?",
-        btn_submit: "Отправить"
+        topBar: "🚚 Бесплатная доставка по всему Узбекистану | 🔐 100% Конфиденциально",
+        navBtn: "Консультация",
+        heroBadge: "⭐ 4.9/5 (1,200+ довольных клиентов)",
+        heroTitle: "Поддержите пигментацию кожи на клеточном уровне изнутри",
+        heroDesc: "Qomus — это комплекс растительных экстрактов и жизненно важных минералов, созданный для поддержки естественного баланса и ровного тона кожи.",
+        feat1: "100% Натуральный состав",
+        feat2: "Сертифицирован GMP",
+        feat3: "Безопасно и эффективно",
+        heroBtn: "Получить Бесплатную Консультацию",
+        subCta: "🔒 Полная конфиденциальность ваших данных",
+        baTitle: "Результаты: До и После",
+        baSubtitle: "Изменения пигментации кожи при регулярном приеме комплекса Qomus",
+        baCard1Title: "Результат за 3 месяца",
+        baCard1Desc: "Постепенное восстановление пигментации и выравнивание тона кожи на руках.",
+        baCard2Title: "Результат за 2 месяца",
+        baCard2Desc: "Улучшение цветового баланса в области лица и шеи за счет активации меланоцитов.",
+        ingTitle: "Сила Природы в Составе Qomus",
+        ing1Title: "Ammi Majus (Амми Большая)",
+        ing1Desc: "Стимулирует меланоциты и нормализует чувствительность кожи к световым лучам.",
+        ing2Title: "Минералы Медь и Цинк",
+        ing2Desc: "Поддерживают ферменты, участвующие в синтезе меланина изнутри.",
+        ing3Title: "Антиоксидантный Комплекс",
+        ing3Desc: "Эффективно защищает клетки от разрушения свободными радикалами.",
+        formTitle: "Получите Консультацию Специалиста",
+        formSubtitle: "Заполните форму, и наш специалист свяжется с вами для консультации.",
+        lblName: "Ваше имя:",
+        lblPhone: "Ваш номер телефона:",
+        lblQ: "Как долго наблюдается это состояние?",
+        opt1: "До 6 месяцев",
+        opt2: "От 1 до 3 лет",
+        opt3: "Более 3 лет",
+        formBtn: "Оформить Заказ и Консультацию"
     }
 };
 
-// Tilni o'zgartirish funksiyasi
-const langButtons = document.querySelectorAll('.lang-btn');
+function changeLang(lang) {
+    // Update Active Button
+    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+    document.getElementById(`btn-${lang}`).classList.add('active');
 
-langButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        langButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        
-        const lang = btn.getAttribute('data-lang');
-        changeLanguage(lang);
-    });
-});
-
-function changeLanguage(lang) {
-    const elements = document.querySelectorAll('[data-i18n]');
-    elements.forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (dictionary[lang] && dictionary[lang][key]) {
-            el.innerText = dictionary[lang][key];
-        }
-    });
-}
-
-// Modal Form
-function openModal() {
-    document.getElementById('leadModal').style.display = 'flex';
-}
-
-function closeModal() {
-    document.getElementById('leadModal').style.display = 'none';
+    // Update Text Elements
+    const t = translations[lang];
+    document.getElementById('top-bar-text').innerText = t.topBar;
+    document.getElementById('nav-btn').innerText = t.navBtn;
+    document.getElementById('hero-badge').innerText = t.heroBadge;
+    document.getElementById('hero-title').innerText = t.heroTitle;
+    document.getElementById('hero-desc').innerText = t.heroDesc;
+    document.getElementById('feat-1').innerText = t.feat1;
+    document.getElementById('feat-2').innerText = t.feat2;
+    document.getElementById('feat-3').innerText = t.feat3;
+    document.getElementById('hero-btn-text').innerText = t.heroBtn;
+    document.getElementById('sub-cta-text').innerText = t.subCta;
+    document.getElementById('ba-title').innerText = t.baTitle;
+    document.getElementById('ba-subtitle').innerText = t.baSubtitle;
+    document.getElementById('ba-card1-title').innerText = t.baCard1Title;
+    document.getElementById('ba-card1-desc').innerText = t.baCard1Desc;
+    document.getElementById('ba-card2-title').innerText = t.baCard2Title;
+    document.getElementById('ba-card2-desc').innerText = t.baCard2Desc;
+    document.getElementById('ing-title').innerText = t.ingTitle;
+    document.getElementById('ing1-title').innerText = t.ing1Title;
+    document.getElementById('ing1-desc').innerText = t.ing1Desc;
+    document.getElementById('ing2-title').innerText = t.ing2Title;
+    document.getElementById('ing2-desc').innerText = t.ing2Desc;
+    document.getElementById('ing3-title').innerText = t.ing3Title;
+    document.getElementById('ing3-desc').innerText = t.ing3Desc;
+    document.getElementById('form-title').innerText = t.formTitle;
+    document.getElementById('form-subtitle').innerText = t.formSubtitle;
+    document.getElementById('lbl-name').innerText = t.lblName;
+    document.getElementById('lbl-phone').innerText = t.lblPhone;
+    document.getElementById('lbl-q').innerText = t.lblQ;
+    document.getElementById('opt-1').innerText = t.opt1;
+    document.getElementById('opt-2').innerText = t.opt2;
+    document.getElementById('opt-3').innerText = t.opt3;
+    document.getElementById('form-btn-text').innerText = t.formBtn;
 }

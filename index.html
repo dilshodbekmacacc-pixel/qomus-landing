@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QOMUS — Teri pigmentatsiyasini tabiat in'omi bilan qo'llab-quvvatlang</title>
+    <title>QOMUS — Teri pigmentatsiyasini qo'llab-quvvatlovchi majmua</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Meta Pixel Code shu yerga qo'yiladi -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Dynamic Glow Backgrounds -->
+    <div class="glow-bg glow-1"></div>
+    <div class="glow-bg glow-2"></div>
+
     <!-- Top Announcement Bar -->
     <div class="top-bar">
-        <p>🚚 O'zbekiston bo'ylab tekin yetkazib berish | 🔐 100% Maxfiylik va Bepul Konsultatsiya</p>
+        <p id="top-bar-text">🚚 O'zbekiston bo'ylab tekin yetkazib berish | 🔐 100% Maxfiylik</p>
         <div class="lang-switch">
-            <button onclick="setLanguage('uz')" class="lang-btn active">UZ</button>
-            <button onclick="setLanguage('uz_cyr')" class="lang-btn">ЎЗ</button>
-            <button onclick="setLanguage('ru')" class="lang-btn">RU</button>
+            <button onclick="changeLang('uz')" id="btn-uz" class="lang-btn active">UZ</button>
+            <button onclick="changeLang('uz_cyr')" id="btn-uz_cyr" class="lang-btn">ЎЗ</button>
+            <button onclick="changeLang('ru')" id="btn-ru" class="lang-btn">RU</button>
         </div>
     </div>
 
     <!-- Header -->
     <header class="header">
         <div class="container nav-container">
-            <div class="logo">QOMUS</div>
-            <a href="#lead-form" class="btn-secondary">Konsultatsiya</a>
+            <div class="logo">QOMUS<span class="logo-dot">.</span></div>
+            <a href="#lead-form" class="btn-glow-small" id="nav-btn">Konsultatsiya</a>
         </div>
     </header>
 
@@ -31,104 +37,125 @@
     <section class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <span class="badge">⭐ 4.9/5 (1,200+ mamnun mijozlar)</span>
+                <span class="badge" id="hero-badge">⭐ 4.9/5 (1,200+ mamnun mijozlar)</span>
                 <h1 id="hero-title">Teri pigmentatsiyasini ichki tomondan va hujayra darajasida qo'llab-quvvatlang</h1>
                 <p id="hero-desc">Qomus — o'simlik ekstraktlari va hayotiy muhim minerallar birlashmasi. Teringizning naturally va bir tekis ko'rinishini qaytarish uchun maxsus ishlab chiqilgan majmua.</p>
+                
+                <div class="hero-features">
+                    <div class="feat-item">🌱 <span id="feat-1">100% Tabiiy tarkib</span></div>
+                    <div class="feat-item">🔬 <span id="feat-2">Sertifikatlangan GMP</span></div>
+                    <div class="feat-item">🛡️ <span id="feat-3">Bezopasno va Samatli</span></div>
+                </div>
+
                 <div class="hero-cta">
-                    <a href="#lead-form" class="btn-primary" id="hero-btn">Bepul Konsultatsiya Olish</a>
-                    <span class="sub-cta">🔒 Ma'lumotlaringiz sir tutilishi kafolatlanadi</span>
+                    <a href="#lead-form" class="btn-primary-glow" id="hero-btn">
+                        <span id="hero-btn-text">Bepul Konsultatsiya Olish</span>
+                        <div class="btn-pulse"></div>
+                    </a>
+                    <span class="sub-cta" id="sub-cta-text">🔒 Ma'lumotlaringiz sir tutilishi kafolatlanadi</span>
                 </div>
             </div>
-            <div class="hero-image">
-                <!-- Placeholder Rasm (Dizayner rasmi tayyor bo'lguncha) -->
-                <img src="https://placehold.co/1000x1000/2b6cb0/ffffff?text=QOMUS+Product+Shot" alt="Qomus Mahsuloti" id="main-product-img">
+
+            <div class="hero-image-wrapper">
+                <div class="glass-card-image">
+                    <img src="https://placehold.co/1000x1000/0284c7/ffffff?text=QOMUS+Premium+Flakon" alt="Qomus Mahsuloti" id="main-product-img">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Before / After Section (Avval va Keyin) -->
+    <!-- Before / After Section -->
     <section class="before-after-section">
         <div class="container">
-            <h2 class="section-title">Mijozlarimiz Natijalari: Avval va Keyin</h2>
-            <p class="section-subtitle">Qomus majmuasini muntazam qabul qilish natijasida teri pigmentatsiyasida kuzatilgan o'zgarishlar</p>
+            <h2 class="section-title" id="ba-title">Natijalar: Avval va Keyin</h2>
+            <p class="section-subtitle" id="ba-subtitle">Qomus majmuasini muntazam qabul qilish natijasida teri pigmentatsiyasida kuzatilgan o'zgarishlar</p>
             
             <div class="ba-grid">
-                <!-- BA Card 1 -->
-                <div class="ba-card">
-                    <img src="https://placehold.co/800x600/e2e8f0/1a202c?text=Avval+va+Keyin+1" alt="Natija 1">
+                <div class="glass-card ba-card">
+                    <div class="ba-img-box">
+                        <img src="https://placehold.co/800x600/1e293b/38bdf8?text=AVVAL" alt="Avval">
+                        <img src="https://placehold.co/800x600/0f172a/4ade80?text=KEYIN" alt="Keyin">
+                    </div>
                     <div class="ba-info">
-                        <h4>3 oylik qabul natijasi</h4>
-                        <p>Qo'l qismidagi teri pigmentining bosqichma-bosqich tiklanishi.</p>
+                        <h4 id="ba-card1-title">3 oylik qabul natijasi</h4>
+                        <p id="ba-card1-desc">Qo'l sohasidagi teri pigmentining bosqichma-bosqich tiklanishi va bir tekis tusga kirishi.</p>
                     </div>
                 </div>
-                <!-- BA Card 2 -->
-                <div class="ba-card">
-                    <img src="https://placehold.co/800x600/e2e8f0/1a202c?text=Avval+va+Keyin+2" alt="Natija 2">
+
+                <div class="glass-card ba-card">
+                    <div class="ba-img-box">
+                        <img src="https://placehold.co/800x600/1e293b/38bdf8?text=AVVAL" alt="Avval">
+                        <img src="https://placehold.co/800x600/0f172a/4ade80?text=KEYIN" alt="Keyin">
+                    </div>
                     <div class="ba-info">
-                        <h4>2 oylik qabul natijasi</h4>
-                        <p>Yuz sohasidagi rang balansining bir tekis holatga kelishi.</p>
+                        <h4 id="ba-card2-title">2 oylik qabul natijasi</h4>
+                        <p id="ba-card2-desc">Yuz va bo'yin sohasidagi melanotsitlar faollashuvi natijasida rang balansining yaxshilanishi.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Ingredients Section (PrimalQueen Grid) -->
+    <!-- Ingredients Section -->
     <section class="ingredients">
         <div class="container">
-            <h2 class="section-title">Qomus Tarkibidagi Tabiiy Kuch</h2>
+            <h2 class="section-title" id="ing-title">Qomus Tarkibidagi Tabiiy Kuch</h2>
             <div class="ing-grid">
-                <div class="ing-card">
-                    <img src="https://placehold.co/600x600/319795/ffffff?text=Kashkarbegi" alt="Kashkarbegi">
-                    <h3>Ammi Majus (Kashkarbegi)</h3>
-                    <p>Melanotsitlarni (rang beruvchi hujayralarni) rag'batlantiradi va terining nurlarga sezgirligini me'yorlashtiradi.</p>
+                <div class="glass-card ing-card">
+                    <div class="ing-icon">🌿</div>
+                    <h3 id="ing1-title">Ammi Majus (Kashkarbegi)</h3>
+                    <p id="ing1-desc">Melanotsitlarni (rang beruvchi hujayralarni) rag'batlantiradi va terining nurlarga sezgirligini me'yorlashtiradi.</p>
                 </div>
-                <div class="ing-card">
-                    <img src="https://placehold.co/600x600/d69e2e/ffffff?text=Mis+va+Rux" alt="Minerallar">
-                    <h3>Mis va Rux Minerallari</h3>
-                    <p>Melanin sintezida qatnashuvchi fermentlar faoliyatini ichki tomondan qo'llab-quvvatlaydi.</p>
+                <div class="glass-card ing-card">
+                    <div class="ing-icon">⚡</div>
+                    <h3 id="ing2-title">Mis va Rux Minerallari</h3>
+                    <p id="ing2-desc">Melanin sintezida qatnashuvchi fermentlar faoliyatini ichki tomondan qo'llab-quvvatlaydi.</p>
                 </div>
-                <div class="ing-card">
-                    <img src="https://placehold.co/600x600/3182ce/ffffff?text=Antioksidant" alt="Antioksidant">
-                    <h3>Antioksidant Kompleks</h3>
-                    <p>Hujayralarni erkin radikallar va stress ta'sirida emirilishidan samarali himoya qiladi.</p>
+                <div class="glass-card ing-card">
+                    <div class="ing-icon">🧪</div>
+                    <h3 id="ing3-title">Antioksidant Kompleks</h3>
+                    <p id="ing3-desc">Hujayralarni erkin radikallar va stress ta'sirida emirilishidan samarali himoya qiladi.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Lead Form Modal/Section -->
+    <!-- Lead Form Section -->
     <section class="lead-section" id="lead-form">
-        <div class="container form-container">
-            <h2>Bepul Mutaxassis Konsultatsiyasini Oling</h2>
-            <p>Formani to'ldiring, mutaxassisimiz tez orada siz bilan bog'lanib, barcha savollaringizga javob beradi.</p>
-            
-            <form id="main-lead-form">
-                <div class="form-group">
-                    <label for="user-name">Ismingiz:</label>
-                    <input type="text" id="user-name" placeholder="Masalan: Ali Valiyev" required>
-                </div>
-                <div class="form-group">
-                    <label for="user-phone">Telefon raqamingiz:</label>
-                    <input type="tel" id="user-phone" placeholder="+998 90 123 45 67" required>
-                </div>
-                <div class="form-group">
-                    <label for="user-question">Bu holat qancha vaqtdan beri kuzatilmoqda?</label>
-                    <select id="user-question">
-                        <option value="6 oygacha">6 oygacha</option>
-                        <option value="1-3 yil">1 yildan 3 yilgacha</option>
-                        <option value="3 yildan ortiq">3 yildan ortiq</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn-primary btn-block">Buyurtma va Konsultatsiya Olish</button>
-            </form>
+        <div class="container">
+            <div class="glass-card form-box">
+                <h2 id="form-title">Bepul Mutaxassis Konsultatsiyasini Oling</h2>
+                <p id="form-subtitle">Formani to'ldiring, mutaxassisimiz tez orada siz bilan bog'lanib, barcha savollaringizga javob beradi.</p>
+                
+                <form id="main-lead-form">
+                    <div class="form-group">
+                        <label id="lbl-name" for="user-name">Ismingiz:</label>
+                        <input type="text" id="user-name" placeholder="Ali Valiyev" required>
+                    </div>
+                    <div class="form-group">
+                        <label id="lbl-phone" for="user-phone">Telefon raqamingiz:</label>
+                        <input type="tel" id="user-phone" placeholder="+998 90 123 45 67" required>
+                    </div>
+                    <div class="form-group">
+                        <label id="lbl-q" for="user-question">Bu holat qancha vaqtdan beri kuzatilmoqda?</label>
+                        <select id="user-question">
+                            <option value="6 oygacha" id="opt-1">6 oygacha</option>
+                            <option value="1-3 yil" id="opt-2">1 yildan 3 yilgacha</option>
+                            <option value="3 yildan ortiq" id="opt-3">3 yildan ortiq</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary-glow btn-block">
+                        <span id="form-btn-text">Buyurtma va Konsultatsiya Olish</span>
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
-    <!-- Legal Footer (Majburiy) -->
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p class="disclaimer">
+            <p class="disclaimer" id="footer-disclaimer">
                 <strong>Diqqat:</strong> Qomus mahsuloti Biologik Faol Qo'shimcha (BAD) hisoblanadi va dori vositasi emas. Kasalliklarni tashxislash yoki davolash uchun mo'ljallanmagan. Natijalar har bir organizmning individual xususiyatlariga bog'liq. Qo'llashdan oldin shifokor bilan maslahatlashish tavsiya etiladi.
             </p>
             <p class="copyright">© 2026 QOMUS. Barcha huquqlar himoyalangan.</p>
