@@ -1,11 +1,11 @@
 :root {
-    --primary: #0284c7;
-    --primary-glow: rgba(2, 132, 199, 0.4);
-    --bg-dark: #0f172a;
-    --text-main: #334155;
-    --text-title: #0f172a;
-    --glass-bg: rgba(255, 255, 255, 0.8);
-    --glass-border: rgba(255, 255, 255, 0.6);
+    --qomus-blue: #00317F;         /* Asosiy To'q Ko'k */
+    --qomus-cyan: #03C3D4;         /* Yorqin Biryuzoviy */
+    --qomus-orange: #EEAE35;       /* Iliq To'q Sariq */
+    --qomus-dark: #141917;         /* To'q Fon / Text */
+    --qomus-white: #FFFFFF;        /* Oq */
+    --glass-bg: rgba(255, 255, 255, 0.9);
+    --glass-border: rgba(3, 195, 212, 0.2);
 }
 
 * {
@@ -17,8 +17,8 @@
 }
 
 body {
-    background-color: #f0f9ff;
-    color: var(--text-main);
+    background-color: #f4fbfd;
+    color: var(--qomus-dark);
     overflow-x: hidden;
 }
 
@@ -28,30 +28,6 @@ body {
     padding: 0 20px;
 }
 
-/* Dynamic Ambient Glows */
-.glow-bg {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(100px);
-    z-index: -1;
-}
-
-.glow-1 {
-    width: 450px;
-    height: 450px;
-    background: rgba(56, 189, 248, 0.25);
-    top: 0;
-    left: -100px;
-}
-
-.glow-2 {
-    width: 500px;
-    height: 500px;
-    background: rgba(16, 185, 129, 0.15);
-    top: 800px;
-    right: -150px;
-}
-
 /* Glass Card */
 .glass-card {
     background: var(--glass-bg);
@@ -59,52 +35,76 @@ body {
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 15px 35px rgba(0, 49, 127, 0.05);
 }
 
-/* STICKY HEADER */
+/* STICKY HEADER & RUNNING TICKER */
 .sticky-header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    background: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+/* RUNNING TICKER ANIMATION (O'NGDAN CHAPGA) */
+.ticker-wrapper {
+    background: var(--qomus-dark);
+    color: var(--qomus-white);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 6px 0;
+    font-size: 12px;
+    font-weight: 600;
+    border-bottom: 2px solid var(--qomus-cyan);
+}
+
+.ticker-content {
+    display: inline-block;
+    animation: ticker 25s linear infinite;
+}
+
+.ticker-content span {
+    margin-right: 40px;
+}
+
+@keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 65px;
+}
+
+.logo-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-nurion {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--qomus-cyan);
+    letter-spacing: 2px;
+    text-transform: lowercase;
+    border: 1px solid var(--qomus-cyan);
+    border-radius: 10px;
+    padding: 0 6px;
+    width: fit-content;
+    margin-bottom: -4px;
 }
 
 .logo {
     font-size: 26px;
     font-weight: 800;
-    color: var(--bg-dark);
-}
-
-.logo-dot {
-    color: var(--primary);
-}
-
-.header-info-desktop {
-    display: flex;
-    gap: 20px;
-    font-size: 13px;
-    font-weight: 600;
-    color: #475569;
-}
-
-@media (max-width: 900px) {
-    .header-info-desktop {
-        display: none;
-    }
+    color: var(--qomus-blue);
+    letter-spacing: -0.5px;
 }
 
 .header-right {
@@ -121,7 +121,7 @@ body {
 .lang-btn {
     background: #f1f5f9;
     border: 1px solid #cbd5e1;
-    color: #334155;
+    color: var(--qomus-dark);
     padding: 4px 10px;
     border-radius: 6px;
     cursor: pointer;
@@ -131,46 +131,37 @@ body {
 }
 
 .lang-btn.active, .lang-btn:hover {
-    background: var(--primary);
+    background: var(--qomus-blue);
     color: #fff;
-    border-color: var(--primary);
+    border-color: var(--qomus-blue);
 }
 
 .btn-glow-small {
-    background: var(--primary);
-    color: #fff;
+    background: var(--qomus-cyan);
+    color: var(--qomus-dark);
     padding: 8px 18px;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 13px;
-    box-shadow: 0 4px 15px var(--primary-glow);
+    box-shadow: 0 4px 15px rgba(3, 195, 212, 0.3);
+    transition: 0.3s;
 }
 
-.header-info-mobile {
-    display: none;
-    background: #0f172a;
-    color: #cbd5e1;
-    font-size: 11px;
-    text-align: center;
-    padding: 4px 10px;
-    font-weight: 600;
-}
-
-@media (max-width: 900px) {
-    .header-info-mobile {
-        display: block;
-    }
+.btn-glow-small:hover {
+    background: var(--qomus-blue);
+    color: #fff;
 }
 
 /* MAIN BODY PADDING FOR STICKY HEADER */
 .main-body {
-    padding-top: 90px;
+    padding-top: 100px;
 }
 
 /* Hero Section */
 .hero {
     padding: 40px 0 60px 0;
+    background: linear-gradient(180deg, #f0fdfa 0%, #f4fbfd 100%);
 }
 
 .hero-grid {
@@ -188,20 +179,21 @@ body {
 }
 
 .badge {
-    background: rgba(2, 132, 199, 0.1);
-    color: var(--primary);
+    background: rgba(238, 174, 53, 0.15);
+    color: #b47806;
     padding: 8px 16px;
     border-radius: 30px;
     font-size: 13px;
     font-weight: 700;
     display: inline-block;
+    border: 1px solid var(--qomus-orange);
 }
 
 .hero-content h1 {
     font-size: 36px;
-    color: var(--text-title);
+    color: var(--qomus-blue);
     margin: 15px 0;
-    line-height: 1.2;
+    line-height: 1.25;
     font-weight: 800;
 }
 
@@ -230,25 +222,27 @@ body {
     border-radius: 10px;
     font-size: 13px;
     font-weight: 600;
+    border: 1px solid #e2e8f0;
 }
 
 .btn-primary-glow {
-    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
-    color: #fff;
-    padding: 16px 32px;
+    background: linear-gradient(135deg, var(--qomus-orange) 0%, #d99b26 100%);
+    color: var(--qomus-dark);
+    padding: 18px 36px;
     border-radius: 14px;
     text-decoration: none;
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: 800;
+    font-size: 17px;
     display: inline-block;
     border: none;
     cursor: pointer;
-    box-shadow: 0 10px 30px var(--primary-glow);
+    box-shadow: 0 10px 25px rgba(238, 174, 53, 0.4);
     transition: 0.3s;
 }
 
 .btn-primary-glow:hover {
     transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(238, 174, 53, 0.6);
 }
 
 .btn-block {
@@ -266,9 +260,10 @@ body {
     width: 100%;
     border-radius: 20px;
     display: block;
+    border: 3px solid var(--qomus-cyan);
 }
 
-/* STAGE: How It Works */
+/* Sections */
 .how-it-works, .before-after-section, .ingredients, .comparison, .faq-section, .lead-section {
     padding: 60px 0;
 }
@@ -276,7 +271,7 @@ body {
 .section-title {
     text-align: center;
     font-size: 28px;
-    color: var(--text-title);
+    color: var(--qomus-blue);
     font-weight: 800;
 }
 
@@ -301,20 +296,20 @@ body {
 
 .step-card {
     padding: 30px 20px;
-    position: relative;
+    border-top: 4px solid var(--qomus-cyan);
 }
 
 .step-num {
     font-size: 24px;
     font-weight: 800;
-    color: var(--primary);
+    color: var(--qomus-cyan);
     margin-bottom: 10px;
 }
 
 .step-card h3 {
     font-size: 18px;
     margin-bottom: 8px;
-    color: var(--text-title);
+    color: var(--qomus-blue);
 }
 
 /* Before After */
@@ -332,6 +327,7 @@ body {
 
 .ba-card {
     padding: 15px;
+    border: 1px solid var(--qomus-cyan);
 }
 
 .ba-img-box {
@@ -347,6 +343,10 @@ body {
 
 .ba-info {
     padding-top: 12px;
+}
+
+.ba-info h4 {
+    color: var(--qomus-blue);
 }
 
 /* Ingredients */
@@ -365,6 +365,7 @@ body {
 .ing-card {
     padding: 25px 20px;
     text-align: center;
+    border-bottom: 4px solid var(--qomus-orange);
 }
 
 .ing-icon {
@@ -372,10 +373,15 @@ body {
     margin-bottom: 10px;
 }
 
+.ing-card h3 {
+    color: var(--qomus-blue);
+}
+
 /* Comparison Table */
 .table-wrapper {
     overflow-x: auto;
     padding: 20px;
+    background: #fff;
 }
 
 .comp-table {
@@ -390,9 +396,9 @@ body {
 }
 
 .comp-table th.highlight-col, .comp-table td.highlight-col {
-    background: rgba(2, 132, 199, 0.08);
+    background: rgba(3, 195, 212, 0.1);
     font-weight: 700;
-    color: var(--primary);
+    color: var(--qomus-blue);
 }
 
 /* FAQ Accordion */
@@ -406,6 +412,7 @@ body {
 
 .faq-item {
     overflow: hidden;
+    background: #fff;
 }
 
 .faq-question {
@@ -418,7 +425,7 @@ body {
     align-items: center;
     font-size: 16px;
     font-weight: 700;
-    color: var(--text-title);
+    color: var(--qomus-blue);
     cursor: pointer;
     text-align: left;
 }
@@ -440,6 +447,7 @@ body {
     margin: 0 auto;
     padding: 35px;
     background: #fff;
+    border: 2px solid var(--qomus-cyan);
 }
 
 .form-group {
@@ -451,6 +459,7 @@ body {
     margin-bottom: 6px;
     font-weight: 700;
     font-size: 14px;
+    color: var(--qomus-blue);
 }
 
 .form-group input, .form-group select {
@@ -461,9 +470,14 @@ body {
     font-size: 15px;
 }
 
+.form-group input:focus, .form-group select:focus {
+    border-color: var(--qomus-cyan);
+    outline: none;
+}
+
 /* Footer */
 .footer {
-    background: var(--bg-dark);
+    background: var(--qomus-dark);
     color: #94a3b8;
     padding: 35px 0;
     font-size: 12px;

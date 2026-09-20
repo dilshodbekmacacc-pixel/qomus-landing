@@ -11,17 +11,27 @@
 </head>
 <body>
 
-    <div class="glow-bg glow-1"></div>
-    <div class="glow-bg glow-2"></div>
-
+    <!-- STICKY FIXED HEADER -->
     <header class="sticky-header">
-        <div class="container header-content">
-            <div class="logo">QOMUS<span class="logo-dot">.</span></div>
-            
-            <div class="header-info-desktop">
+        <!-- RUNNING TICKER LINE (O'NGDAN CHAPGA YURADIGAN TIKER) -->
+        <div class="ticker-wrapper">
+            <div class="ticker-content" id="ticker-text">
                 <span>🚚 O'zbekiston bo'ylab tekin yetkazib beramiz</span>
                 <span>🌿 100% tabiiy mahsulot</span>
                 <span>⭐ 20,000+ mamnun mijozlar</span>
+                <span>🔐 100% Maxfiylik kafolatlanadi</span>
+                <!-- Takroriy matn uzluksiz aylanishi uchun -->
+                <span>🚚 O'zbekiston bo'ylab tekin yetkazib beramiz</span>
+                <span>🌿 100% tabiiy mahsulot</span>
+                <span>⭐ 20,000+ mamnun mijozlar</span>
+                <span>🔐 100% Maxfiylik kafolatlanadi</span>
+            </div>
+        </div>
+
+        <div class="container header-content">
+            <div class="logo-wrapper">
+                <span class="brand-nurion">nurion</span>
+                <div class="logo">QOMUS</div>
             </div>
 
             <div class="header-right">
@@ -33,13 +43,12 @@
                 <a href="#lead-form" class="btn-glow-small" id="nav-btn">Konsultatsiya</a>
             </div>
         </div>
-        <div class="header-info-mobile" id="mobile-top-info">
-            🚚 Tekin yetkazib berish | 🌿 100% tabiiy | ⭐ 20,000+ mijozlar
-        </div>
     </header>
 
+    <!-- Main Content Wrapper -->
     <main class="main-body">
 
+        <!-- Hero Section -->
         <section class="hero">
             <div class="container hero-grid">
                 <div class="hero-content">
@@ -63,12 +72,13 @@
 
                 <div class="hero-image-wrapper">
                     <div class="glass-card-image">
-                        <img src="https://placehold.co/1000x1000/0284c7/ffffff?text=QOMUS+Flakon" alt="Qomus Mahsuloti" id="main-product-img">
+                        <img src="https://placehold.co/1000x1000/00317f/ffffff?text=QOMUS+Flakon" alt="Qomus Mahsuloti" id="main-product-img">
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- STAGE 2: How It Works -->
         <section class="how-it-works">
             <div class="container">
                 <h2 class="section-title" id="how-title">Qomus Qanday Ishlaydi?</h2>
@@ -94,6 +104,7 @@
             </div>
         </section>
 
+        <!-- STAGE 3: Before / After Section -->
         <section class="before-after-section">
             <div class="container">
                 <h2 class="section-title" id="ba-title">Natijalar: Avval va Keyin</h2>
@@ -102,8 +113,8 @@
                 <div class="ba-grid">
                     <div class="glass-card ba-card">
                         <div class="ba-img-box">
-                            <img src="https://placehold.co/800x600/1e293b/38bdf8?text=AVVAL" alt="Avval">
-                            <img src="https://placehold.co/800x600/0f172a/4ade80?text=KEYIN" alt="Keyin">
+                            <img src="https://placehold.co/800x600/141917/03c3d4?text=AVVAL" alt="Avval">
+                            <img src="https://placehold.co/800x600/00317f/eeae35?text=KEYIN" alt="Keyin">
                         </div>
                         <div class="ba-info">
                             <h4 id="ba-card1-title">3 oylik qabul natijasi</h4>
@@ -113,8 +124,8 @@
 
                     <div class="glass-card ba-card">
                         <div class="ba-img-box">
-                            <img src="https://placehold.co/800x600/1e293b/38bdf8?text=AVVAL" alt="Avval">
-                            <img src="https://placehold.co/800x600/0f172a/4ade80?text=KEYIN" alt="Keyin">
+                            <img src="https://placehold.co/800x600/141917/03c3d4?text=AVVAL" alt="Avval">
+                            <img src="https://placehold.co/800x600/00317f/eeae35?text=KEYIN" alt="Keyin">
                         </div>
                         <div class="ba-info">
                             <h4 id="ba-card2-title">2 oylik qabul natijasi</h4>
@@ -125,6 +136,7 @@
             </div>
         </section>
 
+        <!-- STAGE 4: Ingredients Section -->
         <section class="ingredients">
             <div class="container">
                 <h2 class="section-title" id="ing-title">Qomus Tarkibidagi Tabiiy Kuch</h2>
@@ -148,6 +160,7 @@
             </div>
         </section>
 
+        <!-- STAGE 5: Comparison Table -->
         <section class="comparison">
             <div class="container">
                 <h2 class="section-title" id="comp-title">Nega Aynan Qomus?</h2>
@@ -182,6 +195,7 @@
             </div>
         </section>
 
+        <!-- STAGE 6: FAQ -->
         <section class="faq-section">
             <div class="container">
                 <h2 class="section-title" id="faq-title">Ko'p Beriladigan Savollar</h2>
@@ -208,6 +222,7 @@
             </div>
         </section>
 
+        <!-- STAGE 7: Lead Form Section -->
         <section class="lead-section" id="lead-form">
             <div class="container">
                 <div class="glass-card form-box">
@@ -241,6 +256,7 @@
 
     </main>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <p class="disclaimer" id="footer-disclaimer">

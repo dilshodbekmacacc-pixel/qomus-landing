@@ -1,4 +1,3 @@
-// FAQ Accordion Toggle
 function toggleFaq(btn) {
     const item = btn.parentElement;
     item.classList.toggle('active');
@@ -6,10 +5,9 @@ function toggleFaq(btn) {
     icon.innerText = item.classList.contains('active') ? '−' : '+';
 }
 
-// Translations Dictionary
 const translations = {
     uz: {
-        mobileInfo: "🚚 Tekin yetkazib berish | 🌿 100% tabiiy | ⭐ 20,000+ mijozlar",
+        tickerText: "<span>🚚 O'zbekiston bo'ylab tekin yetkazib beramiz</span><span>🌿 100% tabiiy mahsulot</span><span>⭐ 20,000+ mamnun mijozlar</span><span>🔐 100% Maxfiylik kafolatlanadi</span><span>🚚 O'zbekiston bo'ylab tekin yetkazib beramiz</span><span>🌿 100% tabiiy mahsulot</span><span>⭐ 20,000+ mamnun mijozlar</span><span>🔐 100% Maxfiylik kafolatlanadi</span>",
         navBtn: "Konsultatsiya",
         heroBadge: "⭐ 20,000+ mamnun mijozlar ishonchi",
         heroTitle: "Teri pigmentatsiyasini ichki tomondan va hujayra darajasida qo'llab-quvvatlang",
@@ -19,7 +17,7 @@ const translations = {
         feat3: "Xavfsiz va samarali",
         heroBtn: "Bepul Konsultatsiya Olish",
         subCta: "🔒 Ma'lumotlaringiz sir tutilishi kafolatlanadi",
-        
+
         howTitle: "Qomus Qanday Ishlaydi?",
         howSubtitle: "Organizmda melanotsitlar faoliyatini bosqichma-bosqich tiklash mexanizmi",
         step1Title: "Hujayraviy Oziqlanish",
@@ -68,7 +66,7 @@ const translations = {
         formBtn: "Buyurtma va Konsultatsiya Olish"
     },
     uz_cyr: {
-        mobileInfo: "🚚 Текин етказиб бериш | 🌿 100% табиий | ⭐ 20,000+ мижозлар",
+        tickerText: "<span>🚚 Ўзбекистон бўйлаб текин етказиб берамиз</span><span>🌿 100% табиий маҳсулот</span><span>⭐ 20,000+ мамнун мижозлар</span><span>🔐 100% Махфийлик кафолатланади</span><span>🚚 Ўзбекистон бўйлаб текин етказиб берамиз</span><span>🌿 100% табиий маҳсулот</span><span>⭐ 20,000+ мамнун мижозлар</span><span>🔐 100% Махфийлик кафолатланади</span>",
         navBtn: "Консультация",
         heroBadge: "⭐ 20,000+ мамнун мижозлар ишончи",
         heroTitle: "Тери пигментациясини ички томондан ва ҳужайра даражасида қўллаб-қувватланг",
@@ -127,7 +125,7 @@ const translations = {
         formBtn: "Буюртма ва Консультация Олиш"
     },
     ru: {
-        mobileInfo: "🚚 Бесплатная доставка | 🌿 100% Натурально | ⭐ 20,000+ клиентов",
+        tickerText: "<span>🚚 Бесплатная доставка по всему Узбекистану</span><span>🌿 100% Натуральный продукт</span><span>⭐ 20,000+ довольных клиентов</span><span>🔐 100% Конфиденциальность</span><span>🚚 Бесплатная доставка по всему Узбекистану</span><span>🌿 100% Натуральный продукт</span><span>⭐ 20,000+ довольных клиентов</span><span>🔐 100% Конфиденциальность</span>",
         navBtn: "Консультация",
         heroBadge: "⭐ Доверие более 20,000+ довольных клиентов",
         heroTitle: "Поддержите пигментацию кожи на клеточном уровне изнутри",
@@ -192,7 +190,7 @@ function changeLang(lang) {
     document.getElementById(`btn-${lang}`).classList.add('active');
 
     const t = translations[lang];
-    document.getElementById('mobile-top-info').innerText = t.mobileInfo;
+    document.getElementById('ticker-text').innerHTML = t.tickerText;
     document.getElementById('nav-btn').innerText = t.navBtn;
     document.getElementById('hero-badge').innerText = t.heroBadge;
     document.getElementById('hero-title').innerText = t.heroTitle;
