@@ -1,252 +1,475 @@
-// FAQ Accordion Toggle
-function toggleFaq(btn) {
-    const item = btn.parentElement;
-    item.classList.toggle('active');
-    const icon = btn.querySelector('.faq-icon');
-    icon.innerText = item.classList.contains('active') ? '−' : '+';
+:root {
+    --primary: #0284c7;
+    --primary-glow: rgba(2, 132, 199, 0.4);
+    --bg-dark: #0f172a;
+    --text-main: #334155;
+    --text-title: #0f172a;
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-border: rgba(255, 255, 255, 0.6);
 }
 
-// Translations Dictionary
-const translations = {
-    uz: {
-        mobileInfo: "🚚 Tekin yetkazib berish | 🌿 100% tabiiy | ⭐ 20,000+ mijozlar",
-        navBtn: "Konsultatsiya",
-        heroBadge: "⭐ 20,000+ mamnun mijozlar ishonchi",
-        heroTitle: "Teri pigmentatsiyasini ichki tomondan va hujayra darajasida qo'llab-quvvatlang",
-        heroDesc: "Qomus — o'simlik ekstraktlari va hayotiy muhim minerallar birlashmasi. Teringizning naturally va bir tekis ko'rinishini qaytarish uchun maxsus ishlab chiqilgan majmua.",
-        feat1: "100% Tabiiy tarkib",
-        feat2: "Sertifikatlangan GMP",
-        feat3: "Xavfsiz va samarali",
-        heroBtn: "Bepul Konsultatsiya Olish",
-        subCta: "🔒 Ma'lumotlaringiz sir tutilishi kafolatlanadi",
-        
-        howTitle: "Qomus Qanday Ishlaydi?",
-        howSubtitle: "Organizmda melanotsitlar faoliyatini bosqichma-bosqich tiklash mexanizmi",
-        step1Title: "Hujayraviy Oziqlanish",
-        step1Desc: "Tarkibdagi mikroelementlar va Kashkarbegi ekstrakti qon aylanishi orqali melanotsitlarga yetib boradi.",
-        step2Title: "Melanin Sintezi",
-        step2Desc: "Mis va Rux minerallari pigment rang berish jarayonini ichki tomondan faollashtiradi.",
-        step3Title: "Rang Balansi",
-        step3Desc: "Muntazam qabul natijasida teri dog'lari atrofi bir tekis pigment bilan to'yinishni boshlaydi.",
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+}
 
-        baTitle: "Natijalar: Avval va Keyin",
-        baSubtitle: "Qomus majmuasini muntazam qabul qilish natijasida kuzatilgan o'zgarishlar",
-        baCard1Title: "3 oylik qabul natijasi",
-        baCard1Desc: "Qo'l sohasidagi teri pigmentining bosqichma-bosqich tiklanishi.",
-        baCard2Title: "2 oylik qabul natijasi",
-        baCard2Desc: "Yuz va bo'yin sohasidagi melanotsitlar faollashuvi va bir tekis tus.",
+body {
+    background-color: #f0f9ff;
+    color: var(--text-main);
+    overflow-x: hidden;
+}
 
-        ingTitle: "Qomus Tarkibidagi Tabiiy Kuch",
-        ing1Title: "Ammi Majus (Kashkarbegi)",
-        ing1Desc: "Melanotsitlarni rag'batlantiradi va terining nurlarga sezgirligini me'yorlashtiradi.",
-        ing2Title: "Mis va Rux Minerallari",
-        ing2Desc: "Melanin sintezida qatnashuvchi fermentlar faoliyatini ichki tomondan qo'llab-quvvatlaydi.",
-        ing3Title: "Antioksidant Kompleks",
-        ing3Desc: "Hujayralarni erkin radikallar va stress ta'sirida emirilishidan samarali himoya qiladi.",
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        compTitle: "Nega Aynan Qomus?",
-        thFeature: "Xususiyatlari",
-        thOthers: "Oddiy Maz / Kremlar",
-        tdF1: "Ta'sir qilishi",
-        tdF2: "Tarkibi",
-        tdF3: "Nojo'ya ta'sirlar",
+/* Dynamic Ambient Glows */
+.glow-bg {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: -1;
+}
 
-        faqTitle: "Ko'p Beriladigan Savollar",
-        faq1Q: "Qomus mahsulotini qancha vaqt qabul qilish kerak?",
-        faq1A: "Maksimal va barqaror natija uchun kamida 2-3 oy muntazam qabul qilish tavsiya etiladi.",
-        faq2Q: "Mahsulot nojo'ya ta'sirga egami?",
-        faq2A: "Qomus 100% tabiiy tarkibga ega va to'g'ri dozada qabul qilinganda nojo'ya ta'sirlar kuzatilmaydi.",
+.glow-1 {
+    width: 450px;
+    height: 450px;
+    background: rgba(56, 189, 248, 0.25);
+    top: 0;
+    left: -100px;
+}
 
-        formTitle: "Bepul Mutaxassis Konsultatsiyasini Oling",
-        formSubtitle: "Formani to'ldiring, mutaxassisimiz tez orada siz bilan bog'lanib, barcha savollaringizga javob beradi.",
-        lblName: "Ismingiz:",
-        lblPhone: "Telefon raqamingiz:",
-        lblQ: "Bu holat qancha vaqtdan beri kuzatilmoqda?",
-        opt1: "6 oygacha",
-        opt2: "1 yildan 3 yilgacha",
-        opt3: "3 yildan ortiq",
-        formBtn: "Buyurtma va Konsultatsiya Olish"
-    },
-    uz_cyr: {
-        mobileInfo: "🚚 Текин етказиб бериш | 🌿 100% табиий | ⭐ 20,000+ мижозлар",
-        navBtn: "Консультация",
-        heroBadge: "⭐ 20,000+ мамнун мижозлар ишончи",
-        heroTitle: "Тери пигментациясини ички томондан ва ҳужайра даражасида қўллаб-қувватланг",
-        heroDesc: "Қомус — ўсимлик экстрактлари ва ҳаётий муҳим минераллар бирлашмаси. Терингизнинг табиий ва бир текис кўринишини қайтариш учун махсус ишлаб чиқилган мажмуа.",
-        feat1: "100% Табиий таркиб",
-        feat2: "Сертификатланган GMP",
-        feat3: "Хавфсиз ва самарали",
-        heroBtn: "Бепул Консультация Олиш",
-        subCta: "🔒 Маълумотларингиз сир тутилиши кафолатланади",
+.glow-2 {
+    width: 500px;
+    height: 500px;
+    background: rgba(16, 185, 129, 0.15);
+    top: 800px;
+    right: -150px;
+}
 
-        howTitle: "Қомус Қандай Ишлайди?",
-        howSubtitle: "Организмда меланоцитлар фаолиятини босқичма-босқич тиклаш механизми",
-        step1Title: "Ҳужайравий Озиқланиш",
-        step1Desc: "Таркибдаги микроэлементлар ва Кашкарбеги экстракти қон айланиши орқали меланоцитларга етиб боради.",
-        step2Title: "Меланин Синтези",
-        step2Desc: "Мис ва Рух минераллари пигмент ранг бериш жараёнини ички томондан фаоллаштиради.",
-        step3Title: "Ранг Баланси",
-        step3Desc: "Мунтазам қабул натижасида тери доғлари атрофи бир текис пигмент билан тўйинишни бошлайди.",
+/* Glass Card */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+}
 
-        baTitle: "Натижалар: Аввал ва Кейин",
-        baSubtitle: "Қомус мажмуасини мунтазам қабул қилиш натижасида кузатилган ўзгаришлар",
-        baCard1Title: "3 ойлик қабул натижаси",
-        baCard1Desc: "Қўл соҳасидаги тери пигментининг босқичма-босқич тикланиши.",
-        baCard2Title: "2 ойлик қабул натижаси",
-        baCard2Desc: "Юз ва бўйин соҳасидаги меланоцитлар фаоллашуви ва бир текис тус.",
+/* STICKY HEADER */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
 
-        ingTitle: "Қомус Таркибидаги Табиий Куч",
-        ing1Title: "Ammi Majus (Кашкарбеги)",
-        ing1Desc: "Меланоцитларни рағбатлантиради ва терининг нурларга сезувчанлигини меъёрлаштиради.",
-        ing2Title: "Мис ва Рух Минераллари",
-        ing2Desc: "Меланин синтезида қатнашувчи ферментлар фаолиятини ички томондан қўллаб-қувватлайди.",
-        ing3Title: "Антиоксидант Комплекс",
-        ing3Desc: "Ҳужайраларни эркин радикаллар ва стресс таъсирида емирилишидан самарали ҳимоя қилади.",
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
 
-        compTitle: "Нега Айнан Қомус?",
-        thFeature: "Хусусиятлари",
-        thOthers: "Оддий Маз / Кремлар",
-        tdF1: "Таъсир қилиши",
-        tdF2: "Таркиби",
-        tdF3: "Ножўя таъсирлар",
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--bg-dark);
+}
 
-        faqTitle: "Кўп Бериладиган Саволлар",
-        faq1Q: "Қомус маҳсулотини қанча вақт қабул қилиш керак?",
-        faq1A: "Максимал ва барқарор натижа учун камида 2-3 ой мунтазам қабул қилиш тавсия этилади.",
-        faq2Q: "Маҳсулот ножўя таъсирга эгами?",
-        faq2A: "Қомус 100% табиий таркибга эга ва тўғри дозада қабул қилинганда ножўя таъсирлар кузатилмайди.",
+.logo-dot {
+    color: var(--primary);
+}
 
-        formTitle: "Бепул Мутахассис Консультациясини Олинг",
-        formSubtitle: "Формани тўлдиринг, мутахассисимиз тез орада сиз билан боғланиб, барча саволларингизга жавоб беради.",
-        lblName: "Исмингиз:",
-        lblPhone: "Телефон рақамингиз:",
-        lblQ: "Бу ҳолат қанча вақтдан бери кузатилмоқда?",
-        opt1: "6 ойгача",
-        opt2: "1 йилдан 3 йилгача",
-        opt3: "3 йилдан ортиқ",
-        formBtn: "Буюртма ва Консультация Олиш"
-    },
-    ru: {
-        mobileInfo: "🚚 Бесплатная доставка | 🌿 100% Натурально | ⭐ 20,000+ клиентов",
-        navBtn: "Консультация",
-        heroBadge: "⭐ Доверие более 20,000+ довольных клиентов",
-        heroTitle: "Поддержите пигментацию кожи на клеточном уровне изнутри",
-        heroDesc: "Qomus — это комплекс растительных экстрактов и жизненно важных минералов, созданный для поддержки естественного баланса и ровного тона кожи.",
-        feat1: "100% Натуральный состав",
-        feat2: "Сертифицирован GMP",
-        feat3: "Безопасно и эффективно",
-        heroBtn: "Получить Бесплатную Консультацию",
-        subCta: "🔒 Полная конфиденциальность ваших данных",
+.header-info-desktop {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+}
 
-        howTitle: "Как Работает Qomus?",
-        howSubtitle: "Пошаговый механизм восстановления активности меланоцитов",
-        step1Title: "Клеточное Питание",
-        step1Desc: "Микроэлементы и экстракт Амми Большой поступают к меланоцитам через кровоток.",
-        step2Title: "Синтез Меланина",
-        step2Desc: "Минералы медь и цинк активируют процесс выработки пигмента изнутри.",
-        step3Title: "Баланс Тона",
-        step3Desc: "При регулярном приеме пигментация вокруг пятен постепенно выравнивается.",
-
-        baTitle: "Результаты: До и После",
-        baSubtitle: "Изменения пигментации кожи при регулярном приеме комплекса Qomus",
-        baCard1Title: "Результат за 3 месяца",
-        baCard1Desc: "Постепенное восстановление пигментации кожи на руках.",
-        baCard2Title: "Результат за 2 месяца",
-        baCard2Desc: "Улучшение цветового баланса в области лица и шеи.",
-
-        ingTitle: "Сила Природы в Составе Qomus",
-        ing1Title: "Ammi Majus (Амми Большая)",
-        ing1Desc: "Стимулирует меланоциты и нормализует чувствительность кожи.",
-        ing2Title: "Минералы Медь и Цинк",
-        ing2Desc: "Поддерживают ферменты, участвующие в синтезе меланина.",
-        ing3Title: "Антиоксидантный Комплекс",
-        ing3Desc: "Защищает клетки от разрушения свободными радикалами.",
-
-        compTitle: "Почему Именно Qomus?",
-        thFeature: "Характеристики",
-        thOthers: "Обычные Мази / Кремы",
-        tdF1: "Воздействие",
-        tdF2: "Состав",
-        tdF3: "Побочные эффекты",
-
-        faqTitle: "Часто Задаваемые Вопросы",
-        faq1Q: "Как долго нужно принимать Qomus?",
-        faq1A: "Для устойчивого результата рекомендуется курс не менее 2-3 месяцев.",
-        faq2Q: "Есть ли побочные эффекты?",
-        faq2A: "Состав 100% натуральный, при правильном приеме побочные эффекты отсутствуют.",
-
-        formTitle: "Получите Консультацию Специалиста",
-        formSubtitle: "Заполните форму, и наш специалист свяжется с вами для консультации.",
-        lblName: "Ваше имя:",
-        lblPhone: "Ваш номер телефона:",
-        lblQ: "Как долго наблюдается это состояние?",
-        opt1: "До 6 месяцев",
-        opt2: "От 1 до 3 лет",
-        opt3: "Более 3 лет",
-        formBtn: "Оформить Заказ и Консультацию"
+@media (max-width: 900px) {
+    .header-info-desktop {
+        display: none;
     }
-};
+}
 
-function changeLang(lang) {
-    document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-    document.getElementById(`btn-${lang}`).classList.add('active');
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
-    const t = translations[lang];
-    document.getElementById('mobile-top-info').innerText = t.mobileInfo;
-    document.getElementById('nav-btn').innerText = t.navBtn;
-    document.getElementById('hero-badge').innerText = t.heroBadge;
-    document.getElementById('hero-title').innerText = t.heroTitle;
-    document.getElementById('hero-desc').innerText = t.heroDesc;
-    document.getElementById('feat-1').innerText = t.feat1;
-    document.getElementById('feat-2').innerText = t.feat2;
-    document.getElementById('feat-3').innerText = t.feat3;
-    document.getElementById('hero-btn-text').innerText = t.heroBtn;
-    document.getElementById('sub-cta-text').innerText = t.subCta;
+.lang-switch {
+    display: flex;
+    gap: 4px;
+}
 
-    document.getElementById('how-title').innerText = t.howTitle;
-    document.getElementById('how-subtitle').innerText = t.howSubtitle;
-    document.getElementById('step1-title').innerText = t.step1Title;
-    document.getElementById('step1-desc').innerText = t.step1Desc;
-    document.getElementById('step2-title').innerText = t.step2Title;
-    document.getElementById('step2-desc').innerText = t.step2Desc;
-    document.getElementById('step3-title').innerText = t.step3Title;
-    document.getElementById('step3-desc').innerText = t.step3Desc;
+.lang-btn {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    color: #334155;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 700;
+    transition: 0.3s;
+}
 
-    document.getElementById('ba-title').innerText = t.baTitle;
-    document.getElementById('ba-subtitle').innerText = t.baSubtitle;
-    document.getElementById('ba-card1-title').innerText = t.baCard1Title;
-    document.getElementById('ba-card1-desc').innerText = t.baCard1Desc;
-    document.getElementById('ba-card2-title').innerText = t.baCard2Title;
-    document.getElementById('ba-card2-desc').innerText = t.baCard2Desc;
+.lang-btn.active, .lang-btn:hover {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
 
-    document.getElementById('ing-title').innerText = t.ingTitle;
-    document.getElementById('ing1-title').innerText = t.ing1Title;
-    document.getElementById('ing1-desc').innerText = t.ing1Desc;
-    document.getElementById('ing2-title').innerText = t.ing2Title;
-    document.getElementById('ing2-desc').innerText = t.ing2Desc;
-    document.getElementById('ing3-title').innerText = t.ing3Title;
-    document.getElementById('ing3-desc').innerText = t.ing3Desc;
+.btn-glow-small {
+    background: var(--primary);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 13px;
+    box-shadow: 0 4px 15px var(--primary-glow);
+}
 
-    document.getElementById('comp-title').innerText = t.compTitle;
-    document.getElementById('th-feature').innerText = t.thFeature;
-    document.getElementById('th-others').innerText = t.thOthers;
-    document.getElementById('td-f1').innerText = t.tdF1;
-    document.getElementById('td-f2').innerText = t.tdF2;
-    document.getElementById('td-f3').innerText = t.tdF3;
+.header-info-mobile {
+    display: none;
+    background: #0f172a;
+    color: #cbd5e1;
+    font-size: 11px;
+    text-align: center;
+    padding: 4px 10px;
+    font-weight: 600;
+}
 
-    document.getElementById('faq-title').innerText = t.faqTitle;
-    document.getElementById('faq1-q').innerText = t.faq1Q;
-    document.getElementById('faq1-a').innerText = t.faq1A;
-    document.getElementById('faq2-q').innerText = t.faq2Q;
-    document.getElementById('faq2-a').innerText = t.faq2A;
+@media (max-width: 900px) {
+    .header-info-mobile {
+        display: block;
+    }
+}
 
-    document.getElementById('form-title').innerText = t.formTitle;
-    document.getElementById('form-subtitle').innerText = t.formSubtitle;
-    document.getElementById('lbl-name').innerText = t.lblName;
-    document.getElementById('lbl-phone').innerText = t.lblPhone;
-    document.getElementById('lbl-q').innerText = t.lblQ;
-    document.getElementById('opt-1').innerText = t.opt1;
-    document.getElementById('opt-2').innerText = t.opt2;
-    document.getElementById('opt-3').innerText = t.opt3;
-    document.getElementById('form-btn-text').innerText = t.formBtn;
+/* MAIN BODY PADDING FOR STICKY HEADER */
+.main-body {
+    padding-top: 90px;
+}
+
+/* Hero Section */
+.hero {
+    padding: 40px 0 60px 0;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 40px;
+    align-items: center;
+}
+
+@media (max-width: 868px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+.badge {
+    background: rgba(2, 132, 199, 0.1);
+    color: var(--primary);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    color: var(--text-title);
+    margin: 15px 0;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.hero-content p {
+    font-size: 16px;
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+.hero-features {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 868px) {
+    .hero-features {
+        justify-content: center;
+    }
+}
+
+.feat-item {
+    background: #fff;
+    padding: 8px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn-primary-glow {
+    background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+    color: #fff;
+    padding: 16px 32px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 10px 30px var(--primary-glow);
+    transition: 0.3s;
+}
+
+.btn-primary-glow:hover {
+    transform: translateY(-2px);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+.sub-cta {
+    display: block;
+    font-size: 12px;
+    color: #64748b;
+    margin-top: 8px;
+}
+
+.glass-card-image img {
+    width: 100%;
+    border-radius: 20px;
+    display: block;
+}
+
+/* STAGE: How It Works */
+.how-it-works, .before-after-section, .ingredients, .comparison, .faq-section, .lead-section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 28px;
+    color: var(--text-title);
+    font-weight: 800;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 35px;
+    font-size: 15px;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.step-card {
+    padding: 30px 20px;
+    position: relative;
+}
+
+.step-num {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.step-card h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--text-title);
+}
+
+/* Before After */
+.ba-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+@media (max-width: 768px) {
+    .ba-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ba-card {
+    padding: 15px;
+}
+
+.ba-img-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.ba-img-box img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.ba-info {
+    padding-top: 12px;
+}
+
+/* Ingredients */
+.ing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .ing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.ing-card {
+    padding: 25px 20px;
+    text-align: center;
+}
+
+.ing-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+/* Comparison Table */
+.table-wrapper {
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.comp-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.comp-table th, .comp-table td {
+    padding: 16px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.comp-table th.highlight-col, .comp-table td.highlight-col {
+    background: rgba(2, 132, 199, 0.08);
+    font-weight: 700;
+    color: var(--primary);
+}
+
+/* FAQ Accordion */
+.faq-accordion {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 18px 20px;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text-title);
+    cursor: pointer;
+    text-align: left;
+}
+
+.faq-answer {
+    padding: 0 20px 18px 20px;
+    display: none;
+    color: #475569;
+    font-size: 14px;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Lead Form */
+.form-box {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 35px;
+    background: #fff;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+/* Footer */
+.footer {
+    background: var(--bg-dark);
+    color: #94a3b8;
+    padding: 35px 0;
+    font-size: 12px;
+}
+
+.disclaimer {
+    line-height: 1.7;
+    margin-bottom: 15px;
 }
