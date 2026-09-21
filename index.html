@@ -28,16 +28,15 @@
             padding: 0 16px;
         }
 
-        /* TOP TICKER BAR — YANGILANGAN ELEGANT GRADIENT FON */
+        /* TOP TICKER BAR — BRENDNING TO'Q KO'K RANGI (#00317F) */
         .top-ticker {
-            background: linear-gradient(90deg, #002147 0%, #004d40 100%);
+            background: #00317F;
             color: #ffffff;
             font-size: 12px;
             font-weight: 700;
             padding: 8px 0;
             overflow: hidden;
             white-space: nowrap;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
         }
 
         .ticker-content {
@@ -133,15 +132,15 @@
             color: #ffffff;
         }
 
-        /* PORLAYDIGAN YASHIL TUGMALAR STILI */
+        /* PORLAYDIGAN YASHIL TUGMALAR */
         .btn-glow-green {
             border: 2px solid #00a86b;
             background: #00a86b;
             color: #ffffff !important;
-            padding: 6px 14px;
+            padding: 7px 14px;
             border-radius: 20px;
             font-weight: 800;
-            font-size: 13px;
+            font-size: 12px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
@@ -169,19 +168,17 @@
             height: 34px;
         }
 
-        .btn-phone-mobile svg path {
-            stroke: #ffffff;
-        }
+        .btn-phone-mobile svg path { stroke: #ffffff; }
 
         @media (max-width: 600px) {
             .logo-main { font-size: 18px; }
             .btn-phone-desktop { display: none; }
             .btn-phone-mobile { display: inline-flex; align-items: center; justify-content: center; }
-            .btn-glow-green { padding: 6px 10px; font-size: 12px; }
+            .btn-glow-green { padding: 6px 8px; font-size: 11px; }
             .lang-btn { padding: 4px 5px; font-size: 10px; }
         }
 
-        /* FREEZE BUTTONS */
+        /* FREEZE CALL BUTTON */
         .freeze-call-btn {
             position: fixed;
             bottom: 80px;
@@ -202,6 +199,7 @@
 
         .freeze-call-btn svg path { stroke: #ffffff; }
 
+        /* FREEZE BOTTOM BAR */
         .freeze-bottom-bar {
             position: fixed;
             bottom: 0;
@@ -221,7 +219,7 @@
             text-align: center;
             padding: 13px 0;
             border-radius: 10px;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 800;
             text-decoration: none;
             animation: pulseGlow 2s infinite;
@@ -229,101 +227,46 @@
         }
 
         /* ------------------------------------------------------------- */
-        /* 2-BLOK: HERO SECTION (ZAMONAVIY NOODATIY DESIGN & VISUAL)    */
+        /* 2-BLOK: MINIMALIST HERO SECTION                              */
         /* ------------------------------------------------------------- */
         .hero-section {
-            padding: 40px 0 30px 0;
-            position: relative;
-            overflow: hidden;
+            padding: 40px 0;
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
+            grid-template-columns: 1fr 1fr;
             gap: 30px;
             align-items: center;
         }
 
-        /* KARTOCaKA BADGE VA BADGES */
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: #e6f7f0;
-            color: #008f5b;
-            border: 1px solid #b2e6d2;
-            padding: 6px 14px;
-            border-radius: 30px;
-            font-size: 13px;
-            font-weight: 800;
-            margin-bottom: 16px;
-        }
-
         .hero-title {
-            font-size: 38px;
-            line-height: 1.2;
+            font-size: 36px;
+            line-height: 1.25;
             font-weight: 900;
-            color: #002147;
-            margin-bottom: 18px;
+            color: #00317F;
+            margin-bottom: 20px;
             letter-spacing: -0.5px;
-        }
-
-        .hero-title span {
-            color: #00a86b;
-            background: linear-gradient(120deg, #002147, #00a86b);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
         }
 
         .hero-subtitle {
             font-size: 16px;
             line-height: 1.6;
-            color: #4a5d55;
-            margin-bottom: 24px;
+            color: #334155;
+            margin-bottom: 28px;
             font-weight: 600;
         }
 
-        /* HIGHLIGHT FEATURES */
-        .hero-features {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-bottom: 28px;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 14px;
-            font-weight: 700;
-            color: #1a2b25;
-        }
-
-        .feature-icon {
-            width: 22px;
-            height: 22px;
-            background: #00a86b;
-            color: #ffffff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            flex-shrink: 0;
-        }
-
-        /* HERO MAIN CTA BUTTON */
         .hero-cta-btn {
             display: inline-block;
-            background: linear-gradient(135deg, #00a86b, #008f5b);
+            background: #00a86b;
             color: #ffffff;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 800;
-            padding: 16px 36px;
-            border-radius: 14px;
+            padding: 16px 32px;
+            border-radius: 12px;
             text-decoration: none;
-            box-shadow: 0 10px 25px rgba(0, 168, 107, 0.35);
             animation: pulseGlow 2s infinite;
             transition: transform 0.2s ease;
             text-align: center;
@@ -331,89 +274,30 @@
 
         .hero-cta-btn:hover {
             transform: translateY(-2px);
+            background: #008f5b;
         }
 
-        /* SOCIAL PROOF AVATARS BAR */
-        .social-proof-bar {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-top: 22px;
-            padding-top: 18px;
-            border-top: 1px solid #e0e9e5;
-        }
-
-        .avatar-group {
-            display: flex;
-        }
-
-        .avatar-group img {
-            width: 38px;
-            height: 38px;
-            border-radius: 50%;
-            border: 2px solid #ffffff;
-            margin-left: -10px;
-            object-fit: cover;
-        }
-
-        .avatar-group img:first-child { margin-left: 0; }
-
-        .proof-text {
-            font-size: 13px;
-            font-weight: 700;
-            color: #2c3e35;
-            line-height: 1.3;
-        }
-
-        .proof-text strong {
-            color: #008f5b;
-            font-size: 14px;
-        }
-
-        /* VISUAL RIGHT SIDE (GLASS CARD) */
+        /* O'NG TOMON: KATALASHTIRILGAN FLAKON RASMI */
         .hero-visual-card {
-            position: relative;
-            background: linear-gradient(145deg, #ffffff, #eaf5f0);
-            border: 2px solid #ffffff;
-            border-radius: 28px;
-            padding: 30px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .natural-badge-floating {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: #ffffff;
-            border: 1px solid #b2e6d2;
-            padding: 8px 14px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 800;
-            color: #008f5b;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .product-img-placeholder {
+        .product-img-large {
             width: 100%;
-            max-width: 320px;
+            max-width: 440px;
             height: auto;
-            filter: drop-shadow(0 15px 25px rgba(0,0,0,0.12));
+            filter: drop-shadow(0 20px 30px rgba(0,0,0,0.12));
             transition: transform 0.3s ease;
         }
 
-        .hero-visual-card:hover .product-img-placeholder {
-            transform: scale(1.03);
+        .product-img-large:hover {
+            transform: scale(1.02);
         }
 
         /* MOBILE RESPONSIVE FOR HERO */
-        @media (max-width: 900px) {
+        @media (max-width: 868px) {
             .hero-grid {
                 grid-template-columns: 1fr;
                 gap: 25px;
@@ -421,35 +305,20 @@
             }
 
             .hero-title {
-                font-size: 26px;
+                font-size: 24px;
             }
 
             .hero-subtitle {
                 font-size: 14px;
             }
 
-            .hero-features {
-                align-items: flex-start;
-                text-align: left;
-                max-width: 340px;
-                margin: 0 auto 24px auto;
-            }
-
-            .social-proof-bar {
-                justify-content: center;
-            }
-
             .hero-cta-btn {
                 width: 100%;
-                font-size: 16px;
                 padding: 15px 0;
             }
 
-            .natural-badge-floating {
-                top: 12px;
-                right: 12px;
-                font-size: 10px;
-                padding: 5px 10px;
+            .product-img-large {
+                max-width: 300px;
             }
         }
 
@@ -469,7 +338,7 @@
 </head>
 <body>
 
-    <!-- TOP TICKER BAR (YANGI TOP ELEGANT GRADIENT) -->
+    <!-- TOP TICKER BAR (BRENDNING KO'K RANGIDA) -->
     <div class="top-ticker">
         <div class="ticker-content" id="ticker-text">
             <span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span>
@@ -506,122 +375,83 @@
                 </a>
 
                 <a href="#lead-form" class="btn-glow-green" id="header-order-btn">
-                    Буюртма бериш
+                    Бепул консультация / Буюртма бериш
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- 2-BLOK: HERO SECTION (ZAMONAVIY VA META ADS SAFE) -->
+    <!-- 2-BLOK: MINIMALIST HERO SECTION -->
     <section class="hero-section">
         <div class="container hero-grid">
             
-            <!-- CHAP TOMON: DYNAMIC TEXT & CRO ELEMENTS -->
+            <!-- CHAP TOMON: MINIMAL MATNLAR VA TUGMA -->
             <div class="hero-content">
-                <div class="hero-badge" id="hero-badge">
-                    🌿 100% Табиий органик мажмуа
-                </div>
-
                 <h1 class="hero-title" id="hero-title">
-                    Тери пигментацияси ва иммун тизимини <span>табиий қўллаб-қувватланг!</span>
+                    ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!
                 </h1>
 
                 <p class="hero-subtitle" id="hero-subtitle">
-                    Қора седана ёғи, E витамини ва зарур микроэлементлар асосидаги премиум капсулалар — тери саломатлигини ичидан озиқлантиради.
+                    Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!
                 </p>
 
-                <div class="hero-features" id="hero-features">
-                    <div class="feature-item"><span class="feature-icon">✓</span> Табиий совуқ пресс усулида олинган ёғ</div>
-                    <div class="feature-item"><span class="feature-icon">✓</span> Ҳужайраларни антиоксидант ҳимояси</div>
-                    <div class="feature-item"><span class="feature-icon">✓</span> Сертификатланган ва ножўя таъсирсиз</div>
-                </div>
-
                 <a href="#lead-form" class="hero-cta-btn" id="hero-cta">
-                    Бепул консультация олиш
+                    Бепул маслаҳат олиш
                 </a>
-
-                <!-- SOCIAL PROOF (AVATARLAR VA REATING) -->
-                <div class="social-proof-bar">
-                    <div class="avatar-group">
-                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80" alt="Mijoz">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Mijoz">
-                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&auto=format&fit=crop&q=80" alt="Mijoz">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="Mijoz">
-                    </div>
-                    <div class="proof-text" id="proof-text">
-                        <strong>20 000+</strong> мижозлар ишончи<br>
-                        ⭐⭐⭐⭐⭐ (4.9/5 балл)
-                    </div>
-                </div>
             </div>
 
-            <!-- O'NG TOMON: ELEGANT GLASS CARD VA MAHSULOT RASMI -->
+            <!-- O'NG TOMON: KATTA FLAKON RASMI -->
             <div class="hero-visual-card">
-                <div class="natural-badge-floating">
-                    🌱 100% NATURAL
-                </div>
-                <!-- Mahsulot rasmi mockupi -->
-                <img src="https://i.ibb.co/3yk56S7/qomus-bottle.png" alt="QOMUS Mahsuloti" class="product-img-placeholder" onerror="this.onerror=null; this.src='https://via.placeholder.com/350x420/00a86b/ffffff?text=QOMUS+Capsules';">
+                <img src="https://i.ibb.co/3yk56S7/qomus-bottle.png" alt="QOMUS Flakon" class="product-img-large" onerror="this.onerror=null; this.src='https://via.placeholder.com/450x550/00317f/ffffff?text=QOMUS+Flakon';">
             </div>
 
         </div>
     </section>
 
-    <!-- FREEZE BUTTONS -->
+    <!-- FREEZE CALL BUTTON -->
     <a href="tel:+998712030408" class="freeze-call-btn" title="Qo'ng'iroq qilish">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
     </a>
 
+    <!-- FREEZE BOTTOM BAR -->
     <div class="freeze-bottom-bar">
         <a href="#lead-form" class="btn-solid-green" id="freeze-order-btn">
-            Буюртма бериш
+            Бепул консультация / Буюртма бериш
         </a>
     </div>
 
-    <!-- JAVASCRIPT KODLARI (HERO SECTION TARJIMASI BILAN) -->
+    <!-- JAVASCRIPT KODLARI -->
     <script>
         const translations = {
             uz: {
-                orderBtn: "Buyurtma berish",
+                orderBtn: "Bepul konsultatsiya / Buyurtma berish",
                 ticker: "<span>🚚 O'zbekiston bo'ylab BEPUL yetkazib berish</span><span>🌿 100% Tabiiy tarkib</span><span>⭐ 20,000+ Mamnun mijozlar</span><span>🔐 100% Maxfiylik kafolatlanadi</span>",
-                badge: "🌿 100% Tabiiy organik majmua",
-                title: "Teri pigmentatsiyasi va immun tizimini <span>tabiiy qo'llab-quvvatlang!</span>",
-                subtitle: "Qora sedana yog'i, E vitamini va zarur mikroelementlar asosidagi premium kapsulalar — teri salomatligini ichidan oziqlantiradi.",
-                features: '<div class="feature-item"><span class="feature-icon">✓</span> Tabiiy sovuq press usulida olingan yog\'</div><div class="feature-item"><span class="feature-icon">✓</span> Hujayralarni antioksidant himoyasi</div><div class="feature-item"><span class="feature-icon">✓</span> Sertifikatlangan va nojo\'ya ta\'sirsiz</div>',
-                heroCta: "Bepul konsultatsiya olish",
-                proof: "<strong>20 000+</strong> mijozlar ishonchi<br>⭐⭐⭐⭐⭐ (4.9/5 ball)"
+                title: "OQ DOG'LARDAN HALOS BO'LISH ENDI ILOJSIZ EMAS!",
+                subtitle: "Ushbu preparat vitiligo va teridagi turli kasalliklarga yechim bo'la oladi. Va o'ziga o'rgatib qo'ymaydi - Natija kafolatlangan!",
+                heroCta: "Bepul maslahat olish"
             },
             uz_cyr: {
-                orderBtn: "Буюртма бериш",
+                orderBtn: "Бепул консультация / Буюртма бериш",
                 ticker: "<span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span><span>🌿 100% Табиий таркиб</span><span>⭐ 20,000+ Мамнун мижозлар</span><span>🔐 100% Махфийлик кафолатланади</span>",
-                badge: "🌿 100% Табиий органик мажмуа",
-                title: "Тери пигментацияси ва иммун тизимини <span>табиий қўллаб-қувватланг!</span>",
-                subtitle: "Қора седана ёғи, E витамини ва зарур микроэлементлар асосидаги премиум капсулалар — тери саломатлигини ичидан озиқлантиради.",
-                features: '<div class="feature-item"><span class="feature-icon">✓</span> Табиий совуқ пресс усулида олинган ёғ</div><div class="feature-item"><span class="feature-icon">✓</span> Ҳужайраларни антиоксидант ҳимояси</div><div class="feature-item"><span class="feature-icon">✓</span> Сертификатланган ва ножўя таъсирсиз</div>',
-                heroCta: "Бепул консультация олиш",
-                proof: "<strong>20 000+</strong> мижозлар ишончи<br>⭐⭐⭐⭐⭐ (4.9/5 балл)"
+                title: "ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!",
+                subtitle: "Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!",
+                heroCta: "Бепул маслаҳат олиш"
             },
             ru: {
-                orderBtn: "Заказать",
+                orderBtn: "Бесплатная консультация / Заказать",
                 ticker: "<span>🚚 БЕСПЛАТНАЯ доставка по всему Узбекистану</span><span>🌿 100% Натуральный состав</span><span>⭐ 20,000+ Довольных клиентов</span><span>🔐 100% Конфиденциальность</span>",
-                badge: "🌿 100% Натуральный органический комплекс",
-                title: "Естественная поддержка <span>пигментации кожи и иммунитета!</span>",
-                subtitle: "Премиум капсулы на основе масла черного тмина, витамина E и микроэлементов — питают здоровье кожи изнутри.",
-                features: '<div class="feature-item"><span class="feature-icon">✓</span> Масло холодного отжима</div><div class="feature-item"><span class="feature-icon">✓</span> Антиоксидантная защита клеток</div><div class="feature-item"><span class="feature-icon">✓</span> Сертифицировано и без побочных эффектов</div>',
-                heroCta: "Получить бесплатную консультацию",
-                proof: "<strong>20 000+</strong> довольных клиентов<br>⭐⭐⭐⭐⭐ (4.9/5 баллов)"
+                title: "ИЗБАВЛЕНИЕ ОТ БЕЛЫХ ПЯТЕН ТЕПЕРЬ ВОЗМОЖНО!",
+                subtitle: "Данный препарат эффективен при витилиго и заболеваниях кожи. Не вызывает привыкания - Результат гарантирован!",
+                heroCta: "Получить бесплатную консультацию"
             },
             en: {
-                orderBtn: "Order Now",
+                orderBtn: "Free Consultation / Order Now",
                 ticker: "<span>🚚 FREE delivery across Uzbekistan</span><span>🌿 100% Natural composition</span><span>⭐ 20,000+ Satisfied customers</span><span>🔐 100% Confidentiality guaranteed</span>",
-                badge: "🌿 100% Natural Organic Complex",
-                title: "Natural support for <span>skin pigmentation & immunity!</span>",
-                subtitle: "Premium capsules based on black seed oil, Vitamin E, and essential minerals — nourishing skin health from within.",
-                features: '<div class="feature-item"><span class="feature-icon">✓</span> Cold-pressed natural oil</div><div class="feature-item"><span class="feature-icon">✓</span> Cellular antioxidant protection</div><div class="feature-item"><span class="feature-icon">✓</span> Certified & with no side effects</div>',
-                heroCta: "Get Free Consultation",
-                proof: "<strong>20,000+</strong> trusted clients<br>⭐⭐⭐⭐⭐ (4.9/5 rating)"
+                title: "GETTING RID OF WHITE SPOTS IS NO LONGER IMPOSSIBLE!",
+                subtitle: "This product is an effective solution for vitiligo and various skin issues. Non-addictive - Guaranteed results!",
+                heroCta: "Get Free Advice"
             }
         };
 
@@ -639,13 +469,10 @@
                 document.getElementById('freeze-order-btn').textContent = t.orderBtn;
                 document.getElementById('ticker-text').innerHTML = t.ticker;
                 
-                // Hero Section Content
-                document.getElementById('hero-badge').innerHTML = t.badge;
-                document.getElementById('hero-title').innerHTML = t.title;
+                // Hero Section Minimal Content
+                document.getElementById('hero-title').textContent = t.title;
                 document.getElementById('hero-subtitle').textContent = t.subtitle;
-                document.getElementById('hero-features').innerHTML = t.features;
                 document.getElementById('hero-cta').textContent = t.heroCta;
-                document.getElementById('proof-text').innerHTML = t.proof;
             }
         }
 
