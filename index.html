@@ -19,7 +19,7 @@
         body {
             background-color: #f4f8f6;
             color: #1a2b25;
-            padding-bottom: 80px; /* Pastki freeze button uchun joy */
+            padding-bottom: 80px;
         }
 
         .container {
@@ -73,7 +73,7 @@
             gap: 6px;
         }
 
-        /* LOGO (BREND RANGLARI) */
+        /* LOGO */
         .logo {
             display: flex;
             flex-direction: column;
@@ -84,7 +84,7 @@
         .logo-sub {
             font-size: 9px;
             font-weight: 800;
-            color: #03C3D4; /* Biryuzoviy brend rangi */
+            color: #03C3D4;
             border: 1px solid #03C3D4;
             border-radius: 8px;
             padding: 0px 5px;
@@ -96,11 +96,10 @@
         .logo-main {
             font-size: 22px;
             font-weight: 900;
-            color: #00317F; /* Rasmiy to'q ko'k brend rangi */
+            color: #00317F;
             letter-spacing: -0.5px;
         }
 
-        /* RIGHT CONTROLS */
         .header-right {
             display: flex;
             align-items: center;
@@ -125,6 +124,7 @@
             border-radius: 6px;
             color: #4a5d55;
             cursor: pointer;
+            transition: all 0.2s ease;
         }
 
         .lang-btn.active {
@@ -132,7 +132,7 @@
             color: #ffffff;
         }
 
-        /* TUGMALAR UNIFORM VIZUALI */
+        /* OUTLINE TUGMALAR VA HOVER EFFEKTI */
         .btn-outline-green {
             border: 2px solid #00a86b;
             background: #ffffff;
@@ -142,44 +142,33 @@
             font-weight: 800;
             font-size: 13px;
             text-decoration: none;
-            transition: all 0.2s ease;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-flex;
             align-items: center;
             justify-content: center;
             white-space: nowrap;
+            cursor: pointer;
         }
 
-        .btn-outline-green:hover {
-            background: #e6f7f0;
+        /* CURSOR BILAN O'TGANDA VA BOSGANDA TO'LIQ YASHIL BO'LISHI */
+        .btn-outline-green:hover,
+        .btn-outline-green:active {
+            background: #00a86b;
+            color: #ffffff !important;
+            box-shadow: 0 4px 12px rgba(0, 168, 107, 0.3);
         }
 
-        /* MOBIL OPTIMIZATSIYA (PHONE ICON & TEXT) */
-        .btn-phone-desktop {
-            display: inline-flex;
-        }
-
-        .btn-phone-mobile {
-            display: none;
-            padding: 6px 10px;
-        }
+        .btn-phone-desktop { display: inline-flex; }
+        .btn-phone-mobile { display: none; padding: 6px 10px; }
 
         @media (max-width: 600px) {
-            .logo-main {
-                font-size: 19px;
-            }
-            .btn-phone-desktop {
-                display: none; /* Mobilda matnli raqam berkitiladi */
-            }
-            .btn-phone-mobile {
-                display: inline-flex; /* Mobilda faqat telefon iconkasi chiqadi */
-            }
-            .btn-outline-green {
-                padding: 6px 10px;
-                font-size: 12px;
-            }
+            .logo-main { font-size: 19px; }
+            .btn-phone-desktop { display: none; }
+            .btn-phone-mobile { display: inline-flex; }
+            .btn-outline-green { padding: 6px 10px; font-size: 12px; }
         }
 
-        /* FREEZE CALL BUTTON */
+        /* DUMALOQ QO'NG'IROQ TUGMASI VA HOVER EFFEKTI */
         .freeze-call-btn {
             position: fixed;
             bottom: 80px;
@@ -195,14 +184,27 @@
             z-index: 1000;
             box-shadow: 0 6px 20px rgba(0, 168, 107, 0.25);
             text-decoration: none;
-            transition: transform 0.2s;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
+        .freeze-call-btn svg path {
+            transition: stroke 0.25s ease;
+        }
+
+        /* DUMALOQ TUGMA HOVER BO'LGANDA */
+        .freeze-call-btn:hover,
         .freeze-call-btn:active {
-            transform: scale(0.92);
+            background: #00a86b;
+            transform: scale(1.08);
+            box-shadow: 0 8px 24px rgba(0, 168, 107, 0.45);
         }
 
-        /* FREEZE BOTTOM BAR */
+        .freeze-call-btn:hover svg path,
+        .freeze-call-btn:active svg path {
+            stroke: #ffffff; /* SVG ikonkasi oq rangga o'tadi */
+        }
+
+        /* PASTKI FREEZE BOTTOM BAR */
         .freeze-bottom-bar {
             position: fixed;
             bottom: 0;
@@ -225,11 +227,14 @@
             font-size: 15px;
             font-weight: 800;
             text-decoration: none;
-            transition: background 0.2s;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(0, 168, 107, 0.2);
         }
 
-        .btn-solid-green:hover {
+        .btn-solid-green:hover,
+        .btn-solid-green:active {
             background: #008f5b;
+            box-shadow: 0 6px 18px rgba(0, 168, 107, 0.35);
         }
     </style>
 </head>
@@ -242,40 +247,32 @@
             <span>🌿 100% Табиий таркиб</span>
             <span>⭐ 20,000+ Мамнун мижозлар</span>
             <span>🔐 100% Махфийлик кафолатланади</span>
-            <span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span>
-            <span>🌿 100% Табиий таркиб</span>
         </div>
     </div>
 
     <!-- 1-BLOK: STICKY HEADER -->
     <header class="main-header">
         <div class="container header-flex">
-            <!-- Logo (Brend ranglarida) -->
             <a href="#" class="logo">
                 <span class="logo-sub">nurion</span>
                 <span class="logo-main">QOMUS</span>
             </a>
 
-            <!-- Right Controls -->
             <div class="header-right">
-                <!-- Language Switcher -->
                 <div class="lang-switcher">
                     <button class="lang-btn" onclick="changeLanguage('uz')">UZ</button>
                     <button class="lang-btn active" onclick="changeLanguage('uz_cyr')">ЎЗ</button>
                     <button class="lang-btn" onclick="changeLanguage('ru')">RU</button>
                 </div>
 
-                <!-- Call Button (Desktop - Matnli) -->
                 <a href="tel:+998712030408" class="btn-outline-green btn-phone-desktop">
                     📞 +998 71 203-04-08
                 </a>
 
-                <!-- Call Button (Mobile - Iconkasi) -->
-                <a href="tel:+998712030408" class="btn-outline-green btn-phone-mobile" title="Qo'ng'iroq qilish">
+                <a href="tel:+998712030408" class="btn-outline-green btn-phone-mobile">
                     📞
                 </a>
 
-                <!-- Order Button (Green Outline) -->
                 <a href="#lead-form" class="btn-outline-green" id="header-order-btn">
                     Буюртма бериш
                 </a>
@@ -283,7 +280,7 @@
         </div>
     </header>
 
-    <!-- FREEZE CALL BUTTON (Yashil yumaloq qo'ng'iroq knopkasi) -->
+    <!-- FREEZE CALL BUTTON (Hover qilganda to'liq yashil va oq ikonka bo'ladi) -->
     <a href="tel:+998712030408" class="freeze-call-btn" title="Qo'ng'iroq qilish">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00a86b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
@@ -297,20 +294,20 @@
         </a>
     </div>
 
-    <!-- JAVASCRIPT KODI -->
+    <!-- JAVASCRIPT KODLARI -->
     <script>
         const translations = {
             uz: {
                 orderBtn: "Buyurtma berish",
-                ticker: "<span>🚚 O'zbekiston bo'ylab BEPUL yetkazib berish</span><span>🌿 100% Tabiiy tarkib</span><span>⭐ 20,000+ Mamnun mijozlar</span><span>🔐 100% Maxfiylik kafolatlanadi</span><span>🚚 O'zbekiston bo'ylab BEPUL yetkazib berish</span><span>🌿 100% Tabiiy tarkib</span>"
+                ticker: "<span>🚚 O'zbekiston bo'ylab BEPUL yetkazib berish</span><span>🌿 100% Tabiiy tarkib</span><span>⭐ 20,000+ Mamnun mijozlar</span><span>🔐 100% Maxfiylik kafolatlanadi</span>"
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
-                ticker: "<span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span><span>🌿 100% Табиий таркиб</span><span>⭐ 20,000+ Мамнун мижозлар</span><span>🔐 100% Махфийлик кафолатланади</span><span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span><span>🌿 100% Табиий таркиб</span>"
+                ticker: "<span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span><span>🌿 100% Табиий таркиб</span><span>⭐ 20,000+ Мамнун мижозлар</span><span>🔐 100% Махфийлик кафолатланади</span>"
             },
             ru: {
                 orderBtn: "Заказать",
-                ticker: "<span>🚚 БЕСПЛАТНАЯ доставка по всему Узбекистану</span><span>🌿 100% Натуральный состав</span><span>⭐ 20,000+ Довольных клиентов</span><span>🔐 100% Конфиденциальность</span><span>🚚 БЕСПЛАТНАЯ доставка по всему Узбекистану</span><span>🌿 100% Натуральный состав</span>"
+                ticker: "<span>🚚 БЕСПЛАТНАЯ доставка по всему Узбекистану</span><span>🌿 100% Натуральный состав</span><span>⭐ 20,000+ Довольных клиентов</span><span>🔐 100% Конфиденциальность</span>"
             }
         };
 
