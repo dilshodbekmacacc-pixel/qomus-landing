@@ -384,7 +384,203 @@ body {
     border-radius: 6px;
     font-size: 15px;
 }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
 
+body {
+    background-color: #f4f8f6;
+    color: #1a2b25;
+    padding-bottom: 80px; /* Pastki freeze button uchun joy */
+}
+
+.container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+/* TOP TICKER BAR */
+.top-ticker {
+    background: #111111;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 8px 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.ticker-content {
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+}
+
+.ticker-content span {
+    margin-right: 35px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* STICKY HEADER */
+.main-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #ffffff;
+    border-bottom: 1px solid #e0e9e5;
+    padding: 12px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-sub {
+    font-size: 10px;
+    color: #00a86b;
+    border: 1px solid #00a86b;
+    border-radius: 10px;
+    padding: 1px 6px;
+    width: fit-content;
+    margin-bottom: 2px;
+}
+
+.logo-main {
+    font-size: 26px;
+    font-weight: 900;
+    color: #0a2540;
+    letter-spacing: -0.5px;
+}
+
+/* RIGHT CONTROLS */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* LANGUAGE SWITCHER */
+.lang-switcher {
+    display: flex;
+    background: #f0f4f2;
+    padding: 3px;
+    border-radius: 8px;
+    gap: 2px;
+}
+
+.lang-btn {
+    border: none;
+    background: transparent;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 6px;
+    color: #4a5d55;
+    cursor: pointer;
+}
+
+.lang-btn.active {
+    background: #0a2540;
+    color: #ffffff;
+}
+
+/* BUTTON VISUALS (Skrinshotdagi oq-yashil border stili) */
+.btn-outline-green {
+    border: 2px solid #00a86b;
+    background: #ffffff;
+    color: #00a86b;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 800;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.btn-outline-green:hover {
+    background: #e6f7f0;
+}
+
+@media (max-width: 600px) {
+    .btn-phone-text {
+        display: none; /* Mobil joy tejash uchun */
+    }
+}
+
+/* FREEZE CALL BUTTON (Yashil yumaloq knopka) */
+.freeze-call-btn {
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    width: 58px;
+    height: 58px;
+    background: #e6f7f0;
+    border: 2px solid #00a86b;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    box-shadow: 0 6px 20px rgba(0, 168, 107, 0.25);
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.freeze-call-btn:active {
+    transform: scale(0.92);
+}
+
+/* FREEZE BOTTOM BAR (Pastki to'liq yashil buyurtma knopkasi) */
+.freeze-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    padding: 10px 16px;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
+    z-index: 998;
+}
+
+.btn-solid-green {
+    display: block;
+    width: 100%;
+    background: #00a86b;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 0;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.btn-solid-green:hover {
+    background: #008f5B;
+}
 .checkbox-group {
     display: flex;
     gap: 10px;

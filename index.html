@@ -3,262 +3,300 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QOMUS — Qora Sedana Kapsulalari | Vitiligo Auditoriyasi uchun Lead Landing</title>
-    <link rel="stylesheet" href="style.css">
+    <title>QOMUS — Qora Sedana Kapsulalari</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Manrope', sans-serif;
+        }
+
+        body {
+            background-color: #f4f8f6;
+            color: #1a2b25;
+            padding-bottom: 80px; /* Pastki freeze button uchun joy */
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 16px;
+        }
+
+        /* TOP TICKER BAR (Yuguruvchi tasmali matn) */
+        .top-ticker {
+            background: #111111;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            padding: 8px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .ticker-content {
+            display: inline-block;
+            animation: marquee 25s linear infinite;
+        }
+
+        .ticker-content span {
+            margin-right: 35px;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* STICKY HEADER */
+        .main-header {
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            background: #ffffff;
+            border-bottom: 1px solid #e0e9e5;
+            padding: 12px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* LOGO */
+        .logo {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-sub {
+            font-size: 10px;
+            color: #00a86b;
+            border: 1px solid #00a86b;
+            border-radius: 10px;
+            padding: 1px 6px;
+            width: fit-content;
+            margin-bottom: 2px;
+        }
+
+        .logo-main {
+            font-size: 26px;
+            font-weight: 900;
+            color: #0a2540;
+            letter-spacing: -0.5px;
+        }
+
+        /* RIGHT CONTROLS */
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* LANGUAGE SWITCHER */
+        .lang-switcher {
+            display: flex;
+            background: #f0f4f2;
+            padding: 3px;
+            border-radius: 8px;
+            gap: 2px;
+        }
+
+        .lang-btn {
+            border: none;
+            background: transparent;
+            padding: 5px 10px;
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 6px;
+            color: #4a5d55;
+            cursor: pointer;
+        }
+
+        .lang-btn.active {
+            background: #0a2540;
+            color: #ffffff;
+        }
+
+        /* BUTTON VISUALS (Oq-yashil border stili) */
+        .btn-outline-green {
+            border: 2px solid #00a86b;
+            background: #ffffff;
+            color: #00a86b;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 14px;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-outline-green:hover {
+            background: #e6f7f0;
+        }
+
+        @media (max-width: 600px) {
+            .btn-phone-text {
+                display: none; /* Mobil ekranda joy tejash uchun */
+            }
+        }
+
+        /* FREEZE CALL BUTTON (Yashil yumaloq qo'ng'iroq knopkasi) */
+        .freeze-call-btn {
+            position: fixed;
+            bottom: 85px;
+            right: 20px;
+            width: 58px;
+            height: 58px;
+            background: #e6f7f0;
+            border: 2px solid #00a86b;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            box-shadow: 0 6px 20px rgba(0, 168, 107, 0.25);
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .freeze-call-btn:active {
+            transform: scale(0.92);
+        }
+
+        /* FREEZE BOTTOM BAR (Pastki to'liq yashil buyurtma knopkasi) */
+        .freeze-bottom-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: #ffffff;
+            padding: 10px 16px;
+            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
+            z-index: 998;
+        }
+
+        .btn-solid-green {
+            display: block;
+            width: 100%;
+            background: #00a86b;
+            color: #ffffff;
+            text-align: center;
+            padding: 14px 0;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 800;
+            text-decoration: none;
+            transition: background 0.2s;
+        }
+
+        .btn-solid-green:hover {
+            background: #008f5b;
+        }
+    </style>
 </head>
 <body>
 
-    <!-- 01. Top Announcement & Language Header -->
-    <div class="top-announcement">
-        <div class="container top-bar-flex">
-            <div class="badge-pills">
-                <span class="pill pill-info">O‘zbekiston + Qo‘shni Bozorlar</span>
-                <span class="pill pill-neutral">Bepul yetkazib berish</span>
-            </div>
-            <div class="lang-switch">
-                <button onclick="setLang('uz')" id="btn-uz" class="lang-btn active">UZ</button>
-                <button onclick="setLang('uz_cyr')" id="btn-uz_cyr" class="lang-btn">ЎЗ</button>
-                <button onclick="setLang('ru')" id="btn-ru" class="lang-btn">RU</button>
-            </div>
+    <!-- YUQORI BARKASh (Tasmali yuguruvchi matn) -->
+    <div class="top-ticker">
+        <div class="ticker-content" id="ticker-text">
+            <span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span>
+            <span>🌿 100% Табиий таркиб</span>
+            <span>⭐ 20,000+ Мамнун мижозлар</span>
+            <span>🔐 100% Махфийлик кафолатланади</span>
+            <span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span>
+            <span>🌿 100% Табиий таркиб</span>
         </div>
     </div>
 
-    <!-- Header Navigation -->
+    <!-- 1-BLOK: STICKY HEADER -->
     <header class="main-header">
-        <div class="container nav-flex">
-            <div class="logo">QOMUS<span class="logo-dot">.</span></div>
-            <div class="header-actions">
-                <a href="tel:+998712030408" class="btn-phone">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                    </svg>
-                    <span>+998 71 203-04-08</span>
+        <div class="container header-flex">
+            <!-- Logo -->
+            <div class="logo">
+                <span class="logo-sub">nurion</span>
+                <span class="logo-main">QOMUS</span>
+            </div>
+
+            <!-- Right Controls -->
+            <div class="header-right">
+                <!-- Language Switcher -->
+                <div class="lang-switcher">
+                    <button class="lang-btn" onclick="changeLanguage('uz')">UZ</button>
+                    <button class="lang-btn active" onclick="changeLanguage('uz_cyr')">ЎЗ</button>
+                    <button class="lang-btn" onclick="changeLanguage('ru')">RU</button>
+                </div>
+
+                <!-- Call Button (Phone Number) -->
+                <a href="tel:+998712030408" class="btn-outline-green btn-phone-text" id="call-btn-text">
+                    📞 +998 71 203-04-08
+                </a>
+
+                <!-- Order Button (Green Outline) -->
+                <a href="#lead-form" class="btn-outline-green" id="header-order-btn">
+                    Буюртма бериш
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- 02. Hero Section (Inson markazida & Empatiya) -->
-    <section class="hero-section">
-        <div class="container hero-grid">
-            <div class="hero-text-col">
-                <span class="section-tag" id="hero-tag">Sizning hikoyangiz hurmatga loyiq</span>
-                <h1 id="hero-title">Vitiligo bilan yashashda o‘zingizni yolg‘iz his qilmang</h1>
-                <p id="hero-desc">Qomus qora sedana kapsulalari — teri pigmentatsiyasini ichki tomondan oziqlantirish, immun balansini ushlash va organizmni zarur minerallar bilan ta’minlash uchun tabiiy yondashuv.</p>
-                
-                <div class="callout-box warning-callout">
-                    <div class="callout-icon">⚠️</div>
-                    <div class="callout-text" id="hero-callout">
-                        <strong>Muhim eslatma:</strong> Qomus kapsulalari dori vositasi emas. Sahifa ma’lumot berish, ehtiyotkorlik va mutaxassis maslahatini olishga yo‘naltirilgan.
-                    </div>
-                </div>
+    <!-- FREEZE CALL BUTTON (Yashil yumaloq qo'ng'iroq knopkasi) -->
+    <a href="tel:+998712030408" class="freeze-call-btn" title="Qo'ng'iroq qilish">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00a86b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+    </a>
 
-                <div class="hero-actions">
-                    <a href="#lead-form" class="btn-petrole" id="hero-cta-btn">Bepul Ma’lumot va Konsultatsiya Olish</a>
-                    <span class="sub-text" id="hero-subtext">🔒 Maxfiylik to‘liq saqlanadi va hech kimga berilmaydi</span>
-                </div>
-            </div>
-
-            <div class="hero-visual-col">
-                <div class="product-card-preview">
-                    <img src="https://placehold.co/800x800/1F5A59/FAF8F3?text=QOMUS+Qora+Sedana+Kapsulalari" alt="Qomus Qora Sedana" id="hero-img">
-                    <div class="product-pills-row">
-                        <span class="mini-pill"> Sovuq presslash</span>
-                        <span class="mini-pill"> Rux + Mis</span>
-                        <span class="mini-pill"> 100% Tabiiy</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 03. Empatiya & Tanish Holat -->
-    <section class="empathy-section">
-        <div class="container">
-            <h2 class="section-h2" id="emp-title">Tanish holatni tushunamiz</h2>
-            <p class="section-lead" id="emp-subtitle">Ko‘rinish, atrofdagilarning ortiqcha savollari va kundalik noqulayliklar — sizning tajribangiz e’tibor va hurmatga loyiq.</p>
-            
-            <div class="grid-3">
-                <div class="note-card">
-                    <div class="card-num">01</div>
-                    <h3 id="emp-card1-h">Atrofdagilar e'tibori</h3>
-                    <p id="emp-card1-p">Teringizdagi o'zgarishlar va atrofdagilarning tushunmasdan beradigan savollari ruhiy toliqishga olib kelishi mumkin.</p>
-                </div>
-                <div class="note-card">
-                    <div class="card-num">02</div>
-                    <h3 id="emp-card2-h">Ichki muvozanat</h3>
-                    <p id="emp-card2-p">Teri pigmentatsiyasi faqat tashqi holat emas, u organizmning ichki immun balansining ko'zgusidir.</p>
-                </div>
-                <div class="note-card">
-                    <div class="card-num">03</div>
-                    <h3 id="emp-card3-h">Samarali parvarish</h3>
-                    <p id="emp-card3-p">Kimyoviy va tajovuzkor usullardan ko'ra, organizmni tabiiy ravishda oziqlantirish xavfsizroq yechimdir.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 04. Mahsulotni Tushunish (Tarkib) -->
-    <section class="product-understand">
-        <div class="container">
-            <h2 class="section-h2" id="ing-section-title">Nimani qabul qilayotganingizni aniq biling</h2>
-            <p class="section-lead" id="ing-section-sub">Qomus qora sedana kapsulalarining shaffof va biologik aktiv tarkibi:</p>
-
-            <div class="grid-2 gap-30">
-                <div class="table-card">
-                    <table class="custom-table">
-                        <thead>
-                            <tr>
-                                <th id="th-comp">Komponent</th>
-                                <th id="th-role">Organizmdagi o‘rni</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>Qora Sedana Yog‘i</strong></td>
-                                <td id="tb-r1">Omega 3, 6, 9 hamda fosfolipidlar bilan hujayralarni oziqlantiradi.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Rux va Mis Minerallari</strong></td>
-                                <td id="tb-r2">Melanin sintezida qatnashuvchi fermentlar faolligini qo'llab-quvvatlaydi.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Vitaminlar (E, D, C, B)</strong></td>
-                                <td id="tb-r3">Antioksidant himoyani ta'minlaydi va teri to'qimalarini tiklaydi.</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Mikroelementlar</strong></td>
-                                <td id="tb-r4">Selenium, temir, kaltsiy, marganets va niqel balansi.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div class="callout-box info-callout">
-                    <h3 id="usage-h3">Qabul qilish bo'yicha yo'riqnoma:</h3>
-                    <p id="usage-p1">• Ovqatdan 10 daqiqa oldin yoki keyin qabul qilinadi.</p>
-                    <p id="usage-p2">• Dastlabki bir hafta: Ertalab va kechqurun 1 donadan.</p>
-                    <p id="usage-p3">• So'ngra: Ertalab 3 dona, kechqurun 2 dona kapsula.</p>
-                    <p id="usage-p4">• Kuniga 2-3 litr suv ichish va to'g'ri taomlanish tavsiya etiladi.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 05. Ishonch Dalillari va Sertifikatlar -->
-    <section class="proof-section">
-        <div class="container">
-            <h2 class="section-h2" id="proof-title">Tekshiriladigan ishonch va hujjatlar</h2>
-            <div class="grid-3 margin-top-30">
-                <div class="proof-card">
-                    <div class="proof-icon">📜</div>
-                    <h4 id="prf1-h">Laboratoriya Hujjatlari</h4>
-                    <p id="prf1-p">Sovuq presslash usuli va sifat sertifikatlari bilan to'liq tasdiqlangan.</p>
-                </div>
-                <div class="proof-card">
-                    <div class="proof-icon">⭐</div>
-                    <h4 id="prf2-h">20,000+ Mijoz Tajribasi</h4>
-                    <p id="prf2-p">Ko'p yillik bozor tajribasi va mijozlarning samimiy fikrlari.</p>
-                </div>
-                <div class="proof-card">
-                    <div class="proof-icon">🛡️</div>
-                    <h4 id="prf3-h">Insofsiz Baza Yo'q</h4>
-                    <p id="prf3-p">Sizga ortiqcha mo'jizalar va'da qilmaymiz, faqat shaffof sifat taklif etiladi.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 08. Mutaxassis va Ehtiyot Chorasi -->
-    <section class="safety-warning-section">
-        <div class="container">
-            <div class="callout-box warning-callout-lg">
-                <h3 id="warn-title">⚠️ Kimlar qabul qilishda ehtiyot bo'lishi kerak?</h3>
-                <ul class="warning-list" id="warn-list">
-                    <li>Homilador va emizikli ayollarga tavsiya etilmaydi.</li>
-                    <li>Tana a'zolari ko'chirib o'tkazilgan (transplantatsiya qilingan) bemorlarga taqiqlanadi.</li>
-                    <li>Onkologik kasalliklari bor shaxslarga tavsiya etilmaydi.</li>
-                    <li>4 yoshgacha bo'lgan bolalarga qo'llash mumkin emas.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- 09. FAQ Akkordeon -->
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="section-h2" id="faq-title">Ko'p beriladigan savollar</h2>
-            <div class="faq-wrapper">
-                <details class="faq-item">
-                    <summary id="faq1-q">Qomus kapsulasi dori vositasimi?</summary>
-                    <p id="faq1-a">Yo'q, Qomus biologik faol qo'shimcha (BAD) hisoblanadi va dori vositasi o'rnini bosmaydi.</p>
-                </details>
-                <details class="faq-item">
-                    <summary id="faq2-q">Yetkazib berish shartlari qanday?</summary>
-                    <p id="faq2-a">O'zbekiston bo'ylab va qo'shni respublikalarga tekin va maxfiy tarzda yetkazib beriladi.</p>
-                </details>
-                <details class="faq-item">
-                    <summary id="faq3-q">Buyurtma berganimdan so'ng nima bo'ladi?</summary>
-                    <p id="faq3-a">Formani to'ldirganingizdan so'ng, mutaxassisimiz tez orada bog'lanadi va barcha savollaringizga javob beradi.</p>
-                </details>
-            </div>
-        </div>
-    </section>
-
-    <!-- 10. Lead Forma -->
-    <section class="lead-form-section" id="lead-form">
-        <div class="container">
-            <div class="form-card-container">
-                <h2 id="form-h2">Ma’lumot va buyurtma bo‘yicha qo‘ng‘iroq so‘rang</h2>
-                <p id="form-p">Ismingiz va telefon raqamingizni qoldiring. Mutaxassisimiz bog'lanib, tarkib va qabul qilish bo'yicha bepul konsultatsiya beradi.</p>
-
-                <form id="lead-main-form">
-                    <div class="form-group">
-                        <label id="lbl-name">Ismingiz:</label>
-                        <input type="text" id="input-name" placeholder="Masalan: Ali Valiyev" required>
-                    </div>
-                    <div class="form-group">
-                        <label id="lbl-phone">Telefon raqamingiz:</label>
-                        <input type="tel" id="input-phone" placeholder="+998 90 123 45 67" required>
-                    </div>
-                    <div class="form-group">
-                        <label id="lbl-opt">Sizni ko'proq nima qiziqtirmoqda? (Ixtiyoriy)</label>
-                        <select id="input-option">
-                            <option value="Tarkib va dozirovka">Tarkib va dozirovka</option>
-                            <option value="Narx va yetkazib berish">Narx va yetkazib berish</option>
-                            <option value="Ehtiyot choralari va maslahat">Ehtiyot choralari va maslahat</option>
-                        </select>
-                    </div>
-
-                    <div class="checkbox-group">
-                        <input type="checkbox" id="privacy-consent" checked required>
-                        <label for="privacy-consent" id="lbl-privacy">Shaxsiy ma'lumotlar qayta ishlanishiga va maxfiy konsultatsiyaga roziman.</label>
-                    </div>
-
-                    <button type="submit" class="btn-petrole btn-block" id="form-btn">Qo‘ng‘iroq So‘rash va Ma'lumot Olish</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p class="disclaimer-text">
-                <strong>Haqiqiy kommunikatsiya chegarasi:</strong> Qomus kapsulasini vitiligoni davolovchi, pigmentni to'liq qaytaruvchi yoki 100% kafolatli yechim sifatida qabul qilmang. Sahifa ma'lumot berish va ehtiyotkorlik bilan bog'lanishga mo'ljallangan. Qo'llashdan oldin mutaxassis bilan maslahatlashing.
-            </p>
-            <p class="copyright">© 2026 QOMUS. Call Center: +998 71 203-04-08</p>
-        </div>
-    </footer>
-
-    <!-- Sticky Mobile Bottom Button -->
-    <div class="sticky-mobile-bar">
-        <a href="#lead-form" class="btn-petrole btn-block" id="sticky-btn">Ma’lumot va Konsultatsiya Olish</a>
+    <!-- FREEZE BOTTOM ORDER BAR (Pastki to'liq yashil buyurtma knopkasi) -->
+    <div class="freeze-bottom-bar">
+        <a href="#lead-form" class="btn-solid-green" id="freeze-order-btn">
+            Буюртма бериш
+        </a>
     </div>
 
-    <script src="script.js"></script>
+    <!-- JAVASCRIPT KODI (Faylga alohida ulanmaydi, bitta joyning o'zida ishlaydi) -->
+    <script>
+        const translations = {
+            uz: {
+                orderBtn: "Buyurtma berish",
+                ticker: "<span>🚚 O'zbekiston bo'ylab BEPUL yetkazib berish</span><span>🌿 100% Tabiiy tarkib</span><span>⭐ 20,000+ Mamnun mijozlar</span><span>🔐 100% Maxfiylik kafolatlanadi</span><span>🚚 O'zbekiston bo'ylab BEPUL yetkazib berish</span><span>🌿 100% Tabiiy tarkib</span>"
+            },
+            uz_cyr: {
+                orderBtn: "Буюртма бериш",
+                ticker: "<span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span><span>🌿 100% Табиий таркиб</span><span>⭐ 20,000+ Мамнун мижозлар</span><span>🔐 100% Махфийлик кафолатланади</span><span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span><span>🌿 100% Табиий таркиб</span>"
+            },
+            ru: {
+                orderBtn: "Заказать",
+                ticker: "<span>🚚 БЕСПЛАТНАЯ доставка по всему Узбекистану</span><span>🌿 100% Натуральный состав</span><span>⭐ 20,000+ Довольных клиентов</span><span>🔐 100% Конфиденциальность</span><span>🚚 БЕСПЛАТНАЯ доставка по всему Узбекистану</span><span>🌿 100% Натуральный состав</span>"
+            }
+        };
+
+        function changeLanguage(lang) {
+            // Tugmalar rangini almashtirish
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Matnlarni almashtirish
+            const t = translations[lang];
+            if (t) {
+                document.getElementById('header-order-btn').textContent = t.orderBtn;
+                document.getElementById('freeze-order-btn').textContent = t.orderBtn;
+                document.getElementById('ticker-text').innerHTML = t.ticker;
+            }
+        }
+    </script>
 </body>
 </html>
