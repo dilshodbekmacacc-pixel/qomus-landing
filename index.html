@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QOMUS — Qora Sedana Kapsulalari</title>
+    <title>QOMUS — Teri Pigmentatsiyasini Qo'llab-quvvatlovchi Majmua</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800;900&display=swap" rel="stylesheet">
@@ -25,16 +25,16 @@
         .container {
             max-width: 1240px;
             margin: 0 auto;
-            padding: 0 16px;
+            padding: 0 12px;
         }
 
-        /* TOP TICKER BAR (Yuguruvchi tasmali matn) */
+        /* TOP TICKER BAR */
         .top-ticker {
             background: #111111;
             color: #ffffff;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
-            padding: 8px 0;
+            padding: 7px 0;
             overflow: hidden;
             white-space: nowrap;
         }
@@ -45,7 +45,7 @@
         }
 
         .ticker-content span {
-            margin-right: 35px;
+            margin-right: 30px;
         }
 
         @keyframes marquee {
@@ -62,37 +62,41 @@
             z-index: 999;
             background: #ffffff;
             border-bottom: 1px solid #e0e9e5;
-            padding: 12px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+            padding: 10px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
         }
 
         .header-flex {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 6px;
         }
 
-        /* LOGO */
+        /* LOGO (BREND RANGLARI) */
         .logo {
             display: flex;
             flex-direction: column;
             line-height: 1;
+            text-decoration: none;
         }
 
         .logo-sub {
-            font-size: 10px;
-            color: #00a86b;
-            border: 1px solid #00a86b;
-            border-radius: 10px;
-            padding: 1px 6px;
+            font-size: 9px;
+            font-weight: 800;
+            color: #03C3D4; /* Biryuzoviy brend rangi */
+            border: 1px solid #03C3D4;
+            border-radius: 8px;
+            padding: 0px 5px;
             width: fit-content;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
+            text-transform: lowercase;
         }
 
         .logo-main {
-            font-size: 26px;
+            font-size: 22px;
             font-weight: 900;
-            color: #0a2540;
+            color: #00317F; /* Rasmiy to'q ko'k brend rangi */
             letter-spacing: -0.5px;
         }
 
@@ -100,14 +104,14 @@
         .header-right {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 6px;
         }
 
         /* LANGUAGE SWITCHER */
         .lang-switcher {
             display: flex;
             background: #f0f4f2;
-            padding: 3px;
+            padding: 2px;
             border-radius: 8px;
             gap: 2px;
         }
@@ -115,53 +119,74 @@
         .lang-btn {
             border: none;
             background: transparent;
-            padding: 5px 10px;
-            font-size: 12px;
-            font-weight: 700;
+            padding: 5px 7px;
+            font-size: 11px;
+            font-weight: 800;
             border-radius: 6px;
             color: #4a5d55;
             cursor: pointer;
         }
 
         .lang-btn.active {
-            background: #0a2540;
+            background: #00317F;
             color: #ffffff;
         }
 
-        /* BUTTON VISUALS (Oq-yashil border stili) */
+        /* TUGMALAR UNIFORM VIZUALI */
         .btn-outline-green {
             border: 2px solid #00a86b;
             background: #ffffff;
             color: #00a86b;
-            padding: 8px 20px;
+            padding: 6px 14px;
             border-radius: 20px;
             font-weight: 800;
-            font-size: 14px;
+            font-size: 13px;
             text-decoration: none;
             transition: all 0.2s ease;
             display: inline-flex;
             align-items: center;
-            gap: 6px;
+            justify-content: center;
+            white-space: nowrap;
         }
 
         .btn-outline-green:hover {
             background: #e6f7f0;
         }
 
+        /* MOBIL OPTIMIZATSIYA (PHONE ICON & TEXT) */
+        .btn-phone-desktop {
+            display: inline-flex;
+        }
+
+        .btn-phone-mobile {
+            display: none;
+            padding: 6px 10px;
+        }
+
         @media (max-width: 600px) {
-            .btn-phone-text {
-                display: none; /* Mobil ekranda joy tejash uchun */
+            .logo-main {
+                font-size: 19px;
+            }
+            .btn-phone-desktop {
+                display: none; /* Mobilda matnli raqam berkitiladi */
+            }
+            .btn-phone-mobile {
+                display: inline-flex; /* Mobilda faqat telefon iconkasi chiqadi */
+            }
+            .btn-outline-green {
+                padding: 6px 10px;
+                font-size: 12px;
             }
         }
 
-        /* FREEZE CALL BUTTON (Yashil yumaloq qo'ng'iroq knopkasi) */
+        /* FREEZE CALL BUTTON */
         .freeze-call-btn {
             position: fixed;
-            bottom: 85px;
-            right: 20px;
-            width: 58px;
-            height: 58px;
-            background: #e6f7f0;
+            bottom: 80px;
+            right: 16px;
+            width: 54px;
+            height: 54px;
+            background: #ffffff;
             border: 2px solid #00a86b;
             border-radius: 50%;
             display: flex;
@@ -177,7 +202,7 @@
             transform: scale(0.92);
         }
 
-        /* FREEZE BOTTOM BAR (Pastki to'liq yashil buyurtma knopkasi) */
+        /* FREEZE BOTTOM BAR */
         .freeze-bottom-bar {
             position: fixed;
             bottom: 0;
@@ -195,9 +220,9 @@
             background: #00a86b;
             color: #ffffff;
             text-align: center;
-            padding: 14px 0;
+            padding: 13px 0;
             border-radius: 10px;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 800;
             text-decoration: none;
             transition: background 0.2s;
@@ -210,7 +235,7 @@
 </head>
 <body>
 
-    <!-- YUQORI BARKASh (Tasmali yuguruvchi matn) -->
+    <!-- TOP TICKER BAR -->
     <div class="top-ticker">
         <div class="ticker-content" id="ticker-text">
             <span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span>
@@ -225,11 +250,11 @@
     <!-- 1-BLOK: STICKY HEADER -->
     <header class="main-header">
         <div class="container header-flex">
-            <!-- Logo -->
-            <div class="logo">
+            <!-- Logo (Brend ranglarida) -->
+            <a href="#" class="logo">
                 <span class="logo-sub">nurion</span>
                 <span class="logo-main">QOMUS</span>
-            </div>
+            </a>
 
             <!-- Right Controls -->
             <div class="header-right">
@@ -240,9 +265,14 @@
                     <button class="lang-btn" onclick="changeLanguage('ru')">RU</button>
                 </div>
 
-                <!-- Call Button (Phone Number) -->
-                <a href="tel:+998712030408" class="btn-outline-green btn-phone-text" id="call-btn-text">
+                <!-- Call Button (Desktop - Matnli) -->
+                <a href="tel:+998712030408" class="btn-outline-green btn-phone-desktop">
                     📞 +998 71 203-04-08
+                </a>
+
+                <!-- Call Button (Mobile - Iconkasi) -->
+                <a href="tel:+998712030408" class="btn-outline-green btn-phone-mobile" title="Qo'ng'iroq qilish">
+                    📞
                 </a>
 
                 <!-- Order Button (Green Outline) -->
@@ -255,19 +285,19 @@
 
     <!-- FREEZE CALL BUTTON (Yashil yumaloq qo'ng'iroq knopkasi) -->
     <a href="tel:+998712030408" class="freeze-call-btn" title="Qo'ng'iroq qilish">
-        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#00a86b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00a86b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
     </a>
 
-    <!-- FREEZE BOTTOM ORDER BAR (Pastki to'liq yashil buyurtma knopkasi) -->
+    <!-- FREEZE BOTTOM ORDER BAR -->
     <div class="freeze-bottom-bar">
         <a href="#lead-form" class="btn-solid-green" id="freeze-order-btn">
             Буюртма бериш
         </a>
     </div>
 
-    <!-- JAVASCRIPT KODI (Faylga alohida ulanmaydi, bitta joyning o'zida ishlaydi) -->
+    <!-- JAVASCRIPT KODI -->
     <script>
         const translations = {
             uz: {
@@ -285,11 +315,9 @@
         };
 
         function changeLanguage(lang) {
-            // Tugmalar rangini almashtirish
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             event.target.classList.add('active');
 
-            // Matnlarni almashtirish
             const t = translations[lang];
             if (t) {
                 document.getElementById('header-order-btn').textContent = t.orderBtn;
