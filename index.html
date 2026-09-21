@@ -28,7 +28,7 @@
             padding: 0 16px;
         }
 
-        /* TOP TICKER BAR — BRENDNING TO'Q KO'K RANGI (#00317F) */
+        /* TOP TICKER BAR */
         .top-ticker {
             background: #00317F;
             color: #ffffff;
@@ -174,7 +174,7 @@
             .logo-main { font-size: 18px; }
             .btn-phone-desktop { display: none; }
             .btn-phone-mobile { display: inline-flex; align-items: center; justify-content: center; }
-            .btn-glow-green { padding: 6px 8px; font-size: 11px; }
+            .btn-glow-green { padding: 6px 10px; font-size: 11px; }
             .lang-btn { padding: 4px 5px; font-size: 10px; }
         }
 
@@ -226,9 +226,7 @@
             transition: transform 0.2s ease;
         }
 
-        /* ------------------------------------------------------------- */
-        /* 2-BLOK: MINIMALIST HERO SECTION                              */
-        /* ------------------------------------------------------------- */
+        /* 2-BLOK: MINIMALIST HERO SECTION */
         .hero-section {
             padding: 40px 0;
         }
@@ -277,7 +275,6 @@
             background: #008f5b;
         }
 
-        /* O'NG TOMON: KATALASHTIRILGAN FLAKON RASMI */
         .hero-visual-card {
             display: flex;
             justify-content: center;
@@ -296,7 +293,6 @@
             transform: scale(1.02);
         }
 
-        /* MOBILE RESPONSIVE FOR HERO */
         @media (max-width: 868px) {
             .hero-grid {
                 grid-template-columns: 1fr;
@@ -322,7 +318,6 @@
             }
         }
 
-        /* ANIMATSIYALAR */
         @keyframes pulseGlow {
             0% { box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.6); }
             70% { box-shadow: 0 0 0 12px rgba(0, 168, 107, 0); }
@@ -338,7 +333,7 @@
 </head>
 <body>
 
-    <!-- TOP TICKER BAR (BRENDNING KO'K RANGIDA) -->
+    <!-- TOP TICKER BAR -->
     <div class="top-ticker">
         <div class="ticker-content" id="ticker-text">
             <span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span>
@@ -374,8 +369,9 @@
                     </svg>
                 </a>
 
+                <!-- Header Tugmasi — Shunchaki "Буюртма бериш" -->
                 <a href="#lead-form" class="btn-glow-green" id="header-order-btn">
-                    Бепул консультация / Буюртма бериш
+                    Буюртма бериш
                 </a>
             </div>
         </div>
@@ -384,8 +380,6 @@
     <!-- 2-BLOK: MINIMALIST HERO SECTION -->
     <section class="hero-section">
         <div class="container hero-grid">
-            
-            <!-- CHAP TOMON: MINIMAL MATNLAR VA TUGMA -->
             <div class="hero-content">
                 <h1 class="hero-title" id="hero-title">
                     ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!
@@ -400,11 +394,9 @@
                 </a>
             </div>
 
-            <!-- O'NG TOMON: KATTA FLAKON RASMI -->
             <div class="hero-visual-card">
-                <img src="https://i.ibb.co/3yk56S7/qomus-bottle.png" alt="QOMUS Flakon" class="product-img-large" onerror="this.onerror=null; this.src='https://via.placeholder.com/450x550/00317f/ffffff?text=QOMUS+Flakon';">
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&auto=format&fit=crop&q=80" alt="QOMUS Flakon" class="product-img-large">
             </div>
-
         </div>
     </section>
 
@@ -418,7 +410,7 @@
     <!-- FREEZE BOTTOM BAR -->
     <div class="freeze-bottom-bar">
         <a href="#lead-form" class="btn-solid-green" id="freeze-order-btn">
-            Бепул консультация / Буюртма бериш
+            Буюртма бериш
         </a>
     </div>
 
@@ -426,28 +418,28 @@
     <script>
         const translations = {
             uz: {
-                orderBtn: "Bepul konsultatsiya / Buyurtma berish",
+                orderBtn: "Buyurtma berish",
                 ticker: "<span>🚚 O'zbekiston bo'ylab BEPUL yetkazib berish</span><span>🌿 100% Tabiiy tarkib</span><span>⭐ 20,000+ Mamnun mijozlar</span><span>🔐 100% Maxfiylik kafolatlanadi</span>",
                 title: "OQ DOG'LARDAN HALOS BO'LISH ENDI ILOJSIZ EMAS!",
                 subtitle: "Ushbu preparat vitiligo va teridagi turli kasalliklarga yechim bo'la oladi. Va o'ziga o'rgatib qo'ymaydi - Natija kafolatlangan!",
                 heroCta: "Bepul maslahat olish"
             },
             uz_cyr: {
-                orderBtn: "Бепул консультация / Буюртма бериш",
+                orderBtn: "Буюртма бериш",
                 ticker: "<span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span><span>🌿 100% Табиий таркиб</span><span>⭐ 20,000+ Мамнун мижозлар</span><span>🔐 100% Махфийлик кафолатланади</span>",
                 title: "ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!",
                 subtitle: "Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!",
                 heroCta: "Бепул маслаҳат олиш"
             },
             ru: {
-                orderBtn: "Бесплатная консультация / Заказать",
+                orderBtn: "Заказать",
                 ticker: "<span>🚚 БЕСПЛАТНАЯ доставка по всему Узбекистану</span><span>🌿 100% Натуральный состав</span><span>⭐ 20,000+ Довольных клиентов</span><span>🔐 100% Конфиденциальность</span>",
                 title: "ИЗБАВЛЕНИЕ ОТ БЕЛЫХ ПЯТЕН ТЕПЕРЬ ВОЗМОЖНО!",
                 subtitle: "Данный препарат эффективен при витилиго и заболеваниях кожи. Не вызывает привыкания - Результат гарантирован!",
                 heroCta: "Получить бесплатную консультацию"
             },
             en: {
-                orderBtn: "Free Consultation / Order Now",
+                orderBtn: "Order Now",
                 ticker: "<span>🚚 FREE delivery across Uzbekistan</span><span>🌿 100% Natural composition</span><span>⭐ 20,000+ Satisfied customers</span><span>🔐 100% Confidentiality guaranteed</span>",
                 title: "GETTING RID OF WHITE SPOTS IS NO LONGER IMPOSSIBLE!",
                 subtitle: "This product is an effective solution for vitiligo and various skin issues. Non-addictive - Guaranteed results!",
@@ -469,7 +461,6 @@
                 document.getElementById('freeze-order-btn').textContent = t.orderBtn;
                 document.getElementById('ticker-text').innerHTML = t.ticker;
                 
-                // Hero Section Minimal Content
                 document.getElementById('hero-title').textContent = t.title;
                 document.getElementById('hero-subtitle').textContent = t.subtitle;
                 document.getElementById('hero-cta').textContent = t.heroCta;
