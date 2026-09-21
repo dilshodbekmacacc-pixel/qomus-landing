@@ -132,30 +132,30 @@
             color: #ffffff;
         }
 
-        /* OUTLINE TUGMALAR VA HOVER EFFEKTI */
-        .btn-outline-green {
+        /* HEADER VA PASTKI TUGMALAR — DEFAULT TO'LIQ YASHIL VA PORLAYDIGAN STIL */
+        .btn-glow-green {
             border: 2px solid #00a86b;
-            background: #ffffff;
-            color: #00a86b;
+            background: #00a86b;
+            color: #ffffff !important;
             padding: 6px 14px;
             border-radius: 20px;
             font-weight: 800;
             font-size: 13px;
             text-decoration: none;
-            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             display: inline-flex;
             align-items: center;
             justify-content: center;
             white-space: nowrap;
             cursor: pointer;
+            animation: pulseGlow 2s infinite;
+            transition: transform 0.2s ease;
         }
 
-        /* CURSOR BILAN O'TGANDA VA BOSGANDA TO'LIQ YASHIL BO'LISHI */
-        .btn-outline-green:hover,
-        .btn-outline-green:active {
-            background: #00a86b;
-            color: #ffffff !important;
-            box-shadow: 0 4px 12px rgba(0, 168, 107, 0.3);
+        .btn-glow-green:hover,
+        .btn-glow-green:active {
+            transform: scale(1.04);
+            background: #008f5b;
+            border-color: #008f5b;
         }
 
         .btn-phone-desktop { display: inline-flex; }
@@ -165,43 +165,36 @@
             .logo-main { font-size: 19px; }
             .btn-phone-desktop { display: none; }
             .btn-phone-mobile { display: inline-flex; }
-            .btn-outline-green { padding: 6px 10px; font-size: 12px; }
+            .btn-glow-green { padding: 6px 10px; font-size: 12px; }
         }
 
-        /* DUMALOQ QO'NG'IROQ TUGMASI VA HOVER EFFEKTI */
+        /* DUMALOQ QO'NG'IROQ TUGMASI (TO'LIQ YASHIL VA PORLAYDIGAN) */
         .freeze-call-btn {
             position: fixed;
             bottom: 80px;
             right: 16px;
             width: 54px;
             height: 54px;
-            background: #ffffff;
+            background: #00a86b;
             border: 2px solid #00a86b;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 1000;
-            box-shadow: 0 6px 20px rgba(0, 168, 107, 0.25);
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            animation: pulseGlowCircle 2s infinite;
+            transition: transform 0.2s ease;
         }
 
         .freeze-call-btn svg path {
-            transition: stroke 0.25s ease;
+            stroke: #ffffff; /* Oq telefon iconkasi */
         }
 
-        /* DUMALOQ TUGMA HOVER BO'LGANDA */
         .freeze-call-btn:hover,
         .freeze-call-btn:active {
-            background: #00a86b;
-            transform: scale(1.08);
-            box-shadow: 0 8px 24px rgba(0, 168, 107, 0.45);
-        }
-
-        .freeze-call-btn:hover svg path,
-        .freeze-call-btn:active svg path {
-            stroke: #ffffff; /* SVG ikonkasi oq rangga o'tadi */
+            transform: scale(1.1);
+            background: #008f5b;
         }
 
         /* PASTKI FREEZE BOTTOM BAR */
@@ -227,14 +220,39 @@
             font-size: 15px;
             font-weight: 800;
             text-decoration: none;
-            transition: all 0.25s ease;
-            box-shadow: 0 4px 12px rgba(0, 168, 107, 0.2);
+            animation: pulseGlow 2s infinite;
+            transition: transform 0.2s ease;
         }
 
         .btn-solid-green:hover,
         .btn-solid-green:active {
+            transform: scale(1.01);
             background: #008f5b;
-            box-shadow: 0 6px 18px rgba(0, 168, 107, 0.35);
+        }
+
+        /* TUGMALARNING SEKIN NUR SOCHIB PORLASH ANIMATSIYASI (PULSE GLOW) */
+        @keyframes pulseGlow {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.6);
+            }
+            70% {
+                box-shadow: 0 0 0 12px rgba(0, 168, 107, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 168, 107, 0);
+            }
+        }
+
+        @keyframes pulseGlowCircle {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 16px rgba(0, 168, 107, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 168, 107, 0);
+            }
         }
     </style>
 </head>
@@ -265,29 +283,32 @@
                     <button class="lang-btn" onclick="changeLanguage('ru')">RU</button>
                 </div>
 
-                <a href="tel:+998712030408" class="btn-outline-green btn-phone-desktop">
+                <!-- Call Button Desktop (Porlaydigan) -->
+                <a href="tel:+998712030408" class="btn-glow-green btn-phone-desktop">
                     📞 +998 71 203-04-08
                 </a>
 
-                <a href="tel:+998712030408" class="btn-outline-green btn-phone-mobile">
+                <!-- Call Button Mobile (Porlaydigan) -->
+                <a href="tel:+998712030408" class="btn-glow-green btn-phone-mobile">
                     📞
                 </a>
 
-                <a href="#lead-form" class="btn-outline-green" id="header-order-btn">
+                <!-- Order Button (Porlaydigan) -->
+                <a href="#lead-form" class="btn-glow-green" id="header-order-btn">
                     Буюртма бериш
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- FREEZE CALL BUTTON (Hover qilganda to'liq yashil va oq ikonka bo'ladi) -->
+    <!-- FREEZE CALL BUTTON (To'liq yashil, porlaydigan va oq ikonka) -->
     <a href="tel:+998712030408" class="freeze-call-btn" title="Qo'ng'iroq qilish">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#00a86b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
     </a>
 
-    <!-- FREEZE BOTTOM ORDER BAR -->
+    <!-- FREEZE BOTTOM ORDER BAR (To'liq yashil va porlaydigan) -->
     <div class="freeze-bottom-bar">
         <a href="#lead-form" class="btn-solid-green" id="freeze-order-btn">
             Буюртма бериш
