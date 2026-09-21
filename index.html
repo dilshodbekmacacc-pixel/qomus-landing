@@ -118,7 +118,7 @@
         .lang-btn {
             border: none;
             background: transparent;
-            padding: 5px 7px;
+            padding: 5px 6px;
             font-size: 11px;
             font-weight: 800;
             border-radius: 6px;
@@ -132,7 +132,7 @@
             color: #ffffff;
         }
 
-        /* HEADER VA PASTKI TUGMALAR — DEFAULT TO'LIQ YASHIL VA PORLAYDIGAN STIL */
+        /* PORLAYDIGAN YASHIL TUGMALAR STILI */
         .btn-glow-green {
             border: 2px solid #00a86b;
             background: #00a86b;
@@ -159,16 +159,23 @@
         }
 
         .btn-phone-desktop { display: inline-flex; }
-        .btn-phone-mobile { display: none; padding: 6px 10px; }
-
-        @media (max-width: 600px) {
-            .logo-main { font-size: 19px; }
-            .btn-phone-desktop { display: none; }
-            .btn-phone-mobile { display: inline-flex; }
-            .btn-glow-green { padding: 6px 10px; font-size: 12px; }
+        
+        /* HEADER MOBILE PHONE BUTTON - TO'LIQ OQ IKO VA TEXT */
+        .btn-phone-mobile { 
+            display: none; 
+            padding: 6px 10px; 
+            color: #ffffff !important;
         }
 
-        /* DUMALOQ QO'NG'IROQ TUGMASI (TO'LIQ YASHIL VA PORLAYDIGAN) */
+        @media (max-width: 600px) {
+            .logo-main { font-size: 18px; }
+            .btn-phone-desktop { display: none; }
+            .btn-phone-mobile { display: inline-flex; }
+            .btn-glow-green { padding: 6px 9px; font-size: 12px; }
+            .lang-btn { padding: 4px 5px; font-size: 10px; }
+        }
+
+        /* DUMALOQ QO'NG'IROQ TUGMASI (PORLAYDIGAN OQ IKONKA) */
         .freeze-call-btn {
             position: fixed;
             bottom: 80px;
@@ -188,7 +195,7 @@
         }
 
         .freeze-call-btn svg path {
-            stroke: #ffffff; /* Oq telefon iconkasi */
+            stroke: #ffffff; /* Oq telefon ikonkasi */
         }
 
         .freeze-call-btn:hover,
@@ -230,29 +237,17 @@
             background: #008f5b;
         }
 
-        /* TUGMALARNING SEKIN NUR SOCHIB PORLASH ANIMATSIYASI (PULSE GLOW) */
+        /* SEKIN PORLASH ANIMATSIYASI */
         @keyframes pulseGlow {
-            0% {
-                box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.6);
-            }
-            70% {
-                box-shadow: 0 0 0 12px rgba(0, 168, 107, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(0, 168, 107, 0);
-            }
+            0% { box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.6); }
+            70% { box-shadow: 0 0 0 12px rgba(0, 168, 107, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 168, 107, 0); }
         }
 
         @keyframes pulseGlowCircle {
-            0% {
-                box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 16px rgba(0, 168, 107, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(0, 168, 107, 0);
-            }
+            0% { box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.7); }
+            70% { box-shadow: 0 0 0 16px rgba(0, 168, 107, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 168, 107, 0); }
         }
     </style>
 </head>
@@ -277,23 +272,25 @@
             </a>
 
             <div class="header-right">
+                <!-- 4 tildan iborat Language Switcher -->
                 <div class="lang-switcher">
                     <button class="lang-btn" onclick="changeLanguage('uz')">UZ</button>
                     <button class="lang-btn active" onclick="changeLanguage('uz_cyr')">ЎЗ</button>
                     <button class="lang-btn" onclick="changeLanguage('ru')">RU</button>
+                    <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
                 </div>
 
-                <!-- Call Button Desktop (Porlaydigan) -->
+                <!-- Call Button Desktop -->
                 <a href="tel:+998712030408" class="btn-glow-green btn-phone-desktop">
                     📞 +998 71 203-04-08
                 </a>
 
-                <!-- Call Button Mobile (Porlaydigan) -->
+                <!-- Call Button Mobile (Oq telefon belgisi bilan) -->
                 <a href="tel:+998712030408" class="btn-glow-green btn-phone-mobile">
                     📞
                 </a>
 
-                <!-- Order Button (Porlaydigan) -->
+                <!-- Order Button -->
                 <a href="#lead-form" class="btn-glow-green" id="header-order-btn">
                     Буюртма бериш
                 </a>
@@ -301,21 +298,21 @@
         </div>
     </header>
 
-    <!-- FREEZE CALL BUTTON (To'liq yashil, porlaydigan va oq ikonka) -->
+    <!-- FREEZE CALL BUTTON (To'liq yashil, oq ikonka va porlaydigan) -->
     <a href="tel:+998712030408" class="freeze-call-btn" title="Qo'ng'iroq qilish">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
     </a>
 
-    <!-- FREEZE BOTTOM ORDER BAR (To'liq yashil va porlaydigan) -->
+    <!-- FREEZE BOTTOM ORDER BAR -->
     <div class="freeze-bottom-bar">
         <a href="#lead-form" class="btn-solid-green" id="freeze-order-btn">
             Буюртма бериш
         </a>
     </div>
 
-    <!-- JAVASCRIPT KODLARI -->
+    <!-- JAVASCRIPT KODLARI (EN tili qo'shilgan) -->
     <script>
         const translations = {
             uz: {
@@ -329,6 +326,10 @@
             ru: {
                 orderBtn: "Заказать",
                 ticker: "<span>🚚 БЕСПЛАТНАЯ доставка по всему Узбекистану</span><span>🌿 100% Натуральный состав</span><span>⭐ 20,000+ Довольных клиентов</span><span>🔐 100% Конфиденциальность</span>"
+            },
+            en: {
+                orderBtn: "Order Now",
+                ticker: "<span>🚚 FREE delivery across Uzbekistan</span><span>🌿 100% Natural composition</span><span>⭐ 20,000+ Satisfied customers</span><span>🔐 100% Confidentiality guaranteed</span>"
             }
         };
 
