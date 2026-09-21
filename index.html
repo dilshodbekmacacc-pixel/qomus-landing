@@ -158,20 +158,29 @@
             border-color: #008f5b;
         }
 
-        .btn-phone-desktop { display: inline-flex; }
+        /* DESKTOP CALL BUTTON — FAQAT RAQAM, IKONKASIZ */
+        .btn-phone-desktop { 
+            display: inline-flex; 
+        }
         
-        /* HEADER MOBILE PHONE BUTTON - TO'LIQ OQ IKO VA TEXT */
+        /* MOBILE CALL BUTTON — OQ SVG IKONKA IChIDA */
         .btn-phone-mobile { 
             display: none; 
             padding: 6px 10px; 
-            color: #ffffff !important;
+            border-radius: 50%;
+            width: 34px;
+            height: 34px;
+        }
+
+        .btn-phone-mobile svg path {
+            stroke: #ffffff; /* Animatsiya va SVG to'liq oq rangda */
         }
 
         @media (max-width: 600px) {
             .logo-main { font-size: 18px; }
             .btn-phone-desktop { display: none; }
-            .btn-phone-mobile { display: inline-flex; }
-            .btn-glow-green { padding: 6px 9px; font-size: 12px; }
+            .btn-phone-mobile { display: inline-flex; align-items: center; justify-content: center; }
+            .btn-glow-green { padding: 6px 10px; font-size: 12px; }
             .lang-btn { padding: 4px 5px; font-size: 10px; }
         }
 
@@ -272,22 +281,24 @@
             </a>
 
             <div class="header-right">
-                <!-- 4 tildan iborat Language Switcher -->
+                <!-- Language Switcher (Boshlang'ich o'zbek kirill aktiv) -->
                 <div class="lang-switcher">
-                    <button class="lang-btn" onclick="changeLanguage('uz')">UZ</button>
-                    <button class="lang-btn active" onclick="changeLanguage('uz_cyr')">ЎЗ</button>
-                    <button class="lang-btn" onclick="changeLanguage('ru')">RU</button>
-                    <button class="lang-btn" onclick="changeLanguage('en')">EN</button>
+                    <button class="lang-btn" id="btn-uz" onclick="changeLanguage('uz')">UZ</button>
+                    <button class="lang-btn active" id="btn-uz_cyr" onclick="changeLanguage('uz_cyr')">ЎЗ</button>
+                    <button class="lang-btn" id="btn-ru" onclick="changeLanguage('ru')">RU</button>
+                    <button class="lang-btn" id="btn-en" onclick="changeLanguage('en')">EN</button>
                 </div>
 
-                <!-- Call Button Desktop -->
+                <!-- Call Button Desktop (Faqat telefon raqam, ikonkasi yo'q) -->
                 <a href="tel:+998712030408" class="btn-glow-green btn-phone-desktop">
-                    📞 +998 71 203-04-08
+                    +998 71 203-04-08
                 </a>
 
-                <!-- Call Button Mobile (Oq telefon belgisi bilan) -->
-                <a href="tel:+998712030408" class="btn-glow-green btn-phone-mobile">
-                    📞
+                <!-- Call Button Mobile (Aniq Oq SVG Ikonka bilan) -->
+                <a href="tel:+998712030408" class="btn-glow-green btn-phone-mobile" title="Qo'ng'iroq qilish">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
                 </a>
 
                 <!-- Order Button -->
@@ -312,7 +323,7 @@
         </a>
     </div>
 
-    <!-- JAVASCRIPT KODLARI (EN tili qo'shilgan) -->
+    <!-- JAVASCRIPT KODLARI -->
     <script>
         const translations = {
             uz: {
@@ -335,7 +346,11 @@
 
         function changeLanguage(lang) {
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            
+            const activeBtn = document.getElementById('btn-' + lang);
+            if(activeBtn) {
+                activeBtn.classList.add('active');
+            }
 
             const t = translations[lang];
             if (t) {
@@ -344,6 +359,11 @@
                 document.getElementById('ticker-text').innerHTML = t.ticker;
             }
         }
+
+        // Sayt birinchi marta ochilganda avtomatik ЎЗ (Uzbek Kirill) rejimini faollashtirish
+        window.addEventListener('DOMContentLoaded', () => {
+            changeLanguage('uz_cyr');
+        });
     </script>
 </body>
 </html>
