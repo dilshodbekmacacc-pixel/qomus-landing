@@ -403,9 +403,7 @@
             font-weight: 800;
         }
 
-        /* ------------------------------------------------------------- */
-        /* 4-BLOK: CHEKSIZ LOOP (INFINITE) VA PEEK-EFFECT KARUSEL       */
-        /* ------------------------------------------------------------- */
+        /* 4-BLOK */
         .results-section {
             padding: 50px 0 60px 0;
             background: #f4f8f6;
@@ -527,6 +525,103 @@
         .carousel-btn.prev { left: 4px; }
         .carousel-btn.next { right: 4px; }
 
+        /* ------------------------------------------------------------- */
+        /* 5-BLOK: MAHSULOT TARKIBI VA AFZALLIKLARI                      */
+        /* ------------------------------------------------------------- */
+        .composition-section {
+            padding: 55px 0 65px 0;
+            background: #ffffff;
+            border-bottom: 1px solid #e2ece7;
+        }
+
+        .comp-header {
+            text-align: center;
+            margin-bottom: 38px;
+        }
+
+        .comp-title {
+            font-size: 32px;
+            font-weight: 900;
+            color: #00317F;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .comp-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 35px;
+        }
+
+        .comp-visual-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .comp-bottle-img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 20px;
+            filter: drop-shadow(0 15px 30px rgba(0,0,0,0.1));
+        }
+
+        .comp-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .comp-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 5px solid #00a86b;
+            padding: 16px 18px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+        }
+
+        .comp-card h3 {
+            font-size: 16.5px;
+            font-weight: 800;
+            color: #00317F;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .comp-card p {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #334155;
+            font-weight: 600;
+        }
+
+        /* PASTKI MAXSUS QORA TASMA (SOVUQ PRESS BANNER) */
+        .comp-banner-highlight {
+            background: #111827;
+            color: #ffffff;
+            padding: 22px 24px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .comp-banner-highlight p {
+            font-size: 15px;
+            font-weight: 800;
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+        }
+
+        .comp-banner-highlight strong {
+            color: #00bcd4;
+        }
+
         /* MOBIL VERSIYA */
         @media (max-width: 768px) {
             .logo-main { font-size: 18px; }
@@ -561,18 +656,24 @@
             .results-section { padding: 32px 0 40px 0; }
             .results-header-title { font-size: 21px; margin-bottom: 20px; }
             
-            .carousel-slide {
-                flex: 0 0 85%;
-                padding: 0 6px;
-            }
-
+            .carousel-slide { flex: 0 0 85%; padding: 0 6px; }
             .result-card-pair { gap: 8px; padding: 10px; border-radius: 16px; }
             .result-img { height: 180px; border-radius: 10px; margin-bottom: 6px; }
             .result-badge { font-size: 11px; padding: 4px 12px; }
-
             .carousel-btn { width: 38px; height: 38px; }
             .carousel-btn.prev { left: -2px; }
             .carousel-btn.next { right: -2px; }
+
+            /* 5-Blok mobil */
+            .composition-section { padding: 35px 0 40px 0; }
+            .comp-title { font-size: 24px; margin-bottom: 10px; }
+            .comp-grid { display: flex; flex-direction: column; gap: 24px; }
+            .comp-bottle-img { max-width: 270px; }
+            .comp-card { padding: 14px; }
+            .comp-card h3 { font-size: 15px; }
+            .comp-card p { font-size: 13px; }
+            .comp-banner-highlight { padding: 16px 14px; border-radius: 12px; }
+            .comp-banner-highlight p { font-size: 13px; line-height: 1.5; }
         }
 
         @keyframes pulseGlow {
@@ -689,7 +790,7 @@
                         </div>
                         <div class="ref-list-item">
                             <span class="ref-badge-icon">!</span>
-                            <span>Айниқса, йилнинг иссиқ фаслларида ёки енги калта кийимlar кийганда ноқулайлик сезасиз...</span>
+                            <span>Айниқса, йилнинг иссиқ фаслларида ёки енги калта кийимлар кийганда ноқулайлик сезасиз...</span>
                         </div>
                         <div class="ref-list-item">
                             <span class="ref-badge-icon">!</span>
@@ -728,14 +829,12 @@
             <h2 class="results-header-title" id="results-title">Мижозлар натижалари</h2>
 
             <div class="carousel-outer-box">
-                <!-- CHAPGA STRELKA -->
                 <button class="carousel-btn prev" onclick="handlePrev()" aria-label="Oldingisi">
                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="15 18 9 12 15 6"></polyline>
                     </svg>
                 </button>
 
-                <!-- SLAYD TRAKI -->
                 <div class="carousel-track-wrapper" id="carouselWrapper">
                     <div class="carousel-track" id="carouselTrack">
                         
@@ -882,12 +981,69 @@
                     </div>
                 </div>
 
-                <!-- O'NGA STRELKA -->
                 <button class="carousel-btn next" onclick="handleNext()" aria-label="Keyingisi">
                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
                 </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- 5-BLOK: MAHSULOT TARKIBI VA SOVUQ PRESS TEXNOLOGIYASI          -->
+    <!-- ------------------------------------------------------------- -->
+    <section class="composition-section">
+        <div class="container">
+            <div class="comp-header">
+                <h2 class="comp-title" id="comp-main-title">ТАРКИБИ</h2>
+            </div>
+
+            <div class="comp-grid">
+                <!-- MAHSULOT FLAKONI RASMI -->
+                <div class="comp-visual-box">
+                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop&q=80" alt="QOMUS Tarkibi" class="comp-bottle-img">
+                </div>
+
+                <!-- TARKIBIY KARTOCHKALAR (RASMDA KO'RSATILGAN MA'LUMOTLAR) -->
+                <div class="comp-cards">
+                    <!-- QORA SEDANA -->
+                    <div class="comp-card">
+                        <h3 id="comp-c1-t">🌿 Қора седана ёғи</h3>
+                        <p id="comp-c1-d">Табиий совуқ прессланган қора седана ёғи — тўқималар регенерациясини рағбатлантирувчи ва иммунитетни кучайтирувчи асосий фаол модда.</p>
+                    </div>
+
+                    <!-- VITAMINLAR -->
+                    <div class="comp-card">
+                        <h3 id="comp-c2-t">🧪 Витаминлар комплекси: E, D, C, B</h3>
+                        <p id="comp-c2-d">Тери ҳужайраларини озиқлантиради, табиий пигментация ҳосил бўлиш жараёнини тезлаштиради ҳамда кучли антиоксидант ҳимояни таъминлайди.</p>
+                    </div>
+
+                    <!-- YOG' KISLOTALARI -->
+                    <div class="comp-card">
+                        <h3 id="comp-c3-t">🧬 Тўйинмаган ёғ кислоталари</h3>
+                        <p id="comp-c3-d">Омега 3, Омега 6, Омега 9 синфи ва фосфолипидлар — липид қаватини тиклайди ва тери эластиклигини сақлайди.</p>
+                    </div>
+
+                    <!-- ELEMENTLAR -->
+                    <div class="comp-card">
+                        <h3 id="comp-c4-t">⚡ Макро ва микро элементлар</h3>
+                        <p id="comp-c4-d">Калий, натрий, фосфор, кальций, марганец, темир, рух, мис, селен, никель — тери меланин синтези учун зарур бўлган ноёб минераллар мажмуаси.</p>
+                    </div>
+
+                    <!-- EFIR MOYLARI & NIGELLON -->
+                    <div class="comp-card">
+                        <h3 id="comp-c5-t">✨ Эфир мойлари, нигелон, А-каротиноидлар</h3>
+                        <p id="comp-c5-d">Ёрдамчи компонентлар: қора мол желатини, глицерин, лимон кислотаси ва бошқа биологик фаол моддалар билан бойитилган.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PASTKI QORA TASMADAGI MAXSUS BANNER -->
+            <div class="comp-banner-highlight">
+                <p id="comp-banner-text">
+                    “QOMUS” ҚОРА СЕДАНА ЁҒИ ОЗУҚАВИЙ ВА БИОЛОГИК ҚИЙМАТИ САҚЛАНГАН ҲОЛДА <strong>СОВУҚ ПРЕССЛАШ УСУЛИ</strong> ОРҚАЛИ ОЛИНГАН.
+                </p>
             </div>
         </div>
     </section>
@@ -930,7 +1086,19 @@
                 refP2: "<strong>Kasallikka qarshi kurashasizmi yoki yo'q?!</strong> Ishonchim komil, siz bu muammoni yengasiz va teringiz sog'lom holatiga qaytadi.",
                 resultsTitle: "Mijozlar natijalari",
                 beforeBadge: "Avval",
-                afterBadge: "Keyin"
+                afterBadge: "Keyin",
+                compTitle: "TARKIBI",
+                compC1T: "🌿 Qora sedana yog'i",
+                compC1D: "Tabiiy sovuq presslangan qora sedana yog'i — to'qimalar regeneratsiyasini rag'batlantiruvchi va immunitetni kuchaytiruvchi asosiy faol modda.",
+                compC2T: "🧪 Vitaminlar kompleksi: E, D, C, B",
+                compC2D: "Teri hujayralarini oziqlantiradi, tabiiy pigmentatsiya hosil bo'lish jarayonini tezlashtiradi hamda kuchli antioksidant himoyani ta'minlaydi.",
+                compC3T: "🧬 To'yinmagan yog' kislotalari",
+                compC3D: "Omega 3, Omega 6, Omega 9 sinfi va fosfolipidlar — lipid qavatini tiklaydi va teri elastikligini saqlaydi.",
+                compC4T: "⚡ Makro va mikro elementlar",
+                compC4D: "Kaliy, natriy, fosfor, kalsiy, marganets, temir, rux, mis, selen, nikel — teri melanin sintezi uchun zarur bo'lgan noyob minerallar majmuasi.",
+                compC5T: "✨ Efir moylari, nigelon, A-karotinoidlar",
+                compC5D: "Yordamchi komponentlar: qora mol jelatini, glitserin, limon kislotasi va boshqa biologik faol moddalar bilan boyitilgan.",
+                compBanner: "“QOMUS” QORA SEDANA YOG'I OZUQAVIY VA BIOLOGIK QIYMATI SAQLANGAN HOLDA <strong>SOVUQ PRESSLASH USULI</strong> ORQALI OLINGAN."
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
@@ -945,7 +1113,7 @@
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Теридаги оқ доғлар</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Уят ёки ноқулайлик ҳисси</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Асабийлик ва ўз-ўзингизга ишончсизлик</span></div>
-                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Турли мазlar ва даволардан фойда кўрмагансиз ёки таъсири кам...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Турли мазлар ва даволардан фойда кўрмагансиз ёки таъсири кам...</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Айниқса, йилнинг иссиқ фаслларида ёки енги калта кийимлар кийганда ноқулайлик сезасиз...</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Витилигодан халос бўлишни хоҳлайсиз-у, лекин "Қандай қилиб?" деган саволга жавоб тополмай бошингиз қотган, тўғрими?</span></div>
                 `,
@@ -953,7 +1121,19 @@
                 refP2: "<strong>Касалликга қарши курашасизми ёки йўқ?!</strong> Ишончим комил, сиз бу муаммони енгасиз ва терингиз соғлом ҳолатига қайтади.",
                 resultsTitle: "Мижозлар натижалари",
                 beforeBadge: "Аввал",
-                afterBadge: "Кейин"
+                afterBadge: "Кейин",
+                compTitle: "ТАРКИБИ",
+                compC1T: "🌿 Қора седана ёғи",
+                compC1D: "Табиий совуқ прессланган қора седана ёғи — тўқималар регенерациясини рағбатлантирувчи ва иммунитетни кучайтирувчи асосий фаол модда.",
+                compC2T: "🧪 Витаминлар комплекси: E, D, C, B",
+                compC2D: "Тери ҳужайраларини озиқлантиради, табиий пигментация ҳосил бўлиш жараёнини тезлаштиради ҳамда кучли антиоксидант ҳимояни таъминлайди.",
+                compC3T: "🧬 Тўйинмаган ёғ кислоталари",
+                compC3D: "Омега 3, Омега 6, Омега 9 синфи ва фосфолипидлар — липид қаватини тиклайди ва тери эластиклигини сақлайди.",
+                compC4T: "⚡ Макро ва микро элементлар",
+                compC4D: "Калий, натрий, фосфор, кальций, марганец, темир, рух, мис, селен, никель — тери меланин синтези учун зарур бўлган ноёб минераллар мажмуаси.",
+                compC5T: "✨ Эфир мойлари, нигелон, А-каротиноидлар",
+                compC5D: "Ёрдамчи компонентлар: қора мол желатини, глицерин, лимон кислотаси ва бошқа биологик фаол моддалар билан бойитилган.",
+                compBanner: "“QOMUS” ҚОРА СЕДАНА ЁҒИ ОЗУҚАВИЙ ВА БИОЛОГИК ҚИЙМАТИ САҚЛАНГАН ҲОЛДА <strong>СОВУҚ ПРЕССЛАШ УСУЛИ</strong> ОРҚАЛИ ОЛИНГАН."
             },
             ru: {
                 orderBtn: "Заказать",
@@ -976,7 +1156,19 @@
                 refP2: "<strong>Будете бороться с недугом или нет?!</strong> Уверены, вы преодолеете это и кожа вернет здоровый вид.",
                 resultsTitle: "Результаты клиентов",
                 beforeBadge: "До",
-                afterBadge: "После"
+                afterBadge: "После",
+                compTitle: "СОСТАВ",
+                compC1T: "🌿 Масло черного тмина",
+                compC1D: "Натуральное масло черного тмина холодного отжима — стимулирует регенерацию тканей и укрепляет иммунную систему.",
+                compC2T: "🧪 Комплекс витаминов: E, D, C, B",
+                compC2D: "Питает клетки кожи, активирует процесс естественной пигментации и обеспечивает мощную антиоксидантную защиту.",
+                compC3T: "🧬 Ненасыщенные жирные кислоты",
+                compC3D: "Омега 3, Омега 6, Омега 9 и фосфолипиды — восстанавливают липидный барьер и поддерживают эластичность кожи.",
+                compC4T: "⚡ Макро- и микроэлементы",
+                compC4D: "Калий, натрий, фосфор, кальций, марганец, железо, цинк, медь, селен, никель — минералы для синтеза меланина.",
+                compC5T: "✨ Эфирные масла, нигеллон, А-каротиноиды",
+                compC5D: "Вспомогательные компоненты: говяжий желатин, глицерин, лимонная кислота и биологически активные вещества.",
+                compBanner: "МАСЛО ЧЕРНОГО ТМИНА «QOMUS» ПОЛУЧЕНО МЕТОДОМ <strong>ХОЛОДНОГО ОТЖИМА</strong> С СОХРАНЕНИЕМ ВСЕХ ПОЛЕЗНЫХ СВОЙСТВ."
             },
             en: {
                 orderBtn: "Order Now",
@@ -999,7 +1191,19 @@
                 refP2: "<strong>Will you fight it or not?!</strong> We are sure you will overcome it and your skin will return to health.",
                 resultsTitle: "Customer Results",
                 beforeBadge: "Before",
-                afterBadge: "After"
+                afterBadge: "After",
+                compTitle: "COMPOSITION",
+                compC1T: "🌿 Black Seed Oil",
+                compC1D: "Natural cold-pressed black seed oil — stimulates tissue regeneration and strengthens the immune system.",
+                compC2T: "🧪 Vitamin Complex: E, D, C, B",
+                compC2D: "Nourishes skin cells, accelerates natural pigmentation process, and ensures strong antioxidant protection.",
+                compC3T: "🧬 Unsaturated Fatty Acids",
+                compC3D: "Omega 3, Omega 6, Omega 9 and phospholipids — restore the lipid barrier and support skin elasticity.",
+                compC4T: "⚡ Macro and Micro Elements",
+                compC4D: "Potassium, sodium, phosphorus, calcium, manganese, iron, zinc, copper, selenium, nickel — essential for melanin synthesis.",
+                compC5T: "✨ Essential Oils, Nigellone, A-carotenoids",
+                compC5D: "Enriched with bovine gelatin, glycerin, citric acid, and valuable biologically active compounds.",
+                compBanner: "“QOMUS” BLACK SEED OIL IS PRODUCED VIA <strong>COLD PRESS METHOD</strong> PRESERVING ITS FULL NUTRITIONAL VALUE."
             }
         };
 
@@ -1031,6 +1235,20 @@
                 document.getElementById('results-title').textContent = t.resultsTitle;
                 document.querySelectorAll('.badge-before').forEach(el => el.textContent = t.beforeBadge);
                 document.querySelectorAll('.badge-after').forEach(el => el.textContent = t.afterBadge);
+
+                // 5-Blok tarjima
+                document.getElementById('comp-main-title').textContent = t.compTitle;
+                document.getElementById('comp-c1-t').textContent = t.compC1T;
+                document.getElementById('comp-c1-d').textContent = t.compC1D;
+                document.getElementById('comp-c2-t').textContent = t.compC2T;
+                document.getElementById('comp-c2-d').textContent = t.compC2D;
+                document.getElementById('comp-c3-t').textContent = t.compC3T;
+                document.getElementById('comp-c3-d').textContent = t.compC3D;
+                document.getElementById('comp-c4-t').textContent = t.compC4T;
+                document.getElementById('comp-c4-d').textContent = t.compC4D;
+                document.getElementById('comp-c5-t').textContent = t.compC5T;
+                document.getElementById('comp-c5-d').textContent = t.compC5D;
+                document.getElementById('comp-banner-text').innerHTML = t.compBanner;
             }
         }
 
@@ -1046,7 +1264,6 @@
             const originalSlides = Array.from(track.children);
             totalOriginal = originalSlides.length;
 
-            // Oxirgi slayd nusxasini boshiga (cloneFirst), birinchi slayd nusxasini oxiriga (cloneLast) qo'shamiz
             const firstClone = originalSlides[0].cloneNode(true);
             const lastClone = originalSlides[totalOriginal - 1].cloneNode(true);
 
@@ -1054,24 +1271,22 @@
             track.insertBefore(lastClone, track.firstElementChild);
 
             slides = Array.from(track.children);
-            currentIndex = 1; // 1-haqiqiy slayddan boshlaymiz
+            currentIndex = 1;
 
             updateCarouselPosition(false);
 
             track.addEventListener('transitionend', () => {
                 isTransitioning = false;
                 if (currentIndex === 0) {
-                    // Agar klonlangan oxirgi slaydga o'tgan bo'lsa, bildirmasdan haqiqiy oxirgisiga sakraydi
                     currentIndex = totalOriginal;
                     updateCarouselPosition(false);
                 } else if (currentIndex === totalOriginal + 1) {
-                    // Agar klonlangan birinchisiga o'tgan bo'lsa, bildirmasdan haqiqiy birinchisiga sakraydi
                     currentIndex = 1;
                     updateCarouselPosition(false);
                 }
             });
 
-            // Mobil Swipe (Barmog' bilan surish)
+            // Mobil Swipe
             let touchStartX = 0;
             let touchEndX = 0;
             const wrapper = document.getElementById('carouselWrapper');
