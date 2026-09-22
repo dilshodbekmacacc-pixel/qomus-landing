@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QOMUS — Teri Pigmentatsiyasini Qo'llab-quvvatlovchi Majmua</title>
+    <!-- Cyrillic qo'llab-quvvatlaydigan to'liq shrift -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800;900&subset=cyrillic,cyrillic-ext,latin&display=swap" rel="stylesheet">
 
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Manrope', sans-serif;
+            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
 
         body {
@@ -73,7 +74,6 @@
             gap: 6px;
         }
 
-        /* LOGO */
         .logo {
             display: flex;
             flex-direction: column;
@@ -106,7 +106,6 @@
             gap: 6px;
         }
 
-        /* LANGUAGE SWITCHER */
         .lang-switcher {
             display: flex;
             background: #f0f4f2;
@@ -132,7 +131,6 @@
             color: #ffffff;
         }
 
-        /* TUGMALAR */
         .btn-glow-green {
             border: 2px solid #00a86b;
             background: #00a86b;
@@ -162,7 +160,6 @@
 
         .btn-phone-mobile svg path { stroke: #ffffff; }
 
-        /* FREEZE CALL BUTTON */
         .freeze-call-btn {
             position: fixed;
             bottom: 70px;
@@ -182,7 +179,6 @@
 
         .freeze-call-btn svg path { stroke: #ffffff; }
 
-        /* FREEZE BOTTOM BAR */
         .freeze-bottom-bar {
             position: fixed;
             bottom: 0;
@@ -208,9 +204,7 @@
             animation: pulseGlow 2s infinite;
         }
 
-        /* ------------------------------------------------------------- */
-        /* 2-BLOK: HERO SECTION                                          */
-        /* ------------------------------------------------------------- */
+        /* 2-BLOK: HERO SECTION */
         .hero-section {
             padding: 24px 0 32px 0;
         }
@@ -275,9 +269,7 @@
             filter: drop-shadow(0 18px 36px rgba(0,0,0,0.14));
         }
 
-        /* ------------------------------------------------------------- */
-        /* 3-BLOK: REFERENSGA MOS DIZAYN VA STRUKTURA                    */
-        /* ------------------------------------------------------------- */
+        /* 3-BLOK: REFERENSGA MOS STRUKTURA */
         .pain-section-ref {
             padding: 50px 0 60px 0;
             background: #ffffff;
@@ -304,7 +296,6 @@
             font-weight: 700;
         }
 
-        /* 1-QISM: DESKTOPDA MATN CHAPDA, RASM O'NGDA */
         .ref-row-1 {
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
@@ -383,7 +374,6 @@
             box-shadow: 0 14px 28px rgba(0,0,0,0.12);
         }
 
-        /* 2-QISM: DESKTOPDA RASM CHAPDA, MATN O'NGDA */
         .ref-row-2 {
             display: grid;
             grid-template-columns: 0.9fr 1.1fr;
@@ -413,128 +403,156 @@
         }
 
         /* ------------------------------------------------------------- */
-        /* MOBIL VERSIYA: SIZ SO'RAGAN ANIQ KETMA-KETLIK                */
+        /* 4-BLOK: MIJOZLAR NATIJALARI KARUSEL SECTION                   */
         /* ------------------------------------------------------------- */
+        .results-section {
+            padding: 50px 0 60px 0;
+            background: #f4f8f6;
+            border-bottom: 1px solid #e2ece7;
+            position: relative;
+        }
+
+        .results-header-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 900;
+            color: #00317F;
+            margin-bottom: 35px;
+        }
+
+        .carousel-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+        }
+
+        .carousel-track-wrapper {
+            width: 100%;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.45s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0 10px;
+        }
+
+        /* Bitta natija juftligi: Avval & Keyin */
+        .result-card-pair {
+            display: flex;
+            gap: 16px;
+            background: #ffffff;
+            padding: 16px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            width: 100%;
+            max-width: 720px;
+        }
+
+        .result-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .result-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin-bottom: 12px;
+        }
+
+        .result-badge {
+            background: #00bcd4;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 800;
+            padding: 6px 20px;
+            border-radius: 20px;
+            text-transform: capitalize;
+        }
+
+        /* STRELKALAR */
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            background: #ffffff;
+            border: 2px solid #e0e9e5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+        }
+
+        .carousel-btn:hover {
+            background: #00317F;
+            border-color: #00317F;
+        }
+
+        .carousel-btn:hover svg path {
+            stroke: #ffffff;
+        }
+
+        .carousel-btn.prev { left: -22px; }
+        .carousel-btn.next { right: -22px; }
+
+        /* MOBIL VERSIYA MOSLASHUVLARI */
         @media (max-width: 768px) {
             .logo-main { font-size: 18px; }
             .btn-phone-desktop { display: none; }
             .btn-phone-mobile { display: inline-flex; align-items: center; justify-content: center; }
 
-            /* 2-Blok mobil */
-            .hero-section {
-                padding: 10px 0 18px 0;
-            }
-
-            .hero-grid {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-                text-align: center;
-            }
-
-            .hero-visual-card {
-                order: 1;
-                width: 100%;
-            }
-
-            .product-img-large {
-                max-width: 100%;
-                max-height: 420px;
-                border-radius: 14px;
-            }
-
-            .hero-content {
-                order: 2;
-                width: 100%;
-                align-items: center;
-            }
-
-            .hero-title {
-                font-size: 21px;
-                margin-bottom: 14px;
-                line-height: 1.35;
-            }
-
-            .hero-subtitle {
-                font-size: 13.5px;
-                line-height: 1.55;
-                margin-bottom: 18px;
-            }
-
-            .hero-cta-btn {
-                width: 100%;
-                padding: 14px 0;
-                font-size: 15px;
-            }
+            .hero-section { padding: 10px 0 18px 0; }
+            .hero-grid { display: flex; flex-direction: column; gap: 16px; text-align: center; }
+            .hero-visual-card { order: 1; width: 100%; }
+            .product-img-large { max-width: 100%; max-height: 420px; border-radius: 14px; }
+            .hero-content { order: 2; width: 100%; align-items: center; }
+            .hero-title { font-size: 21px; margin-bottom: 14px; line-height: 1.35; }
+            .hero-subtitle { font-size: 13.5px; line-height: 1.55; margin-bottom: 18px; }
+            .hero-cta-btn { width: 100%; padding: 14px 0; font-size: 15px; }
 
             /* 3-Blok mobil tartibi */
-            .pain-section-ref {
-                padding: 30px 0 40px 0;
-            }
+            .pain-section-ref { padding: 30px 0 40px 0; }
+            .ref-header h2 { font-size: 20px; margin-bottom: 10px; }
+            .ref-row-1 { display: flex; flex-direction: column; gap: 22px; margin-bottom: 35px; }
+            .ref-row-1 .ref-image-wrapper { order: 1; min-height: 270px; justify-content: center; margin: 6px 0 10px 0; }
+            .ref-row-1 .ref-text-block-1 { order: 2; }
+            .img-main-vitiligo { width: 88%; height: 250px; }
+            .img-overlap-hand { width: 58%; height: 150px; bottom: -10px; left: 6px; }
+            .ref-row-2 { display: flex; flex-direction: column; gap: 20px; }
+            .ref-row-2 .ref-img-card-2 { order: 1; }
+            .ref-row-2 .ref-text-block-2 { order: 2; }
+            .img-single-card { height: 230px; }
+            .ref-list-item { font-size: 13.5px; }
+            .ref-text-block-2 p { font-size: 14px; margin-bottom: 16px; }
 
-            .ref-header h2 {
-                font-size: 20px;
-                margin-bottom: 10px;
-            }
-
-            /* 1-Qism: 1-RASM AVVAL, KEYIN 1-RASM TEXTI */
-            .ref-row-1 {
-                display: flex;
-                flex-direction: column;
-                gap: 22px;
-                margin-bottom: 35px;
-            }
-
-            .ref-row-1 .ref-image-wrapper {
-                order: 1; /* 1-o'rinda 1-rasm */
-                min-height: 270px;
-                justify-content: center;
-                margin: 6px 0 10px 0;
-            }
-
-            .ref-row-1 .ref-text-block-1 {
-                order: 2; /* 2-o'rinda 1-rasm texti */
-            }
-
-            .img-main-vitiligo {
-                width: 88%;
-                height: 250px;
-            }
-
-            .img-overlap-hand {
-                width: 58%;
-                height: 150px;
-                bottom: -10px;
-                left: 6px;
-            }
-
-            /* 2-Qism: 2-RASM AVVAL, KEYIN 2-RASM TEXTI */
-            .ref-row-2 {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .ref-row-2 .ref-img-card-2 {
-                order: 1; /* 3-o'rinda 2-rasm */
-            }
-
-            .ref-row-2 .ref-text-block-2 {
-                order: 2; /* 4-o'rinda 2-rasm texti */
-            }
-
-            .img-single-card {
-                height: 230px;
-            }
-
-            .ref-list-item {
-                font-size: 13.5px;
-            }
-
-            .ref-text-block-2 p {
-                font-size: 14px;
-                margin-bottom: 16px;
-            }
+            /* 4-Blok mobil karusel */
+            .results-section { padding: 35px 0 40px 0; }
+            .results-header-title { font-size: 21px; margin-bottom: 22px; }
+            .result-card-pair { gap: 10px; padding: 10px; border-radius: 16px; }
+            .result-img { height: 170px; border-radius: 12px; margin-bottom: 8px; }
+            .result-badge { font-size: 11px; padding: 4px 14px; }
+            .carousel-btn { width: 36px; height: 36px; }
+            .carousel-btn.prev { left: -6px; }
+            .carousel-btn.next { right: -6px; }
         }
 
         @keyframes pulseGlow {
@@ -624,13 +642,11 @@
     <section class="pain-section-ref">
         <div class="container">
             
-            <!-- 1. HEADLINE -->
             <div class="ref-header">
                 <h2 id="ref-header-title">Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!</h2>
                 <p id="ref-sub-query">Нима қиласиз?</p>
             </div>
 
-            <!-- 1-QISM: MOBILDA 1-RASM -> 1-RASM MATNI -->
             <div class="ref-row-1">
                 <div class="ref-text-block-1">
                     <p class="ref-subtext-lead" id="ref-c1-lead">
@@ -671,7 +687,6 @@
                 </div>
             </div>
 
-            <!-- 2-QISM: MOBILDA 2-RASM -> 2-RASM MATNI -->
             <div class="ref-row-2">
                 <div class="ref-img-card-2">
                     <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=700&auto=format&fit=crop&q=80" alt="Xavotir va umid" class="img-single-card">
@@ -688,6 +703,78 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <!-- 4-BLOK: MIJOZLAR NATIJALARI (ALBOMNIY KARUSEL) -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="results-header-title" id="results-title">Мижозлар натижалари</h2>
+
+            <div class="carousel-container">
+                <!-- CHAPGA STRELKA -->
+                <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Oldingisi">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00317F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+                <!-- SLAYD TRAKI -->
+                <div class="carousel-track-wrapper">
+                    <div class="carousel-track" id="carouselTrack">
+                        
+                        <!-- 1-NATIJA (YELKA / TANA) -->
+                        <div class="carousel-slide">
+                            <div class="result-card-pair">
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
+                                    <span class="result-badge badge-before">Аввал</span>
+                                </div>
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
+                                    <span class="result-badge badge-after">Кейин</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2-NATIJA (TIZZA / OYOQ) -->
+                        <div class="carousel-slide">
+                            <div class="result-card-pair">
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
+                                    <span class="result-badge badge-before">Аввал</span>
+                                </div>
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
+                                    <span class="result-badge badge-after">Кейин</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3-NATIJA (QO'L VA BILAK) -->
+                        <div class="carousel-slide">
+                            <div class="result-card-pair">
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
+                                    <span class="result-badge badge-before">Аввал</span>
+                                </div>
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
+                                    <span class="result-badge badge-after">Кейин</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- O'NGA STRELKA -->
+                <button class="carousel-btn next" onclick="moveCarousel(1)" aria-label="Keyingisi">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00317F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
         </div>
     </section>
 
@@ -726,7 +813,10 @@
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Vitiligodan xalos bo'lishni xohlaysiz-u, lekin "Qanday qilib?" degan savolga javob topolmay boshingiz qotgan, to'g'rimi?</span></div>
                 `,
                 refP1: "Ammo bu muammolarga zudlik bilan yechim topishingiz lozim, to'g'rimi? Aks holda, vaqtida davolanmasa, vitiligo butun tanani egallab, tuzatib bo'lmas holatga kelib qolishi mumkin! Tasavvur qilishning o'zi dahshatli.",
-                refP2: "<strong>Kasallikka qarshi kurashasizmi yoki yo'q?!</strong> Ishonchim komil, siz bu muammoni yengasiz va teringiz sog'lom holatiga qaytadi."
+                refP2: "<strong>Kasallikka qarshi kurashasizmi yoki yo'q?!</strong> Ishonchim komil, siz bu muammoni yengasiz va teringiz sog'lom holatiga qaytadi.",
+                resultsTitle: "Mijozlar natijalari",
+                beforeBadge: "Avval",
+                afterBadge: "Keyin"
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
@@ -746,7 +836,10 @@
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Витилигодан халос бўлишни хоҳлайсиз-у, лекин "Қандай қилиб?" деган саволга жавоб тополмай бошингиз қотган, тўғрими?</span></div>
                 `,
                 refP1: "Аммо бу муаммоларга зудлик билан ечим топишингиз лозим, тўғрими? Акс ҳолда, вақтида даволанмаса, витилиго бутун танани эгаллаб, тузатиб бўлмас ҳолатга келиб қолиши мумкин! Тасаввур қилишнинг ўзи даҳшатли.",
-                refP2: "<strong>Касалликга қарши курашасизми ёки йўқ?!</strong> Ишончим комил, сиз бу муаммони енгасиз ва терингиз соғлом ҳолатига қайтади."
+                refP2: "<strong>Касалликга қарши курашасизми ёки йўқ?!</strong> Ишончим комил, сиз бу муаммони енгасиз ва терингиз соғлом ҳолатига қайтади.",
+                resultsTitle: "Мижозлар натижалари",
+                beforeBadge: "Аввал",
+                afterBadge: "Кейин"
             },
             ru: {
                 orderBtn: "Заказать",
@@ -766,7 +859,10 @@
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Хотите избавиться, но не знаете точно, 'Как именно?'</span></div>
                 `,
                 refP1: "Но решать эту проблему нужно незамедлительно, верно? Без своевременного лечения пятна могут распространиться по всему телу! Страшно представить.",
-                refP2: "<strong>Будете бороться с недугом или нет?!</strong> Уверены, вы преодолеете это и кожа вернет здоровый вид."
+                refP2: "<strong>Будете бороться с недугом или нет?!</strong> Уверены, вы преодолеете это и кожа вернет здоровый вид.",
+                resultsTitle: "Результаты клиентов",
+                beforeBadge: "До",
+                afterBadge: "После"
             },
             en: {
                 orderBtn: "Order Now",
@@ -786,7 +882,10 @@
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Want to get rid of it, but don't know exactly 'How?'</span></div>
                 `,
                 refP1: "However, finding an immediate solution is essential! Otherwise, vitiligo can spread over the entire body! It's scary even to imagine.",
-                refP2: "<strong>Will you fight it or not?!</strong> We are sure you will overcome it and your skin will return to health."
+                refP2: "<strong>Will you fight it or not?!</strong> We are sure you will overcome it and your skin will return to health.",
+                resultsTitle: "Customer Results",
+                beforeBadge: "Before",
+                afterBadge: "After"
             }
         };
 
@@ -814,7 +913,27 @@
                 document.getElementById('ref-c1-items').innerHTML = t.refItems;
                 document.getElementById('ref-c2-p1').textContent = t.refP1;
                 document.getElementById('ref-c2-p2').innerHTML = t.refP2;
+
+                // 4-Blok tarjima
+                document.getElementById('results-title').textContent = t.resultsTitle;
+                document.querySelectorAll('.badge-before').forEach(el => el.textContent = t.beforeBadge);
+                document.querySelectorAll('.badge-after').forEach(el => el.textContent = t.afterBadge);
             }
+        }
+
+        /* KARUSEL ISHLASH MANTIG'I */
+        let currentSlide = 0;
+        const totalSlides = 3;
+
+        function moveCarousel(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) {
+                currentSlide = totalSlides - 1;
+            } else if (currentSlide >= totalSlides) {
+                currentSlide = 0;
+            }
+            const track = document.getElementById('carouselTrack');
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
         }
 
         window.addEventListener('DOMContentLoaded', () => {
