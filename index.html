@@ -205,9 +205,7 @@
             animation: pulseGlow 2s infinite;
         }
 
-        /* ------------------------------------------------------------- */
-        /* 2-BLOK: HERO SECTION                                          */
-        /* ------------------------------------------------------------- */
+        /* 2-BLOK: HERO SECTION */
         .hero-section {
             padding: 24px 0 32px 0;
         }
@@ -272,9 +270,7 @@
             filter: drop-shadow(0 18px 36px rgba(0,0,0,0.14));
         }
 
-        /* ------------------------------------------------------------- */
-        /* 3-BLOK: REFERENSGA MOS STRUKTURA                              */
-        /* ------------------------------------------------------------- */
+        /* 3-BLOK: REFERENSGA MOS STRUKTURA */
         .pain-section-ref {
             padding: 50px 0 60px 0;
             background: #ffffff;
@@ -407,9 +403,7 @@
             font-weight: 800;
         }
 
-        /* ------------------------------------------------------------- */
-        /* 4-BLOK: KARUSEL                                               */
-        /* ------------------------------------------------------------- */
+        /* 4-BLOK: RASM NATIJALARI KARUSELI */
         .results-section {
             padding: 50px 0 60px 0;
             background: #f4f8f6;
@@ -532,10 +526,10 @@
         .carousel-btn.next { right: 4px; }
 
         /* ------------------------------------------------------------- */
-        /* 5-BLOK: 3-BLOK BILAN AYNAN BIR XIL TOZA RO'YXAT VA BORDERSİZ  */
+        /* 5-BLOK: ORALARI KENGAYTIRILGAN TOZA TARKIB RO'YXATI           */
         /* ------------------------------------------------------------- */
         .composition-section {
-            padding: 55px 0 65px 0;
+            padding: 60px 0 70px 0;
             background: #ffffff;
             border-top: 1px solid #eef3f0;
             border-bottom: 1px solid #e0e9e5;
@@ -587,18 +581,17 @@
             box-shadow: 0 15px 35px rgba(0,0,0,0.08);
         }
 
-        /* 3-blokdagi ref-list uslubi bilan 100% bir xil ro'yxat */
         .comp-clean-list {
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 26px; /* QATORLAR ORASIDAGI BO'SHLIQ KENGAYTIRILDI */
         }
 
         .comp-clean-item {
             display: flex;
             align-items: flex-start;
-            gap: 14px;
+            gap: 16px;
         }
 
         .comp-badge-icon {
@@ -618,23 +611,93 @@
         }
 
         .comp-item-content h3 {
-            font-size: 15.5px;
+            font-size: 16.5px;
             font-weight: 800;
             color: #00317F;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
             line-height: 1.4;
         }
 
         .comp-item-content p {
-            font-size: 14px;
-            line-height: 1.6;
+            font-size: 14.5px;
+            line-height: 1.7; /* O'QISH NOQULAY BO'LMASLIGI UCHUN INTERVAL KENGAYTIRILDI */
             color: #334155;
             font-weight: 600;
         }
 
         /* ------------------------------------------------------------- */
-        /* MOBIL VERSIYA MOSLASHUVLARI                                   */
+        /* 6-BLOK: YOUTUBE VIDEO NATIJALAR KARUSELI                      */
         /* ------------------------------------------------------------- */
+        .video-results-section {
+            padding: 55px 0 65px 0;
+            background: #f7faf9;
+            border-bottom: 1px solid #e2ece7;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .video-header-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 900;
+            color: #00317F;
+            margin-bottom: 12px;
+        }
+
+        .video-header-sub {
+            text-align: center;
+            font-size: 15px;
+            color: #475569;
+            font-weight: 600;
+            margin-bottom: 35px;
+        }
+
+        .video-carousel-slide {
+            flex: 0 0 82%;
+            padding: 0 8px;
+            box-sizing: border-box;
+        }
+
+        .video-card-item {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 49, 127, 0.08);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e0e9e5;
+        }
+
+        /* 16:9 Albom shaklidagi video player qutisi */
+        .video-embed-box {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background: #000;
+        }
+
+        .video-embed-box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-card-footer {
+            padding: 16px 20px;
+            background: #ffffff;
+        }
+
+        .video-card-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: #00317F;
+            line-height: 1.45;
+        }
+
+        /* MOBIL VERSIYA */
         @media (max-width: 768px) {
             .logo-main { font-size: 18px; }
             .btn-phone-desktop { display: none; }
@@ -665,51 +728,37 @@
             .ref-list-item { font-size: 13.5px; }
             .ref-text-block-2 p { font-size: 14px; margin-bottom: 16px; }
 
+            /* 4-blok mobil */
             .results-section { padding: 32px 0 40px 0; }
             .results-header-title { font-size: 21px; margin-bottom: 20px; }
-            
             .carousel-slide { flex: 0 0 85%; padding: 0 6px; }
             .result-card-pair { gap: 8px; padding: 10px; border-radius: 16px; }
             .result-img { height: 180px; border-radius: 10px; margin-bottom: 6px; }
             .result-badge { font-size: 11px; padding: 4px 12px; }
-            .carousel-btn { width: 38px; height: 38px; }
-            .carousel-btn.prev { left: -2px; }
-            .carousel-btn.next { right: -2px; }
 
-            /* 5-Blok mobil */
+            /* 5-blok mobil */
             .composition-section { padding: 30px 0 40px 0; }
             .comp-header h2 { font-size: 20px; margin-bottom: 8px; }
             .comp-header p { font-size: 13.5px; }
-            
-            .comp-grid {
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-            }
+            .comp-grid { display: flex; flex-direction: column; gap: 20px; }
+            .comp-visual-box { order: 1; width: 100%; }
+            .comp-product-img { max-width: 100%; border-radius: 18px; }
+            .comp-clean-list { order: 2; width: 100%; gap: 18px; }
+            .comp-item-content h3 { font-size: 15px; }
+            .comp-item-content p { font-size: 13.5px; line-height: 1.6; }
 
-            .comp-visual-box {
-                order: 1;
-                width: 100%;
-            }
+            /* 6-blok video mobil */
+            .video-results-section { padding: 32px 0 40px 0; }
+            .video-header-title { font-size: 21px; margin-bottom: 8px; }
+            .video-header-sub { font-size: 13px; margin-bottom: 20px; }
+            .video-carousel-slide { flex: 0 0 88%; padding: 0 6px; }
+            .video-card-item { border-radius: 16px; }
+            .video-card-footer { padding: 12px 14px; }
+            .video-card-title { font-size: 13.5px; }
 
-            .comp-product-img {
-                max-width: 100%;
-                border-radius: 18px;
-            }
-
-            .comp-clean-list {
-                order: 2;
-                width: 100%;
-                gap: 14px;
-            }
-
-            .comp-item-content h3 {
-                font-size: 14.5px;
-            }
-
-            .comp-item-content p {
-                font-size: 13px;
-            }
+            .carousel-btn { width: 38px; height: 38px; }
+            .carousel-btn.prev { left: -2px; }
+            .carousel-btn.next { right: -2px; }
         }
 
         @keyframes pulseGlow {
@@ -859,7 +908,7 @@
         </div>
     </section>
 
-    <!-- 4-BLOK: CHEKSIZ LOOP BILAN 10 TA NATIJA KARUSELI -->
+    <!-- 4-BLOK: CHEKSIZ LOOP BILAN 10 TA NATIJA RASM KARUSELI -->
     <section class="results-section">
         <div class="container">
             <h2 class="results-header-title" id="results-title">Мижозлар натижалари</h2>
@@ -957,7 +1006,7 @@
     </section>
 
     <!-- ------------------------------------------------------------- -->
-    <!-- 5-BLOK: TOZA, BORDERSİZ VA BOSHQA BLOKLAR BILAN BIR XIL USLUB  -->
+    <!-- 5-BLOK: TOZA, ORALARI KENGAYTIRILGAN RO'YXAT                  -->
     <!-- ------------------------------------------------------------- -->
     <section class="composition-section">
         <div class="container">
@@ -971,12 +1020,10 @@
 
             <div class="comp-grid">
                 
-                <!-- MAHSULOTNING ANIQ RASMI -->
                 <div class="comp-visual-box">
                     <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=900&auto=format&fit=crop&q=80" alt="QOMUS Tarkibi" class="comp-product-img">
                 </div>
 
-                <!-- BORDERSİZ, TOZA VA ANIQ RO'YXAT -->
                 <div class="comp-clean-list">
                     
                     <div class="comp-clean-item">
@@ -1026,6 +1073,159 @@
         </div>
     </section>
 
+    <!-- ------------------------------------------------------------- -->
+    <!-- 6-BLOK: YOUTUBE VIDEO SHARHLAR ALBOM KARUSELI (10 TA VIDEO)   -->
+    <!-- ------------------------------------------------------------- -->
+    <section class="video-results-section">
+        <div class="container">
+            <h2 class="video-header-title" id="video-sec-title">Мижозларимизнинг видео фикрлари</h2>
+            <p class="video-header-sub" id="video-sec-sub">Қомус препаратидан фойдаланиб натижага эришган юртдошларимиз билан суҳбатлар</p>
+
+            <div class="carousel-outer-box">
+                <!-- CHAPGA STRELKA -->
+                <button class="carousel-btn prev" onclick="handleVideoPrev()" aria-label="Oldingisi">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+
+                <!-- VIDEO SLAYD TRAKI -->
+                <div class="carousel-track-wrapper" id="videoCarouselWrapper">
+                    <div class="carousel-track" id="videoCarouselTrack">
+                        
+                        <!-- 1-VIDEO -->
+                        <div class="video-carousel-slide">
+                            <div class="video-card-item">
+                                <div class="video-embed-box">
+                                    <iframe src="https://www.youtube.com/embed/OYuZ5S4rTwA" title="Qomus video 1" allowfullscreen loading="lazy"></iframe>
+                                </div>
+                                <div class="video-card-footer">
+                                    <h4 class="video-card-title">25 йиллик дарддан қандай қутилдим? Витилиго ҳақида ҳақиқатлар[cite: 8]</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2-VIDEO -->
+                        <div class="video-carousel-slide">
+                            <div class="video-card-item">
+                                <div class="video-embed-box">
+                                    <iframe src="https://www.youtube.com/embed/NMz7hrU2C50" title="Qomus video 2" allowfullscreen loading="lazy"></iframe>
+                                </div>
+                                <div class="video-card-footer">
+                                    <h4 class="video-card-title">Қомус препарати билан тери пигментининг тикланиш жараёни</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3-VIDEO -->
+                        <div class="video-carousel-slide">
+                            <div class="video-card-item">
+                                <div class="video-embed-box">
+                                    <iframe src="https://www.youtube.com/embed/Y-YUxhdenT4" title="Qomus video 3" allowfullscreen loading="lazy"></iframe>
+                                </div>
+                                <div class="video-card-footer">
+                                    <h4 class="video-card-title">Оқ доғлар бўйича мижозимизнинг ҳаётий тажрибаси</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4-VIDEO -->
+                        <div class="video-carousel-slide">
+                            <div class="video-card-item">
+                                <div class="video-embed-box">
+                                    <iframe src="https://www.youtube.com/embed/sBeFihuV25U" title="Qomus video 4" allowfullscreen loading="lazy"></iframe>
+                                </div>
+                                <div class="video-card-footer">
+                                    <h4 class="video-card-title">Мижознинг самимий фикрлари ва эришилган натижа</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5-VIDEO -->
+                        <div class="video-carousel-slide">
+                            <div class="video-card-item">
+                                <div class="video-embed-box">
+                                    <iframe src="https://www.youtube.com/embed/LJZAX06GEsM" title="Qomus video 5" allowfullscreen loading="lazy"></iframe>
+                                </div>
+                                <div class="video-card-footer">
+                                    <h4 class="video-card-title">Муолажа босқичлари ва ижобий ўзгаришлар</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6-VIDEO -->
+                        <div class="video-carousel-slide">
+                            <div class="video-card-item">
+                                <div class="video-embed-box">
+                                    <iframe src="https://www.youtube.com/embed/bg32I_CkAY0" title="Qomus video 6" allowfullscreen loading="lazy"></iframe>
+                                </div>
+                                <div class="video-card-footer">
+                                    <h4 class="video-card-title">Витилиго муаммосидан сўнг соғлом терига қайтиш</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7-VIDEO -->
+                        <div class="video-carousel-slide">
+                            <div class="video-card-item">
+                                <div class="video-embed-box">
+                                    <iframe src="https://www.youtube.com/embed/D4RawvvVu1I" title="Qomus video 7" allowfullscreen loading="lazy"></iframe>
+                                </div>
+                                <div class="video-card-footer">
+                                    <h4 class="video-card-title">Теридаги пигментация қайта тикланиши бўйича фикрлар</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 8-VIDEO -->
+                        <div class="video-carousel-slide">
+                            <div class="video-card-item">
+                                <div class="video-embed-box">
+                                    <iframe src="https://www.youtube.com/embed/TFUjzVZ44zg" title="Qomus video 8" allowfullscreen loading="lazy"></iframe>
+                                </div>
+                                <div class="video-card-footer">
+                                    <h4 class="video-card-title">Қомус капсулаларини қабул қилиш тажрибаси</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 9-VIDEO -->
+                        <div class="video-carousel-slide">
+                            <div class="video-card-item">
+                                <div class="video-embed-box">
+                                    <iframe src="https://www.youtube.com/embed/Ze0-oiOmcc8" title="Qomus video 9" allowfullscreen loading="lazy"></iframe>
+                                </div>
+                                <div class="video-card-footer">
+                                    <h4 class="video-card-title">Мижозимизнинг даволаниш давомидаги ўзгаришлари</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 10-VIDEO -->
+                        <div class="video-carousel-slide">
+                            <div class="video-card-item">
+                                <div class="video-embed-box">
+                                    <iframe src="https://www.youtube.com/embed/dQ_Oy1fK_mU" title="Qomus video 10" allowfullscreen loading="lazy"></iframe>
+                                </div>
+                                <div class="video-card-footer">
+                                    <h4 class="video-card-title">Ҳақиқий натижалар: мижоз билан жонли мулоқот</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- O'NGA STRELKA -->
+                <button class="carousel-btn next" onclick="handleVideoNext()" aria-label="Keyingisi">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
     <!-- FREEZE CALL BUTTON -->
     <a href="tel:+998712030408" class="freeze-call-btn" title="Qo'ng'iroq qilish">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
@@ -1066,7 +1266,7 @@
                 beforeBadge: "Avval",
                 afterBadge: "Keyin",
 
-                // 5-Blok moslashtirilgan tarjimalar
+                // 5-Blok
                 compSecTitle: "QOMUS PREPARATINING TABIIY TARKIBI",
                 compSecDesc: "Vitiligo va teri pigmenti tiklanishida ichki mikroelementlar muvozanati hal qiluvchi ahamiyatga ega. Mahsulot faqatgina tabiiy komponentlardan tashkil topgan.",
                 cI1T: "Qora sedana yog'i",
@@ -1078,7 +1278,11 @@
                 cI4T: "Makro va mikro elementlar majmuasi",
                 cI4D: "Kaliy, natriy, fosfor, kalsiy, marganets, temir, rux, mis, selen, nikel — teri rangini tiklash uchun zarur noyob minerallar.",
                 cI5T: "Yordamchi komponentlar va efir moylari",
-                cI5D: "Qora mol jelatini, glitserin, nigelon, A-karotinoidlar va limon kislotasi asosidagi tabiiy kapsula."
+                cI5D: "Qora mol jelatini, glitserin, nigelon, A-karotinoidlar va limon kislotasi asosidagi tabiiy kapsula.",
+
+                // 6-Blok video
+                videoSecTitle: "Mijozlarimizning video fikrlari",
+                videoSecSub: "Qomus preparatidan foydalanib natijaga erishgan yurtdoshlarimiz bilan suhbatlar"
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
@@ -1103,7 +1307,7 @@
                 beforeBadge: "Аввал",
                 afterBadge: "Кейин",
 
-                // 5-Blok moslashtirilgan tarjimalar
+                // 5-Blok
                 compSecTitle: "ҚОМУС ПРЕПАРАТИНИНГ ТАБИИЙ ТАРКИБИ",
                 compSecDesc: "Витилиго ва тери пигменти тикланишида ички микроэлементлар мувозанати ҳал қилувчи аҳамиятга эга. Маҳсулот фақатгина табиий компонентлардан ташкил топган.",
                 cI1T: "Қора седана ёғи",
@@ -1115,7 +1319,11 @@
                 cI4T: "Макро ва микро элементлар мажмуаси",
                 cI4D: "Калий, натрий, фосфор, кальций, марганец, темир, рух, мис, селен, никель — тери рангини тиклаш учун зарур ноёб минераллар.",
                 cI5T: "Ёрдамчи компонентлар ва эфир мойлари",
-                cI5D: "Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула."
+                cI5D: "Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула.",
+
+                // 6-Blok video
+                videoSecTitle: "Мижозларимизнинг видео фикрлари",
+                videoSecSub: "Қомус препаратидан фойдаланиб натижага эришган юртдошларимиз билан суҳбатлар"
             },
             ru: {
                 orderBtn: "Заказать",
@@ -1140,7 +1348,7 @@
                 beforeBadge: "До",
                 afterBadge: "После",
 
-                // 5-Blok moslashtirilgan tarjimalar
+                // 5-Blok
                 compSecTitle: "НАТУРАЛЬНЫЙ СОСТАВ ПРЕПАРАТА «QOMUS»",
                 compSecDesc: "При восстановлении пигментации кожи баланс микроэлементов имеет решающее значение. Продукт состоит исключительно из натуральных компонентов.",
                 cI1T: "Масло черного тмина",
@@ -1152,7 +1360,11 @@
                 cI4T: "Комплекс макро- и микроэлементов",
                 cI4D: "Калий, натрий, фосфор, кальций, марганец, железо, цинк, медь, селен, никель — минералы для пигментации.",
                 cI5T: "Вспомогательные компоненты и эфирные масла",
-                cI5D: "Говяжий желатин, глицерин, нигеллон, А-каротиноиды и лимонная кислота в основе мягкой капсулы."
+                cI5D: "Говяжий желатин, глицерин, нигеллон, А-каротиноиды и лимонная кислота в основе мягкой капсулы.",
+
+                // 6-Blok video
+                videoSecTitle: "Видео отзывы наших клиентов",
+                videoSecSub: "Интервью с людьми, восстановившими здоровье кожи с помощью препарата «Qomus»"
             },
             en: {
                 orderBtn: "Order Now",
@@ -1177,7 +1389,7 @@
                 beforeBadge: "Before",
                 afterBadge: "After",
 
-                // 5-Blok moslashtirilgan tarjimalar
+                // 5-Blok
                 compSecTitle: "NATURAL COMPOSITION OF “QOMUS”",
                 compSecDesc: "In restoring skin pigmentation, the balance of internal microelements plays a crucial role. Formulated strictly with natural ingredients.",
                 cI1T: "Black Seed Oil",
@@ -1189,7 +1401,11 @@
                 cI4T: "Macro and Micro Element Complex",
                 cI4D: "Potassium, sodium, phosphorus, calcium, manganese, iron, zinc, copper, selenium, nickel — vital for pigmentation.",
                 cI5T: "Essential Oils and Auxiliary Elements",
-                cI5D: "Natural bovine gelatin, glycerin, nigellone, A-carotenoids, and citric acid inside a soft capsule."
+                cI5D: "Natural bovine gelatin, glycerin, nigellone, A-carotenoids, and citric acid inside a soft capsule.",
+
+                // 6-Blok video
+                videoSecTitle: "Video Reviews of Our Customers",
+                videoSecSub: "Interviews with real people who restored skin pigmentation using “Qomus”"
             }
         };
 
@@ -1222,7 +1438,7 @@
                 document.querySelectorAll('.badge-before').forEach(el => el.textContent = t.beforeBadge);
                 document.querySelectorAll('.badge-after').forEach(el => el.textContent = t.afterBadge);
 
-                // 5-Blok toza tarjimalari
+                // 5-Blok tarjima
                 document.getElementById('comp-sec-title').textContent = t.compSecTitle;
                 document.getElementById('comp-sec-desc').textContent = t.compSecDesc;
                 document.getElementById('c-i1-t').textContent = t.cI1T;
@@ -1235,12 +1451,18 @@
                 document.getElementById('c-i4-d').textContent = t.cI4D;
                 document.getElementById('c-i5-t').textContent = t.cI5T;
                 document.getElementById('c-i5-d').textContent = t.cI5D;
+
+                // 6-Blok video tarjima
+                document.getElementById('video-sec-title').textContent = t.videoSecTitle;
+                document.getElementById('video-sec-sub').textContent = t.videoSecSub;
             }
         }
 
-        /* KARUSEL VA SWIPE */
-        let track, slides, totalOriginal;
-        let currentIndex;
+        /* ------------------------------------------------------------- */
+        /* 4-BLOK: CHEKSIZ KARUSEL                                       */
+        /* ------------------------------------------------------------- */
+        let track, totalOriginal;
+        let currentIndex = 1;
         let isTransitioning = false;
 
         function initInfiniteCarousel() {
@@ -1253,9 +1475,6 @@
 
             track.appendChild(firstClone);
             track.insertBefore(lastClone, track.firstElementChild);
-
-            slides = Array.from(track.children);
-            currentIndex = 1;
 
             updateCarouselPosition(false);
 
@@ -1313,13 +1532,89 @@
             updateCarouselPosition(true);
         }
 
+        /* ------------------------------------------------------------- */
+        /* 6-BLOK: CHEKSIZ VIDEO KARUSEL MANTIG'I                       */
+        /* ------------------------------------------------------------- */
+        let vTrack, vTotalOriginal;
+        let vCurrentIndex = 1;
+        let vIsTransitioning = false;
+
+        function initVideoCarousel() {
+            vTrack = document.getElementById('videoCarouselTrack');
+            const originalSlides = Array.from(vTrack.children);
+            vTotalOriginal = originalSlides.length;
+
+            const firstClone = originalSlides[0].cloneNode(true);
+            const lastClone = originalSlides[vTotalOriginal - 1].cloneNode(true);
+
+            vTrack.appendChild(firstClone);
+            vTrack.insertBefore(lastClone, vTrack.firstElementChild);
+
+            updateVideoCarouselPosition(false);
+
+            vTrack.addEventListener('transitionend', () => {
+                vIsTransitioning = false;
+                if (vCurrentIndex === 0) {
+                    vCurrentIndex = vTotalOriginal;
+                    updateVideoCarouselPosition(false);
+                } else if (vCurrentIndex === vTotalOriginal + 1) {
+                    vCurrentIndex = 1;
+                    updateVideoCarouselPosition(false);
+                }
+            });
+
+            let vTouchStartX = 0;
+            let vTouchEndX = 0;
+            const vWrapper = document.getElementById('videoCarouselWrapper');
+
+            vWrapper.addEventListener('touchstart', e => {
+                vTouchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            vWrapper.addEventListener('touchend', e => {
+                vTouchEndX = e.changedTouches[0].screenX;
+                if (vTouchStartX - vTouchEndX > 45) {
+                    handleVideoNext();
+                } else if (vTouchEndX - vTouchStartX > 45) {
+                    handleVideoPrev();
+                }
+            }, { passive: true });
+        }
+
+        function updateVideoCarouselPosition(animated = true) {
+            if (animated) {
+                vTrack.style.transition = 'transform 0.4s ease-out';
+            } else {
+                vTrack.style.transition = 'none';
+            }
+            const isMobile = window.innerWidth <= 768;
+            const slideStep = isMobile ? 88 : 82;
+            vTrack.style.transform = `translateX(-${vCurrentIndex * slideStep}%)`;
+        }
+
+        function handleVideoNext() {
+            if (vIsTransitioning) return;
+            vIsTransitioning = true;
+            vCurrentIndex++;
+            updateVideoCarouselPosition(true);
+        }
+
+        function handleVideoPrev() {
+            if (vIsTransitioning) return;
+            vIsTransitioning = true;
+            vCurrentIndex--;
+            updateVideoCarouselPosition(true);
+        }
+
         window.addEventListener('resize', () => {
             updateCarouselPosition(false);
+            updateVideoCarouselPosition(false);
         });
 
         window.addEventListener('DOMContentLoaded', () => {
             changeLanguage('uz_cyr');
             initInfiniteCarousel();
+            initVideoCarousel();
         });
     </script>
 </body>
