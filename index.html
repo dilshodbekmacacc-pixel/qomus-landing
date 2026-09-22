@@ -532,7 +532,7 @@
         .carousel-btn.next { right: 4px; }
 
         /* ------------------------------------------------------------- */
-        /* 5-BLOK: 2 VA 3-BLOK BILAN BIR XIL USLUBDAGI TARKIB BO'LIMI    */
+        /* 5-BLOK: 3-BLOK BILAN AYNAN BIR XIL TOZA RO'YXAT VA BORDERSİZ  */
         /* ------------------------------------------------------------- */
         .composition-section {
             padding: 55px 0 65px 0;
@@ -543,35 +543,33 @@
 
         .comp-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
         }
 
         .comp-header h2 {
-            color: #00317F;
+            color: #00459c;
             font-size: 28px;
             font-weight: 900;
             line-height: 1.35;
             letter-spacing: -0.5px;
-            text-transform: uppercase;
-            margin-bottom: 12px;
+            max-width: 850px;
+            margin: 0 auto 14px auto;
         }
 
         .comp-header p {
-            color: #475569;
+            color: #1e293b;
             font-size: 15px;
-            font-weight: 600;
-            max-width: 720px;
+            font-weight: 700;
+            max-width: 760px;
             margin: 0 auto;
             line-height: 1.6;
         }
 
-        /* Hero va 3-blok kabi 2 ustunli toza grid */
         .comp-grid {
             display: grid;
             grid-template-columns: 0.95fr 1.05fr;
-            gap: 40px;
+            gap: 46px;
             align-items: center;
-            margin-bottom: 35px;
         }
 
         .comp-visual-box {
@@ -582,76 +580,56 @@
 
         .comp-product-img {
             width: 100%;
-            max-width: 440px;
+            max-width: 460px;
             height: auto;
-            border-radius: 20px;
+            border-radius: 24px;
             object-fit: cover;
-            box-shadow: 0 15px 35px rgba(0, 49, 127, 0.08);
-            border: 1px solid #eef3f0;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
         }
 
-        /* 3-blokdagi ro'yxat uslubiga 100% mos toza tuzilma */
-        .comp-list {
+        /* 3-blokdagi ref-list uslubi bilan 100% bir xil ro'yxat */
+        .comp-clean-list {
+            list-style: none;
             display: flex;
             flex-direction: column;
+            gap: 18px;
+        }
+
+        .comp-clean-item {
+            display: flex;
+            align-items: flex-start;
             gap: 14px;
         }
 
-        .comp-item {
-            background: #ffffff;
-            border: 1px solid #e2e8f0;
-            border-radius: 14px;
-            padding: 16px 18px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
-        }
-
-        .comp-item-title {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 15.5px;
-            font-weight: 800;
-            color: #00317F;
-            margin-bottom: 6px;
-        }
-
-        .comp-check-icon {
-            width: 20px;
-            height: 20px;
+        .comp-badge-icon {
+            width: 24px;
+            height: 24px;
             background: #00a86b;
             color: #ffffff;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 11px;
+            font-size: 12px;
             font-weight: 900;
             flex-shrink: 0;
+            margin-top: 3px;
+            box-shadow: 0 2px 6px rgba(0, 168, 107, 0.3);
         }
 
-        .comp-item p {
-            font-size: 13.5px;
-            line-height: 1.55;
-            color: #475569;
-            font-weight: 600;
-            padding-left: 30px;
+        .comp-item-content h3 {
+            font-size: 15.5px;
+            font-weight: 800;
+            color: #00317F;
+            margin-bottom: 4px;
+            line-height: 1.4;
         }
 
-        /* Sovuq presslash bo'yicha jiddiy pastki karta */
-        .comp-footer-card {
-            background: #f7faf9;
-            border: 1px solid #d4e3dc;
-            border-left: 4px solid #00a86b;
-            border-radius: 12px;
-            padding: 16px 20px;
-            margin-top: 10px;
-        }
-
-        .comp-footer-card p {
+        .comp-item-content p {
             font-size: 14px;
-            font-weight: 700;
-            color: #1a2b25;
-            line-height: 1.5;
+            line-height: 1.6;
+            color: #334155;
+            font-weight: 600;
         }
 
         /* ------------------------------------------------------------- */
@@ -698,7 +676,7 @@
             .carousel-btn.prev { left: -2px; }
             .carousel-btn.next { right: -2px; }
 
-            /* 5-Blok mobil (3-blok kabi ketma-ketlikda) */
+            /* 5-Blok mobil */
             .composition-section { padding: 30px 0 40px 0; }
             .comp-header h2 { font-size: 20px; margin-bottom: 8px; }
             .comp-header p { font-size: 13.5px; }
@@ -707,44 +685,29 @@
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
-                margin-bottom: 20px;
             }
 
             .comp-visual-box {
-                order: 1; /* Mobilda rasm avval chiqadi */
+                order: 1;
                 width: 100%;
             }
 
             .comp-product-img {
                 max-width: 100%;
-                border-radius: 16px;
+                border-radius: 18px;
             }
 
-            .comp-list {
-                order: 2; /* Keyin tarkibiy punktlar */
+            .comp-clean-list {
+                order: 2;
                 width: 100%;
-                gap: 10px;
+                gap: 14px;
             }
 
-            .comp-item {
-                padding: 13px 14px;
-                border-radius: 12px;
-            }
-
-            .comp-item-title {
+            .comp-item-content h3 {
                 font-size: 14.5px;
             }
 
-            .comp-item p {
-                font-size: 13px;
-                padding-left: 28px;
-            }
-
-            .comp-footer-card {
-                padding: 12px 14px;
-            }
-
-            .comp-footer-card p {
+            .comp-item-content p {
                 font-size: 13px;
             }
         }
@@ -994,7 +957,7 @@
     </section>
 
     <!-- ------------------------------------------------------------- -->
-    <!-- 5-BLOK: BIR XIL DIZAYN VA JIDDIY USLUBDAGI TARKIB BO'LIMI       -->
+    <!-- 5-BLOK: TOZA, BORDERSİZ VA BOSHQA BLOKLAR BILAN BIR XIL USLUB  -->
     <!-- ------------------------------------------------------------- -->
     <section class="composition-section">
         <div class="container">
@@ -1013,64 +976,47 @@
                     <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=900&auto=format&fit=crop&q=80" alt="QOMUS Tarkibi" class="comp-product-img">
                 </div>
 
-                <!-- 3-BLOKDAGI KABI JIDDIY VA TUSHUNARLI RO'YXAT -->
-                <div class="comp-list">
+                <!-- BORDERSİZ, TOZA VA ANIQ RO'YXAT -->
+                <div class="comp-clean-list">
                     
-                    <div class="comp-item">
-                        <div class="comp-item-title">
-                            <span class="comp-check-icon">✓</span>
-                            <span id="c-i1-t">Қора седана ёғи</span>
+                    <div class="comp-clean-item">
+                        <span class="comp-badge-icon">✓</span>
+                        <div class="comp-item-content">
+                            <h3 id="c-i1-t">Қора седана ёғи</h3>
+                            <p id="c-i1-d">Иммунитет мувозанатини тиклайди ва ҳужайралар регенерациясини жадаллаштирувчи асосий фаол модда.</p>
                         </div>
-                        <p id="c-i1-d">
-                            Иммунитет мувозанатини тиклайди ва ҳужайралар регенерациясини жадаллаштирувчи асосий фаол модда.
-                        </p>
                     </div>
 
-                    <div class="comp-item">
-                        <div class="comp-item-title">
-                            <span class="comp-check-icon">✓</span>
-                            <span id="c-i2-t">Витаминлар: E, D, C, B</span>
+                    <div class="comp-clean-item">
+                        <span class="comp-badge-icon">✓</span>
+                        <div class="comp-item-content">
+                            <h3 id="c-i2-t">Витаминлар: E, D, C, B</h3>
+                            <p id="c-i2-d">Тери пигменти (меланин) синтезини қўллаб-қувватлайди ва ҳужайраларни ультрабинафша стрессдан ҳимоялайди.</p>
                         </div>
-                        <p id="c-i2-d">
-                            Тери пигменти (меланин) синтезини қўллаб-қувватлайди ва ҳужайраларни ультрабинафша стрессдан ҳимоялайди.
-                        </p>
                     </div>
 
-                    <div class="comp-item">
-                        <div class="comp-item-title">
-                            <span class="comp-check-icon">✓</span>
-                            <span id="c-i3-t">Тўйинмаган ёғ кислоталари (Омега 3, 6, 9)</span>
+                    <div class="comp-clean-item">
+                        <span class="comp-badge-icon">✓</span>
+                        <div class="comp-item-content">
+                            <h3 id="c-i3-t">Тўйинмаган ёғ кислоталари (Омега 3, 6, 9)</h3>
+                            <p id="c-i3-d">Фосфолипидлар билан бирга терининг липид қаватини мустаҳкамлайди, қуруқлик ва қазиғланишни тўхтатади.</p>
                         </div>
-                        <p id="c-i3-d">
-                            Фосфолипидлар билан бирга терининг липид қаватини мустаҳкамлайди, қуруқлик ва қазиғланишни тўхтатади.
-                        </p>
                     </div>
 
-                    <div class="comp-item">
-                        <div class="comp-item-title">
-                            <span class="comp-check-icon">✓</span>
-                            <span id="c-i4-t">Макро ва микро элементлар мажмуаси</span>
+                    <div class="comp-clean-item">
+                        <span class="comp-badge-icon">✓</span>
+                        <div class="comp-item-content">
+                            <h3 id="c-i4-t">Макро ва микро элементлар мажмуаси</h3>
+                            <p id="c-i4-d">Калий, натрий, фосфор, кальций, марганец, темир, рух, мис, селен, никель — тери рангини тиклаш учун зарур ноёб минераллар.</p>
                         </div>
-                        <p id="c-i4-d">
-                            Калий, натрий, фосфор, кальций, марганец, темир, рух, мис, селен, никель — тери рангини тиклаш учун зарур ноёб минераллар.
-                        </p>
                     </div>
 
-                    <div class="comp-item">
-                        <div class="comp-item-title">
-                            <span class="comp-check-icon">✓</span>
-                            <span id="c-i5-t">Ёрдамчи компонентлар ва эфир мойлари</span>
+                    <div class="comp-clean-item">
+                        <span class="comp-badge-icon">✓</span>
+                        <div class="comp-item-content">
+                            <h3 id="c-i5-t">Ёрдамчи компонентлар ва эфир мойлари</h3>
+                            <p id="c-i5-d">Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула.</p>
                         </div>
-                        <p id="c-i5-d">
-                            Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула.
-                        </p>
-                    </div>
-
-                    <!-- SOVUQ PRESS XULOSASI -->
-                    <div class="comp-footer-card">
-                        <p id="c-foot-text">
-                            “QOMUS” қора седана ёғи озуқавий ва биологик қиймати 100% сақланган ҳолда совуқ пресслаш усули орқали олинган.
-                        </p>
                     </div>
 
                 </div>
@@ -1132,8 +1078,7 @@
                 cI4T: "Makro va mikro elementlar majmuasi",
                 cI4D: "Kaliy, natriy, fosfor, kalsiy, marganets, temir, rux, mis, selen, nikel — teri rangini tiklash uchun zarur noyob minerallar.",
                 cI5T: "Yordamchi komponentlar va efir moylari",
-                cI5D: "Qora mol jelatini, glitserin, nigelon, A-karotinoidlar va limon kislotasi asosidagi tabiiy kapsula.",
-                cFootText: "“QOMUS” qora sedana yog'i ozuqaviy va biologik qiymati 100% saqlangan holda sovuq presslash usuli orqali olingan."
+                cI5D: "Qora mol jelatini, glitserin, nigelon, A-karotinoidlar va limon kislotasi asosidagi tabiiy kapsula."
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
@@ -1170,8 +1115,7 @@
                 cI4T: "Макро ва микро элементлар мажмуаси",
                 cI4D: "Калий, натрий, фосфор, кальций, марганец, темир, рух, мис, селен, никель — тери рангини тиклаш учун зарур ноёб минераллар.",
                 cI5T: "Ёрдамчи компонентлар ва эфир мойлари",
-                cI5D: "Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула.",
-                cFootText: "“QOMUS” қора седана ёғи озуқавий ва биологик қиймати 100% сақланган ҳолда совуқ пресслаш усули орқали олинган."
+                cI5D: "Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула."
             },
             ru: {
                 orderBtn: "Заказать",
@@ -1208,8 +1152,7 @@
                 cI4T: "Комплекс макро- и микроэлементов",
                 cI4D: "Калий, натрий, фосфор, кальций, марганец, железо, цинк, медь, селен, никель — минералы для пигментации.",
                 cI5T: "Вспомогательные компоненты и эфирные масла",
-                cI5D: "Говяжий желатин, глицерин, нигеллон, А-каротиноиды и лимонная кислота в основе мягкой капсулы.",
-                cFootText: "Масло черного тмина «QOMUS» получено методом холодного отжима с сохранением 100% полезных свойств."
+                cI5D: "Говяжий желатин, глицерин, нигеллон, А-каротиноиды и лимонная кислота в основе мягкой капсулы."
             },
             en: {
                 orderBtn: "Order Now",
@@ -1246,8 +1189,7 @@
                 cI4T: "Macro and Micro Element Complex",
                 cI4D: "Potassium, sodium, phosphorus, calcium, manganese, iron, zinc, copper, selenium, nickel — vital for pigmentation.",
                 cI5T: "Essential Oils and Auxiliary Elements",
-                cI5D: "Natural bovine gelatin, glycerin, nigellone, A-carotenoids, and citric acid inside a soft capsule.",
-                cFootText: "“QOMUS” black seed oil is produced using cold press technology, fully preserving its active nutritional potency."
+                cI5D: "Natural bovine gelatin, glycerin, nigellone, A-carotenoids, and citric acid inside a soft capsule."
             }
         };
 
@@ -1280,7 +1222,7 @@
                 document.querySelectorAll('.badge-before').forEach(el => el.textContent = t.beforeBadge);
                 document.querySelectorAll('.badge-after').forEach(el => el.textContent = t.afterBadge);
 
-                // 5-Blok yangilangan tarjimalar
+                // 5-Blok toza tarjimalari
                 document.getElementById('comp-sec-title').textContent = t.compSecTitle;
                 document.getElementById('comp-sec-desc').textContent = t.compSecDesc;
                 document.getElementById('c-i1-t').textContent = t.cI1T;
@@ -1293,7 +1235,6 @@
                 document.getElementById('c-i4-d').textContent = t.cI4D;
                 document.getElementById('c-i5-t').textContent = t.cI5T;
                 document.getElementById('c-i5-d').textContent = t.cI5D;
-                document.getElementById('c-foot-text').textContent = t.cFootText;
             }
         }
 
