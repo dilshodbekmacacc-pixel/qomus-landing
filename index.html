@@ -916,7 +916,7 @@
         }
 
         /* ------------------------------------------------------------- */
-        /* 9-BLOK: USTUN TOMONLARIMIZ (NEGA AYNAN QOMUS?)               */
+        /* 9-BLOK: JIDDIY TIBBIY/WELLNESS STANDARTDAGI USTUN TOMONLAR    */
         /* ------------------------------------------------------------- */
         .advantages-section {
             padding: 60px 0 70px 0;
@@ -930,7 +930,7 @@
         }
 
         .adv-header h2 {
-            color: #00317F;
+            color: #00459c;
             font-size: 28px;
             font-weight: 900;
             letter-spacing: -0.5px;
@@ -940,9 +940,9 @@
         }
 
         .adv-header p {
-            color: #475569;
+            color: #1e293b;
             font-size: 15px;
-            font-weight: 600;
+            font-weight: 700;
             max-width: 720px;
             margin: 0 auto;
             line-height: 1.6;
@@ -951,49 +951,53 @@
         .adv-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
+            gap: 24px;
         }
 
-        .adv-card {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 18px;
+        /* 3-blok va 5-blok kabi qat'iy, nozik chegarali professional blok */
+        .adv-clean-card {
+            background: #ffffff;
+            border: 1px solid #e2ece7;
+            border-radius: 16px;
             padding: 26px 22px;
             display: flex;
             flex-direction: column;
-            transition: all 0.25s ease;
+            box-shadow: 0 4px 14px rgba(0, 49, 127, 0.02);
+            transition: border-color 0.2s ease, transform 0.2s ease;
         }
 
-        .adv-card:hover {
-            transform: translateY(-4px);
+        .adv-clean-card:hover {
             border-color: #00a86b;
-            background: #ffffff;
-            box-shadow: 0 10px 25px rgba(0, 49, 127, 0.06);
+            transform: translateY(-2px);
         }
 
-        .adv-icon-badge {
-            width: 48px;
-            height: 48px;
-            border-radius: 12px;
-            background: #eef6ff;
-            color: #00317F;
+        /* Multfilm emojilar o'rniga jiddiy professional raqamli indikator */
+        .adv-num-badge {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            background: #f0fdf4;
+            color: #00a86b;
+            border: 1px solid #bbf7d0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 24px;
+            font-size: 13px;
+            font-weight: 900;
             margin-bottom: 16px;
+            letter-spacing: 0.5px;
         }
 
-        .adv-card h3 {
-            font-size: 17px;
+        .adv-clean-card h3 {
+            font-size: 16.5px;
             font-weight: 800;
             color: #00317F;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             line-height: 1.35;
         }
 
-        .adv-card p {
-            font-size: 13.5px;
+        .adv-clean-card p {
+            font-size: 14px;
             line-height: 1.65;
             color: #475569;
             font-weight: 600;
@@ -1076,14 +1080,15 @@
             .faq-toggle-icon { width: 26px; height: 26px; font-size: 16px; }
             .faq-answer-pane p { font-size: 13px; }
 
-            /* 9-blok ustunliklar mobil */
-            .advantages-section { padding: 35px 0 45px 0; }
-            .adv-header h2 { font-size: 21px; margin-bottom: 8px; }
-            .adv-header p { font-size: 13.5px; margin-bottom: 25px; }
+            /* 9-blok mobil toza */
+            .advantages-section { padding: 35px 0 40px 0; }
+            .adv-header h2 { font-size: 20px; margin-bottom: 8px; }
+            .adv-header p { font-size: 13.5px; margin-bottom: 22px; }
             .adv-grid { display: flex; flex-direction: column; gap: 14px; }
-            .adv-card { padding: 20px 18px; border-radius: 16px; }
-            .adv-card h3 { font-size: 16px; }
-            .adv-card p { font-size: 13px; }
+            .adv-clean-card { padding: 18px 16px; border-radius: 14px; }
+            .adv-num-badge { width: 30px; height: 30px; font-size: 12px; margin-bottom: 12px; }
+            .adv-clean-card h3 { font-size: 15.5px; margin-bottom: 6px; }
+            .adv-clean-card p { font-size: 13.5px; }
 
             .carousel-btn { width: 38px; height: 38px; }
             .carousel-btn.prev { left: -2px; }
@@ -1659,7 +1664,7 @@
     </section>
 
     <!-- ------------------------------------------------------------- -->
-    <!-- 9-BLOK: USTUN TOMONLARIMIZ (NEGA AYNAN QOMUS?)               -->
+    <!-- 9-BLOK: JIDDIY TIBBIY/WELLNESS STANDARTDAGI USTUN TOMONLAR    -->
     <!-- ------------------------------------------------------------- -->
     <section class="advantages-section">
         <div class="container">
@@ -1671,43 +1676,43 @@
             <div class="adv-grid">
                 
                 <!-- 1-USTUNLIK -->
-                <div class="adv-card">
-                    <div class="adv-icon-badge">⭐</div>
+                <div class="adv-clean-card">
+                    <div class="adv-num-badge">01</div>
                     <h3 id="adv-c1-t">20,000+ Мамнун мижозлар</h3>
                     <p id="adv-c1-d">Ўзбекистон бўйлаб минглаб инсонлар бизнинг воситамиз орқали оқ доғлар муаммосидан халос бўлиб, соғлом терига эришдилар.</p>
                 </div>
 
                 <!-- 2-USTUNLIK -->
-                <div class="adv-card">
-                    <div class="adv-icon-badge">🏛️</div>
+                <div class="adv-clean-card">
+                    <div class="adv-num-badge">02</div>
                     <h3 id="adv-c2-t">Давлат томонидан сертификатланган</h3>
-                    <p id="adv-c2-d">Соғлиқни Сақлаш Вазирлиги ва СЭС хулосалари билан расман тасдиқланган, барча хавфсизлик талабларига 100% жавоб берадиган маҳсулот[cite: 3].</p>
+                    <p id="adv-c2-d">Соғлиқни Сақлаш Вазирлиги ва СЭС хулосалари билан расман тасдиқланган, барча хавфсизлик талабларига 100% жавоб беради[cite: 3].</p>
                 </div>
 
                 <!-- 3-USTUNLIK -->
-                <div class="adv-card">
-                    <div class="adv-icon-badge">🌿</div>
+                <div class="adv-clean-card">
+                    <div class="adv-num-badge">03</div>
                     <h3 id="adv-c3-t">100% Табиий ва безарар</h3>
                     <p id="adv-c3-d">Фақат совуқ прессланган седана ёғи ва табиий микроэлементлар. Ҳеч қандай гормонларсиз, организмга ўрганиб қолиш ҳолати юзага келмайди.</p>
                 </div>
 
                 <!-- 4-USTUNLIK -->
-                <div class="adv-card">
-                    <div class="adv-icon-badge">🚚</div>
+                <div class="adv-clean-card">
+                    <div class="adv-num-badge">04</div>
                     <h3 id="adv-c4-t">Ўзбекистон бўйлаб БЕПУЛ етказиш</h3>
                     <p id="adv-c4-d">Қайси вилоят ёки туманда яшашингиздан қатъи назар, буюртмангиз кўрсатилган манзилга мутлақо бепул етказиб берилади.</p>
                 </div>
 
                 <!-- 5-USTUNLIK -->
-                <div class="adv-card">
-                    <div class="adv-icon-badge">🤝</div>
+                <div class="adv-clean-card">
+                    <div class="adv-num-badge">05</div>
                     <h3 id="adv-c5-t">Олгандан сўнг тўлов (100% хавфсиз)</h3>
                     <p id="adv-c5-d">Ҳеч қандай олдиндан тўлов йўқ. Посилкангизни қўлингизга олиб, текшириб кўрганингиздан сўнггина курьерга тўлов қиласиз.</p>
                 </div>
 
                 <!-- 6-USTUNLIK -->
-                <div class="adv-card">
-                    <div class="adv-icon-badge">👨‍⚕️</div>
+                <div class="adv-clean-card">
+                    <div class="adv-num-badge">06</div>
                     <h3 id="adv-c6-t">Мутахассиснинг шахсий назорати</h3>
                     <p id="adv-c6-d">Муолажа давомида бизнинг тажрибали маслаҳатчиларимиз сиз билан доимий алоқада бўлиб, тўғри қабул қилишингизни кузатиб борадилар.</p>
                 </div>
