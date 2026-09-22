@@ -526,100 +526,187 @@
         .carousel-btn.next { right: 4px; }
 
         /* ------------------------------------------------------------- */
-        /* 5-BLOK: MAHSULOT TARKIBI VA AFZALLIKLARI                      */
+        /* 5-BLOK: YANGILANGAN, JOZIBALI VA O'QISH OSON DIZAYN           */
         /* ------------------------------------------------------------- */
         .composition-section {
-            padding: 55px 0 65px 0;
+            padding: 60px 0;
             background: #ffffff;
             border-bottom: 1px solid #e2ece7;
         }
 
-        .comp-header {
+        .comp-header-box {
             text-align: center;
-            margin-bottom: 38px;
+            max-width: 760px;
+            margin: 0 auto 40px auto;
         }
 
-        .comp-title {
-            font-size: 32px;
+        .comp-sub-tag {
+            display: inline-block;
+            background: #e6f9f3;
+            color: #00a86b;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 6px 16px;
+            border-radius: 20px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .comp-main-title {
+            font-size: 30px;
             font-weight: 900;
             color: #00317F;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
+            line-height: 1.35;
+            margin-bottom: 12px;
         }
 
-        .comp-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.15fr;
-            gap: 40px;
-            align-items: center;
-            margin-bottom: 35px;
-        }
-
-        .comp-visual-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .comp-bottle-img {
-            width: 100%;
-            max-width: 400px;
-            height: auto;
-            border-radius: 20px;
-            filter: drop-shadow(0 15px 30px rgba(0,0,0,0.1));
-        }
-
-        .comp-cards {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-        }
-
-        .comp-card {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-left: 5px solid #00a86b;
-            padding: 16px 18px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02);
-        }
-
-        .comp-card h3 {
-            font-size: 16.5px;
-            font-weight: 800;
-            color: #00317F;
-            margin-bottom: 5px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .comp-card p {
-            font-size: 14px;
+        .comp-main-lead {
+            font-size: 15px;
             line-height: 1.6;
-            color: #334155;
+            color: #4b5563;
             font-weight: 600;
         }
 
-        /* PASTKI MAXSUS QORA TASMA (SOVUQ PRESS BANNER) */
-        .comp-banner-highlight {
-            background: #111827;
-            color: #ffffff;
-            padding: 22px 24px;
-            border-radius: 16px;
+        /* 2 USTUNLI ASOSIY STRUKTURA */
+        .comp-interactive-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 40px;
+            align-items: center;
+            margin-bottom: 45px;
+        }
+
+        /* FLAKON KARTASI */
+        .comp-product-showcase {
+            background: radial-gradient(circle at center, #edf8f5 0%, #ffffff 70%);
+            border: 2px dashed #bbf0de;
+            border-radius: 24px;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-align: center;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
 
-        .comp-banner-highlight p {
-            font-size: 15px;
+        .comp-product-showcase img {
+            width: 100%;
+            max-width: 320px;
+            height: auto;
+            border-radius: 18px;
+            filter: drop-shadow(0 15px 30px rgba(0, 49, 127, 0.12));
+            margin-bottom: 18px;
+        }
+
+        .badge-capsules-count {
+            background: #00317F;
+            color: #ffffff;
+            font-size: 13px;
             font-weight: 800;
-            line-height: 1.6;
-            letter-spacing: 0.3px;
+            padding: 8px 18px;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
         }
 
-        .comp-banner-highlight strong {
-            color: #00bcd4;
+        /* 4 TA O'QISH OSON BO'LGAN FOYDA KARTALARI */
+        .comp-benefit-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .benefit-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 20px 18px;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+
+        .benefit-card:hover {
+            transform: translateY(-3px);
+            border-color: #00a86b;
+            box-shadow: 0 10px 25px rgba(0, 168, 107, 0.08);
+            background: #ffffff;
+        }
+
+        .benefit-icon-badge {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 14px;
+        }
+
+        .b-icon-1 { background: #e0f2fe; }
+        .b-icon-2 { background: #fef3c7; }
+        .b-icon-3 { background: #dcfce7; }
+        .b-icon-4 { background: #fae8ff; }
+
+        .benefit-card h4 {
+            font-size: 15.5px;
+            font-weight: 800;
+            color: #00317F;
+            margin-bottom: 6px;
+            line-height: 1.35;
+        }
+
+        .benefit-card .badge-ingr {
+            display: inline-block;
+            font-size: 11.5px;
+            font-weight: 700;
+            color: #00a86b;
+            margin-bottom: 8px;
+        }
+
+        .benefit-card p {
+            font-size: 13px;
+            line-height: 1.55;
+            color: #475569;
+            font-weight: 600;
+        }
+
+        /* ISHONCH VA SOVUQ PRESS MUHRLARI */
+        .trust-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            background: #0f172a;
+            border-radius: 20px;
+            padding: 24px;
+            color: #ffffff;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .trust-item-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+
+        .trust-item-content h5 {
+            font-size: 14px;
+            font-weight: 800;
+            color: #38bdf8;
+            margin-bottom: 2px;
+        }
+
+        .trust-item-content p {
+            font-size: 12px;
+            color: #94a3b8;
+            font-weight: 600;
+            line-height: 1.4;
         }
 
         /* MOBIL VERSIYA */
@@ -664,16 +751,37 @@
             .carousel-btn.prev { left: -2px; }
             .carousel-btn.next { right: -2px; }
 
-            /* 5-Blok mobil */
-            .composition-section { padding: 35px 0 40px 0; }
-            .comp-title { font-size: 24px; margin-bottom: 10px; }
-            .comp-grid { display: flex; flex-direction: column; gap: 24px; }
-            .comp-bottle-img { max-width: 270px; }
-            .comp-card { padding: 14px; }
-            .comp-card h3 { font-size: 15px; }
-            .comp-card p { font-size: 13px; }
-            .comp-banner-highlight { padding: 16px 14px; border-radius: 12px; }
-            .comp-banner-highlight p { font-size: 13px; line-height: 1.5; }
+            /* 5-Blok mobil yangilanish */
+            .composition-section { padding: 35px 0 45px 0; }
+            .comp-main-title { font-size: 22px; }
+            .comp-main-lead { font-size: 13.5px; }
+            
+            .comp-interactive-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                margin-bottom: 25px;
+            }
+
+            .comp-product-showcase { padding: 20px 14px; border-radius: 18px; }
+            .comp-product-showcase img { max-width: 230px; }
+            
+            .comp-benefit-cards {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .benefit-card { padding: 16px; border-radius: 14px; }
+            .benefit-card h4 { font-size: 15px; }
+
+            .trust-strip {
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                padding: 18px 16px;
+                border-radius: 16px;
+            }
         }
 
         @keyframes pulseGlow {
@@ -838,143 +946,73 @@
                 <div class="carousel-track-wrapper" id="carouselWrapper">
                     <div class="carousel-track" id="carouselTrack">
                         
-                        <!-- 1-JUFT -->
                         <div class="carousel-slide">
                             <div class="result-card-pair">
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
-                                    <span class="result-badge badge-before">Аввал</span>
-                                </div>
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
-                                    <span class="result-badge badge-after">Кейин</span>
-                                </div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div>
                             </div>
                         </div>
 
-                        <!-- 2-JUFT -->
                         <div class="carousel-slide">
                             <div class="result-card-pair">
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
-                                    <span class="result-badge badge-before">Аввал</span>
-                                </div>
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
-                                    <span class="result-badge badge-after">Кейин</span>
-                                </div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div>
                             </div>
                         </div>
 
-                        <!-- 3-JUFT -->
                         <div class="carousel-slide">
                             <div class="result-card-pair">
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
-                                    <span class="result-badge badge-before">Аввал</span>
-                                </div>
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
-                                    <span class="result-badge badge-after">Кейин</span>
-                                </div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div>
                             </div>
                         </div>
 
-                        <!-- 4-JUFT -->
                         <div class="carousel-slide">
                             <div class="result-card-pair">
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1512290900672-1f48616142c9?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
-                                    <span class="result-badge badge-before">Аввал</span>
-                                </div>
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
-                                    <span class="result-badge badge-after">Кейин</span>
-                                </div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1512290900672-1f48616142c9?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div>
                             </div>
                         </div>
 
-                        <!-- 5-JUFT -->
                         <div class="carousel-slide">
                             <div class="result-card-pair">
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
-                                    <span class="result-badge badge-before">Аввал</span>
-                                </div>
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
-                                    <span class="result-badge badge-after">Кейин</span>
-                                </div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div>
                             </div>
                         </div>
 
-                        <!-- 6-JUFT -->
                         <div class="carousel-slide">
                             <div class="result-card-pair">
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
-                                    <span class="result-badge badge-before">Аввал</span>
-                                </div>
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
-                                    <span class="result-badge badge-after">Кейин</span>
-                                </div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div>
                             </div>
                         </div>
 
-                        <!-- 7-JUFT -->
                         <div class="carousel-slide">
                             <div class="result-card-pair">
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
-                                    <span class="result-badge badge-before">Аввал</span>
-                                </div>
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
-                                    <span class="result-badge badge-after">Кейин</span>
-                                </div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div>
                             </div>
                         </div>
 
-                        <!-- 8-JUFT -->
                         <div class="carousel-slide">
                             <div class="result-card-pair">
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
-                                    <span class="result-badge badge-before">Аввал</span>
-                                </div>
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
-                                    <span class="result-badge badge-after">Кейин</span>
-                                </div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div>
                             </div>
                         </div>
 
-                        <!-- 9-JUFT -->
                         <div class="carousel-slide">
                             <div class="result-card-pair">
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
-                                    <span class="result-badge badge-before">Аввал</span>
-                                </div>
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
-                                    <span class="result-badge badge-after">Кейин</span>
-                                </div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div>
                             </div>
                         </div>
 
-                        <!-- 10-JUFT -->
                         <div class="carousel-slide">
                             <div class="result-card-pair">
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
-                                    <span class="result-badge badge-before">Аввал</span>
-                                </div>
-                                <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
-                                    <span class="result-badge badge-after">Кейин</span>
-                                </div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div>
+                                <div class="result-col"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div>
                             </div>
                         </div>
 
@@ -991,60 +1029,108 @@
     </section>
 
     <!-- ------------------------------------------------------------- -->
-    <!-- 5-BLOK: MAHSULOT TARKIBI VA SOVUQ PRESS TEXNOLOGIYASI          -->
+    <!-- 5-BLOK: YANGILANGAN, O'QISH QIZIQARLI VA NATIJAGA QARATILGAN TARKIB -->
     <!-- ------------------------------------------------------------- -->
     <section class="composition-section">
         <div class="container">
-            <div class="comp-header">
-                <h2 class="comp-title" id="comp-main-title">ТАРКИБИ</h2>
-            </div>
-
-            <div class="comp-grid">
-                <!-- MAHSULOT FLAKONI RASMI -->
-                <div class="comp-visual-box">
-                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop&q=80" alt="QOMUS Tarkibi" class="comp-bottle-img">
-                </div>
-
-                <!-- TARKIBIY KARTOCHKALAR (RASMDA KO'RSATILGAN MA'LUMOTLAR) -->
-                <div class="comp-cards">
-                    <!-- QORA SEDANA -->
-                    <div class="comp-card">
-                        <h3 id="comp-c1-t">🌿 Қора седана ёғи</h3>
-                        <p id="comp-c1-d">Табиий совуқ прессланган қора седана ёғи — тўқималар регенерациясини рағбатлантирувчи ва иммунитетни кучайтирувчи асосий фаол модда.</p>
-                    </div>
-
-                    <!-- VITAMINLAR -->
-                    <div class="comp-card">
-                        <h3 id="comp-c2-t">🧪 Витаминлар комплекси: E, D, C, B</h3>
-                        <p id="comp-c2-d">Тери ҳужайраларини озиқлантиради, табиий пигментация ҳосил бўлиш жараёнини тезлаштиради ҳамда кучли антиоксидант ҳимояни таъминлайди.</p>
-                    </div>
-
-                    <!-- YOG' KISLOTALARI -->
-                    <div class="comp-card">
-                        <h3 id="comp-c3-t">🧬 Тўйинмаган ёғ кислоталари</h3>
-                        <p id="comp-c3-d">Омега 3, Омега 6, Омега 9 синфи ва фосфолипидлар — липид қаватини тиклайди ва тери эластиклигини сақлайди.</p>
-                    </div>
-
-                    <!-- ELEMENTLAR -->
-                    <div class="comp-card">
-                        <h3 id="comp-c4-t">⚡ Макро ва микро элементлар</h3>
-                        <p id="comp-c4-d">Калий, натрий, фосфор, кальций, марганец, темир, рух, мис, селен, никель — тери меланин синтези учун зарур бўлган ноёб минераллар мажмуаси.</p>
-                    </div>
-
-                    <!-- EFIR MOYLARI & NIGELLON -->
-                    <div class="comp-card">
-                        <h3 id="comp-c5-t">✨ Эфир мойлари, нигелон, А-каротиноидлар</h3>
-                        <p id="comp-c5-d">Ёрдамчи компонентлар: қора мол желатини, глицерин, лимон кислотаси ва бошқа биологик фаол моддалар билан бойитилган.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- PASTKI QORA TASMADAGI MAXSUS BANNER -->
-            <div class="comp-banner-highlight">
-                <p id="comp-banner-text">
-                    “QOMUS” ҚОРА СЕДАНА ЁҒИ ОЗУҚАВИЙ ВА БИОЛОГИК ҚИЙМАТИ САҚЛАНГАН ҲОЛДА <strong>СОВУҚ ПРЕССЛАШ УСУЛИ</strong> ОРҚАЛИ ОЛИНГАН.
+            
+            <!-- HEADER -->
+            <div class="comp-header-box">
+                <span class="comp-sub-tag" id="comp-sub-tag">Табиий ва Хавфсиз</span>
+                <h2 class="comp-main-title" id="comp-main-title">
+                    Нима учун “QOMUS” бошқа воситалардан фарқ қилади?
+                </h2>
+                <p class="comp-main-lead" id="comp-main-lead">
+                    Маҳсулот тери пигментациясини ташқаридан эмас, организмнинг ички ҳужайраларидан бошлаб тиклашга қаратилган бой табиий таркибга эга.
                 </p>
             </div>
+
+            <!-- INTERACTIVE GRID -->
+            <div class="comp-interactive-grid">
+                
+                <!-- CHAP TOMON: MAHSULOT FLAKONI VA KAPSULA BADGE -->
+                <div class="comp-product-showcase">
+                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop&q=80" alt="QOMUS Mahsuloti">
+                    <div class="badge-capsules-count">
+                        <span>💊</span>
+                        <span id="comp-bottle-badge">150 та юмшоқ желатин капсула</span>
+                    </div>
+                </div>
+
+                <!-- O'NG TOMON: 4 TA ASOSIY FOYDA KARTALARI -->
+                <div class="comp-benefit-cards">
+                    
+                    <!-- 1-KARTA: SEDANA YOG'I -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon-badge b-icon-1">🌿</div>
+                        <h4 id="b1-title">Қора седана ёғи</h4>
+                        <span class="badge-ingr" id="b1-tag">Асосий фаол модда</span>
+                        <p id="b1-desc">
+                            Иммунитет мувозанатини тиклайди ва ҳужайраларнинг янгиланиш тезлигини оширади.
+                        </p>
+                    </div>
+
+                    <!-- 2-KARTA: VITAMINLAR -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon-badge b-icon-2">🧪</div>
+                        <h4 id="b2-title">Витаминлар: E, D, C, B</h4>
+                        <span class="badge-ingr" id="b2-tag">Меланин синтези</span>
+                        <p id="b2-desc">
+                            Тери пигменти ҳосил бўлишини фаоллаштиради ва ҳужайраларни стрессдан ҳимоялайди.
+                        </p>
+                    </div>
+
+                    <!-- 3-KARTA: OMEGA VA LIPIDLAR -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon-badge b-icon-3">🧬</div>
+                        <h4 id="b3-title">Омега 3, 6, 9 синфи</h4>
+                        <span class="badge-ingr" id="b3-tag">Фосфолипидлар</span>
+                        <p id="b3-desc">
+                            Терининг қуриши ва қазиғланишини олдини олиб, табиий намлик ва эластиклик беради.
+                        </p>
+                    </div>
+
+                    <!-- 4-KARTA: NOYOB MINERALLAR -->
+                    <div class="benefit-card">
+                        <div class="benefit-icon-badge b-icon-4">⚡</div>
+                        <h4 id="b4-title">10 хил муҳим минерал</h4>
+                        <span class="badge-ingr" id="b4-tag">Мис, Рух, Селен, Темир</span>
+                        <p id="b4-desc">
+                            Теридаги ранг йўқолишини келтириб чиқарувчи ички микроэлементлар танқислигини тўлдиради.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PASTKI ISHONCH VA SOVUQ PRESS MUHRLARI -->
+            <div class="trust-strip">
+                <div class="trust-item">
+                    <div class="trust-item-icon">❄️</div>
+                    <div class="trust-item-content">
+                        <h5 id="t1-title">Совуқ пресслаш</h5>
+                        <p id="t1-desc">Барча биологик фойдали моддалар 100% сақлаб қолинган.</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-item-icon">🛡️</div>
+                    <div class="trust-item-content">
+                        <h5 id="t2-title">Ўрганиб қолдирмайди</h5>
+                        <p id="t2-desc">Гормонлар ва кимёвий қўшимчалардан холи табиий таркиб.</p>
+                    </div>
+                </div>
+
+                <div class="trust-item">
+                    <div class="trust-item-icon">🥩</div>
+                    <div class="trust-item-content">
+                        <h5 id="t3-title">Ҳалол желатин</h5>
+                        <p id="t3-desc">Капсула қобиғи қора мол желатинидан тайёрланган.</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -1087,18 +1173,30 @@
                 resultsTitle: "Mijozlar natijalari",
                 beforeBadge: "Avval",
                 afterBadge: "Keyin",
-                compTitle: "TARKIBI",
-                compC1T: "🌿 Qora sedana yog'i",
-                compC1D: "Tabiiy sovuq presslangan qora sedana yog'i — to'qimalar regeneratsiyasini rag'batlantiruvchi va immunitetni kuchaytiruvchi asosiy faol modda.",
-                compC2T: "🧪 Vitaminlar kompleksi: E, D, C, B",
-                compC2D: "Teri hujayralarini oziqlantiradi, tabiiy pigmentatsiya hosil bo'lish jarayonini tezlashtiradi hamda kuchli antioksidant himoyani ta'minlaydi.",
-                compC3T: "🧬 To'yinmagan yog' kislotalari",
-                compC3D: "Omega 3, Omega 6, Omega 9 sinfi va fosfolipidlar — lipid qavatini tiklaydi va teri elastikligini saqlaydi.",
-                compC4T: "⚡ Makro va mikro elementlar",
-                compC4D: "Kaliy, natriy, fosfor, kalsiy, marganets, temir, rux, mis, selen, nikel — teri melanin sintezi uchun zarur bo'lgan noyob minerallar majmuasi.",
-                compC5T: "✨ Efir moylari, nigelon, A-karotinoidlar",
-                compC5D: "Yordamchi komponentlar: qora mol jelatini, glitserin, limon kislotasi va boshqa biologik faol moddalar bilan boyitilgan.",
-                compBanner: "“QOMUS” QORA SEDANA YOG'I OZUQAVIY VA BIOLOGIK QIYMATI SAQLANGAN HOLDA <strong>SOVUQ PRESSLASH USULI</strong> ORQALI OLINGAN."
+
+                // 5-Blok yangilangan
+                compSubTag: "Tabiiy va Xavfsiz",
+                compMainTitle: "Nima uchun “QOMUS” boshqa vositalardan farq qiladi?",
+                compMainLead: "Mahsulot teri pigmentatsiyasini tashqaridan emas, organizmning ichki hujayralaridan boshlab tiklashga qaratilgan boy tabiiy tarkibga ega.",
+                compBottleBadge: "150 ta yumshoq jelatin kapsula",
+                b1Title: "Qora sedana yog'i",
+                b1Tag: "Asosiy faol modda",
+                b1Desc: "Immunitet muvozanatini tiklaydi va hujayralarning yangilanish tezligini oshiradi.",
+                b2Title: "Vitaminlar: E, D, C, B",
+                b2Tag: "Melanin sintezi",
+                b2Desc: "Teri pigmenti hosil bo'lishini faollashtiradi va hujayralarni stressdan himoyalaydi.",
+                b3Title: "Omega 3, 6, 9 sinfi",
+                b3Tag: "Fosfolipidlar",
+                b3Desc: "Terining qurishi va qazig'lanishini oldini olib, tabiiy namlik va elastiklik beradi.",
+                b4Title: "10 xil muhim mineral",
+                b4Tag: "Mis, Rux, Selen, Temir",
+                b4Desc: "Teridagi rang yo'qolishini keltirib chiqaruvchi ichki mikroelementlar tanqisligini to'ldiradi.",
+                t1Title: "Sovuq presslash",
+                t1Desc: "Barcha biologik foydali moddalar 100% saqlab qolingan.",
+                t2Title: "O'rganib qoldirmaydi",
+                t2Desc: "Gormonlar va kimyoviy qo'shimchalardan xoli tabiiy tarkib.",
+                t3Title: "Halol jelatin",
+                t3Desc: "Kapsula qobig'i qora mol jelatinidan tayyorlangan."
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
@@ -1122,18 +1220,30 @@
                 resultsTitle: "Мижозлар натижалари",
                 beforeBadge: "Аввал",
                 afterBadge: "Кейин",
-                compTitle: "ТАРКИБИ",
-                compC1T: "🌿 Қора седана ёғи",
-                compC1D: "Табиий совуқ прессланган қора седана ёғи — тўқималар регенерациясини рағбатлантирувчи ва иммунитетни кучайтирувчи асосий фаол модда.",
-                compC2T: "🧪 Витаминлар комплекси: E, D, C, B",
-                compC2D: "Тери ҳужайраларини озиқлантиради, табиий пигментация ҳосил бўлиш жараёнини тезлаштиради ҳамда кучли антиоксидант ҳимояни таъминлайди.",
-                compC3T: "🧬 Тўйинмаган ёғ кислоталари",
-                compC3D: "Омега 3, Омега 6, Омега 9 синфи ва фосфолипидлар — липид қаватини тиклайди ва тери эластиклигини сақлайди.",
-                compC4T: "⚡ Макро ва микро элементлар",
-                compC4D: "Калий, натрий, фосфор, кальций, марганец, темир, рух, мис, селен, никель — тери меланин синтези учун зарур бўлган ноёб минераллар мажмуаси.",
-                compC5T: "✨ Эфир мойлари, нигелон, А-каротиноидлар",
-                compC5D: "Ёрдамчи компонентлар: қора мол желатини, глицерин, лимон кислотаси ва бошқа биологик фаол моддалар билан бойитилган.",
-                compBanner: "“QOMUS” ҚОРА СЕДАНА ЁҒИ ОЗУҚАВИЙ ВА БИОЛОГИК ҚИЙМАТИ САҚЛАНГАН ҲОЛДА <strong>СОВУҚ ПРЕССЛАШ УСУЛИ</strong> ОРҚАЛИ ОЛИНГАН."
+
+                // 5-Blok yangilangan
+                compSubTag: "Табиий ва Хавфсиз",
+                compMainTitle: "Нима учун “QOMUS” бошқа воситалардан фарқ қилади?",
+                compMainLead: "Маҳсулот тери пигментациясини ташқаридан эмас, организмнинг ички ҳужайраларидан бошлаб тиклашга қаратилган бой табиий таркибга эга.",
+                compBottleBadge: "150 та юмшоқ желатин капсула",
+                b1Title: "Қора седана ёғи",
+                b1Tag: "Асосий фаол модда",
+                b1Desc: "Иммунитет мувозанатини тиклайди ва ҳужайраларнинг янгиланиш тезлигини оширади.",
+                b2Title: "Витаминлар: E, D, C, B",
+                b2Tag: "Меланин синтези",
+                b2Desc: "Тери пигменти ҳосил бўлишини фаоллаштиради ва ҳужайраларни стрессдан ҳимоялайди.",
+                b3Title: "Омега 3, 6, 9 синфи",
+                b3Tag: "Фосфолипидлар",
+                b3Desc: "Терининг қуриши ва қазиғланишини олдини олиб, табиий намлик ва эластиклик беради.",
+                b4Title: "10 хил муҳим минерал",
+                b4Tag: "Мис, Рух, Селен, Темир",
+                b4Desc: "Теридаги ранг йўқолишини келтириб чиқарувчи ички микроэлементлар танқислигини тўлдиради.",
+                t1Title: "Совуқ пресслаш",
+                t1Desc: "Барча биологик фойдали моддалар 100% сақлаб қолинган.",
+                t2Title: "Ўрганиб қолдирмайди",
+                t2Desc: "Гормонлар ва кимёвий қўшимчалардан холи табиий таркиб.",
+                t3Title: "Ҳалол желатин",
+                t3Desc: "Капсула қобиғи қора мол желатинидан тайёрланган."
             },
             ru: {
                 orderBtn: "Заказать",
@@ -1157,18 +1267,30 @@
                 resultsTitle: "Результаты клиентов",
                 beforeBadge: "До",
                 afterBadge: "После",
-                compTitle: "СОСТАВ",
-                compC1T: "🌿 Масло черного тмина",
-                compC1D: "Натуральное масло черного тмина холодного отжима — стимулирует регенерацию тканей и укрепляет иммунную систему.",
-                compC2T: "🧪 Комплекс витаминов: E, D, C, B",
-                compC2D: "Питает клетки кожи, активирует процесс естественной пигментации и обеспечивает мощную антиоксидантную защиту.",
-                compC3T: "🧬 Ненасыщенные жирные кислоты",
-                compC3D: "Омега 3, Омега 6, Омега 9 и фосфолипиды — восстанавливают липидный барьер и поддерживают эластичность кожи.",
-                compC4T: "⚡ Макро- и микроэлементы",
-                compC4D: "Калий, натрий, фосфор, кальций, марганец, железо, цинк, медь, селен, никель — минералы для синтеза меланина.",
-                compC5T: "✨ Эфирные масла, нигеллон, А-каротиноиды",
-                compC5D: "Вспомогательные компоненты: говяжий желатин, глицерин, лимонная кислота и биологически активные вещества.",
-                compBanner: "МАСЛО ЧЕРНОГО ТМИНА «QOMUS» ПОЛУЧЕНО МЕТОДОМ <strong>ХОЛОДНОГО ОТЖИМА</strong> С СОХРАНЕНИЕМ ВСЕХ ПОЛЕЗНЫХ СВОЙСТВ."
+
+                // 5-Blok yangilangan
+                compSubTag: "Натурально и безопасно",
+                compMainTitle: "Почему «QOMUS» отличается от других средств?",
+                compMainLead: "Препарат направлен на восстановление пигментации изнутри, на клеточном уровне, благодаря уникальному природному составу.",
+                compBottleBadge: "150 мягких желатиновых капсул",
+                b1Title: "Масло черного тмина",
+                b1Tag: "Главный активный компонент",
+                b1Desc: "Укрепляет баланс иммунитета и ускоряет естественную регенерацию клеток кожи.",
+                b2Title: "Витамины: E, D, C, B",
+                b2Tag: "Синтез меланина",
+                b2Desc: "Стимулирует выработку кожного пигмента и надежно защищает клетки от стресса.",
+                b3Title: "Омега 3, 6, 9 класс",
+                b3Tag: "Фосфолипиды",
+                b3Desc: "Устраняет шелушение и сухость, глубоко увлажняя кожу и повышая ее эластичность.",
+                b4Title: "10 ключевых минералов",
+                b4Tag: "Медь, Цинк, Селен, Железо",
+                b4Desc: "Восполняет нехватку микроэлементов, дефицит которых провоцирует белые пятна.",
+                t1Title: "Холодный отжим",
+                t1Desc: "100% сохранение всех полезных биологических свойств.",
+                t2Title: "Не вызывает привыкания",
+                t2Desc: "Полностью натуральный состав без вредной химии и гормонов.",
+                t3Title: "Халяльный желатин",
+                t3Desc: "Оболочка капсул изготовлена из говяжьего желатина."
             },
             en: {
                 orderBtn: "Order Now",
@@ -1192,18 +1314,30 @@
                 resultsTitle: "Customer Results",
                 beforeBadge: "Before",
                 afterBadge: "After",
-                compTitle: "COMPOSITION",
-                compC1T: "🌿 Black Seed Oil",
-                compC1D: "Natural cold-pressed black seed oil — stimulates tissue regeneration and strengthens the immune system.",
-                compC2T: "🧪 Vitamin Complex: E, D, C, B",
-                compC2D: "Nourishes skin cells, accelerates natural pigmentation process, and ensures strong antioxidant protection.",
-                compC3T: "🧬 Unsaturated Fatty Acids",
-                compC3D: "Omega 3, Omega 6, Omega 9 and phospholipids — restore the lipid barrier and support skin elasticity.",
-                compC4T: "⚡ Macro and Micro Elements",
-                compC4D: "Potassium, sodium, phosphorus, calcium, manganese, iron, zinc, copper, selenium, nickel — essential for melanin synthesis.",
-                compC5T: "✨ Essential Oils, Nigellone, A-carotenoids",
-                compC5D: "Enriched with bovine gelatin, glycerin, citric acid, and valuable biologically active compounds.",
-                compBanner: "“QOMUS” BLACK SEED OIL IS PRODUCED VIA <strong>COLD PRESS METHOD</strong> PRESERVING ITS FULL NUTRITIONAL VALUE."
+
+                // 5-Blok yangilangan
+                compSubTag: "Natural & Safe",
+                compMainTitle: "Why does “QOMUS” differ from other solutions?",
+                compMainLead: "The formula restores pigmentation from within at the cellular level with its rich, natural synergy.",
+                compBottleBadge: "150 Soft Gelatin Capsules",
+                b1Title: "Black Seed Oil",
+                b1Tag: "Main Active Element",
+                b1Desc: "Balances immune function and speeds up natural cell regeneration.",
+                b2Title: "Vitamins: E, D, C, B",
+                b2Tag: "Melanin Synthesis",
+                b2Desc: "Activates pigmentation process and shields cells from oxidative stress.",
+                b3Title: "Omega 3, 6, 9 Class",
+                b3Tag: "Phospholipids",
+                b3Desc: "Prevents dryness and flaking, restoring vital moisture and skin elasticity.",
+                b4Title: "10 Key Minerals",
+                b4Tag: "Copper, Zinc, Selenium, Iron",
+                b4Desc: "Replenishes deficiencies that trigger white spot spread.",
+                t1Title: "Cold Pressed",
+                t1Desc: "100% preserved nutrients and active biological potency.",
+                t2Title: "Non-Addictive",
+                t2Desc: "Completely natural, hormone-free and pure formula.",
+                t3Title: "Halal Gelatin",
+                t3Desc: "Capsule shells made exclusively with bovine gelatin."
             }
         };
 
@@ -1236,25 +1370,38 @@
                 document.querySelectorAll('.badge-before').forEach(el => el.textContent = t.beforeBadge);
                 document.querySelectorAll('.badge-after').forEach(el => el.textContent = t.afterBadge);
 
-                // 5-Blok tarjima
-                document.getElementById('comp-main-title').textContent = t.compTitle;
-                document.getElementById('comp-c1-t').textContent = t.compC1T;
-                document.getElementById('comp-c1-d').textContent = t.compC1D;
-                document.getElementById('comp-c2-t').textContent = t.compC2T;
-                document.getElementById('comp-c2-d').textContent = t.compC2D;
-                document.getElementById('comp-c3-t').textContent = t.compC3T;
-                document.getElementById('comp-c3-d').textContent = t.compC3D;
-                document.getElementById('comp-c4-t').textContent = t.compC4T;
-                document.getElementById('comp-c4-d').textContent = t.compC4D;
-                document.getElementById('comp-c5-t').textContent = t.compC5T;
-                document.getElementById('comp-c5-d').textContent = t.compC5D;
-                document.getElementById('comp-banner-text').innerHTML = t.compBanner;
+                // 5-Blok yangilangan tarjimalar
+                document.getElementById('comp-sub-tag').textContent = t.compSubTag;
+                document.getElementById('comp-main-title').textContent = t.compMainTitle;
+                document.getElementById('comp-main-lead').textContent = t.compMainLead;
+                document.getElementById('comp-bottle-badge').textContent = t.compBottleBadge;
+
+                document.getElementById('b1-title').textContent = t.b1Title;
+                document.getElementById('b1-tag').textContent = t.b1Tag;
+                document.getElementById('b1-desc').textContent = t.b1Desc;
+
+                document.getElementById('b2-title').textContent = t.b2Title;
+                document.getElementById('b2-tag').textContent = t.b2Tag;
+                document.getElementById('b2-desc').textContent = t.b2Desc;
+
+                document.getElementById('b3-title').textContent = t.b3Title;
+                document.getElementById('b3-tag').textContent = t.b3Tag;
+                document.getElementById('b3-desc').textContent = t.b3Desc;
+
+                document.getElementById('b4-title').textContent = t.b4Title;
+                document.getElementById('b4-tag').textContent = t.b4Tag;
+                document.getElementById('b4-desc').textContent = t.b4Desc;
+
+                document.getElementById('t1-title').textContent = t.t1Title;
+                document.getElementById('t1-desc').textContent = t.t1Desc;
+                document.getElementById('t2-title').textContent = t.t2Title;
+                document.getElementById('t2-desc').textContent = t.t2Desc;
+                document.getElementById('t3-title').textContent = t.t3Title;
+                document.getElementById('t3-desc').textContent = t.t3Desc;
             }
         }
 
-        /* ------------------------------------------------------------- */
-        /* CHEKSIZ (INFINITE LOOP) KARUSEL VA SWIPE MANTIG'I            */
-        /* ------------------------------------------------------------- */
+        /* KARUSEL VA SWIPE */
         let track, slides, totalOriginal;
         let currentIndex;
         let isTransitioning = false;
@@ -1286,7 +1433,6 @@
                 }
             });
 
-            // Mobil Swipe
             let touchStartX = 0;
             let touchEndX = 0;
             const wrapper = document.getElementById('carouselWrapper');
