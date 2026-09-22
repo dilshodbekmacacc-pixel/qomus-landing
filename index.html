@@ -205,7 +205,9 @@
             animation: pulseGlow 2s infinite;
         }
 
-        /* 2-BLOK */
+        /* ------------------------------------------------------------- */
+        /* 2-BLOK: HERO SECTION                                          */
+        /* ------------------------------------------------------------- */
         .hero-section {
             padding: 24px 0 32px 0;
         }
@@ -270,7 +272,9 @@
             filter: drop-shadow(0 18px 36px rgba(0,0,0,0.14));
         }
 
-        /* 3-BLOK */
+        /* ------------------------------------------------------------- */
+        /* 3-BLOK: REFERENSGA MOS STRUKTURA                              */
+        /* ------------------------------------------------------------- */
         .pain-section-ref {
             padding: 50px 0 60px 0;
             background: #ffffff;
@@ -403,7 +407,9 @@
             font-weight: 800;
         }
 
-        /* 4-BLOK */
+        /* ------------------------------------------------------------- */
+        /* 4-BLOK: KARUSEL                                               */
+        /* ------------------------------------------------------------- */
         .results-section {
             padding: 50px 0 60px 0;
             background: #f4f8f6;
@@ -526,190 +532,131 @@
         .carousel-btn.next { right: 4px; }
 
         /* ------------------------------------------------------------- */
-        /* 5-BLOK: YANGILANGAN, JOZIBALI VA O'QISH OSON DIZAYN           */
+        /* 5-BLOK: 2 VA 3-BLOK BILAN BIR XIL USLUBDAGI TARKIB BO'LIMI    */
         /* ------------------------------------------------------------- */
         .composition-section {
-            padding: 60px 0;
+            padding: 55px 0 65px 0;
             background: #ffffff;
-            border-bottom: 1px solid #e2ece7;
+            border-top: 1px solid #eef3f0;
+            border-bottom: 1px solid #e0e9e5;
         }
 
-        .comp-header-box {
+        .comp-header {
             text-align: center;
-            max-width: 760px;
-            margin: 0 auto 40px auto;
+            margin-bottom: 40px;
         }
 
-        .comp-sub-tag {
-            display: inline-block;
-            background: #e6f9f3;
-            color: #00a86b;
-            font-size: 12px;
-            font-weight: 800;
-            padding: 6px 16px;
-            border-radius: 20px;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-        }
-
-        .comp-main-title {
-            font-size: 30px;
-            font-weight: 900;
+        .comp-header h2 {
             color: #00317F;
+            font-size: 28px;
+            font-weight: 900;
             line-height: 1.35;
+            letter-spacing: -0.5px;
+            text-transform: uppercase;
             margin-bottom: 12px;
         }
 
-        .comp-main-lead {
+        .comp-header p {
+            color: #475569;
             font-size: 15px;
-            line-height: 1.6;
-            color: #4b5563;
             font-weight: 600;
+            max-width: 720px;
+            margin: 0 auto;
+            line-height: 1.6;
         }
 
-        /* 2 USTUNLI ASOSIY STRUKTURA */
-        .comp-interactive-grid {
+        /* Hero va 3-blok kabi 2 ustunli toza grid */
+        .comp-grid {
             display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
+            grid-template-columns: 0.95fr 1.05fr;
             gap: 40px;
             align-items: center;
-            margin-bottom: 45px;
+            margin-bottom: 35px;
         }
 
-        /* FLAKON KARTASI */
-        .comp-product-showcase {
-            background: radial-gradient(circle at center, #edf8f5 0%, #ffffff 70%);
-            border: 2px dashed #bbf0de;
-            border-radius: 24px;
-            padding: 30px 20px;
+        .comp-visual-box {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .comp-product-showcase img {
-            width: 100%;
-            max-width: 320px;
-            height: auto;
-            border-radius: 18px;
-            filter: drop-shadow(0 15px 30px rgba(0, 49, 127, 0.12));
-            margin-bottom: 18px;
-        }
-
-        .badge-capsules-count {
-            background: #00317F;
-            color: #ffffff;
-            font-size: 13px;
-            font-weight: 800;
-            padding: 8px 18px;
-            border-radius: 20px;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        /* 4 TA O'QISH OSON BO'LGAN FOYDA KARTALARI */
-        .comp-benefit-cards {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-
-        .benefit-card {
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 18px;
-            padding: 20px 18px;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-        }
-
-        .benefit-card:hover {
-            transform: translateY(-3px);
-            border-color: #00a86b;
-            box-shadow: 0 10px 25px rgba(0, 168, 107, 0.08);
-            background: #ffffff;
-        }
-
-        .benefit-icon-badge {
-            width: 44px;
-            height: 44px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
             justify-content: center;
-            font-size: 20px;
-            margin-bottom: 14px;
+            align-items: center;
         }
 
-        .b-icon-1 { background: #e0f2fe; }
-        .b-icon-2 { background: #fef3c7; }
-        .b-icon-3 { background: #dcfce7; }
-        .b-icon-4 { background: #fae8ff; }
+        .comp-product-img {
+            width: 100%;
+            max-width: 440px;
+            height: auto;
+            border-radius: 20px;
+            object-fit: cover;
+            box-shadow: 0 15px 35px rgba(0, 49, 127, 0.08);
+            border: 1px solid #eef3f0;
+        }
 
-        .benefit-card h4 {
+        /* 3-blokdagi ro'yxat uslubiga 100% mos toza tuzilma */
+        .comp-list {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .comp-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 16px 18px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+
+        .comp-item-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
             font-size: 15.5px;
             font-weight: 800;
             color: #00317F;
             margin-bottom: 6px;
-            line-height: 1.35;
         }
 
-        .benefit-card .badge-ingr {
-            display: inline-block;
-            font-size: 11.5px;
-            font-weight: 700;
-            color: #00a86b;
-            margin-bottom: 8px;
-        }
-
-        .benefit-card p {
-            font-size: 13px;
-            line-height: 1.55;
-            color: #475569;
-            font-weight: 600;
-        }
-
-        /* ISHONCH VA SOVUQ PRESS MUHRLARI */
-        .trust-strip {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
-            background: #0f172a;
-            border-radius: 20px;
-            padding: 24px;
+        .comp-check-icon {
+            width: 20px;
+            height: 20px;
+            background: #00a86b;
             color: #ffffff;
-        }
-
-        .trust-item {
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: 14px;
-        }
-
-        .trust-item-icon {
-            font-size: 28px;
+            justify-content: center;
+            font-size: 11px;
+            font-weight: 900;
             flex-shrink: 0;
         }
 
-        .trust-item-content h5 {
-            font-size: 14px;
-            font-weight: 800;
-            color: #38bdf8;
-            margin-bottom: 2px;
-        }
-
-        .trust-item-content p {
-            font-size: 12px;
-            color: #94a3b8;
+        .comp-item p {
+            font-size: 13.5px;
+            line-height: 1.55;
+            color: #475569;
             font-weight: 600;
-            line-height: 1.4;
+            padding-left: 30px;
         }
 
-        /* MOBIL VERSIYA */
+        /* Sovuq presslash bo'yicha jiddiy pastki karta */
+        .comp-footer-card {
+            background: #f7faf9;
+            border: 1px solid #d4e3dc;
+            border-left: 4px solid #00a86b;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-top: 10px;
+        }
+
+        .comp-footer-card p {
+            font-size: 14px;
+            font-weight: 700;
+            color: #1a2b25;
+            line-height: 1.5;
+        }
+
+        /* ------------------------------------------------------------- */
+        /* MOBIL VERSIYA MOSLASHUVLARI                                   */
+        /* ------------------------------------------------------------- */
         @media (max-width: 768px) {
             .logo-main { font-size: 18px; }
             .btn-phone-desktop { display: none; }
@@ -751,36 +698,54 @@
             .carousel-btn.prev { left: -2px; }
             .carousel-btn.next { right: -2px; }
 
-            /* 5-Blok mobil yangilanish */
-            .composition-section { padding: 35px 0 45px 0; }
-            .comp-main-title { font-size: 22px; }
-            .comp-main-lead { font-size: 13.5px; }
+            /* 5-Blok mobil (3-blok kabi ketma-ketlikda) */
+            .composition-section { padding: 30px 0 40px 0; }
+            .comp-header h2 { font-size: 20px; margin-bottom: 8px; }
+            .comp-header p { font-size: 13.5px; }
             
-            .comp-interactive-grid {
+            .comp-grid {
                 display: flex;
                 flex-direction: column;
-                gap: 24px;
-                margin-bottom: 25px;
+                gap: 20px;
+                margin-bottom: 20px;
             }
 
-            .comp-product-showcase { padding: 20px 14px; border-radius: 18px; }
-            .comp-product-showcase img { max-width: 230px; }
-            
-            .comp-benefit-cards {
-                display: flex;
-                flex-direction: column;
-                gap: 12px;
+            .comp-visual-box {
+                order: 1; /* Mobilda rasm avval chiqadi */
+                width: 100%;
             }
 
-            .benefit-card { padding: 16px; border-radius: 14px; }
-            .benefit-card h4 { font-size: 15px; }
-
-            .trust-strip {
-                display: flex;
-                flex-direction: column;
-                gap: 16px;
-                padding: 18px 16px;
+            .comp-product-img {
+                max-width: 100%;
                 border-radius: 16px;
+            }
+
+            .comp-list {
+                order: 2; /* Keyin tarkibiy punktlar */
+                width: 100%;
+                gap: 10px;
+            }
+
+            .comp-item {
+                padding: 13px 14px;
+                border-radius: 12px;
+            }
+
+            .comp-item-title {
+                font-size: 14.5px;
+            }
+
+            .comp-item p {
+                font-size: 13px;
+                padding-left: 28px;
+            }
+
+            .comp-footer-card {
+                padding: 12px 14px;
+            }
+
+            .comp-footer-card p {
+                font-size: 13px;
             }
         }
 
@@ -1029,106 +994,87 @@
     </section>
 
     <!-- ------------------------------------------------------------- -->
-    <!-- 5-BLOK: YANGILANGAN, O'QISH QIZIQARLI VA NATIJAGA QARATILGAN TARKIB -->
+    <!-- 5-BLOK: BIR XIL DIZAYN VA JIDDIY USLUBDAGI TARKIB BO'LIMI       -->
     <!-- ------------------------------------------------------------- -->
     <section class="composition-section">
         <div class="container">
             
-            <!-- HEADER -->
-            <div class="comp-header-box">
-                <span class="comp-sub-tag" id="comp-sub-tag">Табиий ва Хавфсиз</span>
-                <h2 class="comp-main-title" id="comp-main-title">
-                    Нима учун “QOMUS” бошқа воситалардан фарқ қилади?
-                </h2>
-                <p class="comp-main-lead" id="comp-main-lead">
-                    Маҳсулот тери пигментациясини ташқаридан эмас, организмнинг ички ҳужайраларидан бошлаб тиклашга қаратилган бой табиий таркибга эга.
+            <div class="comp-header">
+                <h2 id="comp-sec-title">ҚОМУС ПРЕПАРАТИНИНГ ТАБИИЙ ТАРКИБИ</h2>
+                <p id="comp-sec-desc">
+                    Витилиго ва тери пигменти тикланишида ички микроэлементлар мувозанати ҳал қилувчи аҳамиятга эга. Маҳсулот фақатгина табиий компонентлардан ташкил топган.
                 </p>
             </div>
 
-            <!-- INTERACTIVE GRID -->
-            <div class="comp-interactive-grid">
+            <div class="comp-grid">
                 
-                <!-- CHAP TOMON: MAHSULOT FLAKONI VA KAPSULA BADGE -->
-                <div class="comp-product-showcase">
-                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop&q=80" alt="QOMUS Mahsuloti">
-                    <div class="badge-capsules-count">
-                        <span>💊</span>
-                        <span id="comp-bottle-badge">150 та юмшоқ желатин капсула</span>
-                    </div>
+                <!-- MAHSULOTNING ANIQ RASMI -->
+                <div class="comp-visual-box">
+                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=900&auto=format&fit=crop&q=80" alt="QOMUS Tarkibi" class="comp-product-img">
                 </div>
 
-                <!-- O'NG TOMON: 4 TA ASOSIY FOYDA KARTALARI -->
-                <div class="comp-benefit-cards">
+                <!-- 3-BLOKDAGI KABI JIDDIY VA TUSHUNARLI RO'YXAT -->
+                <div class="comp-list">
                     
-                    <!-- 1-KARTA: SEDANA YOG'I -->
-                    <div class="benefit-card">
-                        <div class="benefit-icon-badge b-icon-1">🌿</div>
-                        <h4 id="b1-title">Қора седана ёғи</h4>
-                        <span class="badge-ingr" id="b1-tag">Асосий фаол модда</span>
-                        <p id="b1-desc">
-                            Иммунитет мувозанатини тиклайди ва ҳужайраларнинг янгиланиш тезлигини оширади.
+                    <div class="comp-item">
+                        <div class="comp-item-title">
+                            <span class="comp-check-icon">✓</span>
+                            <span id="c-i1-t">Қора седана ёғи</span>
+                        </div>
+                        <p id="c-i1-d">
+                            Иммунитет мувозанатини тиклайди ва ҳужайралар регенерациясини жадаллаштирувчи асосий фаол модда.
                         </p>
                     </div>
 
-                    <!-- 2-KARTA: VITAMINLAR -->
-                    <div class="benefit-card">
-                        <div class="benefit-icon-badge b-icon-2">🧪</div>
-                        <h4 id="b2-title">Витаминлар: E, D, C, B</h4>
-                        <span class="badge-ingr" id="b2-tag">Меланин синтези</span>
-                        <p id="b2-desc">
-                            Тери пигменти ҳосил бўлишини фаоллаштиради ва ҳужайраларни стрессдан ҳимоялайди.
+                    <div class="comp-item">
+                        <div class="comp-item-title">
+                            <span class="comp-check-icon">✓</span>
+                            <span id="c-i2-t">Витаминлар: E, D, C, B</span>
+                        </div>
+                        <p id="c-i2-d">
+                            Тери пигменти (меланин) синтезини қўллаб-қувватлайди ва ҳужайраларни ультрабинафша стрессдан ҳимоялайди.
                         </p>
                     </div>
 
-                    <!-- 3-KARTA: OMEGA VA LIPIDLAR -->
-                    <div class="benefit-card">
-                        <div class="benefit-icon-badge b-icon-3">🧬</div>
-                        <h4 id="b3-title">Омега 3, 6, 9 синфи</h4>
-                        <span class="badge-ingr" id="b3-tag">Фосфолипидлар</span>
-                        <p id="b3-desc">
-                            Терининг қуриши ва қазиғланишини олдини олиб, табиий намлик ва эластиклик беради.
+                    <div class="comp-item">
+                        <div class="comp-item-title">
+                            <span class="comp-check-icon">✓</span>
+                            <span id="c-i3-t">Тўйинмаган ёғ кислоталари (Омега 3, 6, 9)</span>
+                        </div>
+                        <p id="c-i3-d">
+                            Фосфолипидлар билан бирга терининг липид қаватини мустаҳкамлайди, қуруқлик ва қазиғланишни тўхтатади.
                         </p>
                     </div>
 
-                    <!-- 4-KARTA: NOYOB MINERALLAR -->
-                    <div class="benefit-card">
-                        <div class="benefit-icon-badge b-icon-4">⚡</div>
-                        <h4 id="b4-title">10 хил муҳим минерал</h4>
-                        <span class="badge-ingr" id="b4-tag">Мис, Рух, Селен, Темир</span>
-                        <p id="b4-desc">
-                            Теридаги ранг йўқолишини келтириб чиқарувчи ички микроэлементлар танқислигини тўлдиради.
+                    <div class="comp-item">
+                        <div class="comp-item-title">
+                            <span class="comp-check-icon">✓</span>
+                            <span id="c-i4-t">Макро ва микро элементлар мажмуаси</span>
+                        </div>
+                        <p id="c-i4-d">
+                            Калий, натрий, фосфор, кальций, марганец, темир, рух, мис, селен, никель — тери рангини тиклаш учун зарур ноёб минераллар.
+                        </p>
+                    </div>
+
+                    <div class="comp-item">
+                        <div class="comp-item-title">
+                            <span class="comp-check-icon">✓</span>
+                            <span id="c-i5-t">Ёрдамчи компонентлар ва эфир мойлари</span>
+                        </div>
+                        <p id="c-i5-d">
+                            Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула.
+                        </p>
+                    </div>
+
+                    <!-- SOVUQ PRESS XULOSASI -->
+                    <div class="comp-footer-card">
+                        <p id="c-foot-text">
+                            “QOMUS” қора седана ёғи озуқавий ва биологик қиймати 100% сақланган ҳолда совуқ пресслаш усули орқали олинган.
                         </p>
                     </div>
 
                 </div>
 
-            </div>
-
-            <!-- PASTKI ISHONCH VA SOVUQ PRESS MUHRLARI -->
-            <div class="trust-strip">
-                <div class="trust-item">
-                    <div class="trust-item-icon">❄️</div>
-                    <div class="trust-item-content">
-                        <h5 id="t1-title">Совуқ пресслаш</h5>
-                        <p id="t1-desc">Барча биологик фойдали моддалар 100% сақлаб қолинган.</p>
-                    </div>
-                </div>
-
-                <div class="trust-item">
-                    <div class="trust-item-icon">🛡️</div>
-                    <div class="trust-item-content">
-                        <h5 id="t2-title">Ўрганиб қолдирмайди</h5>
-                        <p id="t2-desc">Гормонлар ва кимёвий қўшимчалардан холи табиий таркиб.</p>
-                    </div>
-                </div>
-
-                <div class="trust-item">
-                    <div class="trust-item-icon">🥩</div>
-                    <div class="trust-item-content">
-                        <h5 id="t3-title">Ҳалол желатин</h5>
-                        <p id="t3-desc">Капсула қобиғи қора мол желатинидан тайёрланган.</p>
-                    </div>
-                </div>
             </div>
 
         </div>
@@ -1174,29 +1120,20 @@
                 beforeBadge: "Avval",
                 afterBadge: "Keyin",
 
-                // 5-Blok yangilangan
-                compSubTag: "Tabiiy va Xavfsiz",
-                compMainTitle: "Nima uchun “QOMUS” boshqa vositalardan farq qiladi?",
-                compMainLead: "Mahsulot teri pigmentatsiyasini tashqaridan emas, organizmning ichki hujayralaridan boshlab tiklashga qaratilgan boy tabiiy tarkibga ega.",
-                compBottleBadge: "150 ta yumshoq jelatin kapsula",
-                b1Title: "Qora sedana yog'i",
-                b1Tag: "Asosiy faol modda",
-                b1Desc: "Immunitet muvozanatini tiklaydi va hujayralarning yangilanish tezligini oshiradi.",
-                b2Title: "Vitaminlar: E, D, C, B",
-                b2Tag: "Melanin sintezi",
-                b2Desc: "Teri pigmenti hosil bo'lishini faollashtiradi va hujayralarni stressdan himoyalaydi.",
-                b3Title: "Omega 3, 6, 9 sinfi",
-                b3Tag: "Fosfolipidlar",
-                b3Desc: "Terining qurishi va qazig'lanishini oldini olib, tabiiy namlik va elastiklik beradi.",
-                b4Title: "10 xil muhim mineral",
-                b4Tag: "Mis, Rux, Selen, Temir",
-                b4Desc: "Teridagi rang yo'qolishini keltirib chiqaruvchi ichki mikroelementlar tanqisligini to'ldiradi.",
-                t1Title: "Sovuq presslash",
-                t1Desc: "Barcha biologik foydali moddalar 100% saqlab qolingan.",
-                t2Title: "O'rganib qoldirmaydi",
-                t2Desc: "Gormonlar va kimyoviy qo'shimchalardan xoli tabiiy tarkib.",
-                t3Title: "Halol jelatin",
-                t3Desc: "Kapsula qobig'i qora mol jelatinidan tayyorlangan."
+                // 5-Blok moslashtirilgan tarjimalar
+                compSecTitle: "QOMUS PREPARATINING TABIIY TARKIBI",
+                compSecDesc: "Vitiligo va teri pigmenti tiklanishida ichki mikroelementlar muvozanati hal qiluvchi ahamiyatga ega. Mahsulot faqatgina tabiiy komponentlardan tashkil topgan.",
+                cI1T: "Qora sedana yog'i",
+                cI1D: "Immunitet muvozanatini tiklaydi va hujayralar regeneratsiyasini jadallashtiruvchi asosiy faol modda.",
+                cI2T: "Vitaminlar: E, D, C, B",
+                cI2D: "Teri pigmenti (melanin) sintezini qo'llab-quvvatlaydi va hujayralarni ultrabinafsha stressdan himoyalaydi.",
+                cI3T: "To'yinmagan yog' kislotalari (Omega 3, 6, 9)",
+                cI3D: "Fosfolipidlar bilan birga terining lipid qavatini mustahkamlaydi, quruqlik va qazig'lanishni to'xtatadi.",
+                cI4T: "Makro va mikro elementlar majmuasi",
+                cI4D: "Kaliy, natriy, fosfor, kalsiy, marganets, temir, rux, mis, selen, nikel — teri rangini tiklash uchun zarur noyob minerallar.",
+                cI5T: "Yordamchi komponentlar va efir moylari",
+                cI5D: "Qora mol jelatini, glitserin, nigelon, A-karotinoidlar va limon kislotasi asosidagi tabiiy kapsula.",
+                cFootText: "“QOMUS” qora sedana yog'i ozuqaviy va biologik qiymati 100% saqlangan holda sovuq presslash usuli orqali olingan."
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
@@ -1221,29 +1158,20 @@
                 beforeBadge: "Аввал",
                 afterBadge: "Кейин",
 
-                // 5-Blok yangilangan
-                compSubTag: "Табиий ва Хавфсиз",
-                compMainTitle: "Нима учун “QOMUS” бошқа воситалардан фарқ қилади?",
-                compMainLead: "Маҳсулот тери пигментациясини ташқаридан эмас, организмнинг ички ҳужайраларидан бошлаб тиклашга қаратилган бой табиий таркибга эга.",
-                compBottleBadge: "150 та юмшоқ желатин капсула",
-                b1Title: "Қора седана ёғи",
-                b1Tag: "Асосий фаол модда",
-                b1Desc: "Иммунитет мувозанатини тиклайди ва ҳужайраларнинг янгиланиш тезлигини оширади.",
-                b2Title: "Витаминлар: E, D, C, B",
-                b2Tag: "Меланин синтези",
-                b2Desc: "Тери пигменти ҳосил бўлишини фаоллаштиради ва ҳужайраларни стрессдан ҳимоялайди.",
-                b3Title: "Омега 3, 6, 9 синфи",
-                b3Tag: "Фосфолипидлар",
-                b3Desc: "Терининг қуриши ва қазиғланишини олдини олиб, табиий намлик ва эластиклик беради.",
-                b4Title: "10 хил муҳим минерал",
-                b4Tag: "Мис, Рух, Селен, Темир",
-                b4Desc: "Теридаги ранг йўқолишини келтириб чиқарувчи ички микроэлементлар танқислигини тўлдиради.",
-                t1Title: "Совуқ пресслаш",
-                t1Desc: "Барча биологик фойдали моддалар 100% сақлаб қолинган.",
-                t2Title: "Ўрганиб қолдирмайди",
-                t2Desc: "Гормонлар ва кимёвий қўшимчалардан холи табиий таркиб.",
-                t3Title: "Ҳалол желатин",
-                t3Desc: "Капсула қобиғи қора мол желатинидан тайёрланган."
+                // 5-Blok moslashtirilgan tarjimalar
+                compSecTitle: "ҚОМУС ПРЕПАРАТИНИНГ ТАБИИЙ ТАРКИБИ",
+                compSecDesc: "Витилиго ва тери пигменти тикланишида ички микроэлементлар мувозанати ҳал қилувчи аҳамиятга эга. Маҳсулот фақатгина табиий компонентлардан ташкил топган.",
+                cI1T: "Қора седана ёғи",
+                cI1D: "Иммунитет мувозанатини тиклайди ва ҳужайралар регенерациясини жадаллаштирувчи асосий фаол модда.",
+                cI2T: "Витаминлар: E, D, C, B",
+                cI2D: "Тери пигменти (меланин) синтезини қўллаб-қувватлайди ва ҳужайраларни ультрабинафша стрессдан ҳимоялайди.",
+                cI3T: "Тўйинмаган ёғ кислоталари (Омега 3, 6, 9)",
+                cI3D: "Фосфолипидлар билан бирга терининг липид қаватини мустаҳкамлайди, қуруқлик ва қазиғланишни тўхтатади.",
+                cI4T: "Макро ва микро элементлар мажмуаси",
+                cI4D: "Калий, натрий, фосфор, кальций, марганец, темир, рух, мис, селен, никель — тери рангини тиклаш учун зарур ноёб минераллар.",
+                cI5T: "Ёрдамчи компонентлар ва эфир мойлари",
+                cI5D: "Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула.",
+                cFootText: "“QOMUS” қора седана ёғи озуқавий ва биологик қиймати 100% сақланган ҳолда совуқ пресслаш усули орқали олинган."
             },
             ru: {
                 orderBtn: "Заказать",
@@ -1268,29 +1196,20 @@
                 beforeBadge: "До",
                 afterBadge: "После",
 
-                // 5-Blok yangilangan
-                compSubTag: "Натурально и безопасно",
-                compMainTitle: "Почему «QOMUS» отличается от других средств?",
-                compMainLead: "Препарат направлен на восстановление пигментации изнутри, на клеточном уровне, благодаря уникальному природному составу.",
-                compBottleBadge: "150 мягких желатиновых капсул",
-                b1Title: "Масло черного тмина",
-                b1Tag: "Главный активный компонент",
-                b1Desc: "Укрепляет баланс иммунитета и ускоряет естественную регенерацию клеток кожи.",
-                b2Title: "Витамины: E, D, C, B",
-                b2Tag: "Синтез меланина",
-                b2Desc: "Стимулирует выработку кожного пигмента и надежно защищает клетки от стресса.",
-                b3Title: "Омега 3, 6, 9 класс",
-                b3Tag: "Фосфолипиды",
-                b3Desc: "Устраняет шелушение и сухость, глубоко увлажняя кожу и повышая ее эластичность.",
-                b4Title: "10 ключевых минералов",
-                b4Tag: "Медь, Цинк, Селен, Железо",
-                b4Desc: "Восполняет нехватку микроэлементов, дефицит которых провоцирует белые пятна.",
-                t1Title: "Холодный отжим",
-                t1Desc: "100% сохранение всех полезных биологических свойств.",
-                t2Title: "Не вызывает привыкания",
-                t2Desc: "Полностью натуральный состав без вредной химии и гормонов.",
-                t3Title: "Халяльный желатин",
-                t3Desc: "Оболочка капсул изготовлена из говяжьего желатина."
+                // 5-Blok moslashtirilgan tarjimalar
+                compSecTitle: "НАТУРАЛЬНЫЙ СОСТАВ ПРЕПАРАТА «QOMUS»",
+                compSecDesc: "При восстановлении пигментации кожи баланс микроэлементов имеет решающее значение. Продукт состоит исключительно из натуральных компонентов.",
+                cI1T: "Масло черного тмина",
+                cI1D: "Восстанавливает баланс иммунитета и ускоряет естественную регенерацию клеток кожи.",
+                cI2T: "Витамины: E, D, C, B",
+                cI2D: "Поддерживают синтез меланина и защищают клетки кожи от окислительного стресса.",
+                cI3T: "Ненасыщенные жирные кислоты (Омега 3, 6, 9)",
+                cI3D: "Вместе с фосфолипидами укрепляют липидный барьер, предотвращая сухость и шелушение кожи.",
+                cI4T: "Комплекс макро- и микроэлементов",
+                cI4D: "Калий, натрий, фосфор, кальций, марганец, железо, цинк, медь, селен, никель — минералы для пигментации.",
+                cI5T: "Вспомогательные компоненты и эфирные масла",
+                cI5D: "Говяжий желатин, глицерин, нигеллон, А-каротиноиды и лимонная кислота в основе мягкой капсулы.",
+                cFootText: "Масло черного тмина «QOMUS» получено методом холодного отжима с сохранением 100% полезных свойств."
             },
             en: {
                 orderBtn: "Order Now",
@@ -1315,29 +1234,20 @@
                 beforeBadge: "Before",
                 afterBadge: "After",
 
-                // 5-Blok yangilangan
-                compSubTag: "Natural & Safe",
-                compMainTitle: "Why does “QOMUS” differ from other solutions?",
-                compMainLead: "The formula restores pigmentation from within at the cellular level with its rich, natural synergy.",
-                compBottleBadge: "150 Soft Gelatin Capsules",
-                b1Title: "Black Seed Oil",
-                b1Tag: "Main Active Element",
-                b1Desc: "Balances immune function and speeds up natural cell regeneration.",
-                b2Title: "Vitamins: E, D, C, B",
-                b2Tag: "Melanin Synthesis",
-                b2Desc: "Activates pigmentation process and shields cells from oxidative stress.",
-                b3Title: "Omega 3, 6, 9 Class",
-                b3Tag: "Phospholipids",
-                b3Desc: "Prevents dryness and flaking, restoring vital moisture and skin elasticity.",
-                b4Title: "10 Key Minerals",
-                b4Tag: "Copper, Zinc, Selenium, Iron",
-                b4Desc: "Replenishes deficiencies that trigger white spot spread.",
-                t1Title: "Cold Pressed",
-                t1Desc: "100% preserved nutrients and active biological potency.",
-                t2Title: "Non-Addictive",
-                t2Desc: "Completely natural, hormone-free and pure formula.",
-                t3Title: "Halal Gelatin",
-                t3Desc: "Capsule shells made exclusively with bovine gelatin."
+                // 5-Blok moslashtirilgan tarjimalar
+                compSecTitle: "NATURAL COMPOSITION OF “QOMUS”",
+                compSecDesc: "In restoring skin pigmentation, the balance of internal microelements plays a crucial role. Formulated strictly with natural ingredients.",
+                cI1T: "Black Seed Oil",
+                cI1D: "Restores immune balance and stimulates cellular regeneration as the primary active ingredient.",
+                cI2T: "Vitamins: E, D, C, B",
+                cI2D: "Supports natural melanin synthesis and shields cells from oxidative stress and UV damage.",
+                cI3T: "Unsaturated Fatty Acids (Omega 3, 6, 9)",
+                cI3D: "Strengthens lipid barriers along with phospholipids, eliminating dryness and irritation.",
+                cI4T: "Macro and Micro Element Complex",
+                cI4D: "Potassium, sodium, phosphorus, calcium, manganese, iron, zinc, copper, selenium, nickel — vital for pigmentation.",
+                cI5T: "Essential Oils and Auxiliary Elements",
+                cI5D: "Natural bovine gelatin, glycerin, nigellone, A-carotenoids, and citric acid inside a soft capsule.",
+                cFootText: "“QOMUS” black seed oil is produced using cold press technology, fully preserving its active nutritional potency."
             }
         };
 
@@ -1371,33 +1281,19 @@
                 document.querySelectorAll('.badge-after').forEach(el => el.textContent = t.afterBadge);
 
                 // 5-Blok yangilangan tarjimalar
-                document.getElementById('comp-sub-tag').textContent = t.compSubTag;
-                document.getElementById('comp-main-title').textContent = t.compMainTitle;
-                document.getElementById('comp-main-lead').textContent = t.compMainLead;
-                document.getElementById('comp-bottle-badge').textContent = t.compBottleBadge;
-
-                document.getElementById('b1-title').textContent = t.b1Title;
-                document.getElementById('b1-tag').textContent = t.b1Tag;
-                document.getElementById('b1-desc').textContent = t.b1Desc;
-
-                document.getElementById('b2-title').textContent = t.b2Title;
-                document.getElementById('b2-tag').textContent = t.b2Tag;
-                document.getElementById('b2-desc').textContent = t.b2Desc;
-
-                document.getElementById('b3-title').textContent = t.b3Title;
-                document.getElementById('b3-tag').textContent = t.b3Tag;
-                document.getElementById('b3-desc').textContent = t.b3Desc;
-
-                document.getElementById('b4-title').textContent = t.b4Title;
-                document.getElementById('b4-tag').textContent = t.b4Tag;
-                document.getElementById('b4-desc').textContent = t.b4Desc;
-
-                document.getElementById('t1-title').textContent = t.t1Title;
-                document.getElementById('t1-desc').textContent = t.t1Desc;
-                document.getElementById('t2-title').textContent = t.t2Title;
-                document.getElementById('t2-desc').textContent = t.t2Desc;
-                document.getElementById('t3-title').textContent = t.t3Title;
-                document.getElementById('t3-desc').textContent = t.t3Desc;
+                document.getElementById('comp-sec-title').textContent = t.compSecTitle;
+                document.getElementById('comp-sec-desc').textContent = t.compSecDesc;
+                document.getElementById('c-i1-t').textContent = t.cI1T;
+                document.getElementById('c-i1-d').textContent = t.cI1D;
+                document.getElementById('c-i2-t').textContent = t.cI2T;
+                document.getElementById('c-i2-d').textContent = t.cI2D;
+                document.getElementById('c-i3-t').textContent = t.cI3T;
+                document.getElementById('c-i3-d').textContent = t.cI3D;
+                document.getElementById('c-i4-t').textContent = t.cI4T;
+                document.getElementById('c-i4-d').textContent = t.cI4D;
+                document.getElementById('c-i5-t').textContent = t.cI5T;
+                document.getElementById('c-i5-d').textContent = t.cI5D;
+                document.getElementById('c-foot-text').textContent = t.cFootText;
             }
         }
 
