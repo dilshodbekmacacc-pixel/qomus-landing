@@ -209,7 +209,7 @@
         }
 
         /* ------------------------------------------------------------- */
-        /* 2-BLOK: YANADA KATTALASHTIRILGAN RASM VA QAYTARILGAN TUGMA     */
+        /* 2-BLOK: HERO SECTION                                          */
         /* ------------------------------------------------------------- */
         .hero-section {
             padding: 24px 0 32px 0;
@@ -268,7 +268,7 @@
 
         .product-img-large {
             width: 100%;
-            max-width: 580px; /* Rasm yanada kattalashtirildi */
+            max-width: 580px;
             height: auto;
             border-radius: 18px;
             object-fit: cover;
@@ -276,7 +276,7 @@
         }
 
         /* ------------------------------------------------------------- */
-        /* 3-BLOK: REFERENSGA 100% MOS STRUKTURA VA DIZAYN              */
+        /* 3-BLOK: REFERENSGA MOS DIZAYN VA STRUKTURA                    */
         /* ------------------------------------------------------------- */
         .pain-section-ref {
             padding: 50px 0 60px 0;
@@ -304,7 +304,7 @@
             font-weight: 700;
         }
 
-        /* 1-QISM: MATN CHAPDA, RASMLAR O'NGDA */
+        /* 1-QISM: DESKTOPDA MATN CHAPDA, RASM O'NGDA */
         .ref-row-1 {
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
@@ -354,7 +354,6 @@
             box-shadow: 0 2px 6px rgba(244, 63, 94, 0.35);
         }
 
-        /* REFERENS 1-QISMDAGI 2 TA RASM KOMPOZITSIYASI */
         .ref-image-wrapper {
             position: relative;
             width: 100%;
@@ -384,7 +383,7 @@
             box-shadow: 0 14px 28px rgba(0,0,0,0.12);
         }
 
-        /* 2-QISM: RASM CHAPDA, MATN O'NGDA */
+        /* 2-QISM: DESKTOPDA RASM CHAPDA, MATN O'NGDA */
         .ref-row-2 {
             display: grid;
             grid-template-columns: 0.9fr 1.1fr;
@@ -413,7 +412,9 @@
             font-weight: 800;
         }
 
-        /* MOBIL VERSIYA MOSLASHUVLARI */
+        /* ------------------------------------------------------------- */
+        /* MOBIL VERSIYA: SIZ SO'RAGAN ANIQ KETMA-KETLIK                */
+        /* ------------------------------------------------------------- */
         @media (max-width: 768px) {
             .logo-main { font-size: 18px; }
             .btn-phone-desktop { display: none; }
@@ -438,7 +439,7 @@
 
             .product-img-large {
                 max-width: 100%;
-                max-height: 420px; /* Mobilda eng katta qilib berildi */
+                max-height: 420px;
                 border-radius: 14px;
             }
 
@@ -466,7 +467,7 @@
                 font-size: 15px;
             }
 
-            /* 3-Blok mobil */
+            /* 3-Blok mobil tartibi */
             .pain-section-ref {
                 padding: 30px 0 40px 0;
             }
@@ -476,23 +477,23 @@
                 margin-bottom: 10px;
             }
 
+            /* 1-Qism: 1-RASM AVVAL, KEYIN 1-RASM TEXTI */
             .ref-row-1 {
                 display: flex;
                 flex-direction: column;
-                gap: 26px;
-                margin-bottom: 40px;
-            }
-
-            .ref-row-2 {
-                display: flex;
-                flex-direction: column;
                 gap: 22px;
+                margin-bottom: 35px;
             }
 
-            .ref-image-wrapper {
+            .ref-row-1 .ref-image-wrapper {
+                order: 1; /* 1-o'rinda 1-rasm */
                 min-height: 270px;
                 justify-content: center;
-                margin-top: 10px;
+                margin: 6px 0 10px 0;
+            }
+
+            .ref-row-1 .ref-text-block-1 {
+                order: 2; /* 2-o'rinda 1-rasm texti */
             }
 
             .img-main-vitiligo {
@@ -507,8 +508,23 @@
                 left: 6px;
             }
 
+            /* 2-Qism: 2-RASM AVVAL, KEYIN 2-RASM TEXTI */
+            .ref-row-2 {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .ref-row-2 .ref-img-card-2 {
+                order: 1; /* 3-o'rinda 2-rasm */
+            }
+
+            .ref-row-2 .ref-text-block-2 {
+                order: 2; /* 4-o'rinda 2-rasm texti */
+            }
+
             .img-single-card {
-                height: 220px;
+                height: 230px;
             }
 
             .ref-list-item {
@@ -579,7 +595,7 @@
         </div>
     </header>
 
-    <!-- 2-BLOK: HERO SECTION (KATTA RASM VA QAYTARILGAN TUGMA) -->
+    <!-- 2-BLOK: HERO SECTION -->
     <section class="hero-section">
         <div class="container hero-grid">
             
@@ -604,17 +620,17 @@
         </div>
     </section>
 
-    <!-- 3-BLOK: REFERENSGA 100% MOSLANSHGAN STRUKTURA -->
+    <!-- 3-BLOK: REFERENSGA MOSLANSHGAN STRUKTURA -->
     <section class="pain-section-ref">
         <div class="container">
             
-            <!-- HEADER -->
+            <!-- 1. HEADLINE -->
             <div class="ref-header">
                 <h2 id="ref-header-title">Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!</h2>
                 <p id="ref-sub-query">Нима қиласиз?</p>
             </div>
 
-            <!-- 1-QISM: REFERENS (image_028617) -->
+            <!-- 1-QISM: MOBILDA 1-RASM -> 1-RASM MATNI -->
             <div class="ref-row-1">
                 <div class="ref-text-block-1">
                     <p class="ref-subtext-lead" id="ref-c1-lead">
@@ -649,14 +665,13 @@
                     </div>
                 </div>
 
-                <!-- OVERLAPPING RASMLAR -->
                 <div class="ref-image-wrapper">
                     <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&auto=format&fit=crop&q=80" alt="Vitiligo yuzda" class="img-main-vitiligo">
                     <img src="https://images.unsplash.com/photo-1617897903246-719242758050?w=500&auto=format&fit=crop&q=80" alt="Vitiligo qo'lda" class="img-overlap-hand">
                 </div>
             </div>
 
-            <!-- 2-QISM: REFERENS (image_0285d8) -->
+            <!-- 2-QISM: MOBILDA 2-RASM -> 2-RASM MATNI -->
             <div class="ref-row-2">
                 <div class="ref-img-card-2">
                     <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=700&auto=format&fit=crop&q=80" alt="Xavotir va umid" class="img-single-card">
@@ -793,7 +808,6 @@
                 document.getElementById('hero-subtitle').textContent = t.subtitle;
                 document.getElementById('hero-cta').textContent = t.heroCta;
 
-                // Referens blok matnlari
                 document.getElementById('ref-header-title').textContent = t.refTitle;
                 document.getElementById('ref-sub-query').textContent = t.refSub;
                 document.getElementById('ref-c1-lead').textContent = t.refLead;
