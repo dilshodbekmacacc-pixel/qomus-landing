@@ -17,13 +17,13 @@
         }
 
         body {
-            background-color: #f4f8f6;
+            background-color: #f7faf9;
             color: #1a2b25;
             padding-bottom: 75px;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1140px;
             margin: 0 auto;
             padding: 0 16px;
         }
@@ -209,15 +209,15 @@
         }
 
         /* ------------------------------------------------------------- */
-        /* 2-BLOK: KATTALASHTIRILGAN RASM VA OCHIQ ORALIQLI MATNLAR      */
+        /* 2-BLOK: YANADA KATTALASHTIRILGAN RASM VA QAYTARILGAN TUGMA     */
         /* ------------------------------------------------------------- */
         .hero-section {
-            padding: 30px 0 25px 0;
+            padding: 24px 0 32px 0;
         }
 
         .hero-grid {
             display: grid;
-            grid-template-columns: 1.1fr 1fr;
+            grid-template-columns: 1.15fr 1fr;
             gap: 36px;
             align-items: center;
         }
@@ -229,22 +229,35 @@
 
         .hero-title {
             font-size: 36px;
-            line-height: 1.35;
+            line-height: 1.3;
             font-weight: 900;
             color: #00317F;
-            margin-top: 14px;
-            margin-bottom: 22px; /* Oraliq kengaytirildi */
+            margin-top: 10px;
+            margin-bottom: 20px;
             letter-spacing: -0.5px;
             text-transform: uppercase;
         }
 
         .hero-subtitle {
-            font-size: 17px;
-            line-height: 1.7;
+            font-size: 16px;
+            line-height: 1.65;
             color: #334155;
             font-weight: 600;
-            margin-top: 6px;
-            margin-bottom: 20px; /* Oraliq kengaytirildi */
+            margin-bottom: 26px;
+        }
+
+        .hero-cta-btn {
+            display: inline-block;
+            background: #00a86b;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 800;
+            padding: 16px 32px;
+            border-radius: 12px;
+            text-decoration: none;
+            animation: pulseGlow 2s infinite;
+            text-align: center;
+            width: fit-content;
         }
 
         .hero-visual-card {
@@ -255,147 +268,152 @@
 
         .product-img-large {
             width: 100%;
-            max-width: 540px;
+            max-width: 580px; /* Rasm yanada kattalashtirildi */
             height: auto;
             border-radius: 18px;
             object-fit: cover;
-            filter: drop-shadow(0 16px 32px rgba(0,0,0,0.14));
+            filter: drop-shadow(0 18px 36px rgba(0,0,0,0.14));
         }
 
         /* ------------------------------------------------------------- */
-        /* 3-BLOK: MUAMMO VA HISSIY TA'SIR (2 TA RASM VA MATNLAR)        */
+        /* 3-BLOK: REFERENSGA 100% MOS STRUKTURA VA DIZAYN              */
         /* ------------------------------------------------------------- */
-        .pain-section {
-            padding: 40px 0;
+        .pain-section-ref {
+            padding: 50px 0 60px 0;
             background: #ffffff;
-            border-top: 1px solid #e2ece7;
-            border-bottom: 1px solid #e2ece7;
+            border-top: 1px solid #eef3f0;
         }
 
-        .section-header-box {
+        .ref-header {
             text-align: center;
-            max-width: 800px;
-            margin: 0 auto 36px auto;
+            margin-bottom: 40px;
         }
 
-        .section-badge {
-            display: inline-block;
-            background: #fee2e2;
-            color: #b91c1c;
-            padding: 5px 14px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 800;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-        }
-
-        .section-main-title {
-            font-size: 26px;
+        .ref-header h2 {
+            color: #00459c;
+            font-size: 28px;
             font-weight: 900;
-            color: #002147;
             line-height: 1.35;
+            max-width: 850px;
+            margin: 0 auto 18px auto;
         }
 
-        .pain-cards {
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
+        .ref-header p {
+            color: #1e293b;
+            font-size: 15px;
+            font-weight: 700;
         }
 
-        .pain-card {
+        /* 1-QISM: MATN CHAPDA, RASMLAR O'NGDA */
+        .ref-row-1 {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 28px;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 40px;
             align-items: center;
-            background: #f8fafc;
-            border: 1px solid #e2e8f0;
-            border-radius: 20px;
-            padding: 24px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+            margin-bottom: 70px;
         }
 
-        .pain-card.reverse {
-            grid-template-columns: 1fr 1fr;
-        }
-
-        .pain-card.reverse .pain-img-box {
-            order: 2;
-        }
-
-        .pain-card.reverse .pain-text-box {
-            order: 1;
-        }
-
-        .pain-img-box img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            border-radius: 14px;
-            box-shadow: 0 8px 18px rgba(0,0,0,0.06);
-        }
-
-        .pain-text-box h3 {
-            font-size: 19px;
-            font-weight: 800;
-            color: #00317F;
-            margin-bottom: 14px;
-            line-height: 1.35;
-        }
-
-        .pain-text-box p {
-            font-size: 14.5px;
-            line-height: 1.65;
-            color: #334155;
-            margin-bottom: 12px;
+        .ref-subtext-lead {
+            font-size: 15px;
+            color: #1e293b;
+            line-height: 1.6;
+            margin-bottom: 24px;
             font-weight: 600;
         }
 
-        .pain-list {
+        .ref-list {
             list-style: none;
-            margin-bottom: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
 
-        .pain-list li {
-            position: relative;
-            padding-left: 24px;
-            font-size: 14px;
+        .ref-list-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 14.5px;
             font-weight: 700;
-            color: #475569;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-
-        .pain-list li::before {
-            content: "⚠️";
-            position: absolute;
-            left: 0;
-            top: 1px;
-            font-size: 12px;
-        }
-
-        .highlight-alert {
-            background: #fff1f2;
-            border-left: 4px solid #e11d48;
-            padding: 12px 14px;
-            border-radius: 0 10px 10px 0;
-            font-size: 13.5px;
-            font-weight: 700;
-            color: #9f1239;
-            margin-bottom: 12px;
-            line-height: 1.5;
-        }
-
-        .hope-quote {
-            font-size: 15px;
-            font-weight: 800;
-            color: #008f5b;
-            border-top: 1px dashed #cbd5e1;
-            padding-top: 12px;
+            color: #1e293b;
             line-height: 1.45;
         }
 
-        /* MOBIL VERSIYA MOSLASHUVI */
+        .ref-badge-icon {
+            width: 22px;
+            height: 22px;
+            background: #f43f5e;
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 900;
+            flex-shrink: 0;
+            margin-top: 1px;
+            box-shadow: 0 2px 6px rgba(244, 63, 94, 0.35);
+        }
+
+        /* REFERENS 1-QISMDAGI 2 TA RASM KOMPOZITSIYASI */
+        .ref-image-wrapper {
+            position: relative;
+            width: 100%;
+            min-height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .img-main-vitiligo {
+            width: 82%;
+            height: 340px;
+            object-fit: cover;
+            border-radius: 28px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .img-overlap-hand {
+            position: absolute;
+            left: 0;
+            bottom: 20px;
+            width: 55%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: 4px solid #ffffff;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.12);
+        }
+
+        /* 2-QISM: RASM CHAPDA, MATN O'NGDA */
+        .ref-row-2 {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 46px;
+            align-items: center;
+        }
+
+        .img-single-card {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+        }
+
+        .ref-text-block-2 p {
+            font-size: 15.5px;
+            line-height: 1.65;
+            color: #1e293b;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .ref-text-block-2 p strong {
+            color: #00317F;
+            font-weight: 800;
+        }
+
+        /* MOBIL VERSIYA MOSLASHUVLARI */
         @media (max-width: 768px) {
             .logo-main { font-size: 18px; }
             .btn-phone-desktop { display: none; }
@@ -403,7 +421,7 @@
 
             /* 2-Blok mobil */
             .hero-section {
-                padding: 14px 0 18px 0;
+                padding: 10px 0 18px 0;
             }
 
             .hero-grid {
@@ -420,60 +438,86 @@
 
             .product-img-large {
                 max-width: 100%;
-                max-height: 380px; /* Mobilda rasm sezilarli darajada kattalashtirildi */
+                max-height: 420px; /* Mobilda eng katta qilib berildi */
                 border-radius: 14px;
             }
 
             .hero-content {
                 order: 2;
                 width: 100%;
+                align-items: center;
             }
 
             .hero-title {
                 font-size: 21px;
-                margin-top: 10px;
-                margin-bottom: 16px; /* Oraliq ochildi */
+                margin-bottom: 14px;
                 line-height: 1.35;
             }
 
             .hero-subtitle {
-                font-size: 14px;
-                line-height: 1.6;
-                margin-top: 4px;
-                margin-bottom: 18px; /* Oraliq ochildi */
+                font-size: 13.5px;
+                line-height: 1.55;
+                margin-bottom: 18px;
+            }
+
+            .hero-cta-btn {
+                width: 100%;
+                padding: 14px 0;
+                font-size: 15px;
             }
 
             /* 3-Blok mobil */
-            .pain-section {
-                padding: 28px 0;
+            .pain-section-ref {
+                padding: 30px 0 40px 0;
             }
 
-            .section-main-title {
+            .ref-header h2 {
                 font-size: 20px;
+                margin-bottom: 10px;
             }
 
-            .pain-card, 
-            .pain-card.reverse {
+            .ref-row-1 {
                 display: flex;
                 flex-direction: column;
-                gap: 16px;
-                padding: 16px;
+                gap: 26px;
+                margin-bottom: 40px;
             }
 
-            .pain-card.reverse .pain-img-box {
-                order: 1; /* Mobilda har doim rasm birinchi chiqadi */
+            .ref-row-2 {
+                display: flex;
+                flex-direction: column;
+                gap: 22px;
             }
 
-            .pain-card.reverse .pain-text-box {
-                order: 2;
+            .ref-image-wrapper {
+                min-height: 270px;
+                justify-content: center;
+                margin-top: 10px;
             }
 
-            .pain-img-box img {
-                height: 200px;
+            .img-main-vitiligo {
+                width: 88%;
+                height: 250px;
             }
 
-            .pain-text-box h3 {
-                font-size: 17px;
+            .img-overlap-hand {
+                width: 58%;
+                height: 150px;
+                bottom: -10px;
+                left: 6px;
+            }
+
+            .img-single-card {
+                height: 220px;
+            }
+
+            .ref-list-item {
+                font-size: 13.5px;
+            }
+
+            .ref-text-block-2 p {
+                font-size: 14px;
+                margin-bottom: 16px;
             }
         }
 
@@ -535,12 +579,12 @@
         </div>
     </header>
 
-    <!-- 2-BLOK: HERO SECTION (KATTA RASM VA OCHIQ ORALIQLAR) -->
+    <!-- 2-BLOK: HERO SECTION (KATTA RASM VA QAYTARILGAN TUGMA) -->
     <section class="hero-section">
         <div class="container hero-grid">
             
             <div class="hero-visual-card">
-                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=900&auto=format&fit=crop&q=80" alt="QOMUS Flakon" class="product-img-large">
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1000&auto=format&fit=crop&q=80" alt="QOMUS Flakon" class="product-img-large">
             </div>
 
             <div class="hero-content">
@@ -551,65 +595,84 @@
                 <p class="hero-subtitle" id="hero-subtitle">
                     Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!
                 </p>
+
+                <a href="#lead-form" class="hero-cta-btn" id="hero-cta">
+                    Бепул маслаҳат олиш
+                </a>
             </div>
 
         </div>
     </section>
 
-    <!-- 3-BLOK: MUAMMO VA YECHIM (PAIN SECTION) -->
-    <section class="pain-section">
+    <!-- 3-BLOK: REFERENSGA 100% MOSLANSHGAN STRUKTURA -->
+    <section class="pain-section-ref">
         <div class="container">
-            <div class="section-header-box">
-                <span class="section-badge" id="pain-badge">Ҳақиқий сабаблар</span>
-                <h2 class="section-main-title" id="pain-header-title">
-                    Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!
-                </h2>
+            
+            <!-- HEADER -->
+            <div class="ref-header">
+                <h2 id="ref-header-title">Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!</h2>
+                <p id="ref-sub-query">Нима қиласиз?</p>
             </div>
 
-            <div class="pain-cards">
-                <!-- 1-KARTOCKA: RASM + MATN (NOQULAYLIK VA XAVOTIR) -->
-                <div class="pain-card">
-                    <div class="pain-img-box">
-                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&auto=format&fit=crop&q=80" alt="Teri muammolari">
-                    </div>
-                    <div class="pain-text-box">
-                        <h3 id="pain-c1-title">Нима қиласиз? Сиз шу ергача ўқиётган бўлсангиз, демак...</h3>
-                        <p id="pain-c1-desc">Сизда ёки оилангизда ҳам витилиго ёки тери муаммолари бор:</p>
-                        <ul class="pain-list" id="pain-c1-list">
-                            <li>Теридаги оқ доғлар</li>
-                            <li>Уят ёки ноқулайлик ҳисси</li>
-                            <li>Асабийлик ва ўз-ўзингизга ишончсизлик</li>
-                            <li>Турли мазлар ва даволардан фойда кўрмагансиз ёки таъсири кам...</li>
-                        </ul>
-                        <p id="pain-c1-footer" style="color: #64748b; font-size: 13.5px;">
-                            Айниқса, йилнинг иссиқ фаслларида ёки енги калта кийимлар кийганда ноқулайлик сезасиз...
-                        </p>
-                    </div>
-                </div>
+            <!-- 1-QISM: REFERENS (image_028617) -->
+            <div class="ref-row-1">
+                <div class="ref-text-block-1">
+                    <p class="ref-subtext-lead" id="ref-c1-lead">
+                        Сиз шу ергача ўқиётган бўлсангиз, демак, сизда ёки оилангизда ҳам витилиго ёки тери муаммолари бор.
+                    </p>
 
-                <!-- 2-KARTOCKA: MATN + RASM (SAVOL, XAVF VA ISHONCH) -->
-                <div class="pain-card reverse">
-                    <div class="pain-img-box">
-                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=700&auto=format&fit=crop&q=80" alt="Echim va sog'lom teri">
-                    </div>
-                    <div class="pain-text-box">
-                        <h3 id="pain-c2-title">Витилигодан халос бўлишни хоҳлайсиз-у, лекин "Қандай қилиб?" деган саволга жавоб тополмай бошингиз қотган, тўғрими?</h3>
-                        <p id="pain-c2-desc">Аммо бу муаммоларга зудлик билан ечим топишингиз лозим, тўғрими?</p>
-                        
-                        <div class="highlight-alert" id="pain-c2-alert">
-                            Акс ҳолда, вақтида даволанмаса, витилиго бутун танани эгаллаб, тузатиб бўлмас ҳолатга келиб қолиши мумкин! Тасаввур қилишнинг ўзи даҳшатли.
+                    <div class="ref-list" id="ref-c1-items">
+                        <div class="ref-list-item">
+                            <span class="ref-badge-icon">!</span>
+                            <span>Теридаги оқ доғлар</span>
                         </div>
-
-                        <p style="font-weight: 800; color: #00317F; margin-bottom: 8px;" id="pain-c2-q">
-                            Касалликга қарши курашасизми ёки йўқ?!
-                        </p>
-
-                        <div class="hope-quote" id="pain-c2-hope">
-                            ✨ Ишончим комил, сиз бу муаммони енгасиз ва терингиз соғлом ҳолатига қайтади.
+                        <div class="ref-list-item">
+                            <span class="ref-badge-icon">!</span>
+                            <span>Уят ёки ноқулайлик ҳисси</span>
+                        </div>
+                        <div class="ref-list-item">
+                            <span class="ref-badge-icon">!</span>
+                            <span>Асабийлик ва ўз-ўзингизга ишончсизлик</span>
+                        </div>
+                        <div class="ref-list-item">
+                            <span class="ref-badge-icon">!</span>
+                            <span>Турли мазлар ва даволардан фойда кўрмагансиз ёки таъсири кам...</span>
+                        </div>
+                        <div class="ref-list-item">
+                            <span class="ref-badge-icon">!</span>
+                            <span>Айниқса, йилнинг иссиқ фаслларида ёки енги калта кийимлар кийганда ноқулайлик сезасиз...</span>
+                        </div>
+                        <div class="ref-list-item">
+                            <span class="ref-badge-icon">!</span>
+                            <span>Витилигодан халос бўлишни хоҳлайсиз-у, лекин "Қандай қилиб?" деган саволга жавоб тополмай бошингиз қотган, тўғрими?</span>
                         </div>
                     </div>
                 </div>
+
+                <!-- OVERLAPPING RASMLAR -->
+                <div class="ref-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&auto=format&fit=crop&q=80" alt="Vitiligo yuzda" class="img-main-vitiligo">
+                    <img src="https://images.unsplash.com/photo-1617897903246-719242758050?w=500&auto=format&fit=crop&q=80" alt="Vitiligo qo'lda" class="img-overlap-hand">
+                </div>
             </div>
+
+            <!-- 2-QISM: REFERENS (image_0285d8) -->
+            <div class="ref-row-2">
+                <div class="ref-img-card-2">
+                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=700&auto=format&fit=crop&q=80" alt="Xavotir va umid" class="img-single-card">
+                </div>
+
+                <div class="ref-text-block-2">
+                    <p id="ref-c2-p1">
+                        Аммо бу муаммоларга зудлик билан ечим топишингиз лозим, тўғрими? Акс ҳолда, вақтида даволанмаса, витилиго бутун танани эгаллаб, тузатиб бўлмас ҳолатга келиб қолиши мумкин! Тасаввур қилишнинг ўзи даҳшатли.
+                    </p>
+
+                    <p id="ref-c2-p2">
+                        <strong>Касалликга қарши курашасизми ёки йўқ?!</strong> Ишончим комил, сиз бу муаммони енгасиз ва терингиз соғлом ҳолатига қайтади.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -632,71 +695,83 @@
         const translations = {
             uz: {
                 orderBtn: "Buyurtma berish",
+                heroCta: "Bepul maslahat olish",
                 ticker: "<span>🚚 O'zbekiston bo'ylab BEPUL yetkazib berish</span><span>🌿 100% Tabiiy tarkib</span><span>⭐ 20,000+ Mamnun mijozlar</span><span>🔐 100% Maxfiylik kafolatlanadi</span>",
                 title: "OQ DOG'LARDAN HALOS BO'LISH ENDI ILOJSIZ EMAS!",
                 subtitle: "Ushbu preparat vitiligo va teridagi turli kasalliklarga yechim bo'la oladi. Va o'ziga o'rgatib qo'ymaydi - Natija kafolatlangan!",
-                painBadge: "Haqiqiy sabablar",
-                painHeaderTitle: "Teringizni avvalgi holatiga qaytarishning iloji yo'q deb o'ylasangiz – Adashasiz!",
-                painC1Title: "Nima qilasiz? Siz shu yergacha o'qiyotgan bo'lsangiz, demak...",
-                painC1Desc: "Sizda yoki oilangizda ham vitiligo yoki teri muammolari bor:",
-                painC1List: "<li>Teridagi oq dog'lar</li><li>Uyat yoki noqulaylik hissi</li><li>Asabiylik va o'z-o'zingizga ishonchsizlik</li><li>Turli mazlar va davolardan foyda ko'rmagansiz yoki ta'siri kam...</li>",
-                painC1Footer: "Ayniqsa, yilning issiq fasllarida yoki yengi kalta kiyimlar kiyganda noqulaylik sezasiz...",
-                painC2Title: "Vitiligodan xalos bo'lishni xohlaysiz-u, lekin 'Qanday qilib?' degan savolga javob topolmay boshingiz qotgan, to'g'rimi?",
-                painC2Desc: "Ammo bu muammolarga zudlik bilan yechim topishingiz lozim, to'g'rimi?",
-                painC2Alert: "Aks holda, vaqtida davolanmasa, vitiligo butun tanani egallab, tuzatib bo'lmas holatga kelib qolishi mumkin! Tasavvur qilishning o'zi dahshatli.",
-                painC2Q: "Kasallikka qarshi kurashasizmi yoki yo'q?!",
-                painC2Hope: "✨ Ishonchim komil, siz bu muammoni yengasiz va teringiz sog'lom holatiga qaytadi."
+                refTitle: "Teringizni avvalgi holatiga qaytarishning iloji yo'q deb o'ylasangiz – Adashasiz!",
+                refSub: "Nima qilasiz?",
+                refLead: "Siz shu yergacha o'qiyotgan bo'lsangiz, demak, sizda yoki oilangizda ham vitiligo yoki teri muammolari bor.",
+                refItems: `
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Teridagi oq dog'lar</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Uyat yoki noqulaylik hissi</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Asabiylik va o'z-o'zingizga ishonchsizlik</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Turli mazlar va davolardan foyda ko'rmagansiz yoki ta'siri kam...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Ayniqsa, yilning issiq fasllarida yoki yengi kalta kiyimlar kiyganda noqulaylik sezasiz...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Vitiligodan xalos bo'lishni xohlaysiz-u, lekin "Qanday qilib?" degan savolga javob topolmay boshingiz qotgan, to'g'rimi?</span></div>
+                `,
+                refP1: "Ammo bu muammolarga zudlik bilan yechim topishingiz lozim, to'g'rimi? Aks holda, vaqtida davolanmasa, vitiligo butun tanani egallab, tuzatib bo'lmas holatga kelib qolishi mumkin! Tasavvur qilishning o'zi dahshatli.",
+                refP2: "<strong>Kasallikka qarshi kurashasizmi yoki yo'q?!</strong> Ishonchim komil, siz bu muammoni yengasiz va teringiz sog'lom holatiga qaytadi."
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
+                heroCta: "Бепул маслаҳат олиш",
                 ticker: "<span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span><span>🌿 100% Табиий таркиб</span><span>⭐ 20,000+ Мамнун мижозлар</span><span>🔐 100% Махфийлик кафолатланади</span>",
                 title: "ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!",
                 subtitle: "Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!",
-                painBadge: "Ҳақиқий сабаблар",
-                painHeaderTitle: "Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!",
-                painC1Title: "Нима қиласиз? Сиз шу ергача ўқиётган бўлсангиз, демак...",
-                painC1Desc: "Сизда ёки оилангизда ҳам витилиго ёки тери муаммолари бор:",
-                painC1List: "<li>Теридаги оқ доғлар</li><li>Уят ёки ноқулайлик ҳисси</li><li>Асабийлик ва ўз-ўзингизга ишончсизлик</li><li>Турли мазлар ва даволардан фойда кўрмагансиз ёки таъсири кам...</li>",
-                painC1Footer: "Айниқса, йилнинг иссиқ фаслларида ёки енги калта кийимлар кийганда ноқулайлик сезасиз...",
-                painC2Title: "Витилигодан халос бўлишни хоҳлайсиз-у, лекин 'Қандай қилиб?' деган саволга жавоб тополмай бошингиз қотган, тўғрими?",
-                painC2Desc: "Аммо бу муаммоларга зудлик билан ечим топишингиз лозим, тўғрими?",
-                painC2Alert: "Акс ҳолда, вақтида даволанмаса, витилиго бутун танани эгаллаб, тузатиб бўлмас ҳолатга келиб қолиши мумкин! Тасаввур қилишнинг ўзи даҳшатли.",
-                painC2Q: "Касалликга қарши курашасизми ёки йўқ?!",
-                painC2Hope: "✨ Ишончим комил, сиз бу муаммони енгасиз ва терингиз соғлом ҳолатига қайтади."
+                refTitle: "Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!",
+                refSub: "Нима қиласиз?",
+                refLead: "Сиз шу ергача ўқиётган бўлсангиз, демак, сизда ёки оилангизда ҳам витилиго ёки тери муаммолари бор.",
+                refItems: `
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Теридаги оқ доғлар</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Уят ёки ноқулайлик ҳисси</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Асабийлик ва ўз-ўзингизга ишончсизлик</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Турли мазлар ва даволардан фойда кўрмагансиз ёки таъсири кам...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Айниқса, йилнинг иссиқ фаслларида ёки енги калта кийимлар кийганда ноқулайлик сезасиз...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Витилигодан халос бўлишни хоҳлайсиз-у, лекин "Қандай қилиб?" деган саволга жавоб тополмай бошингиз қотган, тўғрими?</span></div>
+                `,
+                refP1: "Аммо бу муаммоларга зудлик билан ечим топишингиз лозим, тўғрими? Акс ҳолда, вақтида даволанмаса, витилиго бутун танани эгаллаб, тузатиб бўлмас ҳолатга келиб қолиши мумкин! Тасаввур қилишнинг ўзи даҳшатли.",
+                refP2: "<strong>Касалликга қарши курашасизми ёки йўқ?!</strong> Ишончим комил, сиз бу муаммони енгасиз ва терингиз соғлом ҳолатига қайтади."
             },
             ru: {
                 orderBtn: "Заказать",
+                heroCta: "Получить консультацию",
                 ticker: "<span>🚚 БЕСПЛАТНАЯ доставка по всему Узбекистану</span><span>🌿 100% Натуральный состав</span><span>⭐ 20,000+ Довольных клиентов</span><span>🔐 100% Конфиденциальность</span>",
                 title: "ИЗБАВЛЕНИЕ ОТ БЕЛЫХ ПЯТЕН ТЕПЕРЬ ВОЗМОЖНО!",
                 subtitle: "Данный препарат эффективен при витилиго и заболеваниях кожи. Не вызывает привыкания - Результат гарантирован!",
-                painBadge: "Истинные причины",
-                painHeaderTitle: "Если вы думаете, что вернуть коже прежний вид невозможно — вы ошибаетесь!",
-                painC1Title: "Что вы чувствуете? Раз вы читаете до этого момента...",
-                painC1Desc: "Значит, у вас или ваших близких есть проблема с белыми пятнами на коже:",
-                painC1List: "<li>Белые пятна на коже</li><li>Чувство неловкости и стыда</li><li>Нервозность и неуверенность в себе</li><li>Пробовали разные мази, но эффекта почти нет...</li>",
-                painC1Footer: "Особенно в жаркое время года или при ношении одежды с короткими рукавами...",
-                painC2Title: "Хотите избавиться от витилиго, но не знаете точно, 'Как именно?'",
-                painC2Desc: "Но решать эту проблему нужно незамедлительно, верно?",
-                painC2Alert: "Иначе, без своевременной поддержки, пятна могут распространиться по всему телу! Страшно даже представить.",
-                painC2Q: "Будете бороться или оставите все как есть?!",
-                painC2Hope: "✨ Уверены, вы преодолеете эту проблему, и ваша кожа вернется к здоровому виду."
+                refTitle: "Если вы думаете, что вернуть коже прежний вид невозможно — вы ошибаетесь!",
+                refSub: "Что вы чувствуете?",
+                refLead: "Если вы дочитали до этого места, значит, у вас или ваших близких есть витилиго или проблемы с кожей.",
+                refItems: `
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Белые пятна на коже</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Чувство неловкости и стыда</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Нервозность и неуверенность в себе</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Пробовали разные мази, но толку мало...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Дискомфорт в теплое время года или в одежде с короткими рукавами...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Хотите избавиться, но не знаете точно, 'Как именно?'</span></div>
+                `,
+                refP1: "Но решать эту проблему нужно незамедлительно, верно? Без своевременного лечения пятна могут распространиться по всему телу! Страшно представить.",
+                refP2: "<strong>Будете бороться с недугом или нет?!</strong> Уверены, вы преодолеете это и кожа вернет здоровый вид."
             },
             en: {
                 orderBtn: "Order Now",
+                heroCta: "Get Free Advice",
                 ticker: "<span>🚚 FREE delivery across Uzbekistan</span><span>🌿 100% Natural composition</span><span>⭐ 20,000+ Satisfied customers</span><span>🔐 100% Confidentiality guaranteed</span>",
                 title: "GETTING RID OF WHITE SPOTS IS NO LONGER IMPOSSIBLE!",
                 subtitle: "This product is an effective solution for vitiligo and various skin issues. Non-addictive - Guaranteed results!",
-                painBadge: "True reasons",
-                painHeaderTitle: "If you think restoring your skin is impossible — you are wrong!",
-                painC1Title: "What are you facing? If you are reading this...",
-                painC1Desc: "It means you or your loved ones are dealing with vitiligo or skin issues:",
-                painC1List: "<li>White spots on the skin</li><li>Feelings of embarrassment</li><li>Stress and lack of self-confidence</li><li>Tried various creams with little to no result...</li>",
-                painC1Footer: "Especially during warm seasons or when wearing short-sleeved clothing...",
-                painC2Title: "You want to get rid of it, but don't know 'How exactly?', right?",
-                painC2Desc: "However, finding an immediate solution is crucial, isn't it?",
-                painC2Alert: "Otherwise, without timely care, it may spread across the entire body! It's scary even to imagine.",
-                painC2Q: "Will you fight back against it or give up?!",
-                painC2Hope: "✨ We are confident you will overcome this and restore healthy skin."
+                refTitle: "If you think restoring your skin is impossible — you are wrong!",
+                refSub: "What should you do?",
+                refLead: "If you are reading this, you or your loved ones are dealing with vitiligo or skin issues.",
+                refItems: `
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>White spots on the skin</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Embarrassment and discomfort</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Stress and lack of self-confidence</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Tried various creams with little result...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Discomfort during warm seasons or wearing short sleeves...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Want to get rid of it, but don't know exactly 'How?'</span></div>
+                `,
+                refP1: "However, finding an immediate solution is essential! Otherwise, vitiligo can spread over the entire body! It's scary even to imagine.",
+                refP2: "<strong>Will you fight it or not?!</strong> We are sure you will overcome it and your skin will return to health."
             }
         };
 
@@ -716,19 +791,15 @@
                 
                 document.getElementById('hero-title').textContent = t.title;
                 document.getElementById('hero-subtitle').textContent = t.subtitle;
+                document.getElementById('hero-cta').textContent = t.heroCta;
 
-                // 3-Blok Pain Section
-                document.getElementById('pain-badge').textContent = t.painBadge;
-                document.getElementById('pain-header-title').textContent = t.painHeaderTitle;
-                document.getElementById('pain-c1-title').textContent = t.painC1Title;
-                document.getElementById('pain-c1-desc').textContent = t.painC1Desc;
-                document.getElementById('pain-c1-list').innerHTML = t.painC1List;
-                document.getElementById('pain-c1-footer').textContent = t.painC1Footer;
-                document.getElementById('pain-c2-title').textContent = t.painC2Title;
-                document.getElementById('pain-c2-desc').textContent = t.painC2Desc;
-                document.getElementById('pain-c2-alert').textContent = t.painC2Alert;
-                document.getElementById('pain-c2-q').textContent = t.painC2Q;
-                document.getElementById('pain-c2-hope').textContent = t.painC2Hope;
+                // Referens blok matnlari
+                document.getElementById('ref-header-title').textContent = t.refTitle;
+                document.getElementById('ref-sub-query').textContent = t.refSub;
+                document.getElementById('ref-c1-lead').textContent = t.refLead;
+                document.getElementById('ref-c1-items').innerHTML = t.refItems;
+                document.getElementById('ref-c2-p1').textContent = t.refP1;
+                document.getElementById('ref-c2-p2').innerHTML = t.refP2;
             }
         }
 
