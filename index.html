@@ -10,6 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800;900&subset=cyrillic,cyrillic-ext,latin&display=swap" rel="stylesheet">
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -915,9 +919,7 @@
             padding-top: 12px;
         }
 
-        /* ------------------------------------------------------------- */
-        /* 9-BLOK: JIDDIY TIBBIY/WELLNESS STANDARTDAGI USTUN TOMONLAR    */
-        /* ------------------------------------------------------------- */
+        /* 9-BLOK: JIDDIY TIBBIY/WELLNESS STANDARTDAGI USTUN TOMONLAR */
         .advantages-section {
             padding: 60px 0 70px 0;
             background: #ffffff;
@@ -954,7 +956,6 @@
             gap: 24px;
         }
 
-        /* 3-blok va 5-blok kabi qat'iy, nozik chegarali professional blok */
         .adv-clean-card {
             background: #ffffff;
             border: 1px solid #e2ece7;
@@ -971,7 +972,6 @@
             transform: translateY(-2px);
         }
 
-        /* Multfilm emojilar o'rniga jiddiy professional raqamli indikator */
         .adv-num-badge {
             width: 34px;
             height: 34px;
@@ -1003,7 +1003,184 @@
             font-weight: 600;
         }
 
-        /* MOBIL VERSIYA */
+        /* ------------------------------------------------------------- */
+        /* 10-BLOK: REFERENSGA MOS PROFESSIONAL LEAD FORM (BUYURTMA)    */
+        /* ------------------------------------------------------------- */
+        .lead-section {
+            padding: 65px 0 75px 0;
+            background: #00317F; /* Rasmiy brend to'q ko'k rangi */
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lead-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .lead-info-col h2 {
+            font-size: 32px;
+            font-weight: 900;
+            line-height: 1.3;
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+        }
+
+        .lead-info-col p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #e2e8f0;
+            font-weight: 600;
+            margin-bottom: 30px;
+            max-width: 500px;
+        }
+
+        .form-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 32px 28px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+            color: #1a2b25;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13.5px;
+            font-weight: 800;
+            color: #00317F;
+            margin-bottom: 7px;
+        }
+
+        .form-input-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .flag-prefix {
+            position: absolute;
+            left: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            font-weight: 800;
+            color: #1a2b25;
+            pointer-events: none;
+        }
+
+        .form-input {
+            width: 100%;
+            background: #f8fafc;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 14px 16px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #1a2b25;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .form-input.phone-input {
+            padding-left: 78px;
+        }
+
+        .form-input:focus {
+            background: #ffffff;
+            border-color: #00a86b;
+            box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.15);
+        }
+
+        .btn-submit-order {
+            width: 100%;
+            background: #00a86b;
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            padding: 16px 0;
+            font-size: 16px;
+            font-weight: 900;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: pulseGlow 2s infinite;
+            transition: background 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn-submit-order:hover {
+            background: #008f5b;
+        }
+
+        .form-privacy-note {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            color: #64748b;
+            margin-top: 14px;
+        }
+
+        /* 10-BLOK O'NG TOMONIDAGI MAHSULOT KARTASI */
+        .lead-visual-col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .lead-product-img {
+            width: 100%;
+            max-width: 480px;
+            height: auto;
+            border-radius: 20px;
+            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35));
+        }
+
+        /* ------------------------------------------------------------- */
+        /* FOOTER VA LEGAL OGOHLANTIRISH (DISCLAIMER)                    */
+        /* ------------------------------------------------------------- */
+        .site-footer {
+            background: #0b1526;
+            color: #94a3b8;
+            padding: 40px 0 35px 0;
+            border-top: 1px solid #1e293b;
+        }
+
+        .footer-legal-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .footer-legal-box p {
+            font-size: 12.5px;
+            line-height: 1.6;
+            color: #cbd5e1;
+            font-weight: 600;
+        }
+
+        .footer-bottom-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 13px;
+            font-weight: 600;
+            border-top: 1px solid rgba(255, 255, 255, 0.06);
+            padding-top: 20px;
+        }
+
+        /* MOBIL VERSIYA MOSLASHUVI */
         @media (max-width: 768px) {
             .logo-main { font-size: 18px; }
             .btn-phone-desktop { display: none; }
@@ -1089,6 +1266,24 @@
             .adv-num-badge { width: 30px; height: 30px; font-size: 12px; margin-bottom: 12px; }
             .adv-clean-card h3 { font-size: 15.5px; margin-bottom: 6px; }
             .adv-clean-card p { font-size: 13.5px; }
+
+            /* 10-blok mobil Lead formasi */
+            .lead-section { padding: 40px 0 50px 0; }
+            .lead-grid { display: flex; flex-direction: column; gap: 24px; text-align: center; }
+            .lead-visual-col { order: 1; width: 100%; }
+            .lead-product-img { max-width: 90%; }
+            .lead-info-col { order: 2; width: 100%; text-align: left; }
+            .lead-info-col h2 { font-size: 22px; text-align: center; }
+            .lead-info-col p { font-size: 14px; text-align: center; margin-bottom: 22px; }
+            .form-card { padding: 22px 18px; border-radius: 18px; }
+            .form-group label { font-size: 13px; }
+            .form-input { padding: 12px 14px; font-size: 14px; }
+            .form-input.phone-input { padding-left: 74px; }
+            .flag-prefix { font-size: 13px; left: 12px; }
+            .btn-submit-order { padding: 14px 0; font-size: 15px; }
+
+            /* Footer mobil */
+            .footer-bottom-flex { flex-direction: column; gap: 10px; text-align: center; }
 
             .carousel-btn { width: 38px; height: 38px; }
             .carousel-btn.prev { left: -2px; }
@@ -1642,7 +1837,7 @@
 
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
-                        <span id="fq-7">Тўловни маҳсулотни олгандан кейин қилса бўладими?</span>
+                        <span id="fq-7">Тўловни маҳсулотни олгандан keyin қилса бўладими?</span>
                         <div class="faq-toggle-icon">+</div>
                     </button>
                     <div class="faq-answer-pane">
@@ -1663,9 +1858,7 @@
         </div>
     </section>
 
-    <!-- ------------------------------------------------------------- -->
-    <!-- 9-BLOK: JIDDIY TIBBIY/WELLNESS STANDARTDAGI USTUN TOMONLAR    -->
-    <!-- ------------------------------------------------------------- -->
+    <!-- 9-BLOK: JIDDIY TIBBIY/WELLNESS STANDARTDAGI USTUN TOMONLAR -->
     <section class="advantages-section">
         <div class="container">
             <div class="adv-header">
@@ -1674,52 +1867,130 @@
             </div>
 
             <div class="adv-grid">
-                
-                <!-- 1-USTUNLIK -->
                 <div class="adv-clean-card">
                     <div class="adv-num-badge">01</div>
                     <h3 id="adv-c1-t">20,000+ Мамнун мижозлар</h3>
                     <p id="adv-c1-d">Ўзбекистон бўйлаб минглаб инсонлар бизнинг воситамиз орқали оқ доғлар муаммосидан халос бўлиб, соғлом терига эришдилар.</p>
                 </div>
 
-                <!-- 2-USTUNLIK -->
                 <div class="adv-clean-card">
                     <div class="adv-num-badge">02</div>
                     <h3 id="adv-c2-t">Давлат томонидан сертификатланган</h3>
                     <p id="adv-c2-d">Соғлиқни Сақлаш Вазирлиги ва СЭС хулосалари билан расман тасдиқланган, барча хавфсизлик талабларига 100% жавоб беради[cite: 3].</p>
                 </div>
 
-                <!-- 3-USTUNLIK -->
                 <div class="adv-clean-card">
                     <div class="adv-num-badge">03</div>
                     <h3 id="adv-c3-t">100% Табиий ва безарар</h3>
                     <p id="adv-c3-d">Фақат совуқ прессланган седана ёғи ва табиий микроэлементлар. Ҳеч қандай гормонларсиз, организмга ўрганиб қолиш ҳолати юзага келмайди.</p>
                 </div>
 
-                <!-- 4-USTUNLIK -->
                 <div class="adv-clean-card">
                     <div class="adv-num-badge">04</div>
                     <h3 id="adv-c4-t">Ўзбекистон бўйлаб БЕПУЛ етказиш</h3>
                     <p id="adv-c4-d">Қайси вилоят ёки туманда яшашингиздан қатъи назар, буюртмангиз кўрсатилган манзилга мутлақо бепул етказиб берилади.</p>
                 </div>
 
-                <!-- 5-USTUNLIK -->
                 <div class="adv-clean-card">
                     <div class="adv-num-badge">05</div>
                     <h3 id="adv-c5-t">Олгандан сўнг тўлов (100% хавфсиз)</h3>
                     <p id="adv-c5-d">Ҳеч қандай олдиндан тўлов йўқ. Посилкангизни қўлингизга олиб, текшириб кўрганингиздан сўнггина курьерга тўлов қиласиз.</p>
                 </div>
 
-                <!-- 6-USTUNLIK -->
                 <div class="adv-clean-card">
                     <div class="adv-num-badge">06</div>
                     <h3 id="adv-c6-t">Мутахассиснинг шахсий назорати</h3>
                     <p id="adv-c6-d">Муолажа давомида бизнинг тажрибали маслаҳатчиларимиз сиз билан доимий алоқада бўлиб, тўғри қабул қилишингизни кузатиб борадилар.</p>
                 </div>
-
             </div>
         </div>
     </section>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- 10-BLOK: REFERENSGA MOS LEAD FORM (BUYURTMA VA KONSULTATSIYA) -->
+    <!-- ------------------------------------------------------------- -->
+    <section class="lead-section" id="lead-form">
+        <div class="container lead-grid">
+            
+            <!-- CHAP TARAFI: SARLAVHA VA FORMA KARTASI -->
+            <div class="lead-info-col">
+                <h2 id="form-main-title">Буюртма бериш</h2>
+                <p id="form-main-sub">Ҳозироқ бепул консультацияга ёзилинг ва Qomus капсуласи орқали соғлом терига қайтинг![cite: 8]</p>
+
+                <div class="form-card">
+                    <form id="orderForm" onsubmit="submitLeadForm(event)">
+                        
+                        <!-- 1. ISM FAMILIYA -->
+                        <div class="form-group">
+                            <label id="lbl-name" for="clientName">Исм фамилия</label>
+                            <input type="text" id="clientName" class="form-input" placeholder="Исм фамилиянгизни киритинг" required>
+                        </div>
+
+                        <!-- 2. ASOSIY TELEFON RAQAM -->
+                        <div class="form-group">
+                            <label id="lbl-phone1" for="clientPhone1">Телефон рақами</label>
+                            <div class="form-input-wrap">
+                                <span class="flag-prefix">🇺🇿 +998</span>
+                                <input type="tel" id="clientPhone1" class="form-input phone-input" placeholder="90 123-45-67" required maxlength="12">
+                            </div>
+                        </div>
+
+                        <!-- 3. QO'SHIMCHA TELEFON RAQAM -->
+                        <div class="form-group">
+                            <label id="lbl-phone2" for="clientPhone2">Қўшимча телефон рақам</label>
+                            <div class="form-input-wrap">
+                                <span class="flag-prefix">🇺🇿 +998</span>
+                                <input type="tel" id="clientPhone2" class="form-input phone-input" placeholder="91 234-56-78" maxlength="12">
+                            </div>
+                        </div>
+
+                        <!-- 4. RUCHNOY YOZILADIGAN FILTR SAVOL -->
+                        <div class="form-group">
+                            <label id="lbl-history" for="clientHistory">Оқ доғлар қачондан бери бор? (йил, ой)</label>
+                            <input type="text" id="clientHistory" class="form-input" placeholder="Масалан: 2 йилдан бери, яқинда бошланди..." required>
+                        </div>
+
+                        <!-- BUYURTMA TUGMASI -->
+                        <button type="submit" class="btn-submit-order" id="btn-form-submit">
+                            Буюртма бериш
+                        </button>
+
+                        <p class="form-privacy-note" id="form-privacy">🔒 Шахсий маълумотларингиз махфийлиги 100% кафолатланади.</p>
+                    </form>
+                </div>
+            </div>
+
+            <!-- O'NG TARAFI: MAHSULOTNING KATTA RASMI -->
+            <div class="lead-visual-col">
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1000&auto=format&fit=crop&q=80" alt="QOMUS 150 Kapsula" class="lead-product-img">
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- FOOTER VA LEGAL RAD ETISH (DISCLAIMER)                        -->
+    <!-- ------------------------------------------------------------- -->
+    <footer class="site-footer">
+        <div class="container">
+            
+            <div class="footer-legal-box">
+                <p id="footer-disclaimer">
+                    ДИҚҚАТ: «QOMUS» препарати биологик фаол қўшимча (БАД) ҳисобланади ва дори воситаси эмас. Натижалар организмнинг индивидуал хусусиятларига қараб фарқ қилиши мумкин. Қабул қилишдан олдин шифокор билан маслаҳатлашиш тавсия этилади. ССВ Рухсатномаси № 001425.[cite: 3]
+                </p>
+            </div>
+
+            <div class="footer-bottom-flex">
+                <div class="footer-copy">
+                    © 2026 QOMUS. Барча ҳуқуқлар ҳимояланган.
+                </div>
+                <div class="footer-links">
+                    <span>Мурожаат учун: +998 71 203-04-08</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
 
     <!-- FREEZE CALL BUTTON -->
     <a href="tel:+998712030408" class="freeze-call-btn" title="Qo'ng'iroq qilish">
@@ -1794,8 +2065,8 @@
                 // 7-Blok
                 certTitle: "DAVLAT TOMONIDAN TASDIQLANGAN VA SERTIFIKATLANGAN",
                 certDesc: "«QOMUS» preparati O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi tomonidan to'liq ekspertizadan o'tkazilgan va rasmiy ruxsatnomaga ega.",
-                certCap1: "O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi Ruxsatnomasi № 001425",
-                certCap2: "Sanitariya-epidemiologik xulosa № 405282 (Toshkent shahri)",
+                certCap1: "O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi Ruxsatnomasi № 001425[cite: 3]",
+                certCap2: "Sanitariya-epidemiologik xulosa № 405282 (Toshkent shahri)[cite: 3]",
                 certSafety: "Mahsulotning har bir partiyasi gigiyenik, radiologik va bakteriologik sinovlardan muvaffaqiyatli o'tib, inson salomatligi uchun mutlaqo xavfsiz deb topilgan.",
 
                 // 8-Blok FAQ
@@ -1826,7 +2097,20 @@
                 c5T: "Olgandan so'ng to'lov (100% xavfsiz)",
                 c5D: "Hech qanday oldindan to'lov yo'q. Posilkani qo'lingizga olib, tekshirib ko'rganingizdan so'nggina kuryerga to'lov qilasiz.",
                 c6T: "Mutaxassisning shaxsiy nazorati",
-                c6D: "Muolaja davomida bizning tajribali maslahatchilarimiz siz bilan doimiy aloqada bo'lib, to'g'ri qabul qilishingizni kuzatib boradilar."
+                c6D: "Muolaja davomida bizning tajribali maslahatchilarimiz siz bilan doimiy aloqada bo'lib, to'g'ri qabul qilishingizni kuzatib boradilar.",
+
+                // 10-Blok Lead Formasi
+                formTitle: "Buyurtma berish",
+                formSub: "Hoziroq bepul konsultatsiyaga yoziling va Qomus kapsulasi orqali sog'lom teriga qayting![cite: 8]",
+                lblName: "Ism familiya",
+                lblPhone1: "Telefon raqami",
+                lblPhone2: "Qo'shimcha telefon raqam",
+                lblHistory: "Oq dog'lar qachondan beri bor? (yil, oy)",
+                holderName: "Ism familiyangizni kiriting",
+                holderHistory: "Masalan: 2 yildan beri, yaqinda boshlandi...",
+                formSubmit: "Buyurtma berish",
+                formPrivacy: "🔒 Shaxsiy ma'lumotlaringiz maxfiyligi 100% kafolatlanadi.",
+                footerDisc: "DIQQAT: «QOMUS» preparati biologik faol qo'shimcha (BAD) hisoblanadi va dori vositasi emas. Natijalar organizmning individual xususiyatlariga qarab farq qilishi mumkin. Qabul qilishdan oldin shifokor bilan maslahatlashish tavsiya etiladi. SSV Ruxsatnomasi № 001425.[cite: 3]"
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
@@ -1898,7 +2182,7 @@
                     { q: "Капсула қобиғи ҳалолми ва у нимадан тайёрланган?", a: "Капсула қобиғи фақатгина ҳалол сўйилган қора мол желатинидан тайёрланган бўлиб, ошқозонда осон эрийди ва ошқозон-ичак тизимига ҳеч қандай оғирлик қилмайди." },
                     { q: "Ҳомиладорлик ёки эмизиш даврида ичиш мумкинми?", a: "Ҳомиладорлик ва лактация даврида ҳар қандай биологик фаол қўшимчаларни қабул қилишдан олдин шахсий шифокор билан маслаҳатлашиш тавсия қилинади." },
                     { q: "Етказиб бериш хизмати қанча вақт олади ва у пулликми?", a: "Ўзбекистон бўйлаб барча вилоят, шаҳар ва туманларга етказиб бериш мутлақо БЕПУЛ амалга оширилади. Тошкент шаҳрида 24 соат ичида, вилоятларга 1-2 кун ичида қўлингизга етказилади." },
-                    { q: "Тўловни маҳсулотни олгандан кейин қилса бўладими?", a: "Албатта! Бизда 100% ишончли тизим йўлга қўйилган: тўлов маҳсулотни курьердан қабул қилиб олиб, сифатига тўлиқ ишонч ҳосил қилганингиздан сўнг (нақд ёки пластик карта орқали) тўланади." },
+                    { q: "Тўловни маҳсулотни олгандан keyin қилса бўладими?", a: "Албатта! Бизда 100% ишончли тизим йўлга қўйилган: тўлов маҳсулотни курьердан қабул қилиб олиб, сифатига тўлиқ ишонч ҳосил қилганингиздан сўнг (нақд ёки пластик карта орқали) тўланади." },
                     { q: "Бир флаконда нечта капсула бор ва у қанча вақтга етади?", a: "Бир флаконда 150 та юмшоқ желатин капсула мавжуд. Бу кунига қабул қилинадиган дозага қараб ўртача 1–1.5 ойлик тўлиқ муолажа курси учун етарли ҳисобланади." }
                 ],
 
@@ -1916,7 +2200,20 @@
                 c5T: "Олгандан сўнг тўлов (100% хавфсиз)",
                 c5D: "Ҳеч қандай олдиндан тўлов йўқ. Посилкангизни қўлингизга олиб, текшириб кўрганингиздан сўнггина курьерга тўлов қиласиз.",
                 c6T: "Мутахассиснинг шахсий назорати",
-                c6D: "Муолажа давомида бизнинг тажрибали маслаҳатчиларимиз сиз билан доимий алоқада бўлиб, тўғри қабул қилишингизни кузатиб борадилар."
+                c6D: "Муолажа давомида бизнинг тажрибали маслаҳатчиларимиз сиз билан доимий алоқада бўлиб, тўғри қабул қилишингизни кузатиб борадилар.",
+
+                // 10-Blok Lead Formasi
+                formTitle: "Буюртма бериш",
+                formSub: "Ҳозироқ бепул консультацияга ёзилинг ва Qomus капсуласи орқали соғлом терига қайтинг![cite: 8]",
+                lblName: "Исм фамилия",
+                lblPhone1: "Телефон рақами",
+                lblPhone2: "Қўшимча телефон рақам",
+                lblHistory: "Оқ доғлар қачондан бери бор? (йил, ой)",
+                holderName: "Исм фамилиянгизни киритинг",
+                holderHistory: "Масалан: 2 йилдан бери, яқинда бошланди...",
+                formSubmit: "Буюртма бериш",
+                formPrivacy: "🔒 Шахсий маълумотларингиз махфийлиги 100% кафолатланади.",
+                footerDisc: "ДИҚҚАТ: «QOMUS» препарати биологик фаол қўшимча (БАД) ҳисобланади ва дори воситаси эмас. Натижалар организмнинг индивидуал хусусиятларига қараб фарқ қилиши мумкин. Қабул қилишдан олдин шифокор билан маслаҳатлашиш тавсия этилади. ССВ Рухсатномаси № 001425.[cite: 3]"
             },
             ru: {
                 orderBtn: "Заказать",
@@ -2007,6 +2304,19 @@
                 c5D: "Никаких предоплат. Вы оплачиваете заказ только после личной проверки посылки при курьере.",
                 c6T: "Индивидуальный контроль специалиста",
                 c6D: "На протяжении всего курса наши консультанты регулярно на связи, контролируя правильный прием."
+                ,
+                // 10-Blok Lead Formasi
+                formTitle: "Оформить заказ",
+                formSub: "Запишитесь на бесплатную консультацию и верните здоровье кожи вместе с «QOMUS»!",
+                lblName: "Имя и фамилия",
+                lblPhone1: "Номер телефона",
+                lblPhone2: "Дополнительный номер телефона",
+                lblHistory: "Как давно появились белые пятна? (лет, месяцев)",
+                holderName: "Введите ваше имя и фамилию",
+                holderHistory: "Например: 2 года назад, недавно появились...",
+                formSubmit: "Оформить заказ",
+                formPrivacy: "🔒 Конфиденциальность ваших данных гарантирована на 100%.",
+                footerDisc: "ВНИМАНИЕ: Препарат «QOMUS» является биологически активной добавкой (БАД) и не является лекарственным средством. Результаты индивидуальны. Перед применением рекомендуется проконсультироваться с врачом. Разрешение Минздрава РУз № 001425.[cite: 3]"
             },
             en: {
                 orderBtn: "Order Now",
@@ -2096,7 +2406,20 @@
                 c5T: "Cash on Delivery (100% Secure)",
                 c5D: "No advance payment required. Inspect your order in person before paying the courier.",
                 c6T: "Personal Expert Guidance",
-                c6D: "Our specialists provide consistent, free phone consultations and monitor your proper course progress."
+                c6D: "Our specialists provide consistent, free phone consultations and monitor your proper course progress.",
+
+                // 10-Blok Lead Formasi
+                formTitle: "Place an Order",
+                formSub: "Sign up for a free consultation today and reclaim healthy skin with “QOMUS”!",
+                lblName: "Full Name",
+                lblPhone1: "Phone Number",
+                lblPhone2: "Alternative Phone Number",
+                lblHistory: "How long have you had vitiligo? (years, months)",
+                holderName: "Enter your full name",
+                holderHistory: "e.g., 2 years, recently noticed...",
+                formSubmit: "Place Order",
+                formPrivacy: "🔒 100% privacy and data security guaranteed.",
+                footerDisc: "NOTE: “QOMUS” is a dietary supplement and not a medicinal drug. Results may vary depending on individual physiological traits. Medical consultation is recommended before use. MOH Permit № 001425.[cite: 3]"
             }
         };
 
@@ -2189,6 +2512,19 @@
                 document.getElementById('adv-c5-d').textContent = t.c5D;
                 document.getElementById('adv-c6-t').textContent = t.c6T;
                 document.getElementById('adv-c6-d').textContent = t.c6D;
+
+                // 10-Blok Lead Formasi tarjimalari
+                document.getElementById('form-main-title').textContent = t.formTitle;
+                document.getElementById('form-main-sub').textContent = t.formSub;
+                document.getElementById('lbl-name').textContent = t.lblName;
+                document.getElementById('lbl-phone1').textContent = t.lblPhone1;
+                document.getElementById('lbl-phone2').textContent = t.lblPhone2;
+                document.getElementById('lbl-history').textContent = t.lblHistory;
+                document.getElementById('clientName').placeholder = t.holderName;
+                document.getElementById('clientHistory').placeholder = t.holderHistory;
+                document.getElementById('btn-form-submit').textContent = t.formSubmit;
+                document.getElementById('form-privacy').textContent = t.formPrivacy;
+                document.getElementById('footer-disclaimer').textContent = t.footerDisc;
             }
         }
 
@@ -2354,6 +2690,18 @@
             vIsTransitioning = true;
             vCurrentIndex--;
             updateVideoCarouselPosition(true);
+        }
+
+        /* 10-BLOK: FORMA YUBORILGANDA ISHLAYDIGAN BOSHCHILIK FUNKSIYA */
+        function submitLeadForm(e) {
+            e.preventDefault();
+            const name = document.getElementById('clientName').value;
+            const phone1 = '+998 ' + document.getElementById('clientPhone1').value;
+            const phone2 = document.getElementById('clientPhone2').value ? '+998 ' + document.getElementById('clientPhone2').value : 'Mavjud emas';
+            const history = document.getElementById('clientHistory').value;
+
+            alert("Rahmat, " + name + "! So'rovingiz qabul qilindi. Tez orada mutaxassisimiz siz bilan bog'lanadi.");
+            document.getElementById('orderForm').reset();
         }
 
         window.addEventListener('resize', () => {
