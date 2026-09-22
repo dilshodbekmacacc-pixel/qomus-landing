@@ -525,7 +525,7 @@
         .carousel-btn.prev { left: 4px; }
         .carousel-btn.next { right: 4px; }
 
-        /* 5-BLOK: KENGAYTIRILGAN TOZA TARKIB RO'YXATI */
+        /* 5-BLOK: TARKIB */
         .composition-section {
             padding: 60px 0 70px 0;
             background: #ffffff;
@@ -681,7 +681,6 @@
             border: 0;
         }
 
-        /* SWIPE SHIELD (MOBILDA SWIPE QILISHNI OSONLAShTIRUVChI TOSHMA QATLAM) */
         .video-swipe-overlay {
             position: absolute;
             top: 0;
@@ -720,11 +719,9 @@
             line-height: 1.45;
         }
 
-        /* ------------------------------------------------------------- */
-        /* 7-BLOK: SERTIFIKATLAR VA RASMIY RUXSATNOMALAR (REFERENS USLUB) */
-        /* ------------------------------------------------------------- */
+        /* 7-BLOK: SERTIFIKATLAR (BORDERSIZ TOZA MATN) */
         .cert-section {
-            padding: 55px 0 65px 0;
+            padding: 55px 0 50px 0;
             background: #ffffff;
             border-bottom: 1px solid #e2ece7;
         }
@@ -757,10 +754,9 @@
             grid-template-columns: 1fr 1fr;
             gap: 30px;
             max-width: 860px;
-            margin: 0 auto 30px auto;
+            margin: 0 auto 25px auto;
         }
 
-        /* Referensdagi kabi qora ramkali sifatli sertifikat kartasi */
         .cert-card {
             background: #111111;
             padding: 12px;
@@ -790,21 +786,136 @@
             line-height: 1.4;
         }
 
-        .cert-subtext-box {
+        /* OXIRIDAGI BORDERSIZ VA RAMKASIZ TOZA MATN */
+        .cert-subtext-clean {
             max-width: 820px;
-            margin: 0 auto;
-            background: #f7faf9;
-            border: 1px solid #e0e9e5;
-            border-radius: 14px;
-            padding: 16px 20px;
+            margin: 15px auto 0 auto;
             text-align: center;
+            padding: 0 10px;
         }
 
-        .cert-subtext-box p {
-            font-size: 14px;
-            color: #334155;
+        .cert-subtext-clean p {
+            font-size: 14.5px;
+            color: #475569;
             font-weight: 600;
-            line-height: 1.6;
+            line-height: 1.65;
+        }
+
+        /* ------------------------------------------------------------- */
+        /* 8-BLOK: FAQ AKORDEON (8 TA SAVOL-JAVOB)                       */
+        /* ------------------------------------------------------------- */
+        .faq-section {
+            padding: 55px 0 65px 0;
+            background: #f7faf9;
+            border-bottom: 1px solid #e0e9e5;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .faq-header h2 {
+            color: #00317F;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
+
+        .faq-header p {
+            color: #475569;
+            font-size: 15px;
+            font-weight: 600;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .faq-container {
+            max-width: 860px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: #ffffff;
+            border: 1px solid #e0e9e5;
+            border-radius: 14px;
+            overflow: hidden;
+            transition: all 0.25s ease;
+            box-shadow: 0 2px 8px rgba(0, 49, 127, 0.03);
+        }
+
+        .faq-item.active {
+            border-color: #00a86b;
+            box-shadow: 0 6px 18px rgba(0, 168, 107, 0.08);
+        }
+
+        .faq-question-btn {
+            width: 100%;
+            padding: 18px 20px;
+            background: transparent;
+            border: none;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+            text-align: left;
+            gap: 15px;
+        }
+
+        .faq-question-btn span {
+            font-size: 15.5px;
+            font-weight: 800;
+            color: #00317F;
+            line-height: 1.4;
+        }
+
+        .faq-toggle-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background: #f0f4f2;
+            color: #00317F;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 700;
+            flex-shrink: 0;
+            transition: all 0.25s ease;
+        }
+
+        .faq-item.active .faq-toggle-icon {
+            background: #00a86b;
+            color: #ffffff;
+            transform: rotate(45deg);
+        }
+
+        .faq-answer-pane {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, padding 0.35s ease;
+            background: #ffffff;
+            padding: 0 20px;
+        }
+
+        .faq-item.active .faq-answer-pane {
+            max-height: 250px;
+            padding: 0 20px 18px 20px;
+        }
+
+        .faq-answer-pane p {
+            font-size: 14px;
+            line-height: 1.65;
+            color: #475569;
+            font-weight: 600;
+            border-top: 1px solid #f0f4f2;
+            padding-top: 12px;
         }
 
         /* MOBIL VERSIYA */
@@ -867,13 +978,22 @@
             .video-card-title { font-size: 13.5px; }
 
             /* 7-blok sertifikat mobil */
-            .cert-section { padding: 32px 0 40px 0; }
+            .cert-section { padding: 32px 0 35px 0; }
             .cert-header h2 { font-size: 20px; margin-bottom: 8px; }
             .cert-header p { font-size: 13.5px; }
             .cert-grid { display: flex; flex-direction: column; gap: 20px; }
             .cert-card { padding: 10px; border-radius: 14px; }
             .cert-caption { font-size: 12px; margin-top: 10px; }
-            .cert-subtext-box p { font-size: 13px; }
+            .cert-subtext-clean p { font-size: 13.5px; }
+
+            /* 8-blok FAQ mobil */
+            .faq-section { padding: 32px 0 40px 0; }
+            .faq-header h2 { font-size: 21px; margin-bottom: 8px; }
+            .faq-header p { font-size: 13.5px; margin-bottom: 22px; }
+            .faq-question-btn { padding: 14px 16px; }
+            .faq-question-btn span { font-size: 14px; }
+            .faq-toggle-icon { width: 26px; height: 26px; font-size: 16px; }
+            .faq-answer-pane p { font-size: 13px; }
 
             .carousel-btn { width: 38px; height: 38px; }
             .carousel-btn.prev { left: -2px; }
@@ -1184,7 +1304,7 @@
         </div>
     </section>
 
-    <!-- 6-BLOK: YOUTUBE VIDEO SHARHLAR KARUSELI (SWIPE QILSA BO'LADIGAN VA TARJIMALARI BILAN) -->
+    <!-- 6-BLOK: YOUTUBE VIDEO SHARHLAR KARUSELI -->
     <section class="video-results-section">
         <div class="container">
             <h2 class="video-header-title" id="video-sec-title">Мижозларимизнинг видео фикрлари</h2>
@@ -1200,7 +1320,6 @@
                 <div class="carousel-track-wrapper" id="videoCarouselWrapper">
                     <div class="carousel-track" id="videoCarouselTrack">
                         
-                        <!-- 1-VIDEO -->
                         <div class="video-carousel-slide">
                             <div class="video-card-item">
                                 <div class="video-embed-box">
@@ -1208,13 +1327,10 @@
                                     <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
                                     <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
-                                <div class="video-card-footer">
-                                    <h4 class="video-card-title" id="vt-1">25 йиллик дарддан қандай қутилдим? Витилиго ҳақида ҳақиқатлар</h4>
-                                </div>
+                                <div class="video-card-footer"><h4 class="video-card-title" id="vt-1">25 йиллик дарддан қандай қутилдим? Витилиго ҳақида ҳақиқатлар</h4></div>
                             </div>
                         </div>
 
-                        <!-- 2-VIDEO -->
                         <div class="video-carousel-slide">
                             <div class="video-card-item">
                                 <div class="video-embed-box">
@@ -1222,13 +1338,10 @@
                                     <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
                                     <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
-                                <div class="video-card-footer">
-                                    <h4 class="video-card-title" id="vt-2">Қомус препарати билан тери пигментининг тикланиш жараёни</h4>
-                                </div>
+                                <div class="video-card-footer"><h4 class="video-card-title" id="vt-2">Қомус препарати билан тери пигментининг тикланиш жараёни</h4></div>
                             </div>
                         </div>
 
-                        <!-- 3-VIDEO -->
                         <div class="video-carousel-slide">
                             <div class="video-card-item">
                                 <div class="video-embed-box">
@@ -1236,13 +1349,10 @@
                                     <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
                                     <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
-                                <div class="video-card-footer">
-                                    <h4 class="video-card-title" id="vt-3">Оқ доғлар бўйича мижозимизнинг ҳаётий тажрибаси</h4>
-                                </div>
+                                <div class="video-card-footer"><h4 class="video-card-title" id="vt-3">Оқ доғлар бўйича мижозимизнинг ҳаётий тажрибаси</h4></div>
                             </div>
                         </div>
 
-                        <!-- 4-VIDEO -->
                         <div class="video-carousel-slide">
                             <div class="video-card-item">
                                 <div class="video-embed-box">
@@ -1250,13 +1360,10 @@
                                     <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
                                     <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
-                                <div class="video-card-footer">
-                                    <h4 class="video-card-title" id="vt-4">Мижознинг самимий фикрлари ва эришилган натижа</h4>
-                                </div>
+                                <div class="video-card-footer"><h4 class="video-card-title" id="vt-4">Мижознинг самимий фикрлари ва эришилган натижа</h4></div>
                             </div>
                         </div>
 
-                        <!-- 5-VIDEO -->
                         <div class="video-carousel-slide">
                             <div class="video-card-item">
                                 <div class="video-embed-box">
@@ -1264,13 +1371,10 @@
                                     <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
                                     <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
-                                <div class="video-card-footer">
-                                    <h4 class="video-card-title" id="vt-5">Муолажа босқичлари ва ижобий ўзгаришлар</h4>
-                                </div>
+                                <div class="video-card-footer"><h4 class="video-card-title" id="vt-5">Муолажа босқичлари ва ижобий ўзгаришлар</h4></div>
                             </div>
                         </div>
 
-                        <!-- 6-VIDEO -->
                         <div class="video-carousel-slide">
                             <div class="video-card-item">
                                 <div class="video-embed-box">
@@ -1278,13 +1382,10 @@
                                     <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
                                     <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
-                                <div class="video-card-footer">
-                                    <h4 class="video-card-title" id="vt-6">Витилиго муаммосидан сўнг соғлом терига қайтиш</h4>
-                                </div>
+                                <div class="video-card-footer"><h4 class="video-card-title" id="vt-6">Витилиго муаммосидан сўнг соғлом терига қайтиш</h4></div>
                             </div>
                         </div>
 
-                        <!-- 7-VIDEO -->
                         <div class="video-carousel-slide">
                             <div class="video-card-item">
                                 <div class="video-embed-box">
@@ -1292,13 +1393,10 @@
                                     <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
                                     <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
-                                <div class="video-card-footer">
-                                    <h4 class="video-card-title" id="vt-7">Теридаги пигментация қайта тикланиши бўйича фикрлар</h4>
-                                </div>
+                                <div class="video-card-footer"><h4 class="video-card-title" id="vt-7">Теридаги пигментация қайта тикланиши бўйича фикрлар</h4></div>
                             </div>
                         </div>
 
-                        <!-- 8-VIDEO -->
                         <div class="video-carousel-slide">
                             <div class="video-card-item">
                                 <div class="video-embed-box">
@@ -1306,13 +1404,10 @@
                                     <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
                                     <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
-                                <div class="video-card-footer">
-                                    <h4 class="video-card-title" id="vt-8">Қомус капсулаларини қабул қилиш тажрибаси</h4>
-                                </div>
+                                <div class="video-card-footer"><h4 class="video-card-title" id="vt-8">Қомус капсулаларини қабул қилиш тажрибаси</h4></div>
                             </div>
                         </div>
 
-                        <!-- 9-VIDEO -->
                         <div class="video-carousel-slide">
                             <div class="video-card-item">
                                 <div class="video-embed-box">
@@ -1320,13 +1415,10 @@
                                     <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
                                     <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
-                                <div class="video-card-footer">
-                                    <h4 class="video-card-title" id="vt-9">Мижозимизнинг даволаниш давомидаги ўзгаришлари</h4>
-                                </div>
+                                <div class="video-card-footer"><h4 class="video-card-title" id="vt-9">Мижозимизнинг даволаниш давомидаги ўзгаришлари</h4></div>
                             </div>
                         </div>
 
-                        <!-- 10-VIDEO -->
                         <div class="video-carousel-slide">
                             <div class="video-card-item">
                                 <div class="video-embed-box">
@@ -1334,9 +1426,7 @@
                                     <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
                                     <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
-                                <div class="video-card-footer">
-                                    <h4 class="video-card-title" id="vt-10">Ҳақиқий натижалар: мижоз билан жонли мулоқот</h4>
-                                </div>
+                                <div class="video-card-footer"><h4 class="video-card-title" id="vt-10">Ҳақиқий натижалар: мижоз билан жонли мулоқот</h4></div>
                             </div>
                         </div>
 
@@ -1352,9 +1442,7 @@
         </div>
     </section>
 
-    <!-- ------------------------------------------------------------- -->
-    <!-- 7-BLOK: SERTIFIKATLAR VA HUJJATLAR (REFERENS RASMI BO'YICHA)   -->
-    <!-- ------------------------------------------------------------- -->
+    <!-- 7-BLOK: SERTIFIKATLAR (BORDERSIZ VA RAMKASIZ TOZA PASTKI MATN BILAN) -->
     <section class="cert-section">
         <div class="container">
             <div class="cert-header">
@@ -1364,32 +1452,131 @@
                 </p>
             </div>
 
-            <!-- QORA RAMKALI SERTIFIKATLAR KARTASI -->
             <div class="cert-grid">
-                
-                <!-- 1-SERTIFIKAT: SSV RUXSATNOMASI -->
                 <div class="cert-card">
-                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700&auto=format&fit=crop&q=80" alt="SSV Ruxsatnomasi" id="cert-img-1">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700&auto=format&fit=crop&q=80" alt="SSV Ruxsatnomasi">
                     <p class="cert-caption" id="cert-cap-1">
                         Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425
                     </p>
                 </div>
 
-                <!-- 2-SERTIFIKAT: SANITARIYA-EPIDEMIOLOGIK XULOSA -->
                 <div class="cert-card">
-                    <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?w=700&auto=format&fit=crop&q=80" alt="Sanitariya xulosasi" id="cert-img-2">
+                    <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?w=700&auto=format&fit=crop&q=80" alt="Sanitariya xulosasi">
                     <p class="cert-caption" id="cert-cap-2">
                         Санитарно-эпидемиологическое заключение № 405282 (Тошкент)
                     </p>
                 </div>
-
             </div>
 
-            <!-- PASTKI ISHONCH MATNI -->
-            <div class="cert-subtext-box">
+            <!-- BORDERSIZ TOZA PASTKI MATN -->
+            <div class="cert-subtext-clean">
                 <p id="cert-safety-text">
                     Маҳсулотнинг ҳар бир партияси гигиеник, радиологик ва бактериологик синовлардан муваффақиятли ўтиб, инсон саломатлиги учун мутлақо хавфсиз деб топилган.
                 </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- 8-BLOK: FAQ AKORDEON (8 TA SAVOL-JAVOB)                       -->
+    <!-- ------------------------------------------------------------- -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header">
+                <h2 id="faq-main-title">КЎП БЕРИЛАДИГАН САВОЛЛАР</h2>
+                <p id="faq-main-sub">Мижозларимиз томонидан энг кўп бериладиган саволларга расмий мутахассисларимиз жавоблари</p>
+            </div>
+
+            <div class="faq-container">
+                
+                <!-- 1-SAVOL -->
+                <div class="faq-item">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">
+                        <span id="fq-1">Препарат ўрганиб қолиш (привыкание) ҳолатини келтириб чиқармайдими?</span>
+                        <div class="faq-toggle-icon">+</div>
+                    </button>
+                    <div class="faq-answer-pane">
+                        <p id="fa-1">Йўқ, “QOMUS” 100% табиий совуқ прессланган қора седана ёғи ва витаминлар мажмуасидан иборат бўлиб, гормонлар ёки кимёвий қўшимчалар сақламайди. Шу сабабли қабул қилиш тўхтатилганда ҳам ўрганиб қолиш ҳолати кузатилмайди.</p>
+                    </div>
+                </div>
+
+                <!-- 2-SAVOL -->
+                <div class="faq-item">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">
+                        <span id="fq-2">Биринчи сезиларли натижалар қачон кўрина бошлайди?</span>
+                        <div class="faq-toggle-icon">+</div>
+                    </button>
+                    <div class="faq-answer-pane">
+                        <p id="fa-2">Организмнинг хусусияти ва касаллик даражасига қараб, одатда мунтазам фойдаланишнинг 3–4 ҳафтасида тери пигментациясида ижобий ўзгаришлар, оқ доғлар четларининг табиий рангга қайта бошлаши кузатилади.</p>
+                    </div>
+                </div>
+
+                <!-- 3-SAVOL -->
+                <div class="faq-item">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">
+                        <span id="fq-3">Капсулаларни қандай тартибда қабул қилиш тавсия этилади?</span>
+                        <div class="faq-toggle-icon">+</div>
+                    </button>
+                    <div class="faq-answer-pane">
+                        <p id="fa-3">Катталар учун кунига 2 маҳал (эрталаб ва кечқурун) овқатдан 20-30 дақиқа олдин 1-2 тадан капсулани илиқ сув билан ичиш тавсия этилади. Аниқ муолажа курсини мутахассис телефон орқали алоҳида белгилаб беради.</p>
+                    </div>
+                </div>
+
+                <!-- 4-SAVOL -->
+                <div class="faq-item">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">
+                        <span id="fq-4">Капсула қобиғи ҳалолми ва у нимадан тайёрланган?</span>
+                        <div class="faq-toggle-icon">+</div>
+                    </button>
+                    <div class="faq-answer-pane">
+                        <p id="fa-4">Капсула қобиғи фақатгина ҳалол сўйилган қора мол желатинидан тайёрланган бўлиб, ошқозонда осон эрийди ва ошқозон-ичак тизимига ҳеч қандай оғирлик қилмайди.</p>
+                    </div>
+                </div>
+
+                <!-- 5-SAVOL -->
+                <div class="faq-item">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">
+                        <span id="fq-5">Ҳомиладорлик ёки эмизиш даврида ичиш мумкинми?</span>
+                        <div class="faq-toggle-icon">+</div>
+                    </button>
+                    <div class="faq-answer-pane">
+                        <p id="fa-5">Ҳомиладорлик ва лактация даврида ҳар қандай биологик фаол қўшимчаларни қабул қилишдан олдин шахсий шифокор билан маслаҳатлашиш тавсия қилинади.</p>
+                    </div>
+                </div>
+
+                <!-- 6-SAVOL -->
+                <div class="faq-item">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">
+                        <span id="fq-6">Етказиб бериш хизмати қанча вақт олади ва у пулликми?</span>
+                        <div class="faq-toggle-icon">+</div>
+                    </button>
+                    <div class="faq-answer-pane">
+                        <p id="fa-6">Ўзбекистон бўйлаб барча вилоят, шаҳар ва туманларга етказиб бериш мутлақо БЕПУЛ амалга оширилади. Тошкент шаҳрида 24 соат ичида, вилоятларга 1-2 кун ичида қўлингизга етказилади.</p>
+                    </div>
+                </div>
+
+                <!-- 7-SAVOL -->
+                <div class="faq-item">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">
+                        <span id="fq-7">Тўловни маҳсулотни олгандан кейин қилса бўладими?</span>
+                        <div class="faq-toggle-icon">+</div>
+                    </button>
+                    <div class="faq-answer-pane">
+                        <p id="fa-7">Албатта! Бизда 100% ишончли тизим йўлга қўйилган: тўлов маҳсулотни курьердан қабул қилиб олиб, сифатига тўлиқ ишонч ҳосил қилганингиздан сўнг (нақд ёки пластик карта орқали) тўланади.</p>
+                    </div>
+                </div>
+
+                <!-- 8-SAVOL -->
+                <div class="faq-item">
+                    <button class="faq-question-btn" onclick="toggleFaq(this)">
+                        <span id="fq-8">Бир флаконда нечта капсула бор ва у қанча вақтга етади?</span>
+                        <div class="faq-toggle-icon">+</div>
+                    </button>
+                    <div class="faq-answer-pane">
+                        <p id="fa-8">Бир флаконда 150 та юмшоқ желатин капсула мавжуд. Бу кунига қабул қилинадиган дозага қараб ўртача 1–1.5 ойлик тўлиқ муолажа курси учун етарли ҳисобланади.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -1448,7 +1635,7 @@
                 cI5T: "Yordamchi komponentlar va efir moylari",
                 cI5D: "Qora mol jelatini, glitserin, nigelon, A-karotinoidlar va limon kislotasi asosidagi tabiiy kapsula.",
 
-                // 6-Blok Video Tarjimalari
+                // 6-Blok video
                 videoSecTitle: "Mijozlarimizning video fikrlari",
                 videoSecSub: "Qomus preparatidan foydalanib natijaga erishgan yurtdoshlarimiz bilan suhbatlar",
                 videoTitles: [
@@ -1464,12 +1651,26 @@
                     "Haqiqiy natijalar: mijoz bilan jonli muloqot"
                 ],
 
-                // 7-Blok Sertifikatlar
+                // 7-Blok
                 certTitle: "DAVLAT TOMONIDAN TASDIQLANGAN VA SERTIFIKATLANGAN",
                 certDesc: "«QOMUS» preparati O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi tomonidan to'liq ekspertizadan o'tkazilgan va rasmiy ruxsatnomaga ega.",
                 certCap1: "O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi Ruxsatnomasi № 001425",
                 certCap2: "Sanitariya-epidemiologik xulosa № 405282 (Toshkent shahri)",
-                certSafety: "Mahsulotning har bir partiyasi gigiyenik, radiologik va bakteriologik sinovlardan muvaffaqiyatli o'tib, inson salomatligi uchun mutlaqo xavfsiz deb topilgan."
+                certSafety: "Mahsulotning har bir partiyasi gigiyenik, radiologik va bakteriologik sinovlardan muvaffaqiyatli o'tib, inson salomatligi uchun mutlaqo xavfsiz deb topilgan.",
+
+                // 8-Blok FAQ
+                faqTitle: "KO'P BERILADIGAN SAVOLLAR",
+                faqSub: "Mijozlarimiz tomonidan eng ko'p beriladigan savollarga rasmiy mutaxassislarimiz javoblari",
+                faqs: [
+                    { q: "Preparat o'rganib qolish (privikanie) holatini keltirib chiqarmaydimi?", a: "Yo'q, “QOMUS” 100% tabiiy sovuq presslangan qora sedana yog'i va vitaminlar majmuasidan iborat bo'lib, gormonlar yoki kimyoviy qo'shimchalar saqlamaydi. Shu sababli qabul qilish to'xtatilganda ham o'rganib qolish holati kuzatilmaydi." },
+                    { q: "Birinchi sezilarli natijalar qachon ko'rina boshlaydi?", a: "Organizmning xususiyati va kasallik darajasiga qarab, odatda muntazam foydalanishning 3–4 haftasida teri pigmentatsiyasida ijobiy o'zgarishlar, oq dog'lar chetlarining tabiiy rangga qayta boshlashi kuzatiladi." },
+                    { q: "Kapsulalarni qanday tartibda qabul qilish tavsiya etiladi?", a: "Kattalar uchun kuniga 2 mahal (ertalab va kechqurun) ovqatdan 20-30 daqiqa oldin 1-2 tadan kapsulani iliq suv bilan ichish tavsiya etiladi. Aniq muolaja kursini mutaxassis telefon orqali alohida belgilab beradi." },
+                    { q: "Kapsula qobig'i halolmi va u nimadan tayyorlangan?", a: "Kapsula qobig'i faqatgina halol so'yilgan qora mol jelatinidan tayyorlangan bo'lib, oshqozonda oson eriydi va oshqozon-ichak tizimiga hech qanday og'irlik qilmaydi." },
+                    { q: "Homiladorlik yoki emizish davrida ichish mumkinmi?", a: "Homiladorlik va laktatsiya davrida har qanday biologik faol qo'shimchalarni qabul qilishdan oldin shaxsiy shifokor bilan maslahatlashish tavsiya qilinadi." },
+                    { q: "Yetkazib berish xizmati qancha vaqt oladi va u pullikmi?", a: "O'zbekiston bo'ylab barcha viloyat, shahar va tumanlarga yetkazib berish mutlaqo BEPUL amalga oshiriladi. Toshkent shahrida 24 soat ichida, viloyatlarga 1-2 kun ichida qo'lingizga yetkaziladi." },
+                    { q: "To'lovni mahsulotni olgandan keyin qilsa bo'ladimi?", a: "Albatta! Bizda 100% ishonchli tizim yo'lga qo'yilgan: to'lov mahsulotni kuryerdan qabul qilib olib, sifatiga to'liq ishonch hosil qilganingizdan so'ng (naqd yoki plastik karta orqali) to'lanadi." },
+                    { q: "Bir flakonda nechta kapsula bor va u qancha vaqtga yetadi?", a: "Bir flakonda 150 ta yumshoq jelatin kapsula mavjud. Bu kuniga qabul qilinadigan dozaga qarab o'rtacha 1–1.5 oylik to'liq muolaja kursi uchun yetarli hisoblanadi." }
+                ]
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
@@ -1508,7 +1709,7 @@
                 cI5T: "Ёрдамчи компонентлар ва эфир мойлари",
                 cI5D: "Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула.",
 
-                // 6-Blok Video Tarjimalari
+                // 6-Blok video
                 videoSecTitle: "Мижозларимизнинг видео фикрлари",
                 videoSecSub: "Қомус препаратидан фойдаланиб натижага эришган юртдошларимиз билан суҳбатлар",
                 videoTitles: [
@@ -1524,12 +1725,26 @@
                     "Ҳақиқий натижалар: мижоз билан жонли мулоқот"
                 ],
 
-                // 7-Blok Sertifikatlar
+                // 7-Blok
                 certTitle: "ДАВЛАТ ТОМОНИДАН ТАСДИҚЛАНГАН ВА СЕРТИФИКАТЛАНГАН",
                 certDesc: "«QOMUS» препарати Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги томонидан тўлиқ экспертизадан ўтказилган ва расмий рухсатномага эга.",
                 certCap1: "Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425",
                 certCap2: "Санитарно-эпидемиологическое заключение № 405282 (Тошкент)",
-                certSafety: "Маҳсулотнинг ҳар бир партияси гигиеник, радиологик ва бактериологик синовлардан муваффақиятли ўтиб, инсон саломатлиги учун мутлақо хавфсиз деб топилган."
+                certSafety: "Маҳсулотнинг ҳар бир партияси гигиеник, радиологик ва бактериологик синовлардан муваффақиятли ўтиб, инсон саломатлиги учун мутлақо хавфсиз деб топилган.",
+
+                // 8-Blok FAQ
+                faqTitle: "КЎП БЕРИЛАДИГАН САВОЛЛАР",
+                faqSub: "Мижозларимиз томонидан энг кўп бериладиган саволларга расмий мутахассисларимиз жавоблари",
+                faqs: [
+                    { q: "Препарат ўрганиб қолиш (привыкание) ҳолатини келтириб чиқармайдими?", a: "Йўқ, “QOMUS” 100% табиий совуқ прессланган қора седана ёғи ва витаминлар мажмуасидан иборат бўлиб, гормонлар ёки кимёвий қўшимчалар сақламайди. Шу сабабли қабул қилиш тўхтатилганда ҳам ўрганиб қолиш ҳолати кузатилмайди." },
+                    { q: "Биринчи сезиларли натижалар қачон кўрина бошлайди?", a: "Организмнинг хусусияти ва касаллик даражасига қараб, одатда мунтазам фойдаланишнинг 3–4 ҳафтасида тери пигментациясида ижобий ўзгаришлар, оқ доғлар четларининг табиий рангга қайта бошлаши кузатилади." },
+                    { q: "Капсулаларни қандай тартибда қабул қилиш тавсия этилади?", a: "Катталар учун кунига 2 маҳал (эрталаб ва кечқурун) овқатдан 20-30 дақиқа олдин 1-2 тадан капсулани илиқ сув билан ичиш тавсия этилади. Аниқ муолажа курсини мутахассис телефон орқали алоҳида белгилаб беради." },
+                    { q: "Капсула қобиғи ҳалолми ва у нимадан тайёрланган?", a: "Капсула қобиғи фақатгина ҳалол сўйилган қора мол желатинидан тайёрланган бўлиб, ошқозонда осон эрийди ва ошқозон-ичак тизимига ҳеч қандай оғирлик қилмайди." },
+                    { q: "Ҳомиладорлик ёки эмизиш даврида ичиш мумкинми?", a: "Ҳомиладорлик ва лактация даврида ҳар қандай биологик фаол қўшимчаларни қабул қилишдан олдин шахсий шифокор билан маслаҳатлашиш тавсия қилинади." },
+                    { q: "Етказиб бериш хизмати қанча вақт олади ва у пулликми?", a: "Ўзбекистон бўйлаб барча вилоят, шаҳар ва туманларга етказиб бериш мутлақо БЕПУЛ амалга оширилади. Тошкент шаҳрида 24 соат ичида, вилоятларга 1-2 кун ичида қўлингизга етказилади." },
+                    { q: "Тўловни маҳсулотни олгандан кейин қилса бўладими?", a: "Албатта! Бизда 100% ишончли тизим йўлга қўйилган: тўлов маҳсулотни курьердан қабул қилиб олиб, сифатига тўлиқ ишонч ҳосил қилганингиздан сўнг (нақд ёки пластик карта орқали) тўланади." },
+                    { q: "Бир флаконда нечта капсула бор ва у қанча вақтга етади?", a: "Бир флаконда 150 та юмшоқ желатин капсула мавжуд. Бу кунига қабул қилинадиган дозага қараб ўртача 1–1.5 ойлик тўлиқ муолажа курси учун етарли ҳисобланади." }
+                ]
             },
             ru: {
                 orderBtn: "Заказать",
@@ -1568,7 +1783,7 @@
                 cI5T: "Вспомогательные компоненты и эфирные масла",
                 cI5D: "Говяжий желатин, глицерин, нигеллон, А-каротиноиды и лимонная кислота в основе мягкой капсулы.",
 
-                // 6-Blok Video Tarjimalari
+                // 6-Blok video
                 videoSecTitle: "Видео отзывы наших клиентов",
                 videoSecSub: "Интервью с людьми, восстановившими здоровье кожи с помощью препарата «Qomus»",
                 videoTitles: [
@@ -1584,12 +1799,26 @@
                     "Реальные результаты: живое интервью с пациентом"
                 ],
 
-                // 7-Blok Sertifikatlar
+                // 7-Blok
                 certTitle: "ГОСУДАРСТВЕННОЕ РАЗРЕШЕНИЕ И СЕРТИФИКАЦИЯ",
                 certDesc: "Препарат «QOMUS» прошел полную государственную экспертизу Министерства Здравоохранения Республики Узбекистан и имеет официальное разрешение.",
                 certCap1: "Разрешение Министерства Здравоохранения Республики Узбекистан № 001425",
                 certCap2: "Санитарно-эпидемиологическое заключение № 405282 (г. Ташкент)",
-                certSafety: "Каждая партия продукта успешно прошла строгий гигиенический, радиологический и бактериологический контроль и полностью безопасна для здоровья."
+                certSafety: "Каждая партия продукта успешно прошла строгий гигиенический, радиологический и бактериологический контроль и полностью безопасна для здоровья.",
+
+                // 8-Blok FAQ
+                faqTitle: "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
+                faqSub: "Ответы наших специалистов на самые популярные вопросы покупателей",
+                faqs: [
+                    { q: "Вызывает ли препарат привыкание?", a: "Нет, «QOMUS» состоит из 100% натурального масла черного тмина холодного отжима и витаминного комплекса, без добавления гормонов и химии. Привыкание полностью исключено." },
+                    { q: "Когда появляются первые заметные результаты?", a: "В зависимости от организма и стадии заболевания, первые положительные изменения в пигментации обычно наблюдаются уже через 3–4 недели регулярного курса." },
+                    { q: "Как правильно принимать капсулы?", a: "Взрослым рекомендуется принимать по 1–2 капсулы 2 раза в день за 20–30 минут до еды, запивая теплой водой. Точный курс приема назначает специалист индивидуально." },
+                    { q: "Является ли оболочка капсулы халяльной?", a: "Оболочка капсулы изготовлена исключительно из халяльного говяжьего желатина, легко усваивается и не нагружает желудочно-кишечный тракт." },
+                    { q: "Можно ли принимать во время беременности или ГВ?", a: "Во время беременности и грудного вскармливания перед приемом любых биодобавок рекомендуется проконсультироваться с лечащим врачом." },
+                    { q: "Сколько длится доставка и платная ли она?", a: "Доставка по всему Узбекистану абсолютно БЕСПЛАТНАЯ. По Ташкенту — в течение 24 часов, в регионы — за 1-2 рабочих дня прямо до двери." },
+                    { q: "Возможна ли оплата при получении товара?", a: "Да, у нас действует безопасная оплата: вы оплачиваете заказ (наличными или картой) только после проверки посылки при курьере." },
+                    { q: "Сколько капсул во флаконе и на сколько их хватает?", a: "Во флаконе 150 мягких желатиновых капсул. Этого хватает в среднем на 1–1.5 месяца полноценного лечебного курса." }
+                ]
             },
             en: {
                 orderBtn: "Order Now",
@@ -1628,7 +1857,7 @@
                 cI5T: "Essential Oils and Auxiliary Elements",
                 cI5D: "Natural bovine gelatin, glycerin, nigellone, A-carotenoids, and citric acid inside a soft capsule.",
 
-                // 6-Blok Video Tarjimalari
+                // 6-Blok video
                 videoSecTitle: "Customer Video Reviews",
                 videoSecSub: "Interviews with real people who restored skin pigmentation using “Qomus”",
                 videoTitles: [
@@ -1644,12 +1873,26 @@
                     "Proven results: live interview with our patient"
                 ],
 
-                // 7-Blok Sertifikatlar
+                // 7-Blok
                 certTitle: "OFFICIALLY CERTIFIED AND APPROVED",
                 certDesc: "“QOMUS” has successfully passed all laboratory evaluations by the Ministry of Health of Uzbekistan and is officially certified.",
                 certCap1: "Ministry of Health of the Republic of Uzbekistan Permit № 001425",
                 certCap2: "Sanitary and Epidemiological Conclusion № 405282 (Tashkent)",
-                certSafety: "Every batch undergoes rigorous hygienic, radiological, and bacteriological tests and is guaranteed 100% safe for human health."
+                certSafety: "Every batch undergoes rigorous hygienic, radiological, and bacteriological tests and is guaranteed 100% safe for human health.",
+
+                // 8-Blok FAQ
+                faqTitle: "FREQUENTLY ASKED QUESTIONS",
+                faqSub: "Direct answers from our healthcare consultants to the most frequent questions",
+                faqs: [
+                    { q: "Is the product habit-forming or addictive?", a: "No, “QOMUS” consists of 100% cold-pressed black seed oil and vital vitamins without hormones or artificial chemicals, preventing any dependence." },
+                    { q: "When do the first visible results appear?", a: "Depending on individual physiology, initial signs of natural repigmentation typically appear within 3 to 4 weeks of consistent intake." },
+                    { q: "What is the recommended dosage?", a: "Adults take 1–2 capsules twice daily 20–30 minutes before meals with warm water. Individual regimen is tailored during free phone consultation." },
+                    { q: "Are the capsules certified Halal?", a: "Yes, capsule shells are made exclusively from 100% bovine Halal gelatin, ensuring effortless absorption in the digestive tract." },
+                    { q: "Can it be taken during pregnancy or nursing?", a: "We advise consulting your personal physician before taking any dietary supplements during pregnancy or nursing." },
+                    { q: "How long does delivery take and is it free?", a: "Delivery is completely FREE across all regions of Uzbekistan. Delivered within 24 hours in Tashkent and 1-2 days to other provinces." },
+                    { q: "Can I pay upon package arrival?", a: "Yes! You can inspect the delivery before making payment via cash or local card." },
+                    { q: "How many capsules per bottle and how long does it last?", a: "Each bottle contains 150 soft gelatin capsules, providing a complete 1 to 1.5-month course." }
+                ]
             }
         };
 
@@ -1714,6 +1957,34 @@
                 document.getElementById('cert-cap-1').textContent = t.certCap1;
                 document.getElementById('cert-cap-2').textContent = t.certCap2;
                 document.getElementById('cert-safety-text').textContent = t.certSafety;
+
+                // 8-Blok FAQ tarjimalari
+                document.getElementById('faq-main-title').textContent = t.faqTitle;
+                document.getElementById('faq-main-sub').textContent = t.faqSub;
+                if(t.faqs) {
+                    for(let i = 1; i <= 8; i++) {
+                        const qEl = document.getElementById('fq-' + i);
+                        const aEl = document.getElementById('fa-' + i);
+                        if(qEl && t.faqs[i-1]) qEl.textContent = t.faqs[i-1].q;
+                        if(aEl && t.faqs[i-1]) aEl.textContent = t.faqs[i-1].a;
+                    }
+                }
+            }
+        }
+
+        /* 8-BLOK: FAQ AKORDEON FUNKSIYASI */
+        function toggleFaq(btn) {
+            const currentItem = btn.parentElement;
+            const isOpen = currentItem.classList.contains('active');
+
+            // Boshqa barcha ochiq savollarni yopish
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // Agar oldin ochiq bo'lmagan bo'lsa, ochiladi
+            if (!isOpen) {
+                currentItem.classList.add('active');
             }
         }
 
@@ -1789,7 +2060,7 @@
             updateCarouselPosition(true);
         }
 
-        /* 6-BLOK: YOUTUBE SWIPE VA CHEKSIZ KARUSEL */
+        /* 6-BLOK VIDEO KARUSEL */
         let vTrack, vTotalOriginal;
         let vCurrentIndex = 1;
         let vIsTransitioning = false;
@@ -1824,7 +2095,6 @@
                 }
             });
 
-            // Mobil Swipe (Touch)
             let vTouchStartX = 0;
             let vTouchEndX = 0;
             const vWrapper = document.getElementById('videoCarouselWrapper');
