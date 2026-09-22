@@ -1004,53 +1004,55 @@
         }
 
         /* ------------------------------------------------------------- */
-        /* 10-BLOK: TO'LIQ BALANDLIKDA BIR BUTUN FORMA VA RASM (TENG 1:1)*/
+        /* 10-BLOK: ANIQ 1:1 OQ FORMA VA RASM BALANDLIGI                 */
         /* ------------------------------------------------------------- */
         .lead-section {
-            padding: 70px 0 80px 0;
+            padding: 65px 0 75px 0;
             background: #00317F;
             color: #ffffff;
             position: relative;
         }
 
-        .lead-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Ikki teng ustun */
-            gap: 40px;
-            align-items: stretch; /* Bo'yi tenglashadi */
+        /* Sarlavha tepada to'liq joylashadi */
+        .lead-header-center {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto 35px auto;
         }
 
-        /* Chap tomondagi sarlavha va forma butun blok */
-        .lead-info-col {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-        }
-
-        .lead-info-col h2 {
+        .lead-header-center h2 {
             font-size: 32px;
             font-weight: 900;
-            line-height: 1.25;
+            line-height: 1.3;
             letter-spacing: -0.5px;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
             text-transform: uppercase;
         }
 
-        .lead-info-col p {
-            font-size: 15.5px;
-            line-height: 1.55;
+        .lead-header-center p {
+            font-size: 16px;
+            line-height: 1.6;
             color: #e2e8f0;
             font-weight: 600;
-            margin-bottom: 22px;
+        }
+
+        /* Forma va Rasm 1:1 yonma-yon bog'langan qism */
+        .lead-row-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* Ikki teng ustun */
+            gap: 28px;
+            align-items: stretch; /* 1:1 balandlik */
         }
 
         .form-card {
             background: #ffffff;
             border-radius: 24px;
-            padding: 32px 28px;
+            padding: 34px 30px;
             box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
             color: #1a2b25;
-            flex-grow: 1; /* Formaning o'zi qolgan barcha bo'sh joyni egallaydi */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         .form-group {
@@ -1062,7 +1064,7 @@
             font-size: 13.5px;
             font-weight: 800;
             color: #00317F;
-            margin-bottom: 7px;
+            margin-bottom: 6px;
         }
 
         .form-input-wrap {
@@ -1120,7 +1122,7 @@
             letter-spacing: 0.5px;
             animation: pulseGlow 2s infinite;
             transition: background 0.2s;
-            margin-top: 10px;
+            margin-top: 8px;
         }
 
         .btn-submit-order:hover {
@@ -1132,14 +1134,14 @@
             font-size: 12px;
             font-weight: 600;
             color: #64748b;
-            margin-top: 14px;
+            margin-top: 12px;
         }
 
-        /* O'NG TOMONDAGI RASM: BUTUN CHAP BLOK BILAN 1:1 ANIQ TENG */
+        /* O'NG TOMON: OQ FORMA KARTASI BILAN 1:1 BIR XIL BALANDLIK VA CHEGARA */
         .lead-visual-col {
-            display: flex;
             width: 100%;
             height: 100%;
+            display: flex;
         }
 
         .lead-product-img {
@@ -1147,13 +1149,11 @@
             height: 100%;
             border-radius: 24px;
             object-fit: cover;
-            filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.45));
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
             display: block;
         }
 
-        /* ------------------------------------------------------------- */
-        /* FOOTER: IJTIMOIY TARMOQLAR BILAN YANGILANDI                   */
-        /* ------------------------------------------------------------- */
+        /* FOOTER */
         .site-footer {
             background: #0b1526;
             color: #94a3b8;
@@ -1177,7 +1177,6 @@
             font-weight: 600;
         }
 
-        /* IJTIMOIY TARMOQLAR BLOKI */
         .footer-social-wrap {
             text-align: center;
             margin-bottom: 30px;
@@ -1327,13 +1326,12 @@
 
             /* 10-blok mobil Lead formasi */
             .lead-section { padding: 40px 0 50px 0; }
-            .lead-grid { display: flex; flex-direction: column; gap: 20px; }
-            .lead-visual-col { order: 1; width: 100%; height: 320px; }
+            .lead-header-center h2 { font-size: 22px; }
+            .lead-header-center p { font-size: 14px; margin-bottom: 20px; }
+            .lead-row-card { display: flex; flex-direction: column; gap: 20px; }
+            .lead-visual-col { order: 1; width: 100%; height: 300px; }
             .lead-product-img { max-width: 100%; height: 100%; border-radius: 18px; }
-            .lead-info-col { order: 2; width: 100%; }
-            .lead-info-col h2 { font-size: 22px; text-align: center; }
-            .lead-info-col p { font-size: 14px; text-align: center; margin-bottom: 20px; }
-            .form-card { padding: 22px 18px; border-radius: 18px; }
+            .form-card { order: 2; padding: 22px 18px; border-radius: 18px; }
             .form-group label { font-size: 13px; }
             .form-input { padding: 12px 14px; font-size: 14px; }
             .form-input.phone-input { padding-left: 74px; }
@@ -1942,7 +1940,7 @@
                 <div class="adv-clean-card">
                     <div class="adv-num-badge">03</div>
                     <h3 id="adv-c3-t">100% Табиий ва безарар</h3>
-                    <p id="adv-c3-d">Фақат совуқ прессланган седана ёғи ва табиий микроэлементлар. Ҳеч қандай гормонларсиз, организмга ўрганиб қолиш ҳолати юзага келмайди.</p>
+                    <p id="adv-c3-d">Фақат совуқ прессланган седана ёғи ва табиий микроэлементlar. Ҳеч қандай гормонларсиз, организмга ўрганиб қолиш ҳолати юзага келмайди.</p>
                 </div>
 
                 <div class="adv-clean-card">
@@ -1967,16 +1965,21 @@
     </section>
 
     <!-- ------------------------------------------------------------- -->
-    <!-- 10-BLOK: TO'LIQ BALANDLIKDA BIR BUTUN FORMA VA RASM (TENG 1:1)-->
+    <!-- 10-BLOK: ANIQ 1:1 OQ FORMA VA RASM BALANDLIGI                 -->
     <!-- ------------------------------------------------------------- -->
     <section class="lead-section" id="lead-form">
-        <div class="container lead-grid">
+        <div class="container">
             
-            <!-- CHAP TOMON: SARLAVHA + FORMA BIR BUTUN BO'LIB RASM BILAN TENG TURADI -->
-            <div class="lead-info-col">
+            <!-- SARLAVHA FORMA VA RASMDAN TEPAGA CHIQARILDI -->
+            <div class="lead-header-center">
                 <h2 id="form-main-title">Буюртма бериш</h2>
                 <p id="form-main-sub">Ҳозироқ бепул консультацияга ёзилинг ва Qomus капсуласи орқали соғлом терига қайтинг!</p>
+            </div>
 
+            <!-- FORMA VA RASM 1:1 MUTLAQ TENG BALANDLIKDA -->
+            <div class="lead-row-card">
+                
+                <!-- OQ FORMA KARTASI -->
                 <div class="form-card">
                     <form id="orderForm" onsubmit="submitLeadForm(event)">
                         
@@ -2018,11 +2021,12 @@
                         <p class="form-privacy-note" id="form-privacy">🔒 Шахсий маълумотларингиз махфийлиги 100% кафолатланади.</p>
                     </form>
                 </div>
-            </div>
 
-            <!-- O'NG TOMON: BUTUN CHAP BLOK BILAN 1:1 ANIQ BALANDLIKDAGI YIRIK RASM -->
-            <div class="lead-visual-col">
-                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1200&auto=format&fit=crop&q=85" alt="QOMUS 150 Kapsula" class="lead-product-img">
+                <!-- O'NG TOMON: OQ FORMA BILAN TEPASI VA PASTKI CHIZIG'I 1:1 TENG RASM -->
+                <div class="lead-visual-col">
+                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1200&auto=format&fit=crop&q=85" alt="QOMUS 150 Kapsula" class="lead-product-img">
+                </div>
+
             </div>
 
         </div>
@@ -2040,7 +2044,7 @@
                 </p>
             </div>
 
-            <!-- IJTIMOIY TARMOQLAR HAVOLALARI -->
+            <!-- IJTIMOIY TARMOQLAR HAVOLALARI (ID ULANGAN HOLATDA) -->
             <div class="footer-social-wrap">
                 <div class="social-title" id="social-title">Биз ижтимоий тармоқларда:</div>
                 <div class="social-links-grid">
@@ -2048,13 +2052,13 @@
                     <!-- Telegram Asosiy Kanal -->
                     <a href="https://t.me/qomus_vitiligo_oqdog" target="_blank" rel="noopener noreferrer" class="social-btn">
                         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-                        <span>Асосий канал</span>
+                        <span id="soc-main-tg">Асосий канал</span>
                     </a>
 
                     <!-- Telegram Natijalar Kanali -->
                     <a href="https://t.me/qomus_natijalar" target="_blank" rel="noopener noreferrer" class="social-btn">
                         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-                        <span>Натижалар канали</span>
+                        <span id="soc-results-tg">Натижалар канали</span>
                     </a>
 
                     <!-- YouTube Kanal -->
@@ -2073,11 +2077,11 @@
             </div>
 
             <div class="footer-bottom-flex">
-                <div class="footer-copy">
+                <div class="footer-copy" id="footer-copy">
                     © 2026 QOMUS. Барча ҳуқуқлар ҳимояланган.
                 </div>
                 <div class="footer-links">
-                    <span>Мурожаат учун: +998 71 203-04-08</span>
+                    <span id="footer-contact-txt">Мурожаат учун: +998 71 203-04-08</span>
                 </div>
             </div>
 
@@ -2202,7 +2206,13 @@
                 holderHistory: "Masalan: 2 yildan beri, yaqinda boshlandi...",
                 formSubmit: "Buyurtma berish",
                 formPrivacy: "🔒 Shaxsiy ma'lumotlaringiz maxfiyligi 100% kafolatlanadi.",
+                
+                // Footer va Ijtimoiy tarmoqlar
                 socialTitle: "Biz ijtimoiy tarmoqlarda:",
+                socMainTg: "Asosiy kanal",
+                socResultsTg: "Natijalar kanali",
+                footerCopy: "© 2026 QOMUS. Barcha huquqlar himoyalangan.",
+                footerContactTxt: "Murojaat uchun: +998 71 203-04-08",
                 footerDisc: "DIQQAT: «QOMUS» preparati biologik faol qo'shimcha (BAD) hisoblanadi va dori vositasi emas. Natijalar organizmning individual xususiyatlariga qarab farq qilishi mumkin. Qabul qilishdan oldin shifokor bilan maslahatlashish tavsiya etiladi. SSV Ruxsatnomasi № 001425."
             },
             uz_cyr: {
@@ -2307,6 +2317,10 @@
                 formSubmit: "Буюртма бериш",
                 formPrivacy: "🔒 Шахсий маълумотларингиз махфийлиги 100% кафолатланади.",
                 socialTitle: "Биз ижтимоий тармоқларда:",
+                socMainTg: "Асосий канал",
+                socResultsTg: "Натижалар канали",
+                footerCopy: "© 2026 QOMUS. Барча ҳуқуқлар ҳимояланган.",
+                footerContactTxt: "Мурожаат учун: +998 71 203-04-08",
                 footerDisc: "ДИҚҚАТ: «QOMUS» препарати биологик фаол қўшимча (БАД) ҳисобланади ва дори воситаси эмас. Натижалар организмнинг индивидуал хусусиятларига қараб фарқ қилиши мумкин. Қабул қилишдан олдин шифокор билан маслаҳатлашиш тавсия этилади. ССВ Рухсатномаси № 001425."
             },
             ru: {
@@ -2411,6 +2425,10 @@
                 formSubmit: "Оформить заказ",
                 formPrivacy: "🔒 Конфиденциальность ваших данных гарантирована на 100%.",
                 socialTitle: "Мы в социальных сетях:",
+                socMainTg: "Основной канал",
+                socResultsTg: "Канал результатов",
+                footerCopy: "© 2026 QOMUS. Все права защищены.",
+                footerContactTxt: "Для справок: +998 71 203-04-08",
                 footerDisc: "ВНИМАНИЕ: Препарат «QOMUS» является биологически активной добавкой (БАД) и не является лекарственным средством. Результаты индивидуальны. Перед применением рекомендуется проконсультироваться с врачом. Разрешение Минздрава РУз № 001425."
             },
             en: {
@@ -2501,7 +2519,7 @@
                 c5T: "Cash on Delivery (100% Secure)",
                 c5D: "No advance payment required. Inspect your order in person before paying the courier.",
                 c6T: "Personal Expert Guidance",
-                c6D: "Our specialists provide consistent, free phone consultations and monitor your proper course progress.",
+                c6D: "Our specialists provide consistent, free phone consultations and monitor your proper course progress."
 
                 // 10-Blok Lead Formasi
                 formTitle: "Place an Order",
@@ -2515,6 +2533,10 @@
                 formSubmit: "Place Order",
                 formPrivacy: "🔒 100% privacy and data security guaranteed.",
                 socialTitle: "Follow us on social media:",
+                socMainTg: "Main Channel",
+                socResultsTg: "Results Channel",
+                footerCopy: "© 2026 QOMUS. All rights reserved.",
+                footerContactTxt: "Support & Orders: +998 71 203-04-08",
                 footerDisc: "NOTE: “QOMUS” is a dietary supplement and not a medicinal drug. Results may vary depending on individual physiological traits. Medical consultation is recommended before use. MOH Permit № 001425."
             }
         };
@@ -2620,7 +2642,13 @@
                 document.getElementById('clientHistory').placeholder = t.holderHistory;
                 document.getElementById('btn-form-submit').textContent = t.formSubmit;
                 document.getElementById('form-privacy').textContent = t.formPrivacy;
+
+                // Footer va Ijtimoiy tarmoqlar tarjimasi
                 document.getElementById('social-title').textContent = t.socialTitle;
+                document.getElementById('soc-main-tg').textContent = t.socMainTg;
+                document.getElementById('soc-results-tg').textContent = t.socResultsTg;
+                document.getElementById('footer-copy').textContent = t.footerCopy;
+                document.getElementById('footer-contact-txt').textContent = t.footerContactTxt;
                 document.getElementById('footer-disclaimer').textContent = t.footerDisc;
             }
         }
