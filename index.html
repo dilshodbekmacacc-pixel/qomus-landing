@@ -209,7 +209,7 @@
         }
 
         /* ------------------------------------------------------------- */
-        /* 2-BLOK: BALANSLANGAN VA O'LCHAMLARI OCHILGAN HERO SECTION     */
+        /* 2-BLOK: HERO SECTION (KATTA RASM VA MINIMAL MATNLAR)          */
         /* ------------------------------------------------------------- */
         .hero-section {
             padding: 24px 0 20px 0;
@@ -241,21 +241,7 @@
             font-size: 16px;
             line-height: 1.6;
             color: #334155;
-            margin-bottom: 24px;
             font-weight: 600;
-        }
-
-        .hero-cta-btn {
-            display: inline-block;
-            background: #00a86b;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 800;
-            padding: 16px 28px;
-            border-radius: 12px;
-            text-decoration: none;
-            animation: pulseGlow 2s infinite;
-            text-align: center;
         }
 
         .hero-visual-card {
@@ -266,30 +252,31 @@
 
         .product-img-large {
             width: 100%;
-            max-width: 440px;
+            max-width: 500px;
             height: auto;
             border-radius: 16px;
             object-fit: cover;
-            filter: drop-shadow(0 12px 24px rgba(0,0,0,0.12));
+            filter: drop-shadow(0 14px 28px rgba(0,0,0,0.12));
         }
 
-        /* MOBIL EKRANDA ORALARNI PROPORSIANAL OCHISH */
+        /* MOBIL VERSIYA */
         @media (max-width: 768px) {
             .logo-main { font-size: 18px; }
             .btn-phone-desktop { display: none; }
             .btn-phone-mobile { display: inline-flex; align-items: center; justify-content: center; }
 
             .hero-section {
-                padding: 16px 0 20px 0;
+                padding: 12px 0 16px 0;
             }
 
             .hero-grid {
                 display: flex;
                 flex-direction: column;
-                gap: 18px; /* Rasm va tekstlar orasidagi masofa oshirildi */
+                gap: 16px;
                 text-align: center;
             }
 
+            /* 1-O'RIN: KATTALASHTIRILGAN RASM */
             .hero-visual-card {
                 order: 1;
                 width: 100%;
@@ -297,32 +284,26 @@
 
             .product-img-large {
                 max-width: 100%;
-                max-height: 270px; /* Rasm kattalashtirildi */
+                max-height: 330px; /* Rasm o'lchami kattalashtirildi */
                 object-fit: cover;
                 border-radius: 14px;
             }
 
+            /* 2-O'RIN: MATNLAR */
             .hero-content {
                 order: 2;
                 width: 100%;
             }
 
             .hero-title {
-                font-size: 21px; /* Sarlavha kattalashtirildi */
-                margin-bottom: 12px; /* Title va Subtitle orasi kengaytirildi */
+                font-size: 22px;
+                margin-bottom: 12px;
                 line-height: 1.3;
             }
 
             .hero-subtitle {
-                font-size: 13.5px; /* Subtitle o'lchami va orasi ochildi */
-                line-height: 1.5;
-                margin-bottom: 20px; /* Subtitle va Tugma orasi kengaytirildi */
-            }
-
-            .hero-cta-btn {
-                width: 100%;
-                padding: 14px 0;
-                font-size: 15px;
+                font-size: 14px;
+                line-height: 1.55;
             }
         }
 
@@ -389,7 +370,7 @@
         <div class="container hero-grid">
             
             <div class="hero-visual-card">
-                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&auto=format&fit=crop&q=80" alt="QOMUS Flakon" class="product-img-large">
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=900&auto=format&fit=crop&q=80" alt="QOMUS Flakon" class="product-img-large">
             </div>
 
             <div class="hero-content">
@@ -400,10 +381,6 @@
                 <p class="hero-subtitle" id="hero-subtitle">
                     Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!
                 </p>
-
-                <a href="#lead-form" class="hero-cta-btn" id="hero-cta">
-                    Бепул маслаҳат олиш
-                </a>
             </div>
 
         </div>
@@ -430,29 +407,25 @@
                 orderBtn: "Buyurtma berish",
                 ticker: "<span>🚚 O'zbekiston bo'ylab BEPUL yetkazib berish</span><span>🌿 100% Tabiiy tarkib</span><span>⭐ 20,000+ Mamnun mijozlar</span><span>🔐 100% Maxfiylik kafolatlanadi</span>",
                 title: "OQ DOG'LARDAN HALOS BO'LISH ENDI ILOJSIZ EMAS!",
-                subtitle: "Ushbu preparat vitiligo va teridagi turli kasalliklarga yechim bo'la oladi. Va o'ziga o'rgatib qo'ymaydi - Natija kafolatlangan!",
-                heroCta: "Bepul maslahat olish"
+                subtitle: "Ushbu preparat vitiligo va teridagi turli kasalliklarga yechim bo'la oladi. Va o'ziga o'rgatib qo'ymaydi - Natija kafolatlangan!"
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
                 ticker: "<span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span><span>🌿 100% Табиий таркиб</span><span>⭐ 20,000+ Мамнун мижозлар</span><span>🔐 100% Махфийлик кафолатланади</span>",
                 title: "ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!",
-                subtitle: "Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!",
-                heroCta: "Бепул маслаҳат олиш"
+                subtitle: "Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!"
             },
             ru: {
                 orderBtn: "Заказать",
                 ticker: "<span>🚚 БЕСПЛАТНАЯ доставка по всему Узбекистану</span><span>🌿 100% Натуральный состав</span><span>⭐ 20,000+ Довольных клиентов</span><span>🔐 100% Конфиденциальность</span>",
                 title: "ИЗБАВЛЕНИЕ ОТ БЕЛЫХ ПЯТЕН ТЕПЕРЬ ВОЗМОЖНО!",
-                subtitle: "Данный препарат эффективен при витилиго и заболеваниях кожи. Не вызывает привыкания - Результат гарантирован!",
-                heroCta: "Получить бесплатную консультацию"
+                subtitle: "Данный препарат эффективен при витилиго и заболеваниях кожи. Не вызывает привыкания - Результат гарантирован!"
             },
             en: {
                 orderBtn: "Order Now",
                 ticker: "<span>🚚 FREE delivery across Uzbekistan</span><span>🌿 100% Natural composition</span><span>⭐ 20,000+ Satisfied customers</span><span>🔐 100% Confidentiality guaranteed</span>",
                 title: "GETTING RID OF WHITE SPOTS IS NO LONGER IMPOSSIBLE!",
-                subtitle: "This product is an effective solution for vitiligo and various skin issues. Non-addictive - Guaranteed results!",
-                heroCta: "Get Free Advice"
+                subtitle: "This product is an effective solution for vitiligo and various skin issues. Non-addictive - Guaranteed results!"
             }
         };
 
@@ -472,7 +445,6 @@
                 
                 document.getElementById('hero-title').textContent = t.title;
                 document.getElementById('hero-subtitle').textContent = t.subtitle;
-                document.getElementById('hero-cta').textContent = t.heroCta;
             }
         }
 
