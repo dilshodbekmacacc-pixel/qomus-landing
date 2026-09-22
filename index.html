@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QOMUS — Teri Pigmentatsiyasini Qo'llab-quvvatlovchi Majmua</title>
-    <!-- Cyrillic qo'llab-quvvatlaydigan to'liq shrift -->
+    <!-- Cyrillic to'liq qo'llab-quvvatlaydigan shrift -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800;900&subset=cyrillic,cyrillic-ext,latin&display=swap" rel="stylesheet">
@@ -21,6 +21,7 @@
             background-color: #f7faf9;
             color: #1a2b25;
             padding-bottom: 75px;
+            overflow-x: hidden;
         }
 
         .container {
@@ -204,7 +205,7 @@
             animation: pulseGlow 2s infinite;
         }
 
-        /* 2-BLOK: HERO SECTION */
+        /* 2-BLOK */
         .hero-section {
             padding: 24px 0 32px 0;
         }
@@ -269,7 +270,7 @@
             filter: drop-shadow(0 18px 36px rgba(0,0,0,0.14));
         }
 
-        /* 3-BLOK: REFERENSGA MOS STRUKTURA */
+        /* 3-BLOK */
         .pain-section-ref {
             padding: 50px 0 60px 0;
             background: #ffffff;
@@ -403,12 +404,13 @@
         }
 
         /* ------------------------------------------------------------- */
-        /* 4-BLOK: MIJOZLAR NATIJALARI KARUSEL SECTION                   */
+        /* 4-BLOK: PEEK-EFFECT VA 10 TA NATIJA BILAN KARUSEL            */
         /* ------------------------------------------------------------- */
         .results-section {
             padding: 50px 0 60px 0;
             background: #f4f8f6;
             border-bottom: 1px solid #e2ece7;
+            overflow: hidden;
             position: relative;
         }
 
@@ -420,42 +422,40 @@
             margin-bottom: 35px;
         }
 
-        .carousel-container {
+        .carousel-outer-box {
             position: relative;
-            max-width: 900px;
+            max-width: 860px;
             margin: 0 auto;
-            display: flex;
-            align-items: center;
         }
 
+        /* Yonlardagi slaydlarning cheti ko'rinishi uchun */
         .carousel-track-wrapper {
             width: 100%;
-            overflow: hidden;
-            border-radius: 20px;
+            overflow: visible;
         }
 
         .carousel-track {
             display: flex;
-            transition: transform 0.45s ease-in-out;
+            transition: transform 0.4s ease-out;
+            cursor: grab;
         }
 
+        /* Har bir slayd 82% kenglikda — ikki chetdan qo'shni slaydlar ko'rinadi */
         .carousel-slide {
-            min-width: 100%;
-            display: flex;
-            justify-content: center;
-            padding: 0 10px;
+            flex: 0 0 82%;
+            padding: 0 8px;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            box-sizing: border-box;
         }
 
-        /* Bitta natija juftligi: Avval & Keyin */
         .result-card-pair {
             display: flex;
-            gap: 16px;
+            gap: 12px;
             background: #ffffff;
-            padding: 16px;
+            padding: 14px;
             border-radius: 20px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            box-shadow: 0 8px 22px rgba(0,0,0,0.06);
             width: 100%;
-            max-width: 720px;
         }
 
         .result-col {
@@ -467,10 +467,10 @@
 
         .result-img {
             width: 100%;
-            height: 280px;
+            height: 260px;
             object-fit: cover;
-            border-radius: 16px;
-            margin-bottom: 12px;
+            border-radius: 14px;
+            margin-bottom: 10px;
         }
 
         .result-badge {
@@ -478,12 +478,12 @@
             color: #ffffff;
             font-size: 13px;
             font-weight: 800;
-            padding: 6px 20px;
+            padding: 6px 18px;
             border-radius: 20px;
             text-transform: capitalize;
         }
 
-        /* STRELKALAR */
+        /* STRELKA TUGMALARI: ICON DOIM KO'RINADIGAN QILINDI */
         .carousel-btn {
             position: absolute;
             top: 50%;
@@ -491,30 +491,50 @@
             width: 44px;
             height: 44px;
             background: #ffffff;
-            border: 2px solid #e0e9e5;
+            border: 2px solid #00317F;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            z-index: 10;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            z-index: 50;
+            box-shadow: 0 4px 15px rgba(0, 49, 127, 0.2);
             transition: all 0.2s ease;
+            outline: none;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        .carousel-btn:hover {
-            background: #00317F;
-            border-color: #00317F;
+        .carousel-btn svg {
+            width: 22px;
+            height: 22px;
+            display: block;
         }
 
-        .carousel-btn:hover svg path {
-            stroke: #ffffff;
+        .carousel-btn svg polyline {
+            stroke: #00317F !important;
+            transition: stroke 0.2s ease;
         }
 
-        .carousel-btn.prev { left: -22px; }
-        .carousel-btn.next { right: -22px; }
+        /* Tugma bosilganda yoki sichqoncha kelganda */
+        .carousel-btn:hover,
+        .carousel-btn:active {
+            background: #00317F !important;
+        }
 
-        /* MOBIL VERSIYA MOSLASHUVLARI */
+        .carousel-btn:hover svg polyline,
+        .carousel-btn:active svg polyline {
+            stroke: #ffffff !important;
+        }
+
+        .carousel-btn.prev {
+            left: 4px;
+        }
+
+        .carousel-btn.next {
+            right: 4px;
+        }
+
+        /* MOBIL VERSIYA */
         @media (max-width: 768px) {
             .logo-main { font-size: 18px; }
             .btn-phone-desktop { display: none; }
@@ -529,14 +549,15 @@
             .hero-subtitle { font-size: 13.5px; line-height: 1.55; margin-bottom: 18px; }
             .hero-cta-btn { width: 100%; padding: 14px 0; font-size: 15px; }
 
-            /* 3-Blok mobil tartibi */
             .pain-section-ref { padding: 30px 0 40px 0; }
             .ref-header h2 { font-size: 20px; margin-bottom: 10px; }
+            
             .ref-row-1 { display: flex; flex-direction: column; gap: 22px; margin-bottom: 35px; }
             .ref-row-1 .ref-image-wrapper { order: 1; min-height: 270px; justify-content: center; margin: 6px 0 10px 0; }
             .ref-row-1 .ref-text-block-1 { order: 2; }
             .img-main-vitiligo { width: 88%; height: 250px; }
             .img-overlap-hand { width: 58%; height: 150px; bottom: -10px; left: 6px; }
+
             .ref-row-2 { display: flex; flex-direction: column; gap: 20px; }
             .ref-row-2 .ref-img-card-2 { order: 1; }
             .ref-row-2 .ref-text-block-2 { order: 2; }
@@ -544,15 +565,22 @@
             .ref-list-item { font-size: 13.5px; }
             .ref-text-block-2 p { font-size: 14px; margin-bottom: 16px; }
 
-            /* 4-Blok mobil karusel */
-            .results-section { padding: 35px 0 40px 0; }
-            .results-header-title { font-size: 21px; margin-bottom: 22px; }
-            .result-card-pair { gap: 10px; padding: 10px; border-radius: 16px; }
-            .result-img { height: 170px; border-radius: 12px; margin-bottom: 8px; }
-            .result-badge { font-size: 11px; padding: 4px 14px; }
-            .carousel-btn { width: 36px; height: 36px; }
-            .carousel-btn.prev { left: -6px; }
-            .carousel-btn.next { right: -6px; }
+            /* Karusel mobil sozlamalari */
+            .results-section { padding: 32px 0 40px 0; }
+            .results-header-title { font-size: 21px; margin-bottom: 20px; }
+            
+            .carousel-slide {
+                flex: 0 0 85%; /* Mobilda 85% — yonidagi rasm ko'rinib turishi uchun */
+                padding: 0 6px;
+            }
+
+            .result-card-pair { gap: 8px; padding: 10px; border-radius: 16px; }
+            .result-img { height: 180px; border-radius: 10px; margin-bottom: 6px; }
+            .result-badge { font-size: 11px; padding: 4px 12px; }
+
+            .carousel-btn { width: 38px; height: 38px; }
+            .carousel-btn.prev { left: -2px; }
+            .carousel-btn.next { right: -2px; }
         }
 
         @keyframes pulseGlow {
@@ -638,7 +666,7 @@
         </div>
     </section>
 
-    <!-- 3-BLOK: REFERENSGA MOSLANSHGAN STRUKTURA -->
+    <!-- 3-BLOK: REFERENSGA MOS STRUKTURA -->
     <section class="pain-section-ref">
         <div class="container">
             
@@ -706,15 +734,15 @@
         </div>
     </section>
 
-    <!-- 4-BLOK: MIJOZLAR NATIJALARI (ALBOMNIY KARUSEL) -->
+    <!-- 4-BLOK: MIJOZLAR NATIJALARI (10 TA JUFT NATIJA VA PEEK-EFFECT) -->
     <section class="results-section">
         <div class="container">
             <h2 class="results-header-title" id="results-title">Мижозлар натижалари</h2>
 
-            <div class="carousel-container">
+            <div class="carousel-outer-box">
                 <!-- CHAPGA STRELKA -->
                 <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Oldingisi">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00317F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="15 18 9 12 15 6"></polyline>
                     </svg>
                 </button>
@@ -723,7 +751,7 @@
                 <div class="carousel-track-wrapper">
                     <div class="carousel-track" id="carouselTrack">
                         
-                        <!-- 1-NATIJA (YELKA / TANA) -->
+                        <!-- 1-JUFT -->
                         <div class="carousel-slide">
                             <div class="result-card-pair">
                                 <div class="result-col">
@@ -737,7 +765,7 @@
                             </div>
                         </div>
 
-                        <!-- 2-NATIJA (TIZZA / OYOQ) -->
+                        <!-- 2-JUFT -->
                         <div class="carousel-slide">
                             <div class="result-card-pair">
                                 <div class="result-col">
@@ -751,7 +779,7 @@
                             </div>
                         </div>
 
-                        <!-- 3-NATIJA (QO'L VA BILAK) -->
+                        <!-- 3-JUFT -->
                         <div class="carousel-slide">
                             <div class="result-card-pair">
                                 <div class="result-col">
@@ -759,7 +787,105 @@
                                     <span class="result-badge badge-before">Аввал</span>
                                 </div>
                                 <div class="result-col">
-                                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
+                                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
+                                    <span class="result-badge badge-after">Кейин</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 4-JUFT -->
+                        <div class="carousel-slide">
+                            <div class="result-card-pair">
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1512290900672-1f48616142c9?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
+                                    <span class="result-badge badge-before">Аввал</span>
+                                </div>
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
+                                    <span class="result-badge badge-after">Кейин</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 5-JUFT -->
+                        <div class="carousel-slide">
+                            <div class="result-card-pair">
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
+                                    <span class="result-badge badge-before">Аввал</span>
+                                </div>
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
+                                    <span class="result-badge badge-after">Кейин</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 6-JUFT -->
+                        <div class="carousel-slide">
+                            <div class="result-card-pair">
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
+                                    <span class="result-badge badge-before">Аввал</span>
+                                </div>
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
+                                    <span class="result-badge badge-after">Кейин</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 7-JUFT -->
+                        <div class="carousel-slide">
+                            <div class="result-card-pair">
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
+                                    <span class="result-badge badge-before">Аввал</span>
+                                </div>
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
+                                    <span class="result-badge badge-after">Кейин</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 8-JUFT -->
+                        <div class="carousel-slide">
+                            <div class="result-card-pair">
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
+                                    <span class="result-badge badge-before">Аввал</span>
+                                </div>
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
+                                    <span class="result-badge badge-after">Кейин</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 9-JUFT -->
+                        <div class="carousel-slide">
+                            <div class="result-card-pair">
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
+                                    <span class="result-badge badge-before">Аввал</span>
+                                </div>
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
+                                    <span class="result-badge badge-after">Кейин</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 10-JUFT -->
+                        <div class="carousel-slide">
+                            <div class="result-card-pair">
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img">
+                                    <span class="result-badge badge-before">Аввал</span>
+                                </div>
+                                <div class="result-col">
+                                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img">
                                     <span class="result-badge badge-after">Кейин</span>
                                 </div>
                             </div>
@@ -770,7 +896,7 @@
 
                 <!-- O'NGA STRELKA -->
                 <button class="carousel-btn next" onclick="moveCarousel(1)" aria-label="Keyingisi">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00317F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
                 </button>
@@ -914,16 +1040,15 @@
                 document.getElementById('ref-c2-p1').textContent = t.refP1;
                 document.getElementById('ref-c2-p2').innerHTML = t.refP2;
 
-                // 4-Blok tarjima
                 document.getElementById('results-title').textContent = t.resultsTitle;
                 document.querySelectorAll('.badge-before').forEach(el => el.textContent = t.beforeBadge);
                 document.querySelectorAll('.badge-after').forEach(el => el.textContent = t.afterBadge);
             }
         }
 
-        /* KARUSEL ISHLASH MANTIG'I */
+        /* 10 TA NATIJA UCHUN PEEK-EFFECT KARUSEL MANTIG'I */
         let currentSlide = 0;
-        const totalSlides = 3;
+        const totalSlides = 10;
 
         function moveCarousel(direction) {
             currentSlide += direction;
@@ -932,8 +1057,12 @@
             } else if (currentSlide >= totalSlides) {
                 currentSlide = 0;
             }
+
             const track = document.getElementById('carouselTrack');
-            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            // Mobilda 85%, Desktopda 82% siljish
+            const isMobile = window.innerWidth <= 768;
+            const slideWidth = isMobile ? 85 : 82;
+            track.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
         }
 
         window.addEventListener('DOMContentLoaded', () => {
