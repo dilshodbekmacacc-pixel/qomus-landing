@@ -408,48 +408,73 @@
         }
 
         /* ------------------------------------------------------------- */
-        /* 4-BLOK: ISHONCHLI VA MUSTAHKAM RASMLAR KARUSELI               */
+        /* 4-BLOK & 6-BLOK: YON CHEKKALARI KO'RINADIGAN PEEK KARUSEL     */
         /* ------------------------------------------------------------- */
-        .results-section {
-            padding: 50px 0 60px 0;
+        .results-section,
+        .video-results-section {
+            padding: 55px 0 65px 0;
             background: #f4f8f6;
             border-bottom: 1px solid #e2ece7;
             position: relative;
         }
 
-        .results-header-title {
+        .video-results-section {
+            background: #f7faf9;
+        }
+
+        .results-header-title,
+        .video-header-title {
             text-align: center;
             font-size: 28px;
             font-weight: 900;
             color: #00317F;
+            margin-bottom: 10px;
+        }
+
+        .video-header-sub {
+            text-align: center;
+            font-size: 15px;
+            color: #475569;
+            font-weight: 600;
             margin-bottom: 35px;
         }
 
         .carousel-outer-box {
             position: relative;
-            max-width: 860px;
+            max-width: 900px;
             margin: 0 auto;
-            display: flex;
-            align-items: center;
         }
 
         .carousel-track-wrapper {
             width: 100%;
             overflow: hidden;
-            border-radius: 20px;
-            touch-action: pan-y;
+            padding: 10px 0;
         }
 
         .carousel-track {
             display: flex;
             transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
             will-change: transform;
+            gap: 16px;
         }
 
-        .carousel-slide {
-            flex: 0 0 100%;
-            padding: 0 4px;
+        .carousel-slide,
+        .video-carousel-slide {
+            flex: 0 0 78%; /* Yonidagi slaydlar qisman ko'rinib turadi */
             box-sizing: border-box;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .carousel-slide:not(.active-slide),
+        .video-carousel-slide:not(.active-slide) {
+            opacity: 0.65;
+            transform: scale(0.96);
+        }
+
+        .carousel-slide.active-slide,
+        .video-carousel-slide.active-slide {
+            opacity: 1;
+            transform: scale(1);
         }
 
         .result-card-pair {
@@ -531,6 +556,45 @@
 
         .carousel-btn.prev { left: -20px; }
         .carousel-btn.next { right: -20px; }
+
+        /* Video Blok Kartasi */
+        .video-card-item {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 49, 127, 0.08);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e0e9e5;
+        }
+
+        .video-embed-box {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background: #000;
+        }
+
+        .video-embed-box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-card-footer {
+            padding: 16px 20px;
+            background: #ffffff;
+        }
+
+        .video-card-title {
+            font-size: 15px;
+            font-weight: 800;
+            color: #00317F;
+            line-height: 1.45;
+        }
 
         /* 5-BLOK: TARKIB */
         .composition-section {
@@ -628,76 +692,6 @@
             line-height: 1.7;
             color: #334155;
             font-weight: 600;
-        }
-
-        /* ------------------------------------------------------------- */
-        /* 6-BLOK: YOUTUBE VIDEO KARUSELI                                */
-        /* ------------------------------------------------------------- */
-        .video-results-section {
-            padding: 55px 0 65px 0;
-            background: #f7faf9;
-            border-bottom: 1px solid #e2ece7;
-            position: relative;
-        }
-
-        .video-header-title {
-            text-align: center;
-            font-size: 28px;
-            font-weight: 900;
-            color: #00317F;
-            margin-bottom: 12px;
-        }
-
-        .video-header-sub {
-            text-align: center;
-            font-size: 15px;
-            color: #475569;
-            font-weight: 600;
-            margin-bottom: 35px;
-        }
-
-        .video-carousel-slide {
-            flex: 0 0 100%;
-            padding: 0 4px;
-            box-sizing: border-box;
-        }
-
-        .video-card-item {
-            background: #ffffff;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0, 49, 127, 0.08);
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #e0e9e5;
-        }
-
-        .video-embed-box {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%;
-            background: #000;
-        }
-
-        .video-embed-box iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        .video-card-footer {
-            padding: 16px 20px;
-            background: #ffffff;
-        }
-
-        .video-card-title {
-            font-size: 15px;
-            font-weight: 800;
-            color: #00317F;
-            line-height: 1.45;
         }
 
         /* 7-BLOK: SERTIFIKATLAR */
@@ -1245,9 +1239,7 @@
             /* 4-blok mobil */
             .results-section { padding: 32px 0 40px 0; }
             .results-header-title { font-size: 21px; margin-bottom: 20px; }
-            .result-card-pair { gap: 8px; padding: 10px; border-radius: 16px; }
-            .result-img { height: 180px; border-radius: 10px; margin-bottom: 6px; }
-            .result-badge { font-size: 11px; padding: 4px 12px; }
+            .carousel-slide { flex: 0 0 84%; }
 
             /* 5-blok mobil */
             .composition-section { padding: 30px 0 40px 0; }
@@ -1264,9 +1256,7 @@
             .video-results-section { padding: 32px 0 40px 0; }
             .video-header-title { font-size: 21px; margin-bottom: 8px; }
             .video-header-sub { font-size: 13px; margin-bottom: 20px; }
-            .video-card-item { border-radius: 16px; }
-            .video-card-footer { padding: 12px 14px; }
-            .video-card-title { font-size: 13.5px; }
+            .video-carousel-slide { flex: 0 0 84%; }
 
             /* 7-blok sertifikat mobil */
             .cert-section { padding: 32px 0 35px 0; }
@@ -1315,7 +1305,7 @@
             .social-btn { width: 100%; justify-content: center; }
             .footer-bottom-flex { flex-direction: column; gap: 10px; text-align: center; }
 
-            .carousel-btn { width: 40px; height: 40px; }
+            .carousel-btn { width: 38px; height: 38px; }
             .carousel-btn.prev { left: 4px; }
             .carousel-btn.next { right: 4px; }
         }
@@ -1467,7 +1457,7 @@
         </div>
     </section>
 
-    <!-- 4-BLOK: ANIQ ISHLAYDIGAN MIJOZLAR NATIJALARI KARUSELI -->
+    <!-- 4-BLOK: PEEK KARUSEL (YON TARAFLARI QISMAN KO'RINADIGAN) -->
     <section class="results-section">
         <div class="container">
             <h2 class="results-header-title" id="results-title">Мижозлар натижалари</h2>
@@ -1589,7 +1579,7 @@
         </div>
     </section>
 
-    <!-- 6-BLOK: ANIQ ISHLAYDIGAN YOUTUBE VIDEO KARUSELI -->
+    <!-- 6-BLOK: VIDEO PEEK KARUSELI -->
     <section class="video-results-section">
         <div class="container">
             <h2 class="video-header-title" id="video-sec-title">Мижозларимизнинг видео фикрлари</h2>
@@ -1950,7 +1940,7 @@
         </a>
     </div>
 
-    <!-- JAVASCRIPT KODLARI (XATOLIKSIZ, SILLIQ ISHLAYDIGAN VERSIYA) -->
+    <!-- JAVASCRIPT KODLARI -->
     <script>
         const translations = {
             uz: {
@@ -1975,8 +1965,6 @@
                 resultsTitle: "Mijozlar natijalari",
                 beforeBadge: "Avval",
                 afterBadge: "Keyin",
-
-                // 5-Blok
                 compSecTitle: "QOMUS PREPARATINING TABIIY TARKIBI",
                 compSecDesc: "Vitiligo va teri pigmenti tiklanishida ichki mikroelementlar muvozanati hal qiluvchi ahamiyatga ega. Mahsulot faqatgina tabiiy komponentlardan tashkil topgan.",
                 cI1T: "Qora sedana yog'i",
@@ -1989,8 +1977,6 @@
                 cI4D: "Kaliy, natriy, fosfor, kalsiy, marganets, temir, rux, mis, selen, nikel — teri rangini tiklash uchun zarur noyob minerallar.",
                 cI5T: "Yordamchi komponentlar va efir moylari",
                 cI5D: "Qora mol jelatini, glitserin, nigelon, A-karotinoidlar va limon kislotasi asosidagi tabiiy kapsula.",
-
-                // 6-Blok video
                 videoSecTitle: "Mijozlarimizning video fikrlari",
                 videoSecSub: "Qomus preparatidan foydalanib natijaga erishgan yurtdoshlarimiz bilan suhbatlar",
                 videoTitles: [
@@ -1998,31 +1984,25 @@
                     "Qomus preparati bilan teri pigmentining tiklanish jarayoni",
                     "Oq dog'lar bo'yicha mijozimizning hayotiy tajribasi"
                 ],
-
-                // 7-Blok
                 certTitle: "DAVLAT TOMONIDAN TASDIQLANGAN VA SERTIFIKATLANGAN",
                 certDesc: "«QOMUS» preparati O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi tomonidan to'liq ekspertizadan o'tkazilgan va rasmiy ruxsatnomaga ega.",
                 certCap1: "O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi Ruxsatnomasi № 001425",
                 certCap2: "Sanitariya-epidemiologik xulosa № 405282 (Toshkent shahri)",
                 certSafety: "Mahsulotning har bir partiyasi gigiyenik, radiologik va bakteriologik sinovlardan muvaffaqiyatli o'tib, inson salomatligi uchun mutlaqo xavfsiz deb topilgan.",
-
-                // 8-Blok FAQ
                 faqTitle: "KO'P BERILADIGAN SAVOLLAR",
                 faqSub: "Mijozlarimiz tomonidan eng ko'p beriladigan savollarga rasmiy mutaxassislarimiz javoblari",
                 faqs: [
-                    { q: "Preparat o'rganib qolish (privikanie) holatini keltirib chiqarmaydimi?", a: "Yo'q, “QOMUS” 100% tabiiy sovuq presslangan qora sedana yog'i va vitaminlar majmuasidan iborat bo'lib, gormonlar yoki kimyoviy qo'shimchalar saqlamaydi. Shu sababli qabul qilish to'xtatilganda ham o'rganib qolish holati kuzatilmaydi." },
-                    { q: "Birinchi sezilarli natijalar qachon ko'rina boshlaydi?", a: "Organizmning xususiyati va kasallik darajasiga qarab, odatda muntazam foydalanishning 3–4 haftasida teri pigmentatsiyasida ijobiy o'zgarishlar, oq dog'lar chetlarining tabiiy rangga qayta boshlashi kuzatiladi." },
-                    { q: "Kapsulalarni qanday tartibda qabul qilish tavsiya etiladi?", a: "Kattalar uchun kuniga 2 mahal (ertalab va kechqurun) ovqatdan 20-30 daqiqa oldin 1-2 tadan kapsulani iliq suv bilan ichish tavsiya etiladi. Aniq muolaja kursini mutaxassis telefon orqali alohida belgilab beradi." },
-                    { q: "Kapsula qobig'i halolmi va u nimadan tayyorlangan?", a: "Kapsula qobig'i faqatgina halol so'yilgan qora mol jelatinidan tayyorlangan bo'lib, oshqozonda oson eriydi va oshqozon-ichak tizimiga hech qanday og'irlik qilmaydi." },
-                    { q: "Homiladorlik yoki emizish davrida ichish mumkinmi?", a: "Homiladorlik va laktatsiya davrida har qanday biologik faol qo'shimchalarni qabul qilishdan oldin shaxsiy shifokor bilan maslahatlashish tavsiya qilinadi." },
-                    { q: "Yetkazib berish xizmati qancha vaqt oladi va u pullikmi?", a: "O'zbekiston bo'ylab barcha viloyat, shahar va tumanlarga yetkazib berish mutlaqo BEPUL amalga oshiriladi. Toshkent shahrida 24 soat ichida, viloyatlarga 1-2 kun ichida qo'lingizga yetkaziladi." },
-                    { q: "To'lovni mahsulotni olgandan keyin qilsa bo'ladimi?", a: "Albatta! Bizda 100% ishonchli tizim yo'lga qo'yilgan: to'lov mahsulotni kuryerdan qabul qilib olib, sifatiga to'liq ishonch hosil qilganingizdan so'ng (naqd yoki plastik karta orqali) to'lanadi." },
-                    { q: "Bir flakonda nechta kapsula bor va u qancha vaqtga yetadi?", a: "Bir flakonda 150 ta yumshoq jelatin kapsula mavjud. Bu kuniga qabul qilinadigan dozaga qarab o'rtacha 1–1.5 oylik to'liq muolaja kursi uchun yetarli hisoblanadi." }
+                    { q: "Preparat o'rganib qolish (privikanie) holatini keltirib chiqarmaydimi?", a: "Yo'q, “QOMUS” 100% tabiiy sovuq presslangan qora sedana yog'i va vitaminlar majmuasidan iborat bo'lib, gormonlar yoki kimyoviy qo'shimchalar saqlamaydi. Shu sababli qabul qilish to'xtatilganda ham o'rganib qolish ҳолати kuzatilмайди." },
+                    { q: "Birinchi sezilarli natijalar qachon ko'rina boshlaydi?", a: "Organizmning xususiyati va kasallik darajasiga қараб, odatda muntazam foydalanishning 3–4 haftasida teri pigmentatsiyasida ijobiy o'zgarishlar, oқ доғлар четларининг табиий рангга қайта бошлаши кузатилади." },
+                    { q: "Kapsulalarni qanday tartibда қабул qilish tavsiя etiladi?", a: "Катталар учун кунига 2 маҳал (эрталаб ва кечқурун) овқатдан 20-30 дақиқа олдин 1-2 тадан капсулани илиқ сув билан ичиш тавсия этилади. Аниқ муолажа курсини мутахассис телефон орқали алоҳида белгилаб беради." },
+                    { q: "Kapsula qobig'i halolmi va u nimadan тайёрланган?", a: "Капсула қобиғи фақатгина ҳалол сўйилган қора мол желатинидан тайёрланган бўлиб, ошқозонда осон эрийди ва ошқозон-ичак тизимига ҳеч қандай оғирлик қилмайди." },
+                    { q: "Homiladorlik yoki emizish davrida ichish mumkinmi?", a: "Ҳомиладорлик ва лактация даврида ҳар қандай биологик фаол қўшимчаларни қабул қилишдан олдин шахсий шифокор билан маслаҳатлашиш тавсия қилинади." },
+                    { q: "Yetkazib berish xizmati qancha vaqt олади va u pullikmi?", a: "Ўзбекистон бўйлаб барча вилоят, шаҳар ва туманларга етказиб бериш мутлақо БЕПУЛ амалга оширилади. Тошкент шаҳрида 24 соат ичида, вилоятларга 1-2 кун ичида қўлингизга етказилади." },
+                    { q: "To'lovni mahsulotni olgandan keyin qilsa бўладими?", a: "Албатта! Бизда 100% ишончли тизим йўлга қўйилган: тўлов маҳсулотни курьердан қабул қилиб олиб, сифатига тўлиқ ишонч ҳосил қилганингиздан сўнг (нақд ёки пластик карта орқали) тўланади." },
+                    { q: "Bir flakonda nechta kapsula bor va u qancha vaqtga yetadi?", a: "Бир флаконда 150 та юмшоқ желатин капсула мавжуд. Бу кунига қабул қилинадиган дозага қараб ўртача 1–1.5 ойлик тўлиқ муолажа курси учун етарли ҳисобланади." }
                 ],
-
-                // 9-Blok Ustunliklar
-                advTitle: "NEGA AYNAN “QOMUS” PREPARATINI TANLASHADI?",
-                advDesc: "Biz mijozlarimiz salomatligi va ishonchini yuqori baholaymiz. Bizning asosiy afzalliklarimiz bilan tanishing",
+                advTitle: "НЕГА АЙНАН “QOMUS” ПРЕПАРАТИНИ ТАНЛАШАДИ?",
+                advDesc: "Биз мижозларимиз саломатлиги ва ишончини юқори баҳолаймиз. Бизнинг асосий афзалликларимиз билан танишинг",
                 c1T: "20,000+ Mamnun mijozlar",
                 c1D: "O'zbekiston bo'ylab minglab insonlar bizning vositamiz orqali oq dog'lar muammosidan xalos bo'lib, sog'lom teriga erishdilar.",
                 c2T: "Davlat tomonidan sertifikatlangan",
@@ -2031,30 +2011,26 @@
                 c3D: "Faqat sovuq presslangan sedana yog'i va tabiiy mikroelementlar. Hech qanday gormonlarsiz, o'rganib qolish holati yuzaga kelmaydi.",
                 c4T: "O'zbekiston bo'ylab BEPUL yetkazish",
                 c4D: "Qaysi viloyat yoki tumanda yashashingizdan qat'i nazar, buyurtmangiz ko'rsatilgan manzilga mutlaqo bepul yetkazib beriladi.",
-                c5T: "Olgandan so'ng to'lov (100% xavfsiz)",
+                c5T: "Olgandan so'ng тўлов (100% хавфсиз)",
                 c5D: "Hech qanday oldindan to'lov yo'q. Posilkani qo'lingizga olib, tekshirib ko'rganingizdan so'nggina kuryerga to'lov qilasiz.",
                 c6T: "Mutaxassisning shaxsiy nazorati",
-                c6D: "Muolaja davomida bizning tajribali maslahatchilarimiz siz bilan doimiy aloqada bo'lib, to'g'ri qabul qilishingizni kuzatib boradilar.",
-
-                // 10-Blok Lead Formasi
+                c6D: "Muolaja davomida bizning tajribali maslahatchilarimiz siz bilan doimiy aloqada bo'lib, to'g'ri қабул қилишингизни кузатиб борадилар.",
                 formTitle: "Buyurtma berish",
-                formSub: "Hoziroq bepul konsultatsiyaga yoziling va Qomus kapsulasi orqali sog'lom teriga qayting!",
+                formSub: "Hoziroq bepul konsultatsiyaga yoziling va Qomus kapsulasi орқали соғлом терига қайтинг!",
                 lblName: "Ismingiz",
-                lblPhone1: "Telefon raqami",
+                lblPhone1: "Телефон рақами",
                 lblPhone2: "Qo'shimcha telefon raqam",
-                lblHistory: "Oq dog'lar qachondan beri bor? (yil, oy)",
-                holderName: "Ismingizni kiriting",
-                holderHistory: "Masalan: 2 yildan beri, yaqinda boshlandi...",
+                lblHistory: "Oq dog'lar қачондан бери бор? (yil, oy)",
+                holderName: "Исмингизни киритинг",
+                holderHistory: "Masalan: 2 yildan beri, яқинда бошланди...",
                 formSubmit: "Buyurtma berish",
                 formPrivacy: "🔒 Shaxsiy ma'lumotlaringiz maxfiyligi 100% kafolatlanadi.",
-                
-                // Footer
                 socialTitle: "Biz ijtimoiy tarmoqlarda:",
                 socMainTg: "Asosiy kanal",
                 socResultsTg: "Natijalar kanali",
                 footerCopy: "© 2026 QOMUS. Barcha huquqlar himoyalangan.",
                 footerContactTxt: "Murojaat uchun: +998 71 203-04-08",
-                footerDisc: "DIQQAT: «QOMUS» preparati biologik faol qo'shimcha (BAD) hisoblanadi va dori vositasi emas. Natijalar organizmning individual xususiyatlariga qarab farq qilishi mumkin. Qabul qilishdan oldin shifokor bilan maslahatlashish tavsiya etiladi. SSV Ruxsatnomasi № 001425."
+                footerDisc: "DIQQAT: «QOMUS» preparati biologik faol қўшимча (BAD) ҳисобланади ва дори воситаси эмас. Natijalar organizmning individual xususiyatlariga қараб фарқ қилиши мумкин. Qabul qilishdan oldin shifokor bilan maslahatlashish tavsiya etiladi. SSV Рухсатномаси № 001425."
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
@@ -2078,8 +2054,6 @@
                 resultsTitle: "Мижозлар натижалари",
                 beforeBadge: "Аввал",
                 afterBadge: "Кейин",
-
-                // 5-Blok
                 compSecTitle: "ҚОМУС ПРЕПАРАТИНИНГ ТАБИИЙ ТАРКИБИ",
                 compSecDesc: "Витилиго ва тери пигменти тикланишида ички микроэлементлар мувозанати ҳал қилувчи аҳамиятга эга. Маҳсулот фақатгина табиий компонентлардан ташкил топган.",
                 cI1T: "Қора седана ёғи",
@@ -2092,8 +2066,6 @@
                 cI4D: "Калий, натрий, фосфор, кальций, марганец, темир, рух, мис, селен, никель — тери рангини тиклаш учун зарур ноёб минераллар.",
                 cI5T: "Ёрдамчи компонентлар ва эфир мойлари",
                 cI5D: "Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула.",
-
-                // 6-Blok video
                 videoSecTitle: "Мижозларимизнинг видео фикрлари",
                 videoSecSub: "Қомус препаратидан фойдаланиб натижага эришган юртдошларимиз билан суҳбатлар",
                 videoTitles: [
@@ -2101,15 +2073,11 @@
                     "Қомус препарати билан тери пигментининг тикланиш жараёни",
                     "Оқ доғлар бўйича мижозимизнинг ҳаётий тажрибаси"
                 ],
-
-                // 7-Blok
                 certTitle: "ДАВЛАТ ТОМОНИДАН ТАСДИҚЛАНГАН ВА СЕРТИФИКАТЛАНГАН",
                 certDesc: "«QOMUS» препарати Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги томонидан тўлиқ экспертизадан ўтказилган ва расмий рухсатномага эга.",
                 certCap1: "Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425",
                 certCap2: "Санитарно-эпидемиологическое заключение № 405282 (Тошкент)",
                 certSafety: "Маҳсулотнинг ҳар бир партияси гигиеник, радиологик ва бактериологик синовлардан муваффақиятли ўтиб, инсон саломатлиги учун мутлақо хавфсиз деб топилган.",
-
-                // 8-Blok FAQ
                 faqTitle: "КЎП БЕРИЛАДИГАН САВОЛЛАР",
                 faqSub: "Мижозларимиз томонидан энг кўп бериладиган саволларга расмий мутахассисларимиз жавоблари",
                 faqs: [
@@ -2119,11 +2087,9 @@
                     { q: "Капсула қобиғи ҳалолми ва у нимадан тайёрланган?", a: "Капсула қобиғи фақатгина ҳалол сўйилган қора мол желатинидан тайёрланган бўлиб, ошқозонда осон эрийди ва ошқозон-ичак тизимига ҳеч қандай оғирлик қилмайди." },
                     { q: "Ҳомиладорлик ёки эмизиш даврида ичиш мумкинми?", a: "Ҳомиладорлик ва лактация даврида ҳар қандай биологик фаол қўшимчаларни қабул қилишдан олдин шахсий шифокор билан маслаҳатлашиш тавсия қилинади." },
                     { q: "Етказиб бериш хизмати қанча вақт олади ва у пулликми?", a: "Ўзбекистон бўйлаб барча вилоят, шаҳар ва туманларга етказиб бериш мутлақо БЕПУЛ амалга оширилади. Тошкент шаҳрида 24 соат ичида, вилоятларга 1-2 кун ичида қўлингизга етказилади." },
-                    { q: "Тўловни маҳсулотни олгандан keyin қилса бўладими?", a: "Албатта! Бизда 100% ишончли тизим йўлга қўйилган: тўлов маҳсулотни курьердан қабул қилиб олиб, сифатига тўлиқ ишонч ҳосил қилганингиздан сўнг (нақд ёки пластик карта орқали) тўланади." },
+                    { q: "Тўловни маҳсулотни олгандан кейин қилса бўладими?", a: "Албатта! Бизда 100% ишончли тизим йўлга қўйилган: тўлов маҳсулотни курьердан қабул қилиб олиб, сифатига тўлиқ ишонч ҳосил қилганингиздан сўнг (нақд ёки пластик карта орқали) тўланади." },
                     { q: "Бир флаконда нечта капсула бор ва у қанча вақтга етади?", a: "Бир флаконда 150 та юмшоқ желатин капсула мавжуд. Бу кунига қабул қилинадиган дозага қараб ўртача 1–1.5 ойлик тўлиқ муолажа курси учун етарли ҳисобланади." }
                 ],
-
-                // 9-Blok Ustunliklar
                 advTitle: "НЕГА АЙНАН “QOMUS” ПРЕПАРАТИНИ ТАНЛАШАДИ?",
                 advDesc: "Биз мижозларимиз саломатлиги ва ишончини юқори баҳолаймиз. Бизнинг асосий афзалликларимиз билан танишинг",
                 c1T: "20,000+ Мамнун мижозлар",
@@ -2131,15 +2097,13 @@
                 c2T: "Давлат томонидан сертификатланган",
                 c2D: "Соғлиқни Сақлаш Вазирлиги ва СЭС хулосалари билан расман тасдиқланган, барча хавфсизлик талабларига 100% жавоб беради.",
                 c3T: "100% Табиий ва безарар",
-                c3D: "Фақат совуқ прессланган седана ёғи ва табиий микроэлементlar. Ҳеч қандай гормонларсиз, организмга ўрганиб қолиш ҳолати юзага келмайди.",
+                c3D: "Фақат совуқ прессланган седана ёғи ва табиий микроэлементлар. Ҳеч қандай гормонларсиз, организмга ўрганиб қолиш ҳолати юзага келмайди.",
                 c4T: "Ўзбекистон бўйлаб БЕПУЛ етказиш",
                 c4D: "Қайси вилоят ёки туманда яшашингиздан қатъи назар, буюртмангиз кўрсатилган манзилга мутлақо бепул етказиб берилади.",
                 c5T: "Олгандан сўнг тўлов (100% хавфсиз)",
                 c5D: "Ҳеч қандай олдиндан тўлов йўқ. Посилкангизни қўлингизга олиб, текшириб кўрганингиздан сўнггина курьерга тўлов қиласиз.",
                 c6T: "Мутахассиснинг шахсий назорати",
                 c6D: "Муолажа давомида бизнинг тажрибали маслаҳатчиларимиз сиз билан доимий алоқада бўлиб, тўғри қабул қилишингизни кузатиб борадилар.",
-
-                // 10-Blok Lead Formasi
                 formTitle: "Буюртма бериш",
                 formSub: "Ҳозироқ бепул консультацияга ёзилинг ва Qomus капсуласи орқали соғлом терига қайтинг!",
                 lblName: "Исмингиз",
@@ -2150,8 +2114,6 @@
                 holderHistory: "Масалан: 2 йилдан бери, яқинда бошланди...",
                 formSubmit: "Буюртма бериш",
                 formPrivacy: "🔒 Шахсий маълумотларингиз махфийлиги 100% кафолатланади.",
-                
-                // Footer
                 socialTitle: "Биз ижтимоий тармоқларда:",
                 socMainTg: "Асосий канал",
                 socResultsTg: "Натижалар канали",
@@ -2181,8 +2143,6 @@
                 resultsTitle: "Результаты клиентов",
                 beforeBadge: "До",
                 afterBadge: "После",
-
-                // 5-Blok
                 compSecTitle: "НАТУРАЛЬНЫЙ СОСТАВ ПРЕПАРАТА «QOMUS»",
                 compSecDesc: "При восстановлении пигментации кожи баланс микроэлементов имеет решающее значение. Продукт состоит исключительно из натуральных компонентов.",
                 cI1T: "Масло черного тмина",
@@ -2195,8 +2155,6 @@
                 cI4D: "Калий, натрий, фосфор, кальций, марганец, железо, цинк, медь, селен, никель — минералы для пигментации.",
                 cI5T: "Вспомогательные компоненты и эфирные масла",
                 cI5D: "Говяжий желатин, глицерин, нигеллон, А-каротиноиды и лимонная кислота в основе мягкой капсулы.",
-
-                // 6-Blok video
                 videoSecTitle: "Видео отзывы наших клиентов",
                 videoSecSub: "Интервью с людьми, восстановившими здоровье кожи с помощью препарата «Qomus»",
                 videoTitles: [
@@ -2204,15 +2162,11 @@
                     "Процесс восстановления пигментации кожи с препаратом «Qomus»",
                     "Личный опыт нашего клиента в борьбе с белыми пятнами"
                 ],
-
-                // 7-Blok
                 certTitle: "ГОСУДАРСТВЕННОЕ РАЗРЕШЕНИЕ И СЕРТИФИКАЦИЯ",
                 certDesc: "Препарат «QOMUS» прошел полную государственную экспертизу Министерства Здравоохранения Республики Узбекистан и имеет официальное разрешение.",
                 certCap1: "Разрешение Министерства Здравоохранения Республики Узбекистан № 001425",
                 certCap2: "Санитарно-эпидемиологическое заключение № 405282 (г. Ташкент)",
                 certSafety: "Каждая партия продукта успешно прошла строгий гигиенический, радиологический и бактериологический контроль и полностью безопасна для здоровья.",
-
-                // 8-Blok FAQ
                 faqTitle: "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
                 faqSub: "Ответы наших специалистов на самые популярные вопросы покупателей",
                 faqs: [
@@ -2225,8 +2179,6 @@
                     { q: "Возможна ли оплата при получении товара?", a: "Да, у нас действует безопасная оплата: вы оплачиваете заказ (наличными или картой) только после проверки посылки при курьере." },
                     { q: "Сколько капсул во флаконе и на сколько их хватает?", a: "Во флаконе 150 мягких желатиновых капсул. Этого хватает в среднем на 1–1.5 месяца полноценного лечебного курса." }
                 ],
-
-                // 9-Blok Ustunliklar
                 advTitle: "ПОЧЕМУ ВЫБИРАЮТ ИМЕННО «QOMUS»?",
                 advDesc: "Мы высоко ценим доверие и здоровье наших клиентов. Познакомьтесь с нашими главными преимуществами",
                 c1T: "Более 20,000 довольных клиентов",
@@ -2240,9 +2192,7 @@
                 c5T: "Оплата при получении (100% безопасно)",
                 c5D: "Никаких предоплат. Вы оплачиваете заказ только после личной проверки посылки при курьере.",
                 c6T: "Индивидуальный контроль специалиста",
-                c6D: "На протяжении всего курса наши консультанты регулярно на связи, контролируя правильный прием."
-                ,
-                // 10-Blok Lead Formasi
+                c6D: "На протяжении всего курса наши консультанты регулярно на связи, контролируя правильный прием.",
                 formTitle: "Оформить заказ",
                 formSub: "Запишитесь на бесплатную консультацию и верните здоровье кожи вместе с «QOMUS»!",
                 lblName: "Ваше имя",
@@ -2253,8 +2203,6 @@
                 holderHistory: "Например: 2 года назад, недавно появились...",
                 formSubmit: "Оформить заказ",
                 formPrivacy: "🔒 Конфиденциальность ваших данных гарантирована на 100%.",
-                
-                // Footer
                 socialTitle: "Мы в социальных сетях:",
                 socMainTg: "Основной канал",
                 socResultsTg: "Канал результатов",
@@ -2284,8 +2232,6 @@
                 resultsTitle: "Customer Results",
                 beforeBadge: "Before",
                 afterBadge: "After",
-
-                // 5-Blok
                 compSecTitle: "NATURAL COMPOSITION OF “QOMUS”",
                 compSecDesc: "In restoring skin pigmentation, the balance of internal microelements plays a crucial role. Formulated strictly with natural ingredients.",
                 cI1T: "Black Seed Oil",
@@ -2298,8 +2244,6 @@
                 cI4D: "Potassium, sodium, phosphorus, calcium, manganese, iron, zinc, copper, selenium, nickel — vital for pigmentation.",
                 cI5T: "Essential Oils and Auxiliary Elements",
                 cI5D: "Natural bovine gelatin, glycerin, nigellone, A-carotenoids, and citric acid inside a soft capsule.",
-
-                // 6-Blok video
                 videoSecTitle: "Customer Video Reviews",
                 videoSecSub: "Interviews with real people who restored skin pigmentation using “Qomus”",
                 videoTitles: [
@@ -2307,15 +2251,11 @@
                     "Restoration of skin pigmentation with “Qomus” capsules",
                     "Personal journey of our customer in overcoming white spots"
                 ],
-
-                // 7-Blok
                 certTitle: "OFFICIALLY CERTIFIED AND APPROVED",
                 certDesc: "“QOMUS” has successfully passed all laboratory evaluations by the Ministry of Health of Uzbekistan and is officially certified.",
                 certCap1: "Ministry of Health of the Republic of Uzbekistan Permit № 001425",
                 certCap2: "Sanitary and Epidemiological Conclusion № 405282 (Tashkent)",
                 certSafety: "Every batch undergoes rigorous hygienic, radiological, and bacteriological tests and is guaranteed 100% safe for human health.",
-
-                // 8-Blok FAQ
                 faqTitle: "FREQUENTLY ASKED QUESTIONS",
                 faqSub: "Direct answers from our healthcare consultants to the most frequent questions",
                 faqs: [
@@ -2328,8 +2268,6 @@
                     { q: "Can I pay upon package arrival?", a: "Yes! You can inspect the delivery before making payment via cash or local card." },
                     { q: "How many capsules per bottle and how long does it last?", a: "Each bottle contains 150 soft gelatin capsules, providing a complete 1 to 1.5-month course." }
                 ],
-
-                // 9-Blok Ustunliklar
                 advTitle: "WHY CHOOSE “QOMUS”?",
                 advDesc: "We place the highest value on your health and trust. Explore our core advantages",
                 c1T: "20,000+ Satisfied Customers",
@@ -2344,8 +2282,6 @@
                 c5D: "No advance payment required. Inspect your order in person before paying the courier.",
                 c6T: "Personal Expert Guidance",
                 c6D: "Our specialists provide consistent, free phone consultations and monitor your proper course progress.",
-
-                // 10-Blok Lead Formasi
                 formTitle: "Place an Order",
                 formSub: "Sign up for a free consultation today and reclaim healthy skin with “QOMUS”!",
                 lblName: "Your Name",
@@ -2356,8 +2292,6 @@
                 holderHistory: "e.g., 2 years, recently noticed...",
                 formSubmit: "Place Order",
                 formPrivacy: "🔒 100% privacy and data security guaranteed.",
-                
-                // Footer
                 socialTitle: "Follow us on social media:",
                 socMainTg: "Main Channel",
                 socResultsTg: "Results Channel",
@@ -2369,15 +2303,11 @@
 
         function changeLanguage(lang) {
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
-            
             const activeBtn = document.getElementById('btn-' + lang);
-            if(activeBtn) {
-                activeBtn.classList.add('active');
-            }
+            if(activeBtn) activeBtn.classList.add('active');
 
             const t = translations[lang];
             if (t) {
-                // Header & Hero
                 document.getElementById('header-order-btn').textContent = t.orderBtn;
                 document.getElementById('freeze-order-btn').textContent = t.orderBtn;
                 document.getElementById('ticker-text').innerHTML = t.ticker;
@@ -2386,7 +2316,6 @@
                 document.getElementById('hero-subtitle').textContent = t.subtitle;
                 document.getElementById('hero-cta').textContent = t.heroCta;
 
-                // 3-blok
                 document.getElementById('ref-header-title').textContent = t.refTitle;
                 document.getElementById('ref-sub-query').textContent = t.refSub;
                 document.getElementById('ref-c1-lead').textContent = t.refLead;
@@ -2394,12 +2323,10 @@
                 document.getElementById('ref-c2-p1').textContent = t.refP1;
                 document.getElementById('ref-c2-p2').innerHTML = t.refP2;
 
-                // 4-blok (Karusel)
                 document.getElementById('results-title').textContent = t.resultsTitle;
                 document.querySelectorAll('.badge-before').forEach(el => el.textContent = t.beforeBadge);
                 document.querySelectorAll('.badge-after').forEach(el => el.textContent = t.afterBadge);
 
-                // 5-Blok
                 document.getElementById('comp-sec-title').textContent = t.compSecTitle;
                 document.getElementById('comp-sec-desc').textContent = t.compSecDesc;
                 document.getElementById('c-i1-t').textContent = t.cI1T;
@@ -2413,26 +2340,21 @@
                 document.getElementById('c-i5-t').textContent = t.cI5T;
                 document.getElementById('c-i5-d').textContent = t.cI5D;
 
-                // 6-Blok video
                 document.getElementById('video-sec-title').textContent = t.videoSecTitle;
                 document.getElementById('video-sec-sub').textContent = t.videoSecSub;
                 if(t.videoTitles) {
                     for(let i = 1; i <= t.videoTitles.length; i++) {
                         const vEl = document.getElementById('vt-' + i);
-                        if(vEl && t.videoTitles[i-1]) {
-                            vEl.textContent = t.videoTitles[i-1];
-                        }
+                        if(vEl && t.videoTitles[i-1]) vEl.textContent = t.videoTitles[i-1];
                     }
                 }
 
-                // 7-Blok sertifikat
                 document.getElementById('cert-title').textContent = t.certTitle;
                 document.getElementById('cert-desc').textContent = t.certDesc;
                 document.getElementById('cert-cap-1').textContent = t.certCap1;
                 document.getElementById('cert-cap-2').textContent = t.certCap2;
                 document.getElementById('cert-safety-text').textContent = t.certSafety;
 
-                // 8-Blok FAQ
                 document.getElementById('faq-main-title').textContent = t.faqTitle;
                 document.getElementById('faq-main-sub').textContent = t.faqSub;
                 if(t.faqs) {
@@ -2444,7 +2366,6 @@
                     }
                 }
 
-                // 9-Blok Ustunliklar
                 document.getElementById('adv-title').textContent = t.advTitle;
                 document.getElementById('adv-desc').textContent = t.advDesc;
                 document.getElementById('adv-c1-t').textContent = t.c1T;
@@ -2460,7 +2381,6 @@
                 document.getElementById('adv-c6-t').textContent = t.c6T;
                 document.getElementById('adv-c6-d').textContent = t.c6D;
 
-                // 10-Blok Lead Formasi
                 document.getElementById('form-main-title').textContent = t.formTitle;
                 document.getElementById('form-main-sub').textContent = t.formSub;
                 document.getElementById('lbl-name').textContent = t.lblName;
@@ -2472,7 +2392,6 @@
                 document.getElementById('btn-form-submit').textContent = t.formSubmit;
                 document.getElementById('form-privacy').textContent = t.formPrivacy;
 
-                // Footer va Ijtimoiy tarmoqlar
                 document.getElementById('social-title').textContent = t.socialTitle;
                 document.getElementById('soc-main-tg').textContent = t.socMainTg;
                 document.getElementById('soc-results-tg').textContent = t.socResultsTg;
@@ -2482,53 +2401,50 @@
             }
         }
 
-        /* 8-BLOK: FAQ AKORDEON */
         function toggleFaq(btn) {
             const currentItem = btn.parentElement;
             const isOpen = currentItem.classList.contains('active');
-
-            document.querySelectorAll('.faq-item').forEach(item => {
-                item.classList.remove('active');
-            });
-
-            if (!isOpen) {
-                currentItem.classList.add('active');
-            }
+            document.querySelectorAll('.faq-item').forEach(item => item.classList.remove('active'));
+            if (!isOpen) currentItem.classList.add('active');
         }
 
-        /* ------------------------------------------------------------- */
-        /* ANIQ VA XATOSIZ ISHLAYDIGAN KARUSEL TIZIMI                    */
-        /* ------------------------------------------------------------- */
         function setupSlider(trackId, prevBtnId, nextBtnId) {
             const track = document.getElementById(trackId);
             const prevBtn = document.getElementById(prevBtnId);
             const nextBtn = document.getElementById(nextBtnId);
-            
             if (!track || !prevBtn || !nextBtn) return;
 
             let currentIndex = 0;
-            const slides = track.children;
+            const slides = Array.from(track.children);
             const totalSlides = slides.length;
 
             function updateSlide() {
-                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                slides.forEach((s, idx) => {
+                    if (idx === currentIndex) s.classList.add('active-slide');
+                    else s.classList.remove('active-slide');
+                });
+
+                const activeSlide = slides[currentIndex];
+                const trackWrapper = track.parentElement;
+                const slideOffset = activeSlide.offsetLeft;
+                const centerOffset = (trackWrapper.offsetWidth - activeSlide.offsetWidth) / 2;
+                const moveAmount = slideOffset - centerOffset;
+
+                track.style.transform = `translateX(-${moveAmount}px)`;
             }
 
             prevBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                e.stopPropagation();
                 currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
                 updateSlide();
             });
 
             nextBtn.addEventListener('click', (e) => {
                 e.preventDefault();
-                e.stopPropagation();
                 currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
                 updateSlide();
             });
 
-            // Mobil Swipe
             let startX = 0;
             track.parentElement.addEventListener('touchstart', (e) => {
                 startX = e.changedTouches[0].screenX;
@@ -2536,24 +2452,22 @@
 
             track.parentElement.addEventListener('touchend', (e) => {
                 const diff = startX - e.changedTouches[0].screenX;
-                if (diff > 45) {
+                if (diff > 40) {
                     currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
                     updateSlide();
-                } else if (diff < -45) {
+                } else if (diff < -40) {
                     currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
                     updateSlide();
                 }
             }, { passive: true });
+
+            window.addEventListener('resize', updateSlide);
+            setTimeout(updateSlide, 50);
         }
 
-        /* 10-BLOK: FORMA SUBMIT */
         function submitLeadForm(e) {
             e.preventDefault();
             const name = document.getElementById('clientName').value;
-            const phone1 = '+998 ' + document.getElementById('clientPhone1').value;
-            const phone2 = document.getElementById('clientPhone2').value ? '+998 ' + document.getElementById('clientPhone2').value : 'Mavjud emas';
-            const history = document.getElementById('clientHistory').value;
-
             alert("Rahmat, " + name + "! So'rovingiz qabul qilindi. Tez orada mutaxassisimiz siz bilan bog'lanadi.");
             document.getElementById('orderForm').reset();
         }
