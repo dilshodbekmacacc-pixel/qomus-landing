@@ -719,7 +719,7 @@
             line-height: 1.45;
         }
 
-        /* 7-BLOK: SERTIFIKATLAR (BORDERSIZ TOZA MATN) */
+        /* 7-BLOK: SERTIFIKATLAR */
         .cert-section {
             padding: 55px 0 50px 0;
             background: #ffffff;
@@ -786,7 +786,6 @@
             line-height: 1.4;
         }
 
-        /* OXIRIDAGI BORDERSIZ VA RAMKASIZ TOZA MATN */
         .cert-subtext-clean {
             max-width: 820px;
             margin: 15px auto 0 auto;
@@ -801,9 +800,7 @@
             line-height: 1.65;
         }
 
-        /* ------------------------------------------------------------- */
-        /* 8-BLOK: FAQ AKORDEON (8 TA SAVOL-JAVOB)                       */
-        /* ------------------------------------------------------------- */
+        /* 8-BLOK: FAQ AKORDEON */
         .faq-section {
             padding: 55px 0 65px 0;
             background: #f7faf9;
@@ -918,6 +915,90 @@
             padding-top: 12px;
         }
 
+        /* ------------------------------------------------------------- */
+        /* 9-BLOK: USTUN TOMONLARIMIZ (NEGA AYNAN QOMUS?)               */
+        /* ------------------------------------------------------------- */
+        .advantages-section {
+            padding: 60px 0 70px 0;
+            background: #ffffff;
+            border-bottom: 1px solid #e2ece7;
+        }
+
+        .adv-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .adv-header h2 {
+            color: #00317F;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            line-height: 1.35;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .adv-header p {
+            color: #475569;
+            font-size: 15px;
+            font-weight: 600;
+            max-width: 720px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .adv-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .adv-card {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 26px 22px;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.25s ease;
+        }
+
+        .adv-card:hover {
+            transform: translateY(-4px);
+            border-color: #00a86b;
+            background: #ffffff;
+            box-shadow: 0 10px 25px rgba(0, 49, 127, 0.06);
+        }
+
+        .adv-icon-badge {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: #eef6ff;
+            color: #00317F;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 16px;
+        }
+
+        .adv-card h3 {
+            font-size: 17px;
+            font-weight: 800;
+            color: #00317F;
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }
+
+        .adv-card p {
+            font-size: 13.5px;
+            line-height: 1.65;
+            color: #475569;
+            font-weight: 600;
+        }
+
         /* MOBIL VERSIYA */
         @media (max-width: 768px) {
             .logo-main { font-size: 18px; }
@@ -994,6 +1075,15 @@
             .faq-question-btn span { font-size: 14px; }
             .faq-toggle-icon { width: 26px; height: 26px; font-size: 16px; }
             .faq-answer-pane p { font-size: 13px; }
+
+            /* 9-blok ustunliklar mobil */
+            .advantages-section { padding: 35px 0 45px 0; }
+            .adv-header h2 { font-size: 21px; margin-bottom: 8px; }
+            .adv-header p { font-size: 13.5px; margin-bottom: 25px; }
+            .adv-grid { display: flex; flex-direction: column; gap: 14px; }
+            .adv-card { padding: 20px 18px; border-radius: 16px; }
+            .adv-card h3 { font-size: 16px; }
+            .adv-card p { font-size: 13px; }
 
             .carousel-btn { width: 38px; height: 38px; }
             .carousel-btn.prev { left: -2px; }
@@ -1442,7 +1532,7 @@
         </div>
     </section>
 
-    <!-- 7-BLOK: SERTIFIKATLAR (BORDERSIZ VA RAMKASIZ TOZA PASTKI MATN BILAN) -->
+    <!-- 7-BLOK: SERTIFIKATLAR -->
     <section class="cert-section">
         <div class="container">
             <div class="cert-header">
@@ -1456,19 +1546,18 @@
                 <div class="cert-card">
                     <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700&auto=format&fit=crop&q=80" alt="SSV Ruxsatnomasi">
                     <p class="cert-caption" id="cert-cap-1">
-                        Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425
+                        Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425[cite: 3]
                     </p>
                 </div>
 
                 <div class="cert-card">
                     <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?w=700&auto=format&fit=crop&q=80" alt="Sanitariya xulosasi">
                     <p class="cert-caption" id="cert-cap-2">
-                        Санитарно-эпидемиологическое заключение № 405282 (Тошкент)
+                        Санитарно-эпидемиологическое заключение № 405282 (Тошкент)[cite: 3]
                     </p>
                 </div>
             </div>
 
-            <!-- BORDERSIZ TOZA PASTKI MATN -->
             <div class="cert-subtext-clean">
                 <p id="cert-safety-text">
                     Маҳсулотнинг ҳар бир партияси гигиеник, радиологик ва бактериологик синовлардан муваффақиятли ўтиб, инсон саломатлиги учун мутлақо хавфсиз деб топилган.
@@ -1477,9 +1566,7 @@
         </div>
     </section>
 
-    <!-- ------------------------------------------------------------- -->
-    <!-- 8-BLOK: FAQ AKORDEON (8 TA SAVOL-JAVOB)                       -->
-    <!-- ------------------------------------------------------------- -->
+    <!-- 8-BLOK: FAQ AKORDEON -->
     <section class="faq-section">
         <div class="container">
             <div class="faq-header">
@@ -1488,8 +1575,6 @@
             </div>
 
             <div class="faq-container">
-                
-                <!-- 1-SAVOL -->
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
                         <span id="fq-1">Препарат ўрганиб қолиш (привыкание) ҳолатини келтириб чиқармайдими?</span>
@@ -1500,7 +1585,6 @@
                     </div>
                 </div>
 
-                <!-- 2-SAVOL -->
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
                         <span id="fq-2">Биринчи сезиларли натижалар қачон кўрина бошлайди?</span>
@@ -1511,7 +1595,6 @@
                     </div>
                 </div>
 
-                <!-- 3-SAVOL -->
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
                         <span id="fq-3">Капсулаларни қандай тартибда қабул қилиш тавсия этилади?</span>
@@ -1522,7 +1605,6 @@
                     </div>
                 </div>
 
-                <!-- 4-SAVOL -->
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
                         <span id="fq-4">Капсула қобиғи ҳалолми ва у нимадан тайёрланган?</span>
@@ -1533,7 +1615,6 @@
                     </div>
                 </div>
 
-                <!-- 5-SAVOL -->
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
                         <span id="fq-5">Ҳомиладорлик ёки эмизиш даврида ичиш мумкинми?</span>
@@ -1544,7 +1625,6 @@
                     </div>
                 </div>
 
-                <!-- 6-SAVOL -->
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
                         <span id="fq-6">Етказиб бериш хизмати қанча вақт олади ва у пулликми?</span>
@@ -1555,7 +1635,6 @@
                     </div>
                 </div>
 
-                <!-- 7-SAVOL -->
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
                         <span id="fq-7">Тўловни маҳсулотни олгандан кейин қилса бўладими?</span>
@@ -1566,7 +1645,6 @@
                     </div>
                 </div>
 
-                <!-- 8-SAVOL -->
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
                         <span id="fq-8">Бир флаконда нечта капсула бор ва у қанча вақтга етади?</span>
@@ -1575,6 +1653,63 @@
                     <div class="faq-answer-pane">
                         <p id="fa-8">Бир флаконда 150 та юмшоқ желатин капсула мавжуд. Бу кунига қабул қилинадиган дозага қараб ўртача 1–1.5 ойлик тўлиқ муолажа курси учун етарли ҳисобланади.</p>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- 9-BLOK: USTUN TOMONLARIMIZ (NEGA AYNAN QOMUS?)               -->
+    <!-- ------------------------------------------------------------- -->
+    <section class="advantages-section">
+        <div class="container">
+            <div class="adv-header">
+                <h2 id="adv-title">НЕГА АЙНАН “QOMUS” ПРЕПАРАТИНИ ТАНЛАШАДИ?</h2>
+                <p id="adv-desc">Биз мижозларимиз саломатлиги ва ишончини юқори баҳолаймиз. Бизнинг асосий афзалликларимиз билан танишинг</p>
+            </div>
+
+            <div class="adv-grid">
+                
+                <!-- 1-USTUNLIK -->
+                <div class="adv-card">
+                    <div class="adv-icon-badge">⭐</div>
+                    <h3 id="adv-c1-t">20,000+ Мамнун мижозлар</h3>
+                    <p id="adv-c1-d">Ўзбекистон бўйлаб минглаб инсонлар бизнинг воситамиз орқали оқ доғлар муаммосидан халос бўлиб, соғлом терига эришдилар.</p>
+                </div>
+
+                <!-- 2-USTUNLIK -->
+                <div class="adv-card">
+                    <div class="adv-icon-badge">🏛️</div>
+                    <h3 id="adv-c2-t">Давлат томонидан сертификатланган</h3>
+                    <p id="adv-c2-d">Соғлиқни Сақлаш Вазирлиги ва СЭС хулосалари билан расман тасдиқланган, барча хавфсизлик талабларига 100% жавоб берадиган маҳсулот[cite: 3].</p>
+                </div>
+
+                <!-- 3-USTUNLIK -->
+                <div class="adv-card">
+                    <div class="adv-icon-badge">🌿</div>
+                    <h3 id="adv-c3-t">100% Табиий ва безарар</h3>
+                    <p id="adv-c3-d">Фақат совуқ прессланган седана ёғи ва табиий микроэлементлар. Ҳеч қандай гормонларсиз, организмга ўрганиб қолиш ҳолати юзага келмайди.</p>
+                </div>
+
+                <!-- 4-USTUNLIK -->
+                <div class="adv-card">
+                    <div class="adv-icon-badge">🚚</div>
+                    <h3 id="adv-c4-t">Ўзбекистон бўйлаб БЕПУЛ етказиш</h3>
+                    <p id="adv-c4-d">Қайси вилоят ёки туманда яшашингиздан қатъи назар, буюртмангиз кўрсатилган манзилга мутлақо бепул етказиб берилади.</p>
+                </div>
+
+                <!-- 5-USTUNLIK -->
+                <div class="adv-card">
+                    <div class="adv-icon-badge">🤝</div>
+                    <h3 id="adv-c5-t">Олгандан сўнг тўлов (100% хавфсиз)</h3>
+                    <p id="adv-c5-d">Ҳеч қандай олдиндан тўлов йўқ. Посилкангизни қўлингизга олиб, текшириб кўрганингиздан сўнггина курьерга тўлов қиласиз.</p>
+                </div>
+
+                <!-- 6-USTUNLIK -->
+                <div class="adv-card">
+                    <div class="adv-icon-badge">👨‍⚕️</div>
+                    <h3 id="adv-c6-t">Мутахассиснинг шахсий назорати</h3>
+                    <p id="adv-c6-d">Муолажа давомида бизнинг тажрибали маслаҳатчиларимиз сиз билан доимий алоқада бўлиб, тўғри қабул қилишингизни кузатиб борадилар.</p>
                 </div>
 
             </div>
@@ -1670,7 +1805,23 @@
                     { q: "Yetkazib berish xizmati qancha vaqt oladi va u pullikmi?", a: "O'zbekiston bo'ylab barcha viloyat, shahar va tumanlarga yetkazib berish mutlaqo BEPUL amalga oshiriladi. Toshkent shahrida 24 soat ichida, viloyatlarga 1-2 kun ichida qo'lingizga yetkaziladi." },
                     { q: "To'lovni mahsulotni olgandan keyin qilsa bo'ladimi?", a: "Albatta! Bizda 100% ishonchli tizim yo'lga qo'yilgan: to'lov mahsulotni kuryerdan qabul qilib olib, sifatiga to'liq ishonch hosil qilganingizdan so'ng (naqd yoki plastik karta orqali) to'lanadi." },
                     { q: "Bir flakonda nechta kapsula bor va u qancha vaqtga yetadi?", a: "Bir flakonda 150 ta yumshoq jelatin kapsula mavjud. Bu kuniga qabul qilinadigan dozaga qarab o'rtacha 1–1.5 oylik to'liq muolaja kursi uchun yetarli hisoblanadi." }
-                ]
+                ],
+
+                // 9-Blok Ustunliklar
+                advTitle: "NEGA AYNAN “QOMUS” PREPARATINI TANLASHADI?",
+                advDesc: "Biz mijozlarimiz salomatligi va ishonchini yuqori baholaymiz. Bizning asosiy afzalliklarimiz bilan tanishing",
+                c1T: "20,000+ Mamnun mijozlar",
+                c1D: "O'zbekiston bo'ylab minglab insonlar bizning vositamiz orqali oq dog'lar muammosidan xalos bo'lib, sog'lom teriga erishdilar.",
+                c2T: "Davlat tomonidan sertifikatlangan",
+                c2D: "Sog'liqni Saqlash Vazirligi va SES xulosalari bilan rasman tasdiqlangan, barcha xavfsizlik talablariga 100% javob beradi[cite: 3].",
+                c3T: "100% Tabiiy va bezarar",
+                c3D: "Faqat sovuq presslangan sedana yog'i va tabiiy mikroelementlar. Hech qanday gormonlarsiz, o'rganib qolish holati yuzaga kelmaydi.",
+                c4T: "O'zbekiston bo'ylab BEPUL yetkazish",
+                c4D: "Qaysi viloyat yoki tumanda yashashingizdan qat'i nazar, buyurtmangiz ko'rsatilgan manzilga mutlaqo bepul yetkazib beriladi.",
+                c5T: "Olgandan so'ng to'lov (100% xavfsiz)",
+                c5D: "Hech qanday oldindan to'lov yo'q. Posilkani qo'lingizga olib, tekshirib ko'rganingizdan so'nggina kuryerga to'lov qilasiz.",
+                c6T: "Mutaxassisning shaxsiy nazorati",
+                c6D: "Muolaja davomida bizning tajribali maslahatchilarimiz siz bilan doimiy aloqada bo'lib, to'g'ri qabul qilishingizni kuzatib boradilar."
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
@@ -1728,8 +1879,8 @@
                 // 7-Blok
                 certTitle: "ДАВЛАТ ТОМОНИДАН ТАСДИҚЛАНГАН ВА СЕРТИФИКАТЛАНГАН",
                 certDesc: "«QOMUS» препарати Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги томонидан тўлиқ экспертизадан ўтказилган ва расмий рухсатномага эга.",
-                certCap1: "Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425",
-                certCap2: "Санитарно-эпидемиологическое заключение № 405282 (Тошкент)",
+                certCap1: "Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425[cite: 3]",
+                certCap2: "Санитарно-эпидемиологическое заключение № 405282 (Тошкент)[cite: 3]",
                 certSafety: "Маҳсулотнинг ҳар бир партияси гигиеник, радиологик ва бактериологик синовлардан муваффақиятли ўтиб, инсон саломатлиги учун мутлақо хавфсиз деб топилган.",
 
                 // 8-Blok FAQ
@@ -1744,7 +1895,23 @@
                     { q: "Етказиб бериш хизмати қанча вақт олади ва у пулликми?", a: "Ўзбекистон бўйлаб барча вилоят, шаҳар ва туманларга етказиб бериш мутлақо БЕПУЛ амалга оширилади. Тошкент шаҳрида 24 соат ичида, вилоятларга 1-2 кун ичида қўлингизга етказилади." },
                     { q: "Тўловни маҳсулотни олгандан кейин қилса бўладими?", a: "Албатта! Бизда 100% ишончли тизим йўлга қўйилган: тўлов маҳсулотни курьердан қабул қилиб олиб, сифатига тўлиқ ишонч ҳосил қилганингиздан сўнг (нақд ёки пластик карта орқали) тўланади." },
                     { q: "Бир флаконда нечта капсула бор ва у қанча вақтга етади?", a: "Бир флаконда 150 та юмшоқ желатин капсула мавжуд. Бу кунига қабул қилинадиган дозага қараб ўртача 1–1.5 ойлик тўлиқ муолажа курси учун етарли ҳисобланади." }
-                ]
+                ],
+
+                // 9-Blok Ustunliklar
+                advTitle: "НЕГА АЙНАН “QOMUS” ПРЕПАРАТИНИ ТАНЛАШАДИ?",
+                advDesc: "Биз мижозларимиз саломатлиги ва ишончини юқори баҳолаймиз. Бизнинг асосий афзалликларимиз билан танишинг",
+                c1T: "20,000+ Мамнун мижозлар",
+                c1D: "Ўзбекистон бўйлаб минглаб инсонлар бизнинг воситамиз орқали оқ доғлар муаммосидан халос бўлиб, соғлом терига эришдилар.",
+                c2T: "Давлат томонидан сертификатланган",
+                c2D: "Соғлиқни Сақлаш Вазирлиги ва СЭС хулосалари билан расман тасдиқланган, барча хавфсизлик талабларига 100% жавоб беради[cite: 3].",
+                c3T: "100% Табиий ва безарар",
+                c3D: "Фақат совуқ прессланган седана ёғи ва табиий микроэлементлар. Ҳеч қандай гормонларсиз, организмга ўрганиб қолиш ҳолати юзага келмайди.",
+                c4T: "Ўзбекистон бўйлаб БЕПУЛ етказиш",
+                c4D: "Қайси вилоят ёки туманда яшашингиздан қатъи назар, буюртмангиз кўрсатилган манзилга мутлақо бепул етказиб берилади.",
+                c5T: "Олгандан сўнг тўлов (100% хавфсиз)",
+                c5D: "Ҳеч қандай олдиндан тўлов йўқ. Посилкангизни қўлингизга олиб, текшириб кўрганингиздан сўнггина курьерга тўлов қиласиз.",
+                c6T: "Мутахассиснинг шахсий назорати",
+                c6D: "Муолажа давомида бизнинг тажрибали маслаҳатчиларимиз сиз билан доимий алоқада бўлиб, тўғри қабул қилишингизни кузатиб борадилар."
             },
             ru: {
                 orderBtn: "Заказать",
@@ -1802,8 +1969,8 @@
                 // 7-Blok
                 certTitle: "ГОСУДАРСТВЕННОЕ РАЗРЕШЕНИЕ И СЕРТИФИКАЦИЯ",
                 certDesc: "Препарат «QOMUS» прошел полную государственную экспертизу Министерства Здравоохранения Республики Узбекистан и имеет официальное разрешение.",
-                certCap1: "Разрешение Министерства Здравоохранения Республики Узбекистан № 001425",
-                certCap2: "Санитарно-эпидемиологическое заключение № 405282 (г. Ташкент)",
+                certCap1: "Разрешение Министерства Здравоохранения Республики Узбекистан № 001425[cite: 3]",
+                certCap2: "Санитарно-эпидемиологическое заключение № 405282 (г. Ташкент)[cite: 3]",
                 certSafety: "Каждая партия продукта успешно прошла строгий гигиенический, радиологический и бактериологический контроль и полностью безопасна для здоровья.",
 
                 // 8-Blok FAQ
@@ -1818,7 +1985,23 @@
                     { q: "Сколько длится доставка и платная ли она?", a: "Доставка по всему Узбекистану абсолютно БЕСПЛАТНАЯ. По Ташкенту — в течение 24 часов, в регионы — за 1-2 рабочих дня прямо до двери." },
                     { q: "Возможна ли оплата при получении товара?", a: "Да, у нас действует безопасная оплата: вы оплачиваете заказ (наличными или картой) только после проверки посылки при курьере." },
                     { q: "Сколько капсул во флаконе и на сколько их хватает?", a: "Во флаконе 150 мягких желатиновых капсул. Этого хватает в среднем на 1–1.5 месяца полноценного лечебного курса." }
-                ]
+                ],
+
+                // 9-Blok Ustunliklar
+                advTitle: "ПОЧЕМУ ВЫБИРАЮТ ИМЕННО «QOMUS»?",
+                advDesc: "Мы высоко ценим доверие и здоровье наших клиентов. Познакомьтесь с нашими главными преимуществами",
+                c1T: "Более 20,000 довольных клиентов",
+                c1D: "Тысячи людей по всему Узбекистану восстановили здоровую пигментацию кожи благодаря нашему препарату.",
+                c2T: "Государственная сертификация",
+                c2D: "Официально одобрено Минздравом РУз и СЭС, полностью отвечает международным стандартам безопасности[cite: 3].",
+                c3T: "100% Натурально и безвредно",
+                c3D: "Масло тмина холодного отжима и комплекс микроэлементов. Без гормонов и привыкания.",
+                c4T: "БЕСПЛАТНАЯ доставка по Узбекистану",
+                c4D: "В любой город или район доставка осуществляется абсолютно бесплатно прямо до вашей двери.",
+                c5T: "Оплата при получении (100% безопасно)",
+                c5D: "Никаких предоплат. Вы оплачиваете заказ только после личной проверки посылки при курьере.",
+                c6T: "Индивидуальный контроль специалиста",
+                c6D: "На протяжении всего курса наши консультанты регулярно на связи, контролируя правильный прием."
             },
             en: {
                 orderBtn: "Order Now",
@@ -1876,8 +2059,8 @@
                 // 7-Blok
                 certTitle: "OFFICIALLY CERTIFIED AND APPROVED",
                 certDesc: "“QOMUS” has successfully passed all laboratory evaluations by the Ministry of Health of Uzbekistan and is officially certified.",
-                certCap1: "Ministry of Health of the Republic of Uzbekistan Permit № 001425",
-                certCap2: "Sanitary and Epidemiological Conclusion № 405282 (Tashkent)",
+                certCap1: "Ministry of Health of the Republic of Uzbekistan Permit № 001425[cite: 3]",
+                certCap2: "Sanitary and Epidemiological Conclusion № 405282 (Tashkent)[cite: 3]",
                 certSafety: "Every batch undergoes rigorous hygienic, radiological, and bacteriological tests and is guaranteed 100% safe for human health.",
 
                 // 8-Blok FAQ
@@ -1892,7 +2075,23 @@
                     { q: "How long does delivery take and is it free?", a: "Delivery is completely FREE across all regions of Uzbekistan. Delivered within 24 hours in Tashkent and 1-2 days to other provinces." },
                     { q: "Can I pay upon package arrival?", a: "Yes! You can inspect the delivery before making payment via cash or local card." },
                     { q: "How many capsules per bottle and how long does it last?", a: "Each bottle contains 150 soft gelatin capsules, providing a complete 1 to 1.5-month course." }
-                ]
+                ],
+
+                // 9-Blok Ustunliklar
+                advTitle: "WHY CHOOSE “QOMUS”?",
+                advDesc: "We place the highest value on your health and trust. Explore our core advantages",
+                c1T: "20,000+ Satisfied Customers",
+                c1D: "Thousands of people across Uzbekistan have regained healthy skin pigmentation through our natural formula.",
+                c2T: "Government Certified Quality",
+                c2D: "Officially approved by the Ministry of Health and sanitary inspections, meeting strict safety guidelines[cite: 3].",
+                c3T: "100% Natural & Hormone-Free",
+                c3D: "Cold-pressed black seed oil with essential microelements. Non-addictive and gentle on the body.",
+                c4T: "FREE Delivery Across Uzbekistan",
+                c4D: "No matter which province or district you live in, delivery right to your door is completely free.",
+                c5T: "Cash on Delivery (100% Secure)",
+                c5D: "No advance payment required. Inspect your order in person before paying the courier.",
+                c6T: "Personal Expert Guidance",
+                c6D: "Our specialists provide consistent, free phone consultations and monitor your proper course progress."
             }
         };
 
@@ -1969,6 +2168,22 @@
                         if(aEl && t.faqs[i-1]) aEl.textContent = t.faqs[i-1].a;
                     }
                 }
+
+                // 9-Blok Ustunliklar tarjimalari
+                document.getElementById('adv-title').textContent = t.advTitle;
+                document.getElementById('adv-desc').textContent = t.advDesc;
+                document.getElementById('adv-c1-t').textContent = t.c1T;
+                document.getElementById('adv-c1-d').textContent = t.c1D;
+                document.getElementById('adv-c2-t').textContent = t.c2T;
+                document.getElementById('adv-c2-d').textContent = t.c2D;
+                document.getElementById('adv-c3-t').textContent = t.c3T;
+                document.getElementById('adv-c3-d').textContent = t.c3D;
+                document.getElementById('adv-c4-t').textContent = t.c4T;
+                document.getElementById('adv-c4-d').textContent = t.c4D;
+                document.getElementById('adv-c5-t').textContent = t.c5T;
+                document.getElementById('adv-c5-d').textContent = t.c5D;
+                document.getElementById('adv-c6-t').textContent = t.c6T;
+                document.getElementById('adv-c6-d').textContent = t.c6D;
             }
         }
 
@@ -1977,12 +2192,10 @@
             const currentItem = btn.parentElement;
             const isOpen = currentItem.classList.contains('active');
 
-            // Boshqa barcha ochiq savollarni yopish
             document.querySelectorAll('.faq-item').forEach(item => {
                 item.classList.remove('active');
             });
 
-            // Agar oldin ochiq bo'lmagan bo'lsa, ochiladi
             if (!isOpen) {
                 currentItem.classList.add('active');
             }
