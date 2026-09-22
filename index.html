@@ -919,7 +919,7 @@
             padding-top: 12px;
         }
 
-        /* 9-BLOK: JIDDIY TIBBIY/WELLNESS STANDARTDAGI USTUN TOMONLAR */
+        /* 9-BLOK: USTUN TOMONLAR */
         .advantages-section {
             padding: 60px 0 70px 0;
             background: #ffffff;
@@ -1004,11 +1004,11 @@
         }
 
         /* ------------------------------------------------------------- */
-        /* 10-BLOK: REFERENSGA MOS PROFESSIONAL LEAD FORM (BUYURTMA)    */
+        /* 10-BLOK: PROFESSIONAL LEAD FORM VA KATTA RASM                 */
         /* ------------------------------------------------------------- */
         .lead-section {
-            padding: 65px 0 75px 0;
-            background: #00317F; /* Rasmiy brend to'q ko'k rangi */
+            padding: 70px 0 80px 0;
+            background: #00317F;
             color: #ffffff;
             position: relative;
             overflow: hidden;
@@ -1016,8 +1016,8 @@
 
         .lead-grid {
             display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 40px;
+            grid-template-columns: 1fr 1.05fr;
+            gap: 45px;
             align-items: center;
         }
 
@@ -1026,7 +1026,7 @@
             font-weight: 900;
             line-height: 1.3;
             letter-spacing: -0.5px;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             text-transform: uppercase;
         }
 
@@ -1035,7 +1035,7 @@
             line-height: 1.6;
             color: #e2e8f0;
             font-weight: 600;
-            margin-bottom: 30px;
+            margin-bottom: 26px;
             max-width: 500px;
         }
 
@@ -1129,24 +1129,25 @@
             margin-top: 14px;
         }
 
-        /* 10-BLOK O'NG TOMONIDAGI MAHSULOT KARTASI */
+        /* FORMA BILAN BIR XIL TENG KATTA RASM */
         .lead-visual-col {
             display: flex;
             justify-content: center;
             align-items: center;
+            width: 100%;
+            height: 100%;
         }
 
         .lead-product-img {
             width: 100%;
-            max-width: 480px;
+            max-width: 600px;
             height: auto;
-            border-radius: 20px;
-            filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35));
+            border-radius: 24px;
+            object-fit: cover;
+            filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.38));
         }
 
-        /* ------------------------------------------------------------- */
-        /* FOOTER VA LEGAL OGOHLANTIRISH (DISCLAIMER)                    */
-        /* ------------------------------------------------------------- */
+        /* FOOTER */
         .site-footer {
             background: #0b1526;
             color: #94a3b8;
@@ -1180,7 +1181,7 @@
             padding-top: 20px;
         }
 
-        /* MOBIL VERSIYA MOSLASHUVI */
+        /* MOBIL VERSIYA */
         @media (max-width: 768px) {
             .logo-main { font-size: 18px; }
             .btn-phone-desktop { display: none; }
@@ -1271,7 +1272,7 @@
             .lead-section { padding: 40px 0 50px 0; }
             .lead-grid { display: flex; flex-direction: column; gap: 24px; text-align: center; }
             .lead-visual-col { order: 1; width: 100%; }
-            .lead-product-img { max-width: 90%; }
+            .lead-product-img { max-width: 100%; border-radius: 18px; }
             .lead-info-col { order: 2; width: 100%; text-align: left; }
             .lead-info-col h2 { font-size: 22px; text-align: center; }
             .lead-info-col p { font-size: 14px; text-align: center; margin-bottom: 22px; }
@@ -1746,14 +1747,14 @@
                 <div class="cert-card">
                     <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700&auto=format&fit=crop&q=80" alt="SSV Ruxsatnomasi">
                     <p class="cert-caption" id="cert-cap-1">
-                        Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425[cite: 3]
+                        Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425
                     </p>
                 </div>
 
                 <div class="cert-card">
                     <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?w=700&auto=format&fit=crop&q=80" alt="Sanitariya xulosasi">
                     <p class="cert-caption" id="cert-cap-2">
-                        Санитарно-эпидемиологическое заключение № 405282 (Тошкент)[cite: 3]
+                        Санитарно-эпидемиологическое заключение № 405282 (Тошкент)
                     </p>
                 </div>
             </div>
@@ -1837,7 +1838,7 @@
 
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
-                        <span id="fq-7">Тўловни маҳсулотни олгандан keyin қилса бўладими?</span>
+                        <span id="fq-7">Тўловни маҳсулотни олгандан кейин қилса бўладими?</span>
                         <div class="faq-toggle-icon">+</div>
                     </button>
                     <div class="faq-answer-pane">
@@ -1876,7 +1877,7 @@
                 <div class="adv-clean-card">
                     <div class="adv-num-badge">02</div>
                     <h3 id="adv-c2-t">Давлат томонидан сертификатланган</h3>
-                    <p id="adv-c2-d">Соғлиқни Сақлаш Вазирлиги ва СЭС хулосалари билан расман тасдиқланган, барча хавфсизлик талабларига 100% жавоб беради[cite: 3].</p>
+                    <p id="adv-c2-d">Соғлиқни Сақлаш Вазирлиги ва СЭС хулосалари билан расман тасдиқланган, барча хавфсизлик талабларига 100% жавоб беради.</p>
                 </div>
 
                 <div class="adv-clean-card">
@@ -1915,15 +1916,15 @@
             <!-- CHAP TARAFI: SARLAVHA VA FORMA KARTASI -->
             <div class="lead-info-col">
                 <h2 id="form-main-title">Буюртма бериш</h2>
-                <p id="form-main-sub">Ҳозироқ бепул консультацияга ёзилинг ва Qomus капсуласи орқали соғлом терига қайтинг![cite: 8]</p>
+                <p id="form-main-sub">Ҳозироқ бепул консультацияга ёзилинг ва Qomus капсуласи орқали соғлом терига қайтинг!</p>
 
                 <div class="form-card">
                     <form id="orderForm" onsubmit="submitLeadForm(event)">
                         
-                        <!-- 1. ISM FAMILIYA -->
+                        <!-- 1. FAQAT ISM -->
                         <div class="form-group">
-                            <label id="lbl-name" for="clientName">Исм фамилия</label>
-                            <input type="text" id="clientName" class="form-input" placeholder="Исм фамилиянгизни киритинг" required>
+                            <label id="lbl-name" for="clientName">Исмингиз</label>
+                            <input type="text" id="clientName" class="form-input" placeholder="Исмингизни киритинг" required>
                         </div>
 
                         <!-- 2. ASOSIY TELEFON RAQAM -->
@@ -1960,9 +1961,9 @@
                 </div>
             </div>
 
-            <!-- O'NG TARAFI: MAHSULOTNING KATTA RASMI -->
+            <!-- O'NG TARAFI: FORMA BILAN BIR XIL TENG KATTA MAHSULOT RASMI -->
             <div class="lead-visual-col">
-                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1000&auto=format&fit=crop&q=80" alt="QOMUS 150 Kapsula" class="lead-product-img">
+                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1200&auto=format&fit=crop&q=85" alt="QOMUS 150 Kapsula" class="lead-product-img">
             </div>
 
         </div>
@@ -1976,7 +1977,7 @@
             
             <div class="footer-legal-box">
                 <p id="footer-disclaimer">
-                    ДИҚҚАТ: «QOMUS» препарати биологик фаол қўшимча (БАД) ҳисобланади ва дори воситаси эмас. Натижалар организмнинг индивидуал хусусиятларига қараб фарқ қилиши мумкин. Қабул қилишдан олдин шифокор билан маслаҳатлашиш тавсия этилади. ССВ Рухсатномаси № 001425.[cite: 3]
+                    ДИҚҚАТ: «QOMUS» препарати биологик фаол қўшимча (БАД) ҳисобланади ва дори воситаси эмас. Натижалар организмнинг индивидуал хусусиятларига қараб фарқ қилиши мумкин. Қабул қилишдан олдин шифокор билан маслаҳатлашиш тавсия этилади. ССВ Рухсатномаси № 001425.
                 </p>
             </div>
 
@@ -2065,8 +2066,8 @@
                 // 7-Blok
                 certTitle: "DAVLAT TOMONIDAN TASDIQLANGAN VA SERTIFIKATLANGAN",
                 certDesc: "«QOMUS» preparati O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi tomonidan to'liq ekspertizadan o'tkazilgan va rasmiy ruxsatnomaga ega.",
-                certCap1: "O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi Ruxsatnomasi № 001425[cite: 3]",
-                certCap2: "Sanitariya-epidemiologik xulosa № 405282 (Toshkent shahri)[cite: 3]",
+                certCap1: "O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi Ruxsatnomasi № 001425",
+                certCap2: "Sanitariya-epidemiologik xulosa № 405282 (Toshkent shahri)",
                 certSafety: "Mahsulotning har bir partiyasi gigiyenik, radiologik va bakteriologik sinovlardan muvaffaqiyatli o'tib, inson salomatligi uchun mutlaqo xavfsiz deb topilgan.",
 
                 // 8-Blok FAQ
@@ -2089,7 +2090,7 @@
                 c1T: "20,000+ Mamnun mijozlar",
                 c1D: "O'zbekiston bo'ylab minglab insonlar bizning vositamiz orqali oq dog'lar muammosidan xalos bo'lib, sog'lom teriga erishdilar.",
                 c2T: "Davlat tomonidan sertifikatlangan",
-                c2D: "Sog'liqni Saqlash Vazirligi va SES xulosalari bilan rasman tasdiqlangan, barcha xavfsizlik talablariga 100% javob beradi[cite: 3].",
+                c2D: "Sog'liqni Saqlash Vazirligi va SES xulosalari bilan rasman tasdiqlangan, barcha xavfsizlik talablariga 100% javob beradi.",
                 c3T: "100% Tabiiy va bezarar",
                 c3D: "Faqat sovuq presslangan sedana yog'i va tabiiy mikroelementlar. Hech qanday gormonlarsiz, o'rganib qolish holati yuzaga kelmaydi.",
                 c4T: "O'zbekiston bo'ylab BEPUL yetkazish",
@@ -2101,16 +2102,16 @@
 
                 // 10-Blok Lead Formasi
                 formTitle: "Buyurtma berish",
-                formSub: "Hoziroq bepul konsultatsiyaga yoziling va Qomus kapsulasi orqali sog'lom teriga qayting![cite: 8]",
-                lblName: "Ism familiya",
+                formSub: "Hoziroq bepul konsultatsiyaga yoziling va Qomus kapsulasi orqali sog'lom teriga qayting!",
+                lblName: "Ismingiz",
                 lblPhone1: "Telefon raqami",
                 lblPhone2: "Qo'shimcha telefon raqam",
                 lblHistory: "Oq dog'lar qachondan beri bor? (yil, oy)",
-                holderName: "Ism familiyangizni kiriting",
+                holderName: "Ismingizni kiriting",
                 holderHistory: "Masalan: 2 yildan beri, yaqinda boshlandi...",
                 formSubmit: "Buyurtma berish",
                 formPrivacy: "🔒 Shaxsiy ma'lumotlaringiz maxfiyligi 100% kafolatlanadi.",
-                footerDisc: "DIQQAT: «QOMUS» preparati biologik faol qo'shimcha (BAD) hisoblanadi va dori vositasi emas. Natijalar organizmning individual xususiyatlariga qarab farq qilishi mumkin. Qabul qilishdan oldin shifokor bilan maslahatlashish tavsiya etiladi. SSV Ruxsatnomasi № 001425.[cite: 3]"
+                footerDisc: "DIQQAT: «QOMUS» preparati biologik faol qo'shimcha (BAD) hisoblanadi va dori vositasi emas. Natijalar organizmning individual xususiyatlariga qarab farq qilishi mumkin. Qabul qilishdan oldin shifokor bilan maslahatlashish tavsiya etiladi. SSV Ruxsatnomasi № 001425."
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
@@ -2159,7 +2160,7 @@
                     "Мижознинг самимий фикрлари ва эришилган натижа",
                     "Муолажа босқичлари ва ижобий ўзгаришлар",
                     "Витилиго муаммосидан сўнг соғлом терига қайтиш",
-                    "Теридаги пигментация қайта тикланиши бўйича фикрлар",
+                    "Теридаги пигментация қайта тикланиши бўйича фикрlar",
                     "Қомус капсулаларини қабул қилиш тажрибаси",
                     "Мижозимизнинг даволаниш давомидаги ўзгаришлари",
                     "Ҳақиқий натижалар: мижоз билан жонли мулоқот"
@@ -2168,8 +2169,8 @@
                 // 7-Blok
                 certTitle: "ДАВЛАТ ТОМОНИДАН ТАСДИҚЛАНГАН ВА СЕРТИФИКАТЛАНГАН",
                 certDesc: "«QOMUS» препарати Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги томонидан тўлиқ экспертизадан ўтказилган ва расмий рухсатномага эга.",
-                certCap1: "Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425[cite: 3]",
-                certCap2: "Санитарно-эпидемиологическое заключение № 405282 (Тошкент)[cite: 3]",
+                certCap1: "Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425",
+                certCap2: "Санитарно-эпидемиологическое заключение № 405282 (Тошкент)",
                 certSafety: "Маҳсулотнинг ҳар бир партияси гигиеник, радиологик ва бактериологик синовлардан муваффақиятли ўтиб, инсон саломатлиги учун мутлақо хавфсиз деб топилган.",
 
                 // 8-Blok FAQ
@@ -2192,7 +2193,7 @@
                 c1T: "20,000+ Мамнун мижозлар",
                 c1D: "Ўзбекистон бўйлаб минглаб инсонлар бизнинг воситамиз орқали оқ доғлар муаммосидан халос бўлиб, соғлом терига эришдилар.",
                 c2T: "Давлат томонидан сертификатланган",
-                c2D: "Соғлиқни Сақлаш Вазирлиги ва СЭС хулосалари билан расман тасдиқланган, барча хавфсизлик талабларига 100% жавоб беради[cite: 3].",
+                c2D: "Соғлиқни Сақлаш Вазирлиги ва СЭС хулосалари билан расман тасдиқланган, барча хавфсизлик талабларига 100% жавоб беради.",
                 c3T: "100% Табиий ва безарар",
                 c3D: "Фақат совуқ прессланган седана ёғи ва табиий микроэлементлар. Ҳеч қандай гормонларсиз, организмга ўрганиб қолиш ҳолати юзага келмайди.",
                 c4T: "Ўзбекистон бўйлаб БЕПУЛ етказиш",
@@ -2204,16 +2205,16 @@
 
                 // 10-Blok Lead Formasi
                 formTitle: "Буюртма бериш",
-                formSub: "Ҳозироқ бепул консультацияга ёзилинг ва Qomus капсуласи орқали соғлом терига қайтинг![cite: 8]",
-                lblName: "Исм фамилия",
+                formSub: "Ҳозироқ бепул консультацияга ёзилинг ва Qomus капсуласи орқали соғлом терига қайтинг!",
+                lblName: "Исмингиз",
                 lblPhone1: "Телефон рақами",
                 lblPhone2: "Қўшимча телефон рақам",
                 lblHistory: "Оқ доғлар қачондан бери бор? (йил, ой)",
-                holderName: "Исм фамилиянгизни киритинг",
+                holderName: "Исмингизни киритинг",
                 holderHistory: "Масалан: 2 йилдан бери, яқинда бошланди...",
                 formSubmit: "Буюртма бериш",
                 formPrivacy: "🔒 Шахсий маълумотларингиз махфийлиги 100% кафолатланади.",
-                footerDisc: "ДИҚҚАТ: «QOMUS» препарати биологик фаол қўшимча (БАД) ҳисобланади ва дори воситаси эмас. Натижалар организмнинг индивидуал хусусиятларига қараб фарқ қилиши мумкин. Қабул қилишдан олдин шифокор билан маслаҳатлашиш тавсия этилади. ССВ Рухсатномаси № 001425.[cite: 3]"
+                footerDisc: "ДИҚҚАТ: «QOMUS» препарати биологик фаол қўшимча (БАД) ҳисобланади ва дори воситаси эмас. Натижалар организмнинг индивидуал хусусиятларига қараб фарқ қилиши мумкин. Қабул қилишдан олдин шифокор билан маслаҳатлашиш тавсия этилади. ССВ Рухсатномаси № 001425."
             },
             ru: {
                 orderBtn: "Заказать",
@@ -2271,8 +2272,8 @@
                 // 7-Blok
                 certTitle: "ГОСУДАРСТВЕННОЕ РАЗРЕШЕНИЕ И СЕРТИФИКАЦИЯ",
                 certDesc: "Препарат «QOMUS» прошел полную государственную экспертизу Министерства Здравоохранения Республики Узбекистан и имеет официальное разрешение.",
-                certCap1: "Разрешение Министерства Здравоохранения Республики Узбекистан № 001425[cite: 3]",
-                certCap2: "Санитарно-эпидемиологическое заключение № 405282 (г. Ташкент)[cite: 3]",
+                certCap1: "Разрешение Министерства Здравоохранения Республики Узбекистан № 001425",
+                certCap2: "Санитарно-эпидемиологическое заключение № 405282 (г. Ташкент)",
                 certSafety: "Каждая партия продукта успешно прошла строгий гигиенический, радиологический и бактериологический контроль и полностью безопасна для здоровья.",
 
                 // 8-Blok FAQ
@@ -2295,7 +2296,7 @@
                 c1T: "Более 20,000 довольных клиентов",
                 c1D: "Тысячи людей по всему Узбекистану восстановили здоровую пигментацию кожи благодаря нашему препарату.",
                 c2T: "Государственная сертификация",
-                c2D: "Официально одобрено Минздравом РУз и СЭС, полностью отвечает международным стандартам безопасности[cite: 3].",
+                c2D: "Официально одобрено Минздравом РУз и СЭС, полностью отвечает международным стандартам безопасности.",
                 c3T: "100% Натурально и безвредно",
                 c3D: "Масло тмина холодного отжима и комплекс микроэлементов. Без гормонов и привыкания.",
                 c4T: "БЕСПЛАТНАЯ доставка по Узбекистану",
@@ -2308,15 +2309,15 @@
                 // 10-Blok Lead Formasi
                 formTitle: "Оформить заказ",
                 formSub: "Запишитесь на бесплатную консультацию и верните здоровье кожи вместе с «QOMUS»!",
-                lblName: "Имя и фамилия",
+                lblName: "Ваше имя",
                 lblPhone1: "Номер телефона",
                 lblPhone2: "Дополнительный номер телефона",
                 lblHistory: "Как давно появились белые пятна? (лет, месяцев)",
-                holderName: "Введите ваше имя и фамилию",
+                holderName: "Введите ваше имя",
                 holderHistory: "Например: 2 года назад, недавно появились...",
                 formSubmit: "Оформить заказ",
                 formPrivacy: "🔒 Конфиденциальность ваших данных гарантирована на 100%.",
-                footerDisc: "ВНИМАНИЕ: Препарат «QOMUS» является биологически активной добавкой (БАД) и не является лекарственным средством. Результаты индивидуальны. Перед применением рекомендуется проконсультироваться с врачом. Разрешение Минздрава РУз № 001425.[cite: 3]"
+                footerDisc: "ВНИМАНИЕ: Препарат «QOMUS» является биологически активной добавкой (БАД) и не является лекарственным средством. Результаты индивидуальны. Перед применением рекомендуется проконсультироваться с врачом. Разрешение Минздрава РУз № 001425."
             },
             en: {
                 orderBtn: "Order Now",
@@ -2374,8 +2375,8 @@
                 // 7-Blok
                 certTitle: "OFFICIALLY CERTIFIED AND APPROVED",
                 certDesc: "“QOMUS” has successfully passed all laboratory evaluations by the Ministry of Health of Uzbekistan and is officially certified.",
-                certCap1: "Ministry of Health of the Republic of Uzbekistan Permit № 001425[cite: 3]",
-                certCap2: "Sanitary and Epidemiological Conclusion № 405282 (Tashkent)[cite: 3]",
+                certCap1: "Ministry of Health of the Republic of Uzbekistan Permit № 001425",
+                certCap2: "Sanitary and Epidemiological Conclusion № 405282 (Tashkent)",
                 certSafety: "Every batch undergoes rigorous hygienic, radiological, and bacteriological tests and is guaranteed 100% safe for human health.",
 
                 // 8-Blok FAQ
@@ -2398,7 +2399,7 @@
                 c1T: "20,000+ Satisfied Customers",
                 c1D: "Thousands of people across Uzbekistan have regained healthy skin pigmentation through our natural formula.",
                 c2T: "Government Certified Quality",
-                c2D: "Officially approved by the Ministry of Health and sanitary inspections, meeting strict safety guidelines[cite: 3].",
+                c2D: "Officially approved by the Ministry of Health and sanitary inspections, meeting strict safety guidelines.",
                 c3T: "100% Natural & Hormone-Free",
                 c3D: "Cold-pressed black seed oil with essential microelements. Non-addictive and gentle on the body.",
                 c4T: "FREE Delivery Across Uzbekistan",
@@ -2406,20 +2407,20 @@
                 c5T: "Cash on Delivery (100% Secure)",
                 c5D: "No advance payment required. Inspect your order in person before paying the courier.",
                 c6T: "Personal Expert Guidance",
-                c6D: "Our specialists provide consistent, free phone consultations and monitor your proper course progress.",
+                c6D: "Our specialists provide consistent, free phone consultations and monitor your proper course progress."
 
                 // 10-Blok Lead Formasi
                 formTitle: "Place an Order",
                 formSub: "Sign up for a free consultation today and reclaim healthy skin with “QOMUS”!",
-                lblName: "Full Name",
+                lblName: "Your Name",
                 lblPhone1: "Phone Number",
                 lblPhone2: "Alternative Phone Number",
                 lblHistory: "How long have you had vitiligo? (years, months)",
-                holderName: "Enter your full name",
+                holderName: "Enter your name",
                 holderHistory: "e.g., 2 years, recently noticed...",
                 formSubmit: "Place Order",
                 formPrivacy: "🔒 100% privacy and data security guaranteed.",
-                footerDisc: "NOTE: “QOMUS” is a dietary supplement and not a medicinal drug. Results may vary depending on individual physiological traits. Medical consultation is recommended before use. MOH Permit № 001425.[cite: 3]"
+                footerDisc: "NOTE: “QOMUS” is a dietary supplement and not a medicinal drug. Results may vary depending on individual physiological traits. Medical consultation is recommended before use. MOH Permit № 001425."
             }
         };
 
