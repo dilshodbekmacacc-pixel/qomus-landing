@@ -404,7 +404,7 @@
         }
 
         /* ------------------------------------------------------------- */
-        /* 4-BLOK: PEEK-EFFECT VA 10 TA NATIJA BILAN KARUSEL            */
+        /* 4-BLOK: CHEKSIZ LOOP (INFINITE) VA PEEK-EFFECT KARUSEL       */
         /* ------------------------------------------------------------- */
         .results-section {
             padding: 50px 0 60px 0;
@@ -428,23 +428,22 @@
             margin: 0 auto;
         }
 
-        /* Yonlardagi slaydlarning cheti ko'rinishi uchun */
         .carousel-track-wrapper {
             width: 100%;
             overflow: visible;
+            touch-action: pan-y;
         }
 
         .carousel-track {
             display: flex;
             transition: transform 0.4s ease-out;
             cursor: grab;
+            user-select: none;
         }
 
-        /* Har bir slayd 82% kenglikda — ikki chetdan qo'shni slaydlar ko'rinadi */
         .carousel-slide {
             flex: 0 0 82%;
             padding: 0 8px;
-            transition: opacity 0.3s ease, transform 0.3s ease;
             box-sizing: border-box;
         }
 
@@ -471,6 +470,7 @@
             object-fit: cover;
             border-radius: 14px;
             margin-bottom: 10px;
+            pointer-events: none;
         }
 
         .result-badge {
@@ -483,7 +483,6 @@
             text-transform: capitalize;
         }
 
-        /* STRELKA TUGMALARI: ICON DOIM KO'RINADIGAN QILINDI */
         .carousel-btn {
             position: absolute;
             top: 50%;
@@ -515,7 +514,6 @@
             transition: stroke 0.2s ease;
         }
 
-        /* Tugma bosilganda yoki sichqoncha kelganda */
         .carousel-btn:hover,
         .carousel-btn:active {
             background: #00317F !important;
@@ -526,13 +524,8 @@
             stroke: #ffffff !important;
         }
 
-        .carousel-btn.prev {
-            left: 4px;
-        }
-
-        .carousel-btn.next {
-            right: 4px;
-        }
+        .carousel-btn.prev { left: 4px; }
+        .carousel-btn.next { right: 4px; }
 
         /* MOBIL VERSIYA */
         @media (max-width: 768px) {
@@ -565,12 +558,11 @@
             .ref-list-item { font-size: 13.5px; }
             .ref-text-block-2 p { font-size: 14px; margin-bottom: 16px; }
 
-            /* Karusel mobil sozlamalari */
             .results-section { padding: 32px 0 40px 0; }
             .results-header-title { font-size: 21px; margin-bottom: 20px; }
             
             .carousel-slide {
-                flex: 0 0 85%; /* Mobilda 85% — yonidagi rasm ko'rinib turishi uchun */
+                flex: 0 0 85%;
                 padding: 0 6px;
             }
 
@@ -644,7 +636,6 @@
     <!-- 2-BLOK: HERO SECTION -->
     <section class="hero-section">
         <div class="container hero-grid">
-            
             <div class="hero-visual-card">
                 <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1000&auto=format&fit=crop&q=80" alt="QOMUS Flakon" class="product-img-large">
             </div>
@@ -662,14 +653,12 @@
                     Бепул маслаҳат олиш
                 </a>
             </div>
-
         </div>
     </section>
 
     <!-- 3-BLOK: REFERENSGA MOS STRUKTURA -->
     <section class="pain-section-ref">
         <div class="container">
-            
             <div class="ref-header">
                 <h2 id="ref-header-title">Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!</h2>
                 <p id="ref-sub-query">Нима қиласиз?</p>
@@ -700,7 +689,7 @@
                         </div>
                         <div class="ref-list-item">
                             <span class="ref-badge-icon">!</span>
-                            <span>Айниқса, йилнинг иссиқ фаслларида ёки енги калта кийимлар кийганда ноқулайлик сезасиз...</span>
+                            <span>Айниқса, йилнинг иссиқ фаслларида ёки енги калта кийимlar кийганда ноқулайлик сезасиз...</span>
                         </div>
                         <div class="ref-list-item">
                             <span class="ref-badge-icon">!</span>
@@ -730,25 +719,24 @@
                     </p>
                 </div>
             </div>
-
         </div>
     </section>
 
-    <!-- 4-BLOK: MIJOZLAR NATIJALARI (10 TA JUFT NATIJA VA PEEK-EFFECT) -->
+    <!-- 4-BLOK: CHEKSIZ LOOP BILAN 10 TA NATIJA KARUSELI -->
     <section class="results-section">
         <div class="container">
             <h2 class="results-header-title" id="results-title">Мижозлар натижалари</h2>
 
             <div class="carousel-outer-box">
                 <!-- CHAPGA STRELKA -->
-                <button class="carousel-btn prev" onclick="moveCarousel(-1)" aria-label="Oldingisi">
+                <button class="carousel-btn prev" onclick="handlePrev()" aria-label="Oldingisi">
                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="15 18 9 12 15 6"></polyline>
                     </svg>
                 </button>
 
                 <!-- SLAYD TRAKI -->
-                <div class="carousel-track-wrapper">
+                <div class="carousel-track-wrapper" id="carouselWrapper">
                     <div class="carousel-track" id="carouselTrack">
                         
                         <!-- 1-JUFT -->
@@ -895,7 +883,7 @@
                 </div>
 
                 <!-- O'NGA STRELKA -->
-                <button class="carousel-btn next" onclick="moveCarousel(1)" aria-label="Keyingisi">
+                <button class="carousel-btn next" onclick="handleNext()" aria-label="Keyingisi">
                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
@@ -957,7 +945,7 @@
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Теридаги оқ доғлар</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Уят ёки ноқулайлик ҳисси</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Асабийлик ва ўз-ўзингизга ишончсизлик</span></div>
-                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Турли мазлар ва даволардан фойда кўрмагансиз ёки таъсири кам...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Турли мазlar ва даволардан фойда кўрмагансиз ёки таъсири кам...</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Айниқса, йилнинг иссиқ фаслларида ёки енги калта кийимлар кийганда ноқулайлик сезасиз...</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Витилигодан халос бўлишни хоҳлайсиз-у, лекин "Қандай қилиб?" деган саволга жавоб тополмай бошингиз қотган, тўғрими?</span></div>
                 `,
@@ -1046,27 +1034,94 @@
             }
         }
 
-        /* 10 TA NATIJA UCHUN PEEK-EFFECT KARUSEL MANTIG'I */
-        let currentSlide = 0;
-        const totalSlides = 10;
+        /* ------------------------------------------------------------- */
+        /* CHEKSIZ (INFINITE LOOP) KARUSEL VA SWIPE MANTIG'I            */
+        /* ------------------------------------------------------------- */
+        let track, slides, totalOriginal;
+        let currentIndex;
+        let isTransitioning = false;
 
-        function moveCarousel(direction) {
-            currentSlide += direction;
-            if (currentSlide < 0) {
-                currentSlide = totalSlides - 1;
-            } else if (currentSlide >= totalSlides) {
-                currentSlide = 0;
-            }
+        function initInfiniteCarousel() {
+            track = document.getElementById('carouselTrack');
+            const originalSlides = Array.from(track.children);
+            totalOriginal = originalSlides.length;
 
-            const track = document.getElementById('carouselTrack');
-            // Mobilda 85%, Desktopda 82% siljish
-            const isMobile = window.innerWidth <= 768;
-            const slideWidth = isMobile ? 85 : 82;
-            track.style.transform = `translateX(-${currentSlide * slideWidth}%)`;
+            // Oxirgi slayd nusxasini boshiga (cloneFirst), birinchi slayd nusxasini oxiriga (cloneLast) qo'shamiz
+            const firstClone = originalSlides[0].cloneNode(true);
+            const lastClone = originalSlides[totalOriginal - 1].cloneNode(true);
+
+            track.appendChild(firstClone);
+            track.insertBefore(lastClone, track.firstElementChild);
+
+            slides = Array.from(track.children);
+            currentIndex = 1; // 1-haqiqiy slayddan boshlaymiz
+
+            updateCarouselPosition(false);
+
+            track.addEventListener('transitionend', () => {
+                isTransitioning = false;
+                if (currentIndex === 0) {
+                    // Agar klonlangan oxirgi slaydga o'tgan bo'lsa, bildirmasdan haqiqiy oxirgisiga sakraydi
+                    currentIndex = totalOriginal;
+                    updateCarouselPosition(false);
+                } else if (currentIndex === totalOriginal + 1) {
+                    // Agar klonlangan birinchisiga o'tgan bo'lsa, bildirmasdan haqiqiy birinchisiga sakraydi
+                    currentIndex = 1;
+                    updateCarouselPosition(false);
+                }
+            });
+
+            // Mobil Swipe (Barmog' bilan surish)
+            let touchStartX = 0;
+            let touchEndX = 0;
+            const wrapper = document.getElementById('carouselWrapper');
+
+            wrapper.addEventListener('touchstart', e => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            wrapper.addEventListener('touchend', e => {
+                touchEndX = e.changedTouches[0].screenX;
+                if (touchStartX - touchEndX > 45) {
+                    handleNext();
+                } else if (touchEndX - touchStartX > 45) {
+                    handlePrev();
+                }
+            }, { passive: true });
         }
+
+        function updateCarouselPosition(animated = true) {
+            if (animated) {
+                track.style.transition = 'transform 0.4s ease-out';
+            } else {
+                track.style.transition = 'none';
+            }
+            const isMobile = window.innerWidth <= 768;
+            const slideStep = isMobile ? 85 : 82;
+            track.style.transform = `translateX(-${currentIndex * slideStep}%)`;
+        }
+
+        function handleNext() {
+            if (isTransitioning) return;
+            isTransitioning = true;
+            currentIndex++;
+            updateCarouselPosition(true);
+        }
+
+        function handlePrev() {
+            if (isTransitioning) return;
+            isTransitioning = true;
+            currentIndex--;
+            updateCarouselPosition(true);
+        }
+
+        window.addEventListener('resize', () => {
+            updateCarouselPosition(false);
+        });
 
         window.addEventListener('DOMContentLoaded', () => {
             changeLanguage('uz_cyr');
+            initInfiniteCarousel();
         });
     </script>
 </body>
