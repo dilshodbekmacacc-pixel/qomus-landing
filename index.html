@@ -403,7 +403,7 @@
             font-weight: 800;
         }
 
-        /* 4-BLOK: RASM NATIJALARI KARUSELI */
+        /* 4-BLOK: KARUSEL */
         .results-section {
             padding: 50px 0 60px 0;
             background: #f4f8f6;
@@ -525,9 +525,7 @@
         .carousel-btn.prev { left: 4px; }
         .carousel-btn.next { right: 4px; }
 
-        /* ------------------------------------------------------------- */
-        /* 5-BLOK: ORALARI KENGAYTIRILGAN TOZA TARKIB RO'YXATI           */
-        /* ------------------------------------------------------------- */
+        /* 5-BLOK: KENGAYTIRILGAN TOZA TARKIB RO'YXATI */
         .composition-section {
             padding: 60px 0 70px 0;
             background: #ffffff;
@@ -585,7 +583,7 @@
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 26px; /* QATORLAR ORASIDAGI BO'SHLIQ KENGAYTIRILDI */
+            gap: 26px;
         }
 
         .comp-clean-item {
@@ -620,14 +618,12 @@
 
         .comp-item-content p {
             font-size: 14.5px;
-            line-height: 1.7; /* O'QISH NOQULAY BO'LMASLIGI UCHUN INTERVAL KENGAYTIRILDI */
+            line-height: 1.7;
             color: #334155;
             font-weight: 600;
         }
 
-        /* ------------------------------------------------------------- */
-        /* 6-BLOK: YOUTUBE VIDEO NATIJALAR KARUSELI                      */
-        /* ------------------------------------------------------------- */
+        /* 6-BLOK: YOUTUBE VIDEO NATIJALAR KARUSELI */
         .video-results-section {
             padding: 55px 0 65px 0;
             background: #f7faf9;
@@ -666,13 +662,13 @@
             display: flex;
             flex-direction: column;
             border: 1px solid #e0e9e5;
+            position: relative;
         }
 
-        /* 16:9 Albom shaklidagi video player qutisi */
         .video-embed-box {
             position: relative;
             width: 100%;
-            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            padding-top: 56.25%;
             background: #000;
         }
 
@@ -685,9 +681,36 @@
             border: 0;
         }
 
+        /* SWIPE SHIELD (MOBILDA SWIPE QILISHNI OSONLAShTIRUVChI TOSHMA QATLAM) */
+        .video-swipe-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+            cursor: grab;
+        }
+
+        .video-play-hint {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 49, 127, 0.85);
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 12px;
+            z-index: 12;
+            pointer-events: none;
+        }
+
         .video-card-footer {
             padding: 16px 20px;
             background: #ffffff;
+            z-index: 15;
+            position: relative;
         }
 
         .video-card-title {
@@ -695,6 +718,93 @@
             font-weight: 800;
             color: #00317F;
             line-height: 1.45;
+        }
+
+        /* ------------------------------------------------------------- */
+        /* 7-BLOK: SERTIFIKATLAR VA RASMIY RUXSATNOMALAR (REFERENS USLUB) */
+        /* ------------------------------------------------------------- */
+        .cert-section {
+            padding: 55px 0 65px 0;
+            background: #ffffff;
+            border-bottom: 1px solid #e2ece7;
+        }
+
+        .cert-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .cert-header h2 {
+            color: #00459c;
+            font-size: 28px;
+            font-weight: 900;
+            line-height: 1.35;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+        }
+
+        .cert-header p {
+            color: #1e293b;
+            font-size: 15px;
+            font-weight: 700;
+            max-width: 720px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 860px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* Referensdagi kabi qora ramkali sifatli sertifikat kartasi */
+        .cert-card {
+            background: #111111;
+            padding: 12px;
+            border-radius: 16px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 2px solid #222222;
+        }
+
+        .cert-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            display: block;
+            background: #ffffff;
+        }
+
+        .cert-caption {
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 700;
+            text-align: center;
+            margin-top: 12px;
+            padding: 0 4px;
+            line-height: 1.4;
+        }
+
+        .cert-subtext-box {
+            max-width: 820px;
+            margin: 0 auto;
+            background: #f7faf9;
+            border: 1px solid #e0e9e5;
+            border-radius: 14px;
+            padding: 16px 20px;
+            text-align: center;
+        }
+
+        .cert-subtext-box p {
+            font-size: 14px;
+            color: #334155;
+            font-weight: 600;
+            line-height: 1.6;
         }
 
         /* MOBIL VERSIYA */
@@ -755,6 +865,15 @@
             .video-card-item { border-radius: 16px; }
             .video-card-footer { padding: 12px 14px; }
             .video-card-title { font-size: 13.5px; }
+
+            /* 7-blok sertifikat mobil */
+            .cert-section { padding: 32px 0 40px 0; }
+            .cert-header h2 { font-size: 20px; margin-bottom: 8px; }
+            .cert-header p { font-size: 13.5px; }
+            .cert-grid { display: flex; flex-direction: column; gap: 20px; }
+            .cert-card { padding: 10px; border-radius: 14px; }
+            .cert-caption { font-size: 12px; margin-top: 10px; }
+            .cert-subtext-box p { font-size: 13px; }
 
             .carousel-btn { width: 38px; height: 38px; }
             .carousel-btn.prev { left: -2px; }
@@ -1005,12 +1124,9 @@
         </div>
     </section>
 
-    <!-- ------------------------------------------------------------- -->
-    <!-- 5-BLOK: TOZA, ORALARI KENGAYTIRILGAN RO'YXAT                  -->
-    <!-- ------------------------------------------------------------- -->
+    <!-- 5-BLOK: TOZA, ORALARI KENGAYTIRILGAN RO'YXAT -->
     <section class="composition-section">
         <div class="container">
-            
             <div class="comp-header">
                 <h2 id="comp-sec-title">ҚОМУС ПРЕПАРАТИНИНГ ТАБИИЙ ТАРКИБИ</h2>
                 <p id="comp-sec-desc">
@@ -1019,13 +1135,11 @@
             </div>
 
             <div class="comp-grid">
-                
                 <div class="comp-visual-box">
                     <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=900&auto=format&fit=crop&q=80" alt="QOMUS Tarkibi" class="comp-product-img">
                 </div>
 
                 <div class="comp-clean-list">
-                    
                     <div class="comp-clean-item">
                         <span class="comp-badge-icon">✓</span>
                         <div class="comp-item-content">
@@ -1065,31 +1179,24 @@
                             <p id="c-i5-d">Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула.</p>
                         </div>
                     </div>
-
                 </div>
-
             </div>
-
         </div>
     </section>
 
-    <!-- ------------------------------------------------------------- -->
-    <!-- 6-BLOK: YOUTUBE VIDEO SHARHLAR ALBOM KARUSELI (10 TA VIDEO)   -->
-    <!-- ------------------------------------------------------------- -->
+    <!-- 6-BLOK: YOUTUBE VIDEO SHARHLAR KARUSELI (SWIPE QILSA BO'LADIGAN VA TARJIMALARI BILAN) -->
     <section class="video-results-section">
         <div class="container">
             <h2 class="video-header-title" id="video-sec-title">Мижозларимизнинг видео фикрлари</h2>
             <p class="video-header-sub" id="video-sec-sub">Қомус препаратидан фойдаланиб натижага эришган юртдошларимиз билан суҳбатлар</p>
 
             <div class="carousel-outer-box">
-                <!-- CHAPGA STRELKA -->
                 <button class="carousel-btn prev" onclick="handleVideoPrev()" aria-label="Oldingisi">
                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="15 18 9 12 15 6"></polyline>
                     </svg>
                 </button>
 
-                <!-- VIDEO SLAYD TRAKI -->
                 <div class="carousel-track-wrapper" id="videoCarouselWrapper">
                     <div class="carousel-track" id="videoCarouselTrack">
                         
@@ -1098,9 +1205,11 @@
                             <div class="video-card-item">
                                 <div class="video-embed-box">
                                     <iframe src="https://www.youtube.com/embed/OYuZ5S4rTwA" title="Qomus video 1" allowfullscreen loading="lazy"></iframe>
+                                    <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
+                                    <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
                                 <div class="video-card-footer">
-                                    <h4 class="video-card-title">25 йиллик дарддан қандай қутилдим? Витилиго ҳақида ҳақиқатлар[cite: 8]</h4>
+                                    <h4 class="video-card-title" id="vt-1">25 йиллик дарддан қандай қутилдим? Витилиго ҳақида ҳақиқатлар</h4>
                                 </div>
                             </div>
                         </div>
@@ -1110,9 +1219,11 @@
                             <div class="video-card-item">
                                 <div class="video-embed-box">
                                     <iframe src="https://www.youtube.com/embed/NMz7hrU2C50" title="Qomus video 2" allowfullscreen loading="lazy"></iframe>
+                                    <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
+                                    <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
                                 <div class="video-card-footer">
-                                    <h4 class="video-card-title">Қомус препарати билан тери пигментининг тикланиш жараёни</h4>
+                                    <h4 class="video-card-title" id="vt-2">Қомус препарати билан тери пигментининг тикланиш жараёни</h4>
                                 </div>
                             </div>
                         </div>
@@ -1122,9 +1233,11 @@
                             <div class="video-card-item">
                                 <div class="video-embed-box">
                                     <iframe src="https://www.youtube.com/embed/Y-YUxhdenT4" title="Qomus video 3" allowfullscreen loading="lazy"></iframe>
+                                    <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
+                                    <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
                                 <div class="video-card-footer">
-                                    <h4 class="video-card-title">Оқ доғлар бўйича мижозимизнинг ҳаётий тажрибаси</h4>
+                                    <h4 class="video-card-title" id="vt-3">Оқ доғлар бўйича мижозимизнинг ҳаётий тажрибаси</h4>
                                 </div>
                             </div>
                         </div>
@@ -1134,9 +1247,11 @@
                             <div class="video-card-item">
                                 <div class="video-embed-box">
                                     <iframe src="https://www.youtube.com/embed/sBeFihuV25U" title="Qomus video 4" allowfullscreen loading="lazy"></iframe>
+                                    <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
+                                    <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
                                 <div class="video-card-footer">
-                                    <h4 class="video-card-title">Мижознинг самимий фикрлари ва эришилган натижа</h4>
+                                    <h4 class="video-card-title" id="vt-4">Мижознинг самимий фикрлари ва эришилган натижа</h4>
                                 </div>
                             </div>
                         </div>
@@ -1146,9 +1261,11 @@
                             <div class="video-card-item">
                                 <div class="video-embed-box">
                                     <iframe src="https://www.youtube.com/embed/LJZAX06GEsM" title="Qomus video 5" allowfullscreen loading="lazy"></iframe>
+                                    <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
+                                    <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
                                 <div class="video-card-footer">
-                                    <h4 class="video-card-title">Муолажа босқичлари ва ижобий ўзгаришлар</h4>
+                                    <h4 class="video-card-title" id="vt-5">Муолажа босқичлари ва ижобий ўзгаришлар</h4>
                                 </div>
                             </div>
                         </div>
@@ -1158,9 +1275,11 @@
                             <div class="video-card-item">
                                 <div class="video-embed-box">
                                     <iframe src="https://www.youtube.com/embed/bg32I_CkAY0" title="Qomus video 6" allowfullscreen loading="lazy"></iframe>
+                                    <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
+                                    <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
                                 <div class="video-card-footer">
-                                    <h4 class="video-card-title">Витилиго муаммосидан сўнг соғлом терига қайтиш</h4>
+                                    <h4 class="video-card-title" id="vt-6">Витилиго муаммосидан сўнг соғлом терига қайтиш</h4>
                                 </div>
                             </div>
                         </div>
@@ -1170,9 +1289,11 @@
                             <div class="video-card-item">
                                 <div class="video-embed-box">
                                     <iframe src="https://www.youtube.com/embed/D4RawvvVu1I" title="Qomus video 7" allowfullscreen loading="lazy"></iframe>
+                                    <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
+                                    <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
                                 <div class="video-card-footer">
-                                    <h4 class="video-card-title">Теридаги пигментация қайта тикланиши бўйича фикрлар</h4>
+                                    <h4 class="video-card-title" id="vt-7">Теридаги пигментация қайта тикланиши бўйича фикрлар</h4>
                                 </div>
                             </div>
                         </div>
@@ -1182,9 +1303,11 @@
                             <div class="video-card-item">
                                 <div class="video-embed-box">
                                     <iframe src="https://www.youtube.com/embed/TFUjzVZ44zg" title="Qomus video 8" allowfullscreen loading="lazy"></iframe>
+                                    <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
+                                    <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
                                 <div class="video-card-footer">
-                                    <h4 class="video-card-title">Қомус капсулаларини қабул қилиш тажрибаси</h4>
+                                    <h4 class="video-card-title" id="vt-8">Қомус капсулаларини қабул қилиш тажрибаси</h4>
                                 </div>
                             </div>
                         </div>
@@ -1194,9 +1317,11 @@
                             <div class="video-card-item">
                                 <div class="video-embed-box">
                                     <iframe src="https://www.youtube.com/embed/Ze0-oiOmcc8" title="Qomus video 9" allowfullscreen loading="lazy"></iframe>
+                                    <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
+                                    <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
                                 <div class="video-card-footer">
-                                    <h4 class="video-card-title">Мижозимизнинг даволаниш давомидаги ўзгаришлари</h4>
+                                    <h4 class="video-card-title" id="vt-9">Мижозимизнинг даволаниш давомидаги ўзгаришлари</h4>
                                 </div>
                             </div>
                         </div>
@@ -1206,9 +1331,11 @@
                             <div class="video-card-item">
                                 <div class="video-embed-box">
                                     <iframe src="https://www.youtube.com/embed/dQ_Oy1fK_mU" title="Qomus video 10" allowfullscreen loading="lazy"></iframe>
+                                    <div class="video-swipe-overlay" onclick="removeOverlay(this)"></div>
+                                    <div class="video-play-hint">▶ Видеони кўриш</div>
                                 </div>
                                 <div class="video-card-footer">
-                                    <h4 class="video-card-title">Ҳақиқий натижалар: мижоз билан жонли мулоқот</h4>
+                                    <h4 class="video-card-title" id="vt-10">Ҳақиқий натижалар: мижоз билан жонли мулоқот</h4>
                                 </div>
                             </div>
                         </div>
@@ -1216,12 +1343,53 @@
                     </div>
                 </div>
 
-                <!-- O'NGA STRELKA -->
                 <button class="carousel-btn next" onclick="handleVideoNext()" aria-label="Keyingisi">
                     <svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="9 18 15 12 9 6"></polyline>
                     </svg>
                 </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- 7-BLOK: SERTIFIKATLAR VA HUJJATLAR (REFERENS RASMI BO'YICHA)   -->
+    <!-- ------------------------------------------------------------- -->
+    <section class="cert-section">
+        <div class="container">
+            <div class="cert-header">
+                <h2 id="cert-title">ДАВЛАТ ТОМОНИДАН ТАСДИҚЛАНГАН ВА СЕРТИФИКАТЛАНГАН</h2>
+                <p id="cert-desc">
+                    «QOMUS» препарати Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги томонидан тўлиқ экспертизадан ўтказилган ва расмий рухсатномага эга.
+                </p>
+            </div>
+
+            <!-- QORA RAMKALI SERTIFIKATLAR KARTASI -->
+            <div class="cert-grid">
+                
+                <!-- 1-SERTIFIKAT: SSV RUXSATNOMASI -->
+                <div class="cert-card">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700&auto=format&fit=crop&q=80" alt="SSV Ruxsatnomasi" id="cert-img-1">
+                    <p class="cert-caption" id="cert-cap-1">
+                        Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425
+                    </p>
+                </div>
+
+                <!-- 2-SERTIFIKAT: SANITARIYA-EPIDEMIOLOGIK XULOSA -->
+                <div class="cert-card">
+                    <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?w=700&auto=format&fit=crop&q=80" alt="Sanitariya xulosasi" id="cert-img-2">
+                    <p class="cert-caption" id="cert-cap-2">
+                        Санитарно-эпидемиологическое заключение № 405282 (Тошкент)
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- PASTKI ISHONCH MATNI -->
+            <div class="cert-subtext-box">
+                <p id="cert-safety-text">
+                    Маҳсулотнинг ҳар бир партияси гигиеник, радиологик ва бактериологик синовлардан муваффақиятли ўтиб, инсон саломатлиги учун мутлақо хавфсиз деб топилган.
+                </p>
             </div>
         </div>
     </section>
@@ -1280,9 +1448,28 @@
                 cI5T: "Yordamchi komponentlar va efir moylari",
                 cI5D: "Qora mol jelatini, glitserin, nigelon, A-karotinoidlar va limon kislotasi asosidagi tabiiy kapsula.",
 
-                // 6-Blok video
+                // 6-Blok Video Tarjimalari
                 videoSecTitle: "Mijozlarimizning video fikrlari",
-                videoSecSub: "Qomus preparatidan foydalanib natijaga erishgan yurtdoshlarimiz bilan suhbatlar"
+                videoSecSub: "Qomus preparatidan foydalanib natijaga erishgan yurtdoshlarimiz bilan suhbatlar",
+                videoTitles: [
+                    "25 yillik darddan qanday qutildim? Vitiligo haqida haqiqatlar",
+                    "Qomus preparati bilan teri pigmentining tiklanish jarayoni",
+                    "Oq dog'lar bo'yicha mijozimizning hayotiy tajribasi",
+                    "Mijozning samimiy fikrlari va erishilgan natija",
+                    "Muolaja bosqichlari va ijobiy o'zgarishlar",
+                    "Vitiligo muammosidan so'ng sog'lom teriga qaytish",
+                    "Teridagi pigmentatsiya qayta tiklanishi bo'yicha fikrlar",
+                    "Qomus kapsulalarini qabul qilish tajribasi",
+                    "Mijozimizning davolanish davomidagi o'zgarishlari",
+                    "Haqiqiy natijalar: mijoz bilan jonli muloqot"
+                ],
+
+                // 7-Blok Sertifikatlar
+                certTitle: "DAVLAT TOMONIDAN TASDIQLANGAN VA SERTIFIKATLANGAN",
+                certDesc: "«QOMUS» preparati O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi tomonidan to'liq ekspertizadan o'tkazilgan va rasmiy ruxsatnomaga ega.",
+                certCap1: "O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi Ruxsatnomasi № 001425",
+                certCap2: "Sanitariya-epidemiologik xulosa № 405282 (Toshkent shahri)",
+                certSafety: "Mahsulotning har bir partiyasi gigiyenik, radiologik va bakteriologik sinovlardan muvaffaqiyatli o'tib, inson salomatligi uchun mutlaqo xavfsiz deb topilgan."
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
@@ -1321,9 +1508,28 @@
                 cI5T: "Ёрдамчи компонентлар ва эфир мойлари",
                 cI5D: "Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула.",
 
-                // 6-Blok video
+                // 6-Blok Video Tarjimalari
                 videoSecTitle: "Мижозларимизнинг видео фикрлари",
-                videoSecSub: "Қомус препаратидан фойдаланиб натижага эришган юртдошларимиз билан суҳбатлар"
+                videoSecSub: "Қомус препаратидан фойдаланиб натижага эришган юртдошларимиз билан суҳбатлар",
+                videoTitles: [
+                    "25 йиллик дарддан қандай қутилдим? Витилиго ҳақида ҳақиқатлар",
+                    "Қомус препарати билан тери пигментининг тикланиш жараёни",
+                    "Оқ доғлар бўйича мижозимизнинг ҳаётий тажрибаси",
+                    "Мижознинг самимий фикрлари ва эришилган натижа",
+                    "Муолажа босқичлари ва ижобий ўзгаришлар",
+                    "Витилиго муаммосидан сўнг соғлом терига қайтиш",
+                    "Теридаги пигментация қайта тикланиши бўйича фикрлар",
+                    "Қомус капсулаларини қабул қилиш тажрибаси",
+                    "Мижозимизнинг даволаниш давомидаги ўзгаришлари",
+                    "Ҳақиқий натижалар: мижоз билан жонли мулоқот"
+                ],
+
+                // 7-Blok Sertifikatlar
+                certTitle: "ДАВЛАТ ТОМОНИДАН ТАСДИҚЛАНГАН ВА СЕРТИФИКАТЛАНГАН",
+                certDesc: "«QOMUS» препарати Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги томонидан тўлиқ экспертизадан ўтказилган ва расмий рухсатномага эга.",
+                certCap1: "Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425",
+                certCap2: "Санитарно-эпидемиологическое заключение № 405282 (Тошкент)",
+                certSafety: "Маҳсулотнинг ҳар бир партияси гигиеник, радиологик ва бактериологик синовлардан муваффақиятли ўтиб, инсон саломатлиги учун мутлақо хавфсиз деб топилган."
             },
             ru: {
                 orderBtn: "Заказать",
@@ -1362,9 +1568,28 @@
                 cI5T: "Вспомогательные компоненты и эфирные масла",
                 cI5D: "Говяжий желатин, глицерин, нигеллон, А-каротиноиды и лимонная кислота в основе мягкой капсулы.",
 
-                // 6-Blok video
+                // 6-Blok Video Tarjimalari
                 videoSecTitle: "Видео отзывы наших клиентов",
-                videoSecSub: "Интервью с людьми, восстановившими здоровье кожи с помощью препарата «Qomus»"
+                videoSecSub: "Интервью с людьми, восстановившими здоровье кожи с помощью препарата «Qomus»",
+                videoTitles: [
+                    "Как я избавился от болезни спустя 25 лет? Вся правда о витилиго",
+                    "Процесс восстановления пигментации кожи с препаратом «Qomus»",
+                    "Личный опыт нашего клиента в борьбе с белыми пятнами",
+                    "Искренние отзывы клиента и достигнутые результаты",
+                    "Этапы приема препарата и заметные положительные изменения",
+                    "Возвращение к здоровой коже после диагноза витилиго",
+                    "Отзыв о естественном восстановлении пигментации кожи",
+                    "Реальный опыт курсового приема капсул «Qomus»",
+                    "Динамика и результаты клиента в процессе лечения",
+                    "Реальные результаты: живое интервью с пациентом"
+                ],
+
+                // 7-Blok Sertifikatlar
+                certTitle: "ГОСУДАРСТВЕННОЕ РАЗРЕШЕНИЕ И СЕРТИФИКАЦИЯ",
+                certDesc: "Препарат «QOMUS» прошел полную государственную экспертизу Министерства Здравоохранения Республики Узбекистан и имеет официальное разрешение.",
+                certCap1: "Разрешение Министерства Здравоохранения Республики Узбекистан № 001425",
+                certCap2: "Санитарно-эпидемиологическое заключение № 405282 (г. Ташкент)",
+                certSafety: "Каждая партия продукта успешно прошла строгий гигиенический, радиологический и бактериологический контроль и полностью безопасна для здоровья."
             },
             en: {
                 orderBtn: "Order Now",
@@ -1403,9 +1628,28 @@
                 cI5T: "Essential Oils and Auxiliary Elements",
                 cI5D: "Natural bovine gelatin, glycerin, nigellone, A-carotenoids, and citric acid inside a soft capsule.",
 
-                // 6-Blok video
-                videoSecTitle: "Video Reviews of Our Customers",
-                videoSecSub: "Interviews with real people who restored skin pigmentation using “Qomus”"
+                // 6-Blok Video Tarjimalari
+                videoSecTitle: "Customer Video Reviews",
+                videoSecSub: "Interviews with real people who restored skin pigmentation using “Qomus”",
+                videoTitles: [
+                    "How I beat the disease after 25 years: Truth about vitiligo",
+                    "Restoration of skin pigmentation with “Qomus” capsules",
+                    "Personal journey of our customer in overcoming white spots",
+                    "Sincere customer feedback and proven recovery results",
+                    "Course stages and noticeable positive skin recovery",
+                    "Returning to healthy skin after dealing with vitiligo",
+                    "Real feedback on natural skin pigmentation recovery",
+                    "Authentic experience of completing the “Qomus” course",
+                    "Customer transformation and improvements during recovery",
+                    "Proven results: live interview with our patient"
+                ],
+
+                // 7-Blok Sertifikatlar
+                certTitle: "OFFICIALLY CERTIFIED AND APPROVED",
+                certDesc: "“QOMUS” has successfully passed all laboratory evaluations by the Ministry of Health of Uzbekistan and is officially certified.",
+                certCap1: "Ministry of Health of the Republic of Uzbekistan Permit № 001425",
+                certCap2: "Sanitary and Epidemiological Conclusion № 405282 (Tashkent)",
+                certSafety: "Every batch undergoes rigorous hygienic, radiological, and bacteriological tests and is guaranteed 100% safe for human health."
             }
         };
 
@@ -1438,7 +1682,7 @@
                 document.querySelectorAll('.badge-before').forEach(el => el.textContent = t.beforeBadge);
                 document.querySelectorAll('.badge-after').forEach(el => el.textContent = t.afterBadge);
 
-                // 5-Blok tarjima
+                // 5-Blok
                 document.getElementById('comp-sec-title').textContent = t.compSecTitle;
                 document.getElementById('comp-sec-desc').textContent = t.compSecDesc;
                 document.getElementById('c-i1-t').textContent = t.cI1T;
@@ -1452,15 +1696,28 @@
                 document.getElementById('c-i5-t').textContent = t.cI5T;
                 document.getElementById('c-i5-d').textContent = t.cI5D;
 
-                // 6-Blok video tarjima
+                // 6-Blok video tarjimalari
                 document.getElementById('video-sec-title').textContent = t.videoSecTitle;
                 document.getElementById('video-sec-sub').textContent = t.videoSecSub;
+                if(t.videoTitles) {
+                    for(let i = 1; i <= 10; i++) {
+                        const vEl = document.getElementById('vt-' + i);
+                        if(vEl && t.videoTitles[i-1]) {
+                            vEl.textContent = t.videoTitles[i-1];
+                        }
+                    }
+                }
+
+                // 7-Blok sertifikat tarjimalari
+                document.getElementById('cert-title').textContent = t.certTitle;
+                document.getElementById('cert-desc').textContent = t.certDesc;
+                document.getElementById('cert-cap-1').textContent = t.certCap1;
+                document.getElementById('cert-cap-2').textContent = t.certCap2;
+                document.getElementById('cert-safety-text').textContent = t.certSafety;
             }
         }
 
-        /* ------------------------------------------------------------- */
-        /* 4-BLOK: CHEKSIZ KARUSEL                                       */
-        /* ------------------------------------------------------------- */
+        /* 4-BLOK KARUSEL */
         let track, totalOriginal;
         let currentIndex = 1;
         let isTransitioning = false;
@@ -1532,12 +1789,16 @@
             updateCarouselPosition(true);
         }
 
-        /* ------------------------------------------------------------- */
-        /* 6-BLOK: CHEKSIZ VIDEO KARUSEL MANTIG'I                       */
-        /* ------------------------------------------------------------- */
+        /* 6-BLOK: YOUTUBE SWIPE VA CHEKSIZ KARUSEL */
         let vTrack, vTotalOriginal;
         let vCurrentIndex = 1;
         let vIsTransitioning = false;
+
+        function removeOverlay(el) {
+            el.style.display = 'none';
+            const hint = el.parentElement.querySelector('.video-play-hint');
+            if(hint) hint.style.display = 'none';
+        }
 
         function initVideoCarousel() {
             vTrack = document.getElementById('videoCarouselTrack');
@@ -1563,6 +1824,7 @@
                 }
             });
 
+            // Mobil Swipe (Touch)
             let vTouchStartX = 0;
             let vTouchEndX = 0;
             const vWrapper = document.getElementById('videoCarouselWrapper');
