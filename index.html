@@ -224,7 +224,7 @@
             animation: pulseGlow 2s infinite;
         }
 
-        /* 1. HERO SECTION (KNOPKASIZ, TOZA) */
+        /* 1. HERO SECTION */
         .hero-section {
             padding: 24px 0 32px 0;
         }
@@ -1083,7 +1083,7 @@
             font-weight: 600;
         }
 
-        /* 11. LEAD FORM: 1:1 FORM VA RASM */
+        /* 11. LEAD FORM: PROPORSIONAL, QIRQILMAYDIGAN FLAKON */
         .lead-section {
             padding: 65px 0 75px 0;
             background: #00317F;
@@ -1116,8 +1116,8 @@
         .lead-row-card {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 28px;
-            align-items: stretch;
+            gap: 32px;
+            align-items: center;
         }
 
         .form-card {
@@ -1213,18 +1213,21 @@
             margin-top: 12px;
         }
 
+        /* QIRQILMAYDIGAN FLAKON VIZUALI */
         .lead-visual-col {
             width: 100%;
-            height: 100%;
             display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
         }
 
         .lead-product-img {
             width: 100%;
-            height: 100%;
-            border-radius: 24px;
-            object-fit: cover;
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+            max-width: 520px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.35));
             display: block;
         }
 
@@ -1399,8 +1402,8 @@
             .lead-header-center h2 { font-size: 22px; }
             .lead-header-center p { font-size: 14px; margin-bottom: 20px; }
             .lead-row-card { display: flex; flex-direction: column; gap: 20px; }
-            .lead-visual-col { order: 1; width: 100%; height: 300px; }
-            .lead-product-img { max-width: 100%; height: 100%; border-radius: 18px; }
+            .lead-visual-col { order: 1; width: 100%; padding: 0; }
+            .lead-product-img { max-width: 280px; height: auto; object-fit: contain; }
             .form-card { order: 2; padding: 22px 18px; border-radius: 18px; }
             .form-group label { font-size: 13px; }
             .form-input { padding: 12px 14px; font-size: 14px; }
@@ -1436,7 +1439,7 @@
     <div class="top-ticker">
         <div class="ticker-content" id="ticker-text">
             <span>
-                <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
                 O'zbekiston bo'ylab bepul yetkazib berish
             </span>
             <span>
@@ -1487,7 +1490,7 @@
         </div>
     </header>
 
-    <!-- 2. HERO SECTION (KNOPKASIZ, TEZ YUKLANUVCHI) -->
+    <!-- 2. HERO SECTION -->
     <section class="hero-section">
         <div class="container hero-grid">
             <div class="hero-visual-card">
@@ -1707,7 +1710,7 @@
         </div>
     </section>
 
-    <!-- 6. VIDEO SHARHLAR (3s LOOP KARUSEL) -->
+    <!-- 6. YANGILANGAN YOUTUBE VIDEO SHARHLAR (10 TA YANGI VIDEO — 3s LOOP KARUSEL) -->
     <section class="video-results-section">
         <div class="container">
             <h2 class="video-header-title" id="video-sec-title">Mijozlarimizning video fikrlari</h2>
@@ -1723,16 +1726,35 @@
                 <div class="carousel-track-wrapper" id="videoCarouselWrapper">
                     <div class="carousel-track" id="videoCarouselTrack">
                         
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/OYuZ5S4rTwA" title="Qomus video 1" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-1">25 yillik muammodan qanday xalos bo'ldim? Vitiligo haqida haqiqatlar</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/NMz7hrU2C50" title="Qomus video 2" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-2">Qomus vositasi bilan teri pigmentining tiklanish jarayoni</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/Y-YUxhdenT4" title="Qomus video 3" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-3">Oq dog'lar bo'yicha mijozimizning hayotiy tajribasi</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/sBeFihuV25U" title="Qomus video 4" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-4">Mijozning samimiy fikrlari va erishilgan natija</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/LJZAX06GEsM" title="Qomus video 5" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-5">Parvarish bosqichlari va ijobiy o'zgarishlar</h4></div></div></div>
+                        <!-- 1-video: WTWcRNIFo0E -->
+                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/WTWcRNIFo0E" title="Qomus video 1" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-1">Oq dog'lardan qutulish | 36 yillik masala hal qilindi</h4></div></div></div>
+                        
+                        <!-- 2-video: kU2up3x5aow -->
+                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/kU2up3x5aow" title="Qomus video 2" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-2">Bu muolajadan so'ng oq dog'larim yo'qolib ketdi</h4></div></div></div>
+                        
+                        <!-- 3-video: NMz7hrU2C50 -->
+                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/NMz7hrU2C50" title="Qomus video 3" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-3">Qomus vositasi bilan teri pigmentining tiklanish jarayoni</h4></div></div></div>
+                        
+                        <!-- 4-video: 65pHdT3o-Tg -->
+                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/65pHdT3o-Tg" title="Qomus video 4" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-4">Vitiligo va oq dog'lar bo'yicha mijozimiz tajribasi</h4></div></div></div>
+                        
+                        <!-- 5-video: Y-YUxhdenT4 -->
+                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/Y-YUxhdenT4" title="Qomus video 5" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-5">Qomus bilan teridagi o'zgarishlar va natija</h4></div></div></div>
+                        
+                        <!-- 6-video: bg32I_CkAY0 -->
                         <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/bg32I_CkAY0" title="Qomus video 6" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-6">Vitiligo muammosidan so'ng sog'lom teriga qaytish</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/D4RawvvVu1I" title="Qomus video 7" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-7">Teridagi pigmentatsiya qayta tiklanishi bo'yicha fikrlar</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/TFUjzVZ44zg" title="Qomus video 8" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-8">Qomus kapsulalarini qabul qilish tajribasi</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/Ze0-oiOmcc8" title="Qomus video 9" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-9">Mijozimizning iste'mol davomidagi o'zgarishlari</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/dQ_Oy1fK_mU" title="Qomus video 10" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-10">Haqiqiy natijalar: mijoz bilan jonli muloqot</h4></div></div></div>
+                        
+                        <!-- 7-video: lrEqBIDziwM -->
+                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/lrEqBIDziwM" title="Qomus video 7" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-7">Oq dog'lar profilaktikasi va terining tiklanishi</h4></div></div></div>
+                        
+                        <!-- 8-video: LJZAX06GEsM -->
+                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/LJZAX06GEsM" title="Qomus video 8" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-8">Parvarish bosqichlari va ijobiy o'zgarishlar</h4></div></div></div>
+                        
+                        <!-- 9-video: Sfjj0u_MRko -->
+                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/Sfjj0u_MRko" title="Qomus video 9" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-9">Qomus vositasi bo'yicha mijoz sharhi</h4></div></div></div>
+                        
+                        <!-- 10-video: u_kBYJorENs -->
+                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/u_kBYJorENs" title="Qomus video 10" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-10">Haqiqiy natijalar: mijoz bilan jonli muloqot</h4></div></div></div>
 
                     </div>
                 </div>
@@ -2084,15 +2106,15 @@
                 videoSecTitle: "Mijozlarimizning video fikrlari",
                 videoSecSub: "Qomus vositasidan foydalangan yurtdoshlarimiz bilan samimiy suhbatlar",
                 videoTitles: [
-                    "25 yillik muammodan qanday xalos bo'ldim? Vitiligo haqida haqiqatlar",
+                    "Oq dog'lardan qutulish | 36 yillik masala hal qilindi",
+                    "Bu muolajadan so'ng oq dog'larim yo'qolib ketdi",
                     "Qomus vositasi bilan teri pigmentining tiklanish jarayoni",
-                    "Oq dog'lar bo'yicha mijozimizning hayotiy tajribasi",
-                    "Mijozning samimiy fikrlari va erishilgan natija",
-                    "Parvarish bosqichlari va ijobiy o'zgarishlar",
+                    "Vitiligo va oq dog'lar bo'yicha mijozimiz tajribasi",
+                    "Qomus bilan teridagi o'zgarishlar va natija",
                     "Vitiligo muammosidan so'ng sog'lom teriga qaytish",
-                    "Teridagi pigmentatsiya qayta tiklanishi bo'yicha fikrlar",
-                    "Qomus kapsulalarini qabul qilish tajribasi",
-                    "Mijozimizning iste'mol davomidagi o'zgarishlari",
+                    "Oq dog'lar profilaktikasi va terining tiklanishi",
+                    "Parvarish bosqichlari va ijobiy o'zgarishlar",
+                    "Qomus vositasi bo'yicha mijoz sharhi",
                     "Haqiqiy natijalar: mijoz bilan jonli muloqot"
                 ],
 
@@ -2149,7 +2171,7 @@
 
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
-                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% табиий ва хавфсиз таркиб</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ муваффақиятли натижалар</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Буюртмани текшириб кейин тўлаш имконияти</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% табиий ва хавфсиз таркиб</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ муваффақиятли натижалар</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Буюртмани текшириб кейин тўлаш имконияти</span>",
                 title: "ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!",
                 subtitle: "Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!",
                 refTitle: "Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!",
@@ -2197,15 +2219,15 @@
                 videoSecTitle: "Мижозларимизнинг видео фикрлари",
                 videoSecSub: "Қомус препаратидан фойдаланиб натижага эришган юртдошларимиз билан суҳбатлар",
                 videoTitles: [
-                    "25 йиллик дарддан қандай қутилдим? Витилиго ҳақида ҳақиқатлар",
-                    "Қомус препарати билан тери пигментининг тикланиш жараёни",
-                    "Оқ доғлар бўйича мижозимизнинг ҳаётий тажрибаси",
-                    "Мижознинг самимий фикрлари ва эришилган натижа",
-                    "Муолажа босқичлари ва ижобий ўзгаришлар",
+                    "Оқ доғлардан қутулиш | 36 йиллик масала ҳал қилинди",
+                    "Бу муолажадан сўнг оқ доғларим йўқолиб кетди",
+                    "Қомус воситаси билан тери пигментининг тикланиш жараёни",
+                    "Витилиго ва оқ доғлар бўйича мижозимиз тажрибаси",
+                    "Қомус билан теридаги ўзгаришлар ва натижа",
                     "Витилиго муаммосидан сўнг соғлом терига қайтиш",
-                    "Теридаги пигментация қайта тикланиши бўйича фикрлар",
-                    "Қомус капсулаларини қабул қилиш тажрибаси",
-                    "Мижозимизнинг даволаниш давомидаги ўзгаришлари",
+                    "Оқ доғлар профилактикаси ва терининг тикланиши",
+                    "Парвариш босқичлари ва ижобий ўзгаришлар",
+                    "Қомус воситаси бўйича мижоз шарҳи",
                     "Ҳақиқий натижалар: мижоз билан жонли мулоқот"
                 ],
 
@@ -2262,7 +2284,7 @@
 
             ru: {
                 orderBtn: "Заказать",
-                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Бесплатная доставка по всему Узбекистану</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% натуральный и безопасный состав</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Более 20,000 успешных результатов</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Оплата только после проверки заказа</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Бесплатная доставка по всему Узбекистану</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% натуральный и безопасный состав</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Более 20,000 успешных результатов</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Оплата только после проверки заказа</span>",
                 title: "ИЗБАВЛЕНИЕ ОТ БЕЛЫХ ПЯТЕН ТЕПЕРЬ ВОЗМОЖНО!",
                 subtitle: "Данный комплекс эффективно поддерживает восстановление пигментации кожи при витилиго. Не вызывает привыкания — Результаты подтверждены!",
                 refTitle: "Если вы думаете, что вернуть коже прежний вид невозможно — вы ошибаетесь!",
@@ -2310,15 +2332,15 @@
                 videoSecTitle: "Видео отзывы наших клиентов",
                 videoSecSub: "Интервью с людьми, восстановившими здоровье кожи с помощью препарата «Qomus»",
                 videoTitles: [
-                    "Как я избавился от болезни спустя 25 лет? Вся правда о витилиго",
+                    "Избавление от белых пятен | 36-летняя проблема решена",
+                    "После этого курса белые пятна полностью исчезли",
                     "Процесс восстановления пигментации кожи с препаратом «Qomus»",
-                    "Личный опыт нашего клиента в борьбе с белыми пятнами",
-                    "Искренние отзывы клиента и достигнутые результаты",
-                    "Этапы приема препарата и заметные положительные изменения",
+                    "Опыт нашего клиента в борьбе с витилиго и белыми пятнами",
+                    "Динамика и результаты изменений кожи с «Qomus»",
                     "Возвращение к здоровой коже после диагноза витилиго",
-                    "Отзыв о естественном восстановлении пигментации кожи",
-                    "Реальный опыт курсового приема капсул «Qomus»",
-                    "Динамика и результаты клиента в процессе лечения",
+                    "Профилактика депигментации и восстановление кожи",
+                    "Этапы приема препарата и заметные положительные изменения",
+                    "Отзыв реального клиента о препарате «Qomus»",
                     "Реальные результаты: живое интервью с пациентом"
                 ],
 
@@ -2375,7 +2397,7 @@
 
             en: {
                 orderBtn: "Order Now",
-                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Free delivery across Uzbekistan</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% natural and safe formula</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Over 20,000 successful results</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Cash on delivery upon personal inspection</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Free delivery across Uzbekistan</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% natural and safe formula</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Over 20,000 successful results</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Cash on delivery upon personal inspection</span>",
                 title: "GETTING RID OF WHITE SPOTS IS NO LONGER IMPOSSIBLE!",
                 subtitle: "This natural formula effectively supports skin pigmentation and immunity balance. Non-addictive — Results confirmed!",
                 refTitle: "If you think restoring your skin is impossible — you are wrong!",
@@ -2423,15 +2445,15 @@
                 videoSecTitle: "Customer Video Reviews",
                 videoSecSub: "Interviews with real people who restored skin pigmentation using “Qomus”",
                 videoTitles: [
-                    "How I beat the condition after 25 years: Truth about vitiligo",
+                    "Overcoming White Spots | 36-year issue resolved",
+                    "White spots disappeared completely after this course",
                     "Restoration of skin pigmentation with “Qomus” capsules",
-                    "Personal journey of our customer in overcoming white spots",
-                    "Sincere customer feedback and proven recovery results",
-                    "Course stages and noticeable positive skin recovery",
+                    "Customer journey and feedback on vitiligo recovery",
+                    "Real transformation and results with “Qomus”",
                     "Returning to healthy skin after dealing with vitiligo",
-                    "Real feedback on natural skin pigmentation recovery",
-                    "Authentic experience of completing the “Qomus” course",
-                    "Customer transformation and improvements during recovery",
+                    "Skin repigmentation prevention and recovery",
+                    "Course stages and noticeable positive skin recovery",
+                    "Authentic customer review about “Qomus” capsules",
                     "Proven results: live interview with our patient"
                 ],
 
@@ -2539,7 +2561,7 @@
                 document.getElementById('video-sec-title').textContent = t.videoSecTitle;
                 document.getElementById('video-sec-sub').textContent = t.videoSecSub;
                 if(t.videoTitles) {
-                    for(let i = 1; i <= t.videoTitles.length; i++) {
+                    for(let i = 1; i <= 10; i++) {
                         const vEl = document.getElementById('vt-' + i);
                         if(vEl && t.videoTitles[i-1]) vEl.textContent = t.videoTitles[i-1];
                     }
