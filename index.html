@@ -34,7 +34,7 @@
             padding: 0 16px;
         }
 
-        /* TOP TICKER BAR: JIDDIY VA PROFESSIONAL VIZUAL */
+        /* TOP TICKER BAR: NOZIK SVG PIKTOGRAMMALAR BILAN */
         .top-ticker {
             background: #00317F;
             color: #ffffff;
@@ -58,12 +58,15 @@
             gap: 7px;
         }
 
-        .ticker-icon {
-            display: inline-block;
-            width: 7px;
-            height: 7px;
-            background: #03C3D4;
-            border-radius: 50%;
+        .ticker-svg {
+            width: 13px;
+            height: 13px;
+            stroke: #03C3D4;
+            fill: none;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
         }
 
         @keyframes marquee {
@@ -517,7 +520,7 @@
             font-weight: 600;
         }
 
-        /* 4. YANGILANGAN "KIMLAR UCHUN TAVSIYA ETILADI" BLOKI (1:1 XIZMAT KO'RSATISH TARTIBI BILAN BIR XIL USLUBDA) */
+        /* 4. "KIMLAR UCHUN TAVSIYA ETILADI" BLOKI (1:1 XIZMAT TARTIBI STRUKTURASIDA) */
         .target-group-section {
             padding: 60px 0 70px 0;
             background: #ffffff;
@@ -1444,13 +1447,25 @@
 </head>
 <body>
 
-    <!-- TOP TICKER BAR: TOZA, JIDDIY VA TIBBIY USLUBDAGI HARAKATLANUVCHI BLOK -->
+    <!-- TOP TICKER BAR: NOZIK SVG PIKTOGRAMMALAR BILAN PROFESSIONAL HARAKATLANUVCHI BLOK -->
     <div class="top-ticker">
         <div class="ticker-content" id="ticker-text">
-            <span><i class="ticker-icon"></i> O'zbekiston bo'ylab bepul yetkazib berish</span>
-            <span><i class="ticker-icon"></i> 100% tabiiy va xavfsiz tarkib</span>
-            <span><i class="ticker-icon"></i> 20,000+ muvaffaqiyatli natijalar</span>
-            <span><i class="ticker-icon"></i> Buyurtmani tekshirib keyin to'lash imkoniyati</span>
+            <span>
+                <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                O'zbekiston bo'ylab bepul yetkazib berish
+            </span>
+            <span>
+                <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
+                100% tabiiy va xavfsiz tarkib
+            </span>
+            <span>
+                <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                20,000+ muvaffaqiyatli natijalar
+            </span>
+            <span>
+                <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                Buyurtmani tekshirib keyin to'lash imkoniyati
+            </span>
         </div>
     </div>
 
@@ -1618,7 +1633,7 @@
         </div>
     </section>
 
-    <!-- 4. YANGILANGAN "KIMLAR UCHUN TAVSIYA ETILADI" (BUYURTMA TARTIBI BILAN BIR XIL PROFESSIONAL STRUKTURA) -->
+    <!-- 4. "KIMLAR UCHUN TAVSIYA ETILADI" (BUYURTMA TARTIBI BILAN BIR XIL PROFESSIONAL STRUKTURA) -->
     <section class="target-group-section">
         <div class="container">
             <div class="target-header">
@@ -2019,7 +2034,7 @@
             uz: {
                 orderBtn: "Buyurtma berish",
                 heroCta: "Bepul maslahat olish",
-                ticker: "<span><i class='ticker-icon'></i> O'zbekiston bo'ylab bepul yetkazib berish</span><span><i class='ticker-icon'></i> 100% tabiiy va xavfsiz tarkib</span><span><i class='ticker-icon'></i> 20,000+ muvaffaqiyatli natijalar</span><span><i class='ticker-icon'></i> Buyurtmani tekshirib keyin to'lash imkoniyati</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> O'zbekiston bo'ylab bepul yetkazib berish</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% tabiiy va xavfsiz tarkib</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ muvaffaqiyatli natijalar</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Buyurtmani tekshirib keyin to'lash imkoniyati</span>",
                 title: "OQ DOG'LARDAN XALOS BO'LISH ENDI ILOJSIZ EMAS!",
                 subtitle: "Ushbu vosita vitiligo va teridagi turli muammolarni bartaraf etishda tabiiy yordam beradi. O'rganib qolish holatini keltirib chiqarmaydi — Natijalar tasdiqlangan!",
                 refTitle: "Teringizni avvalgi holatiga qaytarishning iloji yo'q deb o'ylasangiz – Adashasiz!",
@@ -2133,7 +2148,7 @@
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
                 heroCta: "Бепул маслаҳат олиш",
-                ticker: "<span><i class='ticker-icon'></i> Ўзбекистон бўйлаб бепул етказиб бериш</span><span><i class='ticker-icon'></i> 100% табиий ва хавфсиз таркиб</span><span><i class='ticker-icon'></i> 20,000+ муваффақиятли натижалар</span><span><i class='ticker-icon'></i> Буюртмани текшириб кейин тўлаш имконияти</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% табиий ва хавфсиз таркиб</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ муваффақиятли натижалар</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Буюртмани текшириб кейин тўлаш имконияти</span>",
                 title: "ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!",
                 subtitle: "Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!",
                 refTitle: "Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!",
@@ -2222,7 +2237,7 @@
                 s1D: "Сайтдаги формага исмингиз ва рақамингизни ёзасиз. Ҳеч қандай олдиндан тўлов ёки карта рақами талаб этилмайди.",
                 s2T: "Мутахассис маслаҳати",
                 s2D: "Мутахассисимиз сизга қўнғироқ қилиб, доғларнинг ҳолати бўйича бепул маслаҳат беради ва курсни аниқлайди.",
-                s3T: "Текшириб, кейин тўлайсиз",
+                s3T: "Текшириб, keyin тўлайсиз",
                 s3D: "Буюртма эшигингизгача БЕПУЛ етказилади. Посилкани очиб, текшириб кўрганингиздан кейингина тўлов қиласиз.",
 
                 formTitle: "Буюртма бериш",
@@ -2247,7 +2262,7 @@
             ru: {
                 orderBtn: "Заказать",
                 heroCta: "Получить консультацию",
-                ticker: "<span><i class='ticker-icon'></i> Бесплатная доставка по всему Узбекистану</span><span><i class='ticker-icon'></i> 100% натуральный и безопасный состав</span><span><i class='ticker-icon'></i> Более 20,000 успешных результатов</span><span><i class='ticker-icon'></i> Оплата только после проверки заказа</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Бесплатная доставка по всему Узбекистану</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% натуральный и безопасный состав</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Более 20,000 успешных результатов</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Оплата только после проверки заказа</span>",
                 title: "ИЗБАВЛЕНИЕ ОТ БЕЛЫХ ПЯТЕН ТЕПЕРЬ ВОЗМОЖНО!",
                 subtitle: "Данный комплекс эффективно поддерживает восстановление пигментации кожи при витилиго. Не вызывает привыкания — Результаты подтверждены!",
                 refTitle: "Если вы думаете, что вернуть коже прежний вид невозможно — вы ошибаетесь!",
@@ -2361,7 +2376,7 @@
             en: {
                 orderBtn: "Order Now",
                 heroCta: "Get Free Advice",
-                ticker: "<span><i class='ticker-icon'></i> Free delivery across Uzbekistan</span><span><i class='ticker-icon'></i> 100% natural and safe formula</span><span><i class='ticker-icon'></i> Over 20,000 successful results</span><span><i class='ticker-icon'></i> Cash on delivery upon personal inspection</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Free delivery across Uzbekistan</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% natural and safe formula</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Over 20,000 successful results</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Cash on delivery upon personal inspection</span>",
                 title: "GETTING RID OF WHITE SPOTS IS NO LONGER IMPOSSIBLE!",
                 subtitle: "This natural formula effectively supports skin pigmentation and immunity balance. Non-addictive — Results confirmed!",
                 refTitle: "If you think restoring your skin is impossible — you are wrong!",
