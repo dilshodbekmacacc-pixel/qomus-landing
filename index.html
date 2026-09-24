@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QOMUS — Teri Pigmentatsiyasini Qo'llab-quvvatlovchi Majmua</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1625078522447841');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1625078522447841&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <!-- Cyrillic to'liq qo'llab-quvvatlaydigan shrift -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -408,7 +427,7 @@
             font-weight: 800;
         }
 
-        /* 3. TARKIB (YECHIM) SECTION */
+        /* 3. TARKIB SECTION */
         .composition-section {
             padding: 60px 0 70px 0;
             background: #f7faf9;
@@ -506,7 +525,7 @@
             font-weight: 600;
         }
 
-        /* 4. "KIMLAR UCHUN TAVSIYA ETILADI" BLOKI */
+        /* 4. TARGET GROUP */
         .target-group-section {
             padding: 60px 0 70px 0;
             background: #ffffff;
@@ -583,7 +602,7 @@
             font-weight: 600;
         }
 
-        /* 5 & 6. SWIPE QILSA BO'LADIGAN VA AUTO-HARAKATLANUVCHI KARUSEL */
+        /* 5 & 6. MARQUEE */
         .results-section,
         .video-results-section {
             padding: 55px 0 65px 0;
@@ -713,7 +732,7 @@
             line-height: 1.45;
         }
 
-        /* 7. ORALIQ TEZKOR CTA BANNER */
+        /* 7. MID CTA */
         .mid-cta-section {
             background: linear-gradient(135deg, #00317F 0%, #004d40 100%);
             padding: 45px 0;
@@ -844,7 +863,7 @@
             line-height: 1.65;
         }
 
-        /* 9. FAQ AKORDEON */
+        /* 9. FAQ */
         .faq-section {
             padding: 55px 0 65px 0;
             background: #f7faf9;
@@ -959,7 +978,7 @@
             padding-top: 12px;
         }
 
-        /* 10. BUYURTMA VA XIZMAT KO'RSATISH TARTIBI */
+        /* 10. STEPS */
         .steps-section {
             padding: 60px 0 70px 0;
             background: #ffffff;
@@ -1036,7 +1055,7 @@
             font-weight: 600;
         }
 
-        /* 11. LEAD FORM: PROPORSIONAL, QIRQILMAYDIGAN FLAKON */
+        /* 11. LEAD FORM */
         .lead-section {
             padding: 65px 0 75px 0;
             background: #00317F;
@@ -1428,11 +1447,11 @@
                     <button class="lang-btn" id="btn-en" onclick="changeLanguage('en')">EN</button>
                 </div>
 
-                <a href="tel:+998712030408" class="btn-glow-green btn-phone-desktop">
+                <a href="tel:+998712030408" class="btn-glow-green btn-phone-desktop track-call-btn">
                     +998 71 203-04-08
                 </a>
 
-                <a href="tel:+998712030408" class="btn-glow-green btn-phone-mobile" title="Qo'ng'iroq qilish">
+                <a href="tel:+998712030408" class="btn-glow-green btn-phone-mobile track-call-btn" title="Qo'ng'iroq qilish">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                     </svg>
@@ -1445,7 +1464,7 @@
         </div>
     </header>
 
-    <!-- 2. HERO SECTION (BARQAROR BITTA RASM BILAN) -->
+    <!-- 2. HERO SECTION -->
     <section class="hero-section">
         <div class="container hero-grid">
             <div class="hero-visual-card">
@@ -1572,7 +1591,7 @@
         </div>
     </section>
 
-    <!-- 4. "KIMLAR UCHUN TAVSIYA ETILADI" BLOKI -->
+    <!-- 4. TARGET GROUP -->
     <section class="target-group-section">
         <div class="container">
             <div class="target-header">
@@ -1605,7 +1624,7 @@
         </div>
     </section>
 
-    <!-- 5. FOTO NATIJALAR (HAM AVTO O'TADIGAN, HAM SWIPE BO'LADIGAN) -->
+    <!-- 5. FOTO NATIJALAR -->
     <section class="results-section">
         <div class="container">
             <h2 class="results-header-title" id="results-title">Mijozlar natijalari</h2>
@@ -1613,7 +1632,6 @@
 
         <div class="marquee-viewport" id="imgViewport">
             <div class="marquee-track" id="imgMarqueeTrack">
-                <!-- 11 ta juftlik rasmlar -->
                 <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/brqhjH2r/IMG-20260924-115230-717.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/Y96HVyjW/IMG-20260924-115231-698.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
                 <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/RhGzC67S/IMG-20260924-115231-600.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/3JJTS1hh/IMG-20260924-115230-855.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
                 <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/vTGsdL6x/IMG-20260924-115231-220.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/fWvsfF62/IMG-20260924-115231-494.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
@@ -1629,7 +1647,7 @@
         </div>
     </section>
 
-    <!-- 6. VIDEO SHARHLAR (HAM AVTO O'TADIGAN, HAM SWIPE BO'LADIGAN) -->
+    <!-- 6. VIDEO SHARHLAR -->
     <section class="video-results-section">
         <div class="container">
             <h2 class="video-header-title" id="video-sec-title">Mijozlarimizning video fikrlari</h2>
@@ -1638,7 +1656,6 @@
 
         <div class="marquee-viewport" id="vidViewport">
             <div class="marquee-track" id="vidMarqueeTrack">
-                <!-- 10 ta video -->
                 <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/WTWcRNIFo0E" title="Qomus video 1" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-1">Oq dog'lardan qutulish | 36 yillik masala hal qilindi</h4></div></div>
                 <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/kU2up3x5aow" title="Qomus video 2" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-2">Bu muolajadan so'ng oq dog'larim yo'qolib ketdi</h4></div></div>
                 <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/NMz7hrU2C50" title="Qomus video 3" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-3">Qomus vositasi bilan teri pigmentining tiklanish jarayoni</h4></div></div>
@@ -1664,7 +1681,7 @@
         </div>
     </section>
 
-    <!-- 8. SERTIFIKATLAR (YANGILANGAN VA KESILMAYDIGAN RASMLAR) -->
+    <!-- 8. SERTIFIKATLAR -->
     <section class="cert-section">
         <div class="container">
             <div class="cert-header">
@@ -1698,7 +1715,7 @@
         </div>
     </section>
 
-    <!-- 9. FAQ AKORDEON -->
+    <!-- 9. FAQ -->
     <section class="faq-section">
         <div class="container">
             <div class="faq-header">
@@ -1790,7 +1807,7 @@
         </div>
     </section>
 
-    <!-- 10. BUYURTMA VA XIZMAT KO'RSATISH TARTIBI -->
+    <!-- 10. STEPS -->
     <section class="steps-section">
         <div class="container">
             <div class="steps-header">
@@ -1818,7 +1835,7 @@
         </div>
     </section>
 
-    <!-- 11. LEAD FORM: 1:1 FORM VA RASM -->
+    <!-- 11. LEAD FORM -->
     <section class="lead-section" id="lead-form">
         <div class="container">
             
@@ -1834,14 +1851,14 @@
                         
                         <div class="form-group">
                             <label id="lbl-name" for="clientName">Ismingiz</label>
-                            <input type="text" id="clientName" class="form-input" placeholder="Ismingizni kiriting" required>
+                            <input type="text" id="clientName" class="form-input form-track-input" placeholder="Ismingizni kiriting" required>
                         </div>
 
                         <div class="form-group">
                             <label id="lbl-phone1" for="clientPhone1">Telefon raqami</label>
                             <div class="form-input-wrap">
                                 <span class="flag-prefix">🇺🇿 +998</span>
-                                <input type="tel" id="clientPhone1" class="form-input phone-input" placeholder="90 123-45-67" required maxlength="12">
+                                <input type="tel" id="clientPhone1" class="form-input phone-input form-track-input" placeholder="90 123-45-67" required maxlength="12">
                             </div>
                         </div>
 
@@ -1849,13 +1866,13 @@
                             <label id="lbl-phone2" for="clientPhone2">Qo'shimcha telefon raqam</label>
                             <div class="form-input-wrap">
                                 <span class="flag-prefix">🇺🇿 +998</span>
-                                <input type="tel" id="clientPhone2" class="form-input phone-input" placeholder="91 234-56-78" maxlength="12">
+                                <input type="tel" id="clientPhone2" class="form-input phone-input form-track-input" placeholder="91 234-56-78" maxlength="12">
                             </div>
                         </div>
 
                         <div class="form-group">
                             <label id="lbl-history" for="clientHistory">Oq dog'lar qachondan beri bor? (yil, oy)</label>
-                            <input type="text" id="clientHistory" class="form-input" placeholder="Masalan: 2 yildan beri, yaqinda boshlandi..." required>
+                            <input type="text" id="clientHistory" class="form-input form-track-input" placeholder="Masalan: 2 yildan beri, yaqinda boshlandi..." required>
                         </div>
 
                         <button type="submit" class="btn-submit-order" id="btn-form-submit">
@@ -1889,12 +1906,12 @@
                 <div class="social-title" id="social-title">Biz ijtimoiy tarmoqlarda:</div>
                 <div class="social-links-grid">
                     
-                    <a href="https://t.me/qomus_vitiligo_oqdog" target="_blank" rel="noopener noreferrer" class="social-btn">
+                    <a href="https://t.me/qomus_vitiligo_oqdog" target="_blank" rel="noopener noreferrer" class="social-btn track-tg-btn" data-channel="Main_Channel">
                         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
                         <span id="soc-main-tg">Asosiy kanal</span>
                     </a>
 
-                    <a href="https://t.me/qomus_natijalar" target="_blank" rel="noopener noreferrer" class="social-btn">
+                    <a href="https://t.me/qomus_natijalar" target="_blank" rel="noopener noreferrer" class="social-btn track-tg-btn" data-channel="Results_Channel">
                         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
                         <span id="soc-results-tg">Natijalar kanali</span>
                     </a>
@@ -1925,7 +1942,7 @@
     </footer>
 
     <!-- FREEZE CALL BUTTON -->
-    <a href="tel:+998712030408" class="freeze-call-btn" title="Qo'ng'iroq qilish">
+    <a href="tel:+998712030408" class="freeze-call-btn track-call-btn" title="Qo'ng'iroq qilish">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
@@ -1938,7 +1955,7 @@
         </a>
     </div>
 
-    <!-- JAVASCRIPT: TILLAR VA SWIPE CAROUSEL MANTIG'I -->
+    <!-- JAVASCRIPT: TILLAR, MARQUEE VA META TRACKING -->
     <script>
         const translations = {
             uz: {
@@ -2509,7 +2526,7 @@
             if (!isOpen) currentItem.classList.add('active');
         }
 
-        /* MARQUEE MOTOR (HAM PLAVNIY AUTO, HAM ERKIN SWIPE) */
+        /* MARQUEE MOTOR */
         function initInteractiveMarquee(viewportId, trackId, speed = 0.8) {
             const viewport = document.getElementById(viewportId);
             const track = document.getElementById(trackId);
@@ -2573,9 +2590,78 @@
             }, 100);
         }
 
+        /* META PIXEL: MIKRO-HODISALAR TRACKING TIZIMI */
+        function initPixelTracking() {
+            // 1. Qo'ng'iroq bosilganda
+            document.querySelectorAll('.track-call-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    if (typeof fbq === 'function') {
+                        fbq('track', 'Contact', { action: 'PhoneCall', phone: '+998712030408' });
+                        fbq('trackCustom', 'Click_PhoneCall');
+                    }
+                });
+            });
+
+            // 2. Telegram bosilganda
+            document.querySelectorAll('.track-tg-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const channel = this.getAttribute('data-channel') || 'Telegram';
+                    if (typeof fbq === 'function') {
+                        fbq('track', 'Contact', { action: 'TelegramClick', channel: channel });
+                        fbq('trackCustom', 'Click_Telegram', { channel_name: channel });
+                    }
+                });
+            });
+
+            // 3. Formani to'ldirish boshlanganda (InitiateCheckout)
+            let formTracked = false;
+            document.querySelectorAll('.form-track-input').forEach(input => {
+                input.addEventListener('focus', () => {
+                    if (!formTracked) {
+                        formTracked = true;
+                        if (typeof fbq === 'function') {
+                            fbq('track', 'InitiateCheckout', { form: 'order_form' });
+                            fbq('trackCustom', 'Form_Started');
+                        }
+                    }
+                }, { once: true });
+            });
+
+            // 4. Saytda 30s bo'lgan qizg'in auditoriya
+            setTimeout(() => {
+                if (typeof fbq === 'function') {
+                    fbq('trackCustom', 'Engaged_Visitor_30s');
+                }
+            }, 30000);
+
+            // 5. 70% Scroll qilgan auditoriya
+            let scrollTracked = false;
+            window.addEventListener('scroll', () => {
+                if (scrollTracked) return;
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if (scrollHeight > 0 && (window.scrollY / scrollHeight) * 100 >= 70) {
+                    scrollTracked = true;
+                    if (typeof fbq === 'function') {
+                        fbq('trackCustom', 'Scroll_70_Percent');
+                    }
+                }
+            }, { passive: true });
+        }
+
+        /* ASOSIY LEAD FORMASI YUBORILGANDA */
         function submitLeadForm(e) {
             e.preventDefault();
             const name = document.getElementById('clientName').value;
+
+            // META PIXEL LEAD EVENT
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead', {
+                    content_name: 'Qomus Vitiligo Konsultatsiya',
+                    currency: 'UZS',
+                    value: 0.00
+                });
+            }
+
             alert("Rahmat, " + name + "! So'rovingiz qabul qilindi. Tez orada mutaxassisimiz siz bilan bog'lanadi.");
             document.getElementById('orderForm').reset();
         }
@@ -2584,6 +2670,7 @@
             changeLanguage('uz');
             initInteractiveMarquee('imgViewport', 'imgMarqueeTrack', 0.9);
             initInteractiveMarquee('vidViewport', 'vidMarqueeTrack', 0.7);
+            initPixelTracking();
         });
     </script>
 </body>
