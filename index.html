@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QOMUS — Teri Pigmentatsiyasini Tiklovchi Tabiiy Majmua</title>
-    <!-- Cyrillic to'liq qo'llab-quvvatlaydigan shrift -->
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800;900&subset=cyrillic,cyrillic-ext,latin&display=swap" rel="stylesheet">
@@ -27,1479 +27,255 @@
       <img height="1" width="1" style="display:none"
            src="https://www.facebook.com/tr?id=1625078522447841&ev=PageView&noscript=1"/>
     </noscript>
-    <!-- END META PIXEL CODE -->
 
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-        }
-
-        body {
-            background-color: #f7faf9;
-            color: #1a2b25;
-            padding-bottom: 75px;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1140px;
-            margin: 0 auto;
-            padding: 0 16px;
-        }
+        html { scroll-behavior: smooth; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Manrope', sans-serif; }
+        body { background-color: #f7faf9; color: #1a2b25; padding-bottom: 75px; overflow-x: hidden; }
+        .container { max-width: 1140px; margin: 0 auto; padding: 0 16px; }
 
         /* TOP TICKER BAR */
-        .top-ticker {
-            background: #00317F;
-            color: #ffffff;
-            font-size: 11.5px;
-            font-weight: 700;
-            padding: 8px 0;
-            overflow: hidden;
-            white-space: nowrap;
-            letter-spacing: 0.3px;
-        }
+        .top-ticker { background: #00317F; color: #ffffff; font-size: 11.5px; font-weight: 700; padding: 8px 0; overflow: hidden; white-space: nowrap; }
+        .ticker-content { display: inline-block; animation: marquee 28s linear infinite; }
+        .ticker-content span { margin-right: 32px; display: inline-flex; align-items: center; gap: 7px; }
+        .ticker-svg { width: 13px; height: 13px; stroke: #03C3D4; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        .ticker-content {
-            display: inline-block;
-            animation: marquee 28s linear infinite;
-        }
+        /* HEADER */
+        .main-header { position: sticky; top: 0; left: 0; width: 100%; z-index: 999; background: #ffffff; border-bottom: 1px solid #e0e9e5; padding: 10px 0; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04); }
+        .header-flex { display: flex; justify-content: space-between; align-items: center; gap: 6px; }
+        .logo { display: flex; flex-direction: column; line-height: 1; text-decoration: none; }
+        .logo-sub { font-size: 9px; font-weight: 800; color: #03C3D4; border: 1px solid #03C3D4; border-radius: 8px; padding: 0px 5px; width: fit-content; margin-bottom: 1px; }
+        .logo-main { font-size: 20px; font-weight: 900; color: #00317F; letter-spacing: -0.5px; }
+        .header-right { display: flex; align-items: center; gap: 6px; }
 
-        .ticker-content span {
-            margin-right: 32px;
-            display: inline-flex;
-            align-items: center;
-            gap: 7px;
-        }
+        .lang-switcher { display: flex; background: #f0f4f2; padding: 2px; border-radius: 8px; gap: 2px; }
+        .lang-btn { border: none; background: transparent; padding: 4px 6px; font-size: 10px; font-weight: 800; border-radius: 5px; color: #4a5d55; cursor: pointer; transition: all 0.2s ease; }
+        .lang-btn.active { background: #00317F; color: #ffffff; }
 
-        .ticker-svg {
-            width: 13px;
-            height: 13px;
-            stroke: #03C3D4;
-            fill: none;
-            stroke-width: 2.2;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            flex-shrink: 0;
-        }
-
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        /* STICKY HEADER */
-        .main-header {
-            position: sticky;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 999;
-            background: #ffffff;
-            border-bottom: 1px solid #e0e9e5;
-            padding: 10px 0;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
-        }
-
-        .header-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .logo {
-            display: flex;
-            flex-direction: column;
-            line-height: 1;
-            text-decoration: none;
-        }
-
-        .logo-sub {
-            font-size: 9px;
-            font-weight: 800;
-            color: #03C3D4;
-            border: 1px solid #03C3D4;
-            border-radius: 8px;
-            padding: 0px 5px;
-            width: fit-content;
-            margin-bottom: 1px;
-            text-transform: lowercase;
-        }
-
-        .logo-main {
-            font-size: 20px;
-            font-weight: 900;
-            color: #00317F;
-            letter-spacing: -0.5px;
-        }
-
-        .header-right {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .lang-switcher {
-            display: flex;
-            background: #f0f4f2;
-            padding: 2px;
-            border-radius: 8px;
-            gap: 2px;
-        }
-
-        .lang-btn {
-            border: none;
-            background: transparent;
-            padding: 4px 6px;
-            font-size: 10px;
-            font-weight: 800;
-            border-radius: 5px;
-            color: #4a5d55;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .lang-btn.active {
-            background: #00317F;
-            color: #ffffff;
-        }
-
-        .btn-glow-green {
-            border: 2px solid #00a86b;
-            background: #00a86b;
-            color: #ffffff !important;
-            padding: 7px 14px;
-            border-radius: 20px;
-            font-weight: 800;
-            font-size: 11px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            white-space: nowrap;
-            cursor: pointer;
-            animation: pulseGlow 2s infinite;
-        }
-
+        .btn-glow-green { border: 2px solid #00a86b; background: #00a86b; color: #ffffff !important; padding: 7px 14px; border-radius: 20px; font-weight: 800; font-size: 11px; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; white-space: nowrap; cursor: pointer; animation: pulseGlow 2s infinite; }
         .btn-phone-desktop { display: inline-flex; }
-        
-        .btn-phone-mobile { 
-            display: none; 
-            padding: 5px 8px; 
-            border-radius: 50%;
-            width: 32px;
-            height: 32px;
-        }
-
-        .btn-phone-mobile svg path { stroke: #ffffff; }
-
-        .freeze-call-btn {
-            position: fixed;
-            bottom: 70px;
-            right: 16px;
-            width: 50px;
-            height: 50px;
-            background: #00a86b;
-            border: 2px solid #00a86b;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            text-decoration: none;
-            animation: pulseGlowCircle 2s infinite;
-        }
-
-        .freeze-call-btn svg path { stroke: #ffffff; }
-
-        .freeze-bottom-bar {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: #ffffff;
-            padding: 10px 16px;
-            box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
-            z-index: 998;
-        }
-
-        .btn-solid-green {
-            display: block;
-            width: 100%;
-            background: #00a86b;
-            color: #ffffff;
-            text-align: center;
-            padding: 13px 0;
-            border-radius: 10px;
-            font-size: 15px;
-            font-weight: 800;
-            text-decoration: none;
-            animation: pulseGlow 2s infinite;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* 1. HERO SECTION */
-        .hero-section {
-            padding: 24px 0 32px 0;
-        }
-
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.15fr 1fr;
-            gap: 36px;
-            align-items: center;
-        }
-
-        .hero-content {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .hero-title {
-            font-size: 36px;
-            line-height: 1.3;
-            font-weight: 900;
-            color: #00317F;
-            margin-top: 10px;
-            margin-bottom: 20px;
-            letter-spacing: -0.5px;
-            text-transform: uppercase;
-        }
-
-        .hero-subtitle {
-            font-size: 16px;
-            line-height: 1.65;
-            color: #334155;
-            font-weight: 600;
-            margin-bottom: 0px;
-        }
-
-        .hero-visual-card {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            max-width: 580px;
-            margin: 0 auto;
-        }
-
-        .product-img-large {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-            border-radius: 18px;
-            filter: drop-shadow(0 18px 36px rgba(0,0,0,0.14));
-            display: block;
-        }
-
-        /* 2. PAIN SECTION */
-        .pain-section-ref {
-            padding: 50px 0 60px 0;
-            background: #ffffff;
-            border-top: 1px solid #eef3f0;
-        }
-
-        .ref-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .ref-header h2 {
-            color: #00459c;
-            font-size: 28px;
-            font-weight: 900;
-            line-height: 1.35;
-            max-width: 850px;
-            margin: 0 auto 18px auto;
-        }
-
-        .ref-header p {
-            color: #1e293b;
-            font-size: 15px;
-            font-weight: 700;
-        }
-
-        .ref-row-1 {
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-            gap: 40px;
-            align-items: center;
-            margin-bottom: 70px;
-        }
-
-        .ref-subtext-lead {
-            font-size: 15px;
-            color: #1e293b;
-            line-height: 1.6;
-            margin-bottom: 24px;
-            font-weight: 600;
-        }
-
-        .ref-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-        }
-
-        .ref-list-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 12px;
-            font-size: 14.5px;
-            font-weight: 700;
-            color: #1e293b;
-            line-height: 1.45;
-        }
-
-        .ref-badge-icon {
-            width: 22px;
-            height: 22px;
-            background: #f43f5e;
-            color: #ffffff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 13px;
-            font-weight: 900;
-            flex-shrink: 0;
-            margin-top: 1px;
-            box-shadow: 0 2px 6px rgba(244, 63, 94, 0.35);
-        }
-
-        .ref-image-wrapper {
-            position: relative;
-            width: 100%;
-            min-height: 380px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-        }
-
-        .img-main-vitiligo {
-            width: 82%;
-            height: 340px;
-            object-fit: cover;
-            border-radius: 28px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-        }
-
-        .img-overlap-hand {
-            position: absolute;
-            left: 0;
-            bottom: 20px;
-            width: 55%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 20px;
-            border: 4px solid #ffffff;
-            box-shadow: 0 14px 28px rgba(0,0,0,0.12);
-        }
-
-        .ref-row-2 {
-            display: grid;
-            grid-template-columns: 0.9fr 1.1fr;
-            gap: 46px;
-            align-items: center;
-        }
-
-        .img-single-card {
-            width: 100%;
-            height: 290px;
-            object-fit: cover;
-            border-radius: 24px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-        }
-
-        .ref-text-block-2 p {
-            font-size: 15.5px;
-            line-height: 1.65;
-            color: #1e293b;
-            margin-bottom: 24px;
-            font-weight: 600;
-        }
-
-        .ref-text-block-2 p strong {
-            color: #00317F;
-            font-weight: 800;
-        }
-
-        /* 3. TARKIB SECTION */
-        .composition-section {
-            padding: 60px 0 70px 0;
-            background: #f7faf9;
-            border-top: 1px solid #eef3f0;
-            border-bottom: 1px solid #e0e9e5;
-        }
-
-        .comp-header {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .comp-header h2 {
-            color: #00459c;
-            font-size: 28px;
-            font-weight: 900;
-            line-height: 1.35;
-            letter-spacing: -0.5px;
-            max-width: 850px;
-            margin: 0 auto 14px auto;
-        }
-
-        .comp-header p {
-            color: #1e293b;
-            font-size: 15px;
-            font-weight: 700;
-            max-width: 760px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .comp-grid {
-            display: grid;
-            grid-template-columns: 0.95fr 1.05fr;
-            gap: 46px;
-            align-items: center;
-        }
-
-        .comp-visual-box {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .comp-product-img {
-            width: 100%;
-            max-width: 460px;
-            height: auto;
-            border-radius: 24px;
-            object-fit: cover;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
-        }
-
-        .comp-clean-list {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 26px;
-        }
-
-        .comp-clean-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 16px;
-        }
-
-        .comp-badge-icon {
-            width: 24px;
-            height: 24px;
-            background: #00a86b;
-            color: #ffffff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-weight: 900;
-            flex-shrink: 0;
-            margin-top: 3px;
-            box-shadow: 0 2px 6px rgba(0, 168, 107, 0.3);
-        }
-
-        .comp-item-content h3 {
-            font-size: 16.5px;
-            font-weight: 800;
-            color: #00317F;
-            margin-bottom: 6px;
-            line-height: 1.4;
-        }
-
-        .comp-item-content p {
-            font-size: 14.5px;
-            line-height: 1.7;
-            color: #334155;
-            font-weight: 600;
-        }
-
-        /* 4. TARGET GROUP */
-        .target-group-section {
-            padding: 60px 0 70px 0;
-            background: #ffffff;
-            border-bottom: 1px solid #e2ece7;
-        }
-
-        .target-header {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .target-header h2 {
-            color: #00317F;
-            font-size: 28px;
-            font-weight: 900;
-            letter-spacing: -0.5px;
-            line-height: 1.35;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-        }
-
-        .target-header p {
-            color: #475569;
-            font-size: 15px;
-            font-weight: 700;
-            max-width: 680px;
-            margin: 0 auto;
-        }
-
-        .target-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 22px;
-        }
-
-        .target-card-clean {
-            background: #ffffff;
-            border: 1.5px solid #e2ece7;
-            border-radius: 18px;
-            padding: 28px 22px;
-            display: flex;
-            flex-direction: column;
-            text-align: left;
-            transition: all 0.25s ease;
-            box-shadow: 0 4px 14px rgba(0, 49, 127, 0.02);
-        }
-
-        .target-card-clean:hover {
-            border-color: #00a86b;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(0, 168, 107, 0.08);
-        }
-
-        .target-num {
-            font-size: 28px;
-            font-weight: 900;
-            color: #00a86b;
-            margin-bottom: 12px;
-            line-height: 1;
-        }
-
-        .target-card-clean h3 {
-            font-size: 16.5px;
-            font-weight: 800;
-            color: #00317F;
-            margin-bottom: 10px;
-            line-height: 1.35;
-        }
-
-        .target-card-clean p {
-            font-size: 14px;
-            line-height: 1.65;
-            color: #475569;
-            font-weight: 600;
-        }
-
-        /* 5 & 6. SWIPE CAROUSEL */
-        .results-section,
-        .video-results-section {
-            padding: 55px 0 65px 0;
-            background: #f4f8f6;
-            border-bottom: 1px solid #e2ece7;
-            overflow: hidden;
-        }
-
-        .video-results-section {
-            background: #ffffff;
-        }
-
-        .results-header-title,
-        .video-header-title {
-            text-align: center;
-            font-size: 28px;
-            font-weight: 900;
-            color: #00317F;
-            margin-bottom: 10px;
-        }
-
-        .video-header-sub {
-            text-align: center;
-            font-size: 15px;
-            color: #475569;
-            font-weight: 600;
-            margin-bottom: 35px;
-        }
-
-        .marquee-viewport {
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
-            overflow: hidden;
-            cursor: grab;
-            user-select: none;
-            touch-action: pan-y;
-            padding: 10px 0;
-        }
-
-        .marquee-viewport:active {
-            cursor: grabbing;
-        }
-
-        .marquee-track {
-            display: flex;
-            width: max-content;
-            gap: 20px;
-            will-change: transform;
-        }
-
-        .result-card-pair {
-            display: flex;
-            gap: 14px;
-            background: #ffffff;
-            padding: 16px;
-            border-radius: 20px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-            width: 520px;
-            flex-shrink: 0;
-            pointer-events: none;
-        }
-
-        .result-col {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .result-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 14px;
-            margin-bottom: 10px;
-            pointer-events: none;
-        }
-
-        .result-badge {
-            background: #00bcd4;
-            color: #ffffff;
-            font-size: 13px;
-            font-weight: 800;
-            padding: 6px 18px;
-            border-radius: 20px;
-            text-transform: capitalize;
-        }
-
-        .video-card-item {
-            background: #ffffff;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0, 49, 127, 0.08);
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #e0e9e5;
-            width: 380px;
-            flex-shrink: 0;
-        }
-
-        .video-embed-box {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%;
-            background: #000;
-        }
-
-        .video-embed-box iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        .video-card-footer {
-            padding: 16px 20px;
-            background: #ffffff;
-            pointer-events: none;
-        }
-
-        .video-card-title {
-            font-size: 14px;
-            font-weight: 800;
-            color: #00317F;
-            line-height: 1.45;
-        }
+        .btn-phone-mobile { display: none; padding: 5px 8px; border-radius: 50%; width: 32px; height: 32px; }
+
+        .freeze-call-btn { position: fixed; bottom: 70px; right: 16px; width: 50px; height: 50px; background: #00a86b; border: 2px solid #00a86b; border-radius: 50%; display: flex; align-items: center; justify-content: center; z-index: 1000; text-decoration: none; animation: pulseGlowCircle 2s infinite; }
+        .freeze-bottom-bar { position: fixed; bottom: 0; left: 0; width: 100%; background: #ffffff; padding: 10px 16px; box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08); z-index: 998; }
+        .btn-solid-green { display: block; width: 100%; background: #00a86b; color: #ffffff; text-align: center; padding: 13px 0; border-radius: 10px; font-size: 15px; font-weight: 800; text-decoration: none; animation: pulseGlow 2s infinite; border: none; cursor: pointer; }
+
+        /* 1. HERO */
+        .hero-section { padding: 24px 0 32px 0; }
+        .hero-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 36px; align-items: center; }
+        .hero-content { display: flex; flex-direction: column; }
+        .hero-title { font-size: 36px; line-height: 1.3; font-weight: 900; color: #00317F; margin-top: 10px; margin-bottom: 20px; text-transform: uppercase; }
+        .hero-subtitle { font-size: 16px; line-height: 1.65; color: #334155; font-weight: 600; }
+        .hero-visual-card { display: flex; justify-content: center; align-items: center; width: 100%; max-width: 580px; margin: 0 auto; }
+        .product-img-large { width: 100%; height: auto; object-fit: contain; border-radius: 18px; filter: drop-shadow(0 18px 36px rgba(0,0,0,0.14)); display: block; }
+
+        /* 2. PAIN */
+        .pain-section-ref { padding: 50px 0 60px 0; background: #ffffff; border-top: 1px solid #eef3f0; }
+        .ref-header { text-align: center; margin-bottom: 40px; }
+        .ref-header h2 { color: #00459c; font-size: 28px; font-weight: 900; line-height: 1.35; max-width: 850px; margin: 0 auto 18px auto; }
+        .ref-header p { color: #1e293b; font-size: 15px; font-weight: 700; }
+        .ref-row-1 { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center; margin-bottom: 70px; }
+        .ref-subtext-lead { font-size: 15px; color: #1e293b; line-height: 1.6; margin-bottom: 24px; font-weight: 600; }
+        .ref-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+        .ref-list-item { display: flex; align-items: flex-start; gap: 12px; font-size: 14.5px; font-weight: 700; color: #1e293b; line-height: 1.45; }
+        .ref-badge-icon { width: 22px; height: 22px; background: #f43f5e; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 900; flex-shrink: 0; margin-top: 1px; box-shadow: 0 2px 6px rgba(244, 63, 94, 0.35); }
+        .ref-image-wrapper { position: relative; width: 100%; min-height: 380px; display: flex; align-items: center; justify-content: flex-end; }
+        .img-main-vitiligo { width: 82%; height: 340px; object-fit: cover; border-radius: 28px; box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
+        .img-overlap-hand { position: absolute; left: 0; bottom: 20px; width: 55%; height: 200px; object-fit: cover; border-radius: 20px; border: 4px solid #ffffff; box-shadow: 0 14px 28px rgba(0,0,0,0.12); }
+        .ref-row-2 { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 46px; align-items: center; }
+        .img-single-card { width: 100%; height: 290px; object-fit: cover; border-radius: 24px; box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
+        .ref-text-block-2 p { font-size: 15.5px; line-height: 1.65; color: #1e293b; margin-bottom: 24px; font-weight: 600; }
+        .ref-text-block-2 p strong { color: #00317F; font-weight: 800; }
+
+        /* 3. TARKIB */
+        .composition-section { padding: 60px 0 70px 0; background: #f7faf9; border-top: 1px solid #eef3f0; border-bottom: 1px solid #e0e9e5; }
+        .comp-header { text-align: center; margin-bottom: 45px; }
+        .comp-header h2 { color: #00459c; font-size: 28px; font-weight: 900; line-height: 1.35; max-width: 850px; margin: 0 auto 14px auto; }
+        .comp-header p { color: #1e293b; font-size: 15px; font-weight: 700; max-width: 760px; margin: 0 auto; line-height: 1.6; }
+        .comp-grid { display: grid; grid-template-columns: 0.95fr 1.05fr; gap: 46px; align-items: center; }
+        .comp-visual-box { display: flex; justify-content: center; align-items: center; }
+        .comp-product-img { width: 100%; max-width: 460px; height: auto; border-radius: 24px; object-fit: cover; box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
+        .comp-clean-list { list-style: none; display: flex; flex-direction: column; gap: 26px; }
+        .comp-clean-item { display: flex; align-items: flex-start; gap: 16px; }
+        .comp-badge-icon { width: 24px; height: 24px; background: #00a86b; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 900; flex-shrink: 0; margin-top: 3px; box-shadow: 0 2px 6px rgba(0, 168, 107, 0.3); }
+        .comp-item-content h3 { font-size: 16.5px; font-weight: 800; color: #00317F; margin-bottom: 6px; line-height: 1.4; }
+        .comp-item-content p { font-size: 14.5px; line-height: 1.7; color: #334155; font-weight: 600; }
+
+        /* 4. TARGET */
+        .target-group-section { padding: 60px 0 70px 0; background: #ffffff; border-bottom: 1px solid #e2ece7; }
+        .target-header { text-align: center; margin-bottom: 45px; }
+        .target-header h2 { color: #00317F; font-size: 28px; font-weight: 900; line-height: 1.35; margin-bottom: 12px; text-transform: uppercase; }
+        .target-header p { color: #475569; font-size: 15px; font-weight: 700; max-width: 680px; margin: 0 auto; }
+        .target-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+        .target-card-clean { background: #ffffff; border: 1.5px solid #e2ece7; border-radius: 18px; padding: 28px 22px; display: flex; flex-direction: column; text-align: left; transition: all 0.25s ease; box-shadow: 0 4px 14px rgba(0, 49, 127, 0.02); }
+        .target-card-clean:hover { border-color: #00a86b; transform: translateY(-3px); }
+        .target-num { font-size: 28px; font-weight: 900; color: #00a86b; margin-bottom: 12px; line-height: 1; }
+        .target-card-clean h3 { font-size: 16.5px; font-weight: 800; color: #00317F; margin-bottom: 10px; }
+        .target-card-clean p { font-size: 14px; line-height: 1.65; color: #475569; font-weight: 600; }
+
+        /* 5 & 6. MARQUEE SWIPE CAROUSELS */
+        .results-section, .video-results-section { padding: 55px 0 65px 0; background: #f4f8f6; border-bottom: 1px solid #e2ece7; overflow: hidden; }
+        .video-results-section { background: #ffffff; }
+        .results-header-title, .video-header-title { text-align: center; font-size: 28px; font-weight: 900; color: #00317F; margin-bottom: 10px; }
+        .video-header-sub { text-align: center; font-size: 15px; color: #475569; font-weight: 600; margin-bottom: 35px; }
+
+        .marquee-viewport { width: 100%; overflow: hidden; cursor: grab; user-select: none; touch-action: pan-y; padding: 10px 0; }
+        .marquee-viewport:active { cursor: grabbing; }
+        .marquee-track { display: flex; width: max-content; gap: 20px; will-change: transform; }
+
+        .result-card-pair { display: flex; gap: 14px; background: #ffffff; padding: 16px; border-radius: 20px; box-shadow: 0 8px 24px rgba(0,0,0,0.06); width: 520px; flex-shrink: 0; pointer-events: none; }
+        .result-col { flex: 1; display: flex; flex-direction: column; align-items: center; }
+        .result-img { width: 100%; height: 250px; object-fit: cover; border-radius: 14px; margin-bottom: 10px; pointer-events: none; }
+        .result-badge { background: #00bcd4; color: #ffffff; font-size: 13px; font-weight: 800; padding: 6px 18px; border-radius: 20px; text-transform: capitalize; }
+
+        .video-card-item { background: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 49, 127, 0.08); display: flex; flex-direction: column; border: 1px solid #e0e9e5; width: 380px; flex-shrink: 0; }
+        .video-embed-box { position: relative; width: 100%; padding-top: 56.25%; background: #000; }
+        .video-embed-box iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+        .video-card-footer { padding: 16px 20px; background: #ffffff; pointer-events: none; }
+        .video-card-title { font-size: 14px; font-weight: 800; color: #00317F; line-height: 1.45; }
 
         /* 7. MID CTA */
-        .mid-cta-section {
-            background: linear-gradient(135deg, #00317F 0%, #004d40 100%);
-            padding: 45px 0;
-            color: #ffffff;
-            text-align: center;
-        }
-
-        .mid-cta-box {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .mid-cta-box h2 {
-            font-size: 26px;
-            font-weight: 900;
-            margin-bottom: 12px;
-            line-height: 1.35;
-            text-transform: uppercase;
-        }
-
-        .mid-cta-box p {
-            font-size: 15.5px;
-            color: #e2e8f0;
-            margin-bottom: 24px;
-            font-weight: 600;
-        }
-
-        .btn-mid-action {
-            display: inline-block;
-            background: #00a86b;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 800;
-            padding: 15px 36px;
-            border-radius: 12px;
-            text-decoration: none;
-            box-shadow: 0 8px 24px rgba(0, 168, 107, 0.4);
-            animation: pulseGlow 2s infinite;
-        }
+        .mid-cta-section { background: linear-gradient(135deg, #00317F 0%, #004d40 100%); padding: 45px 0; color: #ffffff; text-align: center; }
+        .mid-cta-box { max-width: 800px; margin: 0 auto; }
+        .mid-cta-box h2 { font-size: 26px; font-weight: 900; margin-bottom: 12px; text-transform: uppercase; }
+        .mid-cta-box p { font-size: 15.5px; color: #e2e8f0; margin-bottom: 24px; font-weight: 600; }
+        .btn-mid-action { display: inline-block; background: #00a86b; color: #ffffff; font-size: 16px; font-weight: 800; padding: 15px 36px; border-radius: 12px; text-decoration: none; animation: pulseGlow 2s infinite; }
 
         /* 8. SERTIFIKATLAR */
-        .cert-section {
-            padding: 55px 0 50px 0;
-            background: #ffffff;
-            border-bottom: 1px solid #e2ece7;
-        }
-
-        .cert-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .cert-header h2 {
-            color: #00459c;
-            font-size: 28px;
-            font-weight: 900;
-            line-height: 1.35;
-            letter-spacing: -0.5px;
-            margin-bottom: 12px;
-        }
-
-        .cert-header p {
-            color: #1e293b;
-            font-size: 15px;
-            font-weight: 700;
-            max-width: 720px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .cert-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            max-width: 880px;
-            margin: 0 auto 25px auto;
-            align-items: stretch;
-        }
-
-        .cert-card {
-            background: #ffffff;
-            padding: 16px;
-            border-radius: 18px;
-            box-shadow: 0 10px 30px rgba(0, 49, 127, 0.08);
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border: 1.5px solid #e0e9e5;
-            transition: all 0.25s ease;
-        }
-
-        .cert-card:hover {
-            border-color: #00a86b;
-            box-shadow: 0 14px 35px rgba(0, 168, 107, 0.12);
-        }
-
-        .cert-card img {
-            width: 100%;
-            height: auto;
-            max-height: 520px;
-            object-fit: contain;
-            border-radius: 10px;
-            display: block;
-            background: #ffffff;
-        }
-
-        .cert-caption {
-            color: #00317F;
-            font-size: 14px;
-            font-weight: 800;
-            text-align: center;
-            margin-top: 14px;
-            padding: 0 4px;
-            line-height: 1.45;
-        }
-
-        .cert-subtext-clean {
-            max-width: 820px;
-            margin: 15px auto 0 auto;
-            text-align: center;
-            padding: 0 10px;
-        }
-
-        .cert-subtext-clean p {
-            font-size: 14.5px;
-            color: #475569;
-            font-weight: 600;
-            line-height: 1.65;
-        }
+        .cert-section { padding: 55px 0 50px 0; background: #ffffff; border-bottom: 1px solid #e2ece7; }
+        .cert-header { text-align: center; margin-bottom: 40px; }
+        .cert-header h2 { color: #00459c; font-size: 28px; font-weight: 900; margin-bottom: 12px; }
+        .cert-header p { color: #1e293b; font-size: 15px; font-weight: 700; max-width: 720px; margin: 0 auto; line-height: 1.6; }
+        .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 880px; margin: 0 auto 25px auto; align-items: stretch; }
+        .cert-card { background: #ffffff; padding: 16px; border-radius: 18px; box-shadow: 0 10px 30px rgba(0, 49, 127, 0.08); display: flex; flex-direction: column; align-items: center; border: 1.5px solid #e0e9e5; }
+        .cert-card img { width: 100%; height: auto; max-height: 520px; object-fit: contain; border-radius: 10px; display: block; }
+        .cert-caption { color: #00317F; font-size: 14px; font-weight: 800; text-align: center; margin-top: 14px; }
+        .cert-subtext-clean { max-width: 820px; margin: 15px auto 0 auto; text-align: center; padding: 0 10px; }
+        .cert-subtext-clean p { font-size: 14.5px; color: #475569; font-weight: 600; line-height: 1.65; }
 
         /* 9. FAQ */
-        .faq-section {
-            padding: 55px 0 65px 0;
-            background: #f7faf9;
-            border-bottom: 1px solid #e0e9e5;
-        }
-
-        .faq-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .faq-header h2 {
-            color: #00317F;
-            font-size: 28px;
-            font-weight: 900;
-            letter-spacing: -0.5px;
-            line-height: 1.35;
-            margin-bottom: 10px;
-        }
-
-        .faq-header p {
-            color: #475569;
-            font-size: 15px;
-            font-weight: 600;
-            max-width: 680px;
-            margin: 0 auto;
-        }
-
-        .faq-container {
-            max-width: 860px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .faq-item {
-            background: #ffffff;
-            border: 1px solid #e0e9e5;
-            border-radius: 14px;
-            overflow: hidden;
-            transition: all 0.25s ease;
-            box-shadow: 0 2px 8px rgba(0, 49, 127, 0.03);
-        }
-
-        .faq-item.active {
-            border-color: #00a86b;
-            box-shadow: 0 6px 18px rgba(0, 168, 107, 0.08);
-        }
-
-        .faq-question-btn {
-            width: 100%;
-            padding: 18px 20px;
-            background: transparent;
-            border: none;
-            outline: none;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            cursor: pointer;
-            text-align: left;
-            gap: 15px;
-        }
-
-        .faq-question-btn span {
-            font-size: 15.5px;
-            font-weight: 800;
-            color: #00317F;
-            line-height: 1.4;
-        }
-
-        .faq-toggle-icon {
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            background: #f0f4f2;
-            color: #00317F;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 18px;
-            font-weight: 700;
-            flex-shrink: 0;
-            transition: all 0.25s ease;
-        }
-
-        .faq-item.active .faq-toggle-icon {
-            background: #00a86b;
-            color: #ffffff;
-            transform: rotate(45deg);
-        }
-
-        .faq-answer-pane {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.35s ease, padding 0.35s ease;
-            background: #ffffff;
-            padding: 0 20px;
-        }
-
-        .faq-item.active .faq-answer-pane {
-            max-height: 250px;
-            padding: 0 20px 18px 20px;
-        }
-
-        .faq-answer-pane p {
-            font-size: 14px;
-            line-height: 1.65;
-            color: #475569;
-            font-weight: 600;
-            border-top: 1px solid #f0f4f2;
-            padding-top: 12px;
-        }
+        .faq-section { padding: 55px 0 65px 0; background: #f7faf9; border-bottom: 1px solid #e0e9e5; }
+        .faq-header { text-align: center; margin-bottom: 40px; }
+        .faq-header h2 { color: #00317F; font-size: 28px; font-weight: 900; margin-bottom: 10px; }
+        .faq-header p { color: #475569; font-size: 15px; font-weight: 600; max-width: 680px; margin: 0 auto; }
+        .faq-container { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+        .faq-item { background: #ffffff; border: 1px solid #e0e9e5; border-radius: 14px; overflow: hidden; }
+        .faq-item.active { border-color: #00a86b; box-shadow: 0 6px 18px rgba(0, 168, 107, 0.08); }
+        .faq-question-btn { width: 100%; padding: 18px 20px; background: transparent; border: none; outline: none; display: flex; align-items: center; justify-content: space-between; cursor: pointer; text-align: left; gap: 15px; }
+        .faq-question-btn span { font-size: 15.5px; font-weight: 800; color: #00317F; }
+        .faq-toggle-icon { width: 30px; height: 30px; border-radius: 50%; background: #f0f4f2; color: #00317F; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; flex-shrink: 0; transition: all 0.25s ease; }
+        .faq-item.active .faq-toggle-icon { background: #00a86b; color: #ffffff; transform: rotate(45deg); }
+        .faq-answer-pane { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.35s ease; background: #ffffff; padding: 0 20px; }
+        .faq-item.active .faq-answer-pane { max-height: 250px; padding: 0 20px 18px 20px; }
+        .faq-answer-pane p { font-size: 14px; line-height: 1.65; color: #475569; font-weight: 600; border-top: 1px solid #f0f4f2; padding-top: 12px; }
 
         /* 10. STEPS */
-        .steps-section {
-            padding: 60px 0 70px 0;
-            background: #ffffff;
-            border-bottom: 1px solid #e2ece7;
-        }
+        .steps-section { padding: 60px 0 70px 0; background: #ffffff; border-bottom: 1px solid #e2ece7; }
+        .steps-header { text-align: center; margin-bottom: 45px; }
+        .steps-header h2 { color: #00459c; font-size: 28px; font-weight: 900; margin-bottom: 12px; text-transform: uppercase; }
+        .steps-header p { color: #1e293b; font-size: 15px; font-weight: 700; max-width: 720px; margin: 0 auto; line-height: 1.6; }
+        .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+        .step-card { background: #ffffff; border: 1.5px solid #e2ece7; border-radius: 18px; padding: 30px 24px; display: flex; flex-direction: column; }
+        .step-num { font-size: 28px; font-weight: 900; color: #00a86b; margin-bottom: 12px; line-height: 1; }
+        .step-card h3 { font-size: 17px; font-weight: 800; color: #00317F; margin-bottom: 10px; }
+        .step-card p { font-size: 14px; line-height: 1.65; color: #475569; font-weight: 600; }
 
-        .steps-header {
-            text-align: center;
-            margin-bottom: 45px;
-        }
-
-        .steps-header h2 {
-            color: #00459c;
-            font-size: 28px;
-            font-weight: 900;
-            letter-spacing: -0.5px;
-            line-height: 1.35;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-        }
-
-        .steps-header p {
-            color: #1e293b;
-            font-size: 15px;
-            font-weight: 700;
-            max-width: 720px;
-            margin: 0 auto;
-            line-height: 1.6;
-        }
-
-        .steps-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 26px;
-        }
-
-        .step-card {
-            background: #ffffff;
-            border: 1.5px solid #e2ece7;
-            border-radius: 18px;
-            padding: 30px 24px;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-            box-shadow: 0 4px 14px rgba(0, 49, 127, 0.02);
-            transition: all 0.25s ease;
-        }
-
-        .step-card:hover {
-            border-color: #00a86b;
-            transform: translateY(-3px);
-        }
-
-        .step-num {
-            font-size: 28px;
-            font-weight: 900;
-            color: #00a86b;
-            margin-bottom: 12px;
-            line-height: 1;
-        }
-
-        .step-card h3 {
-            font-size: 17px;
-            font-weight: 800;
-            color: #00317F;
-            margin-bottom: 10px;
-            line-height: 1.35;
-        }
-
-        .step-card p {
-            font-size: 14px;
-            line-height: 1.65;
-            color: #475569;
-            font-weight: 600;
-        }
-
-        /* 11. LEAD FORM: ASLIY DIZAYN VA TOZA INPUT */
-        .lead-section {
-            padding: 65px 0 75px 0;
-            background: #00317F;
-            color: #ffffff;
-            position: relative;
-        }
-
-        .lead-header-center {
-            text-align: center;
-            max-width: 760px;
-            margin: 0 auto 35px auto;
-        }
-
-        .lead-header-center h2 {
-            font-size: 32px;
-            font-weight: 900;
-            line-height: 1.3;
-            letter-spacing: -0.5px;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .lead-header-center p {
-            font-size: 16px;
-            line-height: 1.6;
-            color: #e2e8f0;
-            font-weight: 600;
-        }
-
-        .lead-row-card {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 32px;
-            align-items: center;
-        }
-
-        .form-card {
-            background: #ffffff;
-            border-radius: 24px;
-            padding: 34px 30px;
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
-            color: #1a2b25;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .form-group {
-            margin-bottom: 16px;
-        }
-
-        .form-group label {
-            display: block;
-            font-size: 13.5px;
-            font-weight: 800;
-            color: #00317F;
-            margin-bottom: 6px;
-        }
-
-        .form-input-wrap {
-            position: relative;
-            display: flex;
-            align-items: center;
-        }
-
-        .flag-prefix {
-            position: absolute;
-            left: 14px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 14px;
-            font-weight: 800;
-            color: #1a2b25;
-            pointer-events: none;
-        }
-
-        .form-input {
-            width: 100%;
-            background: #f8fafc;
-            border: 1.5px solid #e2e8f0;
-            border-radius: 12px;
-            padding: 13px 16px;
-            font-size: 14.5px;
-            font-weight: 700;
-            color: #1a2b25;
-            outline: none;
-            transition: all 0.2s ease;
-        }
-
-        .form-input.phone-input {
-            padding-left: 78px;
-            letter-spacing: 1px;
-        }
-
-        .form-input:focus {
-            background: #ffffff;
-            border-color: #00a86b;
-            box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.15);
-        }
-
-        .btn-submit-order {
-            width: 100%;
-            background: #00a86b;
-            color: #ffffff;
-            border: none;
-            border-radius: 12px;
-            padding: 15px 0;
-            font-size: 16px;
-            font-weight: 900;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            animation: pulseGlow 2s infinite;
-            transition: background 0.2s;
-            margin-top: 8px;
-        }
-
-        .btn-submit-order:hover {
-            background: #008f5b;
-        }
-
-        .form-privacy-note {
-            text-align: center;
-            font-size: 12px;
-            font-weight: 600;
-            color: #64748b;
-            margin-top: 12px;
-        }
-
-        .lead-visual-col {
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 10px;
-        }
-
-        .lead-product-img {
-            width: 100%;
-            max-width: 520px;
-            height: auto;
-            object-fit: contain;
-            filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.35));
-            display: block;
-        }
+        /* 11. LEAD FORM */
+        .lead-section { padding: 65px 0 75px 0; background: #00317F; color: #ffffff; }
+        .lead-header-center { text-align: center; max-width: 760px; margin: 0 auto 35px auto; }
+        .lead-header-center h2 { font-size: 32px; font-weight: 900; line-height: 1.3; margin-bottom: 10px; text-transform: uppercase; }
+        .lead-header-center p { font-size: 16px; line-height: 1.6; color: #e2e8f0; font-weight: 600; }
+        .lead-row-card { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+        .form-card { background: #ffffff; border-radius: 24px; padding: 34px 30px; box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25); color: #1a2b25; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 13.5px; font-weight: 800; color: #00317F; margin-bottom: 6px; }
+        .form-input-wrap { position: relative; display: flex; align-items: center; }
+        .flag-prefix { position: absolute; left: 14px; display: flex; align-items: center; gap: 6px; font-size: 14px; font-weight: 800; color: #1a2b25; pointer-events: none; }
+        .form-input { width: 100%; background: #f8fafc; border: 1.5px solid #e2e8f0; border-radius: 12px; padding: 13px 16px; font-size: 14.5px; font-weight: 700; color: #1a2b25; outline: none; }
+        .form-input.phone-input { padding-left: 78px; letter-spacing: 1px; }
+        .form-input:focus { background: #ffffff; border-color: #00a86b; box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.15); }
+        .btn-submit-order { width: 100%; background: #00a86b; color: #ffffff; border: none; border-radius: 12px; padding: 15px 0; font-size: 16px; font-weight: 900; cursor: pointer; text-transform: uppercase; animation: pulseGlow 2s infinite; margin-top: 8px; }
+        .form-privacy-note { text-align: center; font-size: 12px; font-weight: 600; color: #64748b; margin-top: 12px; }
+        .lead-visual-col { width: 100%; display: flex; justify-content: center; align-items: center; padding: 10px; }
+        .lead-product-img { width: 100%; max-width: 520px; height: auto; object-fit: contain; filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.35)); display: block; }
 
         /* 12. FOOTER */
-        .site-footer {
-            background: #0b1526;
-            color: #94a3b8;
-            padding: 45px 0 35px 0;
-            border-top: 1px solid #1e293b;
-        }
-
-        .footer-legal-box {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: 12px;
-            padding: 18px 20px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .footer-legal-box p {
-            font-size: 12.5px;
-            line-height: 1.6;
-            color: #cbd5e1;
-            font-weight: 600;
-        }
-
-        .footer-social-wrap {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .social-title {
-            color: #ffffff;
-            font-size: 14px;
-            font-weight: 800;
-            margin-bottom: 16px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .social-links-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #172439;
-            color: #ffffff;
-            border: 1px solid #2d3f59;
-            padding: 10px 18px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-size: 13.5px;
-            font-weight: 700;
-            transition: all 0.25s ease;
-        }
-
-        .social-btn:hover {
-            background: #00317F;
-            border-color: #03C3D4;
-            transform: translateY(-2px);
-            color: #ffffff;
-        }
-
-        .social-btn svg {
-            width: 18px;
-            height: 18px;
-            fill: currentColor;
-        }
-
-        .footer-bottom-flex {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 13px;
-            font-weight: 600;
-            border-top: 1px solid rgba(255, 255, 255, 0.06);
-            padding-top: 22px;
-        }
+        .site-footer { background: #0b1526; color: #94a3b8; padding: 45px 0 35px 0; border-top: 1px solid #1e293b; }
+        .footer-legal-box { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; padding: 18px 20px; margin-bottom: 30px; text-align: center; }
+        .footer-legal-box p { font-size: 12.5px; line-height: 1.6; color: #cbd5e1; font-weight: 600; }
+        .footer-social-wrap { text-align: center; margin-bottom: 30px; }
+        .social-title { color: #ffffff; font-size: 14px; font-weight: 800; margin-bottom: 16px; text-transform: uppercase; }
+        .social-links-grid { display: flex; justify-content: center; align-items: center; gap: 12px; flex-wrap: wrap; }
+        .social-btn { display: inline-flex; align-items: center; gap: 8px; background: #172439; color: #ffffff; border: 1px solid #2d3f59; padding: 10px 18px; border-radius: 12px; text-decoration: none; font-size: 13.5px; font-weight: 700; }
+        .social-btn svg { width: 18px; height: 18px; fill: currentColor; }
+        .footer-bottom-flex { display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 600; border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 22px; }
 
         /* THANK YOU MODAL */
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 20, 50, 0.55);
-            backdrop-filter: blur(5px);
-            z-index: 99999;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 16px;
-            animation: fadeIn 0.25s ease;
-        }
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 20, 50, 0.55); backdrop-filter: blur(5px); z-index: 99999; display: flex; align-items: center; justify-content: center; padding: 16px; }
+        .modal-card { background: #ffffff; border-radius: 24px; padding: 32px 24px; max-width: 440px; width: 100%; text-align: center; box-shadow: 0 24px 50px rgba(0, 0, 0, 0.25); }
+        .modal-icon { width: 65px; height: 65px; background: #00a86b; color: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 34px; font-weight: 900; margin: 0 auto 16px auto; }
+        .modal-card h3 { font-size: 21px; font-weight: 900; color: #00317F; margin-bottom: 12px; }
+        .modal-card p { font-size: 14.5px; color: #4a5d55; line-height: 1.6; margin-bottom: 18px; font-weight: 600; }
+        .modal-call-notice { background: #f0f7f4; border: 1.5px dashed #00a86b; border-radius: 14px; padding: 12px 14px; margin-bottom: 22px; }
+        .notice-label { font-size: 12px; font-weight: 700; color: #475569; margin-bottom: 4px; display: block; }
+        .notice-number { font-size: 19px; font-weight: 900; color: #00317F; text-decoration: none; }
 
-        .modal-card {
-            background: #ffffff;
-            border-radius: 24px;
-            padding: 32px 24px;
-            max-width: 440px;
-            width: 100%;
-            text-align: center;
-            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.25);
-            transform: scale(0.95);
-            animation: scaleUp 0.25s ease forwards;
-        }
-
-        .modal-icon {
-            width: 65px;
-            height: 65px;
-            background: #00a86b;
-            color: #ffffff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 34px;
-            font-weight: 900;
-            margin: 0 auto 16px auto;
-            box-shadow: 0 8px 24px rgba(0, 168, 107, 0.35);
-        }
-
-        .modal-card h3 {
-            font-size: 21px;
-            font-weight: 900;
-            color: #00317F;
-            margin-bottom: 12px;
-            line-height: 1.35;
-        }
-
-        .modal-card p {
-            font-size: 14.5px;
-            color: #4a5d55;
-            line-height: 1.6;
-            margin-bottom: 18px;
-            font-weight: 600;
-        }
-
-        .modal-call-notice {
-            background: #f0f7f4;
-            border: 1.5px dashed #00a86b;
-            border-radius: 14px;
-            padding: 12px 14px;
-            margin-bottom: 22px;
-        }
-
-        .notice-label {
-            font-size: 12px;
-            font-weight: 700;
-            color: #475569;
-            margin-bottom: 4px;
-            display: block;
-        }
-
-        .notice-number {
-            font-size: 19px;
-            font-weight: 900;
-            color: #00317F;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            text-decoration: none;
-        }
-
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes scaleUp { to { transform: scale(1); } }
-
-        /* MOBIL OPTIMIZATSIYA */
         @media (max-width: 768px) {
             .logo-main { font-size: 18px; }
             .btn-phone-desktop { display: none; }
             .btn-phone-mobile { display: inline-flex; align-items: center; justify-content: center; }
-
             .hero-section { padding: 10px 0 16px 0; }
             .hero-grid { display: flex; flex-direction: column; gap: 14px; text-align: center; }
             .hero-visual-card { order: 1; width: 100%; max-width: 340px; }
             .hero-content { order: 2; width: 100%; align-items: center; }
-            .hero-title { font-size: 21px; margin-bottom: 12px; line-height: 1.35; }
-            .hero-subtitle { font-size: 13.5px; line-height: 1.55; margin-bottom: 4px; }
-
+            .hero-title { font-size: 21px; margin-bottom: 12px; }
+            .hero-subtitle { font-size: 13.5px; margin-bottom: 4px; }
             .pain-section-ref { padding: 30px 0 40px 0; }
-            .ref-header h2 { font-size: 20px; margin-bottom: 10px; }
-            
+            .ref-header h2 { font-size: 20px; }
             .ref-row-1 { display: flex; flex-direction: column; gap: 22px; margin-bottom: 35px; }
-            .ref-row-1 .ref-image-wrapper { order: 1; min-height: 270px; justify-content: center; margin: 6px 0 10px 0; }
+            .ref-row-1 .ref-image-wrapper { order: 1; min-height: 270px; justify-content: center; }
             .ref-row-1 .ref-text-block-1 { order: 2; }
             .img-main-vitiligo { width: 88%; height: 250px; }
             .img-overlap-hand { width: 58%; height: 150px; bottom: -10px; left: 6px; }
-
             .ref-row-2 { display: flex; flex-direction: column; gap: 20px; }
             .ref-row-2 .ref-img-card-2 { order: 1; }
             .ref-row-2 .ref-text-block-2 { order: 2; }
             .img-single-card { height: 230px; }
-            .ref-list-item { font-size: 13.5px; }
-            .ref-text-block-2 p { font-size: 14px; margin-bottom: 16px; }
-
             .composition-section { padding: 30px 0 40px 0; }
-            .comp-header h2 { font-size: 20px; margin-bottom: 8px; }
-            .comp-header p { font-size: 13.5px; }
+            .comp-header h2 { font-size: 20px; }
             .comp-grid { display: flex; flex-direction: column; gap: 20px; }
             .comp-visual-box { order: 1; width: 100%; }
-            .comp-product-img { max-width: 100%; border-radius: 18px; }
             .comp-clean-list { order: 2; width: 100%; gap: 18px; }
-            .comp-item-content h3 { font-size: 15px; }
-            .comp-item-content p { font-size: 13.5px; line-height: 1.6; }
-
             .target-group-section { padding: 35px 0 40px 0; }
-            .target-header h2 { font-size: 20px; margin-bottom: 8px; }
-            .target-header p { font-size: 13.5px; margin-bottom: 20px; }
+            .target-header h2 { font-size: 20px; }
             .target-grid { grid-template-columns: 1fr; gap: 14px; }
-            .target-card-clean { padding: 20px 18px; border-radius: 16px; }
-            .target-num { font-size: 24px; margin-bottom: 8px; }
-            .target-card-clean h3 { font-size: 16px; margin-bottom: 6px; }
-            .target-card-clean p { font-size: 13.5px; }
-
             .results-section, .video-results-section { padding: 32px 0 40px 0; }
-            .results-header-title, .video-header-title { font-size: 21px; margin-bottom: 20px; }
-
+            .results-header-title, .video-header-title { font-size: 21px; }
             .result-card-pair { width: 340px; padding: 12px; gap: 8px; }
             .result-img { height: 180px; }
-            .result-badge { font-size: 11.5px; padding: 5px 12px; }
-
             .video-card-item { width: 300px; }
-            .video-card-footer { padding: 12px 14px; }
-            .video-card-title { font-size: 13px; }
-
-            .mid-cta-section { padding: 35px 0; }
-            .mid-cta-box h2 { font-size: 20px; }
-            .mid-cta-box p { font-size: 13.5px; }
-            .btn-mid-action { width: 100%; font-size: 15px; padding: 14px 0; }
-
             .cert-section { padding: 32px 0 35px 0; }
-            .cert-header h2 { font-size: 20px; margin-bottom: 8px; }
-            .cert-header p { font-size: 13.5px; }
-            .cert-grid { display: flex; flex-direction: column; gap: 20px; }
-            .cert-card { padding: 12px; border-radius: 14px; }
-            .cert-caption { font-size: 13px; margin-top: 10px; }
-            .cert-subtext-clean p { font-size: 13.5px; }
-
+            .cert-header h2 { font-size: 20px; }
+            .cert-grid { grid-template-columns: 1fr; gap: 20px; }
             .faq-section { padding: 32px 0 40px 0; }
-            .faq-header h2 { font-size: 21px; margin-bottom: 8px; }
-            .faq-header p { font-size: 13.5px; margin-bottom: 22px; }
-            .faq-question-btn { padding: 14px 16px; }
-            .faq-question-btn span { font-size: 14px; }
-            .faq-toggle-icon { width: 26px; height: 26px; font-size: 16px; }
-            .faq-answer-pane p { font-size: 13px; }
-
+            .faq-header h2 { font-size: 21px; }
             .steps-section { padding: 35px 0 40px 0; }
-            .steps-header h2 { font-size: 20px; margin-bottom: 8px; }
-            .steps-header p { font-size: 13.5px; margin-bottom: 22px; }
+            .steps-header h2 { font-size: 20px; }
             .steps-grid { display: flex; flex-direction: column; gap: 14px; }
-            .step-card { padding: 20px 16px; border-radius: 14px; }
-            .step-num { font-size: 24px; margin-bottom: 6px; }
-            .step-card h3 { font-size: 15.5px; margin-bottom: 6px; }
-            .step-card p { font-size: 13.5px; }
-
             .lead-section { padding: 40px 0 50px 0; }
             .lead-header-center h2 { font-size: 22px; }
-            .lead-header-center p { font-size: 14px; margin-bottom: 20px; }
             .lead-row-card { display: flex; flex-direction: column; gap: 20px; }
             .lead-visual-col { order: 1; width: 100%; padding: 0; }
-            .lead-product-img { max-width: 280px; height: auto; object-fit: contain; }
+            .lead-product-img { max-width: 280px; }
             .form-card { order: 2; padding: 22px 18px; border-radius: 18px; }
-            .form-group label { font-size: 13px; }
-            .form-input { padding: 12px 14px; font-size: 14px; }
-            .form-input.phone-input { padding-left: 74px; }
-            .flag-prefix { font-size: 13px; left: 12px; }
-            .btn-submit-order { padding: 14px 0; font-size: 15px; }
-
             .social-links-grid { flex-direction: column; width: 100%; }
             .social-btn { width: 100%; justify-content: center; }
             .footer-bottom-flex { flex-direction: column; gap: 10px; text-align: center; }
         }
 
-        @keyframes pulseGlow {
-            0% { box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.6); }
-            70% { box-shadow: 0 0 0 10px rgba(0, 168, 107, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 168, 107, 0); }
-        }
-
-        @keyframes pulseGlowCircle {
-            0% { box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.7); }
-            70% { box-shadow: 0 0 0 14px rgba(0, 168, 107, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 168, 107, 0); }
-        }
+        @keyframes pulseGlow { 0% { box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.6); } 70% { box-shadow: 0 0 0 10px rgba(0, 168, 107, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 168, 107, 0); } }
+        @keyframes pulseGlowCircle { 0% { box-shadow: 0 0 0 0 rgba(0, 168, 107, 0.7); } 70% { box-shadow: 0 0 0 14px rgba(0, 168, 107, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 168, 107, 0); } }
     </style>
 </head>
 <body>
@@ -1507,22 +283,10 @@
     <!-- TOP TICKER BAR -->
     <div class="top-ticker">
         <div class="ticker-content" id="ticker-text">
-            <span>
-                <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
-                Ўзбекистон бўйлаб бепул етказиб бериш
-            </span>
-            <span>
-                <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
-                100% табиий ва хавфсиз таркиб
-            </span>
-            <span>
-                <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                20,000+ муваффақиятли натижалар
-            </span>
-            <span>
-                <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                Буюртмани текшириб кейин тўлаш имконияти
-            </span>
+            <span><svg class="ticker-svg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span>
+            <span><svg class="ticker-svg" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg> 100% табиий ва хавфсиз таркиб</span>
+            <span><svg class="ticker-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> 20,000+ муваффақиятли натижалар</span>
+            <span><svg class="ticker-svg" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Буюртмани текшириб кейин тўлаш имконияти</span>
         </div>
     </div>
 
@@ -1603,14 +367,14 @@
                 </div>
 
                 <div class="ref-image-wrapper">
-                    <img src="https://i.postimg.cc/YqnwJF2h/IMG-20260924-115226-478.png" alt="Vitiligo yuzda" class="img-main-vitiligo" loading="lazy" decoding="async">
-                    <img src="https://i.postimg.cc/WbWPQZpt/IMG-20260924-115226-125.png" alt="Vitiligo qo'lda" class="img-overlap-hand" loading="lazy" decoding="async">
+                    <img src="https://i.postimg.cc/YqnwJF2h/IMG-20260924-115226-478.png" alt="Vitiligo yuzda" class="img-main-vitiligo" loading="lazy">
+                    <img src="https://i.postimg.cc/WbWPQZpt/IMG-20260924-115226-125.png" alt="Vitiligo qo'lda" class="img-overlap-hand" loading="lazy">
                 </div>
             </div>
 
             <div class="ref-row-2">
                 <div class="ref-img-card-2">
-                    <img src="https://i.postimg.cc/dttYH6Fk/IMG-20260924-115226-737.png" alt="Xavotir va umid" class="img-single-card" loading="lazy" decoding="async">
+                    <img src="https://i.postimg.cc/dttYH6Fk/IMG-20260924-115226-737.png" alt="Xavotir va umid" class="img-single-card" loading="lazy">
                 </div>
 
                 <div class="ref-text-block-2">
@@ -1626,19 +390,17 @@
         </div>
     </section>
 
-    <!-- 4. YECHIM VA TABIIY TARKIB -->
+    <!-- 4. TARKIB -->
     <section class="composition-section">
         <div class="container">
             <div class="comp-header">
                 <h2 id="comp-sec-title">ҚОМУС ПРЕПАРАТИНИНГ ТАБИИЙ ТАРКИБИ</h2>
-                <p id="comp-sec-desc">
-                    Витилиго ва тери пигменти тикланишида ички микроэлементлар мувозанати ҳал қилувчи аҳамиятга эга. Маҳсулот фақатгина табиий компонентлардан ташкил топган.
-                </p>
+                <p id="comp-sec-desc">Витилиго ва тери пигменти тикланишида ички микроэлементлар мувозанати ҳал қилувчи аҳамиятга эга. Маҳсулот фақатгина табиий компонентлардан ташкил топган.</p>
             </div>
 
             <div class="comp-grid">
                 <div class="comp-visual-box">
-                    <img src="https://i.postimg.cc/prBP91tQ/IMG-20260924-115246-503.png" alt="QOMUS Tarkibi" class="comp-product-img" loading="lazy" decoding="async">
+                    <img src="https://i.postimg.cc/prBP91tQ/IMG-20260924-115246-503.png" alt="QOMUS Tarkibi" class="comp-product-img" loading="lazy">
                 </div>
 
                 <div class="comp-clean-list">
@@ -1686,7 +448,7 @@
         </div>
     </section>
 
-    <!-- 4. "KIMLAR UCHUN TAVSIYA ETILADI" BLOKI -->
+    <!-- 4. TARGET GROUP -->
     <section class="target-group-section">
         <div class="container">
             <div class="target-header">
@@ -1719,7 +481,7 @@
         </div>
     </section>
 
-    <!-- 5. FOTO NATIJALAR (MARQUEE + SWIPE) -->
+    <!-- 5. FOTO NATIJALAR (AVTO-HARAKAT VA ERKIN SWIPE) -->
     <section class="results-section">
         <div class="container">
             <h2 class="results-header-title" id="results-title">Мижозлар натижалари</h2>
@@ -1727,22 +489,22 @@
 
         <div class="marquee-viewport" id="imgViewport">
             <div class="marquee-track" id="imgMarqueeTrack">
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/brqhjH2r/IMG-20260924-115230-717.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/Y96HVyjW/IMG-20260924-115231-698.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Кейин</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/RhGzC67S/IMG-20260924-115231-600.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/3JJTS1hh/IMG-20260924-115230-855.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Кейин</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/vTGsdL6x/IMG-20260924-115231-220.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/fWvsfF62/IMG-20260924-115231-494.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Кейин</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/kGwdM6xs/IMG-20260924-115231-501.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/hjLBw3hn/IMG-20260924-115236-527.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Кейин</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/Yqprck1Z/IMG-20260924-115243-634.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/MT7S4rXG/IMG-20260924-115231-684.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Кейин</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/TYCRfS0R/IMG-20260924-115236-023.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/15J9sTB4/IMG-20260924-115236-139.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Кейин</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/wjrgsmST/IMG-20260924-115236-145.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/hjWn2qDC/IMG-20260924-115236-389.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Кейин</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/bw5p2t4F/IMG-20260924-115236-429.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/yYV1qBmY/IMG-20260924-115236-282.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Кейин</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/CLFhyYGw/IMG-20260924-115236-542.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/vBrsjSDb/IMG-20260924-115236-914.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Кейин</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/NfpgBVD4/IMG-20260924-115236-859.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/dtqsMv2c/IMG-20260924-115243-846.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Кейин</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/jq6xkCJ9/IMG-20260924-115243-265.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/NfgshY1V/IMG-20260924-115243-398.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Кейин</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/brqhjH2r/IMG-20260924-115230-717.png" alt="Avval" class="result-img" loading="lazy"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/Y96HVyjW/IMG-20260924-115231-698.png" alt="Keyin" class="result-img" loading="lazy"><span class="result-badge badge-after">Кейин</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/RhGzC67S/IMG-20260924-115231-600.png" alt="Avval" class="result-img" loading="lazy"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/3JJTS1hh/IMG-20260924-115230-855.png" alt="Keyin" class="result-img" loading="lazy"><span class="result-badge badge-after">Кейин</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/vTGsdL6x/IMG-20260924-115231-220.png" alt="Avval" class="result-img" loading="lazy"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/fWvsfF62/IMG-20260924-115231-494.png" alt="Keyin" class="result-img" loading="lazy"><span class="result-badge badge-after">Кейин</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/kGwdM6xs/IMG-20260924-115231-501.png" alt="Avval" class="result-img" loading="lazy"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/hjLBw3hn/IMG-20260924-115236-527.png" alt="Keyin" class="result-img" loading="lazy"><span class="result-badge badge-after">Кейин</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/Yqprck1Z/IMG-20260924-115243-634.png" alt="Avval" class="result-img" loading="lazy"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/MT7S4rXG/IMG-20260924-115231-684.png" alt="Keyin" class="result-img" loading="lazy"><span class="result-badge badge-after">Кейин</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/TYCRfS0R/IMG-20260924-115236-023.png" alt="Avval" class="result-img" loading="lazy"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/15J9sTB4/IMG-20260924-115236-139.png" alt="Keyin" class="result-img" loading="lazy"><span class="result-badge badge-after">Кейин</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/wjrgsmST/IMG-20260924-115236-145.png" alt="Avval" class="result-img" loading="lazy"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/hjWn2qDC/IMG-20260924-115236-389.png" alt="Keyin" class="result-img" loading="lazy"><span class="result-badge badge-after">Кейин</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/bw5p2t4F/IMG-20260924-115236-429.png" alt="Avval" class="result-img" loading="lazy"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/yYV1qBmY/IMG-20260924-115236-282.png" alt="Keyin" class="result-img" loading="lazy"><span class="result-badge badge-after">Кейин</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/CLFhyYGw/IMG-20260924-115236-542.png" alt="Avval" class="result-img" loading="lazy"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/vBrsjSDb/IMG-20260924-115236-914.png" alt="Keyin" class="result-img" loading="lazy"><span class="result-badge badge-after">Кейин</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/NfpgBVD4/IMG-20260924-115236-859.png" alt="Avval" class="result-img" loading="lazy"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/dtqsMv2c/IMG-20260924-115243-846.png" alt="Keyin" class="result-img" loading="lazy"><span class="result-badge badge-after">Кейин</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/jq6xkCJ9/IMG-20260924-115243-265.png" alt="Avval" class="result-img" loading="lazy"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://i.postimg.cc/NfgshY1V/IMG-20260924-115243-398.png" alt="Keyin" class="result-img" loading="lazy"><span class="result-badge badge-after">Кейин</span></div></div>
             </div>
         </div>
     </section>
 
-    <!-- 6. VIDEO SHARHLAR (MARQUEE + SWIPE) -->
+    <!-- 6. VIDEO SHARHLAR (AVTO-HARAKAT VA ERKIN SWIPE) -->
     <section class="video-results-section">
         <div class="container">
             <h2 class="video-header-title" id="video-sec-title">Мижозларимизнинг видео фикрлари</h2>
@@ -1781,31 +543,23 @@
         <div class="container">
             <div class="cert-header">
                 <h2 id="cert-title">ДАВЛАТ ТОМОНИДАН ТАСДИҚЛАНГАН ВА СЕРТИФИКАТЛАНГАН</h2>
-                <p id="cert-desc">
-                    «QOMUS» препарати Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги томонидан тўлиқ экспертизадан ўтказилган ва расмий рухсатномага эга.
-                </p>
+                <p id="cert-desc">«QOMUS» препарати Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги томонидан тўлиқ экспертизадан ўтказилган ва расмий рухсатномага эга.</p>
             </div>
 
             <div class="cert-grid">
                 <div class="cert-card">
-                    <img src="https://i.postimg.cc/8zdLpLcd/IMG-20260924-133737-359.jpg" alt="SSV Ruxsatnomasi va Sertifikat" loading="lazy" decoding="async">
-                    <p class="cert-caption" id="cert-cap-1">
-                        Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425
-                    </p>
+                    <img src="https://i.postimg.cc/8zdLpLcd/IMG-20260924-133737-359.jpg" alt="SSV Ruxsatnomasi va Sertifikat" loading="lazy">
+                    <p class="cert-caption" id="cert-cap-1">Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425</p>
                 </div>
 
                 <div class="cert-card">
-                    <img src="https://i.postimg.cc/QdZpZf8m/IMG-20260924-133732-180.jpg" alt="Sanitariya xulosasi" loading="lazy" decoding="async">
-                    <p class="cert-caption" id="cert-cap-2">
-                        Санитарно-эпидемиологическое заключение № 405282 (Тошкент)
-                    </p>
+                    <img src="https://i.postimg.cc/QdZpZf8m/IMG-20260924-133732-180.jpg" alt="Sanitariya xulosasi" loading="lazy">
+                    <p class="cert-caption" id="cert-cap-2">Санитарно-эпидемиологическое заключение № 405282 (Тошкент)</p>
                 </div>
             </div>
 
             <div class="cert-subtext-clean">
-                <p id="cert-safety-text">
-                    Маҳсулотнинг ҳар бир партияси гигиеник, радиологик ва бактериологик синовлардан муваффақиятли ўтиб, инсон саломатлиги учун мутлақо хавфсиз деб топилган.
-                </p>
+                <p id="cert-safety-text">Маҳсулотнинг ҳар бир партияси гигиеник, радиологик ва бактериологик синовлардан муваффақиятли ўтиб, инсон саломатлиги учун мутлақо хавфсиз деб топилган.</p>
             </div>
         </div>
     </section>
@@ -1858,46 +612,6 @@
                         <p id="fa-4">Капсула қобиғи фақатгина ҳалол сўйилган қора мол желатинидан тайёрланган бўлиб, ошқозонда осон эрийди ва ошқозон-ичак тизимига ҳеч қандай оғирлик қилмайди.</p>
                     </div>
                 </div>
-
-                <div class="faq-item">
-                    <button class="faq-question-btn" onclick="toggleFaq(this)">
-                        <span id="fq-5">Ҳомиладорлик ёки эмизиш даврида ичиш мумкинми?</span>
-                        <div class="faq-toggle-icon">+</div>
-                    </button>
-                    <div class="faq-answer-pane">
-                        <p id="fa-5">Ҳомиладорлик ва лактация даврида ҳар қандай биологик фаол қўшимчаларни қабул қилишдан олдин шахсий шифокор билан маслаҳатлашиш тавсия қилинади.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question-btn" onclick="toggleFaq(this)">
-                        <span id="fq-6">Етказиб бериш хизмати қанча вақт олади ва у пулликми?</span>
-                        <div class="faq-toggle-icon">+</div>
-                    </button>
-                    <div class="faq-answer-pane">
-                        <p id="fa-6">Ўзбекистон бўйлаб барча вилоят, шаҳар ва туманларга етказиб бериш мутлақо БЕПУЛ амалга оширилади. Тошкент шаҳрида 24 соат ичида, вилоятларга 1-2 кун ичида қўлингизга етказилади.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question-btn" onclick="toggleFaq(this)">
-                        <span id="fq-7">Тўловни маҳсулотни олгандан keyin қилса бўладими?</span>
-                        <div class="faq-toggle-icon">+</div>
-                    </button>
-                    <div class="faq-answer-pane">
-                        <p id="fa-7">Албатта! Бизда 100% ишончли тизим йўлга қўйилган: тўлов маҳсулотни курьердан қабул қилиб олиб, сифатига тўлиқ ишонч ҳосил қилганингиздан сўнг (нақд ёки пластик карта орқали) тўланади.</p>
-                    </div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question-btn" onclick="toggleFaq(this)">
-                        <span id="fq-8">Бир флаконда нечта капсула бор ва у қанча вақтга етади?</span>
-                        <div class="faq-toggle-icon">+</div>
-                    </button>
-                    <div class="faq-answer-pane">
-                        <p id="fa-8">Бир флаконда 150 та юмшоқ желатин капсула мавжуд. Бу кунига қабул қилинадиган дозага қараб ўртача 1–1.5 ойлик тўлиқ муолажа курси учун етарли ҳисобланади.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -1914,17 +628,17 @@
                 <div class="step-card">
                     <div class="step-num">01</div>
                     <h3 id="step-1-t">Сўров қолдирасиз</h3>
-                    <p id="step-1-d">Сайтдаги формага исмингиз ва рақамингизни ёзасиз. Ҳеч қандай олдиндан тўлов ёки карта рақами талаб этилмайди.</p>
+                    <p id="step-1-d">Сайтдаги формага исмингиз ва рақамингизни ёзасиз. Ҳеч қандай олдиндан тўлов талаб этилмайди.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-num">02</div>
                     <h3 id="step-2-t">Мутахассис маслаҳати</h3>
-                    <p id="step-2-d">Мутахассисимиз сизга қўнғироқ қилиб, доғларнинг ҳолати бўйича бепул маслаҳат беради ва курсни аниқлайди.</p>
+                    <p id="step-2-d">Мутахассисимиз сизга қўнғироқ қилиб, ҳолатингиз бўйича бепул маслаҳат беради.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-num">03</div>
-                    <h3 id="step-3-t">Текшириб, keyin тўлайсиз</h3>
-                    <p id="step-3-d">Буюртма эшигингизгача БЕПУЛ етказилади. Посилкани очиб, текшириб кўрганингиздан keyinгина тўлов қиласиз.</p>
+                    <h3 id="step-3-t">Текшириб, кейин тўлайсиз</h3>
+                    <p id="step-3-d">Буюртма БЕПУЛ етказилади. Маҳсулотни олиб кўрганингиздан кейин тўлов қиласиз.</p>
                 </div>
             </div>
         </div>
@@ -1940,17 +654,13 @@
             </div>
 
             <div class="lead-row-card">
-                
                 <div class="form-card">
                     <form id="orderForm" onsubmit="submitLeadForm(event)">
-                        
-                        <!-- 1. ISM -->
                         <div class="form-group">
                             <label id="lbl-name" for="clientName">Исмингиз *</label>
                             <input type="text" id="clientName" class="form-input form-track-input" placeholder="Исмингизни киритинг" required>
                         </div>
 
-                        <!-- 2. ASOSIY TELEFON -->
                         <div class="form-group">
                             <label id="lbl-phone1" for="clientPhone1">Телефон рақами *</label>
                             <div class="form-input-wrap">
@@ -1959,7 +669,6 @@
                             </div>
                         </div>
 
-                        <!-- 3. QO'SHIMCHA TELEFON -->
                         <div class="form-group">
                             <label id="lbl-phone2" for="clientPhone2">Қўшимча телефон рақам *</label>
                             <div class="form-input-wrap">
@@ -1968,7 +677,6 @@
                             </div>
                         </div>
 
-                        <!-- 4. SAVOL -->
                         <div class="form-group">
                             <label id="lbl-history" for="clientHistory">Оқ доғлар қачондан бери бор? (йил, ой) *</label>
                             <input type="text" id="clientHistory" class="form-input form-track-input" placeholder="Масалан: 2 йилдан бери, яқинда бошланди..." required>
@@ -1981,7 +689,7 @@
                         <p class="form-privacy-note" id="form-privacy">🔒 Шахсий маълумотларингиз махфийлиги 100% кафолатланади.</p>
                     </form>
 
-                    <!-- ORQA FONDA AMOCRM UCHUN KO'RINMAS FORMA -->
+                    <!-- amoCRM UCHUN ORQA FONDA KO'RINMAS FORMA -->
                     <iframe name="amo_hidden_iframe" id="amo_hidden_iframe" style="display:none;"></iframe>
                     <form id="amoHiddenForm" method="POST" target="amo_hidden_iframe" action="https://forms.amocrm.ru/queue/add" style="display:none;">
                         <input type="hidden" name="form_id" value="1747798">
@@ -1993,9 +701,8 @@
                 </div>
 
                 <div class="lead-visual-col">
-                    <img src="https://i.postimg.cc/m2XG09ZF/IMG-20260924-115226-651.png" alt="QOMUS 150 Kapsula" class="lead-product-img" loading="lazy" decoding="async">
+                    <img src="https://i.postimg.cc/m2XG09ZF/IMG-20260924-115226-651.png" alt="QOMUS 150 Kapsula" class="lead-product-img" loading="lazy">
                 </div>
-
             </div>
 
         </div>
@@ -2004,49 +711,36 @@
     <!-- 12. FOOTER -->
     <footer class="site-footer">
         <div class="container">
-            
             <div class="footer-legal-box">
-                <p id="footer-disclaimer">
-                    ДИҚҚАТ: «QOMUS» препарати биологик фаол қўшимча (БАД) ҳисобланади ва дори воситаси эмас. Натижалар организмнинг индивидуал хусусиятларига қараб фарқ қилиши мумкин. Қабул қилишдан олдин шифокор билан маслаҳатлашиш тавсия этилади. ССВ Рухсатномаси № 001425.
-                </p>
+                <p id="footer-disclaimer">ДИҚҚАТ: «QOMUS» препарати биологик фаол қўшимча (БАД) ҳисобланади ва дори воситаси эмас. Натижалар организмнинг индивидуал хусусиятларига қараб фарқ қилиши мумкин. Қабул қилишдан олдин шифокор билан маслаҳатлашиш тавсия этилади. ССВ Рухсатномаси № 001425.</p>
             </div>
 
             <div class="footer-social-wrap">
                 <div class="social-title" id="social-title">Биз ижтимоий тармоқларда:</div>
                 <div class="social-links-grid">
-                    
                     <a href="https://t.me/qomus_vitiligo_oqdog" target="_blank" rel="noopener noreferrer" class="social-btn track-tg-btn" data-channel="Main_Telegram">
                         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
                         <span id="soc-main-tg">Асосий канал</span>
                     </a>
-
                     <a href="https://t.me/qomus_natijalar" target="_blank" rel="noopener noreferrer" class="social-btn track-tg-btn" data-channel="Results_Telegram">
                         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
                         <span id="soc-results-tg">Натижалар канали</span>
                     </a>
-
                     <a href="https://www.youtube.com/@Qomusofficial" target="_blank" rel="noopener noreferrer" class="social-btn track-social-btn" data-network="YouTube">
                         <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                         <span>YouTube</span>
                     </a>
-
                     <a href="https://www.instagram.com/qomus_official/" target="_blank" rel="noopener noreferrer" class="social-btn track-social-btn" data-network="Instagram">
                         <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                         <span>Instagram</span>
                     </a>
-
                 </div>
             </div>
 
             <div class="footer-bottom-flex">
-                <div class="footer-copy" id="footer-copy">
-                    © 2026 QOMUS. Барча ҳуқуқлар ҳимояланган.
-                </div>
-                <div class="footer-links">
-                    <span id="footer-contact-txt">Мурожаат учун: +998 71 203-04-08</span>
-                </div>
+                <div class="footer-copy" id="footer-copy">© 2026 QOMUS. Барча ҳуқуқлар ҳимояланган.</div>
+                <div class="footer-links"><span id="footer-contact-txt">Мурожаат учун: +998 71 203-04-08</span></div>
             </div>
-
         </div>
     </footer>
 
@@ -2064,7 +758,7 @@
         </a>
     </div>
 
-    <!-- THANK YOU MODAL (RASMIY ALOQA RAQAMI BILAN) -->
+    <!-- THANK YOU MODAL -->
     <div id="thankYouModal" class="modal-overlay" style="display: none;">
         <div class="modal-card">
             <div class="modal-icon">✓</div>
@@ -2080,15 +774,545 @@
         </div>
     </div>
 
-    <!-- JAVASCRIPT KODI -->
+    <!-- JAVASCRIPT: BARCHA XATOLIKLARI TO'G'RILANGAN ISHCHI KOD -->
     <script>
-        /* FAQAT RAQAM VA AVTOMATIK TOZALASH FILTRI */
-        function validatePhoneInput(input) {
-            let val = input.value.replace(/\D/g, '');
-            if (val.startsWith('998')) {
-                val = val.substring(3);
+        const translations = {
+            uz: {
+                orderBtn: "Buyurtma berish",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> O'zbekiston bo'ylab bepul yetkazib berish</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% tabiiy va xavfsiz tarkib</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ muvaffaqiyatli natijalar</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Buyurtmani tekshirib keyin to'lash imkoniyati</span>",
+                title: "OQ DOG'LARDAN XALOS BO'LISH ENDI ILOJSIZ EMAS!",
+                subtitle: "Ushbu vosita vitiligo va teridagi turli muammolarni bartaraf etishda tabiiy yordam beradi. O'rganib qolish holatini keltirib chiqarmaydi — Natijalar tasdiqlangan!",
+                refTitle: "Teringizni avvalgi holatiga qaytarishning iloji yo'q deb o'ylasangiz – Adashasiz!",
+                refSub: "Nima qilasiz?",
+                refLead: "Siz shu yergacha o'qiyotgan bo'lsangiz, demak, sizda yoki oilangizda ham vitiligo yoki teri muammolari bor.",
+                refItems: `
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Teridagi oq dog'lar</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Uyat yoki noqulaylik hissi</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Asabiylik va o'z-o'zingizga ishonchsizlik</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Turli mazlar va usullardan foyda ko'rmagansiz yoki ta'siri kam...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Ayniqsa, yilning issiq fasllarida yoki yengi kalta kiyimlar kiyganda noqulaylik sezasiz...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Vitiligodan xalos bo'lishni xohlaysiz-u, lekin "Qanday qilib?" degan savolga javob topolmay boshingiz qotgan, to'g'rimi?</span></div>
+                `,
+                refP1: "Ammo bu muammolarga zudlik bilan yechim topishingiz lozim, to'g'rimi? Aks holda, vaqtida parvarish qilinmasa, vitiligo butun tanani egallab, tiklash qiyin bo'lgan holatga kelib qolishi mumkin! Tasavvur qilishning o'zi og'ir.",
+                refP2: "<strong>Muammoga qarshi kurashasizmi yoki yo'q?!</strong> Ishonchim komil, siz bu sinovni yengasiz va teringiz sog'lom holatiga qaytadi.",
+                compSecTitle: "QOMUS VOSITASINING TABIIY TARKIBI",
+                compSecDesc: "Vitiligo va teri pigmentatsiyasi tiklanishida ichki mikroelementlar muvozanati muhim ahamiyatga ega. Mahsulot faqat tabiiy komponentlardan tashkil topgan.",
+                cI1T: "Qora sedana yog'i",
+                cI1D: "Immun tizimi muvozanatini tiklash va hujayralar yangilanishini jadallashtiruvchi asosiy faol modda.",
+                cI2T: "Vitaminlar: E, D, C, B",
+                cI2D: "Teri pigmenti (melanin) sintezini qo'llab-quvvatlaydi va hujayralarni erkin radikallar hamda ultrabinafsha nurlaridan himoyalaydi.",
+                cI3T: "To'yinmagan yog' kislotalari (Omega 3, 6, 9)",
+                cI3D: "Fosfolipidlar bilan birga terining tabiiy himoya qavatini mustahkamlaydi, quruqlik va qipiqlanishni bartaraf etadi.",
+                cI4T: "Makro va mikroelementlar majmuasi",
+                cI4D: "Kaliy, natriy, fosfor, kalsiy, marganets, temir, rux, mis, selen, nikel — teri tabiiy rangini tiklash uchun zarur muhim minerallar.",
+                cI5T: "Yordamchi komponentlar va efir moylari",
+                cI5D: "Halol qoramol jelatini, glitserin, nigellon, A-karotinoidlar va limon kislotasi asosidagi oson hazm bo'luvchi kapsula.",
+                targetTitle: "KIMLAR UCHUN TAVSIYA ETILADI?",
+                targetSub: "Agar sizda quyidagi holatlardan biri kuzatilayotgan bo'lsa, Qomus siz uchun ayni muddao",
+                tg1T: "Yangi chiqqan dog'lar",
+                tg1D: "Terida yaqinda paydo bo'lgan oq nuqta va mayda dog'larning tarqalishini zudlik bilan to'xtatish uchun.",
+                tg2T: "Ko'p yillik vitiligo",
+                tg2D: "Yillar davomida turli malhamlardan natija ko'rmagan, terini ichkaridan oziqlantirishga muhtojlar uchun.",
+                tg3T: "Kuchli stress oqibatlari",
+                tg3D: "Asabiylik, qo'rquv va immunitet pasayishi oqibatida yuzaga kelgan teri pigmenti yo'qolishida.",
+                tg4T: "Qaytalanishning oldini olish",
+                tg4D: "Terining sog'lom holatini uzoq muddat saqlash va organizmni zarur minerallar bilan to'yintirish uchun.",
+                resultsTitle: "Mijozlar natijalari",
+                beforeBadge: "Avval",
+                afterBadge: "Keyin",
+                videoSecTitle: "Mijozlarimizning video fikrlari",
+                videoSecSub: "Qomus vositasidan foydalangan yurtdoshlarimiz bilan samimiy suhbatlar",
+                videoTitles: [
+                    "Oq dog'lardan qutulish | 36 yillik masala hal qilindi",
+                    "Bu muolajadan so'ng oq dog'larim yo'qolib ketdi",
+                    "Qomus vositasi bilan teri pigmentining tiklanish jarayoni",
+                    "Vitiligo va oq dog'lar bo'yicha mijozimiz tajribasi",
+                    "Qomus bilan teridagi o'zgarishlar va natija",
+                    "Vitiligo muammosidan so'ng sog'lom teriga qaytish",
+                    "Oq dog'lar profilaktikasi va terining tiklanishi",
+                    "Parvarish bosqichlari va ijobiy o'zgarishlar",
+                    "Qomus vositasi bo'yicha mijoz sharhi",
+                    "Haqiqiy natijalar: mijoz bilan jonli muloqot"
+                ],
+                midCtaTitle: "Siz ham sog'lom va tiniq teriga qaytishni xohlaysizmi?",
+                midCtaDesc: "Mutaxassisimiz siz bilan bog'lanib, holatingizni bepul tahlil qiladi va to'g'ri kursni tavsiya etadi.",
+                midCtaBtn: "Hoziroq bepul maslahat oling",
+                certTitle: "DAVLAT TOMONIDAN TASDIQLANGAN VA SERTIFIKATLANGAN",
+                certDesc: "«QOMUS» mahsuloti O'zbekiston Respublikasi vakolatli organlari tomonidan to'liq laboratoriya tekshiruvlaridan o'tkazilgan va rasmiy ruxsatnomaga ega.",
+                certCap1: "O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi Ruxsatnomasi № 001425",
+                certCap2: "Sanitariya-epidemiologik xulosasi № 405282 (Toshkent shahri)",
+                certSafety: "Mahsulotning har bir partiyasi gigiyenik, radiologik va bakteriologik sinovlardan muvaffaqiyatli o'tib, inson salomatligi uchun mutlaqo xavfsiz deb topilgan.",
+                faqTitle: "KO'P BERILADIGAN SAVOLLAR",
+                faqSub: "Mijozlarimiz tomonidan eng ko'p beriladigan savollarga mutaxassislarimiz javoblari",
+                faqs: [
+                    { q: "Vosita o'rganib qolish holatini keltirib chiqarmaydimi?", a: "Yo'q, “QOMUS” 100% tabiiy sovuq presslangan qora sedana yog'i va vitaminlar majmuasidan iborat bo'lib, gormonlar yoki agressiv kimyoviy qo'shimchalar saqlamaydi. Shu sababli iste'mol to'xtatilganda ham o'rganib qolish yuzaga kelmaydi." },
+                    { q: "Birinchi sezilarli natijalar qachon ko'rina boshlaydi?", a: "Organizmning o'ziga xosligi va teri holatiga qarab, odatda muntazam iste'molning 3–4 haftasida teri pigmentatsiyasida ijobiy o'zgarishlar, oq dog'lar chetlarining tabiiy tusga qayta boshlashi kuzatiladi." },
+                    { q: "Kapsulalarni qanday tartibda qabul qilish tavsiya etiladi?", a: "Kattalar uchun kuniga 2 mahal (ertalab va kechqurun) ovqatdan 20-30 daqiqa oldin 1-2 tadan kapsulani iliq suv bilan ichish tavsiya etiladi. Aniq qabul tartibini mutaxassis telefon orqali bepul belgilab beradi." },
+                    { q: "Kapsula qobig'i halolmi va u nimadan tayyorlangan?", a: "Kapsula qobig'i faqatgina halol so'yilgan qoramol jelatinidan tayyorlangan bo'lib, me'dada oson eriydi va oshqozon-ichak tizimiga hech qanday og'irlik tug'dirmaydi." }
+                ],
+                stepsTitle: "BUYURTMA VA XIZMAT KO'RSATISH TARTIBI",
+                stepsDesc: "Siz uchun eng qulay, xavfsiz va shaffof tizimni taqdim etamiz",
+                s1T: "So'rov qoldirasiz",
+                s1D: "Saytdagi formaga ismingiz va raqamingizni yozasiz. Hech qanday oldindan to'lov talab etilmaydi.",
+                s2T: "Mutaxassis maslahati",
+                s2D: "Mutaxassisimiz sizga qo'ng'iroq qilib, holatingiz bo'yicha bepul maslahat beradi.",
+                s3T: "Tekshirib, keyin to'laysiz",
+                s3D: "Buyurtma BEPUL yetkaziladi. Mahsulotni olib ko'rganingizdan keyin to'lov qilasiz.",
+                formTitle: "Buyurtma berish",
+                formSub: "Hoziroq bepul konsultatsiyaga yoziling va Qomus kapsulasi yordamida sog'lom teriga qayting!",
+                lblName: "Ismingiz *",
+                lblPhone1: "Telefon raqami *",
+                lblPhone2: "Qo'shimcha telefon raqam *",
+                lblHistory: "Oq dog'lar qachondan beri bor? (yil, oy) *",
+                holderName: "Ismingizni kiriting",
+                holderHistory: "Masalan: 2 yildan beri, yaqinda boshlandi...",
+                formSubmit: "Buyurtma berish",
+                formPrivacy: "🔒 Shaxsiy ma'lumotlaringiz maxfiyligi 100% kafolatlanadi.",
+                socialTitle: "Biz ijtimoiy tarmoqlarda:",
+                socMainTg: "Asosiy kanal",
+                socResultsTg: "Natijalar kanali",
+                footerCopy: "© 2026 QOMUS. Barcha huquqlar himoyalangan.",
+                footerContactTxt: "Murojaat uchun: +998 71 203-04-08",
+                footerDisc: "DIQQAT: «QOMUS» preparati biologik faol qo'shimcha (BAD) hisoblanadi va dori vositasi emas. Natijalar organizmning individual xususiyatlariga qarab farq qilishi mumkin. Qabul qilishdan oldin mutaxassis bilan maslahatlashish tavsiya etiladi. SSV Ruxsatnomasi № 001425.",
+                modalTitle: "Rahmat, buyurtmangiz qabul qilindi!",
+                modalDesc: "Mutaxassisimiz tez orada siz bilan bog'lanib, bepul maslahat beradi va yetkazib berish manzilini aniqlashtiradi.",
+                modalCallLabel: "Biz sizga ushbu rasmiy raqamdan aloqaga chiqamiz:",
+                modalBtn: "Tushunarli"
+            },
+            uz_cyr: {
+                orderBtn: "Буюртма бериш",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% табиий ва хавфсиз таркиб</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ муваффақиятли натижалар</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Буюртмани текшириб кейин тўлаш имконияти</span>",
+                title: "ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!",
+                subtitle: "Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!",
+                refTitle: "Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!",
+                refSub: "Нима қиласиз?",
+                refLead: "Сиз шу ергача ўқиётган бўлсангиз, демак, сизда ёки оилангизда ҳам витилиго ёки тери муаммолари бор.",
+                refItems: `
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Теридаги оқ доғлар</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Уят ёки ноқулайлик ҳисси</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Асабийлик ва ўз-ўзингизга ишончсизлик</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Турли мазлар ва даволардан фойда кўрмагансиз ёки таъсири кам...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Айниқса, йилнинг иссиқ фаслларида ёки енги калта кийимлар кийганда ноқулайлик сезасиз...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Витилигодан халос бўлишни хоҳлайсиз-у, лекин "Қандай қилиб?" деган саволга жавоб тополмай бошингиз қотган, тўғрими?</span></div>
+                `,
+                refP1: "Аммо бу муаммоларга зудлик билан ечим топишингиз лозим, тўғрими? Акс ҳолда, вақтида даволанмаса, витилиго бутун танани эгаллаб, тузатиб бўлмас ҳолатга келиб қолиши мумкин! Тасаввур қилишнинг ўзи даҳшатли.",
+                refP2: "<strong>Касалликга қарши курашасизми ёки йўқ?!</strong> Ишончим комил, сиз бу муаммони енгасиз ва терингиз соғлом ҳолатига қайтади.",
+                compSecTitle: "ҚОМУС ПРЕПАРАТИНИНГ ТАБИИЙ ТАРКИБИ",
+                compSecDesc: "Витилиго ва тери пигменти тикланишида ички микроэлементлар мувозанати ҳал қилувчи аҳамиятга эга. Маҳсулот фақатгина табиий компонентлардан ташкил топган.",
+                cI1T: "Қора седана ёғи",
+                cI1D: "Иммунитет мувозанатини тиклайди ва ҳужайралар регенерациясини жадаллаштирувчи асосий фаол модда.",
+                cI2T: "Витаминлар: E, D, C, B",
+                cI2D: "Тери пигменти (меланин) синтезини қўллаб-қувватлайди ва ҳужайраларни ультрабинафша стрессдан ҳимоялайди.",
+                cI3T: "Тўйинмаган ёғ кислоталари (Омега 3, 6, 9)",
+                cI3D: "Фосфолипидлар билан бирга терининг липид қаватини мустаҳкамлайди, қуруқлик ва қазиғланишни тўхтатади.",
+                cI4T: "Макро ва микро элементлар мажмуаси",
+                cI4D: "Калий, натрий, фосфор, кальций, марганец, темир, рух, мис, селен, никель — тери рангини тиклаш учун зарур ноёб минераллар.",
+                cI5T: "Ёрдамчи компонентлар ва эфир мойлари",
+                cI5D: "Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула.",
+                targetTitle: "КИМЛАР УЧУН ТАВСИЯ ЭТИЛАДИ?",
+                targetSub: "Агар сизда қуйидаги ҳолатлардан бири кузатилаётган бўлса, Қомус сиз учун айни муддао",
+                tg1T: "Янги чиққан доғлар",
+                tg1D: "Терида яқинда пайдо бўлган оқ нуқта ва майда доғларнинг тарқалишини зудлик билан тўхтатиш учун.",
+                tg2T: "Кўп йиллик витилиго",
+                tg2D: "Йиллар давомида турли малҳамлардан натижа кўрмаган, терини ичкаридан озиқлантиришга муҳтожлар учун.",
+                tg3T: "Кучли стресс оқибатлари",
+                tg3D: "Асабийлик, қўрқув ва иммунитет пасайиши оқибатида юзага келган тери пигменти йўқолишида.",
+                tg4T: "Қайталанишнинг олдини олиш",
+                tg4D: "Терининг соғлом ҳолатини узоқ муддат сақлаш ва организмни зарур минераллар билан тўйинтириш учун.",
+                resultsTitle: "Мижозлар натижалари",
+                beforeBadge: "Аввал",
+                afterBadge: "Кейин",
+                videoSecTitle: "Мижозларимизнинг видео фикрлари",
+                videoSecSub: "Қомус препаратидан фойдаланиб натижага эришган юртдошларимиз билан суҳбатлар",
+                videoTitles: [
+                    "Оқ доғлардан қутулиш | 36 йиллик масала ҳал қилинди",
+                    "Бу муолажадан сўнг оқ доғларим йўқолиб кетди",
+                    "Қомус воситаси билан тери пигментининг тикланиш жараёни",
+                    "Витилиго ва оқ доғлар бўйича мижозимиз тажрибаси",
+                    "Қомус билан теридаги ўзгаришлар ва натижа",
+                    "Витилиго муаммосидан сўнг соғлом терига қайтиш",
+                    "Оқ доғлар профилактикаси ва терининг тикланиши",
+                    "Парвариш босқичлари ва ижобий ўзгаришлар",
+                    "Қомус воситаси бўйича мижоз шарҳи",
+                    "Ҳақиқий натижалар: мижоз билан жонли мулоқот"
+                ],
+                midCtaTitle: "Сиз ҳам соғлом ва тиниқ терига қайтишни хоҳлайсизми?",
+                midCtaDesc: "Мутахассисимиз сиз билан боғланиб, ҳолатингизни бепул таҳлил қилади ва тўғри курсни тавсия этади.",
+                midCtaBtn: "Ҳозироқ бепул маслаҳат олинг",
+                certTitle: "ДАВЛАТ ТОМОНИДАН ТАСДИҚЛАНГАН ВА СЕРТИФИКАТЛАНГАН",
+                certDesc: "«QOMUS» препарати Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги томонидан тўлиқ экспертизадан ўтказилган ва расмий рухсатномага эга.",
+                certCap1: "Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425",
+                certCap2: "Санитарно-эпидемиологическое заключение № 405282 (Тошкент)",
+                certSafety: "Маҳсулотнинг ҳар бир партияси гигиеник, радиологик ва бактериологик синовлардан муваффақиятли ўтиб, инсон саломатлиги учун мутлақо хавфсиз деб топилган.",
+                faqTitle: "КЎП БЕРИЛАДИГАН САВОЛЛАР",
+                faqSub: "Мижозларимиз томонидан энг кўп бериладиган саволларга расмий мутахассисларимиз жавоблари",
+                faqs: [
+                    { q: "Препарат ўрганиб қолиш (привыкание) ҳолатини келтириб чиқармайдими?", a: "Йўқ, “QOMUS” 100% табиий совуқ прессланган қора седана ёғи ва витаминлар мажмуасидан иборат бўлиб, гормонлар ёки кимёвий қўшимчалар сақламайди. Шу сабабли қабул қилиш тўхтатилганда ҳам ўрганиб қолиш ҳолати кузатилмайди." },
+                    { q: "Биринчи сезиларли натижалар қачон кўрина бошлайди?", a: "Организмнинг хусусияти ва касаллик даражасига қараб, одатда мунтазам фойдаланишнинг 3–4 ҳафтасида тери пигментациясида ижобий ўзгаришлар, оқ доғлар четларининг табиий рангга қайта бошлаши кузатилади." },
+                    { q: "Капсулаларни қандай тартибда қабул қилиш тавсия этилади?", a: "Катталар учун кунига 2 маҳал (эрталаб ва кечқурун) овқатдан 20-30 дақиқа олдин 1-2 тадан капсулани илиқ сув билан ичиш тавсия этилади. Аниқ муолажа курсини мутахассис телефон орқали алоҳида белгилаб беради." },
+                    { q: "Капсула қобиғи ҳалолми ва у нимадан тайёрланган?", a: "Капсула қобиғи фақатгина ҳалол сўйилган қора мол желатинидан тайёрланган бўлиб, ошқозонда осон эрийди ва ошқозон-ичак тизимига ҳеч қандай оғирлик қилмайди." }
+                ],
+                stepsTitle: "БУЮРТМА ВА ХИЗМАТ КЎРСАТИШ ТАРТИБИ",
+                stepsDesc: "Сиз учун энг қулай, хавфсиз ва шаффоф тизимни тақдим этамиз",
+                s1T: "Сўров қолдирасиз",
+                s1D: "Сайтдаги формага исмингиз ва рақамингизни ёзасиз. Ҳеч қандай олдиндан тўлов талаб этилмайди.",
+                s2T: "Мутахассис маслаҳати",
+                s2D: "Мутахассисимиз сизга қўнғироқ қилиб, ҳолатингиз бўйича бепул маслаҳат беради.",
+                s3T: "Текшириб, keyin тўлайсиз",
+                s3D: "Буюртма БЕПУЛ етказилади. Маҳсулотни олиб кўрганингиздан кейин тўлов қиласиз.",
+                formTitle: "Буюртма бериш",
+                formSub: "Ҳозироқ бепул консультацияга ёзилинг ва Qomus капсуласи орқали соғлом терига қайтинг!",
+                lblName: "Исмингиз *",
+                lblPhone1: "Телефон рақами *",
+                lblPhone2: "Қўшимча телефон рақам *",
+                lblHistory: "Оқ доғлар қачондан бери бор? (йил, ой) *",
+                holderName: "Исмингизни киритинг",
+                holderHistory: "Масалан: 2 йилдан бери, яқинда бошланди...",
+                formSubmit: "Буюртма бериш",
+                formPrivacy: "🔒 Шахсий маълумотларингиз махфийлиги 100% кафолатланади.",
+                socialTitle: "Биз ижтимоий тармоқларда:",
+                socMainTg: "Асосий канал",
+                socResultsTg: "Натижалар канали",
+                footerCopy: "© 2026 QOMUS. Барча ҳуқуқлар ҳимояланган.",
+                footerContactTxt: "Мурожаат учун: +998 71 203-04-08",
+                footerDisc: "ДИҚҚАТ: «QOMUS» препарати биологик фаол қўшимча (БАД) ҳисобланади ва дори воситаси эмас. Натижалар организмнинг индивидуал хусусиятларига қараб фарқ қилиши мумкин. Қабул қилишдан олдин шифокор билан маслаҳатлашиш тавсия этилади. ССВ Рухсатномаси № 001425.",
+                modalTitle: "Раҳмат, буюртмангиз қабул қилинди!",
+                modalDesc: "Мутахассисимиз тез орада сиз билан боғланиб, бепул маслаҳат беради ва етказиб бериш манзилини аниқлаштиради.",
+                modalCallLabel: "Биз сизга ушбу расмий рақамдан алоқага чиқамиз:",
+                modalBtn: "Тушунарли"
+            },
+            ru: {
+                orderBtn: "Заказать",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Бесплатная доставка по всему Узбекистану</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% натуральный и безопасный состав</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Более 20,000 успешных результатов</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Оплата только после проверки заказа</span>",
+                title: "ИЗБАВЛЕНИЕ ОТ БЕЛЫХ ПЯТЕН ТЕПЕРЬ ВОЗМОЖНО!",
+                subtitle: "Данный комплекс эффективно поддерживает восстановление пигментации кожи при витилиго. Не вызывает привыкания — Результаты подтверждены!",
+                refTitle: "Если вы думаете, что вернуть коже прежний вид невозможно — вы ошибаетесь!",
+                refSub: "Что вы чувствуете?",
+                refLead: "Если вы читаете этот текст, значит, у вас или ваших близких есть витилиго или проблемы с кожей.",
+                refItems: `
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Белые пятна на коже</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Чувство неловкости и стыда</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Нервозность и неуверенность в себе</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Пробовали разные мази, но толку мало...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Дискомфорт в теплое время года или в одежде с короткими рукавами...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Хотите избавиться, но не знаете точно, 'Как именно?'</span></div>
+                `,
+                refP1: "Но решать эту проблему нужно незамедлительно, верно? Без должного ухода и поддержки пятна могут распространиться дальше! Страшно представить.",
+                refP2: "<strong>Будете бороться за здоровье кожи или нет?!</strong> Уверены, вы преодолеете это и кожа вернет свой естественный ровный цвет.",
+                compSecTitle: "НАТУРАЛЬНЫЙ СОСТАВ ПРЕПАРАТА «QOMUS»",
+                compSecDesc: "При восстановлении пигментации кожи баланс микроэлементов имеет решающее значение. Продукт состоит исключительно из натуральных компонентов.",
+                cI1T: "Масло черного тмина",
+                cI1D: "Восстанавливает баланс иммунитета и ускоряет естественную регенерацию клеток кожи.",
+                cI2T: "Витамины: E, D, C, B",
+                cI2D: "Поддерживают синтез меланина и защищают клетки кожи от окислительного стресса и УФ-лучей.",
+                cI3T: "Ненасыщенные жирные кислоты (Омега 3, 6, 9)",
+                cI3D: "Вместе с фосфолипидами укрепляют липидный барьер, предотвращая сухость и шелушение кожи.",
+                cI4T: "Комплекс макро- и микроэлементов",
+                cI4D: "Калий, натрий, фосфор, кальций, марганец, железо, цинк, медь, селен, никель — минералы для пигментации.",
+                cI5T: "Вспомогательные компоненты и эфирные масла",
+                cI5D: "Говяжий желатин халяль, глицерин, нигеллон, А-каротиноиды и лимонная кислота в основе мягкой капсулы.",
+                targetTitle: "КОМУ ПОДХОДИТ ПРЕПАРАТ?",
+                targetSub: "Если у вас наблюдается одно из следующих состояний, «Qomus» станет идеальным решением",
+                tg1T: "Недавно появившиеся пятна",
+                tg1D: "Для оперативной остановки разрастания новых белых точек и очагов депигментации.",
+                tg2T: "Многолетнее витилиго",
+                tg2D: "Для тех, кто годами не получал эффекта от внешних мазей и нуждается в питании изнутри.",
+                tg3T: "Последствия стресса",
+                tg3D: "При потере пигментации кожи, вызванной переживаниями, страхом и сбоями иммунитета.",
+                tg4T: "Профилактика повторного проявления",
+                tg4D: "Для длительного сохранения здоровья кожи и насыщения организма микроэлементами.",
+                resultsTitle: "Результаты клиентов",
+                beforeBadge: "До",
+                afterBadge: "После",
+                videoSecTitle: "Видео отзывы наших клиентов",
+                videoSecSub: "Интервью с людьми, восстановившими здоровье кожи с помощью препарата «Qomus»",
+                videoTitles: [
+                    "Избавление от белых пятен | 36-летняя проблема решена",
+                    "После этого курса белые пятна полностью исчезли",
+                    "Процесс восстановления пигментации кожи с препаратом «Qomus»",
+                    "Опыт нашего клиента в борьбе с витилиго и белыми пятнами",
+                    "Динамика и результаты изменений кожи с «Qomus»",
+                    "Возвращение к здоровой коже после диагноза витилиго",
+                    "Профилактика депигментации и восстановление кожи",
+                    "Этапы приема препарата и заметные положительные изменения",
+                    "Отзыв реального клиента о препарате «Qomus»",
+                    "Реальные результаты: живое интервью с пациентом"
+                ],
+                midCtaTitle: "Хотите вернуть коже здоровый и ровный тон?",
+                midCtaDesc: "Наш специалист свяжется с вами, бесплатно оценит состояние кожи и подберет правильный курс.",
+                midCtaBtn: "Получить бесплатную консультацию",
+                certTitle: "ГОСУДАРСТВЕННОЕ РАЗРЕШЕНИЕ И СЕРТИФИКАЦИЯ",
+                certDesc: "Препарат «QOMUS» прошел полную государственную экспертизу уполномоченных органов Республики Узбекистан и имеет официальное разрешение.",
+                certCap1: "Разрешение Министерства Здравоохранения Республики Узбекистан № 001425",
+                certCap2: "Санитарно-эпидемиологическое заключение № 405282 (г. Ташкент)",
+                certSafety: "Каждая партия продукта успешно прошла строгий гигиенический, радиологический и бактериологический контроль и полностью безопасна для здоровья.",
+                faqTitle: "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
+                faqSub: "Ответы наших специалистов на самые популярные вопросы покупателей",
+                faqs: [
+                    { q: "Вызывает ли препарат привыкание?", a: "Нет, «QOMUS» состоит из 100% натурального масла черного тмина холодного отжима и витаминного комплекса, без добавления гормонов и химии. Привыкание полностью исключено." },
+                    { q: "Когда появляются первые заметные результаты?", a: "В зависимости от организма и стадии заболевания, первые положительные изменения в пигментации обычно наблюдаются уже через 3–4 недели регулярного курса." },
+                    { q: "Как правильно принимать капсулы?", a: "Взрослым рекомендуется принимать по 1–2 капсулы 2 раза в день за 20–30 минут до еды, запивая теплой водой. Точный курс приема назначает специалист индивидуально." },
+                    { q: "Является ли оболочка капсулы халяльной?", a: "Оболочка капсулы изготовлена исключительно из халяльного говяжьего желатина, легко усваивается и не нагружает желудочно-кишечный тракт." }
+                ],
+                stepsTitle: "ПОРЯДОК ЗАКАЗА И ОБСЛУЖИВАНИЯ",
+                stepsDesc: "Мы предоставляем максимально удобную, безопасную и прозрачную систему",
+                s1T: "Оставляете заявку",
+                s1D: "Заполняете имя и номер телефона на сайте. Никаких предоплат не требуется.",
+                s2T: "Консультация эксперта",
+                s2D: "Специалист свяжется с вами и бесплатно проконсультирует по вашей ситуации.",
+                s3T: "Проверяете и оплачиваете",
+                s3D: "Заказ доставляется БЕСПЛАТНО. Вы платите только после личного осмотра посылки.",
+                formTitle: "Оформить заказ",
+                formSub: "Запишитесь на бесплатную консультацию и верните здоровье кожи вместе с «QOMUS»!",
+                lblName: "Ваше имя *",
+                lblPhone1: "Номер телефона *",
+                lblPhone2: "Дополнительный номер телефона *",
+                lblHistory: "Как давно появились белые пятна? (лет, месяцев) *",
+                holderName: "Введите ваше имя",
+                holderHistory: "Например: 2 года назад, недавно появились...",
+                formSubmit: "Оформить заказ",
+                formPrivacy: "🔒 Конфиденциальность ваших данных гарантирована на 100%.",
+                socialTitle: "Мы в социальных сетях:",
+                socMainTg: "Основной канал",
+                socResultsTg: "Канал результатов",
+                footerCopy: "© 2026 QOMUS. Все права защищены.",
+                footerContactTxt: "Для справок: +998 71 203-04-08",
+                footerDisc: "ВНИМАНИЕ: Препарат «QOMUS» является биологически активной добавкой (БАД) и не является лекарственным средством. Результаты индивидуальны. Перед применением рекомендуется проконсультироваться с врачом. Разрешение Минздрава РУз № 001425.",
+                modalTitle: "Спасибо, ваша заявка принята!",
+                modalDesc: "Наш специалист свяжется с вами в ближайшее время, проведет бесплатную консультацию и уточнит детали доставки.",
+                modalCallLabel: "Мы свяжемся с вами с этого официального номера:",
+                modalBtn: "Понятно"
+            },
+            en: {
+                orderBtn: "Order Now",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Free delivery across Uzbekistan</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% natural and safe formula</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Over 20,000 successful results</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Cash on delivery upon personal inspection</span>",
+                title: "GETTING RID OF WHITE SPOTS IS NO LONGER IMPOSSIBLE!",
+                subtitle: "This natural formula effectively supports skin pigmentation and immunity balance. Non-addictive — Results confirmed!",
+                refTitle: "If you think restoring your skin is impossible — you are wrong!",
+                refSub: "What should you do?",
+                refLead: "If you are reading this, you or your loved ones are dealing with vitiligo or skin pigmentation issues.",
+                refItems: `
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>White spots on the skin</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Embarrassment and discomfort</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Stress and lack of self-confidence</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Tried various creams with little result...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Discomfort during warm seasons or wearing short sleeves...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Want to get rid of it, but don't know exactly 'How?'</span></div>
+                `,
+                refP1: "However, finding a reliable solution is essential! Otherwise, vitiligo can spread further over the body! It is difficult even to imagine.",
+                refP2: "<strong>Will you fight for healthy skin or not?!</strong> We are sure you will overcome this challenge and your skin will return to a healthy tone.",
+                compSecTitle: "NATURAL COMPOSITION OF “QOMUS”",
+                compSecDesc: "In restoring skin pigmentation, the balance of internal microelements plays a vital role. Formulated strictly with natural ingredients.",
+                cI1T: "Black Seed Oil",
+                cI1D: "Restores immune balance and stimulates cellular regeneration as the primary active ingredient.",
+                cI2T: "Vitamins: E, D, C, B",
+                cI2D: "Supports natural melanin synthesis and shields cells from oxidative stress and UV damage.",
+                cI3T: "Unsaturated Fatty Acids (Omega 3, 6, 9)",
+                cI3D: "Strengthens lipid barriers along with phospholipids, eliminating dryness and irritation.",
+                cI4T: "Macro and Microelement Complex",
+                cI4D: "Potassium, sodium, phosphorus, calcium, manganese, iron, zinc, copper, selenium, nickel — vital for pigmentation.",
+                cI5T: "Essential Oils and Auxiliary Elements",
+                cI5D: "Natural bovine halal gelatin, glycerin, nigellone, A-carotenoids, and citric acid inside a soft capsule.",
+                targetTitle: "WHO IS THIS PRODUCT FOR?",
+                targetSub: "If you recognize any of these conditions, “Qomus” is specifically designed for your needs",
+                tg1T: "Recently Emerged Spots",
+                tg1D: "Quickly stops the spread of fresh white spots and small areas of pigmentation loss.",
+                tg2T: "Long-standing Vitiligo",
+                tg2D: "For those who found no relief from external creams and require deep cellular nutrition.",
+                tg3T: "Stress-induced Conditions",
+                tg3D: "Targeting pigmentation loss triggered by nervous exhaustion, chronic stress, or low immunity.",
+                tg4T: "Relapse Prevention",
+                tg4D: "Sustaining long-term healthy skin balance and nourishing the body with essential minerals.",
+                resultsTitle: "Customer Results",
+                beforeBadge: "Before",
+                afterBadge: "After",
+                videoSecTitle: "Customer Video Reviews",
+                videoSecSub: "Interviews with real people who restored skin pigmentation using “Qomus”",
+                videoTitles: [
+                    "Overcoming White Spots | 36-year issue resolved",
+                    "White spots disappeared completely after this course",
+                    "Restoration of skin pigmentation with “Qomus” capsules",
+                    "Customer journey and feedback on vitiligo recovery",
+                    "Real transformation and results with “Qomus”",
+                    "Returning to healthy skin after dealing with vitiligo",
+                    "Skin repigmentation prevention and recovery",
+                    "Course stages and noticeable positive skin recovery",
+                    "Authentic customer review about “Qomus” capsules",
+                    "Proven results: live interview with our patient"
+                ],
+                midCtaTitle: "Ready to restore your skin's natural tone?",
+                midCtaDesc: "Our specialist will contact you, provide a free assessment, and recommend the optimal course.",
+                midCtaBtn: "Get Free Consultation Now",
+                certTitle: "OFFICIALLY CERTIFIED AND APPROVED",
+                certDesc: "“QOMUS” has successfully passed all laboratory evaluations by authorized agencies of Uzbekistan and is officially certified.",
+                certCap1: "Ministry of Health of the Republic of Uzbekistan Permit № 001425",
+                certCap2: "Sanitary and Epidemiological Conclusion № 405282 (Tashkent)",
+                certSafety: "Every batch undergoes rigorous hygienic, radiological, and bacteriological tests and is guaranteed 100% safe for human health.",
+                faqTitle: "FREQUENTLY ASKED QUESTIONS",
+                faqSub: "Direct answers from our healthcare consultants to the most frequent questions",
+                faqs: [
+                    { q: "Is the product habit-forming or addictive?", a: "No, “QOMUS” consists of 100% cold-pressed black seed oil and vital vitamins without hormones or artificial chemicals, preventing any dependence." },
+                    { q: "When do the first visible results appear?", a: "Depending on individual physiology, initial signs of natural repigmentation typically appear within 3 to 4 weeks of consistent intake." },
+                    { q: "What is the recommended dosage?", a: "Adults take 1–2 capsules twice daily 20–30 minutes before meals with warm water. Individual regimen is tailored during free phone consultation." },
+                    { q: "Are the capsules certified Halal?", a: "Yes, capsule shells are made exclusively from 100% bovine Halal gelatin, ensuring effortless absorption in the digestive tract." }
+                ],
+                stepsTitle: "HOW ORDERING & SERVICE WORKS",
+                stepsDesc: "We provide an exceptionally convenient, safe, and transparent experience",
+                s1T: "Leave an Inquiry",
+                s1D: "Enter your name and phone number on the site. No advance payments needed.",
+                s2T: "Expert Consultation",
+                s2D: "Our specialist calls you to evaluate your condition and tailor a personalized course for free.",
+                s3T: "Inspect and Pay",
+                s3D: "Free delivery straight to your door. You inspect the package thoroughly before making payment.",
+                formTitle: "Place an Order",
+                formSub: "Sign up for a free consultation today and reclaim healthy skin with “QOMUS”!",
+                lblName: "Your Name *",
+                lblPhone1: "Phone Number *",
+                lblPhone2: "Alternative Phone Number *",
+                lblHistory: "How long have you had vitiligo? (years, months) *",
+                holderName: "Enter your name",
+                holderHistory: "e.g., 2 years, recently noticed...",
+                formSubmit: "Place Order",
+                formPrivacy: "🔒 100% privacy and data security guaranteed.",
+                socialTitle: "Follow us on social media:",
+                socMainTg: "Main Channel",
+                socResultsTg: "Results Channel",
+                footerCopy: "© 2026 QOMUS. All rights reserved.",
+                footerContactTxt: "Support & Orders: +998 71 203-04-08",
+                footerDisc: "NOTE: “QOMUS” is a dietary supplement and not a medicinal drug. Results may vary depending on individual physiological traits. Medical consultation is recommended before use. MOH Permit № 001425.",
+                modalTitle: "Thank you, your order has been received!",
+                modalDesc: "Our specialist will contact you shortly to provide free consultation and clarify delivery details.",
+                modalCallLabel: "We will contact you from this official number:",
+                modalBtn: "Understood"
             }
-            input.value = val.slice(0, 9);
+        };
+
+        // MATNNI XATOSIZ YANGILASH FUNKSIYASI (ELEMENT BORLIGINI TEKSHIRIB QO'YADI)
+        function updateTextSafe(id, text) {
+            const el = document.getElementById(id);
+            if (el) el.textContent = text;
+        }
+
+        function changeLanguage(lang) {
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            const activeBtn = document.getElementById('btn-' + lang);
+            if(activeBtn) activeBtn.classList.add('active');
+
+            const t = translations[lang];
+            if (!t) return;
+
+            updateTextSafe('header-order-btn', t.orderBtn);
+            updateTextSafe('freeze-order-btn', t.orderBtn);
+            
+            const tickerEl = document.getElementById('ticker-text');
+            if (tickerEl) tickerEl.innerHTML = t.ticker;
+
+            updateTextSafe('hero-title', t.title);
+            updateTextSafe('hero-subtitle', t.subtitle);
+
+            updateTextSafe('ref-header-title', t.refTitle);
+            updateTextSafe('ref-sub-query', t.refSub);
+            updateTextSafe('ref-c1-lead', t.refLead);
+
+            const refItemsEl = document.getElementById('ref-c1-items');
+            if (refItemsEl) refItemsEl.innerHTML = t.refItems;
+
+            updateTextSafe('ref-c2-p1', t.refP1);
+            const refP2El = document.getElementById('ref-c2-p2');
+            if (refP2El) refP2El.innerHTML = t.refP2;
+
+            updateTextSafe('comp-sec-title', t.compSecTitle);
+            updateTextSafe('comp-sec-desc', t.compSecDesc);
+            updateTextSafe('c-i1-t', t.cI1T);
+            updateTextSafe('c-i1-d', t.cI1D);
+            updateTextSafe('c-i2-t', t.cI2T);
+            updateTextSafe('c-i2-d', t.cI2D);
+            updateTextSafe('c-i3-t', t.cI3T);
+            updateTextSafe('c-i3-d', t.cI3D);
+            updateTextSafe('c-i4-t', t.cI4T);
+            updateTextSafe('c-i4-d', t.cI4D);
+            updateTextSafe('c-i5-t', t.cI5T);
+            updateTextSafe('c-i5-d', t.cI5D);
+
+            updateTextSafe('target-title', t.targetTitle);
+            updateTextSafe('target-sub', t.targetSub);
+            updateTextSafe('tg-1-t', t.tg1T);
+            updateTextSafe('tg-1-d', t.tg1D);
+            updateTextSafe('tg-2-t', t.tg2T);
+            updateTextSafe('tg-2-d', t.tg2D);
+            updateTextSafe('tg-3-t', t.tg3T);
+            updateTextSafe('tg-3-d', t.tg3D);
+            updateTextSafe('tg-4-t', t.tg4T);
+            updateTextSafe('tg-4-d', t.tg4D);
+
+            updateTextSafe('results-title', t.resultsTitle);
+            document.querySelectorAll('.badge-before').forEach(el => el.textContent = t.beforeBadge);
+            document.querySelectorAll('.badge-after').forEach(el => el.textContent = t.afterBadge);
+
+            updateTextSafe('video-sec-title', t.videoSecTitle);
+            updateTextSafe('video-sec-sub', t.videoSecSub);
+            if(t.videoTitles) {
+                for(let i = 1; i <= 10; i++) {
+                    updateTextSafe('vt-' + i, t.videoTitles[i-1]);
+                }
+            }
+
+            updateTextSafe('mid-cta-title', t.midCtaTitle);
+            updateTextSafe('mid-cta-desc', t.midCtaDesc);
+            updateTextSafe('mid-cta-btn', t.midCtaBtn);
+
+            updateTextSafe('cert-title', t.certTitle);
+            updateTextSafe('cert-desc', t.certDesc);
+            updateTextSafe('cert-cap-1', t.certCap1);
+            updateTextSafe('cert-cap-2', t.certCap2);
+            updateTextSafe('cert-safety-text', t.certSafety);
+
+            updateTextSafe('faq-main-title', t.faqTitle);
+            updateTextSafe('faq-main-sub', t.faqSub);
+            if(t.faqs) {
+                for(let i = 1; i <= 4; i++) {
+                    if (t.faqs[i-1]) {
+                        updateTextSafe('fq-' + i, t.faqs[i-1].q);
+                        updateTextSafe('fa-' + i, t.faqs[i-1].a);
+                    }
+                }
+            }
+
+            updateTextSafe('steps-title', t.stepsTitle);
+            updateTextSafe('steps-desc', t.stepsDesc);
+            updateTextSafe('step-1-t', t.s1T);
+            updateTextSafe('step-1-d', t.s1D);
+            updateTextSafe('step-2-t', t.s2T);
+            updateTextSafe('step-2-d', t.s2D);
+            updateTextSafe('step-3-t', t.s3T);
+            updateTextSafe('step-3-d', t.s3D);
+
+            updateTextSafe('form-main-title', t.formTitle);
+            updateTextSafe('form-main-sub', t.formSub);
+            updateTextSafe('lbl-name', t.lblName);
+            updateTextSafe('lbl-phone1', t.lblPhone1);
+            updateTextSafe('lbl-phone2', t.lblPhone2);
+            updateTextSafe('lbl-history', t.lblHistory);
+
+            const nameInput = document.getElementById('clientName');
+            if (nameInput) nameInput.placeholder = t.holderName;
+            const histInput = document.getElementById('clientHistory');
+            if (histInput) histInput.placeholder = t.holderHistory;
+
+            updateTextSafe('btn-form-submit', t.formSubmit);
+            updateTextSafe('form-privacy', t.formPrivacy);
+
+            updateTextSafe('social-title', t.socialTitle);
+            updateTextSafe('soc-main-tg', t.socMainTg);
+            updateTextSafe('soc-results-tg', t.socResultsTg);
+            updateTextSafe('footer-copy', t.footerCopy);
+            updateTextSafe('footer-contact-txt', t.footerContactTxt);
+            updateTextSafe('footer-disclaimer', t.footerDisc);
+
+            updateTextSafe('modal-title', t.modalTitle);
+            updateTextSafe('modal-desc', t.modalDesc);
+            updateTextSafe('modal-call-label', t.modalCallLabel);
+            updateTextSafe('modal-btn', t.modalBtn);
         }
 
         function toggleFaq(btn) {
@@ -2099,17 +1323,26 @@
         }
 
         function closeThankYouModal() {
-            document.getElementById('thankYouModal').style.display = 'none';
+            const modal = document.getElementById('thankYouModal');
+            if (modal) modal.style.display = 'none';
         }
 
-        /* MARQUEE MOTOR */
+        function validatePhoneInput(input) {
+            let val = input.value.replace(/\D/g, '');
+            if (val.startsWith('998')) {
+                val = val.substring(3);
+            }
+            input.value = val.slice(0, 9);
+        }
+
+        /* 100% ISHONCHLI AVTO-HARAKAT VA SWIPE MOTOR */
         function initInteractiveMarquee(viewportId, trackId, speed = 0.8) {
             const viewport = document.getElementById(viewportId);
             const track = document.getElementById(trackId);
             if (!viewport || !track) return;
 
-            const originalHTML = track.innerHTML;
-            track.innerHTML = originalHTML + originalHTML;
+            // Elementlarni duplikat qilish (cheksiz lenta effekti)
+            track.innerHTML += track.innerHTML;
 
             let currentPos = 0;
             let isDragging = false;
@@ -2160,13 +1393,13 @@
                 halfWidth = track.scrollWidth / 2;
             });
 
+            // Rasmlar yuklanib bo'lishini kutib kenglikni to'g'ri hisoblash
             setTimeout(() => {
                 halfWidth = track.scrollWidth / 2;
                 requestAnimationFrame(animate);
-            }, 100);
+            }, 300);
         }
 
-        /* META PIXEL TRACKING MANTIG'I */
         function initPixelTracking() {
             document.querySelectorAll('.track-call-btn').forEach(btn => {
                 btn.addEventListener('click', () => {
@@ -2231,7 +1464,6 @@
             }, { passive: true });
         }
 
-        /* AMOCRM INTEGRATSIYASI VA MODAL CHIQARISH */
         function submitLeadForm(e) {
             e.preventDefault();
             
@@ -2264,7 +1496,6 @@
                 return;
             }
 
-            // Meta Pixel Lead hodisasi
             if (typeof fbq === 'function') {
                 fbq('track', 'Lead', {
                     content_name: 'Qomus Landing Order',
@@ -2276,20 +1507,18 @@
             const fullPhone1 = "+998" + phone1;
             const fullPhone2 = "+998" + phone2;
 
-            // amoCRM formasi maydonlarini to'ldirish va jo'natish
             document.getElementById('amo_name').value = name;
             document.getElementById('amo_phone').value = fullPhone1;
             const fullNote = "📞 Асосий тел: " + fullPhone1 + "\n📱 Қўшимча тел: " + fullPhone2 + "\n⏳ Оқ доғлар тарихи: " + history;
             document.getElementById('amo_note').value = fullNote;
             document.getElementById('amoHiddenForm').submit();
 
-            // Thank You modal oynasini ochish
             document.getElementById('thankYouModal').style.display = 'flex';
             document.getElementById('orderForm').reset();
         }
 
         window.addEventListener('DOMContentLoaded', () => {
-            changeLanguage('uz_cyr'); // Boshlang'ich holatda o'zbek kirill tilida ochiladi
+            changeLanguage('uz_cyr'); // Dastlab O'zbek Kirill tilida ochiladi
             initInteractiveMarquee('imgViewport', 'imgMarqueeTrack', 0.9);
             initInteractiveMarquee('vidViewport', 'vidMarqueeTrack', 0.7);
             initPixelTracking();
