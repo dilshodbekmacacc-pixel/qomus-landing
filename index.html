@@ -19,9 +19,15 @@
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-      // fbq('init', 'YOUR_PIXEL_ID');
+      
+      fbq('init', '1625078522447841');
       fbq('track', 'PageView');
     </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=1625078522447841&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- END META PIXEL CODE -->
 
     <style>
         html {
@@ -1411,7 +1417,7 @@
     <div class="top-ticker">
         <div class="ticker-content" id="ticker-text">
             <span>
-                <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
                 O'zbekiston bo'ylab bepul yetkazib berish
             </span>
             <span>
@@ -1445,11 +1451,11 @@
                     <button class="lang-btn" id="btn-en" onclick="changeLanguage('en')">EN</button>
                 </div>
 
-                <a href="tel:+998712030408" class="btn-glow-green btn-phone-desktop">
+                <a href="tel:+998712030408" class="btn-glow-green btn-phone-desktop track-call-btn">
                     +998 71 203-04-08
                 </a>
 
-                <a href="tel:+998712030408" class="btn-glow-green btn-phone-mobile" title="Qo'ng'iroq qilish">
+                <a href="tel:+998712030408" class="btn-glow-green btn-phone-mobile track-call-btn" title="Qo'ng'iroq qilish">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                     </svg>
@@ -1851,7 +1857,7 @@
                         <!-- 1. ISM (MAJBURIY) -->
                         <div class="form-group">
                             <label id="lbl-name" for="clientName">Ismingiz *</label>
-                            <input type="text" id="clientName" class="form-input" placeholder="Ismingizni kiriting" required>
+                            <input type="text" id="clientName" class="form-input form-track-input" placeholder="Ismingizni kiriting" required>
                         </div>
 
                         <!-- 2. ASOSIY TELEFON (MAJBURIY: FAQAT RAQAM VA ANIQ 9 TA SON) -->
@@ -1859,7 +1865,7 @@
                             <label id="lbl-phone1" for="clientPhone1">Telefon raqami *</label>
                             <div class="form-input-wrap">
                                 <span class="flag-prefix">🇺🇿 +998</span>
-                                <input type="tel" id="clientPhone1" class="form-input phone-input" placeholder="901234567" required maxlength="9" pattern="[0-9]{9}" inputmode="numeric" oninput="validatePhoneInput(this)">
+                                <input type="tel" id="clientPhone1" class="form-input phone-input form-track-input" placeholder="901234567" required maxlength="9" pattern="[0-9]{9}" inputmode="numeric" oninput="validatePhoneInput(this)">
                             </div>
                         </div>
 
@@ -1868,14 +1874,14 @@
                             <label id="lbl-phone2" for="clientPhone2">Qo'shimcha telefon raqam *</label>
                             <div class="form-input-wrap">
                                 <span class="flag-prefix">🇺🇿 +998</span>
-                                <input type="tel" id="clientPhone2" class="form-input phone-input" placeholder="912345678" required maxlength="9" pattern="[0-9]{9}" inputmode="numeric" oninput="validatePhoneInput(this)">
+                                <input type="tel" id="clientPhone2" class="form-input phone-input form-track-input" placeholder="912345678" required maxlength="9" pattern="[0-9]{9}" inputmode="numeric" oninput="validatePhoneInput(this)">
                             </div>
                         </div>
 
                         <!-- 4. SAVOL: QACHONDAN BERI BOR (MAJBURIY) -->
                         <div class="form-group">
                             <label id="lbl-history" for="clientHistory">Oq dog'lar qachondan beri bor? (yil, oy) *</label>
-                            <input type="text" id="clientHistory" class="form-input" placeholder="Masalan: 2 yildan beri, yaqinda boshlandi..." required>
+                            <input type="text" id="clientHistory" class="form-input form-track-input" placeholder="Masalan: 2 yildan beri, yaqinda boshlandi..." required>
                         </div>
 
                         <!-- BUYURTMA TUGMASI (YASHIL PULS) -->
@@ -1921,22 +1927,22 @@
                 <div class="social-title" id="social-title">Biz ijtimoiy tarmoqlarda:</div>
                 <div class="social-links-grid">
                     
-                    <a href="https://t.me/qomus_vitiligo_oqdog" target="_blank" rel="noopener noreferrer" class="social-btn">
+                    <a href="https://t.me/qomus_vitiligo_oqdog" target="_blank" rel="noopener noreferrer" class="social-btn track-tg-btn" data-channel="Main_Telegram">
                         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
                         <span id="soc-main-tg">Asosiy kanal</span>
                     </a>
 
-                    <a href="https://t.me/qomus_natijalar" target="_blank" rel="noopener noreferrer" class="social-btn">
+                    <a href="https://t.me/qomus_natijalar" target="_blank" rel="noopener noreferrer" class="social-btn track-tg-btn" data-channel="Results_Telegram">
                         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
                         <span id="soc-results-tg">Natijalar kanali</span>
                     </a>
 
-                    <a href="https://www.youtube.com/@Qomusofficial" target="_blank" rel="noopener noreferrer" class="social-btn">
+                    <a href="https://www.youtube.com/@Qomusofficial" target="_blank" rel="noopener noreferrer" class="social-btn track-social-btn" data-network="YouTube">
                         <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                         <span>YouTube</span>
                     </a>
 
-                    <a href="https://www.instagram.com/qomus_official/" target="_blank" rel="noopener noreferrer" class="social-btn">
+                    <a href="https://www.instagram.com/qomus_official/" target="_blank" rel="noopener noreferrer" class="social-btn track-social-btn" data-network="Instagram">
                         <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                         <span>Instagram</span>
                     </a>
@@ -1957,7 +1963,7 @@
     </footer>
 
     <!-- FREEZE CALL BUTTON -->
-    <a href="tel:+998712030408" class="freeze-call-btn" title="Qo'ng'iroq qilish">
+    <a href="tel:+998712030408" class="freeze-call-btn track-call-btn" title="Qo'ng'iroq qilish">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
         </svg>
@@ -1970,12 +1976,12 @@
         </a>
     </div>
 
-    <!-- JAVASCRIPT KODI (TILLAR + MARQUEE SWIPE + AMOCRM SUBMIT + 9 TA RAQAM VALIDATSIYASI) -->
+    <!-- JAVASCRIPT KODI (TILLAR + MARQUEE SWIPE + META PIXEL MIKRO EVENTLAR + AMOCRM SUBMIT) -->
     <script>
         const translations = {
             uz: {
                 orderBtn: "Buyurtma berish",
-                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> O'zbekiston bo'ylab bepul yetkazib berish</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% tabiiy va xavfsiz tarkib</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ muvaffaqiyatli natijalar</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Buyurtmani tekshirib keyin to'lash imkoniyati</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> O'zbekiston bo'ylab bepul yetkazib berish</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% tabiiy va xavfsiz tarkib</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ muvaffaqiyatli natijalar</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Buyurtmani tekshirib keyin to'lash imkoniyati</span>",
                 title: "OQ DOG'LARDAN XALOS BO'LISH ENDI ILOJSIZ EMAS!",
                 subtitle: "Ushbu vosita vitiligo va teridagi turli muammolarni bartaraf etishda tabiiy yordam beradi. O'rganib qolish holatini keltirib chiqarmaydi — Natijalar tasdiqlangan!",
                 refTitle: "Teringizni avvalgi holatiga qaytarishning iloji yo'q deb o'ylasangiz – Adashasiz!",
@@ -2077,7 +2083,7 @@
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
-                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% табиий ва хавфсиз таркиб</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ муваффақиятли натижалар</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Буюртмани текшириб keyin тўлаш имконияти</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% табиий ва хавфсиз таркиб</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ муваффақиятли натижалар</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Буюртмани текшириб кейин тўлаш имконияти</span>",
                 title: "ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!",
                 subtitle: "Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!",
                 refTitle: "Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!",
@@ -2179,7 +2185,7 @@
             },
             ru: {
                 orderBtn: "Заказать",
-                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Бесплатная доставка по всему Узбекистану</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% натуральный и безопасный состав</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Более 20,000 успешных результатов</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Оплата только после проверки заказа</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Бесплатная доставка по всему Узбекистану</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% натуральный и безопасный состав</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Более 20,000 успешных результатов</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Оплата только после проверки заказа</span>",
                 title: "ИЗБАВЛЕНИЕ ОТ БЕЛЫХ ПЯТЕН ТЕПЕРЬ ВОЗМОЖНО!",
                 subtitle: "Данный комплекс эффективно поддерживает восстановление пигментации кожи при витилиго. Не вызывает привыкания — Результаты подтверждены!",
                 refTitle: "Если вы думаете, что вернуть коже прежний вид невозможно — вы ошибаетесь!",
@@ -2281,7 +2287,7 @@
             },
             en: {
                 orderBtn: "Order Now",
-                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Free delivery across Uzbekistan</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% natural and safe formula</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Over 20,000 successful results</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Cash on delivery upon personal inspection</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Free delivery across Uzbekistan</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% natural and safe formula</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Over 20,000 successful results</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Cash on delivery upon personal inspection</span>",
                 title: "GETTING RID OF WHITE SPOTS IS NO LONGER IMPOSSIBLE!",
                 subtitle: "This natural formula effectively supports skin pigmentation and immunity balance. Non-addictive — Results confirmed!",
                 refTitle: "If you think restoring your skin is impossible — you are wrong!",
@@ -2567,7 +2573,78 @@
             }, 100);
         }
 
-        /* 100% QAT'IY VALIDATSIYA VA AMOCRM INTEGRATSIYASI */
+        /* META PIXEL: ANIQ MIKRO-HODISALAR TRACKING MANTIG'I */
+        function initPixelTracking() {
+            // 1. QO'NG'IROQ TUGMALARI BOSILGANDA (Contact)
+            document.querySelectorAll('.track-call-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    if (typeof fbq === 'function') {
+                        fbq('track', 'Contact', { action: 'PhoneCall', phone: '+998712030408' });
+                        fbq('trackCustom', 'Click_PhoneCall');
+                    }
+                });
+            });
+
+            // 2. TELEGRAM HAVOLALARI BOSILGANDA (Contact)
+            document.querySelectorAll('.track-tg-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const channel = this.getAttribute('data-channel') || 'Telegram';
+                    if (typeof fbq === 'function') {
+                        fbq('track', 'Contact', { action: 'TelegramClick', channel: channel });
+                        fbq('trackCustom', 'Click_Telegram', { channel_name: channel });
+                    }
+                });
+            });
+
+            // 3. BOSHQA IJTIMOIY TARMOQLAR (YouTube / Instagram)
+            document.querySelectorAll('.track-social-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const network = this.getAttribute('data-network') || 'Social';
+                    if (typeof fbq === 'function') {
+                        fbq('trackCustom', 'Click_SocialNetwork', { network: network });
+                    }
+                });
+            });
+
+            // 4. FORMANI TO'LDIRISHNI BOSHLAGANDA (InitiateCheckout / Form_Started)
+            let formStartTracked = false;
+            document.querySelectorAll('.form-track-input').forEach(input => {
+                input.addEventListener('focus', () => {
+                    if (!formStartTracked) {
+                        formStartTracked = true;
+                        if (typeof fbq === 'function') {
+                            fbq('track', 'InitiateCheckout', { form: 'lead_form' });
+                            fbq('trackCustom', 'Form_Started');
+                        }
+                    }
+                }, { once: true });
+            });
+
+            // 5. SAYTDA 30 SONIYA BO'LGAN ISHONCHLI AUDITORIYA (EngagedVisitor)
+            setTimeout(() => {
+                if (typeof fbq === 'function') {
+                    fbq('trackCustom', 'Engaged_Visitor_30s');
+                }
+            }, 30000);
+
+            // 6. SAHIFANI 70% SCROLL QILGAN FOYDALANUVCHI
+            let scrollTracked = false;
+            window.addEventListener('scroll', () => {
+                if (scrollTracked) return;
+                const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+                if (scrollHeight > 0) {
+                    const scrollPercent = (window.scrollY / scrollHeight) * 100;
+                    if (scrollPercent >= 70) {
+                        scrollTracked = true;
+                        if (typeof fbq === 'function') {
+                            fbq('trackCustom', 'Scroll_70_Percent');
+                        }
+                    }
+                }
+            }, { passive: true });
+        }
+
+        /* 100% QAT'IY VALIDATSIYA, META LEAD EVENT VA AMOCRM INTEGRATSIYASI */
         function submitLeadForm(e) {
             e.preventDefault();
             
@@ -2620,7 +2697,7 @@
             document.getElementById('amo_name').value = name;
             document.getElementById('amo_phone').value = fullPhone1;
 
-            // Qo'shimcha ma'lumotlarni Primichaniyaga (Izohga) to'liq, aniq qilib yozish:
+            // Qo'shimcha ma'lumotlarni Primichaniyaga (Izohga) to'liq yozish:
             const fullNote = "📞 Asosiy tel: " + fullPhone1 + "\n📱 Qo'shimcha tel: " + fullPhone2 + "\n⏳ Oq dog'lar tarixi: " + history;
             document.getElementById('amo_note').value = fullNote;
 
@@ -2636,6 +2713,7 @@
             changeLanguage('uz');
             initInteractiveMarquee('imgViewport', 'imgMarqueeTrack', 0.9);
             initInteractiveMarquee('vidViewport', 'vidMarqueeTrack', 0.7);
+            initPixelTracking();
         });
     </script>
 </body>
