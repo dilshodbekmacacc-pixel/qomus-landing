@@ -224,7 +224,7 @@
             animation: pulseGlow 2s infinite;
         }
 
-        /* 1. HERO SECTION (2 SEKUNDDA GALMA-GAL ALMASHUVCHI RASM BLOKI) */
+        /* 1. HERO SECTION */
         .hero-section {
             padding: 24px 0 32px 0;
         }
@@ -264,30 +264,15 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
+        }
+
+        .product-img-large {
             width: 100%;
             max-width: 580px;
-            margin: 0 auto;
-            aspect-ratio: 1 / 1;
-        }
-
-        .hero-fader-img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+            height: auto;
             border-radius: 18px;
+            object-fit: cover;
             filter: drop-shadow(0 18px 36px rgba(0,0,0,0.14));
-            transition: opacity 0.6s ease-in-out;
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .hero-fader-img.active {
-            opacity: 1;
-            pointer-events: auto;
         }
 
         /* 2. PAIN SECTION */
@@ -1290,7 +1275,8 @@
 
             .hero-section { padding: 10px 0 16px 0; }
             .hero-grid { display: flex; flex-direction: column; gap: 14px; text-align: center; }
-            .hero-visual-card { order: 1; width: 100%; max-width: 340px; }
+            .hero-visual-card { order: 1; width: 100%; }
+            .product-img-large { max-width: 100%; max-height: 380px; border-radius: 14px; }
             .hero-content { order: 2; width: 100%; align-items: center; }
             .hero-title { font-size: 21px; margin-bottom: 12px; line-height: 1.35; }
             .hero-subtitle { font-size: 13.5px; line-height: 1.55; margin-bottom: 4px; }
@@ -1459,14 +1445,11 @@
         </div>
     </header>
 
-    <!-- 2. HERO SECTION (2 SEKUNDDA GALMA-GAL ALMASHUVCHI 2 TA RASM) -->
+    <!-- 2. HERO SECTION (BARQAROR BITTA RASM BILAN) -->
     <section class="hero-section">
         <div class="container hero-grid">
             <div class="hero-visual-card">
-                <!-- 1-rasm: Qomus flakoni -->
-                <img src="https://i.postimg.cc/zXXrt7NG/IMG-20260924-115226-440.png" alt="QOMUS Flakon" class="hero-fader-img active" id="heroImg1" fetchpriority="high">
-                <!-- 2-rasm: Yuzdagi oq dog' muammosi -->
-                <img src="https://i.postimg.cc/YqnwJF2h/IMG-20260924-115226-478.png" alt="Vitiligo Yuz" class="hero-fader-img" id="heroImg2" loading="lazy">
+                <img src="https://i.postimg.cc/zXXrt7NG/IMG-20260924-115226-440.png" alt="QOMUS Flakon" class="product-img-large" fetchpriority="high">
             </div>
 
             <div class="hero-content">
@@ -1898,7 +1881,7 @@
             
             <div class="footer-legal-box">
                 <p id="footer-disclaimer">
-                    DIQQAT: «QOMUS» preparati biologik faol qo'shimcha (BAD) hisoblanadi va dori vositasi emas. Natijalar organizmning individual xususiyatlariga qarab farq qilishi mumkin. Qabul qilishdan oldin mutaxassis bilan maslahatlashish tavsiya etiladi. SSV Ruxsatnomasi № 001425.
+                    DIQQAT: «QOMUS» preparati biologik faol qo'shimcha (BAD) hisoblanadi va dori vositasi emas. Natijalar organizmning individual xususiyatlariga qarab farq qilishi mumkin. Qabul qilishdan oldin mutaxassis bilan maslahatlashish tavsiya etiladi. SSV Ruxsatnomasi № 001425."
                 </p>
             </div>
 
@@ -1955,7 +1938,7 @@
         </a>
     </div>
 
-    <!-- JAVASCRIPT: TILLAR, HERO 2s ALMASHINUV VA SWIPE CAROUSEL -->
+    <!-- JAVASCRIPT: TILLAR VA SWIPE CAROUSEL MANTIG'I -->
     <script>
         const translations = {
             uz: {
@@ -2526,26 +2509,7 @@
             if (!isOpen) currentItem.classList.add('active');
         }
 
-        /* 1. HERO SECTION: HAR 2 SEKUNDDA ALMASHUVCHI FADER MOTOR */
-        function initHeroFader() {
-            const img1 = document.getElementById('heroImg1');
-            const img2 = document.getElementById('heroImg2');
-            if(!img1 || !img2) return;
-
-            let showFirst = true;
-            setInterval(() => {
-                showFirst = !showFirst;
-                if(showFirst) {
-                    img1.classList.add('active');
-                    img2.classList.remove('active');
-                } else {
-                    img2.classList.add('active');
-                    img1.classList.remove('active');
-                }
-            }, 2000);
-        }
-
-        /* 2 & 3. MARQUEE MOTOR (HAM PLAVNIY AUTO, HAM ERKIN SWIPE) */
+        /* MARQUEE MOTOR (HAM PLAVNIY AUTO, HAM ERKIN SWIPE) */
         function initInteractiveMarquee(viewportId, trackId, speed = 0.8) {
             const viewport = document.getElementById(viewportId);
             const track = document.getElementById(trackId);
@@ -2618,7 +2582,6 @@
 
         window.addEventListener('DOMContentLoaded', () => {
             changeLanguage('uz');
-            initHeroFader();
             initInteractiveMarquee('imgViewport', 'imgMarqueeTrack', 0.9);
             initInteractiveMarquee('vidViewport', 'vidMarqueeTrack', 0.7);
         });
