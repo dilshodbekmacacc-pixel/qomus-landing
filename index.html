@@ -1833,7 +1833,7 @@
         </div>
     </section>
 
-    <!-- 11. LEAD FORM: HAMMA KATAKLAR MAJBURIY + ANIQ 9 TA RAQAM -->
+    <!-- 11. LEAD FORM: ASLIY DIZAYN, 9 TA RAQAM CHEKLOVI VA AMOCRM INTEGRATSIYASI -->
     <section class="lead-section" id="lead-form">
         <div class="container">
             
@@ -1886,14 +1886,13 @@
                         <p class="form-privacy-note" id="form-privacy">🔒 Shaxsiy ma'lumotlaringiz maxfiyligi 100% kafolatlanadi.</p>
                     </form>
 
-                    <!-- ORQA FONDA AMOCRM UCHUN KO'RINMAS FORMA -->
+                    <!-- ORQA FONDA AMOCRM UCHUN KO'RINMAS FORMA (STANDART FIELDS) -->
                     <iframe name="amo_hidden_iframe" id="amo_hidden_iframe" style="display:none;"></iframe>
                     <form id="amoHiddenForm" method="POST" target="amo_hidden_iframe" action="https://forms.amocrm.ru/queue/add" style="display:none;">
                         <input type="hidden" name="form_id" value="1747798">
                         <input type="hidden" name="hash" value="24e6963abc7ee9c7741b94c3d67693a7">
                         <input type="hidden" name="fields[name_1]" id="amo_name">
-                        <input type="hidden" name="fields[983633_1]" id="amo_phone">
-                        <input type="hidden" name="fields[983635_1]" id="amo_phone2">
+                        <input type="hidden" name="fields[phone_1]" id="amo_phone">
                         <input type="hidden" name="fields[note_2]" id="amo_note">
                     </form>
                 </div>
@@ -1976,7 +1975,7 @@
         const translations = {
             uz: {
                 orderBtn: "Buyurtma berish",
-                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> O'zbekiston bo'ylab bepul yetkazib berish</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% tabiiy va xavfsiz tarkib</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ muvaffaqiyatli natijalar</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Buyurtmani tekshirib keyin to'lash imkoniyati</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> O'zbekiston bo'ylab bepul yetkazib berish</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% tabiiy va xavfsiz tarkib</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ muvaffaqiyatli natijalar</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Buyurtmani tekshirib keyin to'lash imkoniyati</span>",
                 title: "OQ DOG'LARDAN XALOS BO'LISH ENDI ILOJSIZ EMAS!",
                 subtitle: "Ushbu vosita vitiligo va teridagi turli muammolarni bartaraf etishda tabiiy yordam beradi. O'rganib qolish holatini keltirib chiqarmaydi — Natijalar tasdiqlangan!",
                 refTitle: "Teringizni avvalgi holatiga qaytarishning iloji yo'q deb o'ylasangiz – Adashasiz!",
@@ -2078,7 +2077,7 @@
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
-                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% табиий ва хавфсиз таркиб</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ муваффақиятли натижалар</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Буюртмани текшириб keyin тўлаш имконияти</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% табиий ва хавфсиз таркиб</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ муваффақиятли натижалар</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Буюртмани текшириб keyin тўлаш имконияти</span>",
                 title: "ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!",
                 subtitle: "Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!",
                 refTitle: "Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!",
@@ -2614,12 +2613,18 @@
                 });
             }
 
-            // 6. amoCRM formasi maydonlarini to'ldirish va fon rejimida yuborish
-            document.getElementById('amo_name').value = name;
-            document.getElementById('amo_phone').value = "+998" + phone1;
-            document.getElementById('amo_phone2').value = "+998" + phone2;
-            document.getElementById('amo_note').value = "Oq dog'lar tarixi: " + history;
+            const fullPhone1 = "+998" + phone1;
+            const fullPhone2 = "+998" + phone2;
 
+            // 6. amoCRM formasi maydonlarini to'ldirish
+            document.getElementById('amo_name').value = name;
+            document.getElementById('amo_phone').value = fullPhone1;
+
+            // Qo'shimcha ma'lumotlarni Primichaniyaga (Izohga) to'liq, aniq qilib yozish:
+            const fullNote = "📞 Asosiy tel: " + fullPhone1 + "\n📱 Qo'shimcha tel: " + fullPhone2 + "\n⏳ Oq dog'lar tarixi: " + history;
+            document.getElementById('amo_note').value = fullNote;
+
+            // Yuborish
             document.getElementById('amoHiddenForm').submit();
 
             // 7. Muvaffaqiyatli xabar va tozalash
