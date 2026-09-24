@@ -34,24 +34,36 @@
             padding: 0 16px;
         }
 
-        /* TOP TICKER BAR */
+        /* TOP TICKER BAR: JIDDIY VA PROFESSIONAL VIZUAL */
         .top-ticker {
             background: #00317F;
             color: #ffffff;
-            font-size: 11px;
+            font-size: 11.5px;
             font-weight: 700;
-            padding: 7px 0;
+            padding: 8px 0;
             overflow: hidden;
             white-space: nowrap;
+            letter-spacing: 0.3px;
         }
 
         .ticker-content {
             display: inline-block;
-            animation: marquee 25s linear infinite;
+            animation: marquee 28s linear infinite;
         }
 
         .ticker-content span {
-            margin-right: 25px;
+            margin-right: 32px;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .ticker-icon {
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background: #03C3D4;
+            border-radius: 50%;
         }
 
         @keyframes marquee {
@@ -505,16 +517,16 @@
             font-weight: 600;
         }
 
-        /* 4. YANGI CRO BLOK: KIMLAR UCHUN MOS? */
+        /* 4. YANGILANGAN "KIMLAR UCHUN TAVSIYA ETILADI" BLOKI (1:1 XIZMAT KO'RSATISH TARTIBI BILAN BIR XIL USLUBDA) */
         .target-group-section {
-            padding: 55px 0 65px 0;
+            padding: 60px 0 70px 0;
             background: #ffffff;
             border-bottom: 1px solid #e2ece7;
         }
 
         .target-header {
             text-align: center;
-            margin-bottom: 40px;
+            margin-bottom: 45px;
         }
 
         .target-header h2 {
@@ -538,53 +550,47 @@
         .target-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 22px;
         }
 
-        .target-card {
-            background: #f8fafc;
-            border: 1.5px solid #e2e8f0;
+        .target-card-clean {
+            background: #ffffff;
+            border: 1.5px solid #e2ece7;
             border-radius: 18px;
-            padding: 24px 20px;
-            text-align: center;
+            padding: 28px 22px;
             display: flex;
             flex-direction: column;
-            align-items: center;
+            text-align: left;
             transition: all 0.25s ease;
+            box-shadow: 0 4px 14px rgba(0, 49, 127, 0.02);
         }
 
-        .target-card:hover {
+        .target-card-clean:hover {
             border-color: #00a86b;
             transform: translateY(-3px);
-            background: #ffffff;
             box-shadow: 0 10px 25px rgba(0, 168, 107, 0.08);
         }
 
-        .target-icon-circle {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            background: #e6f7f0;
+        .target-num {
+            font-size: 28px;
+            font-weight: 900;
             color: #00a86b;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 22px;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
+            line-height: 1;
         }
 
-        .target-card h3 {
-            font-size: 15.5px;
+        .target-card-clean h3 {
+            font-size: 16.5px;
             font-weight: 800;
             color: #00317F;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             line-height: 1.35;
         }
 
-        .target-card p {
-            font-size: 13.5px;
-            line-height: 1.6;
-            color: #64748b;
+        .target-card-clean p {
+            font-size: 14px;
+            line-height: 1.65;
+            color: #475569;
             font-weight: 600;
         }
 
@@ -774,7 +780,7 @@
             line-height: 1.45;
         }
 
-        /* 7. YANGI CRO BLOK: ORALIQ TEZKOR CTA BANNER */
+        /* 7. ORALIQ TEZKOR CTA BANNER */
         .mid-cta-section {
             background: linear-gradient(135deg, #00317F 0%, #004d40 100%);
             padding: 45px 0;
@@ -1011,7 +1017,7 @@
             padding-top: 12px;
         }
 
-        /* 10. YANGILANGAN 3 QADAMDA BUYURTMA VA XAVFSIZLIK */
+        /* 10. BUYURTMA VA XIZMAT KO'RSATISH TARTIBI */
         .steps-section {
             padding: 60px 0 70px 0;
             background: #ffffff;
@@ -1070,6 +1076,7 @@
             font-weight: 900;
             color: #00a86b;
             margin-bottom: 12px;
+            line-height: 1;
         }
 
         .step-card h3 {
@@ -1357,13 +1364,14 @@
             .comp-item-content h3 { font-size: 15px; }
             .comp-item-content p { font-size: 13.5px; line-height: 1.6; }
 
-            .target-section { padding: 35px 0 40px 0; }
+            .target-group-section { padding: 35px 0 40px 0; }
             .target-header h2 { font-size: 20px; margin-bottom: 8px; }
             .target-header p { font-size: 13.5px; margin-bottom: 20px; }
-            .target-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-            .target-card { padding: 16px 12px; border-radius: 14px; }
-            .target-card h3 { font-size: 14px; }
-            .target-card p { font-size: 12px; }
+            .target-grid { grid-template-columns: 1fr; gap: 14px; }
+            .target-card-clean { padding: 20px 18px; border-radius: 16px; }
+            .target-num { font-size: 24px; margin-bottom: 8px; }
+            .target-card-clean h3 { font-size: 16px; margin-bottom: 6px; }
+            .target-card-clean p { font-size: 13.5px; }
 
             .results-section, .video-results-section { padding: 32px 0 40px 0; }
             .results-header-title, .video-header-title { font-size: 21px; margin-bottom: 20px; }
@@ -1436,13 +1444,13 @@
 </head>
 <body>
 
-    <!-- TOP TICKER BAR -->
+    <!-- TOP TICKER BAR: TOZA, JIDDIY VA TIBBIY USLUBDAGI HARAKATLANUVCHI BLOK -->
     <div class="top-ticker">
         <div class="ticker-content" id="ticker-text">
-            <span>🚚 O'zbekiston bo'ylab BEPUL yetkazib berish</span>
-            <span>🌿 100% Tabiiy tarkib</span>
-            <span>⭐ 20,000+ Mamnun mijozlar</span>
-            <span>🔐 100% Maxfiylik kafolatlanadi</span>
+            <span><i class="ticker-icon"></i> O'zbekiston bo'ylab bepul yetkazib berish</span>
+            <span><i class="ticker-icon"></i> 100% tabiiy va xavfsiz tarkib</span>
+            <span><i class="ticker-icon"></i> 20,000+ muvaffaqiyatli natijalar</span>
+            <span><i class="ticker-icon"></i> Buyurtmani tekshirib keyin to'lash imkoniyati</span>
         </div>
     </div>
 
@@ -1502,7 +1510,7 @@
         </div>
     </section>
 
-    <!-- 3. PAIN SECTION (OG'RIQ VA EMOTSIONAL BOG'LANISH) -->
+    <!-- 3. PAIN SECTION -->
     <section class="pain-section-ref">
         <div class="container">
             <div class="ref-header">
@@ -1550,7 +1558,7 @@
         </div>
     </section>
 
-    <!-- 4. YECHIM VA TABIIY TARKIB (OLDINGI 5-BLOK ENDI 4-O'RINDA) -->
+    <!-- 4. YECHIM VA TABIIY TARKIB -->
     <section class="composition-section">
         <div class="container">
             <div class="comp-header">
@@ -1610,7 +1618,7 @@
         </div>
     </section>
 
-    <!-- 5. YANGI CRO BLOK: KIMLAR UCHUN MOS? (AUDITORIYA SELEKTORI) -->
+    <!-- 4. YANGILANGAN "KIMLAR UCHUN TAVSIYA ETILADI" (BUYURTMA TARTIBI BILAN BIR XIL PROFESSIONAL STRUKTURA) -->
     <section class="target-group-section">
         <div class="container">
             <div class="target-header">
@@ -1619,23 +1627,23 @@
             </div>
 
             <div class="target-grid">
-                <div class="target-card">
-                    <div class="target-icon-circle">🔍</div>
+                <div class="target-card-clean">
+                    <div class="target-num">01</div>
                     <h3 id="tg-1-t">Yangi chiqqan dog'lar</h3>
                     <p id="tg-1-d">Terida yaqinda paydo bo'lgan oq nuqta va mayda dog'larning tarqalishini zudlik bilan to'xtatish uchun.</p>
                 </div>
-                <div class="target-card">
-                    <div class="target-icon-circle">⏳</div>
+                <div class="target-card-clean">
+                    <div class="target-num">02</div>
                     <h3 id="tg-2-t">Ko'p yillik vitiligo</h3>
                     <p id="tg-2-d">Yillar davomida turli malhamlardan natija ko'rmagan, terini ichkaridan oziqlantirishga muhtojlar uchun.</p>
                 </div>
-                <div class="target-card">
-                    <div class="target-icon-circle">🛡️</div>
+                <div class="target-card-clean">
+                    <div class="target-num">03</div>
                     <h3 id="tg-3-t">Kuchli stress oqibatlari</h3>
                     <p id="tg-3-d">Asabiylik, qo'rquv va immunitet pasayishi oqibatida yuzaga kelgan teri pigmenti yo'qolishida.</p>
                 </div>
-                <div class="target-card">
-                    <div class="target-icon-circle">🌿</div>
+                <div class="target-card-clean">
+                    <div class="target-num">04</div>
                     <h3 id="tg-4-t">Qaytalanishning oldini olish</h3>
                     <p id="tg-4-d">Terining sog'lom holatini uzoq muddat saqlash va organizmni zarur minerallar bilan to'yintirish uchun.</p>
                 </div>
@@ -1643,7 +1651,7 @@
         </div>
     </section>
 
-    <!-- 6. FOTO NATIJALAR (3s LOOP KARUSEL) -->
+    <!-- 5. FOTO NATIJALAR (3s LOOP KARUSEL) -->
     <section class="results-section">
         <div class="container">
             <h2 class="results-header-title" id="results-title">Mijozlar natijalari</h2>
@@ -1681,7 +1689,7 @@
         </div>
     </section>
 
-    <!-- 7. VIDEO SHARHLAR (3s LOOP KARUSEL) -->
+    <!-- 6. VIDEO SHARHLAR (3s LOOP KARUSEL) -->
     <section class="video-results-section">
         <div class="container">
             <h2 class="video-header-title" id="video-sec-title">Mijozlarimizning video fikrlari</h2>
@@ -1720,7 +1728,7 @@
         </div>
     </section>
 
-    <!-- 8. YANGI CRO BLOK: ORALIQ TEZKOR CTA (ISBOTLARDAN SO'NG DILDIRASIZ BUYURTMA) -->
+    <!-- 7. ORALIQ TEZKOR CTA -->
     <section class="mid-cta-section">
         <div class="container">
             <div class="mid-cta-box">
@@ -1731,7 +1739,7 @@
         </div>
     </section>
 
-    <!-- 9. SERTIFIKATLAR -->
+    <!-- 8. SERTIFIKATLAR -->
     <section class="cert-section">
         <div class="container">
             <div class="cert-header">
@@ -1765,7 +1773,7 @@
         </div>
     </section>
 
-    <!-- 10. FAQ AKORDEON (SHUBHALARNI YOPISH) -->
+    <!-- 9. FAQ AKORDEON -->
     <section class="faq-section">
         <div class="container">
             <div class="faq-header">
@@ -1857,7 +1865,7 @@
         </div>
     </section>
 
-    <!-- 11. YANGILANGAN 3 QADAMDA XAVFSIZ XARID TARTIBI (ISHONCH KAFOLATI) -->
+    <!-- 10. BUYURTMA VA XIZMAT KO'RSATISH TARTIBI -->
     <section class="steps-section">
         <div class="container">
             <div class="steps-header">
@@ -1885,7 +1893,7 @@
         </div>
     </section>
 
-    <!-- 12. ASOSIY LEAD FORMA VA RASM (1:1 SIMMETRIK) -->
+    <!-- 11. LEAD FORM: 1:1 FORM VA RASM -->
     <section class="lead-section" id="lead-form">
         <div class="container">
             
@@ -1942,7 +1950,7 @@
         </div>
     </section>
 
-    <!-- FOOTER: IJTIMOIY TARMOQLAR -->
+    <!-- 12. FOOTER -->
     <footer class="site-footer">
         <div class="container">
             
@@ -2011,7 +2019,7 @@
             uz: {
                 orderBtn: "Buyurtma berish",
                 heroCta: "Bepul maslahat olish",
-                ticker: "<span>🚚 O'zbekiston bo'ylab BEPUL yetkazib berish</span><span>🌿 100% Tabiiy tarkib</span><span>⭐ 20,000+ Mamnun mijozlar</span><span>🔐 100% Maxfiylik kafolatlanadi</span>",
+                ticker: "<span><i class='ticker-icon'></i> O'zbekiston bo'ylab bepul yetkazib berish</span><span><i class='ticker-icon'></i> 100% tabiiy va xavfsiz tarkib</span><span><i class='ticker-icon'></i> 20,000+ muvaffaqiyatli natijalar</span><span><i class='ticker-icon'></i> Buyurtmani tekshirib keyin to'lash imkoniyati</span>",
                 title: "OQ DOG'LARDAN XALOS BO'LISH ENDI ILOJSIZ EMAS!",
                 subtitle: "Ushbu vosita vitiligo va teridagi turli muammolarni bartaraf etishda tabiiy yordam beradi. O'rganib qolish holatini keltirib chiqarmaydi — Natijalar tasdiqlangan!",
                 refTitle: "Teringizni avvalgi holatiga qaytarishning iloji yo'q deb o'ylasangiz – Adashasiz!",
@@ -2125,7 +2133,7 @@
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
                 heroCta: "Бепул маслаҳат олиш",
-                ticker: "<span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span><span>🌿 100% Табиий таркиб</span><span>⭐ 20,000+ Мамнун мижозлар</span><span>🔐 100% Махфийлик кафолатланади</span>",
+                ticker: "<span><i class='ticker-icon'></i> Ўзбекистон бўйлаб бепул етказиб бериш</span><span><i class='ticker-icon'></i> 100% табиий ва хавфсиз таркиб</span><span><i class='ticker-icon'></i> 20,000+ муваффақиятли натижалар</span><span><i class='ticker-icon'></i> Буюртмани текшириб кейин тўлаш имконияти</span>",
                 title: "ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!",
                 subtitle: "Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!",
                 refTitle: "Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!",
@@ -2239,7 +2247,7 @@
             ru: {
                 orderBtn: "Заказать",
                 heroCta: "Получить консультацию",
-                ticker: "<span>🚚 БЕСПЛАТНАЯ доставка по всему Узбекистану</span><span>🌿 100% Натуральный состав</span><span>⭐ 20,000+ Довольных клиентов</span><span>🔐 100% Конфиденциальность</span>",
+                ticker: "<span><i class='ticker-icon'></i> Бесплатная доставка по всему Узбекистану</span><span><i class='ticker-icon'></i> 100% натуральный и безопасный состав</span><span><i class='ticker-icon'></i> Более 20,000 успешных результатов</span><span><i class='ticker-icon'></i> Оплата только после проверки заказа</span>",
                 title: "ИЗБАВЛЕНИЕ ОТ БЕЛЫХ ПЯТЕН ТЕПЕРЬ ВОЗМОЖНО!",
                 subtitle: "Данный комплекс эффективно поддерживает восстановление пигментации кожи при витилиго. Не вызывает привыкания — Результаты подтверждены!",
                 refTitle: "Если вы думаете, что вернуть коже прежний вид невозможно — вы ошибаетесь!",
@@ -2353,7 +2361,7 @@
             en: {
                 orderBtn: "Order Now",
                 heroCta: "Get Free Advice",
-                ticker: "<span>🚚 FREE delivery across Uzbekistan</span><span>🌿 100% Natural composition</span><span>⭐ 20,000+ Satisfied customers</span><span>🔐 100% Confidentiality guaranteed</span>",
+                ticker: "<span><i class='ticker-icon'></i> Free delivery across Uzbekistan</span><span><i class='ticker-icon'></i> 100% natural and safe formula</span><span><i class='ticker-icon'></i> Over 20,000 successful results</span><span><i class='ticker-icon'></i> Cash on delivery upon personal inspection</span>",
                 title: "GETTING RID OF WHITE SPOTS IS NO LONGER IMPOSSIBLE!",
                 subtitle: "This natural formula effectively supports skin pigmentation and immunity balance. Non-addictive — Results confirmed!",
                 refTitle: "If you think restoring your skin is impossible — you are wrong!",
