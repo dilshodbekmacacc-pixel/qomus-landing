@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QOMUS — Teri Pigmentatsiyasini Tiklovchi Tabiiy Majmua</title>
-    
+    <!-- Cyrillic to'liq qo'llab-quvvatlaydigan shrift -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800;900&subset=cyrillic,cyrillic-ext,latin&display=swap" rel="stylesheet">
@@ -283,7 +283,7 @@
     <!-- TOP TICKER BAR -->
     <div class="top-ticker">
         <div class="ticker-content" id="ticker-text">
-            <span><svg class="ticker-svg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span>
+            <span><svg class="ticker-svg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span>
             <span><svg class="ticker-svg" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg> 100% табиий ва хавфсиз таркиб</span>
             <span><svg class="ticker-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg> 20,000+ муваффақиятли натижалар</span>
             <span><svg class="ticker-svg" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg> Буюртмани текшириб кейин тўлаш имконияти</span>
@@ -390,7 +390,7 @@
         </div>
     </section>
 
-    <!-- 4. TARKIB -->
+    <!-- 4. YECHIM VA TABIIY TARKIB -->
     <section class="composition-section">
         <div class="container">
             <div class="comp-header">
@@ -481,7 +481,7 @@
         </div>
     </section>
 
-    <!-- 5. FOTO NATIJALAR (AVTO-HARAKAT VA ERKIN SWIPE) -->
+    <!-- 5. FOTO NATIJALAR (MARQUEE + SWIPE) -->
     <section class="results-section">
         <div class="container">
             <h2 class="results-header-title" id="results-title">Мижозлар натижалари</h2>
@@ -504,7 +504,7 @@
         </div>
     </section>
 
-    <!-- 6. VIDEO SHARHLAR (AVTO-HARAKAT VA ERKIN SWIPE) -->
+    <!-- 6. VIDEO SHARHLAR (MARQUEE + SWIPE) -->
     <section class="video-results-section">
         <div class="container">
             <h2 class="video-header-title" id="video-sec-title">Мижозларимизнинг видео фикрлари</h2>
@@ -564,7 +564,7 @@
         </div>
     </section>
 
-    <!-- 9. FAQ AKORDEON -->
+    <!-- 9. FAQ AKORDEON (8 TA TO'LIQ SAVOL) -->
     <section class="faq-section">
         <div class="container">
             <div class="faq-header">
@@ -574,7 +574,7 @@
 
             <div class="faq-container">
                 <div class="faq-item">
-                    <button class="faq-question-btn" onclick="toggleFaq(this)">
+                    <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
                         <span id="fq-1">Препарат ўрганиб қолиш (привыкание) ҳолатини келтириб чиқармайдими?</span>
                         <div class="faq-toggle-icon">+</div>
                     </button>
@@ -584,7 +584,7 @@
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question-btn" onclick="toggleFaq(this)">
+                    <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
                         <span id="fq-2">Биринчи сезиларли натижалар қачон кўрина бошлайди?</span>
                         <div class="faq-toggle-icon">+</div>
                     </button>
@@ -594,7 +594,7 @@
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question-btn" onclick="toggleFaq(this)">
+                    <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
                         <span id="fq-3">Капсулаларни қандай тартибда қабул қилиш тавсия этилади?</span>
                         <div class="faq-toggle-icon">+</div>
                     </button>
@@ -604,12 +604,52 @@
                 </div>
 
                 <div class="faq-item">
-                    <button class="faq-question-btn" onclick="toggleFaq(this)">
+                    <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
                         <span id="fq-4">Капсула қобиғи ҳалолми ва у нимадан тайёрланган?</span>
                         <div class="faq-toggle-icon">+</div>
                     </button>
                     <div class="faq-answer-pane">
                         <p id="fa-4">Капсула қобиғи фақатгина ҳалол сўйилган қора мол желатинидан тайёрланган бўлиб, ошқозонда осон эрийди ва ошқозон-ичак тизимига ҳеч қандай оғирлик қилмайди.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
+                        <span id="fq-5">Ҳомиладорлик ёки эмизиш даврида ичиш мумкинми?</span>
+                        <div class="faq-toggle-icon">+</div>
+                    </button>
+                    <div class="faq-answer-pane">
+                        <p id="fa-5">Ҳомиладорлик ва лактация даврида ҳар қандай биологик фаол қўшимчаларни қабул қилишдан олдин шахсий шифокор билан маслаҳатлашиш тавсия қилинади.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
+                        <span id="fq-6">Етказиб бериш хизмати қанча вақт олади ва у пулликми?</span>
+                        <div class="faq-toggle-icon">+</div>
+                    </button>
+                    <div class="faq-answer-pane">
+                        <p id="fa-6">Ўзбекистон бўйлаб барча вилоят, шаҳар ва туманларга етказиб бериш мутлақо БЕПУЛ амалга оширилади. Тошкент шаҳрида 24 соат ичида, вилоятларга 1-2 кун ичида қўлингизга етказилади.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
+                        <span id="fq-7">Тўловни маҳсулотни олгандан кейин қилса бўладими?</span>
+                        <div class="faq-toggle-icon">+</div>
+                    </button>
+                    <div class="faq-answer-pane">
+                        <p id="fa-7">Албатта! Бизда 100% ишончли тизим йўлга қўйилган: тўлов маҳсулотни курьердан қабул қилиб олиб, сифатига тўлиқ ишонч ҳосил қилганингиздан сўнг (нақд ёки пластик карта орқали) тўланади.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button type="button" class="faq-question-btn" onclick="toggleFaq(this)">
+                        <span id="fq-8">Бир флаконда нечта капсула бор ва у қанча вақтга етади?</span>
+                        <div class="faq-toggle-icon">+</div>
+                    </button>
+                    <div class="faq-answer-pane">
+                        <p id="fa-8">Бир флаконда 150 та юмшоқ желатин капсула мавжуд. Бу кунига қабул қилинадиган дозага қараб ўртача 1–1.5 ойлик тўлиқ муолажа курси учун етарли ҳисобланади.</p>
                     </div>
                 </div>
             </div>
@@ -774,12 +814,12 @@
         </div>
     </div>
 
-    <!-- JAVASCRIPT: BARCHA XATOLIKLARI TO'G'RILANGAN ISHCHI KOD -->
+    <!-- JAVASCRIPT: 100% ISHCHI VA BARCHA ELEMENTLARI ULANGA KOD -->
     <script>
         const translations = {
             uz: {
                 orderBtn: "Buyurtma berish",
-                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> O'zbekiston bo'ylab bepul yetkazib berish</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% tabiiy va xavfsiz tarkib</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ muvaffaqiyatli natijalar</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Buyurtmani tekshirib keyin to'lash imkoniyati</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> O'zbekiston bo'ylab bepul yetkazib berish</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% tabiiy va xavfsiz tarkib</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ muvaffaqiyatli natijalar</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Buyurtmani tekshirib keyin to'lash imkoniyati</span>",
                 title: "OQ DOG'LARDAN XALOS BO'LISH ENDI ILOJSIZ EMAS!",
                 subtitle: "Ushbu vosita vitiligo va teridagi turli muammolarni bartaraf etishda tabiiy yordam beradi. O'rganib qolish holatini keltirib chiqarmaydi — Natijalar tasdiqlangan!",
                 refTitle: "Teringizni avvalgi holatiga qaytarishning iloji yo'q deb o'ylasangiz – Adashasiz!",
@@ -848,7 +888,11 @@
                     { q: "Vosita o'rganib qolish holatini keltirib chiqarmaydimi?", a: "Yo'q, “QOMUS” 100% tabiiy sovuq presslangan qora sedana yog'i va vitaminlar majmuasidan iborat bo'lib, gormonlar yoki agressiv kimyoviy qo'shimchalar saqlamaydi. Shu sababli iste'mol to'xtatilganda ham o'rganib qolish yuzaga kelmaydi." },
                     { q: "Birinchi sezilarli natijalar qachon ko'rina boshlaydi?", a: "Organizmning o'ziga xosligi va teri holatiga qarab, odatda muntazam iste'molning 3–4 haftasida teri pigmentatsiyasida ijobiy o'zgarishlar, oq dog'lar chetlarining tabiiy tusga qayta boshlashi kuzatiladi." },
                     { q: "Kapsulalarni qanday tartibda qabul qilish tavsiya etiladi?", a: "Kattalar uchun kuniga 2 mahal (ertalab va kechqurun) ovqatdan 20-30 daqiqa oldin 1-2 tadan kapsulani iliq suv bilan ichish tavsiya etiladi. Aniq qabul tartibini mutaxassis telefon orqali bepul belgilab beradi." },
-                    { q: "Kapsula qobig'i halolmi va u nimadan tayyorlangan?", a: "Kapsula qobig'i faqatgina halol so'yilgan qoramol jelatinidan tayyorlangan bo'lib, me'dada oson eriydi va oshqozon-ichak tizimiga hech qanday og'irlik tug'dirmaydi." }
+                    { q: "Kapsula qobig'i halolmi va u nimadan tayyorlangan?", a: "Kapsula qobig'i faqatgina halol so'yilgan qoramol jelatinidan tayyorlangan bo'lib, me'dada oson eriydi va oshqozon-ichak tizimiga hech qanday og'irlik tug'dirmaydi." },
+                    { q: "Homiladorlik yoki emizish davrida ichish mumkinmi?", a: "Homiladorlik va laktatsiya davrida har qanday biologik faol qo'shimchalarni qabul qilishdan oldin shaxsiy shifokor bilan maslahatlashish tavsiya etiladi." },
+                    { q: "Yetkazib berish xizmati qancha vaqt oladi va u pullikmi?", a: "O'zbekiston bo'ylab barcha viloyat, shahar va tumanlarga yetkazib berish mutlaqo BEPUL amalga oshiriladi. Toshkent shahrida 24 soat ichida, viloyatlarga 1-2 kun ichida qo'lingizga yetkaziladi." },
+                    { q: "To'lovni mahsulotni olgandan keyin qilsa bo'ladimi?", a: "Albatta! Bizda 100% ishonchli tizim yo'lga qo'yilgan: to'lov mahsulotni kuryerdan qabul qilib olib, sifatiga to'liq ishonch hosil qilganingizdan so'ng (naqd yoki plastik karta orqali) to'lanadi." },
+                    { q: "Bir flakonda nechta kapsula bor va u qancha vaqtga yetadi?", a: "Bir flakonda 150 ta yumshoq jelatin kapsula mavjud. Bu kunlik qabul dozasiga qarab o'rtacha 1–1.5 oylik to'liq kurs uchun yetarli hisoblanadi." }
                 ],
                 stepsTitle: "BUYURTMA VA XIZMAT KO'RSATISH TARTIBI",
                 stepsDesc: "Siz uchun eng qulay, xavfsiz va shaffof tizimni taqdim etamiz",
@@ -881,7 +925,7 @@
             },
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
-                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% табиий ва хавфсиз таркиб</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ муваффақиятли натижалар</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Буюртмани текшириб кейин тўлаш имконияти</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% табиий ва хавфсиз таркиб</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ муваффақиятли натижалар</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Буюртмани текшириб кейин тўлаш имконияти</span>",
                 title: "ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!",
                 subtitle: "Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!",
                 refTitle: "Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!",
@@ -950,7 +994,11 @@
                     { q: "Препарат ўрганиб қолиш (привыкание) ҳолатини келтириб чиқармайдими?", a: "Йўқ, “QOMUS” 100% табиий совуқ прессланган қора седана ёғи ва витаминлар мажмуасидан иборат бўлиб, гормонлар ёки кимёвий қўшимчалар сақламайди. Шу сабабли қабул қилиш тўхтатилганда ҳам ўрганиб қолиш ҳолати кузатилмайди." },
                     { q: "Биринчи сезиларли натижалар қачон кўрина бошлайди?", a: "Организмнинг хусусияти ва касаллик даражасига қараб, одатда мунтазам фойдаланишнинг 3–4 ҳафтасида тери пигментациясида ижобий ўзгаришлар, оқ доғлар четларининг табиий рангга қайта бошлаши кузатилади." },
                     { q: "Капсулаларни қандай тартибда қабул қилиш тавсия этилади?", a: "Катталар учун кунига 2 маҳал (эрталаб ва кечқурун) овқатдан 20-30 дақиқа олдин 1-2 тадан капсулани илиқ сув билан ичиш тавсия этилади. Аниқ муолажа курсини мутахассис телефон орқали алоҳида белгилаб беради." },
-                    { q: "Капсула қобиғи ҳалолми ва у нимадан тайёрланган?", a: "Капсула қобиғи фақатгина ҳалол сўйилган қора мол желатинидан тайёрланган бўлиб, ошқозонда осон эрийди ва ошқозон-ичак тизимига ҳеч қандай оғирлик қилмайди." }
+                    { q: "Капсула қобиғи ҳалолми ва у нимадан тайёрланган?", a: "Капсула қобиғи фақатгина ҳалол сўйилган қора мол желатинидан тайёрланган бўлиб, ошқозонда осон эрийди ва ошқозон-ичак тизимига ҳеч қандай оғирлик қилмайди." },
+                    { q: "Ҳомиладорлик ёки эмизиш даврида ичиш мумкинми?", a: "Ҳомиладорлик ва лактация даврида ҳар қандай биологик фаол қўшимчаларни қабул қилишдан олдин шахсий шифокор билан маслаҳатлашиш тавсия қилинади." },
+                    { q: "Етказиб бериш хизмати қанча вақт олади ва у пулликми?", a: "Ўзбекистон бўйлаб барча вилоят, шаҳар ва туманларга етказиб бериш мутлақо БЕПУЛ амалга оширилади. Тошкент шаҳрида 24 соат ичида, вилоятларга 1-2 кун ичида қўлингизга етказилади." },
+                    { q: "Тўловни маҳсулотни олгандан keyin қилса бўладими?", a: "Албатта! Бизда 100% ишончли тизим йўлга қўйилган: тўлов маҳсулотни курьердан қабул қилиб олиб, сифатига тўлиқ ишонч ҳосил қилганингиздан сўнг (нақд ёки пластик карта орқали) тўланади." },
+                    { q: "Бир флаконда нечта капсула бор ва у қанча вақтга етади?", a: "Бир флаконда 150 та юмшоқ желатин капсула мавжуд. Бу кунига қабул қилинадиган дозага қараб ўртача 1–1.5 ойлик тўлиқ муолажа курси учун етарли ҳисобланади." }
                 ],
                 stepsTitle: "БУЮРТМА ВА ХИЗМАТ КЎРСАТИШ ТАРТИБИ",
                 stepsDesc: "Сиз учун энг қулай, хавфсиз ва шаффоф тизимни тақдим этамиз",
@@ -1052,7 +1100,11 @@
                     { q: "Вызывает ли препарат привыкание?", a: "Нет, «QOMUS» состоит из 100% натурального масла черного тмина холодного отжима и витаминного комплекса, без добавления гормонов и химии. Привыкание полностью исключено." },
                     { q: "Когда появляются первые заметные результаты?", a: "В зависимости от организма и стадии заболевания, первые положительные изменения в пигментации обычно наблюдаются уже через 3–4 недели регулярного курса." },
                     { q: "Как правильно принимать капсулы?", a: "Взрослым рекомендуется принимать по 1–2 капсулы 2 раза в день за 20–30 минут до еды, запивая теплой водой. Точный курс приема назначает специалист индивидуально." },
-                    { q: "Является ли оболочка капсулы халяльной?", a: "Оболочка капсулы изготовлена исключительно из халяльного говяжьего желатина, легко усваивается и не нагружает желудочно-кишечный тракт." }
+                    { q: "Является ли оболочка капсулы халяльной?", a: "Оболочка капсулы изготовлена исключительно из халяльного говяжьего желатина, легко усваивается и не нагружает желудочно-кишечный тракт." },
+                    { q: "Можно ли принимать во время беременности или ГВ?", a: "Во время беременности и грудного вскармливания перед приемом любых биодобавок рекомендуется проконсультироваться с лечащим врачом." },
+                    { q: "Сколько длится доставка и платная ли она?", a: "Доставка по всему Узбекистану абсолютно БЕСПЛАТНАЯ. По Ташкенту — в течение 24 часов, в регионы — за 1-2 рабочих дня прямо до двери." },
+                    { q: "Возможна ли оплата при получении товара?", a: "Да, у нас действует безопасная оплата: вы оплачиваете заказ (наличными или картой) только после проверки посылки при курьере." },
+                    { q: "Сколько капсул во флаконе и на сколько их хватает?", a: "Во флаконе 150 мягких желатиновых капсул. Этого хватает в среднем на 1–1.5 месяца полноценного лечебного курса." }
                 ],
                 stepsTitle: "ПОРЯДОК ЗАКАЗА И ОБСЛУЖИВАНИЯ",
                 stepsDesc: "Мы предоставляем максимально удобную, безопасную и прозрачную систему",
@@ -1085,7 +1137,7 @@
             },
             en: {
                 orderBtn: "Order Now",
-                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Free delivery across Uzbekistan</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% natural and safe formula</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Over 20,000 successful results</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Cash on delivery upon personal inspection</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Free delivery across Uzbekistan</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% natural and safe formula</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Over 20,000 successful results</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Cash on delivery upon personal inspection</span>",
                 title: "GETTING RID OF WHITE SPOTS IS NO LONGER IMPOSSIBLE!",
                 subtitle: "This natural formula effectively supports skin pigmentation and immunity balance. Non-addictive — Results confirmed!",
                 refTitle: "If you think restoring your skin is impossible — you are wrong!",
@@ -1154,7 +1206,11 @@
                     { q: "Is the product habit-forming or addictive?", a: "No, “QOMUS” consists of 100% cold-pressed black seed oil and vital vitamins without hormones or artificial chemicals, preventing any dependence." },
                     { q: "When do the first visible results appear?", a: "Depending on individual physiology, initial signs of natural repigmentation typically appear within 3 to 4 weeks of consistent intake." },
                     { q: "What is the recommended dosage?", a: "Adults take 1–2 capsules twice daily 20–30 minutes before meals with warm water. Individual regimen is tailored during free phone consultation." },
-                    { q: "Are the capsules certified Halal?", a: "Yes, capsule shells are made exclusively from 100% bovine Halal gelatin, ensuring effortless absorption in the digestive tract." }
+                    { q: "Are the capsules certified Halal?", a: "Yes, capsule shells are made exclusively from 100% bovine Halal gelatin, ensuring effortless absorption in the digestive tract." },
+                    { q: "Can it be taken during pregnancy or nursing?", a: "We advise consulting your personal physician before taking any dietary supplements during pregnancy or nursing." },
+                    { q: "How long does delivery take and is it free?", a: "Delivery is completely FREE across all regions of Uzbekistan. Delivered within 24 hours in Tashkent and 1-2 days to other provinces." },
+                    { q: "Can I pay upon package arrival?", a: "Yes! You can inspect the delivery before making payment via cash or local card." },
+                    { q: "How many capsules per bottle and how long does it last?", a: "Each bottle contains 150 soft gelatin capsules, providing a complete 1 to 1.5-month course." }
                 ],
                 stepsTitle: "HOW ORDERING & SERVICE WORKS",
                 stepsDesc: "We provide an exceptionally convenient, safe, and transparent experience",
@@ -1187,7 +1243,6 @@
             }
         };
 
-        // MATNNI XATOSIZ YANGILASH FUNKSIYASI (ELEMENT BORLIGINI TEKSHIRIB QO'YADI)
         function updateTextSafe(id, text) {
             const el = document.getElementById(id);
             if (el) el.textContent = text;
@@ -1270,7 +1325,7 @@
             updateTextSafe('faq-main-title', t.faqTitle);
             updateTextSafe('faq-main-sub', t.faqSub);
             if(t.faqs) {
-                for(let i = 1; i <= 4; i++) {
+                for(let i = 1; i <= 8; i++) {
                     if (t.faqs[i-1]) {
                         updateTextSafe('fq-' + i, t.faqs[i-1].q);
                         updateTextSafe('fa-' + i, t.faqs[i-1].a);
@@ -1335,13 +1390,11 @@
             input.value = val.slice(0, 9);
         }
 
-        /* 100% ISHONCHLI AVTO-HARAKAT VA SWIPE MOTOR */
         function initInteractiveMarquee(viewportId, trackId, speed = 0.8) {
             const viewport = document.getElementById(viewportId);
             const track = document.getElementById(trackId);
             if (!viewport || !track) return;
 
-            // Elementlarni duplikat qilish (cheksiz lenta effekti)
             track.innerHTML += track.innerHTML;
 
             let currentPos = 0;
@@ -1393,7 +1446,6 @@
                 halfWidth = track.scrollWidth / 2;
             });
 
-            // Rasmlar yuklanib bo'lishini kutib kenglikni to'g'ri hisoblash
             setTimeout(() => {
                 halfWidth = track.scrollWidth / 2;
                 requestAnimationFrame(animate);
@@ -1518,7 +1570,7 @@
         }
 
         window.addEventListener('DOMContentLoaded', () => {
-            changeLanguage('uz_cyr'); // Dastlab O'zbek Kirill tilida ochiladi
+            changeLanguage('uz_cyr');
             initInteractiveMarquee('imgViewport', 'imgMarqueeTrack', 0.9);
             initInteractiveMarquee('vidViewport', 'vidMarqueeTrack', 0.7);
             initPixelTracking();
