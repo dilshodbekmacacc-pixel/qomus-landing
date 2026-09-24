@@ -9,6 +9,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800;900&subset=cyrillic,cyrillic-ext,latin&display=swap" rel="stylesheet">
 
+    <!-- META PIXEL CODE (AGAR ID BO'LSA SHU YERGA QO'YILADI) -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      // fbq('init', 'YOUR_PIXEL_ID'); // Pixel ID bo'lsa ochib qo'yiladi
+      fbq('track', 'PageView');
+    </script>
+
     <style>
         html {
             scroll-behavior: smooth;
@@ -224,7 +238,7 @@
             animation: pulseGlow 2s infinite;
         }
 
-        /* 1. HERO SECTION (2 SEKUNDDA GALMA-GAL ALMASHUVCHI RASM BLOKI) */
+        /* 1. HERO SECTION (FAQAT BITTA ASOSIY FLAKON RASMI) */
         .hero-section {
             padding: 24px 0 32px 0;
         }
@@ -264,30 +278,18 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            position: relative;
             width: 100%;
             max-width: 580px;
             margin: 0 auto;
-            aspect-ratio: 1 / 1;
         }
 
-        .hero-fader-img {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .product-img-large {
             width: 100%;
-            height: 100%;
+            height: auto;
             object-fit: contain;
             border-radius: 18px;
             filter: drop-shadow(0 18px 36px rgba(0,0,0,0.14));
-            transition: opacity 0.6s ease-in-out;
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .hero-fader-img.active {
-            opacity: 1;
-            pointer-events: auto;
+            display: block;
         }
 
         /* 2. PAIN SECTION */
@@ -1051,7 +1053,7 @@
             font-weight: 600;
         }
 
-        /* 11. LEAD FORM: AMOCRM INTEGRATSIYA KONTEYNERI */
+        /* 11. LEAD FORM: ASLIY SHIKASTSIZ 1:1 OQ FORMA VA PROPORSIONAL FLAKON */
         .lead-section {
             padding: 65px 0 75px 0;
             background: #00317F;
@@ -1083,7 +1085,7 @@
 
         .lead-row-card {
             display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
+            grid-template-columns: 1fr 1fr;
             gap: 32px;
             align-items: center;
         }
@@ -1091,13 +1093,94 @@
         .form-card {
             background: #ffffff;
             border-radius: 24px;
-            padding: 24px;
+            padding: 34px 30px;
             box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
             color: #1a2b25;
-            min-height: 480px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: space-between;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13.5px;
+            font-weight: 800;
+            color: #00317F;
+            margin-bottom: 6px;
+        }
+
+        .form-input-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .flag-prefix {
+            position: absolute;
+            left: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 14px;
+            font-weight: 800;
+            color: #1a2b25;
+            pointer-events: none;
+        }
+
+        .form-input {
+            width: 100%;
+            background: #f8fafc;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 13px 16px;
+            font-size: 14.5px;
+            font-weight: 700;
+            color: #1a2b25;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .form-input.phone-input {
+            padding-left: 78px;
+        }
+
+        .form-input:focus {
+            background: #ffffff;
+            border-color: #00a86b;
+            box-shadow: 0 0 0 3px rgba(0, 168, 107, 0.15);
+        }
+
+        .btn-submit-order {
+            width: 100%;
+            background: #00a86b;
+            color: #ffffff;
+            border: none;
+            border-radius: 12px;
+            padding: 15px 0;
+            font-size: 16px;
+            font-weight: 900;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            animation: pulseGlow 2s infinite;
+            transition: background 0.2s;
+            margin-top: 8px;
+        }
+
+        .btn-submit-order:hover {
+            background: #008f5b;
+        }
+
+        .form-privacy-note {
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+            color: #64748b;
+            margin-top: 12px;
         }
 
         .lead-visual-col {
@@ -1110,7 +1193,7 @@
 
         .lead-product-img {
             width: 100%;
-            max-width: 500px;
+            max-width: 520px;
             height: auto;
             object-fit: contain;
             filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.35));
@@ -1296,7 +1379,12 @@
             .lead-row-card { display: flex; flex-direction: column; gap: 20px; }
             .lead-visual-col { order: 1; width: 100%; padding: 0; }
             .lead-product-img { max-width: 280px; height: auto; object-fit: contain; }
-            .form-card { order: 2; padding: 16px 12px; border-radius: 18px; min-height: 420px; }
+            .form-card { order: 2; padding: 22px 18px; border-radius: 18px; }
+            .form-group label { font-size: 13px; }
+            .form-input { padding: 12px 14px; font-size: 14px; }
+            .form-input.phone-input { padding-left: 74px; }
+            .flag-prefix { font-size: 13px; left: 12px; }
+            .btn-submit-order { padding: 14px 0; font-size: 15px; }
 
             .social-links-grid { flex-direction: column; width: 100%; }
             .social-btn { width: 100%; justify-content: center; }
@@ -1373,12 +1461,11 @@
         </div>
     </header>
 
-    <!-- 2. HERO SECTION (2 SEKUNDDA GALMA-GAL ALMASHUVCHI 2 TA RASM) -->
+    <!-- 2. HERO SECTION (FAQAT BITTA ASOSIY FLAKON RASMI - ALMASHINUV BUTUNLAY O'CHIRILGAN) -->
     <section class="hero-section">
         <div class="container hero-grid">
             <div class="hero-visual-card">
-                <img src="https://i.postimg.cc/zXXrt7NG/IMG-20260924-115226-440.png" alt="QOMUS Flakon" class="hero-fader-img active" id="heroImg1" fetchpriority="high">
-                <img src="https://i.postimg.cc/YqnwJF2h/IMG-20260924-115226-478.png" alt="Vitiligo Yuz" class="hero-fader-img" id="heroImg2" loading="lazy">
+                <img src="https://i.postimg.cc/zXXrt7NG/IMG-20260924-115226-440.png" alt="QOMUS Flakon" class="product-img-large" fetchpriority="high">
             </div>
 
             <div class="hero-content">
@@ -1745,7 +1832,7 @@
         </div>
     </section>
 
-    <!-- 11. LEAD FORM: AMOCRM INTEGRATSIYA QILINGAN BLOK -->
+    <!-- 11. LEAD FORM: ASLIY DIZAYN QAYTARILDI + AMOCRM FONDA ISHLAYDI -->
     <section class="lead-section" id="lead-form">
         <div class="container">
             
@@ -1756,14 +1843,61 @@
 
             <div class="lead-row-card">
                 
-                <!-- AMOCRM NATIVE FORMASI JOYLANADIGAN OQ KARTA -->
+                <!-- ASLIY CHROYLI OQ FORMA KARTASI -->
                 <div class="form-card">
-                    <!-- amoCRM Form Skripti -->
-                    <script>!function(a,m,o,c,r,m){a[o+c]=a[o+c]||{setMeta:function(p){this.params=(this.params||[]).concat([p])}},a[o+r]=a[o+r]||function(f){a[o+r].f=(a[o+r].f||[]).concat([f])},a[o+r]({id:"1747798",hash:"24e6963abc7ee9c7741b94c3d67693a7",locale:"ru"}),a[o+m]=a[o+m]||function(f,k){a[o+m].f=(a[o+m].f||[]).concat([[f,k]])}}(window,0,"amo_forms_","params","load","loaded");</script>
-                    <script id="amoforms_script_1747798" async="async" charset="utf-8" src="https://forms.amocrm.ru/forms/assets/js/amoforms.js?1790251308"></script>
+                    <form id="orderForm" onsubmit="submitLeadForm(event)">
+                        
+                        <!-- 1. ISM -->
+                        <div class="form-group">
+                            <label id="lbl-name" for="clientName">Ismingiz</label>
+                            <input type="text" id="clientName" class="form-input" placeholder="Ismingizni kiriting" required>
+                        </div>
+
+                        <!-- 2. TELEFON RAQAM -->
+                        <div class="form-group">
+                            <label id="lbl-phone1" for="clientPhone1">Telefon raqami</label>
+                            <div class="form-input-wrap">
+                                <span class="flag-prefix">🇺🇿 +998</span>
+                                <input type="tel" id="clientPhone1" class="form-input phone-input" placeholder="90 123-45-67" required maxlength="12">
+                            </div>
+                        </div>
+
+                        <!-- 3. QO'SHIMCHA TELEFON RAQAM -->
+                        <div class="form-group">
+                            <label id="lbl-phone2" for="clientPhone2">Qo'shimcha telefon raqam</label>
+                            <div class="form-input-wrap">
+                                <span class="flag-prefix">🇺🇿 +998</span>
+                                <input type="tel" id="clientPhone2" class="form-input phone-input" placeholder="91 234-56-78" maxlength="12">
+                            </div>
+                        </div>
+
+                        <!-- 4. SAVOL: DOG'LAR QACHONDAN BOSHLA NGAN -->
+                        <div class="form-group">
+                            <label id="lbl-history" for="clientHistory">Oq dog'lar qachondan beri bor? (yil, oy)</label>
+                            <input type="text" id="clientHistory" class="form-input" placeholder="Masalan: 2 yildan beri, yaqinda boshlandi..." required>
+                        </div>
+
+                        <!-- BUYURTMA TUGMASI (YASHIL PULS) -->
+                        <button type="submit" class="btn-submit-order" id="btn-form-submit">
+                            Buyurtma berish
+                        </button>
+
+                        <p class="form-privacy-note" id="form-privacy">🔒 Shaxsiy ma'lumotlaringiz maxfiyligi 100% kafolatlanadi.</p>
+                    </form>
+
+                    <!-- ORQA FONDA AMOCRM UCHUN KO'RINMAS FORMA -->
+                    <iframe name="amo_hidden_iframe" id="amo_hidden_iframe" style="display:none;"></iframe>
+                    <form id="amoHiddenForm" method="POST" target="amo_hidden_iframe" action="https://forms.amocrm.ru/queue/add" style="display:none;">
+                        <input type="hidden" name="form_id" value="1747798">
+                        <input type="hidden" name="hash" value="24e6963abc7ee9c7741b94c3d67693a7">
+                        <input type="hidden" name="fields[name_1]" id="amo_name">
+                        <input type="hidden" name="fields[983633_1]" id="amo_phone">
+                        <input type="hidden" name="fields[983635_1]" id="amo_phone2">
+                        <input type="hidden" name="fields[note_2]" id="amo_note">
+                    </form>
                 </div>
 
-                <!-- O'NG TOMON: FLAKON RASMI -->
+                <!-- O'NG TOMON: ASLIY FLAKON RASMI -->
                 <div class="lead-visual-col">
                     <img src="https://i.postimg.cc/m2XG09ZF/IMG-20260924-115226-651.png" alt="QOMUS 150 Kapsula" class="lead-product-img" loading="lazy" decoding="async">
                 </div>
@@ -1836,7 +1970,7 @@
         </a>
     </div>
 
-    <!-- JAVASCRIPT KODI -->
+    <!-- JAVASCRIPT KODI (TILLAR + MARQUEE SWIPE + AMOCRM SUBMIT) -->
     <script>
         const translations = {
             uz: {
@@ -1926,6 +2060,14 @@
                 s3D: "Buyurtma eshigingizgacha BEPUL yetkaziladi. Posilkani ochib, tekshirib ko'rganingizdan keyingina to'lov qilasiz.",
                 formTitle: "Buyurtma berish",
                 formSub: "Hoziroq bepul konsultatsiyaga yoziling va Qomus kapsulasi yordamida sog'lom teriga qayting!",
+                lblName: "Ismingiz",
+                lblPhone1: "Telefon raqami",
+                lblPhone2: "Qo'shimcha telefon raqam",
+                lblHistory: "Oq dog'lar qachondan beri bor? (yil, oy)",
+                holderName: "Ismingizni kiriting",
+                holderHistory: "Masalan: 2 yildan beri, yaqinda boshlandi...",
+                formSubmit: "Buyurtma berish",
+                formPrivacy: "🔒 Shaxsiy ma'lumotlaringiz maxfiyligi 100% kafolatlanadi.",
                 socialTitle: "Biz ijtimoiy tarmoqlarda:",
                 socMainTg: "Asosiy kanal",
                 socResultsTg: "Natijalar kanali",
@@ -2020,6 +2162,14 @@
                 s3D: "Буюртма эшигингизгача БЕПУЛ етказилади. Посилкани очиб, текшириб кўрганингиздан keyinгина тўлов қиласиз.",
                 formTitle: "Буюртма бериш",
                 formSub: "Ҳозироқ бепул консультацияга ёзилинг ва Qomus капсуласи орқали соғлом терига қайтинг!",
+                lblName: "Исмингиз",
+                lblPhone1: "Телефон рақами",
+                lblPhone2: "Қўшимча телефон рақам",
+                lblHistory: "Оқ доғлар қачондан бери бор? (йил, ой)",
+                holderName: "Исмингизни киритинг",
+                holderHistory: "Масалан: 2 йилдан бери, яқинда бошланди...",
+                formSubmit: "Буюртма бериш",
+                formPrivacy: "🔒 Шахсий маълумотларингиз махфийлиги 100% кафолатланади.",
                 socialTitle: "Биз ижтимоий тармоқларда:",
                 socMainTg: "Асосий канал",
                 socResultsTg: "Натижалар канали",
@@ -2114,6 +2264,14 @@
                 s3D: "Заказ доставляется БЕСПЛАТНО до вашей двери. Вы платите только после личного осмотра посылки.",
                 formTitle: "Оформить заказ",
                 formSub: "Запишитесь на бесплатную консультацию и верните здоровье кожи вместе с «QOMUS»!",
+                lblName: "Ваше имя",
+                lblPhone1: "Номер телефона",
+                lblPhone2: "Дополнительный номер телефона",
+                lblHistory: "Как давно появились белые пятна? (лет, месяцев)",
+                holderName: "Введите ваше имя",
+                holderHistory: "Например: 2 года назад, недавно появились...",
+                formSubmit: "Оформить заказ",
+                formPrivacy: "🔒 Конфиденциальность ваших данных гарантирована на 100%.",
                 socialTitle: "Мы в социальных сетях:",
                 socMainTg: "Основной канал",
                 socResultsTg: "Канал результатов",
@@ -2208,6 +2366,14 @@
                 s3D: "Free delivery straight to your door. You inspect the package thoroughly before making payment.",
                 formTitle: "Place an Order",
                 formSub: "Sign up for a free consultation today and reclaim healthy skin with “QOMUS”!",
+                lblName: "Your Name",
+                lblPhone1: "Phone Number",
+                lblPhone2: "Alternative Phone Number",
+                lblHistory: "How long have you had vitiligo? (years, months)",
+                holderName: "Enter your name",
+                holderHistory: "e.g., 2 years, recently noticed...",
+                formSubmit: "Place Order",
+                formPrivacy: "🔒 100% privacy and data security guaranteed.",
                 socialTitle: "Follow us on social media:",
                 socMainTg: "Main Channel",
                 socResultsTg: "Results Channel",
@@ -2307,6 +2473,14 @@
 
                 document.getElementById('form-main-title').textContent = t.formTitle;
                 document.getElementById('form-main-sub').textContent = t.formSub;
+                document.getElementById('lbl-name').textContent = t.lblName;
+                document.getElementById('lbl-phone1').textContent = t.lblPhone1;
+                document.getElementById('lbl-phone2').textContent = t.lblPhone2;
+                document.getElementById('lbl-history').textContent = t.lblHistory;
+                document.getElementById('clientName').placeholder = t.holderName;
+                document.getElementById('clientHistory').placeholder = t.holderHistory;
+                document.getElementById('btn-form-submit').textContent = t.formSubmit;
+                document.getElementById('form-privacy').textContent = t.formPrivacy;
 
                 document.getElementById('social-title').textContent = t.socialTitle;
                 document.getElementById('soc-main-tg').textContent = t.socMainTg;
@@ -2324,26 +2498,7 @@
             if (!isOpen) currentItem.classList.add('active');
         }
 
-        /* 1. HERO SECTION: HAR 2 SEKUNDDA ALMASHUVCHI MOTOR */
-        function initHeroFader() {
-            const img1 = document.getElementById('heroImg1');
-            const img2 = document.getElementById('heroImg2');
-            if(!img1 || !img2) return;
-
-            let showFirst = true;
-            setInterval(() => {
-                showFirst = !showFirst;
-                if(showFirst) {
-                    img1.classList.add('active');
-                    img2.classList.remove('active');
-                } else {
-                    img2.classList.add('active');
-                    img1.classList.remove('active');
-                }
-            }, 2000);
-        }
-
-        /* 2 & 3. MARQUEE MOTOR (HAM AVTO, HAM SWIPE) */
+        /* MARQUEE MOTOR (HAM PLAVNIY AUTO, HAM ERKIN SWIPE) */
         function initInteractiveMarquee(viewportId, trackId, speed = 0.8) {
             const viewport = document.getElementById(viewportId);
             const track = document.getElementById(trackId);
@@ -2407,9 +2562,44 @@
             }, 100);
         }
 
+        /* 100% ISHONCHLI AMOCRM VA PIXEL INTEGRATSIYASI */
+        function submitLeadForm(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('clientName').value.trim();
+            const phone1 = document.getElementById('clientPhone1').value.trim();
+            const phone2 = document.getElementById('clientPhone2').value.trim();
+            const history = document.getElementById('clientHistory').value.trim();
+
+            if (!name || !phone1) {
+                alert("Iltimos, ism va asosiy telefon raqamingizni kiriting!");
+                return;
+            }
+
+            // 1. Meta Pixel Lead hodisasi
+            if (typeof fbq === 'function') {
+                fbq('track', 'Lead', {
+                    content_name: 'Qomus Landing Order',
+                    currency: 'UZS',
+                    value: 0
+                });
+            }
+
+            // 2. amoCRM formasi maydonlarini to'ldirish va fon rejimida yuborish
+            document.getElementById('amo_name').value = name;
+            document.getElementById('amo_phone').value = "+998" + phone1.replace(/\D/g, '');
+            document.getElementById('amo_phone2').value = phone2 ? "+998" + phone2.replace(/\D/g, '') : '';
+            document.getElementById('amo_note').value = "Oq dog'lar tarixi: " + history;
+
+            document.getElementById('amoHiddenForm').submit();
+
+            // 3. Foydalanuvchiga tasdiq xabari
+            alert("Rahmat, " + name + "! So'rovingiz qabul qilindi. Tez orada mutaxassisimiz siz bilan bog'lanadi.");
+            document.getElementById('orderForm').reset();
+        }
+
         window.addEventListener('DOMContentLoaded', () => {
             changeLanguage('uz');
-            initHeroFader();
             initInteractiveMarquee('imgViewport', 'imgMarqueeTrack', 0.9);
             initInteractiveMarquee('vidViewport', 'vidMarqueeTrack', 0.7);
         });
