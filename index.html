@@ -224,7 +224,7 @@
             animation: pulseGlow 2s infinite;
         }
 
-        /* 1. HERO SECTION */
+        /* 1. HERO SECTION (2 SEKUNDDA GALMA-GAL ALMASHUVCHI RASM BLOKI) */
         .hero-section {
             padding: 24px 0 32px 0;
         }
@@ -264,15 +264,30 @@
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-
-        .product-img-large {
+            position: relative;
             width: 100%;
             max-width: 580px;
-            height: auto;
+            margin: 0 auto;
+            aspect-ratio: 1 / 1;
+        }
+
+        .hero-fader-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
             border-radius: 18px;
-            object-fit: cover;
             filter: drop-shadow(0 18px 36px rgba(0,0,0,0.14));
+            transition: opacity 0.6s ease-in-out;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .hero-fader-img.active {
+            opacity: 1;
+            pointer-events: auto;
         }
 
         /* 2. PAIN SECTION */
@@ -583,7 +598,7 @@
             font-weight: 600;
         }
 
-        /* 5 & 6. TOP TICKER KABI PLAVNIY (TUZATILGAN INFINITE MARQUEE) ALBOMLAR */
+        /* 5 & 6. SWIPE QILSA BO'LADIGAN VA AUTO-HARAKATLANUVCHI KARUSEL */
         .results-section,
         .video-results-section {
             padding: 55px 0 65px 0;
@@ -613,13 +628,18 @@
             margin-bottom: 35px;
         }
 
-        /* SILIQ MARQUEE KONTEYNERI */
         .marquee-viewport {
             width: 100vw;
             margin-left: calc(-50vw + 50%);
             overflow: hidden;
+            cursor: grab;
             user-select: none;
+            touch-action: pan-y;
             padding: 10px 0;
+        }
+
+        .marquee-viewport:active {
+            cursor: grabbing;
         }
 
         .marquee-track {
@@ -627,23 +647,6 @@
             width: max-content;
             gap: 20px;
             will-change: transform;
-        }
-
-        .marquee-track-img {
-            animation: continuousScroll 45s linear infinite;
-        }
-
-        .marquee-track-vid {
-            animation: continuousScroll 55s linear infinite;
-        }
-
-        .marquee-viewport:hover .marquee-track {
-            animation-play-state: paused; /* Sichqoncha olib borilganda to'xtab turadi */
-        }
-
-        @keyframes continuousScroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
         }
 
         .result-card-pair {
@@ -655,6 +658,7 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.06);
             width: 520px;
             flex-shrink: 0;
+            pointer-events: none;
         }
 
         .result-col {
@@ -714,6 +718,7 @@
         .video-card-footer {
             padding: 16px 20px;
             background: #ffffff;
+            pointer-events: none;
         }
 
         .video-card-title {
@@ -764,7 +769,7 @@
             animation: pulseGlow 2s infinite;
         }
 
-        /* 8. SERTIFIKATLAR (KESILMAYDIGAN VA YUQORI SIFATLI RASMLAR) */
+        /* 8. SERTIFIKATLAR */
         .cert-section {
             padding: 55px 0 50px 0;
             background: #ffffff;
@@ -1285,8 +1290,7 @@
 
             .hero-section { padding: 10px 0 16px 0; }
             .hero-grid { display: flex; flex-direction: column; gap: 14px; text-align: center; }
-            .hero-visual-card { order: 1; width: 100%; }
-            .product-img-large { max-width: 100%; max-height: 380px; border-radius: 14px; }
+            .hero-visual-card { order: 1; width: 100%; max-width: 340px; }
             .hero-content { order: 2; width: 100%; align-items: center; }
             .hero-title { font-size: 21px; margin-bottom: 12px; line-height: 1.35; }
             .hero-subtitle { font-size: 13.5px; line-height: 1.55; margin-bottom: 4px; }
@@ -1404,7 +1408,7 @@
     <div class="top-ticker">
         <div class="ticker-content" id="ticker-text">
             <span>
-                <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
                 O'zbekiston bo'ylab bepul yetkazib berish
             </span>
             <span>
@@ -1455,11 +1459,14 @@
         </div>
     </header>
 
-    <!-- 2. HERO SECTION -->
+    <!-- 2. HERO SECTION (2 SEKUNDDA GALMA-GAL ALMASHUVCHI 2 TA RASM) -->
     <section class="hero-section">
         <div class="container hero-grid">
             <div class="hero-visual-card">
-                <img src="https://i.postimg.cc/zXXrt7NG/IMG-20260924-115226-440.png" alt="QOMUS Flakon" class="product-img-large" fetchpriority="high">
+                <!-- 1-rasm: Qomus flakoni -->
+                <img src="https://i.postimg.cc/zXXrt7NG/IMG-20260924-115226-440.png" alt="QOMUS Flakon" class="hero-fader-img active" id="heroImg1" fetchpriority="high">
+                <!-- 2-rasm: Yuzdagi oq dog' muammosi -->
+                <img src="https://i.postimg.cc/YqnwJF2h/IMG-20260924-115226-478.png" alt="Vitiligo Yuz" class="hero-fader-img" id="heroImg2" loading="lazy">
             </div>
 
             <div class="hero-content">
@@ -1615,28 +1622,15 @@
         </div>
     </section>
 
-    <!-- 5. FOTO NATIJALAR (TOP TICKER KABI SILIQ VA CHEKSIZ MARQUEE HARAKATI) -->
+    <!-- 5. FOTO NATIJALAR (HAM AVTO O'TADIGAN, HAM SWIPE BO'LADIGAN) -->
     <section class="results-section">
         <div class="container">
             <h2 class="results-header-title" id="results-title">Mijozlar natijalari</h2>
         </div>
 
-        <div class="marquee-viewport">
-            <div class="marquee-track marquee-track-img" id="imgMarqueeTrack">
-                <!-- 1-to'plam 11 ta juftlik -->
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/brqhjH2r/IMG-20260924-115230-717.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/Y96HVyjW/IMG-20260924-115231-698.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/RhGzC67S/IMG-20260924-115231-600.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/3JJTS1hh/IMG-20260924-115230-855.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/vTGsdL6x/IMG-20260924-115231-220.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/fWvsfF62/IMG-20260924-115231-494.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/kGwdM6xs/IMG-20260924-115231-501.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/hjLBw3hn/IMG-20260924-115236-527.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/Yqprck1Z/IMG-20260924-115243-634.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/MT7S4rXG/IMG-20260924-115231-684.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/TYCRfS0R/IMG-20260924-115236-023.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/15J9sTB4/IMG-20260924-115236-139.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/wjrgsmST/IMG-20260924-115236-145.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/hjWn2qDC/IMG-20260924-115236-389.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/bw5p2t4F/IMG-20260924-115236-429.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/yYV1qBmY/IMG-20260924-115236-282.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/CLFhyYGw/IMG-20260924-115236-542.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/vBrsjSDb/IMG-20260924-115236-914.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/NfpgBVD4/IMG-20260924-115236-859.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/dtqsMv2c/IMG-20260924-115243-846.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
-                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/jq6xkCJ9/IMG-20260924-115243-265.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/NfgshY1V/IMG-20260924-115243-398.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
-
-                <!-- 2-to'plam (Uzluksiz aylanish uchun avtomatik dublyaj) -->
+        <div class="marquee-viewport" id="imgViewport">
+            <div class="marquee-track" id="imgMarqueeTrack">
+                <!-- 11 ta juftlik rasmlar -->
                 <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/brqhjH2r/IMG-20260924-115230-717.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/Y96HVyjW/IMG-20260924-115231-698.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
                 <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/RhGzC67S/IMG-20260924-115231-600.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/3JJTS1hh/IMG-20260924-115230-855.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
                 <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/vTGsdL6x/IMG-20260924-115231-220.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/fWvsfF62/IMG-20260924-115231-494.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
@@ -1652,16 +1646,16 @@
         </div>
     </section>
 
-    <!-- 6. VIDEO SHARHLAR (TOP TICKER KABI SILIQ VA CHEKSIZ MARQUEE HARAKATI) -->
+    <!-- 6. VIDEO SHARHLAR (HAM AVTO O'TADIGAN, HAM SWIPE BO'LADIGAN) -->
     <section class="video-results-section">
         <div class="container">
             <h2 class="video-header-title" id="video-sec-title">Mijozlarimizning video fikrlari</h2>
             <p class="video-header-sub" id="video-sec-sub">Qomus vositasidan foydalangan yurtdoshlarimiz bilan samimiy suhbatlar</p>
         </div>
 
-        <div class="marquee-viewport">
-            <div class="marquee-track marquee-track-vid" id="vidMarqueeTrack">
-                <!-- 1-to'plam 10 ta video -->
+        <div class="marquee-viewport" id="vidViewport">
+            <div class="marquee-track" id="vidMarqueeTrack">
+                <!-- 10 ta video -->
                 <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/WTWcRNIFo0E" title="Qomus video 1" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-1">Oq dog'lardan qutulish | 36 yillik masala hal qilindi</h4></div></div>
                 <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/kU2up3x5aow" title="Qomus video 2" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-2">Bu muolajadan so'ng oq dog'larim yo'qolib ketdi</h4></div></div>
                 <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/NMz7hrU2C50" title="Qomus video 3" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-3">Qomus vositasi bilan teri pigmentining tiklanish jarayoni</h4></div></div>
@@ -1672,18 +1666,6 @@
                 <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/LJZAX06GEsM" title="Qomus video 8" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-8">Parvarish bosqichlari va ijobiy o'zgarishlar</h4></div></div>
                 <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/Sfjj0u_MRko" title="Qomus video 9" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-9">Qomus vositasi bo'yicha mijoz sharhi</h4></div></div>
                 <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/u_kBYJorENs" title="Qomus video 10" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-10">Haqiqiy natijalar: mijoz bilan jonli muloqot</h4></div></div>
-
-                <!-- 2-to'plam (Uzluksiz aylanish uchun dublyaj) -->
-                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/WTWcRNIFo0E" title="Qomus video 1" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title">Oq dog'lardan qutulish | 36 yillik masala hal qilindi</h4></div></div>
-                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/kU2up3x5aow" title="Qomus video 2" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title">Bu muolajadan so'ng oq dog'larim yo'qolib ketdi</h4></div></div>
-                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/NMz7hrU2C50" title="Qomus video 3" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title">Qomus vositasi bilan teri pigmentining tiklanish jarayoni</h4></div></div>
-                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/65pHdT3o-Tg" title="Qomus video 4" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title">Vitiligo va oq dog'lar bo'yicha mijozimiz tajribasi</h4></div></div>
-                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/Y-YUxhdenT4" title="Qomus video 5" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title">Qomus bilan teridagi o'zgarishlar va natija</h4></div></div>
-                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/bg32I_CkAY0" title="Qomus video 6" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title">Vitiligo muammosidan so'ng sog'lom teriga qaytish</h4></div></div>
-                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/lrEqBIDziwM" title="Qomus video 7" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title">Oq dog'lar profilaktikasi va terining tiklanishi</h4></div></div>
-                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/LJZAX06GEsM" title="Qomus video 8" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title">Parvarish bosqichlari va ijobiy o'zgarishlar</h4></div></div>
-                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/Sfjj0u_MRko" title="Qomus video 9" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title">Qomus vositasi bo'yicha mijoz sharhi</h4></div></div>
-                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/u_kBYJorENs" title="Qomus video 10" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title">Haqiqiy natijalar: mijoz bilan jonli muloqot</h4></div></div>
             </div>
         </div>
     </section>
@@ -1973,7 +1955,7 @@
         </a>
     </div>
 
-    <!-- JAVASCRIPT: BARCHA TILLAR VA FORMA MANTIG'I -->
+    <!-- JAVASCRIPT: TILLAR, HERO 2s ALMASHINUV VA SWIPE CAROUSEL -->
     <script>
         const translations = {
             uz: {
@@ -2544,6 +2526,89 @@
             if (!isOpen) currentItem.classList.add('active');
         }
 
+        /* 1. HERO SECTION: HAR 2 SEKUNDDA ALMASHUVCHI FADER MOTOR */
+        function initHeroFader() {
+            const img1 = document.getElementById('heroImg1');
+            const img2 = document.getElementById('heroImg2');
+            if(!img1 || !img2) return;
+
+            let showFirst = true;
+            setInterval(() => {
+                showFirst = !showFirst;
+                if(showFirst) {
+                    img1.classList.add('active');
+                    img2.classList.remove('active');
+                } else {
+                    img2.classList.add('active');
+                    img1.classList.remove('active');
+                }
+            }, 2000);
+        }
+
+        /* 2 & 3. MARQUEE MOTOR (HAM PLAVNIY AUTO, HAM ERKIN SWIPE) */
+        function initInteractiveMarquee(viewportId, trackId, speed = 0.8) {
+            const viewport = document.getElementById(viewportId);
+            const track = document.getElementById(trackId);
+            if (!viewport || !track) return;
+
+            const originalHTML = track.innerHTML;
+            track.innerHTML = originalHTML + originalHTML;
+
+            let currentPos = 0;
+            let isDragging = false;
+            let startX = 0;
+            let dragOffset = 0;
+            let halfWidth = track.scrollWidth / 2;
+
+            function animate() {
+                if (!isDragging) {
+                    currentPos -= speed;
+                }
+
+                if (Math.abs(currentPos) >= halfWidth) {
+                    currentPos = 0;
+                } else if (currentPos > 0) {
+                    currentPos = -halfWidth;
+                }
+
+                track.style.transform = `translateX(${currentPos}px)`;
+                requestAnimationFrame(animate);
+            }
+
+            function onStart(x) {
+                isDragging = true;
+                startX = x;
+                dragOffset = currentPos;
+            }
+
+            function onMove(x) {
+                if (!isDragging) return;
+                const diff = x - startX;
+                currentPos = dragOffset + diff;
+            }
+
+            function onEnd() {
+                isDragging = false;
+            }
+
+            viewport.addEventListener('mousedown', (e) => onStart(e.pageX));
+            window.addEventListener('mousemove', (e) => onMove(e.pageX));
+            window.addEventListener('mouseup', onEnd);
+
+            viewport.addEventListener('touchstart', (e) => onStart(e.touches[0].pageX), { passive: true });
+            window.addEventListener('touchmove', (e) => onMove(e.touches[0].pageX), { passive: true });
+            window.addEventListener('touchend', onEnd);
+
+            window.addEventListener('resize', () => {
+                halfWidth = track.scrollWidth / 2;
+            });
+
+            setTimeout(() => {
+                halfWidth = track.scrollWidth / 2;
+                requestAnimationFrame(animate);
+            }, 100);
+        }
+
         function submitLeadForm(e) {
             e.preventDefault();
             const name = document.getElementById('clientName').value;
@@ -2553,6 +2618,9 @@
 
         window.addEventListener('DOMContentLoaded', () => {
             changeLanguage('uz');
+            initHeroFader();
+            initInteractiveMarquee('imgViewport', 'imgMarqueeTrack', 0.9);
+            initInteractiveMarquee('vidViewport', 'vidMarqueeTrack', 0.7);
         });
     </script>
 </body>
