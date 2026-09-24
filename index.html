@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800;900&subset=cyrillic,cyrillic-ext,latin&display=swap" rel="stylesheet">
 
-    <!-- META PIXEL CODE (AGAR ID BO'LSA SHU YERGA QO'YILADI) -->
+    <!-- META PIXEL CODE -->
     <script>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -19,7 +19,7 @@
       t.src=v;s=b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t,s)}(window, document,'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-      // fbq('init', 'YOUR_PIXEL_ID'); // Pixel ID bo'lsa ochib qo'yiladi
+      // fbq('init', 'YOUR_PIXEL_ID');
       fbq('track', 'PageView');
     </script>
 
@@ -238,7 +238,7 @@
             animation: pulseGlow 2s infinite;
         }
 
-        /* 1. HERO SECTION (FAQAT BITTA ASOSIY FLAKON RASMI) */
+        /* 1. HERO SECTION */
         .hero-section {
             padding: 24px 0 32px 0;
         }
@@ -1053,7 +1053,7 @@
             font-weight: 600;
         }
 
-        /* 11. LEAD FORM: ASLIY SHIKASTSIZ 1:1 OQ FORMA VA PROPORSIONAL FLAKON */
+        /* 11. LEAD FORM: ASLIY DIZAYN VA FAQAT 9 TA RAQAM TALABI */
         .lead-section {
             padding: 65px 0 75px 0;
             background: #00317F;
@@ -1146,6 +1146,7 @@
 
         .form-input.phone-input {
             padding-left: 78px;
+            letter-spacing: 1px;
         }
 
         .form-input:focus {
@@ -1461,7 +1462,7 @@
         </div>
     </header>
 
-    <!-- 2. HERO SECTION (FAQAT BITTA ASOSIY FLAKON RASMI - ALMASHINUV BUTUNLAY O'CHIRILGAN) -->
+    <!-- 2. HERO SECTION -->
     <section class="hero-section">
         <div class="container hero-grid">
             <div class="hero-visual-card">
@@ -1832,7 +1833,7 @@
         </div>
     </section>
 
-    <!-- 11. LEAD FORM: ASLIY DIZAYN QAYTARILDI + AMOCRM FONDA ISHLAYDI -->
+    <!-- 11. LEAD FORM: HAMMA KATAKLAR MAJBURIY + ANIQ 9 TA RAQAM -->
     <section class="lead-section" id="lead-form">
         <div class="container">
             
@@ -1843,37 +1844,37 @@
 
             <div class="lead-row-card">
                 
-                <!-- ASLIY CHROYLI OQ FORMA KARTASI -->
+                <!-- ASLIY CHROYLI FORMA KARTASI -->
                 <div class="form-card">
                     <form id="orderForm" onsubmit="submitLeadForm(event)">
                         
-                        <!-- 1. ISM -->
+                        <!-- 1. ISM (MAJBURIY) -->
                         <div class="form-group">
-                            <label id="lbl-name" for="clientName">Ismingiz</label>
+                            <label id="lbl-name" for="clientName">Ismingiz *</label>
                             <input type="text" id="clientName" class="form-input" placeholder="Ismingizni kiriting" required>
                         </div>
 
-                        <!-- 2. TELEFON RAQAM -->
+                        <!-- 2. ASOSIY TELEFON (MAJBURIY: FAQAT RAQAM VA ANIQ 9 TA SON) -->
                         <div class="form-group">
-                            <label id="lbl-phone1" for="clientPhone1">Telefon raqami</label>
+                            <label id="lbl-phone1" for="clientPhone1">Telefon raqami *</label>
                             <div class="form-input-wrap">
                                 <span class="flag-prefix">🇺🇿 +998</span>
-                                <input type="tel" id="clientPhone1" class="form-input phone-input" placeholder="90 123-45-67" required maxlength="12">
+                                <input type="tel" id="clientPhone1" class="form-input phone-input" placeholder="901234567" required maxlength="9" pattern="[0-9]{9}" inputmode="numeric" oninput="validatePhoneInput(this)">
                             </div>
                         </div>
 
-                        <!-- 3. QO'SHIMCHA TELEFON RAQAM -->
+                        <!-- 3. QO'SHIMCHA TELEFON (MAJBURIY: FAQAT RAQAM VA ANIQ 9 TA SON) -->
                         <div class="form-group">
-                            <label id="lbl-phone2" for="clientPhone2">Qo'shimcha telefon raqam</label>
+                            <label id="lbl-phone2" for="clientPhone2">Qo'shimcha telefon raqam *</label>
                             <div class="form-input-wrap">
                                 <span class="flag-prefix">🇺🇿 +998</span>
-                                <input type="tel" id="clientPhone2" class="form-input phone-input" placeholder="91 234-56-78" maxlength="12">
+                                <input type="tel" id="clientPhone2" class="form-input phone-input" placeholder="912345678" required maxlength="9" pattern="[0-9]{9}" inputmode="numeric" oninput="validatePhoneInput(this)">
                             </div>
                         </div>
 
-                        <!-- 4. SAVOL: DOG'LAR QACHONDAN BOSHLA NGAN -->
+                        <!-- 4. SAVOL: QACHONDAN BERI BOR (MAJBURIY) -->
                         <div class="form-group">
-                            <label id="lbl-history" for="clientHistory">Oq dog'lar qachondan beri bor? (yil, oy)</label>
+                            <label id="lbl-history" for="clientHistory">Oq dog'lar qachondan beri bor? (yil, oy) *</label>
                             <input type="text" id="clientHistory" class="form-input" placeholder="Masalan: 2 yildan beri, yaqinda boshlandi..." required>
                         </div>
 
@@ -1970,12 +1971,12 @@
         </a>
     </div>
 
-    <!-- JAVASCRIPT KODI (TILLAR + MARQUEE SWIPE + AMOCRM SUBMIT) -->
+    <!-- JAVASCRIPT KODI (TILLAR + MARQUEE SWIPE + AMOCRM SUBMIT + 9 TA RAQAM VALIDATSIYASI) -->
     <script>
         const translations = {
             uz: {
                 orderBtn: "Buyurtma berish",
-                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> O'zbekiston bo'ylab bepul yetkazib berish</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% tabiiy va xavfsiz tarkib</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ muvaffaqiyatli natijalar</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Buyurtmani tekshirib keyin to'lash imkoniyati</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> O'zbekiston bo'ylab bepul yetkazib berish</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% tabiiy va xavfsiz tarkib</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ muvaffaqiyatli natijalar</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Buyurtmani tekshirib keyin to'lash imkoniyati</span>",
                 title: "OQ DOG'LARDAN XALOS BO'LISH ENDI ILOJSIZ EMAS!",
                 subtitle: "Ushbu vosita vitiligo va teridagi turli muammolarni bartaraf etishda tabiiy yordam beradi. O'rganib qolish holatini keltirib chiqarmaydi — Natijalar tasdiqlangan!",
                 refTitle: "Teringizni avvalgi holatiga qaytarishning iloji yo'q deb o'ylasangiz – Adashasiz!",
@@ -2060,10 +2061,10 @@
                 s3D: "Buyurtma eshigingizgacha BEPUL yetkaziladi. Posilkani ochib, tekshirib ko'rganingizdan keyingina to'lov qilasiz.",
                 formTitle: "Buyurtma berish",
                 formSub: "Hoziroq bepul konsultatsiyaga yoziling va Qomus kapsulasi yordamida sog'lom teriga qayting!",
-                lblName: "Ismingiz",
-                lblPhone1: "Telefon raqami",
-                lblPhone2: "Qo'shimcha telefon raqam",
-                lblHistory: "Oq dog'lar qachondan beri bor? (yil, oy)",
+                lblName: "Ismingiz *",
+                lblPhone1: "Telefon raqami *",
+                lblPhone2: "Qo'shimcha telefon raqam *",
+                lblHistory: "Oq dog'lar qachondan beri bor? (yil, oy) *",
                 holderName: "Ismingizni kiriting",
                 holderHistory: "Masalan: 2 yildan beri, yaqinda boshlandi...",
                 formSubmit: "Buyurtma berish",
@@ -2162,10 +2163,10 @@
                 s3D: "Буюртма эшигингизгача БЕПУЛ етказилади. Посилкани очиб, текшириб кўрганингиздан keyinгина тўлов қиласиз.",
                 formTitle: "Буюртма бериш",
                 formSub: "Ҳозироқ бепул консультацияга ёзилинг ва Qomus капсуласи орқали соғлом терига қайтинг!",
-                lblName: "Исмингиз",
-                lblPhone1: "Телефон рақами",
-                lblPhone2: "Қўшимча телефон рақам",
-                lblHistory: "Оқ доғлар қачондан бери бор? (йил, ой)",
+                lblName: "Исмингиз *",
+                lblPhone1: "Телефон рақами *",
+                lblPhone2: "Қўшимча телефон рақам *",
+                lblHistory: "Оқ доғлар қачондан бери бор? (йил, ой) *",
                 holderName: "Исмингизни киритинг",
                 holderHistory: "Масалан: 2 йилдан бери, яқинда бошланди...",
                 formSubmit: "Буюртма бериш",
@@ -2264,10 +2265,10 @@
                 s3D: "Заказ доставляется БЕСПЛАТНО до вашей двери. Вы платите только после личного осмотра посылки.",
                 formTitle: "Оформить заказ",
                 formSub: "Запишитесь на бесплатную консультацию и верните здоровье кожи вместе с «QOMUS»!",
-                lblName: "Ваше имя",
-                lblPhone1: "Номер телефона",
-                lblPhone2: "Дополнительный номер телефона",
-                lblHistory: "Как давно появились белые пятна? (лет, месяцев)",
+                lblName: "Ваше имя *",
+                lblPhone1: "Номер телефона *",
+                lblPhone2: "Дополнительный номер телефона *",
+                lblHistory: "Как давно появились белые пятна? (лет, месяцев) *",
                 holderName: "Введите ваше имя",
                 holderHistory: "Например: 2 года назад, недавно появились...",
                 formSubmit: "Оформить заказ",
@@ -2366,10 +2367,10 @@
                 s3D: "Free delivery straight to your door. You inspect the package thoroughly before making payment.",
                 formTitle: "Place an Order",
                 formSub: "Sign up for a free consultation today and reclaim healthy skin with “QOMUS”!",
-                lblName: "Your Name",
-                lblPhone1: "Phone Number",
-                lblPhone2: "Alternative Phone Number",
-                lblHistory: "How long have you had vitiligo? (years, months)",
+                lblName: "Your Name *",
+                lblPhone1: "Phone Number *",
+                lblPhone2: "Alternative Phone Number *",
+                lblHistory: "How long have you had vitiligo? (years, months) *",
                 holderName: "Enter your name",
                 holderHistory: "e.g., 2 years, recently noticed...",
                 formSubmit: "Place Order",
@@ -2498,6 +2499,11 @@
             if (!isOpen) currentItem.classList.add('active');
         }
 
+        /* FAQAT RAQAM VA MAKSIMAL 9 TA SON FILTRI */
+        function validatePhoneInput(input) {
+            input.value = input.value.replace(/\D/g, '').slice(0, 9);
+        }
+
         /* MARQUEE MOTOR (HAM PLAVNIY AUTO, HAM ERKIN SWIPE) */
         function initInteractiveMarquee(viewportId, trackId, speed = 0.8) {
             const viewport = document.getElementById(viewportId);
@@ -2562,7 +2568,7 @@
             }, 100);
         }
 
-        /* 100% ISHONCHLI AMOCRM VA PIXEL INTEGRATSIYASI */
+        /* 100% QAT'IY VALIDATSIYA VA AMOCRM INTEGRATSIYASI */
         function submitLeadForm(e) {
             e.preventDefault();
             
@@ -2571,12 +2577,35 @@
             const phone2 = document.getElementById('clientPhone2').value.trim();
             const history = document.getElementById('clientHistory').value.trim();
 
-            if (!name || !phone1) {
-                alert("Iltimos, ism va asosiy telefon raqamingizni kiriting!");
+            // 1. Maydonlar bo'sh emasligini tekshirish
+            if (!name) {
+                alert("Iltimos, ismingizni kiriting!");
+                document.getElementById('clientName').focus();
                 return;
             }
 
-            // 1. Meta Pixel Lead hodisasi
+            // 2. Asosiy raqam aniq 9 ta raqam bo'lishi shart
+            if (phone1.length !== 9) {
+                alert("Iltimos, asosiy telefon raqamingizni to'liq 9 ta raqam shaklida kiriting! (Masalan: 901234567)");
+                document.getElementById('clientPhone1').focus();
+                return;
+            }
+
+            // 3. Qo'shimcha raqam ham majburiy va aniq 9 ta raqam bo'lishi shart
+            if (phone2.length !== 9) {
+                alert("Iltimos, qo'shimcha telefon raqamini ham to'liq 9 ta raqam shaklida kiriting! (Masalan: 912345678)");
+                document.getElementById('clientPhone2').focus();
+                return;
+            }
+
+            // 4. Kasallik tarixi majburiy
+            if (!history) {
+                alert("Iltimos, oq dog'lar qachondan beri borligini yozing!");
+                document.getElementById('clientHistory').focus();
+                return;
+            }
+
+            // 5. Meta Pixel Lead hodisasi
             if (typeof fbq === 'function') {
                 fbq('track', 'Lead', {
                     content_name: 'Qomus Landing Order',
@@ -2585,15 +2614,15 @@
                 });
             }
 
-            // 2. amoCRM formasi maydonlarini to'ldirish va fon rejimida yuborish
+            // 6. amoCRM formasi maydonlarini to'ldirish va fon rejimida yuborish
             document.getElementById('amo_name').value = name;
-            document.getElementById('amo_phone').value = "+998" + phone1.replace(/\D/g, '');
-            document.getElementById('amo_phone2').value = phone2 ? "+998" + phone2.replace(/\D/g, '') : '';
+            document.getElementById('amo_phone').value = "+998" + phone1;
+            document.getElementById('amo_phone2').value = "+998" + phone2;
             document.getElementById('amo_note').value = "Oq dog'lar tarixi: " + history;
 
             document.getElementById('amoHiddenForm').submit();
 
-            // 3. Foydalanuvchiga tasdiq xabari
+            // 7. Muvaffaqiyatli xabar va tozalash
             alert("Rahmat, " + name + "! So'rovingiz qabul qilindi. Tez orada mutaxassisimiz siz bilan bog'lanadi.");
             document.getElementById('orderForm').reset();
         }
