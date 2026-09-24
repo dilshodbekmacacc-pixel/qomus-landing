@@ -1439,7 +1439,7 @@
         </div>
     </section>
 
-    <!-- 4-BLOK: 10 TA SLAYD CHEKSIZ LOOP + 4s AUTOPLAY -->
+    <!-- 4-BLOK: 10 TA SLAYD SEAMLESS INFINITE LOOP + 3s AUTOPLAY -->
     <section class="results-section">
         <div class="container">
             <h2 class="results-header-title" id="results-title">Mijozlar natijalari</h2>
@@ -1537,7 +1537,7 @@
         </div>
     </section>
 
-    <!-- 6-BLOK: 10 TA VIDEO CHEKSIZ LOOP + 4s AUTOPLAY -->
+    <!-- 6-BLOK: 10 TA VIDEO SEAMLESS INFINITE LOOP + 3s AUTOPLAY -->
     <section class="video-results-section">
         <div class="container">
             <h2 class="video-header-title" id="video-sec-title">Mijozlarimizning video fikrlari</h2>
@@ -1650,6 +1650,7 @@
                 </div>
 
                 <div class="faq-item">
+                    <button class="faq-toggle-icon-wrap" style="display:none"></button>
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
                         <span id="fq-4">Kapsula qobig'i halolmi va u nimadan tayyorlangan?</span>
                         <div class="faq-toggle-icon">+</div>
@@ -2057,7 +2058,7 @@
                 advTitle: "НЕГА АЙНАН “QOMUS” ПРЕПАРАТИНИ ТАНЛАШАДИ?",
                 advDesc: "Биз мижозларимиз саломатлиги ва ишончини юқори баҳолаймиз. Бизнинг асосий афзалликларимиз билан танишинг",
                 c1T: "20,000+ Мамнун мижозлар",
-                c1D: "Ўзбекистон бўйлаб минглаб инсонлар бизнинг воситамиз орқали оқ доғлар муаммосидан халос бўлиб, соғлом терига эришдиlar.",
+                c1D: "Ўзбекистон бўйлаб минглаб инсонлар бизнинг воситамиз орқали оқ доғлар муаммосидан халос бўлиб, соғлом терига эришдилар.",
                 c2T: "Давлат томонидан сертификатланган",
                 c2D: "Соғлиқни Сақлаш Вазирлиги ва СЭС хулосалари билан расман тасдиқланган, барча хавфсизлик талабларига 100% жавоб беради.",
                 c3T: "100% Табиий ва безарар",
@@ -2404,25 +2405,40 @@
             if (!isOpen) currentItem.classList.add('active');
         }
 
-        /* CHEKSIZ LOOP VA 4 SEKUNDLIK AUTOPLAY BILAN ISHLAYDIGAN KARUSEL FUNKSIYASI */
+        /* 3 SEKUNDLIK SEAMLESS INFINITE LOOP AUTOPLAY KARUSEL FUNKSIYASI */
         function setupSlider(trackId, prevBtnId, nextBtnId) {
             const track = document.getElementById(trackId);
             const prevBtn = document.getElementById(prevBtnId);
             const nextBtn = document.getElementById(nextBtnId);
             if (!track || !prevBtn || !nextBtn) return;
 
-            let currentIndex = 0;
-            const slides = Array.from(track.children);
-            const totalSlides = slides.length;
+            const originalSlides = Array.from(track.children);
+            const totalOriginal = originalSlides.length;
+
+            // Oxirgi elementni boshiga, birinchisini oxiriga klon qilib qo'yish (uzluksiz loop uchun)
+            const firstClone = originalSlides[0].cloneNode(true);
+            const lastClone = originalSlides[totalOriginal - 1].cloneNode(true);
+            track.appendChild(firstClone);
+            track.insertBefore(lastClone, track.firstElementChild);
+
+            let allSlides = Array.from(track.children);
+            let currentIndex = 1;
+            let isTransitioning = false;
             let autoPlayTimer = null;
 
-            function updateSlide() {
-                slides.forEach((s, idx) => {
+            function updateSlide(animated = true) {
+                if (animated) {
+                    track.style.transition = 'transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)';
+                } else {
+                    track.style.transition = 'none';
+                }
+
+                allSlides.forEach((s, idx) => {
                     if (idx === currentIndex) s.classList.add('active-slide');
                     else s.classList.remove('active-slide');
                 });
 
-                const activeSlide = slides[currentIndex];
+                const activeSlide = allSlides[currentIndex];
                 const trackWrapper = track.parentElement;
                 const slideOffset = activeSlide.offsetLeft;
                 const centerOffset = (trackWrapper.offsetWidth - activeSlide.offsetWidth) / 2;
@@ -2431,14 +2447,32 @@
                 track.style.transform = `translateX(-${moveAmount}px)`;
             }
 
+            track.addEventListener('transitionend', () => {
+                isTransitioning = false;
+                // Oxiriga borganda ko'rinmasdan boshiga qaytarish
+                if (currentIndex === totalOriginal + 1) {
+                    currentIndex = 1;
+                    updateSlide(false);
+                }
+                // Boshiga borganda ko'rinmasdan oxiriga qaytarish
+                if (currentIndex === 0) {
+                    currentIndex = totalOriginal;
+                    updateSlide(false);
+                }
+            });
+
             function nextSlide() {
-                currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
-                updateSlide();
+                if (isTransitioning) return;
+                isTransitioning = true;
+                currentIndex++;
+                updateSlide(true);
             }
 
             function prevSlide() {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
-                updateSlide();
+                if (isTransitioning) return;
+                isTransitioning = true;
+                currentIndex--;
+                updateSlide(true);
             }
 
             prevBtn.addEventListener('click', (e) => {
@@ -2453,8 +2487,9 @@
                 resetAutoplay();
             });
 
+            // 3 sekundlik autoplay (3000 ms)
             function startAutoplay() {
-                autoPlayTimer = setInterval(nextSlide, 4000);
+                autoPlayTimer = setInterval(nextSlide, 3000);
             }
 
             function resetAutoplay() {
@@ -2478,9 +2513,11 @@
                 }
             }, { passive: true });
 
-            window.addEventListener('resize', updateSlide);
-            setTimeout(updateSlide, 50);
-            startAutoplay();
+            window.addEventListener('resize', () => updateSlide(false));
+            setTimeout(() => {
+                updateSlide(false);
+                startAutoplay();
+            }, 60);
         }
 
         function submitLeadForm(e) {
