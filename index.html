@@ -224,7 +224,7 @@
             animation: pulseGlow 2s infinite;
         }
 
-        /* 1. HERO SECTION */
+        /* 1. HERO SECTION (KNOPKASIZ, TOZA) */
         .hero-section {
             padding: 24px 0 32px 0;
         }
@@ -257,21 +257,7 @@
             line-height: 1.65;
             color: #334155;
             font-weight: 600;
-            margin-bottom: 26px;
-        }
-
-        .hero-cta-btn {
-            display: inline-block;
-            background: #00a86b;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 800;
-            padding: 16px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            animation: pulseGlow 2s infinite;
-            text-align: center;
-            width: fit-content;
+            margin-bottom: 0px;
         }
 
         .hero-visual-card {
@@ -1332,14 +1318,13 @@
             .btn-phone-desktop { display: none; }
             .btn-phone-mobile { display: inline-flex; align-items: center; justify-content: center; }
 
-            .hero-section { padding: 10px 0 18px 0; }
-            .hero-grid { display: flex; flex-direction: column; gap: 16px; text-align: center; }
+            .hero-section { padding: 10px 0 16px 0; }
+            .hero-grid { display: flex; flex-direction: column; gap: 14px; text-align: center; }
             .hero-visual-card { order: 1; width: 100%; }
-            .product-img-large { max-width: 100%; max-height: 420px; border-radius: 14px; }
+            .product-img-large { max-width: 100%; max-height: 380px; border-radius: 14px; }
             .hero-content { order: 2; width: 100%; align-items: center; }
-            .hero-title { font-size: 21px; margin-bottom: 14px; line-height: 1.35; }
-            .hero-subtitle { font-size: 13.5px; line-height: 1.55; margin-bottom: 18px; }
-            .hero-cta-btn { width: 100%; padding: 14px 0; font-size: 15px; }
+            .hero-title { font-size: 21px; margin-bottom: 12px; line-height: 1.35; }
+            .hero-subtitle { font-size: 13.5px; line-height: 1.55; margin-bottom: 4px; }
 
             .pain-section-ref { padding: 30px 0 40px 0; }
             .ref-header h2 { font-size: 20px; margin-bottom: 10px; }
@@ -1502,11 +1487,11 @@
         </div>
     </header>
 
-    <!-- 2. HERO SECTION -->
+    <!-- 2. HERO SECTION (KNOPKASIZ, TEZ YUKLANUVCHI) -->
     <section class="hero-section">
         <div class="container hero-grid">
             <div class="hero-visual-card">
-                <img src="https://i.postimg.cc/zXXrt7NG/IMG-20260924-115226-440.png" alt="QOMUS Flakon" class="product-img-large">
+                <img src="https://i.postimg.cc/zXXrt7NG/IMG-20260924-115226-440.png" alt="QOMUS Flakon" class="product-img-large" fetchpriority="high">
             </div>
 
             <div class="hero-content">
@@ -1517,10 +1502,6 @@
                 <p class="hero-subtitle" id="hero-subtitle">
                     Ushbu vosita vitiligo va teridagi turli muammolarni bartaraf etishda tabiiy yordam beradi. O'rganib qolish holatini keltirib chiqarmaydi — Natijalar tasdiqlangan!
                 </p>
-
-                <a href="#lead-form" class="hero-cta-btn" id="hero-cta">
-                    Bepul maslahat olish
-                </a>
             </div>
         </div>
     </section>
@@ -1550,14 +1531,14 @@
                 </div>
 
                 <div class="ref-image-wrapper">
-                    <img src="https://i.postimg.cc/YqnwJF2h/IMG-20260924-115226-478.png" alt="Vitiligo yuzda" class="img-main-vitiligo">
-                    <img src="https://i.postimg.cc/WbWPQZpt/IMG-20260924-115226-125.png" alt="Vitiligo qo'lda" class="img-overlap-hand">
+                    <img src="https://i.postimg.cc/YqnwJF2h/IMG-20260924-115226-478.png" alt="Vitiligo yuzda" class="img-main-vitiligo" loading="lazy" decoding="async">
+                    <img src="https://i.postimg.cc/WbWPQZpt/IMG-20260924-115226-125.png" alt="Vitiligo qo'lda" class="img-overlap-hand" loading="lazy" decoding="async">
                 </div>
             </div>
 
             <div class="ref-row-2">
                 <div class="ref-img-card-2">
-                    <img src="https://i.postimg.cc/dttYH6Fk/IMG-20260924-115226-737.png" alt="Xavotir va umid" class="img-single-card">
+                    <img src="https://i.postimg.cc/dttYH6Fk/IMG-20260924-115226-737.png" alt="Xavotir va umid" class="img-single-card" loading="lazy" decoding="async">
                 </div>
 
                 <div class="ref-text-block-2">
@@ -1585,7 +1566,7 @@
 
             <div class="comp-grid">
                 <div class="comp-visual-box">
-                    <img src="https://i.postimg.cc/prBP91tQ/IMG-20260924-115246-503.png" alt="QOMUS Tarkibi" class="comp-product-img">
+                    <img src="https://i.postimg.cc/prBP91tQ/IMG-20260924-115246-503.png" alt="QOMUS Tarkibi" class="comp-product-img" loading="lazy" decoding="async">
                 </div>
 
                 <div class="comp-clean-list">
@@ -1682,37 +1663,37 @@
                     <div class="carousel-track" id="carouselTrack">
                         
                         <!-- 1-juftlik -->
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/brqhjH2r/IMG-20260924-115230-717.png" alt="Avval" class="result-img"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/Y96HVyjW/IMG-20260924-115231-698.png" alt="Keyin" class="result-img"><span class="result-badge badge-after">Keyin</span></div></div></div>
+                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/brqhjH2r/IMG-20260924-115230-717.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/Y96HVyjW/IMG-20260924-115231-698.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div></div>
                         
-                        <!-- 2-juftlik (Oldingi 3) -->
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/RhGzC67S/IMG-20260924-115231-600.png" alt="Avval" class="result-img"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/3JJTS1hh/IMG-20260924-115230-855.png" alt="Keyin" class="result-img"><span class="result-badge badge-after">Keyin</span></div></div></div>
+                        <!-- 2-juftlik -->
+                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/RhGzC67S/IMG-20260924-115231-600.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/3JJTS1hh/IMG-20260924-115230-855.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div></div>
                         
-                        <!-- 3-juftlik (Oldingi 4) -->
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/vTGsdL6x/IMG-20260924-115231-220.png" alt="Avval" class="result-img"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/fWvsfF62/IMG-20260924-115231-494.png" alt="Keyin" class="result-img"><span class="result-badge badge-after">Keyin</span></div></div></div>
+                        <!-- 3-juftlik -->
+                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/vTGsdL6x/IMG-20260924-115231-220.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/fWvsfF62/IMG-20260924-115231-494.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div></div>
                         
-                        <!-- 4-juftlik (Oldingi 5) -->
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/kGwdM6xs/IMG-20260924-115231-501.png" alt="Avval" class="result-img"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/hjLBw3hn/IMG-20260924-115236-527.png" alt="Keyin" class="result-img"><span class="result-badge badge-after">Keyin</span></div></div></div>
+                        <!-- 4-juftlik -->
+                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/kGwdM6xs/IMG-20260924-115231-501.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/hjLBw3hn/IMG-20260924-115236-527.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div></div>
                         
-                        <!-- 5-juftlik (Oldingi 6) -->
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/Yqprck1Z/IMG-20260924-115243-634.png" alt="Avval" class="result-img"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/MT7S4rXG/IMG-20260924-115231-684.png" alt="Keyin" class="result-img"><span class="result-badge badge-after">Keyin</span></div></div></div>
+                        <!-- 5-juftlik -->
+                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/Yqprck1Z/IMG-20260924-115243-634.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/MT7S4rXG/IMG-20260924-115231-684.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div></div>
                         
-                        <!-- 6-juftlik (Oldingi 7) -->
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/TYCRfS0R/IMG-20260924-115236-023.png" alt="Avval" class="result-img"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/15J9sTB4/IMG-20260924-115236-139.png" alt="Keyin" class="result-img"><span class="result-badge badge-after">Keyin</span></div></div></div>
+                        <!-- 6-juftlik -->
+                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/TYCRfS0R/IMG-20260924-115236-023.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/15J9sTB4/IMG-20260924-115236-139.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div></div>
                         
-                        <!-- 7-juftlik (Oldingi 8) -->
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/wjrgsmST/IMG-20260924-115236-145.png" alt="Avval" class="result-img"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/hjWn2qDC/IMG-20260924-115236-389.png" alt="Keyin" class="result-img"><span class="result-badge badge-after">Keyin</span></div></div></div>
+                        <!-- 7-juftlik -->
+                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/wjrgsmST/IMG-20260924-115236-145.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/hjWn2qDC/IMG-20260924-115236-389.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div></div>
                         
-                        <!-- 8-juftlik (Oldingi 9) -->
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/bw5p2t4F/IMG-20260924-115236-429.png" alt="Avval" class="result-img"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/yYV1qBmY/IMG-20260924-115236-282.png" alt="Keyin" class="result-img"><span class="result-badge badge-after">Keyin</span></div></div></div>
+                        <!-- 8-juftlik -->
+                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/bw5p2t4F/IMG-20260924-115236-429.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/yYV1qBmY/IMG-20260924-115236-282.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div></div>
                         
-                        <!-- 9-juftlik (Oldingi 10) -->
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/CLFhyYGw/IMG-20260924-115236-542.png" alt="Avval" class="result-img"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/vBrsjSDb/IMG-20260924-115236-914.png" alt="Keyin" class="result-img"><span class="result-badge badge-after">Keyin</span></div></div></div>
+                        <!-- 9-juftlik -->
+                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/CLFhyYGw/IMG-20260924-115236-542.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/vBrsjSDb/IMG-20260924-115236-914.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div></div>
                         
-                        <!-- 10-juftlik (Oldingi 11) -->
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/NfpgBVD4/IMG-20260924-115236-859.png" alt="Avval" class="result-img"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/dtqsMv2c/IMG-20260924-115243-846.png" alt="Keyin" class="result-img"><span class="result-badge badge-after">Keyin</span></div></div></div>
+                        <!-- 10-juftlik -->
+                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/NfpgBVD4/IMG-20260924-115236-859.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/dtqsMv2c/IMG-20260924-115243-846.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div></div>
                         
-                        <!-- 11-juftlik (Oldingi 12) -->
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/jq6xkCJ9/IMG-20260924-115243-265.png" alt="Avval" class="result-img"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/NfgshY1V/IMG-20260924-115243-398.png" alt="Keyin" class="result-img"><span class="result-badge badge-after">Keyin</span></div></div></div>
+                        <!-- 11-juftlik -->
+                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/jq6xkCJ9/IMG-20260924-115243-265.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/NfgshY1V/IMG-20260924-115243-398.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div></div>
 
                     </div>
                 </div>
@@ -1788,14 +1769,14 @@
 
             <div class="cert-grid">
                 <div class="cert-card">
-                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700&auto=format&fit=crop&q=80" alt="SSV Ruxsatnomasi">
+                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700&auto=format&fit=crop&q=80" alt="SSV Ruxsatnomasi" loading="lazy" decoding="async">
                     <p class="cert-caption" id="cert-cap-1">
                         O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi Ruxsatnomasi № 001425
                     </p>
                 </div>
 
                 <div class="cert-card">
-                    <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?w=700&auto=format&fit=crop&q=80" alt="Sanitariya xulosasi">
+                    <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?w=700&auto=format&fit=crop&q=80" alt="Sanitariya xulosasi" loading="lazy" decoding="async">
                     <p class="cert-caption" id="cert-cap-2">
                         Sanitariya-epidemiologik xulosasi № 405282 (Toshkent shahri)
                     </p>
@@ -1979,7 +1960,7 @@
                 </div>
 
                 <div class="lead-visual-col">
-                    <img src="https://i.postimg.cc/m2XG09ZF/IMG-20260924-115226-651.png" alt="QOMUS 150 Kapsula" class="lead-product-img">
+                    <img src="https://i.postimg.cc/m2XG09ZF/IMG-20260924-115226-651.png" alt="QOMUS 150 Kapsula" class="lead-product-img" loading="lazy" decoding="async">
                 </div>
 
             </div>
@@ -2050,13 +2031,12 @@
         </a>
     </div>
 
-    <!-- JAVASCRIPT: 100% TEKSHIRILGAN CRO TILLAR VA KARUSELLAR MANTIG'I -->
+    <!-- JAVASCRIPT: BARCHA TILLAR VA KARUSELLAR MANTIG'I -->
     <script>
         const translations = {
             uz: {
                 orderBtn: "Buyurtma berish",
-                heroCta: "Bepul maslahat olish",
-                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> O'zbekiston bo'ylab bepul yetkazib berish</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% tabiiy va xavfsiz tarkib</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ muvaffaqiyatli natijalar</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Buyurtmani tekshirib keyin to'lash imkoniyati</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> O'zbekiston bo'ylab bepul yetkazib berish</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% tabiiy va xavfsiz tarkib</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ muvaffaqiyatli natijalar</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Buyurtmani tekshirib keyin to'lash imkoniyati</span>",
                 title: "OQ DOG'LARDAN XALOS BO'LISH ENDI ILOJSIZ EMAS!",
                 subtitle: "Ushbu vosita vitiligo va teridagi turli muammolarni bartaraf etishda tabiiy yordam beradi. O'rganib qolish holatini keltirib chiqarmaydi — Natijalar tasdiqlangan!",
                 refTitle: "Teringizni avvalgi holatiga qaytarishning iloji yo'q deb o'ylasangiz – Adashasiz!",
@@ -2169,8 +2149,7 @@
 
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
-                heroCta: "Бепул маслаҳат олиш",
-                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% табиий ва хавфсиз таркиб</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ муваффақиятли натижалар</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Буюртмани текшириб кейин тўлаш имконияти</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% табиий ва хавфсиз таркиб</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ муваффақиятли натижалар</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Буюртмани текшириб кейин тўлаш имконияти</span>",
                 title: "ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!",
                 subtitle: "Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!",
                 refTitle: "Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!",
@@ -2283,7 +2262,6 @@
 
             ru: {
                 orderBtn: "Заказать",
-                heroCta: "Получить консультацию",
                 ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Бесплатная доставка по всему Узбекистану</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% натуральный и безопасный состав</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Более 20,000 успешных результатов</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Оплата только после проверки заказа</span>",
                 title: "ИЗБАВЛЕНИЕ ОТ БЕЛЫХ ПЯТЕН ТЕПЕРЬ ВОЗМОЖНО!",
                 subtitle: "Данный комплекс эффективно поддерживает восстановление пигментации кожи при витилиго. Не вызывает привыкания — Результаты подтверждены!",
@@ -2397,7 +2375,6 @@
 
             en: {
                 orderBtn: "Order Now",
-                heroCta: "Get Free Advice",
                 ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Free delivery across Uzbekistan</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% natural and safe formula</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Over 20,000 successful results</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Cash on delivery upon personal inspection</span>",
                 title: "GETTING RID OF WHITE SPOTS IS NO LONGER IMPOSSIBLE!",
                 subtitle: "This natural formula effectively supports skin pigmentation and immunity balance. Non-addictive — Results confirmed!",
@@ -2523,7 +2500,6 @@
                 
                 document.getElementById('hero-title').textContent = t.title;
                 document.getElementById('hero-subtitle').textContent = t.subtitle;
-                document.getElementById('hero-cta').textContent = t.heroCta;
 
                 document.getElementById('ref-header-title').textContent = t.refTitle;
                 document.getElementById('ref-sub-query').textContent = t.refSub;
