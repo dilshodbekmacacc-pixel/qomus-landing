@@ -4,25 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QOMUS — Teri Pigmentatsiyasini Qo'llab-quvvatlovchi Majmua</title>
-    
-    <!-- Meta Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1625078522447841');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1625078522447841&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-
     <!-- Cyrillic to'liq qo'llab-quvvatlaydigan shrift -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,20 +38,35 @@
         .top-ticker {
             background: #00317F;
             color: #ffffff;
-            font-size: 11px;
+            font-size: 11.5px;
             font-weight: 700;
-            padding: 7px 0;
+            padding: 8px 0;
             overflow: hidden;
             white-space: nowrap;
+            letter-spacing: 0.3px;
         }
 
         .ticker-content {
             display: inline-block;
-            animation: marquee 25s linear infinite;
+            animation: marquee 28s linear infinite;
         }
 
         .ticker-content span {
-            margin-right: 25px;
+            margin-right: 32px;
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .ticker-svg {
+            width: 13px;
+            height: 13px;
+            stroke: #03C3D4;
+            fill: none;
+            stroke-width: 2.2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            flex-shrink: 0;
         }
 
         @keyframes marquee {
@@ -228,7 +224,7 @@
             animation: pulseGlow 2s infinite;
         }
 
-        /* 2-BLOK: HERO SECTION */
+        /* 1. HERO SECTION */
         .hero-section {
             padding: 24px 0 32px 0;
         }
@@ -261,21 +257,7 @@
             line-height: 1.65;
             color: #334155;
             font-weight: 600;
-            margin-bottom: 26px;
-        }
-
-        .hero-cta-btn {
-            display: inline-block;
-            background: #00a86b;
-            color: #ffffff;
-            font-size: 16px;
-            font-weight: 800;
-            padding: 16px 32px;
-            border-radius: 12px;
-            text-decoration: none;
-            animation: pulseGlow 2s infinite;
-            text-align: center;
-            width: fit-content;
+            margin-bottom: 0px;
         }
 
         .hero-visual-card {
@@ -293,7 +275,7 @@
             filter: drop-shadow(0 18px 36px rgba(0,0,0,0.14));
         }
 
-        /* 3-BLOK: REFERENSGA MOS STRUKTURA */
+        /* 2. PAIN SECTION */
         .pain-section-ref {
             padding: 50px 0 60px 0;
             background: #ffffff;
@@ -426,196 +408,10 @@
             font-weight: 800;
         }
 
-        /* 4-BLOK & 6-BLOK: PEEK KARUSEL */
-        .results-section,
-        .video-results-section {
-            padding: 55px 0 65px 0;
-            background: #f4f8f6;
-            border-bottom: 1px solid #e2ece7;
-            position: relative;
-        }
-
-        .video-results-section {
-            background: #f7faf9;
-        }
-
-        .results-header-title,
-        .video-header-title {
-            text-align: center;
-            font-size: 28px;
-            font-weight: 900;
-            color: #00317F;
-            margin-bottom: 10px;
-        }
-
-        .video-header-sub {
-            text-align: center;
-            font-size: 15px;
-            color: #475569;
-            font-weight: 600;
-            margin-bottom: 35px;
-        }
-
-        .carousel-outer-box {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .carousel-track-wrapper {
-            width: 100%;
-            overflow: hidden;
-            padding: 10px 0;
-        }
-
-        .carousel-track {
-            display: flex;
-            transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-            will-change: transform;
-            gap: 16px;
-        }
-
-        .carousel-slide,
-        .video-carousel-slide {
-            flex: 0 0 78%;
-            box-sizing: border-box;
-            transition: opacity 0.3s ease, transform 0.3s ease;
-        }
-
-        .carousel-slide:not(.active-slide),
-        .video-carousel-slide:not(.active-slide) {
-            opacity: 0.65;
-            transform: scale(0.96);
-        }
-
-        .carousel-slide.active-slide,
-        .video-carousel-slide.active-slide {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .result-card-pair {
-            display: flex;
-            gap: 14px;
-            background: #ffffff;
-            padding: 16px;
-            border-radius: 20px;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
-            width: 100%;
-        }
-
-        .result-col {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .result-img {
-            width: 100%;
-            height: 260px;
-            object-fit: cover;
-            border-radius: 14px;
-            margin-bottom: 10px;
-            pointer-events: none;
-        }
-
-        .result-badge {
-            background: #00bcd4;
-            color: #ffffff;
-            font-size: 13px;
-            font-weight: 800;
-            padding: 6px 18px;
-            border-radius: 20px;
-            text-transform: capitalize;
-        }
-
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 46px;
-            height: 46px;
-            background: #ffffff;
-            border: 2px solid #00317F;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 100;
-            box-shadow: 0 4px 15px rgba(0, 49, 127, 0.25);
-            transition: all 0.2s ease;
-            outline: none;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        .carousel-btn svg {
-            width: 24px;
-            height: 24px;
-            pointer-events: none;
-        }
-
-        .carousel-btn svg polyline {
-            stroke: #00317F;
-            transition: stroke 0.2s ease;
-        }
-
-        .carousel-btn:hover,
-        .carousel-btn:active {
-            background: #00317F;
-        }
-
-        .carousel-btn:hover svg polyline,
-        .carousel-btn:active svg polyline {
-            stroke: #ffffff;
-        }
-
-        .carousel-btn.prev { left: -20px; }
-        .carousel-btn.next { right: -20px; }
-
-        .video-card-item {
-            background: #ffffff;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0, 49, 127, 0.08);
-            display: flex;
-            flex-direction: column;
-            border: 1px solid #e0e9e5;
-        }
-
-        .video-embed-box {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%;
-            background: #000;
-        }
-
-        .video-embed-box iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-
-        .video-card-footer {
-            padding: 16px 20px;
-            background: #ffffff;
-        }
-
-        .video-card-title {
-            font-size: 15px;
-            font-weight: 800;
-            color: #00317F;
-            line-height: 1.45;
-        }
-
-        /* 5-BLOK: TARKIB */
+        /* 3. TARKIB (YECHIM) SECTION */
         .composition-section {
             padding: 60px 0 70px 0;
-            background: #ffffff;
+            background: #f7faf9;
             border-top: 1px solid #eef3f0;
             border-bottom: 1px solid #e0e9e5;
         }
@@ -710,7 +506,255 @@
             font-weight: 600;
         }
 
-        /* 7-BLOK: SERTIFIKATLAR */
+        /* 4. "KIMLAR UCHUN TAVSIYA ETILADI" BLOKI */
+        .target-group-section {
+            padding: 60px 0 70px 0;
+            background: #ffffff;
+            border-bottom: 1px solid #e2ece7;
+        }
+
+        .target-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .target-header h2 {
+            color: #00317F;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+            line-height: 1.35;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .target-header p {
+            color: #475569;
+            font-size: 15px;
+            font-weight: 700;
+            max-width: 680px;
+            margin: 0 auto;
+        }
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .target-card-clean {
+            background: #ffffff;
+            border: 1.5px solid #e2ece7;
+            border-radius: 18px;
+            padding: 28px 22px;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 14px rgba(0, 49, 127, 0.02);
+        }
+
+        .target-card-clean:hover {
+            border-color: #00a86b;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 168, 107, 0.08);
+        }
+
+        .target-num {
+            font-size: 28px;
+            font-weight: 900;
+            color: #00a86b;
+            margin-bottom: 12px;
+            line-height: 1;
+        }
+
+        .target-card-clean h3 {
+            font-size: 16.5px;
+            font-weight: 800;
+            color: #00317F;
+            margin-bottom: 10px;
+            line-height: 1.35;
+        }
+
+        .target-card-clean p {
+            font-size: 14px;
+            line-height: 1.65;
+            color: #475569;
+            font-weight: 600;
+        }
+
+        /* 5 & 6. SWIPE QILSA BO'LADIGAN VA AUTO-HARAKATLANUVCHI KARUSEL */
+        .results-section,
+        .video-results-section {
+            padding: 55px 0 65px 0;
+            background: #f4f8f6;
+            border-bottom: 1px solid #e2ece7;
+            overflow: hidden;
+        }
+
+        .video-results-section {
+            background: #ffffff;
+        }
+
+        .results-header-title,
+        .video-header-title {
+            text-align: center;
+            font-size: 28px;
+            font-weight: 900;
+            color: #00317F;
+            margin-bottom: 10px;
+        }
+
+        .video-header-sub {
+            text-align: center;
+            font-size: 15px;
+            color: #475569;
+            font-weight: 600;
+            margin-bottom: 35px;
+        }
+
+        .marquee-viewport {
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            overflow: hidden;
+            cursor: grab;
+            user-select: none;
+            touch-action: pan-y;
+            padding: 10px 0;
+        }
+
+        .marquee-viewport:active {
+            cursor: grabbing;
+        }
+
+        .marquee-track {
+            display: flex;
+            width: max-content;
+            gap: 20px;
+            will-change: transform;
+        }
+
+        .result-card-pair {
+            display: flex;
+            gap: 14px;
+            background: #ffffff;
+            padding: 16px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+            width: 520px;
+            flex-shrink: 0;
+            pointer-events: none;
+        }
+
+        .result-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .result-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 14px;
+            margin-bottom: 10px;
+            pointer-events: none;
+        }
+
+        .result-badge {
+            background: #00bcd4;
+            color: #ffffff;
+            font-size: 13px;
+            font-weight: 800;
+            padding: 6px 18px;
+            border-radius: 20px;
+            text-transform: capitalize;
+        }
+
+        .video-card-item {
+            background: #ffffff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 49, 127, 0.08);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #e0e9e5;
+            width: 380px;
+            flex-shrink: 0;
+        }
+
+        .video-embed-box {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%;
+            background: #000;
+        }
+
+        .video-embed-box iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .video-card-footer {
+            padding: 16px 20px;
+            background: #ffffff;
+            pointer-events: none;
+        }
+
+        .video-card-title {
+            font-size: 14px;
+            font-weight: 800;
+            color: #00317F;
+            line-height: 1.45;
+        }
+
+        /* 7. ORALIQ TEZKOR CTA BANNER */
+        .mid-cta-section {
+            background: linear-gradient(135deg, #00317F 0%, #004d40 100%);
+            padding: 45px 0;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .mid-cta-box {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .mid-cta-box h2 {
+            font-size: 26px;
+            font-weight: 900;
+            margin-bottom: 12px;
+            line-height: 1.35;
+            text-transform: uppercase;
+        }
+
+        .mid-cta-box p {
+            font-size: 15.5px;
+            color: #e2e8f0;
+            margin-bottom: 24px;
+            font-weight: 600;
+        }
+
+        .btn-mid-action {
+            display: inline-block;
+            background: #00a86b;
+            color: #ffffff;
+            font-size: 16px;
+            font-weight: 800;
+            padding: 15px 36px;
+            border-radius: 12px;
+            text-decoration: none;
+            box-shadow: 0 8px 24px rgba(0, 168, 107, 0.4);
+            animation: pulseGlow 2s infinite;
+        }
+
+        /* 8. SERTIFIKATLAR */
         .cert-section {
             padding: 55px 0 50px 0;
             background: #ffffff;
@@ -743,38 +787,47 @@
         .cert-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            max-width: 860px;
+            gap: 32px;
+            max-width: 880px;
             margin: 0 auto 25px auto;
+            align-items: stretch;
         }
 
         .cert-card {
-            background: #111111;
-            padding: 12px;
-            border-radius: 16px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            background: #ffffff;
+            padding: 16px;
+            border-radius: 18px;
+            box-shadow: 0 10px 30px rgba(0, 49, 127, 0.08);
             display: flex;
             flex-direction: column;
             align-items: center;
-            border: 2px solid #222222;
+            border: 1.5px solid #e0e9e5;
+            transition: all 0.25s ease;
+        }
+
+        .cert-card:hover {
+            border-color: #00a86b;
+            box-shadow: 0 14px 35px rgba(0, 168, 107, 0.12);
         }
 
         .cert-card img {
             width: 100%;
             height: auto;
-            border-radius: 6px;
+            max-height: 520px;
+            object-fit: contain;
+            border-radius: 10px;
             display: block;
             background: #ffffff;
         }
 
         .cert-caption {
-            color: #ffffff;
-            font-size: 13px;
-            font-weight: 700;
+            color: #00317F;
+            font-size: 14px;
+            font-weight: 800;
             text-align: center;
-            margin-top: 12px;
+            margin-top: 14px;
             padding: 0 4px;
-            line-height: 1.4;
+            line-height: 1.45;
         }
 
         .cert-subtext-clean {
@@ -791,7 +844,7 @@
             line-height: 1.65;
         }
 
-        /* 8-BLOK: FAQ AKORDEON */
+        /* 9. FAQ AKORDEON */
         .faq-section {
             padding: 55px 0 65px 0;
             background: #f7faf9;
@@ -906,19 +959,19 @@
             padding-top: 12px;
         }
 
-        /* 9-BLOK: USTUN TOMONLAR */
-        .advantages-section {
+        /* 10. BUYURTMA VA XIZMAT KO'RSATISH TARTIBI */
+        .steps-section {
             padding: 60px 0 70px 0;
             background: #ffffff;
             border-bottom: 1px solid #e2ece7;
         }
 
-        .adv-header {
+        .steps-header {
             text-align: center;
             margin-bottom: 45px;
         }
 
-        .adv-header h2 {
+        .steps-header h2 {
             color: #00459c;
             font-size: 28px;
             font-weight: 900;
@@ -928,7 +981,7 @@
             text-transform: uppercase;
         }
 
-        .adv-header p {
+        .steps-header p {
             color: #1e293b;
             font-size: 15px;
             font-weight: 700;
@@ -937,60 +990,53 @@
             line-height: 1.6;
         }
 
-        .adv-grid {
+        .steps-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            gap: 26px;
         }
 
-        .adv-clean-card {
+        .step-card {
             background: #ffffff;
-            border: 1px solid #e2ece7;
-            border-radius: 16px;
-            padding: 26px 22px;
+            border: 1.5px solid #e2ece7;
+            border-radius: 18px;
+            padding: 30px 24px;
             display: flex;
             flex-direction: column;
+            position: relative;
             box-shadow: 0 4px 14px rgba(0, 49, 127, 0.02);
-            transition: border-color 0.2s ease, transform 0.2s ease;
+            transition: all 0.25s ease;
         }
 
-        .adv-clean-card:hover {
+        .step-card:hover {
             border-color: #00a86b;
-            transform: translateY(-2px);
+            transform: translateY(-3px);
         }
 
-        .adv-num-badge {
-            width: 34px;
-            height: 34px;
-            border-radius: 8px;
-            background: #f0fdf4;
-            color: #00a86b;
-            border: 1px solid #bbf7d0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 13px;
+        .step-num {
+            font-size: 28px;
             font-weight: 900;
-            margin-bottom: 16px;
-            letter-spacing: 0.5px;
+            color: #00a86b;
+            margin-bottom: 12px;
+            line-height: 1;
         }
 
-        .adv-clean-card h3 {
-            font-size: 16.5px;
+        .step-card h3 {
+            font-size: 17px;
             font-weight: 800;
             color: #00317F;
             margin-bottom: 10px;
             line-height: 1.35;
         }
 
-        .adv-clean-card p {
+        .step-card p {
             font-size: 14px;
             line-height: 1.65;
             color: #475569;
             font-weight: 600;
         }
 
-        /* 10-BLOK: ANIQ 1:1 OQ FORMA VA RASM BALANDLIGI */
+        /* 11. LEAD FORM: PROPORSIONAL, QIRQILMAYDIGAN FLAKON */
         .lead-section {
             padding: 65px 0 75px 0;
             background: #00317F;
@@ -1023,8 +1069,8 @@
         .lead-row-card {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 28px;
-            align-items: stretch;
+            gap: 32px;
+            align-items: center;
         }
 
         .form-card {
@@ -1122,20 +1168,22 @@
 
         .lead-visual-col {
             width: 100%;
-            height: 100%;
             display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
         }
 
         .lead-product-img {
             width: 100%;
-            height: 100%;
-            border-radius: 24px;
-            object-fit: cover;
-            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+            max-width: 520px;
+            height: auto;
+            object-fit: contain;
+            filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.35));
             display: block;
         }
 
-        /* FOOTER */
+        /* 12. FOOTER */
         .site-footer {
             background: #0b1526;
             color: #94a3b8;
@@ -1219,20 +1267,19 @@
             padding-top: 22px;
         }
 
-        /* MOBIL VERSIYA */
+        /* MOBIL OPTIMIZATSIYA */
         @media (max-width: 768px) {
             .logo-main { font-size: 18px; }
             .btn-phone-desktop { display: none; }
             .btn-phone-mobile { display: inline-flex; align-items: center; justify-content: center; }
 
-            .hero-section { padding: 10px 0 18px 0; }
-            .hero-grid { display: flex; flex-direction: column; gap: 16px; text-align: center; }
+            .hero-section { padding: 10px 0 16px 0; }
+            .hero-grid { display: flex; flex-direction: column; gap: 14px; text-align: center; }
             .hero-visual-card { order: 1; width: 100%; }
-            .product-img-large { max-width: 100%; max-height: 420px; border-radius: 14px; }
+            .product-img-large { max-width: 100%; max-height: 380px; border-radius: 14px; }
             .hero-content { order: 2; width: 100%; align-items: center; }
-            .hero-title { font-size: 21px; margin-bottom: 14px; line-height: 1.35; }
-            .hero-subtitle { font-size: 13.5px; line-height: 1.55; margin-bottom: 18px; }
-            .hero-cta-btn { width: 100%; padding: 14px 0; font-size: 15px; }
+            .hero-title { font-size: 21px; margin-bottom: 12px; line-height: 1.35; }
+            .hero-subtitle { font-size: 13.5px; line-height: 1.55; margin-bottom: 4px; }
 
             .pain-section-ref { padding: 30px 0 40px 0; }
             .ref-header h2 { font-size: 20px; margin-bottom: 10px; }
@@ -1250,10 +1297,6 @@
             .ref-list-item { font-size: 13.5px; }
             .ref-text-block-2 p { font-size: 14px; margin-bottom: 16px; }
 
-            .results-section, .video-results-section { padding: 32px 0 40px 0; }
-            .results-header-title, .video-header-title { font-size: 21px; margin-bottom: 20px; }
-            .carousel-slide, .video-carousel-slide { flex: 0 0 84%; }
-
             .composition-section { padding: 30px 0 40px 0; }
             .comp-header h2 { font-size: 20px; margin-bottom: 8px; }
             .comp-header p { font-size: 13.5px; }
@@ -1264,12 +1307,37 @@
             .comp-item-content h3 { font-size: 15px; }
             .comp-item-content p { font-size: 13.5px; line-height: 1.6; }
 
+            .target-group-section { padding: 35px 0 40px 0; }
+            .target-header h2 { font-size: 20px; margin-bottom: 8px; }
+            .target-header p { font-size: 13.5px; margin-bottom: 20px; }
+            .target-grid { grid-template-columns: 1fr; gap: 14px; }
+            .target-card-clean { padding: 20px 18px; border-radius: 16px; }
+            .target-num { font-size: 24px; margin-bottom: 8px; }
+            .target-card-clean h3 { font-size: 16px; margin-bottom: 6px; }
+            .target-card-clean p { font-size: 13.5px; }
+
+            .results-section, .video-results-section { padding: 32px 0 40px 0; }
+            .results-header-title, .video-header-title { font-size: 21px; margin-bottom: 20px; }
+
+            .result-card-pair { width: 340px; padding: 12px; gap: 8px; }
+            .result-img { height: 180px; }
+            .result-badge { font-size: 11.5px; padding: 5px 12px; }
+
+            .video-card-item { width: 300px; }
+            .video-card-footer { padding: 12px 14px; }
+            .video-card-title { font-size: 13px; }
+
+            .mid-cta-section { padding: 35px 0; }
+            .mid-cta-box h2 { font-size: 20px; }
+            .mid-cta-box p { font-size: 13.5px; }
+            .btn-mid-action { width: 100%; font-size: 15px; padding: 14px 0; }
+
             .cert-section { padding: 32px 0 35px 0; }
             .cert-header h2 { font-size: 20px; margin-bottom: 8px; }
             .cert-header p { font-size: 13.5px; }
             .cert-grid { display: flex; flex-direction: column; gap: 20px; }
-            .cert-card { padding: 10px; border-radius: 14px; }
-            .cert-caption { font-size: 12px; margin-top: 10px; }
+            .cert-card { padding: 12px; border-radius: 14px; }
+            .cert-caption { font-size: 13px; margin-top: 10px; }
             .cert-subtext-clean p { font-size: 13.5px; }
 
             .faq-section { padding: 32px 0 40px 0; }
@@ -1280,21 +1348,21 @@
             .faq-toggle-icon { width: 26px; height: 26px; font-size: 16px; }
             .faq-answer-pane p { font-size: 13px; }
 
-            .advantages-section { padding: 35px 0 40px 0; }
-            .adv-header h2 { font-size: 20px; margin-bottom: 8px; }
-            .adv-header p { font-size: 13.5px; margin-bottom: 22px; }
-            .adv-grid { display: flex; flex-direction: column; gap: 14px; }
-            .adv-clean-card { padding: 18px 16px; border-radius: 14px; }
-            .adv-num-badge { width: 30px; height: 30px; font-size: 12px; margin-bottom: 12px; }
-            .adv-clean-card h3 { font-size: 15.5px; margin-bottom: 6px; }
-            .adv-clean-card p { font-size: 13.5px; }
+            .steps-section { padding: 35px 0 40px 0; }
+            .steps-header h2 { font-size: 20px; margin-bottom: 8px; }
+            .steps-header p { font-size: 13.5px; margin-bottom: 22px; }
+            .steps-grid { display: flex; flex-direction: column; gap: 14px; }
+            .step-card { padding: 20px 16px; border-radius: 14px; }
+            .step-num { font-size: 24px; margin-bottom: 6px; }
+            .step-card h3 { font-size: 15.5px; margin-bottom: 6px; }
+            .step-card p { font-size: 13.5px; }
 
             .lead-section { padding: 40px 0 50px 0; }
             .lead-header-center h2 { font-size: 22px; }
             .lead-header-center p { font-size: 14px; margin-bottom: 20px; }
             .lead-row-card { display: flex; flex-direction: column; gap: 20px; }
-            .lead-visual-col { order: 1; width: 100%; height: 300px; }
-            .lead-product-img { max-width: 100%; height: 100%; border-radius: 18px; }
+            .lead-visual-col { order: 1; width: 100%; padding: 0; }
+            .lead-product-img { max-width: 280px; height: auto; object-fit: contain; }
             .form-card { order: 2; padding: 22px 18px; border-radius: 18px; }
             .form-group label { font-size: 13px; }
             .form-input { padding: 12px 14px; font-size: 14px; }
@@ -1305,10 +1373,6 @@
             .social-links-grid { flex-direction: column; width: 100%; }
             .social-btn { width: 100%; justify-content: center; }
             .footer-bottom-flex { flex-direction: column; gap: 10px; text-align: center; }
-
-            .carousel-btn { width: 38px; height: 38px; }
-            .carousel-btn.prev { left: 4px; }
-            .carousel-btn.next { right: 4px; }
         }
 
         @keyframes pulseGlow {
@@ -1329,14 +1393,26 @@
     <!-- TOP TICKER BAR -->
     <div class="top-ticker">
         <div class="ticker-content" id="ticker-text">
-            <span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span>
-            <span>🌿 100% Табиий таркиб</span>
-            <span>⭐ 20,000+ Мамнун мижозлар</span>
-            <span>🔐 100% Махфийлик кафолатланади</span>
+            <span>
+                <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                O'zbekiston bo'ylab bepul yetkazib berish
+            </span>
+            <span>
+                <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path></svg>
+                100% tabiiy va xavfsiz tarkib
+            </span>
+            <span>
+                <svg class="ticker-svg" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                20,000+ muvaffaqiyatli natijalar
+            </span>
+            <span>
+                <svg class="ticker-svg" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                Buyurtmani tekshirib keyin to'lash imkoniyati
+            </span>
         </div>
     </div>
 
-    <!-- 1-BLOK: STICKY HEADER -->
+    <!-- 1. STICKY HEADER -->
     <header class="main-header">
         <div class="container header-flex">
             <a href="#" class="logo">
@@ -1346,8 +1422,8 @@
 
             <div class="header-right">
                 <div class="lang-switcher">
-                    <button class="lang-btn" id="btn-uz" onclick="changeLanguage('uz')">UZ</button>
-                    <button class="lang-btn active" id="btn-uz_cyr" onclick="changeLanguage('uz_cyr')">ЎЗ</button>
+                    <button class="lang-btn active" id="btn-uz" onclick="changeLanguage('uz')">UZ</button>
+                    <button class="lang-btn" id="btn-uz_cyr" onclick="changeLanguage('uz_cyr')">ЎЗ</button>
                     <button class="lang-btn" id="btn-ru" onclick="changeLanguage('ru')">RU</button>
                     <button class="lang-btn" id="btn-en" onclick="changeLanguage('en')">EN</button>
                 </div>
@@ -1363,192 +1439,132 @@
                 </a>
 
                 <a href="#lead-form" class="btn-glow-green" id="header-order-btn">
-                    Буюртма бериш
+                    Buyurtma berish
                 </a>
             </div>
         </div>
     </header>
 
-    <!-- 2-BLOK: HERO SECTION -->
+    <!-- 2. HERO SECTION (BARQAROR BITTA RASM BILAN) -->
     <section class="hero-section">
         <div class="container hero-grid">
             <div class="hero-visual-card">
-                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1000&auto=format&fit=crop&q=80" alt="QOMUS Flakon" class="product-img-large">
+                <img src="https://i.postimg.cc/zXXrt7NG/IMG-20260924-115226-440.png" alt="QOMUS Flakon" class="product-img-large" fetchpriority="high">
             </div>
 
             <div class="hero-content">
                 <h1 class="hero-title" id="hero-title">
-                    ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!
+                    OQ DOG'LARDAN XALOS BO'LISH ENDI ILOJSIZ EMAS!
                 </h1>
 
                 <p class="hero-subtitle" id="hero-subtitle">
-                    Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!
+                    Ushbu vosita vitiligo va teridagi turli muammolarni bartaraf etishda tabiiy yordam beradi. O'rganib qolish holatini keltirib chiqarmaydi — Natijalar tasdiqlangan!
                 </p>
-
-                <a href="#lead-form" class="hero-cta-btn" id="hero-cta">
-                    Бепул маслаҳат олиш
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- 3-BLOK: REFERENSGA MOS STRUKTURA -->
+    <!-- 3. PAIN SECTION -->
     <section class="pain-section-ref">
         <div class="container">
             <div class="ref-header">
-                <h2 id="ref-header-title">Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!</h2>
-                <p id="ref-sub-query">Нима қиласиз?</p>
+                <h2 id="ref-header-title">Teringizni avvalgi holatiga qaytarishning iloji yo'q deb o'ylasangiz – Adashasiz!</h2>
+                <p id="ref-sub-query">Nima qilasiz?</p>
             </div>
 
             <div class="ref-row-1">
                 <div class="ref-text-block-1">
                     <p class="ref-subtext-lead" id="ref-c1-lead">
-                        Сиз шу ергача ўқиётган бўлсангиз, демак, сизда ёки оилангизда ҳам витилиго ёки тери муаммолари бор.
+                        Siz shu yergacha o'qiyotgan bo'lsangiz, demak, sizda yoki oilangizda ham vitiligo yoki teri muammolari bor.
                     </p>
 
                     <div class="ref-list" id="ref-c1-items">
-                        <div class="ref-list-item">
-                            <span class="ref-badge-icon">!</span>
-                            <span>Теридаги оқ доғлар</span>
-                        </div>
-                        <div class="ref-list-item">
-                            <span class="ref-badge-icon">!</span>
-                            <span>Уят ёки ноқулайлик ҳисси</span>
-                        </div>
-                        <div class="ref-list-item">
-                            <span class="ref-badge-icon">!</span>
-                            <span>Асабийлик ва ўз-ўзингизга ишончсизлик</span>
-                        </div>
-                        <div class="ref-list-item">
-                            <span class="ref-badge-icon">!</span>
-                            <span>Турли мазлар ва даволардан фойда кўрмагансиз ёки таъсири кам...</span>
-                        </div>
-                        <div class="ref-list-item">
-                            <span class="ref-badge-icon">!</span>
-                            <span>Айниқса, йилнинг иссиқ фаслларида ёки енги калта кийимлар кийганда ноқулайлик сезасиз...</span>
-                        </div>
-                        <div class="ref-list-item">
-                            <span class="ref-badge-icon">!</span>
-                            <span>Витилигодан халос бўлишни хоҳлайсиз-у, лекин "Қандай қилиб?" деган саволга жавоб тополмай бошингиз қотган, тўғрими?</span>
-                        </div>
+                        <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Teridagi oq dog'lar</span></div>
+                        <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Uyat yoki noqulaylik hissi</span></div>
+                        <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Asabiylik va o'z-o'zingizga ishonchsizlik</span></div>
+                        <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Turli mazlar va usullardan foyda ko'rmagansiz yoki ta'siri kam...</span></div>
+                        <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Ayniqsa, yilning issiq fasllarida yoki yengi kalta kiyimlar kiyganda noqulaylik sezasiz...</span></div>
+                        <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Vitiligodan xalos bo'lishni xohlaysiz-u, lekin "Qanday qilib?" degan savolga javob topolmay boshingiz qotgan, to'g'rimi?</span></div>
                     </div>
                 </div>
 
                 <div class="ref-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700&auto=format&fit=crop&q=80" alt="Vitiligo yuzda" class="img-main-vitiligo">
-                    <img src="https://images.unsplash.com/photo-1617897903246-719242758050?w=500&auto=format&fit=crop&q=80" alt="Vitiligo qo'lda" class="img-overlap-hand">
+                    <img src="https://i.postimg.cc/YqnwJF2h/IMG-20260924-115226-478.png" alt="Vitiligo yuzda" class="img-main-vitiligo" loading="lazy" decoding="async">
+                    <img src="https://i.postimg.cc/WbWPQZpt/IMG-20260924-115226-125.png" alt="Vitiligo qo'lda" class="img-overlap-hand" loading="lazy" decoding="async">
                 </div>
             </div>
 
             <div class="ref-row-2">
                 <div class="ref-img-card-2">
-                    <img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=700&auto=format&fit=crop&q=80" alt="Xavotir va umid" class="img-single-card">
+                    <img src="https://i.postimg.cc/dttYH6Fk/IMG-20260924-115226-737.png" alt="Xavotir va umid" class="img-single-card" loading="lazy" decoding="async">
                 </div>
 
                 <div class="ref-text-block-2">
                     <p id="ref-c2-p1">
-                        Аммо бу муаммоларга зудлик билан ечим топишингиз лозим, тўғрими? Акс ҳолда, вақтида даволанмаса, витилиго бутун танани эгаллаб, тузатиб бўлмас ҳолатга келиб қолиши мумкин! Тасаввур қилишнинг ўзи даҳшатли.
+                        Ammo bu muammolarga zudlik bilan yechim topishingiz lozim, to'g'rimi? Aks holda, vaqtida parvarish qilinmasa, vitiligo butun tanani egallab, tiklash qiyin bo'lgan holatga kelib qolishi mumkin! Tasavvur qilishning o'zi og'ir.
                     </p>
 
                     <p id="ref-c2-p2">
-                        <strong>Касалликга қарши курашасизми ёки йўқ?!</strong> Ишончим комил, сиз бу муаммони енгасиз ва терингиз соғлом ҳолатига қайтади.
+                        <strong>Muammoga qarshi kurashasizmi yoki yo'q?!</strong> Ishonchim komil, siz bu sinovni yengasiz va teringiz sog'lom holatiga qaytadi.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 4-BLOK: 10 TA SLiD LOOP + 4s AUTOPLAY KARUSEL -->
-    <section class="results-section">
-        <div class="container">
-            <h2 class="results-header-title" id="results-title">Мижозлар натижалари</h2>
-
-            <div class="carousel-outer-box">
-                <button type="button" class="carousel-btn prev" id="imgPrevBtn" aria-label="Oldingisi">
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                </button>
-
-                <div class="carousel-track-wrapper" id="carouselWrapper">
-                    <div class="carousel-track" id="carouselTrack">
-                        
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div></div></div>
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://images.unsplash.com/photo-1617897903246-719242758050?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div></div></div>
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div></div></div>
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://images.unsplash.com/photo-1512290900672-1f48616142c9?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div></div></div>
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div></div></div>
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div></div></div>
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div></div></div>
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div></div></div>
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://images.unsplash.com/photo-1527613426441-4da17471b66d?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div></div></div>
-                        <div class="carousel-slide"><div class="result-card-pair"><div class="result-col"><img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?w=600&auto=format&fit=crop&q=80" alt="Avval" class="result-img"><span class="result-badge badge-before">Аввал</span></div><div class="result-col"><img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=600&auto=format&fit=crop&q=80" alt="Keyin" class="result-img"><span class="result-badge badge-after">Кейин</span></div></div></div>
-
-                    </div>
-                </div>
-
-                <button type="button" class="carousel-btn next" id="imgNextBtn" aria-label="Keyingisi">
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5-BLOK: TARKIB -->
+    <!-- 4. YECHIM VA TABIIY TARKIB -->
     <section class="composition-section">
         <div class="container">
             <div class="comp-header">
-                <h2 id="comp-sec-title">ҚОМУС ПРЕПАРАТИНИНГ ТАБИИЙ ТАРКИБИ</h2>
+                <h2 id="comp-sec-title">QOMUS VOSITASINING TABIIY TARKIBI</h2>
                 <p id="comp-sec-desc">
-                    Витилиго ва тери пигменти тикланишида ички микроэлементлар мувозанати ҳал қилувчи аҳамиятга эга. Маҳсулот фақатгина табиий компонентлардан ташкил топган.
+                    Vitiligo va teri pigmentatsiyasi tiklanishida ichki mikroelementlar muvozanati muhim ahamiyatga ega. Mahsulot faqat tabiiy komponentlardan tashkil topgan.
                 </p>
             </div>
 
             <div class="comp-grid">
                 <div class="comp-visual-box">
-                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=900&auto=format&fit=crop&q=80" alt="QOMUS Tarkibi" class="comp-product-img">
+                    <img src="https://i.postimg.cc/prBP91tQ/IMG-20260924-115246-503.png" alt="QOMUS Tarkibi" class="comp-product-img" loading="lazy" decoding="async">
                 </div>
 
                 <div class="comp-clean-list">
                     <div class="comp-clean-item">
                         <span class="comp-badge-icon">✓</span>
                         <div class="comp-item-content">
-                            <h3 id="c-i1-t">Қора седана ёғи</h3>
-                            <p id="c-i1-d">Иммунитет мувозанатини тиклайди ва ҳужайралар регенерациясини жадаллаштирувчи асосий фаол модда.</p>
+                            <h3 id="c-i1-t">Qora sedana yog'i</h3>
+                            <p id="c-i1-d">Immun tizimi muvozanatini tiklash va hujayralar yangilanishini jadallashtiruvchi asosiy faol modda.</p>
                         </div>
                     </div>
 
                     <div class="comp-clean-item">
                         <span class="comp-badge-icon">✓</span>
                         <div class="comp-item-content">
-                            <h3 id="c-i2-t">Витаминлар: E, D, C, B</h3>
-                            <p id="c-i2-d">Тери пигменти (меланин) синтезини қўллаб-қувватлайди ва ҳужайраларни ультрабинафша стрессдан ҳимоялайди.</p>
+                            <h3 id="c-i2-t">Vitaminlar: E, D, C, B</h3>
+                            <p id="c-i2-d">Teri pigmenti (melanin) sintezini qo'llab-quvvatlaydi va hujayralarni erkin radikallar hamda ultrabinafsha nurlaridan himoyalaydi.</p>
                         </div>
                     </div>
 
                     <div class="comp-clean-item">
                         <span class="comp-badge-icon">✓</span>
                         <div class="comp-item-content">
-                            <h3 id="c-i3-t">Тўйинмаган ёғ кислоталари (Омега 3, 6, 9)</h3>
-                            <p id="c-i3-d">Фосфолипидлар билан бирга терининг липид қаватини мустаҳкамлайди, қуруқлик ва қазиғланишни тўхтатади.</p>
+                            <h3 id="c-i3-t">To'yinmagan yog' kislotalari (Omega 3, 6, 9)</h3>
+                            <p id="c-i3-d">Fosfolipidlar bilan birga terining tabiiy himoya qavatini mustahkamlaydi, quruqlik va qipiqlanishni bartaraf etadi.</p>
                         </div>
                     </div>
 
                     <div class="comp-clean-item">
                         <span class="comp-badge-icon">✓</span>
                         <div class="comp-item-content">
-                            <h3 id="c-i4-t">Макро ва микро элементлар мажмуаси</h3>
-                            <p id="c-i4-d">Калий, натрий, фосфор, кальций, марганец, темир, рух, мис, селен, никель — тери рангини тиклаш учун зарур ноёб минераллар.</p>
+                            <h3 id="c-i4-t">Makro va mikroelementlar majmuasi</h3>
+                            <p id="c-i4-d">Kaliy, natriy, fosfor, kalsiy, marganets, temir, rux, mis, selen, nikel — teri tabiiy rangini tiklash uchun zarur muhim minerallar.</p>
                         </div>
                     </div>
 
                     <div class="comp-clean-item">
                         <span class="comp-badge-icon">✓</span>
                         <div class="comp-item-content">
-                            <h3 id="c-i5-t">Ёрдамчи компонентлар ва эфир мойлари</h3>
-                            <p id="c-i5-d">Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула.</p>
+                            <h3 id="c-i5-t">Yordamchi komponentlar va efir moylari</h3>
+                            <p id="c-i5-d">Halol qoramol jelatini, glitserin, nigellon, A-karotinoidlar va limon kislotasi asosidagi oson hazm bo'luvchi kapsula.</p>
                         </div>
                     </div>
                 </div>
@@ -1556,276 +1572,302 @@
         </div>
     </section>
 
-    <!-- 6-BLOK: 10 TA VİDEO LOOP + 4s AUTOPLAY KARUSELI -->
+    <!-- 4. "KIMLAR UCHUN TAVSIYA ETILADI" BLOKI -->
+    <section class="target-group-section">
+        <div class="container">
+            <div class="target-header">
+                <h2 id="target-title">KIMLAR UCHUN TAVSIYA ETILADI?</h2>
+                <p id="target-sub">Agar sizda quyidagi holatlardan biri kuzatilayotgan bo'lsa, Qomus siz uchun ayni muddao</p>
+            </div>
+
+            <div class="target-grid">
+                <div class="target-card-clean">
+                    <div class="target-num">01</div>
+                    <h3 id="tg-1-t">Yangi chiqqan dog'lar</h3>
+                    <p id="tg-1-d">Terida yaqinda paydo bo'lgan oq nuqta va mayda dog'larning tarqalishini zudlik bilan to'xtatish uchun.</p>
+                </div>
+                <div class="target-card-clean">
+                    <div class="target-num">02</div>
+                    <h3 id="tg-2-t">Ko'p yillik vitiligo</h3>
+                    <p id="tg-2-d">Yillar davomida turli malhamlardan natija ko'rmagan, terini ichkaridan oziqlantirishga muhtojlar uchun.</p>
+                </div>
+                <div class="target-card-clean">
+                    <div class="target-num">03</div>
+                    <h3 id="tg-3-t">Kuchli stress oqibatlari</h3>
+                    <p id="tg-3-d">Asabiylik, qo'rquv va immunitet pasayishi oqibatida yuzaga kelgan teri pigmenti yo'qolishida.</p>
+                </div>
+                <div class="target-card-clean">
+                    <div class="target-num">04</div>
+                    <h3 id="tg-4-t">Qaytalanishning oldini olish</h3>
+                    <p id="tg-4-d">Terining sog'lom holatini uzoq muddat saqlash va organizmni zarur minerallar bilan to'yintirish uchun.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FOTO NATIJALAR (HAM AVTO O'TADIGAN, HAM SWIPE BO'LADIGAN) -->
+    <section class="results-section">
+        <div class="container">
+            <h2 class="results-header-title" id="results-title">Mijozlar natijalari</h2>
+        </div>
+
+        <div class="marquee-viewport" id="imgViewport">
+            <div class="marquee-track" id="imgMarqueeTrack">
+                <!-- 11 ta juftlik rasmlar -->
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/brqhjH2r/IMG-20260924-115230-717.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/Y96HVyjW/IMG-20260924-115231-698.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/RhGzC67S/IMG-20260924-115231-600.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/3JJTS1hh/IMG-20260924-115230-855.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/vTGsdL6x/IMG-20260924-115231-220.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/fWvsfF62/IMG-20260924-115231-494.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/kGwdM6xs/IMG-20260924-115231-501.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/hjLBw3hn/IMG-20260924-115236-527.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/Yqprck1Z/IMG-20260924-115243-634.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/MT7S4rXG/IMG-20260924-115231-684.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/TYCRfS0R/IMG-20260924-115236-023.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/15J9sTB4/IMG-20260924-115236-139.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/wjrgsmST/IMG-20260924-115236-145.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/hjWn2qDC/IMG-20260924-115236-389.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/bw5p2t4F/IMG-20260924-115236-429.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/yYV1qBmY/IMG-20260924-115236-282.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/CLFhyYGw/IMG-20260924-115236-542.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/vBrsjSDb/IMG-20260924-115236-914.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/NfpgBVD4/IMG-20260924-115236-859.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/dtqsMv2c/IMG-20260924-115243-846.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
+                <div class="result-card-pair"><div class="result-col"><img src="https://i.postimg.cc/jq6xkCJ9/IMG-20260924-115243-265.png" alt="Avval" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-before">Avval</span></div><div class="result-col"><img src="https://i.postimg.cc/NfgshY1V/IMG-20260924-115243-398.png" alt="Keyin" class="result-img" loading="lazy" decoding="async"><span class="result-badge badge-after">Keyin</span></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. VIDEO SHARHLAR (HAM AVTO O'TADIGAN, HAM SWIPE BO'LADIGAN) -->
     <section class="video-results-section">
         <div class="container">
-            <h2 class="video-header-title" id="video-sec-title">Мижозларимизнинг видео фикрлари</h2>
-            <p class="video-header-sub" id="video-sec-sub">Қомус препаратидан фойдаланиб натижага эришган юртдошларимиз билан суҳбатлар</p>
+            <h2 class="video-header-title" id="video-sec-title">Mijozlarimizning video fikrlari</h2>
+            <p class="video-header-sub" id="video-sec-sub">Qomus vositasidan foydalangan yurtdoshlarimiz bilan samimiy suhbatlar</p>
+        </div>
 
-            <div class="carousel-outer-box">
-                <button type="button" class="carousel-btn prev" id="vidPrevBtn" aria-label="Oldingisi">
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                </button>
-
-                <div class="carousel-track-wrapper" id="videoCarouselWrapper">
-                    <div class="carousel-track" id="videoCarouselTrack">
-                        
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/OYuZ5S4rTwA" title="Qomus video 1" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-1">25 йиллик дарддан қандай қутилдим? Витилиго ҳақида ҳақиқатлар</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/NMz7hrU2C50" title="Qomus video 2" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-2">Қомус препарати билан тери пигментининг тикланиш жараёни</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/Y-YUxhdenT4" title="Qomus video 3" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-3">Оқ доғлар бўйича мижозимизнинг ҳаётий тажрибаси</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/sBeFihuV25U" title="Qomus video 4" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-4">Мижознинг самимий фикрлари ва эришилган натижа</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/LJZAX06GEsM" title="Qomus video 5" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-5">Муолажа босқичлари ва ижобий ўзгаришлар</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/bg32I_CkAY0" title="Qomus video 6" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-6">Витилиго муаммосидан сўнг соғлом терига қайтиш</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/D4RawvvVu1I" title="Qomus video 7" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-7">Теридаги пигментация қайта тикланиши бўйича фикрлар</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/TFUjzVZ44zg" title="Qomus video 8" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-8">Қомус капсулаларини қабул қилиш тажрибаси</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/Ze0-oiOmcc8" title="Qomus video 9" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-9">Мижозимизнинг даволаниш давомидаги ўзгаришлари</h4></div></div></div>
-                        <div class="video-carousel-slide"><div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/dQ_Oy1fK_mU" title="Qomus video 10" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-10">Ҳақиқий натижалар: мижоз билан жонли мулоқот</h4></div></div></div>
-
-                    </div>
-                </div>
-
-                <button type="button" class="carousel-btn next" id="vidNextBtn" aria-label="Keyingisi">
-                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
+        <div class="marquee-viewport" id="vidViewport">
+            <div class="marquee-track" id="vidMarqueeTrack">
+                <!-- 10 ta video -->
+                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/WTWcRNIFo0E" title="Qomus video 1" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-1">Oq dog'lardan qutulish | 36 yillik masala hal qilindi</h4></div></div>
+                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/kU2up3x5aow" title="Qomus video 2" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-2">Bu muolajadan so'ng oq dog'larim yo'qolib ketdi</h4></div></div>
+                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/NMz7hrU2C50" title="Qomus video 3" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-3">Qomus vositasi bilan teri pigmentining tiklanish jarayoni</h4></div></div>
+                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/65pHdT3o-Tg" title="Qomus video 4" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-4">Vitiligo va oq dog'lar bo'yicha mijozimiz tajribasi</h4></div></div>
+                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/Y-YUxhdenT4" title="Qomus video 5" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-5">Qomus bilan teridagi o'zgarishlar va natija</h4></div></div>
+                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/bg32I_CkAY0" title="Qomus video 6" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-6">Vitiligo muammosidan so'ng sog'lom teriga qaytish</h4></div></div>
+                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/lrEqBIDziwM" title="Qomus video 7" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-7">Oq dog'lar profilaktikasi va terining tiklanishi</h4></div></div>
+                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/LJZAX06GEsM" title="Qomus video 8" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-8">Parvarish bosqichlari va ijobiy o'zgarishlar</h4></div></div>
+                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/Sfjj0u_MRko" title="Qomus video 9" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-9">Qomus vositasi bo'yicha mijoz sharhi</h4></div></div>
+                <div class="video-card-item"><div class="video-embed-box"><iframe src="https://www.youtube.com/embed/u_kBYJorENs" title="Qomus video 10" allowfullscreen loading="lazy"></iframe></div><div class="video-card-footer"><h4 class="video-card-title" id="vt-10">Haqiqiy natijalar: mijoz bilan jonli muloqot</h4></div></div>
             </div>
         </div>
     </section>
 
-    <!-- 7-BLOK: SERTIFIKATLAR -->
+    <!-- 7. ORALIQ TEZKOR CTA -->
+    <section class="mid-cta-section">
+        <div class="container">
+            <div class="mid-cta-box">
+                <h2 id="mid-cta-title">Siz ham sog'lom va tiniq teriga qaytishni xohlaysizmi?</h2>
+                <p id="mid-cta-desc">Mutaxassisimiz siz bilan bog'lanib, holatingizni bepul tahlil qiladi va to'g'ri kursni tavsiya etadi.</p>
+                <a href="#lead-form" class="btn-mid-action" id="mid-cta-btn">Hoziroq bepul maslahat oling</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. SERTIFIKATLAR (YANGILANGAN VA KESILMAYDIGAN RASMLAR) -->
     <section class="cert-section">
         <div class="container">
             <div class="cert-header">
-                <h2 id="cert-title">ДАВЛАТ ТОМОНИДАН ТАСДИҚЛАНГАН ВА СЕРТИФИКАТЛАНГАН</h2>
+                <h2 id="cert-title">DAVLAT TOMONIDAN TASDIQLANGAN VA SERTIFIKATLANGAN</h2>
                 <p id="cert-desc">
-                    «QOMUS» препарати Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги томонидан тўлиқ экспертизадан ўтказилган ва расмий рухсатномага эга.
+                    «QOMUS» mahsuloti O'zbekiston Respublikasi vakolatli organlari tomonidan to'liq laboratoriya tekshiruvlaridan o'tkazilgan va rasmiy ruxsatnomaga ega.
                 </p>
             </div>
 
             <div class="cert-grid">
                 <div class="cert-card">
-                    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=700&auto=format&fit=crop&q=80" alt="SSV Ruxsatnomasi">
+                    <img src="https://i.postimg.cc/8zdLpLcd/IMG-20260924-133737-359.jpg" alt="SSV Ruxsatnomasi va Sertifikat" loading="lazy" decoding="async">
                     <p class="cert-caption" id="cert-cap-1">
-                        Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425
+                        O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi Ruxsatnomasi № 001425
                     </p>
                 </div>
 
                 <div class="cert-card">
-                    <img src="https://images.unsplash.com/photo-1450133064473-71024230f91b?w=700&auto=format&fit=crop&q=80" alt="Sanitariya xulosasi">
+                    <img src="https://i.postimg.cc/QdZpZf8m/IMG-20260924-133732-180.jpg" alt="Sanitariya xulosasi" loading="lazy" decoding="async">
                     <p class="cert-caption" id="cert-cap-2">
-                        Санитарно-эпидемиологическое заключение № 405282 (Тошкент)
+                        Sanitariya-epidemiologik xulosasi № 405282 (Toshkent shahri)
                     </p>
                 </div>
             </div>
 
             <div class="cert-subtext-clean">
                 <p id="cert-safety-text">
-                    Маҳсулотнинг ҳар бир партияси гигиеник, радиологик ва бактериологик синовлардан муваффақиятли ўтиб, инсон саломатлиги учун мутлақо хавфсиз деб топилган.
+                    Mahsulotning har bir partiyasi gigiyenik, radiologik va bakteriologik sinovlardan muvaffaqiyatli o'tib, inson salomatligi uchun mutlaqo xavfsiz deb topilgan.
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- 8-BLOK: FAQ AKORDEON -->
+    <!-- 9. FAQ AKORDEON -->
     <section class="faq-section">
         <div class="container">
             <div class="faq-header">
-                <h2 id="faq-main-title">КЎП БЕРИЛАДИГАН САВОЛЛАР</h2>
-                <p id="faq-main-sub">Мижозларимиз томонидан энг кўп бериладиган саволларга расмий мутахассисларимиз жавоблари</p>
+                <h2 id="faq-main-title">KO'P BERILADIGAN SAVOLLAR</h2>
+                <p id="faq-main-sub">Mijozlarimiz tomonidan eng ko'p beriladigan savollarga mutaxassislarimiz javoblari</p>
             </div>
 
             <div class="faq-container">
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
-                        <span id="fq-1">Препарат ўрганиб қолиш (привыкание) ҳолатини келтириб чиқармайдими?</span>
+                        <span id="fq-1">Vosita o'rganib qolish holatini keltirib chiqarmaydimi?</span>
                         <div class="faq-toggle-icon">+</div>
                     </button>
                     <div class="faq-answer-pane">
-                        <p id="fa-1">Йўқ, “QOMUS” 100% табиий совуқ прессланган қора седана ёғи ва витаминлар мажмуасидан иборат бўлиб, гормонлар ёки кимёвий қўшимчалар сақламайди. Шу сабабли қабул қилиш тўхтатилганда ҳам ўрганиб қолиш ҳолати кузатилмайди.</p>
+                        <p id="fa-1">Yo'q, “QOMUS” 100% tabiiy sovuq presslangan qora sedana yog'i va vitaminlar majmuasidan iborat bo'lib, gormonlar yoki agressiv kimyoviy qo'shimchalar saqlamaydi. Shu sababli iste'mol to'xtatilganda ham o'rganib qolish yuzaga kelmaydi.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
-                        <span id="fq-2">Биринчи сезиларли натижалар қачон кўрина бошлайди?</span>
+                        <span id="fq-2">Birinchi sezilarli natijalar qachon ko'rina boshlaydi?</span>
                         <div class="faq-toggle-icon">+</div>
                     </button>
                     <div class="faq-answer-pane">
-                        <p id="fa-2">Организмнинг хусусияти ва касаллик даражасига қараб, одатда мунтазам фойдаланишнинг 3–4 ҳафтасида тери пигментациясида ижобий ўзгаришлар, оқ доғлар четларининг табиий рангга қайта бошлаши кузатилади.</p>
+                        <p id="fa-2">Organizmning o'ziga xosligi va teri holatiga qarab, odatda muntazam iste'molning 3–4 haftasida teri pigmentatsiyasida ijobiy o'zgarishlar, oq dog'lar chetlarining tabiiy tusga qayta boshlashi kuzatiladi.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
-                        <span id="fq-3">Капсулаларни қандай тартибда қабул қилиш тавсия этилади?</span>
+                        <span id="fq-3">Kapsulalarni qanday tartibda qabul qilish tavsiya etiladi?</span>
                         <div class="faq-toggle-icon">+</div>
                     </button>
                     <div class="faq-answer-pane">
-                        <p id="fa-3">Катталар учун кунига 2 маҳал (эрталаб ва кечқурун) овқатдан 20-30 дақиқа олдин 1-2 тадан капсулани илиқ сув билан ичиш тавсия этилади. Аниқ муолажа курсини мутахассис телефон орқали алоҳида белгилаб беради.</p>
+                        <p id="fa-3">Kattalar uchun kuniga 2 mahal (ertalab va kechqurun) ovqatdan 20-30 daqiqa oldin 1-2 tadan kapsulani iliq suv bilan ichish tavsiya etiladi. Aniq qabul tartibini mutaxassis telefon orqali bepul belgilab beradi.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
-                        <span id="fq-4">Капсула қобиғи ҳалолми ва у нимадан тайёрланган?</span>
+                        <span id="fq-4">Kapsula qobig'i halolmi va u nimadan tayyorlangan?</span>
                         <div class="faq-toggle-icon">+</div>
                     </button>
                     <div class="faq-answer-pane">
-                        <p id="fa-4">Капсула қобиғи фақатгина ҳалол сўйилган қора мол желатинидан тайёрланган бўлиб, ошқозонда осон эрийди ва ошқозон-ичак тизимига ҳеч қандай оғирлик қилмайди.</p>
+                        <p id="fa-4">Kapsula qobig'i faqatgina halol so'yilgan qoramol jelatinidan tayyorlangan bo'lib, me'dada oson eriydi va oshqozon-ichak tizimiga hech qanday og'irlik tug'dirmaydi.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
-                        <span id="fq-5">Ҳомиладорлик ёки эмизиш даврида ичиш мумкинми?</span>
+                        <span id="fq-5">Homiladorlik yoki emizish davrida ichish mumkinmi?</span>
                         <div class="faq-toggle-icon">+</div>
                     </button>
                     <div class="faq-answer-pane">
-                        <p id="fa-5">Ҳомиладорлик ва лактация даврида ҳар қандай биологик фаол қўшимчаларни қабул қилишдан олдин шахсий шифокор билан маслаҳатлашиш тавсия қилинади.</p>
+                        <p id="fa-5">Homiladorlik va laktatsiya davrida har qanday biologik faol qo'shimchalarni qabul qilishdan oldin shaxsiy shifokor bilan maslahatlashish tavsiya etiladi.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
-                        <span id="fq-6">Етказиб бериш хизмати қанча вақт олади va u пулликми?</span>
+                        <span id="fq-6">Yetkazib berish xizmati qancha vaqt oladi va u pullikmi?</span>
                         <div class="faq-toggle-icon">+</div>
                     </button>
                     <div class="faq-answer-pane">
-                        <p id="fa-6">Ўзбекистон бўйлаб барча вилоят, шаҳар ва туманларга етказиб бериш мутлақо БЕПУЛ амалга оширилади. Тошкент шаҳрида 24 соат ичида, вилоятларга 1-2 кун ичида қўлингизга етказилади.</p>
+                        <p id="fa-6">O'zbekiston bo'ylab barcha viloyat, shahar va tumanlarga yetkazib berish mutlaqo BEPUL amalga oshiriladi. Toshkent shahrida 24 soat ichida, viloyatlarga 1-2 kun ichida qo'lingizga yetkaziladi.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
-                        <span id="fq-7">Тўловни маҳсулотни олгандан keyin қилса бўладими?</span>
+                        <span id="fq-7">To'lovni mahsulotni olgandan keyin qilsa bo'ladimi?</span>
                         <div class="faq-toggle-icon">+</div>
                     </button>
                     <div class="faq-answer-pane">
-                        <p id="fa-7">Албатта! Бизда 100% ишончли тизим йўлга қўйилган: тўлов маҳсулотни курьердан қабул қилиб олиб, сифатига тўлиқ ишонч ҳосил қилганингиздан сўнг (нақд ёки пластик карта орқали) тўланади.</p>
+                        <p id="fa-7">Albatta! Bizda 100% ishonchli tizim yo'lga qo'yilgan: to'lov mahsulotni kuryerdan qabul qilib olib, sifatiga to'liq ishonch hosil qilganingizdan so'ng (naqd yoki plastik karta orqali) to'lanadi.</p>
                     </div>
                 </div>
 
                 <div class="faq-item">
                     <button class="faq-question-btn" onclick="toggleFaq(this)">
-                        <span id="fq-8">Бир флаконда нечта капсула бор va u қанча вақтга етади?</span>
+                        <span id="fq-8">Bir flakonda nechta kapsula bor va u qancha vaqtga yetadi?</span>
                         <div class="faq-toggle-icon">+</div>
                     </button>
                     <div class="faq-answer-pane">
-                        <p id="fa-8">Бир флаконда 150 та юмшоқ желатин капсула мавжуд. Бу кунига қабул қилинадиган дозага қараб ўртача 1–1.5 ойлик тўлиқ муолажа курси uchun етарли ҳисобланади.</p>
+                        <p id="fa-8">Bir flakonda 150 ta yumshoq jelatin kapsula mavjud. Bu kunlik qabul dozasiga qarab o'rtacha 1–1.5 oylik to'liq kurs uchun yetarli hisoblanadi.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 9-BLOK: JIDDIY TIBBIY/WELLNESS STANDARTDAGI USTUN TOMONLAR -->
-    <section class="advantages-section">
+    <!-- 10. BUYURTMA VA XIZMAT KO'RSATISH TARTIBI -->
+    <section class="steps-section">
         <div class="container">
-            <div class="adv-header">
-                <h2 id="adv-title">НЕГА АЙНАН “QOMUS” ПРЕПАРАТИНИ ТАНЛАШАДИ?</h2>
-                <p id="adv-desc">Биз мижозларимиз саломатлиги ва ишончини юқори баҳолаймиз. Бизнинг асосий афзалликларимиз билан танишинг</p>
+            <div class="steps-header">
+                <h2 id="steps-title">BUYURTMA VA XIZMAT KO'RSATISH TARTIBI</h2>
+                <p id="steps-desc">Siz uchun eng qulay, xavfsiz va shaffof tizimni taqdim etamiz</p>
             </div>
 
-            <div class="adv-grid">
-                <div class="adv-clean-card">
-                    <div class="adv-num-badge">01</div>
-                    <h3 id="adv-c1-t">20,000+ Мамнун мижозлар</h3>
-                    <p id="adv-c1-d">Ўзбекистон бўйлаб минглаб инсонлар бизнинг воситамиз орқали оқ доғлар муаммосидан халос бўлиб, соғлом терига эришдилар.</p>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <h3 id="step-1-t">So'rov qoldirasiz</h3>
+                    <p id="step-1-d">Saytdagi formaga ismingiz va raqamingizni yozasiz. Hech qanday oldindan to'lov yoki karta raqami talab etilmaydi.</p>
                 </div>
-
-                <div class="adv-clean-card">
-                    <div class="adv-num-badge">02</div>
-                    <h3 id="adv-c2-t">Давлат томонидан сертификатланган</h3>
-                    <p id="adv-c2-d">Соғлиқни Сақлаш Вазирлиги ва СЭС хулосалари билан расман тасдиқланган, барча хавфсизлик талабларига 100% жавоб беради.</p>
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <h3 id="step-2-t">Mutaxassis maslahati</h3>
+                    <p id="step-2-d">Mutaxassisimiz sizga qo'ng'iroq qilib, dog'larning holati bo'yicha bepul maslahat beradi va kursni aniqlaydi.</p>
                 </div>
-
-                <div class="adv-clean-card">
-                    <div class="adv-num-badge">03</div>
-                    <h3 id="adv-c3-t">100% Табиий ва безарар</h3>
-                    <p id="adv-c3-d">Фақат совуқ прессланган седана ёғи ва табиий микроэлементlar. Ҳеч қандай гормонларсиз, организмга ўрганиб қолиш ҳолати юзага келмайди.</p>
-                </div>
-
-                <div class="adv-clean-card">
-                    <div class="adv-num-badge">04</div>
-                    <h3 id="adv-c4-t">Ўзбекистон бўйлаб БЕПУЛ етказиш</h3>
-                    <p id="adv-c4-d">Қайси вилоят ёки туманда яшашингиздан қатъи назар, буюртмангиз кўрсатилган манзилга мутлақо бепул етказиб берилади.</p>
-                </div>
-
-                <div class="adv-clean-card">
-                    <div class="adv-num-badge">05</div>
-                    <h3 id="adv-c5-t">Олгандан сўнг тўлов (100% хавфсиз)</h3>
-                    <p id="adv-c5-d">Ҳеч қандай олдиндан тўлов йўқ. Посилкангизни қўлингизга олиб, текшириб кўрганингиздан сўнггина курьерга тўлов қиласиз.</p>
-                </div>
-
-                <div class="adv-clean-card">
-                    <div class="adv-num-badge">06</div>
-                    <h3 id="adv-c6-t">Мутахассиснинг шахсий назорати</h3>
-                    <p id="adv-c6-d">Муолажа давомида бизнинг тажрибали маслаҳатчиларимиз сиз bilan доимий алоқада бўлиб, тўғри қабул қилишингизни кузатиб борадиlar.</p>
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <h3 id="step-3-t">Tekshirib, keyin to'laysiz</h3>
+                    <p id="step-3-d">Buyurtma eshigingizgacha BEPUL yetkaziladi. Posilkani ochib, tekshirib ko'rganingizdan keyingina to'lov qilasiz.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 10-BLOK: ANIQ 1:1 OQ FORMA VA RASM BALANDLIGI -->
+    <!-- 11. LEAD FORM: 1:1 FORM VA RASM -->
     <section class="lead-section" id="lead-form">
         <div class="container">
             
             <div class="lead-header-center">
-                <h2 id="form-main-title">Буюртма бериш</h2>
-                <p id="form-main-sub">Ҳозироқ бепул консультацияга ёзилинг ва Qomus капсуласи орқали соғлом teriga қайтинг!</p>
+                <h2 id="form-main-title">Buyurtma berish</h2>
+                <p id="form-main-sub">Hoziroq bepul konsultatsiyaga yoziling va Qomus kapsulasi yordamida sog'lom teriga qayting!</p>
             </div>
 
             <div class="lead-row-card">
                 
-                <!-- OQ FORMA KARTASI -->
                 <div class="form-card">
                     <form id="orderForm" onsubmit="submitLeadForm(event)">
                         
-                        <!-- 1. ISM -->
                         <div class="form-group">
-                            <label id="lbl-name" for="clientName">Исмингиз</label>
-                            <input type="text" id="clientName" class="form-input" placeholder="Исмингизни киритинг" required>
+                            <label id="lbl-name" for="clientName">Ismingiz</label>
+                            <input type="text" id="clientName" class="form-input" placeholder="Ismingizni kiriting" required>
                         </div>
 
-                        <!-- 2. ASOSIY TELEFON RAQAM -->
                         <div class="form-group">
-                            <label id="lbl-phone1" for="clientPhone1">Телефон рақами</label>
+                            <label id="lbl-phone1" for="clientPhone1">Telefon raqami</label>
                             <div class="form-input-wrap">
                                 <span class="flag-prefix">🇺🇿 +998</span>
                                 <input type="tel" id="clientPhone1" class="form-input phone-input" placeholder="90 123-45-67" required maxlength="12">
                             </div>
                         </div>
 
-                        <!-- 3. QO'SHIMCHA TELEFON RAQAM -->
                         <div class="form-group">
-                            <label id="lbl-phone2" for="clientPhone2">Қўшимча телефон рақам</label>
+                            <label id="lbl-phone2" for="clientPhone2">Qo'shimcha telefon raqam</label>
                             <div class="form-input-wrap">
                                 <span class="flag-prefix">🇺🇿 +998</span>
                                 <input type="tel" id="clientPhone2" class="form-input phone-input" placeholder="91 234-56-78" maxlength="12">
                             </div>
                         </div>
 
-                        <!-- 4. RUCHNOY YOZILADIGAN FILTR SAVOL -->
                         <div class="form-group">
-                            <label id="lbl-history" for="clientHistory">Оқ доғлар қачондан бери бор? (йил, ой)</label>
-                            <input type="text" id="clientHistory" class="form-input" placeholder="Масалан: 2 йилдан бери, яқинда бошланди..." required>
+                            <label id="lbl-history" for="clientHistory">Oq dog'lar qachondan beri bor? (yil, oy)</label>
+                            <input type="text" id="clientHistory" class="form-input" placeholder="Masalan: 2 yildan beri, yaqinda boshlandi..." required>
                         </div>
 
-                        <!-- BUYURTMA TUGMASI -->
                         <button type="submit" class="btn-submit-order" id="btn-form-submit">
-                            Буюртма бериш
+                            Buyurtma berish
                         </button>
 
-                        <p class="form-privacy-note" id="form-privacy">🔒 Шахсий маълумотларингиз махфийлиги 100% кафолатланади.</p>
+                        <p class="form-privacy-note" id="form-privacy">🔒 Shaxsiy ma'lumotlaringiz maxfiyligi 100% kafolatlanadi.</p>
                     </form>
                 </div>
 
-                <!-- O'NG TOMON: OQ FORMA BILAN 1:1 TENG RASM -->
                 <div class="lead-visual-col">
-                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=1200&auto=format&fit=crop&q=85" alt="QOMUS 150 Kapsula" class="lead-product-img">
+                    <img src="https://i.postimg.cc/m2XG09ZF/IMG-20260924-115226-651.png" alt="QOMUS 150 Kapsula" class="lead-product-img" loading="lazy" decoding="async">
                 </div>
 
             </div>
@@ -1833,29 +1875,28 @@
         </div>
     </section>
 
-    <!-- FOOTER: IJTIMOIY TARMOQLAR -->
+    <!-- 12. FOOTER -->
     <footer class="site-footer">
         <div class="container">
             
             <div class="footer-legal-box">
                 <p id="footer-disclaimer">
-                    ДИҚҚАТ: «QOMUS» препарати биологик фаол қўшимча (БАД) ҳисобланади ва дори воситаси эмас. Натижалар организмнинг индивидуал хусусиятларига қараб фарқ қилиши мумкин. Қабул қилишдан олдин шифокор билан маслаҳатлашиш тавсия этилади. ССВ Рухсатномаси № 001425.
+                    DIQQAT: «QOMUS» preparati biologik faol qo'shimcha (BAD) hisoblanadi va dori vositasi emas. Natijalar organizmning individual xususiyatlariga qarab farq qilishi mumkin. Qabul qilishdan oldin mutaxassis bilan maslahatlashish tavsiya etiladi. SSV Ruxsatnomasi № 001425."
                 </p>
             </div>
 
-            <!-- IJTIMOIY TARMOQLAR -->
             <div class="footer-social-wrap">
-                <div class="social-title" id="social-title">Биз ижтимоий тармоқларда:</div>
+                <div class="social-title" id="social-title">Biz ijtimoiy tarmoqlarda:</div>
                 <div class="social-links-grid">
                     
                     <a href="https://t.me/qomus_vitiligo_oqdog" target="_blank" rel="noopener noreferrer" class="social-btn">
                         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-                        <span id="soc-main-tg">Асосий канал</span>
+                        <span id="soc-main-tg">Asosiy kanal</span>
                     </a>
 
                     <a href="https://t.me/qomus_natijalar" target="_blank" rel="noopener noreferrer" class="social-btn">
                         <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-                        <span id="soc-results-tg">Натижалар канали</span>
+                        <span id="soc-results-tg">Natijalar kanali</span>
                     </a>
 
                     <a href="https://www.youtube.com/@Qomusofficial" target="_blank" rel="noopener noreferrer" class="social-btn">
@@ -1873,10 +1914,10 @@
 
             <div class="footer-bottom-flex">
                 <div class="footer-copy" id="footer-copy">
-                    © 2026 QOMUS. Барча ҳуқуқлар ҳимояланган.
+                    © 2026 QOMUS. Barcha huquqlar himoyalangan.
                 </div>
                 <div class="footer-links">
-                    <span id="footer-contact-txt">Мурожаат учун: +998 71 203-04-08</span>
+                    <span id="footer-contact-txt">Murojaat uchun: +998 71 203-04-08</span>
                 </div>
             </div>
 
@@ -1893,19 +1934,18 @@
     <!-- FREEZE BOTTOM BAR -->
     <div class="freeze-bottom-bar">
         <a href="#lead-form" class="btn-solid-green" id="freeze-order-btn">
-            Буюртма бериш
+            Buyurtma berish
         </a>
     </div>
 
-    <!-- JAVASCRIPT KODLARI -->
+    <!-- JAVASCRIPT: TILLAR VA SWIPE CAROUSEL MANTIG'I -->
     <script>
         const translations = {
             uz: {
                 orderBtn: "Buyurtma berish",
-                heroCta: "Bepul maslahat olish",
-                ticker: "<span>🚚 O'zbekiston bo'ylab BEPUL yetkazib berish</span><span>🌿 100% Tabiiy tarkib</span><span>⭐ 20,000+ Mamnun mijozlar</span><span>🔐 100% Maxfiylik kafolatlanadi</span>",
-                title: "OQ DOG'LARDAN HALOS BO'LISH ENDI ILOJSIZ EMAS!",
-                subtitle: "Ushbu preparat vitiligo va teridagi turli kasalliklarga yechim bo'la oladi. Va o'ziga o'rgatib qo'ymaydi - Natija kafolatlangan!",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> O'zbekiston bo'ylab bepul yetkazib berish</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% tabiiy va xavfsiz tarkib</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ muvaffaqiyatli natijalar</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Buyurtmani tekshirib keyin to'lash imkoniyati</span>",
+                title: "OQ DOG'LARDAN XALOS BO'LISH ENDI ILOJSIZ EMAS!",
+                subtitle: "Ushbu vosita vitiligo va teridagi turli muammolarni bartaraf etishda tabiiy yordam beradi. O'rganib qolish holatini keltirib chiqarmaydi — Natijalar tasdiqlangan!",
                 refTitle: "Teringizni avvalgi holatiga qaytarishning iloji yo'q deb o'ylasangiz – Adashasiz!",
                 refSub: "Nima qilasiz?",
                 refLead: "Siz shu yergacha o'qiyotgan bo'lsangiz, demak, sizda yoki oilangizda ham vitiligo yoki teri muammolari bor.",
@@ -1913,74 +1953,90 @@
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Teridagi oq dog'lar</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Uyat yoki noqulaylik hissi</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Asabiylik va o'z-o'zingizga ishonchsizlik</span></div>
-                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Turli mazlar va davolardan foyda ko'rmagansiz yoki ta'siri kam...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Turli mazlar va usullardan foyda ko'rmagansiz yoki ta'siri kam...</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Ayniqsa, yilning issiq fasllarida yoki yengi kalta kiyimlar kiyganda noqulaylik sezasiz...</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Vitiligodan xalos bo'lishni xohlaysiz-u, lekin "Qanday qilib?" degan savolga javob topolmay boshingiz qotgan, to'g'rimi?</span></div>
                 `,
-                refP1: "Ammo bu muammolarga zudlik bilan yechim topishingiz lozim, to'g'rimi? Aks holda, vaqtida davolanmasa, vitiligo butun tanani egallab, tuzatib bo'lmas holatga kelib qolishi mumkin! Tasavvur qilishning o'zi dahshatli.",
-                refP2: "<strong>Kasallikka qarshi kurashasizmi yoki yo'q?!</strong> Ishonchim komil, siz bu muammoni yengasiz va teringiz sog'lom holatiga qaytadi.",
+                refP1: "Ammo bu muammolarga zudlik bilan yechim topishingiz lozim, to'g'rimi? Aks holda, vaqtida parvarish qilinmasa, vitiligo butun tanani egallab, tiklash qiyin bo'lgan holatga kelib qolishi mumkin! Tasavvur qilishning o'zi og'ir.",
+                refP2: "<strong>Muammoga qarshi kurashasizmi yoki yo'q?!</strong> Ishonchim komil, siz bu sinovni yengasiz va teringiz sog'lom holatiga qaytadi.",
+
+                compSecTitle: "QOMUS VOSITASINING TABIIY TARKIBI",
+                compSecDesc: "Vitiligo va teri pigmentatsiyasi tiklanishida ichki mikroelementlar muvozanati muhim ahamiyatga ega. Mahsulot faqat tabiiy komponentlardan tashkil topgan.",
+                cI1T: "Qora sedana yog'i",
+                cI1D: "Immun tizimi muvozanatini tiklash va hujayralar yangilanishini jadallashtiruvchi asosiy faol modda.",
+                cI2T: "Vitaminlar: E, D, C, B",
+                cI2D: "Teri pigmenti (melanin) sintezini qo'llab-quvvatlaydi va hujayralarni erkin radikallar hamda ultrabinafsha nurlaridan himoyalaydi.",
+                cI3T: "To'yinmagan yog' kislotalari (Omega 3, 6, 9)",
+                cI3D: "Fosfolipidlar bilan birga terining tabiiy himoya qavatini mustahkamlaydi, quruqlik va qipiqlanishni bartaraf etadi.",
+                cI4T: "Makro va mikroelementlar majmuasi",
+                cI4D: "Kaliy, natriy, fosfor, kalsiy, marganets, temir, rux, mis, selen, nikel — teri tabiiy rangini tiklash uchun zarur muhim minerallar.",
+                cI5T: "Yordamchi komponentlar va efir moylari",
+                cI5D: "Halol qoramol jelatini, glitserin, nigellon, A-karotinoidlar va limon kislotasi asosidagi oson hazm bo'luvchi kapsula.",
+
+                targetTitle: "KIMLAR UCHUN TAVSIYA ETILADI?",
+                targetSub: "Agar sizda quyidagi holatlardan biri kuzatilayotgan bo'lsa, Qomus siz uchun ayni muddao",
+                tg1T: "Yangi chiqqan dog'lar",
+                tg1D: "Terida yaqinda paydo bo'lgan oq nuqta va mayda dog'larning tarqalishini zudlik bilan to'xtatish uchun.",
+                tg2T: "Ko'p yillik vitiligo",
+                tg2D: "Yillar davomida turli malhamlardan natija ko'rmagan, terini ichkaridan oziqlantirishga muhtojlar uchun.",
+                tg3T: "Kuchli stress oqibatlari",
+                tg3D: "Asabiylik, qo'rquv va immunitet pasayishi oqibatida yuzaga kelgan teri pigmenti yo'qolishida.",
+                tg4T: "Qaytalanishning oldini olish",
+                tg4D: "Terining sog'lom holatini uzoq muddat saqlash va organizmni zarur minerallar bilan to'yintirish uchun.",
+
                 resultsTitle: "Mijozlar natijalari",
                 beforeBadge: "Avval",
                 afterBadge: "Keyin",
-                compSecTitle: "QOMUS PREPARATINING TABIIY TARKIBI",
-                compSecDesc: "Vitiligo va teri pigmenti tiklanishida ichki mikroelementlar muvozanati hal qiluvchi ahamiyatga ega. Mahsulot фақатгина табиий компонентлардан ташкил топган.",
-                cI1T: "Qora sedana yog'i",
-                cI1D: "Immunitet muvozanatini tiklaydi va hujayralar regeneratsiyasini jadallashtiruvchi asosiy фаол модда.",
-                cI2T: "Vitaminlar: E, D, C, B",
-                cI2D: "Teri pigmenti (melanin) sintezini қўллаб-қувватлайди ва ҳужайраларни ультрабинафша стрессдан ҳимоялайди.",
-                cI3T: "To'yinmagan yog' kislotalari (Omega 3, 6, 9)",
-                cI3D: "Фосфолипидлар bilan birga terining lipid қаватини мустаҳкамлайди, қуруқлик ва қазиғланишни тўхтатади.",
-                cI4T: "Makro va mikro elementlar majmuasi",
-                cI4D: "Калий, натрий, фосфор, кальций, марганец, темир, рух, мис, селен, никель — тери рангини тиклаш учун зарур ноёб минераллар.",
-                cI5T: "Ёрдамчи компонентлар ва эфир мойлари",
-                cI5D: "Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула.",
+
                 videoSecTitle: "Mijozlarimizning video fikrlari",
-                videoSecSub: "Qomus preparatidan foydalanib natijaga erishgan yurtdoshlarimiz bilan suhbatlar",
+                videoSecSub: "Qomus vositasidan foydalangan yurtdoshlarimiz bilan samimiy suhbatlar",
                 videoTitles: [
-                    "25 yillik darddan qanday qutildim? Vitiligo haqida haqiqatlar",
-                    "Qomus preparati bilan teri pigmentining tiklanish jarayoni",
-                    "Oq dog'lar bo'yicha mijozimizning hayotiy tajribasi",
-                    "Mijozning samimiy fikrlari va erishilgan natija",
-                    "Muolaja bosqichlari va ijobiy o'zgarishlar",
+                    "Oq dog'lardan qutulish | 36 yillik masala hal qilindi",
+                    "Bu muolajadan so'ng oq dog'larim yo'qolib ketdi",
+                    "Qomus vositasi bilan teri pigmentining tiklanish jarayoni",
+                    "Vitiligo va oq dog'lar bo'yicha mijozimiz tajribasi",
+                    "Qomus bilan teridagi o'zgarishlar va natija",
                     "Vitiligo muammosidan so'ng sog'lom teriga qaytish",
-                    "Teridagi pigmentatsiya qayta tiklanishi bo'yicha fikrlar",
-                    "Qomus kapsulalarini qabul qilish tajribasi",
-                    "Mijozimizning davolanish davomidagi o'zgarishlari",
+                    "Oq dog'lar profilaktikasi va terining tiklanishi",
+                    "Parvarish bosqichlari va ijobiy o'zgarishlar",
+                    "Qomus vositasi bo'yicha mijoz sharhi",
                     "Haqiqiy natijalar: mijoz bilan jonli muloqot"
                 ],
+
+                midCtaTitle: "Siz ham sog'lom va tiniq teriga qaytishni xohlaysizmi?",
+                midCtaDesc: "Mutaxassisimiz siz bilan bog'lanib, holatingizni bepul tahlil qiladi va to'g'ri kursni tavsiya etadi.",
+                midCtaBtn: "Hoziroq bepul maslahat oling",
+
                 certTitle: "DAVLAT TOMONIDAN TASDIQLANGAN VA SERTIFIKATLANGAN",
-                certDesc: "«QOMUS» preparati O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi tomonidan to'liq ekspertizadan o'tkazilgan va rasmiy ruxsatnomaga ega.",
+                certDesc: "«QOMUS» mahsuloti O'zbekiston Respublikasi vakolatli organlari tomonidan to'liq laboratoriya tekshiruvlaridan o'tkazilgan va rasmiy ruxsatnomaga ega.",
                 certCap1: "O'zbekiston Respublikasi Sog'liqni Saqlash Vazirligi Ruxsatnomasi № 001425",
-                certCap2: "Sanitariya-epidemiologik xulosa № 405282 (Toshkent shahri)",
+                certCap2: "Sanitariya-epidemiologik xulosasi № 405282 (Toshkent shahri)",
                 certSafety: "Mahsulotning har bir partiyasi gigiyenik, radiologik va bakteriologik sinovlardan muvaffaqiyatli o'tib, inson salomatligi uchun mutlaqo xavfsiz deb topilgan.",
+
                 faqTitle: "KO'P BERILADIGAN SAVOLLAR",
-                faqSub: "Mijozlarimiz tomonidan eng ko'p beriladigan savollarga rasmiy mutaxassislarimiz javoblari",
+                faqSub: "Mijozlarimiz tomonidan eng ko'p beriladigan savollarga mutaxassislarimiz javoblari",
                 faqs: [
-                    { q: "Preparat o'rganib qolish (privikanie) holatini keltirib chiqarmaydimi?", a: "Yo'q, “QOMUS” 100% tabiiy sovuq presslangan qora sedana yog'i va vitaminlar majmuasidan iborat bo'lib, gormonlar yoki kimyoviy qo'shimchalar saqlamaydi. Shu sababli qabul qilish to'xtatilganda ham o'rganib qolish holati kuzatilmaydi." },
-                    { q: "Birinchi sezilarli natijalar qachon ko'rina boshlaydi?", a: "Organizmning xususiyati va kasallik darajasiga qarab, odatda muntazam foydalanishning 3–4 haftasida teri pigmentatsiyasida ijobiy o'zgarishlar, oq dog'lar chetlarining tabiiy rangga qayta boshlashi kuzatiladi." },
-                    { q: "Kapsulalarni qanday tartibda qabul qilish tavsiya etiladi?", a: "Kattalar uchun kuniga 2 mahal (ertalab va kechqurun) ovqatdan 20-30 daqiqa oldin 1-2 tadan kapsulani iliq suv bilan ichish tavsiya etiladi. Aniq muolaja kursini mutaxassis telefon orqali alohida belgilab beradi." },
-                    { q: "Kapsula qobig'i halolmi va u nimadan tayyorlangan?", a: "Kapsula qobig'i faqatgina halol so'yilgan qora mol jelatinidan tayyorlangan bo'lib, oshqozonda oson eriydi va oshqozon-ichak tizimiga hech qanday og'irlik qilmaydi." },
-                    { q: "Homiladorlik yoki emizish davrida ichish mumkinmi?", a: "Homiladorlik va laktatsiya davrida har qanday biologik faol qo'shimchalarni qabul qilishdan oldin shaxsiy shifokor bilan maslahatlashish tavsiya qilinadi." },
+                    { q: "Vosita o'rganib qolish holatini keltirib chiqarmaydimi?", a: "Yo'q, “QOMUS” 100% tabiiy sovuq presslangan qora sedana yog'i va vitaminlar majmuasidan iborat bo'lib, gormonlar yoki agressiv kimyoviy qo'shimchalar saqlamaydi. Shu sababli iste'mol to'xtatilganda ham o'rganib qolish yuzaga kelmaydi." },
+                    { q: "Birinchi sezilarli natijalar qachon ko'rina boshlaydi?", a: "Organizmning o'ziga xosligi va teri holatiga qarab, odatda muntazam iste'molning 3–4 haftasida teri pigmentatsiyasida ijobiy o'zgarishlar, oq dog'lar chetlarining tabiiy tusga qayta boshlashi kuzatiladi." },
+                    { q: "Kapsulalarni qanday tartibda qabul qilish tavsiya etiladi?", a: "Kattalar uchun kuniga 2 mahal (ertalab va kechqurun) ovqatdan 20-30 daqiqa oldin 1-2 tadan kapsulani iliq suv bilan ichish tavsiya etiladi. Aniq qabul tartibini mutaxassis telefon orqali bepul belgilab beradi." },
+                    { q: "Kapsula qobig'i halolmi va u nimadan tayyorlangan?", a: "Kapsula qobig'i faqatgina halol so'yilgan qoramol jelatinidan tayyorlangan bo'lib, me'dada oson eriydi va oshqozon-ichak tizimiga hech qanday og'irlik tug'dirmaydi." },
+                    { q: "Homiladorlik yoki emizish davrida ichish mumkinmi?", a: "Homiladorlik va laktatsiya davrida har qanday biologik faol qo'shimchalarni qabul qilishdan oldin shaxsiy shifokor bilan maslahatlashish tavsiya etiladi." },
                     { q: "Yetkazib berish xizmati qancha vaqt oladi va u pullikmi?", a: "O'zbekiston bo'ylab barcha viloyat, shahar va tumanlarga yetkazib berish mutlaqo BEPUL amalga oshiriladi. Toshkent shahrida 24 soat ichida, viloyatlarga 1-2 kun ichida qo'lingizga yetkaziladi." },
                     { q: "To'lovni mahsulotni olgandan keyin qilsa bo'ladimi?", a: "Albatta! Bizda 100% ishonchli tizim yo'lga qo'yilgan: to'lov mahsulotni kuryerdan qabul qilib olib, sifatiga to'liq ishonch hosil qilganingizdan so'ng (naqd yoki plastik karta orqali) to'lanadi." },
-                    { q: "Bir flakonda nechta kapsula bor va u qancha vaqtga yetadi?", a: "Bir flakonda 150 ta yumshoq jelatin kapsula mavjud. Bu kuniga qabul qilinadigan dozaga qarab o'rtacha 1–1.5 oylik to'liq muolaja kursi uchun yetarli hisoblanadi." }
+                    { q: "Bir flakonda nechta kapsula bor va u qancha vaqtga yetadi?", a: "Bir flakonda 150 ta yumshoq jelatin kapsula mavjud. Bu kunlik qabul dozasiga qarab o'rtacha 1–1.5 oylik to'liq kurs uchun yetarli hisoblanadi." }
                 ],
-                advTitle: "NEGA AYNAN “QOMUS” PREPARATINI TANLASHADI?",
-                advDesc: "Biz mijozlarimiz salomatligi va ishonchini yuqori baholaymiz. Bizning asosiy afzalliklarimiz bilan tanishing",
-                c1T: "20,000+ Mamnun mijozlar",
-                c1D: "O'zbekiston bo'ylab minglab insonlar bizning vositamiz orqali oq dog'lar muammosidan xalos bo'lib, sog'lom teriga erishdilar.",
-                c2T: "Davlat tomonidan sertifikatlangan",
-                c2D: "Sog'liqni Saqlash Vazirligi va SES xulosalari bilan rasman tasdiqlangan, barcha xavfsizlik talablariga 100% javob beradi.",
-                c3T: "100% Tabiiy va bezarar",
-                c3D: "Faqat sovuq presslangan sedana yog'i va tabiiy mikroelementlar. Hech qanday gormonlarsiz, o'rganib qolish holati yuzaga kelmaydi.",
-                c4T: "O'zbekiston bo'ylab BEPUL yetkazish",
-                c4D: "Qaysi viloyat yoki tumanda yashashingizdan qat'i nazar, buyurtmangiz ko'rsatilgan manzilga mutlaqo bepul yetkazib beriladi.",
-                c5T: "Olgandan so'ng to'lov (100% xavfsiz)",
-                c5D: "Hech qanday oldindan to'lov yo'q. Posilkani qo'lingizga olib, tekshirib ko'rganingizdan so'nggina kuryerga to'lov qilasiz.",
-                c6T: "Mutaxassisning shaxsiy nazorati",
-                c6D: "Muolaja davomida bizning tajribali maslahatchilarimiz siz bilan doimiy aloqada bo'lib, to'g'ri qabul qilishingizni kuzatib boradilar.",
+
+                stepsTitle: "BUYURTMA VA XIZMAT KO'RSATISH TARTIBI",
+                stepsDesc: "Siz uchun eng qulay, xavfsiz va shaffof tizimni taqdim etamiz",
+                s1T: "So'rov qoldirasiz",
+                s1D: "Saytdagi formaga ismingiz va raqamingizni yozasiz. Hech qanday oldindan to'lov yoki karta raqami talab etilmaydi.",
+                s2T: "Mutaxassis maslahati",
+                s2D: "Mutaxassisimiz sizga qo'ng'iroq qilib, dog'larning holati bo'yicha bepul maslahat beradi va kursni aniqlaydi.",
+                s3T: "Tekshirib, keyin to'laysiz",
+                s3D: "Buyurtma eshigingizgacha BEPUL yetkaziladi. Posilkani ochib, tekshirib ko'rganingizdan keyingina to'lov qilasiz.",
+
                 formTitle: "Buyurtma berish",
-                formSub: "Hoziroq bepul konsultatsiyaga yoziling va Qomus kapsulasi orqali sog'lom teriga qayting!",
+                formSub: "Hoziroq bepul konsultatsiyaga yoziling va Qomus kapsulasi yordamida sog'lom teriga qayting!",
                 lblName: "Ismingiz",
                 lblPhone1: "Telefon raqami",
                 lblPhone2: "Qo'shimcha telefon raqam",
@@ -1989,17 +2045,18 @@
                 holderHistory: "Masalan: 2 yildan beri, yaqinda boshlandi...",
                 formSubmit: "Buyurtma berish",
                 formPrivacy: "🔒 Shaxsiy ma'lumotlaringiz maxfiyligi 100% kafolatlanadi.",
+
                 socialTitle: "Biz ijtimoiy tarmoqlarda:",
                 socMainTg: "Asosiy kanal",
                 socResultsTg: "Natijalar kanali",
                 footerCopy: "© 2026 QOMUS. Barcha huquqlar himoyalangan.",
                 footerContactTxt: "Murojaat uchun: +998 71 203-04-08",
-                footerDisc: "DIQQAT: «QOMUS» preparati biologik faol qo'shimcha (BAD) hisoblanadi va dori vositasi emas. Natijalar organizmning individual xususiyatlariga qarab farq qilishi mumkin. Qabul qilishdan oldin shifokor bilan maslahatlashish tavsiya etiladi. SSV Ruxsatnomasi № 001425."
+                footerDisc: "DIQQAT: «QOMUS» preparati biologik faol qo'shimcha (BAD) hisoblanadi va dori vositasi emas. Natijalar organizmning individual xususiyatlariga qarab farq qilishi mumkin. Qabul qilishdan oldin mutaxassis bilan maslahatlashish tavsiya etiladi. SSV Ruxsatnomasi № 001425."
             },
+
             uz_cyr: {
                 orderBtn: "Буюртма бериш",
-                heroCta: "Бепул маслаҳат олиш",
-                ticker: "<span>🚚 Ўзбекистон бўйлаб БЕПУЛ етказиб бериш</span><span>🌿 100% Табиий таркиб</span><span>⭐ 20,000+ Мамнун мижозлар</span><span>🔐 100% Махфийлик кафолатланади</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Ўзбекистон бўйлаб бепул етказиб бериш</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% табиий ва хавфсиз таркиб</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> 20,000+ муваффақиятли натижалар</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Буюртмани текшириб кейин тўлаш имконияти</span>",
                 title: "ОҚ ДОҒЛАРДАН ҲАЛОС БЎЛИШ ЭНДИ ИЛОЖСИЗ ЭМАС!",
                 subtitle: "Ушбу препарат витилиго ва теридаги турли касалликларга ечим бўла олади. Ва ўзига ўргатиб қўймайди - Натижа кафолатланган!",
                 refTitle: "Терингизни аввалги ҳолатига қайтаришнинг иложи йўқ деб ўйласангиз – Адашасиз!",
@@ -2010,14 +2067,12 @@
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Уят ёки ноқулайлик ҳисси</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Асабийлик ва ўз-ўзингизга ишончсизлик</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Турли мазлар ва даволардан фойда кўрмагансиз ёки таъсири кам...</span></div>
-                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Айниқса, йилнинг иссиқ фаслларида ёки енги калта кийимlar кийганда ноқулайлик сезасиз...</span></div>
+                    <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Айниқса, йилнинг иссиқ фаслларида ёки енги калта кийимлар кийганда ноқулайлик сезасиз...</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Витилигодан халос бўлишни хоҳлайсиз-у, лекин "Қандай қилиб?" деган саволга жавоб тополмай бошингиз қотган, тўғрими?</span></div>
                 `,
                 refP1: "Аммо бу муаммоларга зудлик билан ечим топишингиз лозим, тўғрими? Акс ҳолда, вақтида даволанмаса, витилиго бутун танани эгаллаб, тузатиб бўлмас ҳолатга келиб қолиши мумкин! Тасаввур қилишнинг ўзи даҳшатли.",
                 refP2: "<strong>Касалликга қарши курашасизми ёки йўқ?!</strong> Ишончим комил, сиз бу муаммони енгасиз ва терингиз соғлом ҳолатига қайтади.",
-                resultsTitle: "Мижозлар натижалари",
-                beforeBadge: "Аввал",
-                afterBadge: "Кейин",
+
                 compSecTitle: "ҚОМУС ПРЕПАРАТИНИНГ ТАБИИЙ ТАРКИБИ",
                 compSecDesc: "Витилиго ва тери пигменти тикланишида ички микроэлементлар мувозанати ҳал қилувчи аҳамиятга эга. Маҳсулот фақатгина табиий компонентлардан ташкил топган.",
                 cI1T: "Қора седана ёғи",
@@ -2030,25 +2085,47 @@
                 cI4D: "Калий, натрий, фосфор, кальций, марганец, темир, рух, мис, селен, никель — тери рангини тиклаш учун зарур ноёб минераллар.",
                 cI5T: "Ёрдамчи компонентлар ва эфир мойлари",
                 cI5D: "Қора мол желатини, глицерин, нигелон, А-каротиноидлар ва лимон кислотаси асосидаги табиий капсула.",
+
+                targetTitle: "КИМЛАР УЧУН ТАВСИЯ ЭТИЛАДИ?",
+                targetSub: "Агар сизда қуйидаги ҳолатлардан бири кузатилаётган бўлса, Қомус сиз учун айни муддао",
+                tg1T: "Янги чиққан доғлар",
+                tg1D: "Терида яқинда пайдо бўлган оқ нуқта ва майда доғларнинг тарқалишини зудлик билан тўхтатиш учун.",
+                tg2T: "Кўп йиллик витилиго",
+                tg2D: "Йиллар давомида турли малҳамлардан натижа кўрмаган, терини ичкаридан озиқлантиришга муҳтожлар учун.",
+                tg3T: "Кучли стресс оқибатлари",
+                tg3D: "Асабийлик, қўрқув ва иммунитет пасайиши оқибатида юзага келган тери пигменти йўқолишида.",
+                tg4T: "Қайталанишнинг олдини олиш",
+                tg4D: "Терининг соғлом ҳолатини узоқ муддат сақлаш ва организмни зарур минераллар билан тўйинтириш учун.",
+
+                resultsTitle: "Мижозлар натижалари",
+                beforeBadge: "Аввал",
+                afterBadge: "Кейин",
+
                 videoSecTitle: "Мижозларимизнинг видео фикрлари",
                 videoSecSub: "Қомус препаратидан фойдаланиб натижага эришган юртдошларимиз билан суҳбатлар",
                 videoTitles: [
-                    "25 йиллик дарддан қандай қутилдим? Витилиго ҳақида ҳақиқатлар",
-                    "Қомус препарати билан тери пигментининг тикланиш жараёни",
-                    "Оқ доғлар бўйича мижозимизнинг ҳаётий тажрибаси",
-                    "Мижознинг самимий фикрлари ва эришилган натижа",
-                    "Муолажа босқичлари ва ижобий ўзгаришлар",
+                    "Оқ доғлардан қутулиш | 36 йиллик масала ҳал қилинди",
+                    "Бу муолажадан сўнг оқ доғларим йўқолиб кетди",
+                    "Қомус воситаси билан тери пигментининг тикланиш жараёни",
+                    "Витилиго ва оқ доғлар бўйича мижозимиз тажрибаси",
+                    "Қомус билан теридаги ўзгаришлар ва натижа",
                     "Витилиго муаммосидан сўнг соғлом терига қайтиш",
-                    "Теридаги пигментация қайта тикланиши бўйича фикрлар",
-                    "Қомус капсулаларини қабул қилиш тажрибаси",
-                    "Мижозимизнинг даволаниш давомидаги ўзгаришлари",
+                    "Оқ доғлар профилактикаси ва терининг тикланиши",
+                    "Парвариш босқичлари ва ижобий ўзгаришлар",
+                    "Қомус воситаси бўйича мижоз шарҳи",
                     "Ҳақиқий натижалар: мижоз билан жонли мулоқот"
                 ],
+
+                midCtaTitle: "Сиз ҳам соғлом ва тиниқ терига қайтишни хоҳлайсизми?",
+                midCtaDesc: "Мутахассисимиз сиз билан боғланиб, ҳолатингизни бепул таҳлил қилади ва тўғри курсни тавсия этади.",
+                midCtaBtn: "Ҳозироқ бепул маслаҳат олинг",
+
                 certTitle: "ДАВЛАТ ТОМОНИДАН ТАСДИҚЛАНГАН ВА СЕРТИФИКАТЛАНГАН",
                 certDesc: "«QOMUS» препарати Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги томонидан тўлиқ экспертизадан ўтказилган ва расмий рухсатномага эга.",
                 certCap1: "Ўзбекистон Республикаси Соғлиқни Сақлаш Вазирлиги Рухсатномаси № 001425",
                 certCap2: "Санитарно-эпидемиологическое заключение № 405282 (Тошкент)",
                 certSafety: "Маҳсулотнинг ҳар бир партияси гигиеник, радиологик ва бактериологик синовлардан муваффақиятли ўтиб, инсон саломатлиги учун мутлақо хавфсиз деб топилган.",
+
                 faqTitle: "КЎП БЕРИЛАДИГАН САВОЛЛАР",
                 faqSub: "Мижозларимиз томонидан энг кўп бериладиган саволларга расмий мутахассисларимиз жавоблари",
                 faqs: [
@@ -2057,26 +2134,22 @@
                     { q: "Капсулаларни қандай тартибда қабул қилиш тавсия этилади?", a: "Катталар учун кунига 2 маҳал (эрталаб ва кечқурун) овқатдан 20-30 дақиқа олдин 1-2 тадан капсулани илиқ сув билан ичиш тавсия этилади. Аниқ муолажа курсини мутахассис телефон орқали алоҳида белгилаб беради." },
                     { q: "Капсула қобиғи ҳалолми ва у нимадан тайёрланган?", a: "Капсула қобиғи фақатгина ҳалол сўйилган қора мол желатинидан тайёрланган бўлиб, ошқозонда осон эрийди ва ошқозон-ичак тизимига ҳеч қандай оғирлик қилмайди." },
                     { q: "Ҳомиладорлик ёки эмизиш даврида ичиш мумкинми?", a: "Ҳомиладорлик ва лактация даврида ҳар қандай биологик фаол қўшимчаларни қабул қилишдан олдин шахсий шифокор билан маслаҳатлашиш тавсия қилинади." },
-                    { q: "Етказиб бериш хизмати қанча вақт олади va u пулликми?", a: "Ўзбекистон бўйлаб барча вилоят, шаҳар ва туманларга етказиб бериш мутлақо БЕПУЛ амалга оширилади. Тошкент шаҳрида 24 соат ичида, вилоятларга 1-2 кун ичида қўлингизга етказилади." },
+                    { q: "Етказиб бериш хизмати қанча вақт олади ва у пулликми?", a: "Ўзбекистон бўйлаб барча вилоят, шаҳар ва туманларга етказиб бериш мутлақо БЕПУЛ амалга оширилади. Тошкент шаҳрида 24 соат ичида, вилоятларга 1-2 кун ичида қўлингизга етказилади." },
                     { q: "Тўловни маҳсулотни олгандан keyin қилса бўладими?", a: "Албатта! Бизда 100% ишончли тизим йўлга қўйилган: тўлов маҳсулотни курьердан қабул қилиб олиб, сифатига тўлиқ ишонч ҳосил қилганингиздан сўнг (нақд ёки пластик карта орқали) тўланади." },
-                    { q: "Бир флаконда нечта капсула бор va u қанча вақтга етади?", a: "Бир флаконда 150 та юмшоқ желатин капсула мавжуд. Бу кунига қабул қилинадиган дозага қараб ўртача 1–1.5 ойлик тўлиқ муолажа курси учун етарли ҳисобланади." }
+                    { q: "Бир флаконда нечта капсула бор ва у қанча вақтга етади?", a: "Бир флаконда 150 та юмшоқ желатин капсула мавжуд. Бу кунига қабул қилинадиган дозага қараб ўртача 1–1.5 ойлик тўлиқ муолажа курси учун етарли ҳисобланади." }
                 ],
-                advTitle: "НЕГА АЙНАН “QOMUS” ПРЕПАРАТИНИ ТАНЛАШАДИ?",
-                advDesc: "Биз мижозларимиз саломатлиги ва ишончини юқори баҳолаймиз. Бизнинг асосий афзалликларимиз билан танишинг",
-                c1T: "20,000+ Мамнун мижозлар",
-                c1D: "Ўзбекистон бўйлаб минглаб инсонлар бизнинг воситамиз орқали оқ доғлар муаммосидан халос бўлиб, соғлом терига эришдилар.",
-                c2T: "Давлат томонидан сертификатланган",
-                c2D: "Соғлиқни Сақлаш Вазирлиги ва СЭС хулосалари билан расман тасдиқланган, барча хавфсизлик талабларига 100% жавоб беради.",
-                c3T: "100% Табиий ва безарар",
-                c3D: "Фақат совуқ прессланган седана ёғи ва табиий микроэлементлар. Ҳеч қандай гормонларсиз, организмга ўрганиб қолиш ҳолати юзага келмайди.",
-                c4T: "Ўзбекистон бўйлаб БЕПУЛ етказиш",
-                c4D: "Қайси вилоят ёки туманда яшашингиздан қатъи назар, буюртмангиз кўрсатилган манзилга мутлақо бепул етказиб берилади.",
-                c5T: "Олгандан сўнг тўлов (100% хавфсиз)",
-                c5D: "Ҳеч қандай олдиндан тўлов йўқ. Посилкангизни қўлингизга олиб, текшириб кўрганингиздан сўнггина курьерга тўлов қиласиз.",
-                c6T: "Мутахассиснинг шахсий назорати",
-                c6D: "Муолажа давомида бизнинг тажрибали маслаҳатчиларимиз сиз bilan доимий алоқада бўлиб, тўғри қабул қилишингизни кузатиб борадилар.",
+
+                stepsTitle: "БУЮРТМА ВА ХИЗМАТ КЎРСАТИШ ТАРТИБИ",
+                stepsDesc: "Сиз учун энг қулай, хавфсиз ва шаффоф тизимни тақдим этамиз",
+                s1T: "Сўров қолдирасиз",
+                s1D: "Сайтдаги формага исмингиз ва рақамингизни ёзасиз. Ҳеч қандай олдиндан тўлов ёки карта рақами талаб этилмайди.",
+                s2T: "Мутахассис маслаҳати",
+                s2D: "Мутахассисимиз сизга қўнғироқ қилиб, доғларнинг ҳолати бўйича бепул маслаҳат беради ва курсни аниқлайди.",
+                s3T: "Текшириб, keyin тўлайсиз",
+                s3D: "Буюртма эшигингизгача БЕПУЛ етказилади. Посилкани очиб, текшириб кўрганингиздан keyinгина тўлов қиласиз.",
+
                 formTitle: "Буюртма бериш",
-                formSub: "Ҳозироқ бепул консультацияга ёзилинг ва Qomus капсуласи орқали соғлом teriga қайтинг!",
+                formSub: "Ҳозироқ бепул консультацияга ёзилинг ва Qomus капсуласи орқали соғлом терига қайтинг!",
                 lblName: "Исмингиз",
                 lblPhone1: "Телефон рақами",
                 lblPhone2: "Қўшимча телефон рақам",
@@ -2085,6 +2158,7 @@
                 holderHistory: "Масалан: 2 йилдан бери, яқинда бошланди...",
                 formSubmit: "Буюртма бериш",
                 formPrivacy: "🔒 Шахсий маълумотларингиз махфийлиги 100% кафолатланади.",
+
                 socialTitle: "Биз ижтимоий тармоқларда:",
                 socMainTg: "Асосий канал",
                 socResultsTg: "Натижалар канали",
@@ -2092,15 +2166,15 @@
                 footerContactTxt: "Мурожаат учун: +998 71 203-04-08",
                 footerDisc: "ДИҚҚАТ: «QOMUS» препарати биологик фаол қўшимча (БАД) ҳисобланади ва дори воситаси эмас. Натижалар организмнинг индивидуал хусусиятларига қараб фарқ қилиши мумкин. Қабул қилишдан олдин шифокор билан маслаҳатлашиш тавсия этилади. ССВ Рухсатномаси № 001425."
             },
+
             ru: {
                 orderBtn: "Заказать",
-                heroCta: "Получить консультацию",
-                ticker: "<span>🚚 БЕСПЛАТНАЯ доставка по всему Узбекистану</span><span>🌿 100% Натуральный состав</span><span>⭐ 20,000+ Довольных клиентов</span><span>🔐 100% Конфиденциальность</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Бесплатная доставка по всему Узбекистану</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% натуральный и безопасный состав</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Более 20,000 успешных результатов</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Оплата только после проверки заказа</span>",
                 title: "ИЗБАВЛЕНИЕ ОТ БЕЛЫХ ПЯТЕН ТЕПЕРЬ ВОЗМОЖНО!",
-                subtitle: "Данный препарат эффективен при витилиго и заболеваниях кожи. Не вызывает привыкания - Результат гарантирован!",
+                subtitle: "Данный комплекс эффективно поддерживает восстановление пигментации кожи при витилиго. Не вызывает привыкания — Результаты подтверждены!",
                 refTitle: "Если вы думаете, что вернуть коже прежний вид невозможно — вы ошибаетесь!",
                 refSub: "Что вы чувствуете?",
-                refLead: "Если вы дочитали до этого места, значит, у вас или ваших близких есть витилиго или проблемы с кожей.",
+                refLead: "Если вы читаете этот текст, значит, у вас или ваших близких есть витилиго или проблемы с кожей.",
                 refItems: `
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Белые пятна на коже</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Чувство неловкости и стыда</span></div>
@@ -2109,42 +2183,62 @@
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Дискомфорт в теплое время года или в одежде с короткими рукавами...</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Хотите избавиться, но не знаете точно, 'Как именно?'</span></div>
                 `,
-                refP1: "Но решать эту проблему нужно незамедлительно, верно? Без своевременного лечения пятна могут распространиться по всему телу! Страшно представить.",
-                refP2: "<strong>Будете бороться с недугом или нет?!</strong> Уверены, вы преодолеете это и кожа вернет здоровый вид.",
-                resultsTitle: "Результаты клиентов",
-                beforeBadge: "До",
-                afterBadge: "После",
+                refP1: "Но решать эту проблему нужно незамедлительно, верно? Без должного ухода и поддержки пятна могут распространиться дальше! Страшно представить.",
+                refP2: "<strong>Будете бороться за здоровье кожи или нет?!</strong> Уверены, вы преодолеете это и кожа вернет свой естественный ровный цвет.",
+
                 compSecTitle: "НАТУРАЛЬНЫЙ СОСТАВ ПРЕПАРАТА «QOMUS»",
                 compSecDesc: "При восстановлении пигментации кожи баланс микроэлементов имеет решающее значение. Продукт состоит исключительно из натуральных компонентов.",
                 cI1T: "Масло черного тмина",
                 cI1D: "Восстанавливает баланс иммунитета и ускоряет естественную регенерацию клеток кожи.",
                 cI2T: "Витамины: E, D, C, B",
-                cI2D: "Поддерживают синтез меланина и защищают клетки кожи от окислительного стресса.",
+                cI2D: "Поддерживают синтез меланина и защищают клетки кожи от окислительного стресса и УФ-лучей.",
                 cI3T: "Ненасыщенные жирные кислоты (Омега 3, 6, 9)",
                 cI3D: "Вместе с фосфолипидами укрепляют липидный барьер, предотвращая сухость и шелушение кожи.",
                 cI4T: "Комплекс макро- и микроэлементов",
                 cI4D: "Калий, натрий, фосфор, кальций, марганец, железо, цинк, медь, селен, никель — минералы для пигментации.",
                 cI5T: "Вспомогательные компоненты и эфирные масла",
-                cI5D: "Говяжий желатин, глицерин, нигеллон, А-каротиноиды и лимонная кислота в основе мягкой капсулы.",
+                cI5D: "Говяжий желатин халяль, глицерин, нигеллон, А-каротиноиды и лимонная кислота в основе мягкой капсулы.",
+
+                targetTitle: "КОМУ ПОДХОДИТ ПРЕПАРАТ?",
+                targetSub: "Если у вас наблюдается одно из следующих состояний, «Qomus» станет идеальным решением",
+                tg1T: "Недавно появившиеся пятна",
+                tg1D: "Для оперативной остановки разрастания новых белых точек и очагов депигментации.",
+                tg2T: "Многолетнее витилиго",
+                tg2D: "Для тех, кто годами не получал эффекта от внешних мазей и нуждается в питании изнутри.",
+                tg3T: "Последствия стресса",
+                tg3D: "При потере пигментации кожи, вызванной переживаниями, страхом и сбоями иммунитета.",
+                tg4T: "Профилактика повторного проявления",
+                tg4D: "Для длительного сохранения здоровья кожи и насыщения организма микроэлементами.",
+
+                resultsTitle: "Результаты клиентов",
+                beforeBadge: "До",
+                afterBadge: "После",
+
                 videoSecTitle: "Видео отзывы наших клиентов",
                 videoSecSub: "Интервью с людьми, восстановившими здоровье кожи с помощью препарата «Qomus»",
                 videoTitles: [
-                    "Как я избавился от болезни спустя 25 лет? Вся правда о витилиго",
+                    "Избавление от белых пятен | 36-летняя проблема решена",
+                    "После этого курса белые пятна полностью исчезли",
                     "Процесс восстановления пигментации кожи с препаратом «Qomus»",
-                    "Личный опыт нашего клиента в борьбе с белыми пятнами",
-                    "Искренние отзывы клиента и достигнутые результаты",
-                    "Этапы приема препарата и заметные положительные изменения",
+                    "Опыт нашего клиента в борьбе с витилиго и белыми пятнами",
+                    "Динамика и результаты изменений кожи с «Qomus»",
                     "Возвращение к здоровой коже после диагноза витилиго",
-                    "Отзыв о естественном восстановлении пигментации кожи",
-                    "Реальный опыт курсового приема капсул «Qomus»",
-                    "Динамика и результаты клиента в процессе лечения",
+                    "Профилактика депигментации и восстановление кожи",
+                    "Этапы приема препарата и заметные положительные изменения",
+                    "Отзыв реального клиента о препарате «Qomus»",
                     "Реальные результаты: живое интервью с пациентом"
                 ],
+
+                midCtaTitle: "Хотите вернуть коже здоровый и ровный тон?",
+                midCtaDesc: "Наш специалист свяжется с вами, бесплатно оценит состояние кожи и подберет правильный курс.",
+                midCtaBtn: "Получить бесплатную консультацию",
+
                 certTitle: "ГОСУДАРСТВЕННОЕ РАЗРЕШЕНИЕ И СЕРТИФИКАЦИЯ",
-                certDesc: "Препарат «QOMUS» прошел полную государственную экспертизу Министерства Здравоохранения Республики Узбекистан и имеет официальное разрешение.",
+                certDesc: "Препарат «QOMUS» прошел полную государственную экспертизу уполномоченных органов Республики Узбекистан и имеет официальное разрешение.",
                 certCap1: "Разрешение Министерства Здравоохранения Республики Узбекистан № 001425",
                 certCap2: "Санитарно-эпидемиологическое заключение № 405282 (г. Ташкент)",
                 certSafety: "Каждая партия продукта успешно прошла строгий гигиенический, радиологический и бактериологический контроль и полностью безопасна для здоровья.",
+
                 faqTitle: "ЧАСТО ЗАДАВАЕМЫЕ ВОПРОСЫ",
                 faqSub: "Ответы наших специалистов на самые популярные вопросы покупателей",
                 faqs: [
@@ -2157,20 +2251,16 @@
                     { q: "Возможна ли оплата при получении товара?", a: "Да, у нас действует безопасная оплата: вы оплачиваете заказ (наличными или картой) только после проверки посылки при курьере." },
                     { q: "Сколько капсул во флаконе и на сколько их хватает?", a: "Во флаконе 150 мягких желатиновых капсул. Этого хватает в среднем на 1–1.5 месяца полноценного лечебного курса." }
                 ],
-                advTitle: "ПОЧЕМУ ВЫБИРАЮТ ИМЕННО «QOMUS»?",
-                advDesc: "Мы высоко ценим доверие и здоровье наших клиентов. Познакомьтесь с нашими главными преимуществами",
-                c1T: "Более 20,000 довольных клиентов",
-                c1D: "Тысячи людей по всему Узбекистану восстановили здоровую пигментацию кожи благодаря нашему препарату.",
-                c2T: "Государственная сертификация",
-                c2D: "Официально одобрено Минздравом РУз и СЭС, полностью отвечает международным стандартам безопасности.",
-                c3T: "100% Натурально и безвредно",
-                c3D: "Масло тмина холодного отжима и комплекс микроэлементов. Без гормонов и привыкания.",
-                c4T: "БЕСПЛАТНАЯ доставка по Узбекистану",
-                c4D: "В любой город или район доставка осуществляется абсолютно бесплатно прямо до вашей двери.",
-                c5T: "Оплата при получении (100% безопасно)",
-                c5D: "Никаких предоплат. Вы оплачиваете заказ только после личной проверки посылки при курьере.",
-                c6T: "Индивидуальный контроль специалиста",
-                c6D: "На протяжении всего курса наши консультанты регулярно на связи, контролируя правильный прием.",
+
+                stepsTitle: "ПОРЯДОК ЗАКАЗА И ОБСЛУЖИВАНИЯ",
+                stepsDesc: "Мы предоставляем максимально удобную, безопасную и прозрачную систему",
+                s1T: "Оставляете заявку",
+                s1D: "Заполняете имя и номер телефона на сайте. Никаких предоплат или данных банковских карт.",
+                s2T: "Консультация эксперта",
+                s2D: "Специалист свяжется с вами, бесплатно проконсультирует по вашей ситуации и подберет курс.",
+                s3T: "Проверяете и оплачиваете",
+                s3D: "Заказ доставляется БЕСПЛАТНО до вашей двери. Вы платите только после личного осмотра посылки.",
+
                 formTitle: "Оформить заказ",
                 formSub: "Запишитесь на бесплатную консультацию и верните здоровье кожи вместе с «QOMUS»!",
                 lblName: "Ваше имя",
@@ -2181,6 +2271,7 @@
                 holderHistory: "Например: 2 года назад, недавно появились...",
                 formSubmit: "Оформить заказ",
                 formPrivacy: "🔒 Конфиденциальность ваших данных гарантирована на 100%.",
+
                 socialTitle: "Мы в социальных сетях:",
                 socMainTg: "Основной канал",
                 socResultsTg: "Канал результатов",
@@ -2188,15 +2279,15 @@
                 footerContactTxt: "Для справок: +998 71 203-04-08",
                 footerDisc: "ВНИМАНИЕ: Препарат «QOMUS» является биологически активной добавкой (БАД) и не является лекарственным средством. Результаты индивидуальны. Перед применением рекомендуется проконсультироваться с врачом. Разрешение Минздрава РУз № 001425."
             },
+
             en: {
                 orderBtn: "Order Now",
-                heroCta: "Get Free Advice",
-                ticker: "<span>🚚 FREE delivery across Uzbekistan</span><span>🌿 100% Natural composition</span><span>⭐ 20,000+ Satisfied customers</span><span>🔐 100% Confidentiality guaranteed</span>",
+                ticker: "<span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='1' y='3' width='15' height='13'></rect><polygon points='16 8 20 8 23 11 23 16 16 16 8'></polygon><circle cx='5.5' cy='18.5' r='2.5'></circle><circle cx='18.5' cy='18.5' r='2.5'></circle></svg> Free delivery across Uzbekistan</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z'></path></svg> 100% natural and safe formula</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><path d='M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2'></path><circle cx='9' cy='7' r='4'></circle><path d='M23 21v-2a4 4 0 0 0-3-3.87'></path><path d='M16 3.13a4 4 0 0 1 0 7.75'></path></svg> Over 20,000 successful results</span><span><svg class='ticker-svg' viewBox='0 0 24 24'><rect x='3' y='11' width='18' height='11' rx='2' ry='2'></rect><path d='M7 11V7a5 5 0 0 1 10 0v4'></path></svg> Cash on delivery upon personal inspection</span>",
                 title: "GETTING RID OF WHITE SPOTS IS NO LONGER IMPOSSIBLE!",
-                subtitle: "This product is an effective solution for vitiligo and various skin issues. Non-addictive - Guaranteed results!",
+                subtitle: "This natural formula effectively supports skin pigmentation and immunity balance. Non-addictive — Results confirmed!",
                 refTitle: "If you think restoring your skin is impossible — you are wrong!",
                 refSub: "What should you do?",
-                refLead: "If you are reading this, you or your loved ones are dealing with vitiligo or skin issues.",
+                refLead: "If you are reading this, you or your loved ones are dealing with vitiligo or skin pigmentation issues.",
                 refItems: `
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>White spots on the skin</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Embarrassment and discomfort</span></div>
@@ -2205,42 +2296,62 @@
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Discomfort during warm seasons or wearing short sleeves...</span></div>
                     <div class="ref-list-item"><span class="ref-badge-icon">!</span><span>Want to get rid of it, but don't know exactly 'How?'</span></div>
                 `,
-                refP1: "However, finding an immediate solution is essential! Otherwise, vitiligo can spread over the entire body! It's scary even to imagine.",
-                refP2: "<strong>Will you fight it or not?!</strong> We are sure you will overcome it and your skin will return to health.",
-                resultsTitle: "Customer Results",
-                beforeBadge: "Before",
-                afterBadge: "After",
+                refP1: "However, finding a reliable solution is essential! Otherwise, vitiligo can spread further over the body! It is difficult even to imagine.",
+                refP2: "<strong>Will you fight for healthy skin or not?!</strong> We are sure you will overcome this challenge and your skin will return to a healthy tone.",
+
                 compSecTitle: "NATURAL COMPOSITION OF “QOMUS”",
-                compSecDesc: "In restoring skin pigmentation, the balance of internal microelements plays a crucial role. Formulated strictly with natural ingredients.",
+                compSecDesc: "In restoring skin pigmentation, the balance of internal microelements plays a vital role. Formulated strictly with natural ingredients.",
                 cI1T: "Black Seed Oil",
                 cI1D: "Restores immune balance and stimulates cellular regeneration as the primary active ingredient.",
                 cI2T: "Vitamins: E, D, C, B",
                 cI2D: "Supports natural melanin synthesis and shields cells from oxidative stress and UV damage.",
                 cI3T: "Unsaturated Fatty Acids (Omega 3, 6, 9)",
                 cI3D: "Strengthens lipid barriers along with phospholipids, eliminating dryness and irritation.",
-                cI4T: "Macro and Micro Element Complex",
+                cI4T: "Macro and Microelement Complex",
                 cI4D: "Potassium, sodium, phosphorus, calcium, manganese, iron, zinc, copper, selenium, nickel — vital for pigmentation.",
                 cI5T: "Essential Oils and Auxiliary Elements",
-                cI5D: "Natural bovine gelatin, glycerin, nigellone, A-carotenoids, and citric acid inside a soft capsule.",
+                cI5D: "Natural bovine halal gelatin, glycerin, nigellone, A-carotenoids, and citric acid inside a soft capsule.",
+
+                targetTitle: "WHO IS THIS PRODUCT FOR?",
+                targetSub: "If you recognize any of these conditions, “Qomus” is specifically designed for your needs",
+                tg1T: "Recently Emerged Spots",
+                tg1D: "Quickly stops the spread of fresh white spots and small areas of pigmentation loss.",
+                tg2T: "Long-standing Vitiligo",
+                tg2D: "For those who found no relief from external creams and require deep cellular nutrition.",
+                tg3T: "Stress-induced Conditions",
+                tg3D: "Targeting pigmentation loss triggered by nervous exhaustion, chronic stress, or low immunity.",
+                tg4T: "Relapse Prevention",
+                tg4D: "Sustaining long-term healthy skin balance and nourishing the body with essential minerals.",
+
+                resultsTitle: "Customer Results",
+                beforeBadge: "Before",
+                afterBadge: "After",
+
                 videoSecTitle: "Customer Video Reviews",
                 videoSecSub: "Interviews with real people who restored skin pigmentation using “Qomus”",
                 videoTitles: [
-                    "How I beat the disease after 25 years: Truth about vitiligo",
+                    "Overcoming White Spots | 36-year issue resolved",
+                    "White spots disappeared completely after this course",
                     "Restoration of skin pigmentation with “Qomus” capsules",
-                    "Personal journey of our customer in overcoming white spots",
-                    "Sincere customer feedback and proven recovery results",
-                    "Course stages and noticeable positive skin recovery",
+                    "Customer journey and feedback on vitiligo recovery",
+                    "Real transformation and results with “Qomus”",
                     "Returning to healthy skin after dealing with vitiligo",
-                    "Real feedback on natural skin pigmentation recovery",
-                    "Authentic experience of completing the “Qomus” course",
-                    "Customer transformation and improvements during recovery",
+                    "Skin repigmentation prevention and recovery",
+                    "Course stages and noticeable positive skin recovery",
+                    "Authentic customer review about “Qomus” capsules",
                     "Proven results: live interview with our patient"
                 ],
+
+                midCtaTitle: "Ready to restore your skin's natural tone?",
+                midCtaDesc: "Our specialist will contact you, provide a free assessment, and recommend the optimal course.",
+                midCtaBtn: "Get Free Consultation Now",
+
                 certTitle: "OFFICIALLY CERTIFIED AND APPROVED",
-                certDesc: "“QOMUS” has successfully passed all laboratory evaluations by the Ministry of Health of Uzbekistan and is officially certified.",
+                certDesc: "“QOMUS” has successfully passed all laboratory evaluations by authorized agencies of Uzbekistan and is officially certified.",
                 certCap1: "Ministry of Health of the Republic of Uzbekistan Permit № 001425",
                 certCap2: "Sanitary and Epidemiological Conclusion № 405282 (Tashkent)",
                 certSafety: "Every batch undergoes rigorous hygienic, radiological, and bacteriological tests and is guaranteed 100% safe for human health.",
+
                 faqTitle: "FREQUENTLY ASKED QUESTIONS",
                 faqSub: "Direct answers from our healthcare consultants to the most frequent questions",
                 faqs: [
@@ -2253,20 +2364,16 @@
                     { q: "Can I pay upon package arrival?", a: "Yes! You can inspect the delivery before making payment via cash or local card." },
                     { q: "How many capsules per bottle and how long does it last?", a: "Each bottle contains 150 soft gelatin capsules, providing a complete 1 to 1.5-month course." }
                 ],
-                advTitle: "WHY CHOOSE “QOMUS”?",
-                advDesc: "We place the highest value on your health and trust. Explore our core advantages",
-                c1T: "20,000+ Satisfied Customers",
-                c1D: "Thousands of people across Uzbekistan have regained healthy skin pigmentation through our natural formula.",
-                c2T: "Government Certified Quality",
-                c2D: "Officially approved by the Ministry of Health and sanitary inspections, meeting strict safety guidelines.",
-                c3T: "100% Natural & Hormone-Free",
-                c3D: "Cold-pressed black seed oil with essential microelements. Non-addictive and gentle on the body.",
-                c4T: "FREE Delivery Across Uzbekistan",
-                c4D: "No matter which province or district you live in, delivery right to your door is completely free.",
-                c5T: "Cash on Delivery (100% Secure)",
-                c5D: "No advance payment required. Inspect your order in person before paying the courier.",
-                c6T: "Personal Expert Guidance",
-                c6D: "Our specialists provide consistent, free phone consultations and monitor your proper course progress.",
+
+                stepsTitle: "HOW ORDERING & SERVICE WORKS",
+                stepsDesc: "We provide an exceptionally convenient, safe, and transparent experience",
+                s1T: "Leave an Inquiry",
+                s1D: "Enter your name and phone number on the site. No advance payments or bank card details needed.",
+                s2T: "Expert Consultation",
+                s2D: "Our specialist calls you to evaluate your condition and tailor a personalized course for free.",
+                s3T: "Inspect and Pay",
+                s3D: "Free delivery straight to your door. You inspect the package thoroughly before making payment.",
+
                 formTitle: "Place an Order",
                 formSub: "Sign up for a free consultation today and reclaim healthy skin with “QOMUS”!",
                 lblName: "Your Name",
@@ -2277,6 +2384,7 @@
                 holderHistory: "e.g., 2 years, recently noticed...",
                 formSubmit: "Place Order",
                 formPrivacy: "🔒 100% privacy and data security guaranteed.",
+
                 socialTitle: "Follow us on social media:",
                 socMainTg: "Main Channel",
                 socResultsTg: "Results Channel",
@@ -2299,7 +2407,6 @@
                 
                 document.getElementById('hero-title').textContent = t.title;
                 document.getElementById('hero-subtitle').textContent = t.subtitle;
-                document.getElementById('hero-cta').textContent = t.heroCta;
 
                 document.getElementById('ref-header-title').textContent = t.refTitle;
                 document.getElementById('ref-sub-query').textContent = t.refSub;
@@ -2307,10 +2414,6 @@
                 document.getElementById('ref-c1-items').innerHTML = t.refItems;
                 document.getElementById('ref-c2-p1').textContent = t.refP1;
                 document.getElementById('ref-c2-p2').innerHTML = t.refP2;
-
-                document.getElementById('results-title').textContent = t.resultsTitle;
-                document.querySelectorAll('.badge-before').forEach(el => el.textContent = t.beforeBadge);
-                document.querySelectorAll('.badge-after').forEach(el => el.textContent = t.afterBadge);
 
                 document.getElementById('comp-sec-title').textContent = t.compSecTitle;
                 document.getElementById('comp-sec-desc').textContent = t.compSecDesc;
@@ -2325,14 +2428,33 @@
                 document.getElementById('c-i5-t').textContent = t.cI5T;
                 document.getElementById('c-i5-d').textContent = t.cI5D;
 
+                document.getElementById('target-title').textContent = t.targetTitle;
+                document.getElementById('target-sub').textContent = t.targetSub;
+                document.getElementById('tg-1-t').textContent = t.tg1T;
+                document.getElementById('tg-1-d').textContent = t.tg1D;
+                document.getElementById('tg-2-t').textContent = t.tg2T;
+                document.getElementById('tg-2-d').textContent = t.tg2D;
+                document.getElementById('tg-3-t').textContent = t.tg3T;
+                document.getElementById('tg-3-d').textContent = t.tg3D;
+                document.getElementById('tg-4-t').textContent = t.tg4T;
+                document.getElementById('tg-4-d').textContent = t.tg4D;
+
+                document.getElementById('results-title').textContent = t.resultsTitle;
+                document.querySelectorAll('.badge-before').forEach(el => el.textContent = t.beforeBadge);
+                document.querySelectorAll('.badge-after').forEach(el => el.textContent = t.afterBadge);
+
                 document.getElementById('video-sec-title').textContent = t.videoSecTitle;
                 document.getElementById('video-sec-sub').textContent = t.videoSecSub;
                 if(t.videoTitles) {
-                    for(let i = 1; i <= t.videoTitles.length; i++) {
+                    for(let i = 1; i <= 10; i++) {
                         const vEl = document.getElementById('vt-' + i);
                         if(vEl && t.videoTitles[i-1]) vEl.textContent = t.videoTitles[i-1];
                     }
                 }
+
+                document.getElementById('mid-cta-title').textContent = t.midCtaTitle;
+                document.getElementById('mid-cta-desc').textContent = t.midCtaDesc;
+                document.getElementById('mid-cta-btn').textContent = t.midCtaBtn;
 
                 document.getElementById('cert-title').textContent = t.certTitle;
                 document.getElementById('cert-desc').textContent = t.certDesc;
@@ -2351,20 +2473,14 @@
                     }
                 }
 
-                document.getElementById('adv-title').textContent = t.advTitle;
-                document.getElementById('adv-desc').textContent = t.advDesc;
-                document.getElementById('adv-c1-t').textContent = t.c1T;
-                document.getElementById('adv-c1-d').textContent = t.c1D;
-                document.getElementById('adv-c2-t').textContent = t.c2T;
-                document.getElementById('adv-c2-d').textContent = t.c2D;
-                document.getElementById('adv-c3-t').textContent = t.c3T;
-                document.getElementById('adv-c3-d').textContent = t.c3D;
-                document.getElementById('adv-c4-t').textContent = t.c4T;
-                document.getElementById('adv-c4-d').textContent = t.c4D;
-                document.getElementById('adv-c5-t').textContent = t.c5T;
-                document.getElementById('adv-c5-d').textContent = t.c5D;
-                document.getElementById('adv-c6-t').textContent = t.c6T;
-                document.getElementById('adv-c6-d').textContent = t.c6D;
+                document.getElementById('steps-title').textContent = t.stepsTitle;
+                document.getElementById('steps-desc').textContent = t.stepsDesc;
+                document.getElementById('step-1-t').textContent = t.s1T;
+                document.getElementById('step-1-d').textContent = t.s1D;
+                document.getElementById('step-2-t').textContent = t.s2T;
+                document.getElementById('step-2-d').textContent = t.s2D;
+                document.getElementById('step-3-t').textContent = t.s3T;
+                document.getElementById('step-3-d').textContent = t.s3D;
 
                 document.getElementById('form-main-title').textContent = t.formTitle;
                 document.getElementById('form-main-sub').textContent = t.formSub;
@@ -2393,102 +2509,81 @@
             if (!isOpen) currentItem.classList.add('active');
         }
 
-        function setupSlider(trackId, prevBtnId, nextBtnId) {
+        /* MARQUEE MOTOR (HAM PLAVNIY AUTO, HAM ERKIN SWIPE) */
+        function initInteractiveMarquee(viewportId, trackId, speed = 0.8) {
+            const viewport = document.getElementById(viewportId);
             const track = document.getElementById(trackId);
-            const prevBtn = document.getElementById(prevBtnId);
-            const nextBtn = document.getElementById(nextBtnId);
-            if (!track || !prevBtn || !nextBtn) return;
+            if (!viewport || !track) return;
 
-            let currentIndex = 0;
-            const slides = Array.from(track.children);
-            const totalSlides = slides.length;
-            let autoPlayTimer = null;
+            const originalHTML = track.innerHTML;
+            track.innerHTML = originalHTML + originalHTML;
 
-            function updateSlide() {
-                slides.forEach((s, idx) => {
-                    if (idx === currentIndex) s.classList.add('active-slide');
-                    else s.classList.remove('active-slide');
-                });
-
-                const activeSlide = slides[currentIndex];
-                const trackWrapper = track.parentElement;
-                const slideOffset = activeSlide.offsetLeft;
-                const centerOffset = (trackWrapper.offsetWidth - activeSlide.offsetWidth) / 2;
-                const moveAmount = slideOffset - centerOffset;
-
-                track.style.transform = `translateX(-${moveAmount}px)`;
-            }
-
-            function nextSlide() {
-                currentIndex = (currentIndex < totalSlides - 1) ? currentIndex + 1 : 0;
-                updateSlide();
-            }
-
-            function prevSlide() {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : totalSlides - 1;
-                updateSlide();
-            }
-
-            prevBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                prevSlide();
-                resetAutoplay();
-            });
-
-            nextBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                nextSlide();
-                resetAutoplay();
-            });
-
-            function startAutoplay() {
-                autoPlayTimer = setInterval(nextSlide, 4000);
-            }
-
-            function resetAutoplay() {
-                clearInterval(autoPlayTimer);
-                startAutoplay();
-            }
-
+            let currentPos = 0;
+            let isDragging = false;
             let startX = 0;
-            track.parentElement.addEventListener('touchstart', (e) => {
-                startX = e.changedTouches[0].screenX;
-            }, { passive: true });
+            let dragOffset = 0;
+            let halfWidth = track.scrollWidth / 2;
 
-            track.parentElement.addEventListener('touchend', (e) => {
-                const diff = startX - e.changedTouches[0].screenX;
-                if (diff > 40) {
-                    nextSlide();
-                    resetAutoplay();
-                } else if (diff < -40) {
-                    prevSlide();
-                    resetAutoplay();
+            function animate() {
+                if (!isDragging) {
+                    currentPos -= speed;
                 }
-            }, { passive: true });
 
-            window.addEventListener('resize', updateSlide);
-            setTimeout(updateSlide, 50);
-            startAutoplay();
+                if (Math.abs(currentPos) >= halfWidth) {
+                    currentPos = 0;
+                } else if (currentPos > 0) {
+                    currentPos = -halfWidth;
+                }
+
+                track.style.transform = `translateX(${currentPos}px)`;
+                requestAnimationFrame(animate);
+            }
+
+            function onStart(x) {
+                isDragging = true;
+                startX = x;
+                dragOffset = currentPos;
+            }
+
+            function onMove(x) {
+                if (!isDragging) return;
+                const diff = x - startX;
+                currentPos = dragOffset + diff;
+            }
+
+            function onEnd() {
+                isDragging = false;
+            }
+
+            viewport.addEventListener('mousedown', (e) => onStart(e.pageX));
+            window.addEventListener('mousemove', (e) => onMove(e.pageX));
+            window.addEventListener('mouseup', onEnd);
+
+            viewport.addEventListener('touchstart', (e) => onStart(e.touches[0].pageX), { passive: true });
+            window.addEventListener('touchmove', (e) => onMove(e.touches[0].pageX), { passive: true });
+            window.addEventListener('touchend', onEnd);
+
+            window.addEventListener('resize', () => {
+                halfWidth = track.scrollWidth / 2;
+            });
+
+            setTimeout(() => {
+                halfWidth = track.scrollWidth / 2;
+                requestAnimationFrame(animate);
+            }, 100);
         }
 
-        /* FORMA YUBORILGANDA META PIXEL LEAD HODISASI CHAQIRILADI */
         function submitLeadForm(e) {
             e.preventDefault();
             const name = document.getElementById('clientName').value;
-
-            // META PIXEL LEAD EVENT
-            if (typeof fbq === 'function') {
-                fbq('track', 'Lead');
-            }
-
             alert("Rahmat, " + name + "! So'rovingiz qabul qilindi. Tez orada mutaxassisimiz siz bilan bog'lanadi.");
             document.getElementById('orderForm').reset();
         }
 
         window.addEventListener('DOMContentLoaded', () => {
-            changeLanguage('uz_cyr');
-            setupSlider('carouselTrack', 'imgPrevBtn', 'imgNextBtn');
-            setupSlider('videoCarouselTrack', 'vidPrevBtn', 'vidNextBtn');
+            changeLanguage('uz');
+            initInteractiveMarquee('imgViewport', 'imgMarqueeTrack', 0.9);
+            initInteractiveMarquee('vidViewport', 'vidMarqueeTrack', 0.7);
         });
     </script>
 </body>
