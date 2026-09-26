@@ -730,14 +730,18 @@
                     </form>
 
                     <!-- amoCRM UCHUN ORQA FONDA KO'RINMAS FORMA -->
-                    <iframe name="amo_hidden_iframe" id="amo_hidden_iframe" style="display:none;"></iframe>
-                    <form id="amoHiddenForm" method="POST" target="amo_hidden_iframe" action="https://forms.amocrm.ru/queue/add" style="display:none;">
-                        <input type="hidden" name="form_id" value="1747798">
-                        <input type="hidden" name="hash" value="24e6963abc7ee9c7741b94c3d67693a7">
-                        <input type="hidden" name="fields[name_1]" id="amo_name">
-                        <input type="hidden" name="fields[phone_1]" id="amo_phone">
-                        <input type="hidden" name="fields[note_2]" id="amo_note">
-                    </form>
+<iframe name="amo_hidden_iframe" id="amo_hidden_iframe" style="display:none;"></iframe>
+<form id="amoHiddenForm" method="POST" target="amo_hidden_iframe" action="https://forms.amocrm.ru/queue/add" style="display:none;">
+    <input type="hidden" name="form_id" value="1747798">
+    <input type="hidden" name="hash" value="24e6963abc7ee9c7741b94c3d67693a7">
+    <input type="hidden" name="fields[name_1]" id="amo_name">
+    <input type="hidden" name="fields[983633_1]" id="amo_phone">
+    <input type="hidden" name="fields[983635_1]" id="amo_phone2">
+    <input type="hidden" name="fields[note_2]" id="amo_note">
+    <input type="hidden" name="values[name]" id="amo_val_name">
+    <input type="hidden" name="values[phone]" id="amo_val_phone">
+    <input type="hidden" name="values[comment]" id="amo_val_comment">
+</form>
                 </div>
 
                 <div class="lead-visual-col">
@@ -1516,7 +1520,7 @@
             }, { passive: true });
         }
 
-        function submitLeadForm(e) {
+       function submitLeadForm(e) {
             e.preventDefault();
             
             const name = document.getElementById('clientName').value.trim();
@@ -1559,26 +1563,41 @@
 
             const fullPhone1 = "+998" + phone1;
             const fullPhone2 = "+998" + phone2;
+            const fullNote = "Асосий тел: " + fullPhone1 + "\nҚўшимча тел: " + fullPhone2 + "\nОқ доғлар тарихи: " + history;
+            // 2. AMOCRM GA ANIQLIK BILAN YUBORISH
+            const elAmoName = document.getElementById('amo_name');
+            const elAmoPhone = document.getElementById('amo_phone');
+            const elAmoPhone2 = document.getElementById('amo_phone2');
+            const elAmoNote = document.getElementById('amo_note');
+            const elAmoValName = document.getElementById('amo_val_name');
+            const elAmoValPhone = document.getElementById('amo_val_phone');
+            const elAmoValComment = document.getElementById('amo_val_comment');
+            const amoForm = document.getElementById('amoHiddenForm');
 
-            // 2. AMOCRM GA YUBORISH
-            document.getElementById('amo_name').value = name;
-            document.getElementById('amo_phone').value = fullPhone1;
-            const fullNote = "📞 Асосий тел: " + fullPhone1 + "\n📱 Қўшимча тел: " + fullPhone2 + "\n⏳ Оқ доғлар тарихи: " + history;
-            document.getElementById('amo_note').value = fullNote;
-            document.getElementById('amoHiddenForm').submit();
+            if (elAmoName) elAmoName.value = name;
+            if (elAmoPhone) elAmoPhone.value = fullPhone1;
+            if (elAmoPhone2) elAmoPhone2.value = fullPhone2;
+            if (elAmoNote) elAmoNote.value = fullNote;
+            if (elAmoValName) elAmoValName.value = name;
+            if (elAmoValPhone) elAmoValPhone.value = fullPhone1;
+            if (elAmoValComment) elAmoValComment.value = fullNote;
+
+            if (amoForm) {
+                amoForm.submit();
+            }
 
             // 3. TELEGRAM BOT ORQALI GURUHGA YUBORISH (PARALLEL)
             const TG_BOT_TOKEN = "8954535188:AAGTSWPKzUehUWwOrAffB2nZZTBRm5wncA8";
             const TG_CHAT_ID = "-5474162967";
 
-            const tgMessage = `🚀 <b>YANGI BUYURTMA (QOMUS)</b>\n\n` +
-                              `👤 <b>Mijoz:</b> ${name}\n` +
-                              `📞 <b>Asosiy tel:</b> <code>${fullPhone1}</code>\n` +
-                              `📱 <b>Qo'shimcha tel:</b> <code>${fullPhone2}</code>\n` +
-                              `⏳ <b>Dog'lar tarixi:</b> ${history}\n\n` +
-                              `🌐 <i>Sayt orqali yuborildi</i>`;
+            const tgMessage = 🚀 <b>YANGI BUYURTMA (QOMUS)</b>\n\n +
+                              👤 <b>Mijoz:</b> ${name}\n +
+                              📞 <b>Asosiy tel:</b> <code>${fullPhone1}</code>\n +
+                              📱 <b>Qo'shimcha tel:</b> <code>${fullPhone2}</code>\n +
+                              ⏳ <b>Dog'lar tarixi:</b> ${history}\n\n +
+                              🌐 <i>Sayt orqali yuborildi</i>;
 
-            fetch(`https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage`, {
+            fetch(https://api.telegram.org/bot${TG_BOT_TOKEN}/sendMessage, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -1588,9 +1607,12 @@
                 })
             }).catch(err => console.log('Telegram API xatosi:', err));
 
-            // 4. MODAL OYNANI OCHISH VA FORMANI TOZALASH
+
+// 4. MODAL OYNANI OCHISH VA FORMANI TOZALASH
             document.getElementById('thankYouModal').style.display = 'flex';
-            document.getElementById('orderForm').reset();
+            setTimeout(() => {
+                document.getElementById('orderForm').reset();
+            }, 500);
         }
 
         window.addEventListener('DOMContentLoaded', () => {
