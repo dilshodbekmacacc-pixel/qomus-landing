@@ -59,15 +59,32 @@ module.exports = async function handler(req, res) {
         '⏳ <b>Dog\'lar tarixi:</b> ' + esc(history) + '\n\n' +
         '🌐 <i>Sayt orqali yuborildi</i>';
 
-    try {
-        const tg = await fetch('https://api.telegram.org/bot' + token + '/sendMessage', {
+    function send(id) {
+        return fetch('https://api.telegram.org/bot' + token + '/sendMessage', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ chat_id: chatId, text: text, parse_mode: 'HTML' })
+            body: JSON.stringify({ chat_id: id, text: text, parse_mode: 'HTML' })
         });
+    }
 
-        if (!tg.ok) {
-            console.error('Telegram javobi:', tg.status, await tg.text());
+    try {
+        let tg = await send(chatId);
+        let data = await tg.json().catch(function () { return {}; });
+
+        // Oddiy guruh supergruppaga o'tkazilsa ID o'zgaradi va Telegram
+        // yangisini qaytaradi. Lid yo'qolmasligi uchun darhol qayta yuboramiz.
+        const migrated = data && data.parameters && data.parameters.migrate_to_chat_id;
+        if (!data.ok && migrated) {
+            console.warn(
+                'Telegram guruh ID o\'zgargan: ' + chatId + ' -> ' + migrated +
+                '. Vercel dagi TG_CHAT_ID ni yangilang.'
+            );
+            tg = await send(String(migrated));
+            data = await tg.json().catch(function () { return {}; });
+        }
+
+        if (!data.ok) {
+            console.error('Telegram rad etdi:', tg.status, JSON.stringify(data));
             return res.status(200).json({ ok: false, error: 'telegram_failed' });
         }
 
