@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://qomus-landing.vercel.app/sitemap.xml
+Sitemap: https://qomus-vitiligo.uz/sitemap.xml
