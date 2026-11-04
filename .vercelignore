@@ -1,0 +1,4 @@
+# Sayt endi qomus-vitiligo.uz da. Vercel faqat eski havolalarni
+# yangi domenga yo'naltiradi, shuning uchun bu yerda server
+# funksiyasi kerak emas — token ham Vercel ga tushmasin.
+api/
