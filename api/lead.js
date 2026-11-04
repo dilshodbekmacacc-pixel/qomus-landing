@@ -4,6 +4,42 @@
 
 const MAX = { name: 100, history: 300 };
 
+// Oddiy tezlik cheklovi. Vercel funksiyani bir nechta nusxada ishga
+// tushirishi mumkin, shuning uchun bu hisob har bir nusxada alohida —
+// ya'ni mutlaq kafolat emas, lekin bitta manbadan ketma-ket kelayotgan
+// spamni to'xtatish uchun yetarli. Qat'iy cheklov kerak bo'lsa,
+// Vercel WAF (Pro tarif) yoki tashqi saqlagich (KV/Redis) kerak bo'ladi.
+const WINDOW_MS = 60000;
+const MAX_PER_WINDOW = 10;
+const hits = new Map();
+
+function clientIp(req) {
+    const h = req.headers || {};
+    const fwd = h['x-forwarded-for'];
+    if (typeof fwd === 'string' && fwd) return fwd.split(',')[0].trim();
+    return h['x-real-ip'] || 'unknown';
+}
+
+function rateLimited(ip) {
+    const now = Date.now();
+
+    // Xotira cheksiz o'smasligi uchun eskirgan yozuvlarni tozalaymiz.
+    if (hits.size > 5000) {
+        for (const [k, v] of hits) {
+            if (now > v.resetAt) hits.delete(k);
+        }
+    }
+
+    const rec = hits.get(ip);
+    if (!rec || now > rec.resetAt) {
+        hits.set(ip, { count: 1, resetAt: now + WINDOW_MS });
+        return 0;
+    }
+
+    rec.count += 1;
+    return rec.count > MAX_PER_WINDOW ? Math.ceil((rec.resetAt - now) / 1000) : 0;
+}
+
 function esc(s) {
     return String(s)
         .replace(/&/g, '&amp;')
@@ -26,6 +62,12 @@ module.exports = async function handler(req, res) {
     if (req.method !== 'POST') {
         res.setHeader('Allow', 'POST');
         return res.status(405).json({ ok: false, error: 'method_not_allowed' });
+    }
+
+    const retryAfter = rateLimited(clientIp(req));
+    if (retryAfter) {
+        res.setHeader('Retry-After', String(retryAfter));
+        return res.status(429).json({ ok: false, error: 'rate_limited' });
     }
 
     const body = typeof req.body === 'string' ? safeParse(req.body) : (req.body || {});
