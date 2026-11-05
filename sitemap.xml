@@ -1,9 +1,136 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://qomus-vitiligo.uz/</loc>
-    <lastmod>2026-11-04</lastmod>
+    <lastmod>2026-11-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20261017-143020-076.webp</image:loc>
+      <image:title>QOMUS — 150 ta kapsuladan iborat flakon</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115226-478.webp</image:loc>
+      <image:title>Yuzdagi vitiligo oq dog&#x27;lari</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115226-125.webp</image:loc>
+      <image:title>Qo&#x27;ldagi vitiligo oq dog&#x27;lari</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115226-737.webp</image:loc>
+      <image:title>Vitiligo bilan yashayotgan ayol</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115246-503.webp</image:loc>
+      <image:title>QOMUS kapsulalari va qora sedana urug&#x27;lari</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115230-717.webp</image:loc>
+      <image:title>Ko&#x27;z va qovoq atrofidagi oq dog&#x27;lar — QOMUS qabulidan avval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115231-698.webp</image:loc>
+      <image:title>Ko&#x27;z atrofidagi teri — QOMUS qabulidan keyin</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115231-600.webp</image:loc>
+      <image:title>Bo&#x27;yin va ensadagi vitiligo dog&#x27;lari — QOMUS qabulidan avval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115230-855.webp</image:loc>
+      <image:title>Bo&#x27;yin terisi — QOMUS qabulidan keyin</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115231-220.webp</image:loc>
+      <image:title>Quloq oldi va yonoqdagi oq dog&#x27;lar — QOMUS qabulidan avval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115231-494.webp</image:loc>
+      <image:title>Yonoq terisi — QOMUS qabulidan keyin</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115231-501.webp</image:loc>
+      <image:title>Oyoq va boldirdagi vitiligo dog&#x27;lari — QOMUS qabulidan avval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115236-527.webp</image:loc>
+      <image:title>Oyoq terisi — QOMUS qabulidan keyin</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115243-634.webp</image:loc>
+      <image:title>Yuz va bo&#x27;yindagi keng oq dog&#x27;lar — QOMUS qabulidan avval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115231-684.webp</image:loc>
+      <image:title>Yuz va bo&#x27;yin terisi — QOMUS qabulidan keyin</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115236-023.webp</image:loc>
+      <image:title>Yonoq va bo&#x27;yindagi vitiligo — QOMUS qabulidan avval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115236-139.webp</image:loc>
+      <image:title>Yonoq va bo&#x27;yin terisi — QOMUS qabulidan keyin</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115236-145.webp</image:loc>
+      <image:title>Qo&#x27;l va tirsakdagi oq dog&#x27;lar — QOMUS qabulidan avval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115236-389.webp</image:loc>
+      <image:title>Qo&#x27;l terisi — QOMUS qabulidan keyin</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115236-429.webp</image:loc>
+      <image:title>Yuzning yon qismidagi vitiligo dog&#x27;lari — QOMUS qabulidan avval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115236-282.webp</image:loc>
+      <image:title>Yuz terisi — QOMUS qabulidan keyin</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115236-542.webp</image:loc>
+      <image:title>Og&#x27;iz va burun atrofidagi oq dog&#x27;lar — QOMUS qabulidan avval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115236-914.webp</image:loc>
+      <image:title>Yuz terisi — QOMUS qabulidan keyin</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115236-859.webp</image:loc>
+      <image:title>Ko&#x27;z atrofidagi oq dog&#x27;lar — QOMUS qabulidan avval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115243-846.webp</image:loc>
+      <image:title>Yuz terisi — QOMUS qabulidan keyin</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115243-265.webp</image:loc>
+      <image:title>Peshona va soch chegarasidagi vitiligo — QOMUS qabulidan avval</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115243-398.webp</image:loc>
+      <image:title>Peshona terisi — QOMUS qabulidan keyin</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-133737-359.webp</image:loc>
+      <image:title>SSV Ruxsatnomasi va Sertifikat</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-133732-180.webp</image:loc>
+      <image:title>Sanitariya xulosasi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://qomus-vitiligo.uz/images/img-20260924-115226-651.webp</image:loc>
+      <image:title>QOMUS 150 ta kapsula — qora sedana yog&#x27;i majmuasi</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://qomus-vitiligo.uz/maxfiylik.html</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
